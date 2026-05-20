@@ -1,0 +1,58 @@
+name: Hourly Shopify Sync
+
+# Läuft stündlich (Minute 5 jeder Stunde) plus manuell auf Knopfdruck
+on:
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Cache der state.json zwischen Runs, damit wir Diffs erkennen
+      - name: Restore state cache
+        uses: actions/cache@v4
+        with:
+          path: state.json
+          key: shopify-state-${{ github.run_id }}
+          restore-keys: |
+            shopify-state-
+
+      - name: Run sync
+        env:
+          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+          CSV_HTTP_USER: ${{ secrets.CSV_HTTP_USER }}
+          CSV_HTTP_PASSWORD: ${{ secrets.CSV_HTTP_PASSWORD }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: python sync.py --live
+
+      - name: Save state cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: state.json
+          key: shopify-state-${{ github.run_id }}
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-logs-${{ github.run_id }}
+          path: logs/
+          retention-days: 14

@@ -1,0 +1,138 @@
+# =============================================================================
+# DROPSHIPPING AUTOMATION – ZENTRALE KONFIGURATION
+# =============================================================================
+# Alle wichtigen Werte hier anpassen. KEINE Geheimnisse hier eintragen!
+# Secrets (API-Keys, Passwörter) gehören in die .env-Datei.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# CSV-QUELLE (Lieferanten-Feed)
+# -----------------------------------------------------------------------------
+csv:
+  # Öffentliche URL des BAB-Distribution-Feeds
+  url: "https://pricelist.bab-distribution.de/50429_a2Q2yGHHkSgMe4BV"
+  # BAB nutzt deutsches Format
+  delimiter: ";"
+  # BAB liefert mit BOM (utf-8-sig)
+  encoding: "utf-8-sig"
+  # Spalten-Mapping: BAB-Distribution-Format
+  # Linker Name = unser interner Name, rechter Name = Spalte in BAB-CSV
+  columns:
+    sku: "ItemNo"                  # ANTB0002, ...
+    title: "Description"           # Produkt-Titel (BAB hat keine Lang-Beschreibung)
+    description: "Description"     # Fallback: Titel als Body verwenden
+    purchase_price: "Price_B2B"    # EK netto in EUR (Komma als Dezimaltrenner)
+    stock: "Stock"                 # Lagerbestand (ganze Zahl)
+    weight_kg: "GrossWeight"       # Brutto-Gewicht in kg (Komma als Dezimaltrenner)
+    image_url: ""                  # BAB liefert keine Bild-URLs (Workaround unten)
+    ean: "GTIN"                    # GTIN/EAN
+    category: "ItemMainGroup"      # GA, ...
+    brand: "ManufacturerName"      # Anthbot, ...
+
+# -----------------------------------------------------------------------------
+# PRICING-LOGIK (Hybrid-Staffel + ,99-Rundung + Versand-Puffer)
+# -----------------------------------------------------------------------------
+pricing:
+  # Mehrwertsteuer (Deutschland Standard: 19 %)
+  vat_rate: 0.19
+
+  # Marge-Staffel: Für jeden EK-Bereich gilt ein anderer Aufschlag
+  # ek_max = obere Grenze (exklusiv), markup = Faktor (1.0 = +100%)
+  tiers:
+    - ek_max: 5.0
+      markup: 2.50    # +250 %
+    - ek_max: 15.0
+      markup: 1.80    # +180 %
+    - ek_max: 30.0
+      markup: 1.20    # +120 %
+    - ek_max: 50.0
+      markup: 0.80    # +80 %
+    - ek_max: 100.0
+      markup: 0.60    # +60 %
+    - ek_max: 200.0
+      markup: 0.40    # +40 %
+    - ek_max: 999999.0
+      markup: 0.25    # +25 %
+
+  # Mindest-Bruttomarge in EURO (egal was die Staffel sagt)
+  min_absolute_margin_eur: 5.00
+
+  # Versand-Puffer auf günstige Artikel (weil 4,99€ den Versand oft nicht deckt)
+  shipping_buffer:
+    - ek_max: 10.0
+      buffer_eur: 1.50
+    - ek_max: 25.0
+      buffer_eur: 0.80
+    - ek_max: 999999.0
+      buffer_eur: 0.00
+
+  # Endpreis-Rundung: auf welche Endung soll gerundet werden?
+  # "psychological_99" → immer auf X,99
+  # "psychological_95" → immer auf X,95
+  # "none" → keine Rundung
+  rounding_strategy: "psychological_99"
+
+# -----------------------------------------------------------------------------
+# FILTER (welche Produkte überhaupt importieren?)
+# -----------------------------------------------------------------------------
+filters:
+  # Maximales Gewicht in kg (alles darüber wird nicht importiert)
+  max_weight_kg: 2.0
+  # Minimaler Lagerbestand: erst ab dieser Anzahl wird das Produkt aktiv geschaltet
+  min_stock: 1
+  # Maximaler EK (Schutz gegen Cash-Bindung bei hochpreisigen Drop-Ship-Risiken)
+  max_purchase_price_eur: 500.0
+  # Optional: nur diese Kategorien importieren (leer = alle)
+  allowed_categories: []
+  # Optional: diese Marken/Begriffe ausschließen (z.B. wegen Markenrecht)
+  excluded_keywords:
+    - "Apple"
+    - "iPhone"
+    - "Samsung Galaxy"
+    - "AirPods"
+
+# -----------------------------------------------------------------------------
+# VERSAND
+# -----------------------------------------------------------------------------
+shipping:
+  # Fixer Versandpreis bis 2 kg
+  flat_rate_eur: 4.99
+  # Optional: Versandkostenfrei ab X €
+  free_shipping_threshold_eur: 0  # 0 = deaktiviert
+
+# -----------------------------------------------------------------------------
+# SHOPIFY API
+# -----------------------------------------------------------------------------
+shopify:
+  # Deine Shop-Domain (NUR der Name vor .myshopify.com)
+  shop_domain: "dein-shop"  # z.B. "mein-gadget-store" → mein-gadget-store.myshopify.com
+  # API-Version
+  api_version: "2024-10"
+  # Location-ID für Lagerbestand (siehe Setup-Guide, wie zu finden)
+  location_id: ""  # wird beim ersten Lauf automatisch ermittelt
+
+# -----------------------------------------------------------------------------
+# AUTO-ORDER (Email an Lieferanten)
+# -----------------------------------------------------------------------------
+supplier_email:
+  # Email-Adresse deines Lieferanten
+  to: "bestellung@dein-lieferant.de"
+  # Eigene Absender-Mail (siehe .env für Passwort)
+  from_name: "Dein Shop Name"
+  # Sprache der Bestellmail (de/en)
+  language: "de"
+  # Sollen Bestellungen automatisch versendet werden, oder erst nach Bestätigung?
+  auto_send: false  # ANFANGS auf false! Erst manuell prüfen.
+
+# -----------------------------------------------------------------------------
+# LAUFZEIT-VERHALTEN
+# -----------------------------------------------------------------------------
+runtime:
+  # DRY-RUN: Wenn true, wird NICHTS an Shopify gesendet (Test-Modus)
+  dry_run: true   # WICHTIG: Erst auf false stellen, wenn alles getestet ist
+  # Limit pro Lauf (Schutz gegen Rate-Limits bei großen Feeds)
+  max_products_per_run: 250
+  # Wo Logs gespeichert werden
+  log_dir: "logs"
+  # Wo der Produkt-Cache liegt (für Diff-Erkennung)
+  state_file: "state.json"
