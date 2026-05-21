@@ -27,7 +27,7 @@ jobs:
       - name: Generate Matrixify CSV
         run: python build_matrixify_csv.py
 
-- name: Commit and push CSV
+      - name: Commit and push CSV
         run: |
           mkdir -p docs
           cp public/shopify_products.csv docs/shopify_products.csv
