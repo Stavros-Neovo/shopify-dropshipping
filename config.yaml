@@ -122,7 +122,7 @@ supplier_email:
   # Sprache der Bestellmail (de/en)
   language: "de"
   # Sollen Bestellungen automatisch versendet werden, oder erst nach Bestätigung?
-  auto_send: false  # ANFANGS auf false! Erst manuell prüfen.
+  auto_send: true  # ANFANGS auf false! Erst manuell prüfen.
 
 # -----------------------------------------------------------------------------
 # LAUFZEIT-VERHALTEN
