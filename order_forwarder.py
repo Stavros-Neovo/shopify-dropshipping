@@ -150,11 +150,16 @@ def send_email(cfg: dict, subject: str, body: str) -> None:
     use_tls = os.environ.get("SMTP_USE_TLS", "true").lower() == "true"
 
     log.info(f"Sende Mail via {host}:{port} ...")
-    with smtplib.SMTP(host, port) as s:
-        if use_tls:
-            s.starttls()
-        s.login(user, pw)
-        s.send_message(msg)
+    if port == 465:
+        with smtplib.SMTP_SSL(host, port) as s:
+            s.login(user, pw)
+            s.send_message(msg)
+    else:
+        with smtplib.SMTP(host, port) as s:
+            if use_tls:
+                s.starttls()
+            s.login(user, pw)
+            s.send_message(msg)
     log.info("Mail versendet")
 
 
