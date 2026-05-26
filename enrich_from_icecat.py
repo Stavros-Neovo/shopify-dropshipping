@@ -188,9 +188,9 @@ def main():
     log.info("Lade BAB-Feed …")
     bab_eans = load_bab_eans(CONFIG_FILE)
 
-    # Fehlende EANs ermitteln
-    missing = [(ean, sku) for ean, sku in bab_eans if ean not in enrichment]
-    log.info(f"Produkte ohne Enrichment: {len(missing):,} (von {len(bab_eans):,})")
+    # ALLE Produkte mit Icecat prüfen — Icecat-Bilder sind immer besser als BAB-Bilder
+    missing = [(ean, sku) for ean, sku in bab_eans]
+    log.info(f"Produkte für Icecat-Lookup: {len(missing):,} (alle)")
 
     if not missing:
         log.info("Alle Produkte haben bereits Enrichment — nichts zu tun.")
@@ -215,6 +215,18 @@ def main():
         data = fetch_icecat(ean)
         if data:
             entry = extract_enrichment(ean, data)
+            # Bestehende Felder aus altem Eintrag behalten (z.B. specs), nur Bilder überschreiben
+            if ean in enrichment:
+                old = enrichment[ean].copy()
+                # Nur Bilder + Titel von Icecat übernehmen wenn vorhanden
+                if entry.get("images_all"):
+                    old["images_all"] = entry["images_all"]
+                if entry.get("title_full"):
+                    old["title_full"] = entry["title_full"]
+                if entry.get("long_summary"):
+                    old["long_summary"] = entry["long_summary"]
+                old["source"] = "icecat+bab"
+                entry = old
             # Fehlende Felder mit Leerstrings auffüllen
             if original_fields:
                 for field in original_fields:
