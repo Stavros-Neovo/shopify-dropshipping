@@ -40,10 +40,53 @@ csv.field_size_limit(sys.maxsize)
 log = logging.getLogger("matrixify")
 
 # ---------------------------------------------------------------------------
+# Google Product Category Mapping (BAB ItemMainGroup → Google Taxonomy)
+# ---------------------------------------------------------------------------
+GOOGLE_CATEGORY_MAP: Dict[str, str] = {
+    "AMD":        "Electronics > Computers > Computer Components > CPUs & Processors",
+    "INTEL":      "Electronics > Computers > Computer Components > CPUs & Processors",
+    "DDR3":       "Electronics > Computers > Computer Components > Computer Memory",
+    "DDR4":       "Electronics > Computers > Computer Components > Computer Memory",
+    "DDR5":       "Electronics > Computers > Computer Components > Computer Memory",
+    "SSD":        "Electronics > Computers > Computer Components > Storage Devices",
+    "INTERN":     "Electronics > Computers > Computer Components > Storage Devices",
+    "INTERN G":   "Electronics > Computers > Computer Components > Storage Devices",
+    "EXTERN":     "Electronics > Computers > Computer Components > Storage Devices",
+    "SATA":       "Electronics > Computers > Computer Components > Storage Devices",
+    "FLASH":      "Electronics > Computers > Computer Components > Storage Devices",
+    "VERBATIM":   "Electronics > Computers > Computer Components > Storage Devices",
+    "MONITOR":    "Electronics > Video > Video Components > Monitors",
+    "DOCKING":    "Electronics > Computers > Laptop Accessories > Laptop Docking Stations",
+    "ROUTER":     "Electronics > Networking",
+    "SWITCH":     "Electronics > Networking > Network Switches",
+    "NETZTEIL":   "Electronics > Computers > Computer Components > Power Supplies",
+    "LOGITECH":   "Electronics > Computers > Input Devices",
+    "CHERRY":     "Electronics > Computers > Input Devices",
+    "MICROSOFT":  "Electronics > Computers > Input Devices",
+    "SECURITY":   "Electronics > Security",
+    "ZUBEHÖR":    "Electronics > Electronics Accessories",
+    "GA":         "Electronics",
+    "CE":         "Electronics",
+    "HW":         "Electronics > Computers > Computer Components",
+    "DV":         "Electronics",
+    "PPS":        "Electronics",
+    "NEW OPEN BOXED": "Electronics",
+    "GRADE A":    "Electronics",
+    "GRADE B":    "Electronics",
+}
+
+DEFAULT_GOOGLE_CATEGORY = "Electronics"
+
+
+def get_google_category(product: dict) -> str:
+    """Gibt die passende Google Produktkategorie für ein Produkt zurück."""
+    cat = (product.get("category") or "").strip().upper()
+    return GOOGLE_CATEGORY_MAP.get(cat, DEFAULT_GOOGLE_CATEGORY)
+
+
+# ---------------------------------------------------------------------------
 # Matrixify-Spalten — vollständige Liste der relevanten Felder
 # ---------------------------------------------------------------------------
-# Diese Spalten kennt Matrixify nativ und mappt sie korrekt auf Shopify-Produkte.
-# Siehe: https://matrixify.app/tutorials/matrixify-csv-headers-products/
 MATRIXIFY_HEADERS = [
     "ID",                          # Shopify product ID (leer = neu)
     "Handle",                      # URL-Slug (eindeutig)
@@ -57,6 +100,7 @@ MATRIXIFY_HEADERS = [
     "Status",                      # active | draft | archived
     "Published",                   # TRUE / FALSE
     "Published Scope",             # global | web
+    "Google Product Category",     # Google Shopping Kategorie
     "Variant SKU",
     "Variant Price",               # VK Brutto
     "Variant Compare At Price",    # optional Streichpreis
@@ -101,17 +145,14 @@ def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
         return f"<p>{bab_title}</p>"
 
     parts = []
-    # Marketing-Text als Lead (falls vorhanden, sonst long_summary)
     lead = enrichment.get("marketing_text") or enrichment.get("long_summary") or enrichment.get("short_summary") or ""
     if lead:
         parts.append(f"<p>{lead}</p>")
 
-    # Specs als Tabelle (sind schon HTML-formatiert in artikeldaten)
     specs = enrichment.get("specs_html") or ""
     if specs:
         parts.append(f'<div class="product-specs">{specs}</div>')
 
-    # Manufacturer-Link, falls vorhanden
     mfr_url = enrichment.get("manufacturer_url") or ""
     if mfr_url and mfr_url.startswith("http"):
         parts.append(f'<p><small><a href="{mfr_url}" target="_blank" rel="noopener">Herstellerinformationen</a></small></p>')
@@ -123,7 +164,6 @@ def slugify(text: str) -> str:
     """Erzeugt aus einem Titel einen URL-freundlichen Handle."""
     import re
     text = text.lower()
-    # Umlaute
     replacements = {"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss",
                     "Ä": "ae", "Ö": "oe", "Ü": "ue"}
     for k, v in replacements.items():
@@ -134,7 +174,7 @@ def slugify(text: str) -> str:
 
 
 def should_keep(product: dict, filters_cfg: dict) -> tuple[bool, str]:
-    """Entscheidet, ob ein Produkt importiert werden soll. (gleiche Logik wie sync.py)"""
+    """Entscheidet, ob ein Produkt importiert werden soll."""
     if product.get("purchase_price", 0) <= 0:
         return False, "EK ist 0 oder fehlt"
     if product.get("purchase_price", 0) > filters_cfg.get("max_purchase_price_eur", 1e9):
@@ -180,21 +220,20 @@ def build_rows(product: dict, pr, cfg: dict,
     all_images = all_images[:max_images]
     first_image = all_images[0] if all_images else ""
 
-    # Bevorzuge den Hersteller-Titel aus Enrichment (oft sauberer formatiert)
     title = (enrichment.get("title_full") if enrichment else "") or \
             product.get("title", "Unbenanntes Produkt")
-    title = title[:250]  # Shopify-Limit
+    title = title[:250]
 
-    # Body-HTML aus Enrichment
     body_html = build_description_html(product.get("title", ""), enrichment)
 
-    # Tags: BAB-Kategorie + Marke + ggf. "ohne-bilder" Marker
     tags = list(filter(None, [
         product.get("category", ""),
         product.get("brand", ""),
     ]))
     if not first_image:
         tags.append("import-ohne-bild")
+
+    google_cat = get_google_category(product)
 
     rows: list[dict] = []
 
@@ -212,6 +251,7 @@ def build_rows(product: dict, pr, cfg: dict,
         "Status": "active" if first_image else "draft",
         "Published": "TRUE" if first_image else "FALSE",
         "Published Scope": "global",
+        "Google Product Category": google_cat,
         "Variant SKU": product["sku"],
         "Variant Price": f"{pr.vk_gross:.2f}",
         "Variant Compare At Price": "",
@@ -247,6 +287,7 @@ def build_rows(product: dict, pr, cfg: dict,
             "Status": "",
             "Published": "",
             "Published Scope": "",
+            "Google Product Category": "",
             "Variant SKU": "",
             "Variant Price": "",
             "Variant Compare At Price": "",
@@ -274,7 +315,7 @@ def build_deactivate_row(sku: str, last_known: dict) -> dict:
     """Erzeugt eine Zeile, die ein verschwundenes Produkt auf 'draft' setzt."""
     return {
         "ID": "",
-        "Handle": last_known.get("handle", ""),  # falls bekannt
+        "Handle": last_known.get("handle", ""),
         "Command": "MERGE",
         "Title": last_known.get("title", ""),
         "Body HTML": "",
@@ -282,9 +323,10 @@ def build_deactivate_row(sku: str, last_known: dict) -> dict:
         "Type": "",
         "Tags": "auto-deactivated",
         "Tags Command": "MERGE",
-        "Status": "draft",        # ← das Wichtige: Produkt wird inaktiv
+        "Status": "draft",
         "Published": "FALSE",
         "Published Scope": "",
+        "Google Product Category": "",
         "Variant SKU": sku,
         "Variant Price": last_known.get("vk", ""),
         "Variant Compare At Price": "",
@@ -413,7 +455,6 @@ def main():
             row = build_deactivate_row(sku, state[sku])
             writer.writerow(row)
             stats["deactivated"] += 1
-            # nicht ins new_state schreiben – damit beim nächsten Lauf nicht erneut deaktiviert wird
 
     # State speichern
     state_path.write_text(json.dumps(new_state, indent=2, ensure_ascii=False), encoding="utf-8")
