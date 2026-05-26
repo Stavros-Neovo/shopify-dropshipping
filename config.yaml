@@ -39,20 +39,10 @@ pricing:
   # Marge-Staffel: Für jeden EK-Bereich gilt ein anderer Aufschlag
   # ek_max = obere Grenze (exklusiv), markup = Faktor (1.0 = +100%)
   tiers:
-    - ek_max: 5.0
-      markup: 2.50    # +250 %
-    - ek_max: 15.0
-      markup: 1.80    # +180 %
-    - ek_max: 30.0
-      markup: 1.20    # +120 %
     - ek_max: 50.0
-      markup: 0.80    # +80 %
-    - ek_max: 100.0
-      markup: 0.60    # +60 %
-    - ek_max: 200.0
-      markup: 0.40    # +40 %
+      markup: 0.30    # +30% für EK unter 50€
     - ek_max: 999999.0
-      markup: 0.25    # +25 %
+      markup: 0.20    # +20% für EK über 50€
 
   # Mindest-Bruttomarge in EURO (egal was die Staffel sagt)
   min_absolute_margin_eur: 5.00
@@ -77,7 +67,7 @@ pricing:
 # -----------------------------------------------------------------------------
 filters:
   # Maximales Gewicht in kg (alles darüber wird nicht importiert)
-  max_weight_kg: 2.0
+  max_weight_kg: 50.0
   # Minimaler Lagerbestand: erst ab dieser Anzahl wird das Produkt aktiv geschaltet
   min_stock: 1
   # Maximaler EK (Schutz gegen Cash-Bindung bei hochpreisigen Drop-Ship-Risiken)
