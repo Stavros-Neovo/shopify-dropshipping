@@ -1,0 +1,12 @@
+# price_overrides.yaml
+# ====================
+# Manuelle Preisfestlegung für bestimmte Produkte.
+# Diese Preise werden NICHT von der Pipeline überschrieben.
+#
+# Format:
+#   SKU: Preis_in_EUR (Bruttopreis inkl. MwSt.)
+
+NOCO0017: 350.99   # NOCO GBX155 Boost X 12V 4250A Jump Starter
+NOCO0016: 259.99   # NOCO AX65 Boost Air 12V 2000A Jump Starter and Air Compressor
+NOCO0015: 215.99   # NOCO GBX75 Boost X 12V 2500A Jump Starter
+NOCO0006: 275.99   # NOCO GB150 Boost 12V 3000A Jump Starter

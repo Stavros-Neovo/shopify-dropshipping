@@ -34,6 +34,16 @@ from dotenv import load_dotenv
 from csv_loader import load_supplier_feed
 from pricing import calculate_vk
 
+PRICE_OVERRIDES_FILE = "price_overrides.yaml"
+
+def load_price_overrides(path: str) -> Dict[str, float]:
+    """Lädt manuelle Preisüberschreibungen aus price_overrides.yaml."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    data = yaml.safe_load(open(p, encoding="utf-8")) or {}
+    return {str(k): float(v) for k, v in data.items()}
+
 # CSVs mit langen Feldern (Specs-HTML kann sehr lang sein)
 csv.field_size_limit(sys.maxsize)
 
@@ -389,6 +399,11 @@ def main():
     # Enrichment-Index laden (für Bilder + Beschreibungen)
     enrichment_idx = load_enrichment_index(args.enrichment)
 
+    # Preisüberschreibungen laden
+    price_overrides = load_price_overrides(PRICE_OVERRIDES_FILE)
+    if price_overrides:
+        log.info(f"Preisüberschreibungen geladen: {len(price_overrides)} SKUs")
+
     # Counters
     stats = {"total": 0, "filtered": 0, "kept": 0,
              "enriched": 0, "without_image": 0,
@@ -430,6 +445,11 @@ def main():
                 stats["enriched"] += 1
             else:
                 stats["without_image"] += 1
+
+            # Preisüberschreibung anwenden falls vorhanden
+            if sku in price_overrides:
+                pr = pr._replace(vk_gross=price_overrides[sku])
+                log.info(f"  ↑ Preisüberschreibung: {sku} → {price_overrides[sku]:.2f}€")
 
             rows = build_rows(product, pr, cfg, enrichment=enrichment)
             for row in rows:
