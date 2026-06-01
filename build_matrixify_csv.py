@@ -448,7 +448,7 @@ def main():
 
             # Preisüberschreibung anwenden falls vorhanden
             if sku in price_overrides:
-                pr = pr._replace(vk_gross=price_overrides[sku])
+                pr.vk_gross = price_overrides[sku]
                 log.info(f"  ↑ Preisüberschreibung: {sku} → {price_overrides[sku]:.2f}€")
 
             rows = build_rows(product, pr, cfg, enrichment=enrichment)
