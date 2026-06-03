@@ -1,0 +1,52 @@
+# manual_images.yaml
+# ===================
+# Manuelle Bild-URLs für Produkte ohne automatisch gefundenes Bild.
+# Format: EAN: "https://..."
+# Diese werden beim nächsten Lauf von apply_manual_images.py in enrichment_index.csv eingetragen.
+
+# --- EcoFlow RAPID ---
+"4895251627542": "https://fbr.etailercdn.de/media/pimg/55/556011/thumbs/1204486_7502800.png"   # EcoFlow Rapid 5000 Powerbank Blau
+"4895251647830": "https://shop.mdpcloud.com/media/catalog/product/cache/dd4850ad4231b6306bceadf38a0bbeed/d/4/d431f509-d090-41b9-ad14-02018ce9a47f.Jpeg"   # EcoFlow RAPID Mag 5K White
+"4895251647809": "https://media.cdn.bauhaus/m/4532072-2/prod_large_square.webp"   # EcoFlow RAPID Mag 5K Purple/Black
+"4895251647991": "https://fbr.etailercdn.de/media/pimg/40/407948/thumbs/1489375_8413330.png"   # EcoFlow RAPID Mag 10K
+"4895251653855": "https://media.cdn.bauhaus/m/4532061-2/prod_large_square.webp"   # EcoFlow RAPID 25K Green
+
+# --- PETKIT ---
+"6975069302959": "https://petkitgermany.com/cdn/shop/files/petkit-filter-unit-rect-768643.jpg?v=1724230814&width=1400"   # PETKIT Filter 5.0 5pcs
+"6973293808971": "https://dobre.promo/userdata/public/gfx/12849/Zwirek-dla-kota-PetKit-5-in-1-Clump--3L.jpg"   # PETKIT Katzenstreu Tofu Aktivkohle 6L
+"6975069301846": "https://www.mr-bricolage.be/275166-large_default/pompe-pour-fontaine-a-eau-bleue-petkit.jpg"   # PETKIT Wireless Pump UVC
+"6975069305691": "https://cdn-media.playox.de/product-management/products/assets/n2008281462/product_image/Petkit_Easy_Step_Pedal_1_.jpeg?"   # PETKIT Easy Step Trittbrett
+"4061245025452": ""   # SOL-50 Bohrschraube Alu/Alu Edelstahl
+"6975069306650": "https://m.media-amazon.com/images/I/71XIkmzBTXL._AC_SL1500_.jpg"   # PETKIT Crystal PH Katzenstreu 4 Beutel
+"6975069305677": ""   # PETKIT Vordereingang CRYSTAL DUO
+"6975069308807": ""   # PETKIT PUROBOT CRYSTAL DUO With Front Entry Hood
+
+# --- ENABOT ---
+"6972822120935": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_173837501?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"   # ENABOT EBO Air 2 Haustierroboter (Variante 1)
+"6972822121000": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_153265234?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"   # ENABOT EBO Air 2 Haustierroboter (Variante 2)
+
+# --- ANTHBOT ---
+"8885022190043": "https://media.cdn.bauhaus/m/4715722/prod_large_square.webp?width=3840&quality=75"   # ANTHBOT Genie 1000 Mähroboter
+"8885022190173": "https://cdn-reichelt.de/bilder/web/artikel_ws/E910%2FATNHBOT_ANTB0008_01.jpg?type=Product&"   # ANTHBOT RTK Wall Mount Kit
+
+# --- Mitel ---
+"7109806202571": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/7/2/722d_1.jpg"   # Mitel 722dt DECT Set
+"7109806202564": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/7/1/712dt_1.jpg"   # Mitel 712dt DECT Set
+"7109806196962": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/m/i/mitel_612dt_dect.jpg"   # Mitel 612dt Handset
+"7109806196993": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/d/e/dect612dtwcharger.jpg"   # Mitel 612dt Set
+"7109806197006": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/m/i/mitel_622dt_2.jpg"   # Mitel 622dt Set
+
+# --- HP / tecXL Refurbished ---
+"4260771516339": "https://www.alternate.de/p/600x600/8/9/HP_EliteDesk_800_G4_DM_General_berholt__Mini_PC@@100156498.jpg"   # HP EliteDesk 800 G4 MP i5-8500T
+"4262431594756": "https://media2.nbb-cdn.de/images/products/4262431591830_1_aaae.jpg?size=2800"   # HP EliteDesk 800 G6 MP i5-10500T
+"4262431592554": "https://www.alternate.de/p/o/5/4/HP_EliteBook_850_G7_General_berholt__Notebook@@100193545.jpg"   # tecXL HP EliteBook 850 G7 15.6"
+"4262575240144": "https://www.alternate.de/p/600x600/8/0/ASUS_BE24WQLB_General_berholt__LED_Monitor@@100193508.jpg"   # tecXL Asus BE24WQLB Monitor 24.1"
+"4262504949742": "https://www.alternate.de/p/600x600/8/2/Lenovo_ThinkVision_T24i_General_berholt__LED_Monitor@@100193528.jpg"   # tecXL Lenovo ThinkVision T24i Monitor 24"
+
+# --- Lenovo ---
+"4250563426243": "https://www.alternate.de/p/600x600/1/6/Lenovo_ThinkPad_USB_C_Dockingstation_40AS_General_berholt@@100160961.jpg"   # Lenovo ThinkPad Dock USB-C 90W
+"0199274117238": "https://cdn.electronis.de/images/lenovo/00634963/lenovo_thinkpad_p14s_g5_140_amd_ryzen_5_pro_8640hs_16gb_ram_512gb_ssd_lte_win11pro_-_21me003fge.jpg"   # Lenovo ThinkPad P14s G5
+"5711603098626": "https://cdn2.kosatec.de/thumbnail/0e/0d/3f/1779448820/21332762_1024x1024.jpg?ts=1779449196"   # T1A Lenovo ThinkPad X1 Carbon Gen 8
+
+# --- Kioxia ---
+"4582761160187": "https://europe.kioxia.com/content/dam/kioxia/shared/personal/sd-card/exceria-plus-g2/exceria-plus-g2-sdcard-gallery-01.jpg"   # Kioxia SD Exceria Plus 128GB
