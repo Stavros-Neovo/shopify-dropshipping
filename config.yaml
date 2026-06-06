@@ -171,7 +171,8 @@ ebay:
     country: "DE"
 
   # eBay-Kanal aktiv? false = eBay wird übersprungen
-  enabled: true
+  # TODO: auf true setzen sobald Shop 1 freigeschalten ist (~48h)
+  enabled: false
 
 # -----------------------------------------------------------------------------
 # LAUFZEIT-VERHALTEN
