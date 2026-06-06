@@ -236,14 +236,36 @@ def main():
     processed = 0
     seen_skus: set[str] = set()  # alle SKUs die in diesem Lauf gesehen wurden
 
-    for product in load_supplier_feed(cfg):
-        stats["total"] += 1
+    # Rotierender Offset: jeder Lauf verarbeitet die NÄCHSTE Batch
+    # So werden alle Produkte über mehrere Runs abgedeckt (z.B. 4×250 = 1000)
+    offset = 0
+    if limit:
+        offset = int(state.get("__next_offset__", 0))
+        log.info(f"Rotierender Offset: {offset} (Batch-Größe: {limit})")
 
-        keep, reason = should_keep(product, cfg["filters"])
-        if not keep:
-            stats["filtered"] += 1
-            filter_reasons[reason] = filter_reasons.get(reason, 0) + 1
-            continue
+    feed_items = list(load_supplier_feed(cfg))
+    total_feed = len(feed_items)
+
+    # Nur Produkte ab dem Offset, rest wird für seen_skus weiter unten gebraucht
+    # seen_skus muss ALLE SKUs enthalten damit verschwundene korrekt erkannt werden
+    all_feed_skus: set[str] = set()
+    eligible = []
+    for product in feed_items:
+        keep, _ = should_keep(product, cfg["filters"])
+        if keep:
+            all_feed_skus.add(product["sku"])
+            eligible.append(product)
+
+    # Batch aus dem Offset herausschneiden (rotierend)
+    if limit and offset >= len(eligible):
+        offset = 0  # wrap around
+        log.info("Offset zurückgesetzt (Ende des Feeds erreicht)")
+    batch = eligible[offset:offset + limit] if limit else eligible
+
+    log.info(f"Feed: {total_feed} gesamt, {len(eligible)} nach Filter, Batch: {len(batch)} (offset {offset})")
+
+    for product in batch:
+        stats["total"] += 1
 
         # Shopify-Preis berechnen
         try:
@@ -266,7 +288,6 @@ def main():
                 log.error(f"eBay-Pricing-Fehler für SKU {product.get('sku')}: {e}")
 
         sku = product["sku"]
-        seen_skus.add(sku)
 
         # Enrichment (Bilder + Beschreibung) per EAN aus enrichment_index
         ean = str(product.get("ean", "")).strip()
@@ -333,27 +354,31 @@ def main():
         }
 
         processed += 1
-        if limit and processed >= limit:
-            log.warning(f"Limit {limit} erreicht – breche ab")
-            break
+
+    # Nächsten Offset für den nächsten Lauf speichern (rotierend)
+    if limit:
+        next_offset = offset + processed
+        if next_offset >= len(eligible):
+            next_offset = 0  # wrap around → nächster Lauf beginnt von vorne
+            log.info("Offset-Rotation: nächster Lauf startet wieder bei 0")
+        state["__next_offset__"] = next_offset
+        log.info(f"Nächster Offset: {next_offset} (von {len(eligible)} gefilterten Produkten)")
 
     # =========================================================
     # KRITISCH: Verschwundene Artikel offline nehmen
-    # Nur wenn kein Limit gesetzt war (sonst falsches Diff)
+    # Mit Rotation: seen_skus enthält alle Feed-SKUs → sicheres Diff
     # =========================================================
-    if not limit or processed < limit:
-        handle_disappeared_products(
-            state=state,
-            seen_skus=seen_skus,
-            shopify=shopify,
-            ebay=ebay,
-            ebay_enabled=ebay_enabled,
-            dry_run=dry_run,
-            log=log,
-            stats=stats,
-        )
-    else:
-        log.info("Limit aktiv — verschwundene Artikel werden NICHT offline genommen (unvollständiger Feed-Scan)")
+    seen_skus = all_feed_skus  # gesamter Feed (nicht nur Batch) für Diff
+    handle_disappeared_products(
+        state=state,
+        seen_skus=seen_skus,
+        shopify=shopify,
+        ebay=ebay,
+        ebay_enabled=ebay_enabled,
+        dry_run=dry_run,
+        log=log,
+        stats=stats,
+    )
 
     # State persistieren
     state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False))
