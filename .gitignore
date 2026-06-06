@@ -13,3 +13,13 @@ config_test.yaml
 test_feed.csv
 test_connection.py
 .github/
+
+# Runtime-Dateien (ändern sich bei jedem Sync-Run)
+state.json
+state_shop2.json
+icecat_cache.json
+processed_orders_state.json
+processed_orders_state_shop2.json
+tracked_shipments_state.json
+tracked_shipments_state_shop2.json
+image_report.csv
