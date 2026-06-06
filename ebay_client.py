@@ -732,16 +732,23 @@ class EbayClient:
 
         # --- CPU-spezifische Aspekte ---
         if n in ("prozessormodell", "modellnummer"):
-            # AMD Ryzen 9 5950X → "Ryzen 9 5950X"
             import re as _re
+            # AMD Ryzen 9 5950X → "Ryzen 9 5950X"
             m = _re.search(r"(ryzen\s*[359]\s*[\w]+|threadripper\s*[\w]+|athlon\s*[\w]+)", t)
             if m: return [m.group(0).title()]
             # Intel Core i9-13900K → "Core i9-13900K"
             m = _re.search(r"(core\s*i[3579]-[\w]+|xeon\s*[\w-]+|celeron\s*[\w]+|pentium\s*[\w]+)", t)
             if m: return [m.group(0).title()]
-            # Fallback: nimm den ersten alphanumeric Block nach der Marke
-            m = _re.search(r"(?:amd|intel)\s+([\w\s-]{3,20}?)(?:\s+box|\s+tray|\s+\||\s*$)", t)
+            # Intel N100, N200, N305 etc.
+            m = _re.search(r"\b(n\d{3,4}|ultra\s*[\w-]+)\b", t)
+            if m: return [m.group(0).title()]
+            # Fallback: alles nach "amd"/"intel" bis box/tray/ende
+            m = _re.search(r"(?:amd|intel)\s+([\w\s-]{3,30}?)(?:\s+box|\s+tray|\s+\||\s*$)", t)
             if m: return [m.group(1).strip().title()]
+            # Letzter Fallback: ganzer Titel ohne Marke
+            cleaned = _re.sub(r"(?i)\b(intel|amd|box|tray)\b", "", title).strip(" -–")
+            if cleaned:
+                return [cleaned[:80]]
             return None
 
         if n == "prozessorfamilie":
