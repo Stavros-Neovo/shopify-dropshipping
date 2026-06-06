@@ -186,14 +186,19 @@ def main():
     shopify_token = os.environ.get("SHOPIFY_ADMIN_TOKEN", "")
     shopify_domain = cfg["shopify"].get("shop_domain", "")
     if not dry_run and shopify_domain and shopify_token:
-        shopify = ShopifyClient(
-            shop_domain=shopify_domain,
-            admin_token=shopify_token,
-            api_version=cfg["shopify"].get("api_version", "2024-10"),
-        )
-        location_id = cfg["shopify"].get("location_id") \
-            or shopify.get_primary_location_id()
-        log.info(f"Shopify-Location-ID: {location_id}")
+        try:
+            shopify = ShopifyClient(
+                shop_domain=shopify_domain,
+                admin_token=shopify_token,
+                api_version=cfg["shopify"].get("api_version", "2024-10"),
+            )
+            location_id = cfg["shopify"].get("location_id") \
+                or shopify.get_primary_location_id()
+            log.info(f"Shopify-Location-ID: {location_id}")
+        except Exception as e:
+            log.warning(f"Shopify-Init fehlgeschlagen ({e}) — Shopify wird übersprungen, eBay läuft weiter")
+            shopify = None
+            location_id = None
     elif not dry_run and shopify_domain and not shopify_token:
         log.warning("SHOPIFY_ADMIN_TOKEN fehlt — Shopify wird übersprungen")
     elif not shopify_domain:
