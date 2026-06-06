@@ -66,14 +66,14 @@ STOCK_MAX_DISPLAY    = 20  # > X Stück → auf 20 deckeln
 
 
 def safe_ebay_stock(raw_stock: int) -> int:
-    """Gibt den sicheren eBay-Anzeigebestand zurück."""
+    """Gibt den sicheren eBay-Anzeigebestand zurück.
+    Dropshipping-Prinzip: immer 1 anzeigen solange Lieferant Stock hat.
+    Nach Verkauf → nächster Sync setzt wieder auf 1.
+    Verhindert Überverkäufe und reduziert eBay-Listenwert (Limit-Schutz).
+    """
     if raw_stock <= 0:
         return 0
-    if raw_stock <= STOCK_LOW_THRESHOLD:
-        return 1
-    if raw_stock > STOCK_MAX_DISPLAY:
-        return STOCK_MAX_DISPLAY
-    return raw_stock
+    return 1
 
 
 # Kategorien die Pflichtmerkmale erfordern die wir nicht haben (CPU-Typ, GPU-Modell etc.)
