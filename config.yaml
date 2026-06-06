@@ -105,14 +105,73 @@ shopify:
 # AUTO-ORDER (Email an Lieferanten)
 # -----------------------------------------------------------------------------
 supplier_email:
-  # Email-Adresse deines Lieferanten
-  to: "bestellung@dein-lieferant.de"
-  # Eigene Absender-Mail (siehe .env für Passwort)
-  from_name: "Dein Shop Name"
-  # Sprache der Bestellmail (de/en)
+  # Email-Adresse von Sebastian / BAB Distribution
+  to: "sebastian@bab-distribution.de"   # ← echte Email von Sebastian eintragen
+  # Absendername (dein Shop)
+  from_name: "eBay Shop 1"
+  # Sprache der Bestellmail
   language: "de"
-  # Sollen Bestellungen automatisch versendet werden, oder erst nach Bestätigung?
-  auto_send: true  # ANFANGS auf false! Erst manuell prüfen.
+  # Automatisch senden? ERST auf true wenn du die ersten Mails in outbox/ geprüft hast!
+  auto_send: true
+
+# -----------------------------------------------------------------------------
+# EBAY PRICING
+# Formel: VK_brutto = (EK + Versand + EK × Marge%) × 1.19 ÷ (1 − eBay_fee)
+# -----------------------------------------------------------------------------
+ebay_pricing:
+  # Fester Versandkostenanteil der in den Preis eingerechnet wird
+  shipping_cost_eur: 5.00
+
+  # eBay Final Value Fee (Verkaufsprovision inkl. aller Gebühren)
+  ebay_fee_rate: 0.13
+
+  # MwSt
+  vat_rate: 0.19
+
+  # Marge-Staffel (% Aufschlag auf EK netto)
+  # Empfehlung: kleine Artikel höher, große Artikel niedriger
+  margin_tiers:
+    - ek_max: 15.0
+      margin: 0.20    # 20% für EK unter 15€ (Schutz gegen Rücksendungen)
+    - ek_max: 100.0
+      margin: 0.15    # 15% für EK 15–100€ (Sweet Spot)
+    - ek_max: 999999.0
+      margin: 0.13    # 13% für EK über 100€ (absolute Marge reicht)
+
+  # Mindest-Absolutmarge nach allen Abzügen (Sicherheitsnetz)
+  min_margin_eur: 5.00
+
+  # Preisrundung
+  rounding_strategy: "psychological_99"
+
+# -----------------------------------------------------------------------------
+# EBAY API
+# -----------------------------------------------------------------------------
+ebay:
+  # Marketplace: EBAY_DE = eBay Deutschland
+  marketplace_id: "EBAY_DE"
+  # Sandbox-Modus: true zum Testen, false für Live-Betrieb
+  sandbox: false
+
+  # Business-Policies (im eBay-Konto unter "Business Policies" anlegen)
+  # Ohne diese IDs kann nicht veröffentlicht werden!
+  fulfillment_policy_id: "264289251012"   # Ups STD 1
+  payment_policy_id: "257961248012"       # eBay Managed Payments
+  return_policy_id: "257998090012"        # Return Accepted
+
+  # Merchant Location Key (wird beim ersten Lauf automatisch angelegt falls leer)
+  merchant_location_key: "hauptlager_de"   # wird automatisch auf "hauptlager_de" gesetzt
+
+  # Adresse für den automatisch angelegten Merchant Location
+  merchant_location_address:
+    name: "Neovogen"
+    address1: "Bismarckstr. 91"
+    city: "Düsseldorf"
+    postal_code: "40210"
+    country: "DE"
+
+  # eBay-Kanal aktiv? false = eBay wird übersprungen
+  enabled: true
 
 # -----------------------------------------------------------------------------
 # LAUFZEIT-VERHALTEN

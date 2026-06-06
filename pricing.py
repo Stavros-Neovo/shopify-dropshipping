@@ -12,7 +12,7 @@ Wendet die in config.yaml definierte Hybrid-Pricing-Staffel an:
 """
 from __future__ import annotations
 from dataclasses import dataclass
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import math
 
 
@@ -113,6 +113,74 @@ def calculate_vk(ek_net: float, pricing_cfg: Dict[str, Any]) -> PricingResult:
         margin_pct=round(margin_pct, 1),
         tier_markup=markup,
         shipping_buffer=buffer,
+    )
+
+
+def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
+                      shopify_vk_gross: Optional[float] = None) -> PricingResult:
+    """
+    Berechnet den eBay-Verkaufspreis nach der exakten Formel:
+
+        VK_brutto = (EK + Versand + EK × Marge%) × 1.19 ÷ (1 − eBay_fee)
+
+    Die eBay-Gebühr wird herausgerechnet (nicht draufaddiert!), weil eBay
+    seinen Anteil vom VK nimmt — der Preis muss also so gesetzt werden,
+    dass nach eBay-Abzug noch die gewünschte Marge übrig bleibt.
+
+    Args:
+        ek_net: Einkaufspreis netto in EUR
+        ebay_pricing_cfg: das 'ebay_pricing' Sub-Dict aus config.yaml
+        shopify_vk_gross: nicht mehr genutzt, nur für Rückwärtskompatibilität
+    """
+    if ek_net <= 0:
+        raise ValueError(f"Ungültiger EK: {ek_net}")
+
+    shipping = float(ebay_pricing_cfg.get("shipping_cost_eur", 5.00))
+    ebay_fee = float(ebay_pricing_cfg.get("ebay_fee_rate", 0.13))
+    vat = float(ebay_pricing_cfg.get("vat_rate", 0.19))
+    min_margin = float(ebay_pricing_cfg.get("min_margin_eur", 5.00))
+    rounding = ebay_pricing_cfg.get("rounding_strategy", "psychological_99")
+
+    # Marge-Staffel
+    margin_pct = 0.15  # Fallback
+    for tier in ebay_pricing_cfg.get("margin_tiers", []):
+        if ek_net < float(tier["ek_max"]):
+            margin_pct = float(tier["margin"])
+            break
+
+    # Kostenbasis: EK + Versand + Marge auf EK
+    cost_base = ek_net + shipping + ek_net * margin_pct
+
+    # MwSt drauf, dann eBay-Gebühr herausrechnen
+    # VK_brutto × (1 − eBay_fee) = cost_base × (1 + vat)
+    # → VK_brutto = cost_base × (1 + vat) / (1 − eBay_fee)
+    vk_gross_raw = cost_base * (1 + vat) / (1 - ebay_fee)
+
+    # Psychologische Rundung
+    vk_gross = _round_psychological(vk_gross_raw, rounding)
+
+    # Mindestmarge sicherstellen
+    # Tatsächliche Marge = was nach eBay-Fee und MwSt übrig bleibt minus EK und Versand
+    def actual_margin(vk: float) -> float:
+        net_after_ebay = vk * (1 - ebay_fee)
+        net_without_vat = net_after_ebay / (1 + vat)
+        return net_without_vat - ek_net - shipping
+
+    while actual_margin(vk_gross) < min_margin:
+        vk_gross = _round_psychological(vk_gross + 1.0, rounding)
+        if vk_gross > 99999:
+            break
+
+    margin_eur = actual_margin(vk_gross)
+    margin_pct_real = (margin_eur / ek_net) * 100
+
+    return PricingResult(
+        purchase_price_net=round(ek_net, 2),
+        vk_gross=round(vk_gross, 2),
+        margin_eur=round(margin_eur, 2),
+        margin_pct=round(margin_pct_real, 1),
+        tier_markup=margin_pct,
+        shipping_buffer=shipping,
     )
 
 

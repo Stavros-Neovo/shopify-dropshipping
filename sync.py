@@ -7,13 +7,14 @@ Was es macht (in dieser Reihenfolge):
   1. Lädt config.yaml und .env
   2. Lädt den CSV-Feed des Lieferanten
   3. Filtert ungewünschte Produkte raus (Gewicht, Kategorien, etc.)
-  4. Berechnet für jedes Produkt den Verkaufspreis
+  4. Berechnet für jedes Produkt den Verkaufspreis (Shopify + eBay separat)
   5. Legt Produkte in Shopify an / aktualisiert sie
-  6. Synchronisiert Lagerbestand
+  6. Legt Produkte auf eBay an / aktualisiert sie (wenn aktiviert)
+  7. Artikel die NICHT MEHR im Feed sind → Bestand 0 + eBay offline
 
 Aufruf:
   python sync.py            # normaler Lauf (respektiert dry_run aus config)
-  python sync.py --live     # erzwingt Live-Modus (sendet an Shopify)
+  python sync.py --live     # erzwingt Live-Modus
   python sync.py --dry-run  # erzwingt Dry-Run
 """
 from __future__ import annotations
@@ -29,8 +30,10 @@ import yaml
 from dotenv import load_dotenv
 
 from csv_loader import load_supplier_feed
-from pricing import calculate_vk
+from pricing import calculate_vk, calculate_ebay_vk
 from shopify_client import ShopifyClient
+from ebay_client import EbayClient
+from build_matrixify_csv import load_enrichment_index, build_description_html
 
 
 def setup_logging(log_dir: str):
@@ -75,6 +78,77 @@ def should_keep(product: dict, filters_cfg: dict) -> tuple[bool, str]:
     return True, ""
 
 
+def handle_disappeared_products(
+    state: dict,
+    seen_skus: set,
+    shopify,
+    ebay,
+    ebay_enabled: bool,
+    dry_run: bool,
+    log,
+    stats: dict,
+):
+    """
+    Artikel die im letzten Lauf vorhanden waren aber JETZT NICHT MEHR im Feed
+    auftauchen → sofort offline nehmen.
+
+    Das ist kritisch: Wenn der Lieferant out-of-stock geht und der Artikel
+    aus dem Feed fällt, müssen wir eBay SOFORT auf Bestand 0 setzen
+    und das Listing deaktivieren.
+    """
+    disappeared = {sku for sku in state if sku not in seen_skus}
+    if not disappeared:
+        return
+
+    log.warning(f"⚠️  {len(disappeared)} Artikel nicht mehr im Feed → werden offline genommen")
+
+    for sku in disappeared:
+        log.warning(f"  OFFLINE: SKU {sku} (war zuletzt: {state[sku].get('last_seen', '?')})")
+
+        # Shopify: Bestand auf 0
+        if shopify and not dry_run:
+            try:
+                existing = shopify.find_product_by_sku(sku)
+                if existing:
+                    variant = (existing.get("variants") or [{}])[0]
+                    inv_item_id = variant.get("inventory_item_id")
+                    if inv_item_id:
+                        # location_id aus state oder direkt holen
+                        loc_id = state[sku].get("shopify_location_id")
+                        if loc_id:
+                            shopify.set_inventory(
+                                inventory_item_id=inv_item_id,
+                                location_id=loc_id,
+                                available=0,
+                            )
+                            log.info(f"  Shopify Bestand → 0: SKU {sku}")
+            except Exception as e:
+                log.error(f"  Shopify offline-Fehler SKU {sku}: {e}")
+
+        # eBay: Bestand 0 + Offer zurückziehen (= Listing deaktiviert)
+        if ebay_enabled:
+            if dry_run:
+                log.info(f"  [eBay DRY-RUN] würde SKU {sku} offline nehmen")
+                stats["ebay_offlined"] = stats.get("ebay_offlined", 0) + 1
+            elif ebay:
+                try:
+                    # 1. Bestand auf 0 setzen
+                    ebay.set_inventory(sku, 0)
+                    # 2. Offer zurückziehen (Listing wird deaktiviert, NICHT gelöscht)
+                    offer = ebay.get_offer_for_sku(sku)
+                    if offer:
+                        ebay.withdraw_offer(offer["offerId"])
+                    log.warning(f"  [eBay] ✓ SKU {sku} offline (Bestand 0 + Listing deaktiviert)")
+                    stats["ebay_offlined"] = stats.get("ebay_offlined", 0) + 1
+                except Exception as e:
+                    log.error(f"  [eBay] Offline-Fehler SKU {sku}: {e}")
+                    stats["ebay_errors"] += 1
+
+        # State markieren (nicht löschen, für Audit-Trail)
+        state[sku]["stock"] = 0
+        state[sku]["offline_since"] = datetime.now().isoformat()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="config.yaml")
@@ -99,28 +173,68 @@ def main():
     log.info(f"Dry-Run: {dry_run}")
 
     # Counters für Report
-    stats = {"total": 0, "filtered": 0, "created": 0, "updated": 0, "errors": 0}
+    stats = {
+        "total": 0, "filtered": 0,
+        "created": 0, "updated": 0, "errors": 0,
+        "ebay_created": 0, "ebay_updated": 0, "ebay_errors": 0, "ebay_offlined": 0,
+    }
     filter_reasons: dict[str, int] = {}
 
-    # Shopify-Client – nur initialisieren wenn Live
+    # Shopify-Client (nur wenn shop_domain gesetzt und Token vorhanden)
     shopify = None
     location_id = None
-    if not dry_run:
+    shopify_token = os.environ.get("SHOPIFY_ADMIN_TOKEN", "")
+    shopify_domain = cfg["shopify"].get("shop_domain", "")
+    if not dry_run and shopify_domain and shopify_token:
         shopify = ShopifyClient(
-            shop_domain=cfg["shopify"]["shop_domain"],
-            admin_token=os.environ["SHOPIFY_ADMIN_TOKEN"],
+            shop_domain=shopify_domain,
+            admin_token=shopify_token,
             api_version=cfg["shopify"].get("api_version", "2024-10"),
         )
         location_id = cfg["shopify"].get("location_id") \
             or shopify.get_primary_location_id()
         log.info(f"Shopify-Location-ID: {location_id}")
+    elif not dry_run and shopify_domain and not shopify_token:
+        log.warning("SHOPIFY_ADMIN_TOKEN fehlt — Shopify wird übersprungen")
+    elif not shopify_domain:
+        log.info("Shopify nicht konfiguriert — wird übersprungen")
 
-    # State-Datei laden (für Diff)
+    # eBay-Client
+    ebay = None
+    ebay_cfg = cfg.get("ebay", {})
+    ebay_pricing_cfg = cfg.get("ebay_pricing", cfg.get("pricing"))  # Fallback auf globales Pricing
+    ebay_enabled = ebay_cfg.get("enabled", False)
+    if ebay_enabled and not dry_run:
+        try:
+            ebay = EbayClient.from_env(ebay_cfg)
+            log.info(f"eBay-Client initialisiert (Sandbox: {ebay_cfg.get('sandbox', False)})")
+        except Exception as e:
+            log.warning(f"eBay-Client konnte nicht initialisiert werden: {e} — eBay wird übersprungen")
+            ebay = None
+    elif ebay_enabled and dry_run:
+        log.info("eBay aktiviert aber Dry-Run — eBay-Uploads werden simuliert")
+
+    # Merchant Location sicherstellen (einmalig beim ersten Lauf)
+    if ebay and not dry_run:
+        addr = ebay_cfg.get("merchant_location_address", {})
+        ebay.ensure_merchant_location(addr, config_path=args.config)
+
+    # Enrichment-Index laden (Bilder + Beschreibungen für Shopify & eBay)
+    enrichment_idx = {}
+    enrichment_path = cfg.get("enrichment", {}).get("index_file", "enrichment_index.csv")
+    if Path(enrichment_path).exists():
+        enrichment_idx = load_enrichment_index(enrichment_path)
+        log.info(f"Enrichment-Index geladen: {len(enrichment_idx)} Einträge")
+    else:
+        log.warning(f"enrichment_index.csv nicht gefunden — keine Bilder/Beschreibungen")
+
+    # State-Datei laden (für Diff + verschwundene Artikel)
     state_path = Path(cfg["runtime"]["state_file"])
     state = json.loads(state_path.read_text()) if state_path.exists() else {}
 
     limit = int(cfg["runtime"].get("max_products_per_run", 0))
     processed = 0
+    seen_skus: set[str] = set()  # alle SKUs die in diesem Lauf gesehen wurden
 
     for product in load_supplier_feed(cfg):
         stats["total"] += 1
@@ -131,6 +245,7 @@ def main():
             filter_reasons[reason] = filter_reasons.get(reason, 0) + 1
             continue
 
+        # Shopify-Preis berechnen
         try:
             pr = calculate_vk(product["purchase_price"], cfg["pricing"])
         except Exception as e:
@@ -138,16 +253,45 @@ def main():
             stats["errors"] += 1
             continue
 
+        # eBay-Preis berechnen (separate Konfiguration)
+        ebay_pr = None
+        if ebay_enabled:
+            try:
+                ebay_pr = calculate_ebay_vk(
+                    product["purchase_price"],
+                    ebay_pricing_cfg,
+                    shopify_vk_gross=pr.vk_gross,
+                )
+            except Exception as e:
+                log.error(f"eBay-Pricing-Fehler für SKU {product.get('sku')}: {e}")
+
         sku = product["sku"]
+        seen_skus.add(sku)
+
+        # Enrichment (Bilder + Beschreibung) per EAN aus enrichment_index
+        ean = str(product.get("ean", "")).strip()
+        enrichment = enrichment_idx.get(ean) if ean else None
+        if enrichment:
+            # Hauptbild
+            product["image_url"] = enrichment.get("image_main", "") or product.get("image_url", "")
+            # Alle Bilder (|-getrennt) → Liste für eBay (bis zu 12 erlaubt)
+            all_imgs = [u.strip() for u in enrichment.get("images_all", "").split("|") if u.strip().startswith("http")]
+            product["image_urls"] = all_imgs[:12]
+            # Beschreibung als fertiges HTML (gleiche Funktion wie Shopify/Matrixify)
+            product["description"] = build_description_html(product.get("title", ""), enrichment)
+            product["specs_html"] = enrichment.get("specs_html", "")
+
         log.info(
-            f"SKU {sku} | EK {pr.purchase_price_net:.2f} -> "
-            f"VK {pr.vk_gross:.2f} | Marge {pr.margin_eur:.2f}€ "
-            f"({pr.margin_pct:.0f}%) | Stock {product['stock']}"
+            f"SKU {sku} | EK {pr.purchase_price_net:.2f}€ | "
+            f"Shopify {pr.vk_gross:.2f}€ | "
+            f"eBay {ebay_pr.vk_gross:.2f}€" if ebay_pr else
+            f"SKU {sku} | EK {pr.purchase_price_net:.2f}€ | Shopify {pr.vk_gross:.2f}€"
         )
 
+        # --- Shopify ---
         if dry_run:
             stats["created" if sku not in state else "updated"] += 1
-        else:
+        elif shopify:
             payload = ShopifyClient.build_product_payload(
                 product, pr.vk_gross, status="active"
             )
@@ -163,9 +307,28 @@ def main():
                 )
             stats["created" if sku not in state else "updated"] += 1
 
+        # --- eBay ---
+        if ebay_enabled and ebay_pr:
+            if dry_run:
+                action = "ebay_created" if sku not in state else "ebay_updated"
+                stats[action] += 1
+                log.info(f"  [eBay DRY-RUN] SKU {sku} → {ebay_pr.vk_gross:.2f}€")
+            elif ebay:
+                try:
+                    result = ebay.upsert_product(product, ebay_pr.vk_gross)
+                    action = "ebay_created" if sku not in state else "ebay_updated"
+                    stats[action] += 1
+                    if result.get("listing_id"):
+                        log.info(f"  [eBay] Listing live: {result['listing_id']}")
+                except Exception as e:
+                    log.error(f"  [eBay] Fehler SKU {sku}: {e}")
+                    stats["ebay_errors"] += 1
+
         state[sku] = {
             "vk": pr.vk_gross,
+            "ebay_vk": ebay_pr.vk_gross if ebay_pr else None,
             "stock": product["stock"],
+            "shopify_location_id": location_id,
             "last_seen": datetime.now().isoformat(),
         }
 
@@ -174,6 +337,24 @@ def main():
             log.warning(f"Limit {limit} erreicht – breche ab")
             break
 
+    # =========================================================
+    # KRITISCH: Verschwundene Artikel offline nehmen
+    # Nur wenn kein Limit gesetzt war (sonst falsches Diff)
+    # =========================================================
+    if not limit or processed < limit:
+        handle_disappeared_products(
+            state=state,
+            seen_skus=seen_skus,
+            shopify=shopify,
+            ebay=ebay,
+            ebay_enabled=ebay_enabled,
+            dry_run=dry_run,
+            log=log,
+            stats=stats,
+        )
+    else:
+        log.info("Limit aktiv — verschwundene Artikel werden NICHT offline genommen (unvollständiger Feed-Scan)")
+
     # State persistieren
     state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False))
 
@@ -181,7 +362,7 @@ def main():
     log.info("=" * 60)
     log.info("ZUSAMMENFASSUNG")
     for k, v in stats.items():
-        log.info(f"  {k:>10}: {v}")
+        log.info(f"  {k:>15}: {v}")
     if filter_reasons:
         log.info("  Filter-Gründe:")
         for r, c in sorted(filter_reasons.items(), key=lambda x: -x[1]):
