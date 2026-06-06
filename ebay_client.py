@@ -50,6 +50,32 @@ _DEFAULT_CAT = "31388"  # Computer, Tablets & Netzwerk → Zubehör (eBay.de Bla
 # eBay.de Taxonomy Tree ID
 _EBAY_DE_TREE_ID = "77"
 
+# ---------------------------------------------------------------------------
+# Sicherheits-Bestandslogik: verhindert Überverkäufe
+# ---------------------------------------------------------------------------
+# Regeln:
+#   - Stock = 0          → 0 (Artikel offline)
+#   - Stock 1–3          → 1 (niedriger Bestand: immer nur 1 anzeigen)
+#   - Stock 4–20         → echten Bestand anzeigen
+#   - Stock > 20         → auf 20 deckeln (kein Risiko mit zu hohen Mengen)
+# Hintergrund: Der Feed wird in Batches aktualisiert (rotierender Offset).
+# Zwischen zwei Batch-Runs können 1-4 Stunden vergehen. Mit dieser Regel
+# schützen wir uns gegen Überverkauf bei niedrigem Lagerbestand.
+STOCK_LOW_THRESHOLD  = 3   # ≤ X Stück → nur 1 auf eBay anzeigen
+STOCK_MAX_DISPLAY    = 20  # > X Stück → auf 20 deckeln
+
+
+def safe_ebay_stock(raw_stock: int) -> int:
+    """Gibt den sicheren eBay-Anzeigebestand zurück."""
+    if raw_stock <= 0:
+        return 0
+    if raw_stock <= STOCK_LOW_THRESHOLD:
+        return 1
+    if raw_stock > STOCK_MAX_DISPLAY:
+        return STOCK_MAX_DISPLAY
+    return raw_stock
+
+
 # Kategorien die Pflichtmerkmale erfordern die wir nicht haben (CPU-Typ, GPU-Modell etc.)
 # Taxonomy-Vorschläge aus diesen Kategorien werden ignoriert → Fallback auf DEFAULT
 _COMPLEX_CATEGORIES = {
@@ -392,7 +418,7 @@ class EbayClient:
         payload: Dict[str, Any] = {
             "availability": {
                 "shipToLocationAvailability": {
-                    "quantity": max(0, int(product.get("stock", 0)))
+                    "quantity": safe_ebay_stock(int(product.get("stock", 0)))
                 }
             },
             "condition": "NEW",
@@ -959,10 +985,11 @@ class EbayClient:
     # ------------------------------------------------------------------
     def set_inventory(self, sku: str, quantity: int):
         """Aktualisiert nur den Lagerbestand eines bestehenden Inventory Items."""
+        safe_qty = safe_ebay_stock(quantity)
         payload = {
             "availability": {
                 "shipToLocationAvailability": {
-                    "quantity": max(0, quantity)
+                    "quantity": safe_qty
                 }
             }
         }
@@ -972,7 +999,7 @@ class EbayClient:
         if existing:
             existing["availability"] = payload["availability"]
             self._request("PUT", f"{INVENTORY_PATH}/{sku}", json_body=existing)
-            log.info(f"eBay Bestand aktualisiert: SKU {sku} → {quantity}")
+            log.info(f"eBay Bestand aktualisiert: SKU {sku} → {safe_qty} (roh: {quantity})")
 
     # ------------------------------------------------------------------
     # Haupt-Methode: Produkt komplett anlegen/aktualisieren
