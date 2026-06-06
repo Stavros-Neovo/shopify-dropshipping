@@ -96,7 +96,7 @@ def handle_disappeared_products(
     aus dem Feed fällt, müssen wir eBay SOFORT auf Bestand 0 setzen
     und das Listing deaktivieren.
     """
-    disappeared = {sku for sku in state if sku not in seen_skus}
+    disappeared = {sku for sku in state if sku not in seen_skus and not sku.startswith("__")}
     if not disappeared:
         return
 
