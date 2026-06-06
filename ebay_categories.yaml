@@ -1,0 +1,93 @@
+# =============================================================================
+# EBAY KATEGORIE-MAPPING (eBay Deutschland)
+# =============================================================================
+# Linke Seite  = BAB-Kategorie (Spalte "ItemMainGroup" im Feed)
+# Rechte Seite = eBay Kategorie-ID für eBay.de
+#
+# IDs VERIFIZIERT via eBay Taxonomy API (Tree ID: 77, EBAY_DE)
+# Stand: 2025 — Taxonomy API Aufruf: ebay_diagnose.py
+# =============================================================================
+
+category_map:
+
+  # --- Kabel & Adapter (größte Kategorie, 20k+ Artikel) ---
+  "Kabel & Adapter":          "44932"   # ✓ USB-Kabel, -Hubs & -Adapter (Taxonomy-verifiziert)
+
+  # --- Netzwerk ---
+  "Netzwerk":                 "51268"   # ✓ Netzwerk-Switches (Taxonomy-verifiziert)
+
+  # --- Notebooks & Zubehör ---
+  "Notebooks & Zubehör":      "31510"   # ✓ Notebook-Netzteile/-Ladegeräte (Zubehör)
+  "Notebooks":                "177"     # ✓ PC Notebooks & Netbooks (Taxonomy-verifiziert)
+
+  # --- Audio & Video ---
+  "Audio & Video":            "32834"   # ✓ Videokabel & -stecker (Taxonomy-verifiziert)
+
+  # --- Displays ---
+  "Displays":                 "80053"   # Monitore (eBay.de)
+
+  # --- Tablets & Smartphones ---
+  "Tablets & Smartphones":    "15032"   # Tablet-Zubehör
+  "Tablets":                  "171485"  # Tablets & eBook-Reader
+
+  # --- Drucker & Scanner ---
+  "Drucker & Scanner":        "1245"    # ✓ Drucker, Scanner & Zubehör (Taxonomy-verifiziert)
+
+  # --- Eingabegeräte ---
+  "Eingabegeräte":            "3676"    # Tastaturen, Mäuse & Zeigegeräte
+
+  # --- Arbeitsspeicher ---
+  "Arbeitsspeicher":          "170083"  # ✓ Arbeitsspeicher RAM (Taxonomy-verifiziert)
+
+  # --- SSDs ---
+  "SSDs":                     "175669"  # ✓ Solid State Drives SSD (Taxonomy-verifiziert)
+
+  # --- Flash-Speicher ---
+  "Flash-Speicher":           "175673"  # USB-Speichersticks & Speicherkarten
+
+  # --- Gehäuse ---
+  "Gehäuse":                  "42000"   # PC-Gehäuse & Zubehör
+
+  # --- CPUs ---
+  "CPUs":                     "164"     # CPUs/Prozessoren
+
+  # --- PC-Systeme ---
+  "PC-Systeme":               "179"     # Desktop-PCs
+
+  # --- Software ---
+  "Software":                 "18793"   # Software (nur Lizenzkeys/Downloads!)
+  # ACHTUNG: Physische Software-Boxen → 18793, Download-Keys → oft gesperrt auf eBay
+
+  # --- Home & Living ---
+  "Home & Living":            "20710"   # Haushalt & Wohnen → Allgemein
+
+  # --- Baumarkt & Garten ---
+  "Baumarkt & Garten":        "12576"   # Heimwerken & Garten
+
+  # --- Verbrauchsmaterialien (Tinte/Toner) ---
+  "Verbrauchsmaterialien":    "16191"   # ✓ Tintenpatronen (Taxonomy-verifiziert)
+
+  # --- Energie & USV ---
+  "Energie & USV":            "41986"   # USV & Stromversorgung
+
+  # --- Apple (Marken-Kategorie bei BAB) ---
+  # ACHTUNG: Apple-Produkte haben strenge eBay-Regeln, Markenrecht beachten!
+  "Apple":                    "31510"   # Notebook-Zubehör allgemein
+
+  # --- Weitere ---
+  "Grafikkarten":             "27386"   # Grafikkarten
+  "Mainboards":               "1244"    # Motherboards
+  "Netzteile":                "42017"   # ✓ PC-Netzteile (Taxonomy-verifiziert)
+  "Kühlung":                  "42000"   # PC-Kühlung & Lüfter
+  "Festplatten":              "56083"   # ✓ Interne Festplatten (Taxonomy-verifiziert)
+  "Optische Laufwerke":       "617"     # Optische Laufwerke
+  "Server":                   "11211"   # Server-Hardware
+  "KVM & Switches":           "51268"   # ✓ Netzwerk-Switches (Taxonomy-verifiziert)
+  "Beamer":                   "26392"   # Beamer & Zubehör
+  "Webcams":                  "4616"    # ✓ Webcams (Taxonomy-verifiziert)
+  "Monitor-Zubehör":          "158840"  # ✓ Monitor-/AV-Kabel & -Adapter (Taxonomy-verifiziert)
+
+# =============================================================================
+# FALLBACK: Kategorie wenn nichts passt
+# =============================================================================
+default_category: "44932"   # ✓ USB-Kabel, -Hubs & -Adapter (Taxonomy-verifizierte Blatt-Kategorie)

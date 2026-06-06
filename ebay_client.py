@@ -314,11 +314,8 @@ class EbayClient:
         Returns:
             Den merchant_location_key
         """
-        if self.merchant_location_key:
-            return self.merchant_location_key
-
-        default_key = "hauptlager_de"
-        log.info(f"merchant_location_key leer — prüfe ob '{default_key}' bereits existiert...")
+        default_key = self.merchant_location_key if self.merchant_location_key else "hauptlager_de"
+        log.info(f"Prüfe ob Merchant Location '{default_key}' existiert...")
 
         # Prüfen ob schon vorhanden
         try:

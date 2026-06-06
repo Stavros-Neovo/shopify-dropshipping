@@ -1,0 +1,131 @@
+# =============================================================================
+# SHOP 2 – KONFIGURATION (25% Fix-Marge eBay)
+# =============================================================================
+# Gleicher BAB-Feed wie Shop 1, aber eigener eBay Account + feste 25% Marge.
+#
+# Aufruf: python sync.py --config config_shop2.yaml --live
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# CSV-QUELLE (identisch mit Shop 1)
+# -----------------------------------------------------------------------------
+csv:
+  url: "https://pricelist.bab-distribution.de/50429_a2Q2yGHHkSgMe4BV"
+  delimiter: ";"
+  encoding: "utf-8-sig"
+  columns:
+    sku: "ItemNo"
+    title: "Description"
+    description: "Description"
+    purchase_price: "Price_B2B"
+    stock: "Stock"
+    weight_kg: "GrossWeight"
+    image_url: ""
+    ean: "GTIN"
+    category: "ItemMainGroup"
+    brand: "ManufacturerName"
+
+# -----------------------------------------------------------------------------
+# SHOPIFY PRICING (Shop 2 hat keinen eigenen Shopify — wird ignoriert)
+# -----------------------------------------------------------------------------
+pricing:
+  vat_rate: 0.19
+  tiers:
+    - ek_max: 999999.0
+      markup: 0.25
+  min_absolute_margin_eur: 5.00
+  shipping_buffer:
+    - ek_max: 999999.0
+      buffer_eur: 0.00
+  rounding_strategy: "psychological_99"
+
+# -----------------------------------------------------------------------------
+# FILTER (identisch mit Shop 1)
+# -----------------------------------------------------------------------------
+filters:
+  max_weight_kg: 50.0
+  min_stock: 1
+  max_purchase_price_eur: 500.0
+  allowed_categories: []
+  excluded_keywords:
+    - "Apple"
+    - "iPhone"
+    - "Samsung Galaxy"
+    - "AirPods"
+
+# -----------------------------------------------------------------------------
+# VERSAND
+# -----------------------------------------------------------------------------
+shipping:
+  flat_rate_eur: 4.99
+  free_shipping_threshold_eur: 0
+
+# -----------------------------------------------------------------------------
+# SHOPIFY API (deaktiviert — Shop 2 ist nur eBay)
+# -----------------------------------------------------------------------------
+shopify:
+  shop_domain: ""   # leer lassen → Shopify wird übersprungen
+  api_version: "2024-10"
+  location_id: ""
+
+# -----------------------------------------------------------------------------
+# EBAY PRICING – FIXE 25% MARGE
+# Formel: VK_brutto = (EK + 5€ Versand + EK × 25%) × 1.19 ÷ (1 − 0.13)
+# -----------------------------------------------------------------------------
+ebay_pricing:
+  shipping_cost_eur: 5.00
+  ebay_fee_rate: 0.13
+  vat_rate: 0.19
+
+  # Fixe 25% Marge für alle Preisklassen
+  margin_tiers:
+    - ek_max: 999999.0
+      margin: 0.25
+
+  min_margin_eur: 5.00
+  rounding_strategy: "psychological_99"
+
+# -----------------------------------------------------------------------------
+# EBAY API – SHOP 2 (eigener Seller Account)
+# -----------------------------------------------------------------------------
+ebay:
+  marketplace_id: "EBAY_DE"
+  sandbox: false
+
+  # Business-Policies Shop 2
+  fulfillment_policy_id: "257236926010"   # UPS STD
+  payment_policy_id: "257236921010"       # Payment
+  return_policy_id: "257236922010"        # Rücknahme
+
+  # Merchant Location (wird automatisch angelegt)
+  merchant_location_key: "hauptlager_shop2"
+
+  merchant_location_address:
+    name: "Neovogen"
+    address1: "Bismarckstr. 91"
+    city: "Düsseldorf"
+    postal_code: "40210"
+    country: "DE"
+
+  # Refresh Token: EBAY_REFRESH_TOKEN_2 aus .env (Shop 2 Account)
+  refresh_token_env_var: "EBAY_REFRESH_TOKEN_2"
+
+  enabled: true
+
+# -----------------------------------------------------------------------------
+# LIEFERANT (Bestellmail an BAB)
+# -----------------------------------------------------------------------------
+supplier_email:
+  to: "sebastian@bab-distribution.de"   # ← echte Email von Sebastian eintragen
+  from_name: "eBay Shop 2"
+  language: "de"
+  auto_send: true
+
+# -----------------------------------------------------------------------------
+# LAUFZEIT
+# -----------------------------------------------------------------------------
+runtime:
+  dry_run: true
+  max_products_per_run: 250
+  log_dir: "logs"
+  state_file: "state_shop2.json"   # eigene State-Datei! nicht mit Shop 1 mischen

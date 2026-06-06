@@ -95,7 +95,7 @@ shipping:
 # -----------------------------------------------------------------------------
 shopify:
   # Deine Shop-Domain (NUR der Name vor .myshopify.com)
-  shop_domain: "dein-shop"  # z.B. "mein-gadget-store" → mein-gadget-store.myshopify.com
+  shop_domain: "neovodeals"
   # API-Version
   api_version: "2024-10"
   # Location-ID für Lagerbestand (siehe Setup-Guide, wie zu finden)
@@ -178,7 +178,7 @@ ebay:
 # -----------------------------------------------------------------------------
 runtime:
   # DRY-RUN: Wenn true, wird NICHTS an Shopify gesendet (Test-Modus)
-  dry_run: true   # WICHTIG: Erst auf false stellen, wenn alles getestet ist
+  dry_run: false
   # Limit pro Lauf (Schutz gegen Rate-Limits bei großen Feeds)
   max_products_per_run: 250
   # Wo Logs gespeichert werden
