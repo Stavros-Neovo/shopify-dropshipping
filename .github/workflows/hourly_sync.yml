@@ -28,6 +28,7 @@ jobs:
         with:
           path: |
             state.json
+            state_shop2.json
             processed_orders_state.json
             processed_orders_state_shop2.json
             tracked_shipments_state.json
@@ -68,6 +69,7 @@ jobs:
         with:
           path: |
             state.json
+            state_shop2.json
             processed_orders_state.json
             processed_orders_state_shop2.json
             tracked_shipments_state.json
