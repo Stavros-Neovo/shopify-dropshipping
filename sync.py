@@ -298,11 +298,15 @@ def main():
         ean = str(product.get("ean", "")).strip()
         enrichment = enrichment_idx.get(ean) if ean else None
         if enrichment:
-            # Hauptbild
-            product["image_url"] = enrichment.get("image_main", "") or product.get("image_url", "")
             # Alle Bilder (|-getrennt) → Liste für eBay (bis zu 12 erlaubt)
             all_imgs = [u.strip() for u in enrichment.get("images_all", "").split("|") if u.strip().startswith("http")]
             product["image_urls"] = all_imgs[:12]
+            # Hauptbild: image_main bevorzugt, Fallback auf erstes Bild aus images_all
+            product["image_url"] = (
+                enrichment.get("image_main", "").strip()
+                or (all_imgs[0] if all_imgs else "")
+                or product.get("image_url", "")
+            )
             # Beschreibung als fertiges HTML (gleiche Funktion wie Shopify/Matrixify)
             product["description"] = build_description_html(product.get("title", ""), enrichment)
             product["specs_html"] = enrichment.get("specs_html", "")
