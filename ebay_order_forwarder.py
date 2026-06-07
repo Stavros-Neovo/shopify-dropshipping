@@ -64,7 +64,7 @@ def fetch_new_orders(client: EbayClient, since_hours: int = 2) -> List[Dict]:
                 "GET",
                 FULFILLMENT_PATH,
                 params={
-                    "filter": f"orderfulfillmentstatus:{{{{'UNFULFILLED','IN_PROGRESS'}}}}",
+                    "filter": "orderfulfillmentstatus:{UNFULFILLED,IN_PROGRESS}",
                     "limit": limit,
                     "offset": offset,
                 },
