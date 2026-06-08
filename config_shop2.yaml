@@ -116,7 +116,7 @@ ebay:
 # LIEFERANT (Bestellmail an BAB)
 # -----------------------------------------------------------------------------
 supplier_email:
-  to: "sebastian@bab-distribution.de"   # ← echte Email von Sebastian eintragen
+  to: "SSchulze@bab-distribution.de"   # ← echte Email von Sebastian eintragen
   from_name: "eBay Shop 2"
   language: "de"
   auto_send: true
