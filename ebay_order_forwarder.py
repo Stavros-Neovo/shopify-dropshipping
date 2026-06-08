@@ -64,9 +64,9 @@ def fetch_new_orders(client: EbayClient, since_hours: int = 2) -> List[Dict]:
                 "GET",
                 FULFILLMENT_PATH,
                 params={
-                    "filter": "orderfulfillmentstatus:{UNFULFILLED,IN_PROGRESS}",
                     "limit": limit,
                     "offset": offset,
+                    "orderIds": "",  # alle Orders holen, lokal filtern
                 },
             )
         except RuntimeError as e:
@@ -74,14 +74,19 @@ def fetch_new_orders(client: EbayClient, since_hours: int = 2) -> List[Dict]:
             break
 
         orders = (result or {}).get("orders", [])
-        all_orders.extend(orders)
+
+        # Nur unversendete Bestellungen (lokal filtern)
+        for o in orders:
+            status = o.get("orderFulfillmentStatus", "")
+            if status in ("NOT_STARTED", "IN_PROGRESS", "UNFULFILLED", ""):
+                all_orders.append(o)
 
         total = (result or {}).get("total", 0)
         offset += limit
         if offset >= total or not orders:
             break
 
-    log.info(f"{len(all_orders)} eBay-Bestellungen abgerufen")
+    log.info(f"{len(all_orders)} unversendete eBay-Bestellungen abgerufen")
     return all_orders
 
 
