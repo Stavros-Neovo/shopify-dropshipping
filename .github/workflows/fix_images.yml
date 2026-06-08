@@ -1,0 +1,117 @@
+name: Fix Product Images (one-time)
+
+# Manuell starten wenn Bilder gefixed werden sollen
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Was fixen? (promote / ipcstore / all)"
+        required: false
+        default: "all"
+      limit:
+        description: "Max Produkte für ipcstore-Fix (0 = alle)"
+        required: false
+        default: "0"
+
+jobs:
+  fix-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore icecat cache
+        uses: actions/cache@v4
+        with:
+          path: icecat_cache.json
+          key: icecat-cache-${{ github.run_id }}
+          restore-keys: |
+            icecat-cache-
+
+      - name: Step 1 – Promote images_all → image_main (for 549 products)
+        if: ${{ github.event.inputs.mode == 'promote' || github.event.inputs.mode == 'all' }}
+        run: |
+          python3 - <<'PYEOF'
+          import csv, shutil
+
+          ENRICHMENT_FILE = "enrichment_index.csv"
+          shutil.copy2(ENRICHMENT_FILE, "enrichment_index_backup.csv")
+
+          with open(ENRICHMENT_FILE, encoding="utf-8", newline="") as f:
+              reader = csv.DictReader(f)
+              fieldnames = list(reader.fieldnames or [])
+              rows = list(reader)
+
+          promoted = 0
+          for row in rows:
+              img_main = (row.get("image_main") or "").strip()
+              imgs_all = (row.get("images_all") or "").strip()
+              if not img_main and imgs_all:
+                  first = imgs_all.split("|")[0].strip()
+                  if first:
+                      row["image_main"] = first
+                      promoted += 1
+
+          with open(ENRICHMENT_FILE, "w", encoding="utf-8", newline="") as f:
+              writer = csv.DictWriter(f, fieldnames=fieldnames)
+              writer.writeheader()
+              writer.writerows(rows)
+
+          print(f"✓ Promoted {promoted} images_all[0] -> image_main")
+          PYEOF
+
+      - name: Step 2 – Replace ipcstore images via icecat
+        if: ${{ github.event.inputs.mode == 'ipcstore' || github.event.inputs.mode == 'all' }}
+        run: |
+          LIMIT="${{ github.event.inputs.limit }}"
+          if [ "$LIMIT" = "0" ]; then
+            python3 fix_ipcstore_images.py
+          else
+            python3 fix_ipcstore_images.py --limit "$LIMIT"
+          fi
+
+      - name: Save icecat cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: icecat_cache.json
+          key: icecat-cache-${{ github.run_id }}
+
+      - name: Analyse result
+        run: |
+          python3 - <<'PYEOF'
+          import csv, collections
+
+          with open("enrichment_index.csv", encoding="utf-8") as f:
+              rows = list(csv.DictReader(f))
+
+          no_img = sum(1 for r in rows if not (r.get("image_main") or "").strip())
+          ipc    = sum(1 for r in rows if "ipcstore" in (r.get("image_main") or "").lower())
+          total  = len(rows)
+          ok     = total - no_img - ipc
+
+          print(f"=== BILD-STATUS ===")
+          print(f"  Gesamt:              {total}")
+          print(f"  Gutes Bild:          {ok}")
+          print(f"  ipcstore (prüfen):   {ipc}")
+          print(f"  Kein Bild:           {no_img}")
+          PYEOF
+
+      - name: Commit updated enrichment_index.csv
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add enrichment_index.csv
+          git diff --staged --stat
+          git diff --staged --quiet || git commit -m "fix: update product images (promote + ipcstore replacement)"
+          git push
