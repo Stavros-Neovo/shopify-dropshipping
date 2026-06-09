@@ -71,16 +71,23 @@ def fetch_all_orders(client):
     return orders
 
 def find_order(orders, sku):
+    """Gibt (order_id, line_item_ids) zurück oder (None, [])."""
     for o in orders:
-        for item in o.get("lineItems",[]):
+        for item in o.get("lineItems", []):
             if (item.get("sku") or "").strip().upper() == sku.upper():
-                return o.get("orderId")
-    return None
+                # Alle lineItemIds dieser Bestellung sammeln
+                line_item_ids = [
+                    {"lineItemId": i.get("lineItemId"), "quantity": i.get("quantity", 1)}
+                    for i in o.get("lineItems", [])
+                    if i.get("lineItemId")
+                ]
+                return o.get("orderId"), line_item_ids
+    return None, []
 
-def post_tracking(client, order_id, tracking, dry_run=False):
+def post_tracking(client, order_id, line_item_ids, tracking, dry_run=False):
     carrier = detect_carrier(tracking)
     payload = {
-        "lineItems": [],
+        "lineItems": line_item_ids,  # echte lineItemIds aus der Bestellung
         "shippedDate": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         "shippingCarrierCode": carrier,
         "trackingNumber": tracking,
@@ -128,12 +135,33 @@ def main():
         ean, trk = e["ean"], e["tracking"]
         sku = ean_to_sku.get(ean,"")
         if not sku:
-            log.warning(f"EAN {ean} nicht im Feed — uebersprungen"); fail+=1; continue
+            log.warning(f"EAN {ean} nicht im Feed — suche direkt in eBay-Bestellungen")
+            # Fallback: suche Bestellung nach EAN direkt in lineItems
+            order_id, line_item_ids = None, []
+            for o in orders:
+                for item in o.get("lineItems", []):
+                    item_ean = (item.get("sku") or "")
+                    # eBay speichert manchmal EAN als SKU oder im Titel
+                    if ean in str(item):
+                        line_item_ids = [
+                            {"lineItemId": i.get("lineItemId"), "quantity": i.get("quantity",1)}
+                            for i in o.get("lineItems",[]) if i.get("lineItemId")
+                        ]
+                        order_id = o.get("orderId")
+                        log.info(f"  Bestellung via EAN-Suche gefunden: {order_id}")
+                        break
+                if order_id:
+                    break
+            if not order_id:
+                log.warning(f"EAN {ean} auch in eBay-Bestellungen nicht gefunden"); fail+=1; continue
+            if post_tracking(client, order_id, line_item_ids, trk, dry_run=args.dry_run): ok+=1
+            else: fail+=1
+            continue
         log.info(f"EAN {ean} -> SKU {sku}")
-        order_id = find_order(orders, sku)
+        order_id, line_item_ids = find_order(orders, sku)
         if not order_id:
             log.warning(f"Keine eBay-Bestellung fuer SKU {sku}"); fail+=1; continue
-        if post_tracking(client, order_id, trk, dry_run=args.dry_run): ok+=1
+        if post_tracking(client, order_id, line_item_ids, trk, dry_run=args.dry_run): ok+=1
         else: fail+=1
 
     log.info(f"\n{'─'*50}")
