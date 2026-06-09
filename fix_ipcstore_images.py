@@ -1,14 +1,17 @@
 """
 fix_ipcstore_images.py
 ======================
-Ersetzt ipcstore-Bilder (403 Forbidden) durch echte Produktbilder via:
-  1. Icecat API (IT-Produkte → sehr hohe Erfolgsrate)
+Ersetzt ipcstore-Bilder durch echte Produktbilder via:
+  1. Icecat API (bevorzugt, frische Abfrage — kein ipcstore aus Cache)
   2. DuckDuckGo Images (Fallback)
 
+Checkpoint-Save alle 30 Produkte, damit bei Timeout nichts verloren geht.
+
 Aufruf:
-  python fix_ipcstore_images.py              # alle ipcstore-Produkte
-  python fix_ipcstore_images.py --limit 50   # nur die ersten 50 testen
-  python fix_ipcstore_images.py --dry-run    # nur Analyse
+  python fix_ipcstore_images.py              # alle
+  python fix_ipcstore_images.py --limit 50   # nur 50
+  python fix_ipcstore_images.py --dry-run    # Analyse
+  python fix_ipcstore_images.py --no-validate  # Kompatibilitätsflag
 """
 from __future__ import annotations
 
@@ -26,7 +29,7 @@ from pathlib import Path
 from typing import Optional
 
 try:
-    import requests
+    import requests as _requests
     USE_REQUESTS = True
 except ImportError:
     USE_REQUESTS = False
@@ -38,13 +41,20 @@ ICECAT_USER  = "neovogen"
 ICECAT_TOKEN = "a923fe60-04bd-4f83-ae2e-a1e1a8427c98"
 ICECAT_LANG  = "de"
 CACHE_FILE   = "icecat_cache.json"
-DELAY        = 0.8  # Sekunden zwischen Icecat-Requests
+DELAY        = 0.4   # Sekunden zwischen Icecat-Requests
+DDG_DELAY    = 0.3
+SAVE_EVERY   = 30    # CSV-Checkpoint alle N Produkte
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
       "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 
+BAD_DOMAINS = ["ipcstore", "placeholder", "noimage", "no-image", "notfound"]
 
-# ─── Cache ────────────────────────────────────────────────────────────────────
+
+def is_bad_url(url: str) -> bool:
+    return not url or not url.startswith("http") or any(b in url.lower() for b in BAD_DOMAINS)
+
+
 def load_cache(path: str) -> dict:
     p = Path(path)
     if p.exists():
@@ -59,47 +69,42 @@ def save_cache(path: str, cache: dict):
     Path(path).write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-# ─── Icecat ───────────────────────────────────────────────────────────────────
-def fetch_icecat(ean: str) -> Optional[dict]:
+def icecat_images(ean: str) -> tuple[str, str, str]:
+    """Gibt (image_main, images_all, brand) aus Icecat zurück. Leer = kein Treffer."""
     url = (f"https://live.icecat.biz/api"
            f"?UserName={ICECAT_USER}&Language={ICECAT_LANG}"
            f"&GTIN={ean}&Token={ICECAT_TOKEN}")
     try:
         if USE_REQUESTS:
-            r = requests.get(url, timeout=15)
-            if r.status_code == 200:
-                data = r.json()
-                if data.get("msg") == "OK" and data.get("data"):
-                    return data["data"]
+            r = _requests.get(url, timeout=10)
+            if r.status_code != 200:
+                return "", "", ""
+            data = r.json()
         else:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=15) as r:
-                data = json.loads(r.read())
-                if data.get("msg") == "OK" and data.get("data"):
-                    return data["data"]
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                data = json.loads(resp.read())
+
+        if data.get("msg") != "OK" or not data.get("data"):
+            return "", "", ""
+
+        product = data["data"]
+        img = product.get("Image", {}) or {}
+        gi  = product.get("GeneralInfo", {}) or {}
+        high = (img.get("HighPic") or "").strip()
+        pics = img.get("Pics", []) or []
+        extra = [p.get("Pic", "") for p in pics if p.get("Pic", "").startswith("http")]
+        all_imgs = [u for u in ([high] + extra) if u.startswith("http") and not is_bad_url(u)]
+        brand = (gi.get("BrandName") or "").strip()
+        main  = all_imgs[0] if all_imgs else ""
+        return main, "|".join(all_imgs[:5]), brand
+
     except Exception as e:
         log.debug(f"Icecat EAN={ean}: {e}")
-    return None
-
-
-def icecat_images(ean: str) -> tuple[str, str, str]:
-    """Gibt (image_main, images_all, brand) zurück. Leer wenn kein Treffer."""
-    data = fetch_icecat(ean)
-    if not data:
         return "", "", ""
-    img = data.get("Image", {}) or {}
-    gi  = data.get("GeneralInfo", {}) or {}
-    high = (img.get("HighPic") or "").strip()
-    pics = img.get("Pics", []) or []
-    extra = [p.get("Pic", "") for p in pics if p.get("Pic", "").startswith("http")]
-    all_imgs = [u for u in ([high] + extra) if u.startswith("http")]
-    brand = (gi.get("BrandName") or "").strip()
-    return (all_imgs[0] if all_imgs else ""), "|".join(all_imgs[:5]), brand
 
 
-# ─── DDG Fallback ─────────────────────────────────────────────────────────────
 def ddg_image(query: str) -> Optional[str]:
-    """Erste passende Bild-URL aus DuckDuckGo Image Search."""
     try:
         params = urllib.parse.urlencode({"q": query})
         req = urllib.request.Request(
@@ -124,21 +129,28 @@ def ddg_image(query: str) -> Optional[str]:
         )
         with urllib.request.urlopen(req2, timeout=10) as r:
             data = json.loads(r.read())
-        results = data.get("results", [])
-        for res in results:
+        for res in data.get("results", []):
             url = res.get("image", "")
-            if url and not any(bad in url for bad in ["ipcstore", "placeholder", "noimage"]):
+            if url and not is_bad_url(url):
                 return url
     except Exception:
         pass
     return None
 
 
-# ─── Hauptlogik ───────────────────────────────────────────────────────────────
+def save_csv(path: str, fieldnames: list, rows: list):
+    with open(path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--limit", type=int, default=0, help="Max N Produkte bearbeiten")
+    parser.add_argument("--no-validate", action="store_true",
+                        help="Kompatibilitätsflag (alle ipcstore ersetzen ohne vorherige URL-Prüfung)")
+    parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -147,7 +159,6 @@ def main():
         handlers=[logging.StreamHandler(sys.stdout)],
     )
 
-    # Einlesen
     with open(ENRICHMENT_FILE, encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         fieldnames = list(reader.fieldnames or [])
@@ -155,96 +166,95 @@ def main():
 
     cache = load_cache(CACHE_FILE)
 
-    # Identifiziere ipcstore-Zeilen
+    # Alle ipcstore-Zeilen finden
     ipc_rows = [(i, r) for i, r in enumerate(rows)
-                if "ipcstore" in (r.get("image_main") or "").lower()]
-    log.info(f"ipcstore-Bilder gefunden: {len(ipc_rows)}")
+                if is_bad_url(r.get("image_main") or "")
+                and "ipcstore" in (r.get("image_main") or "").lower()]
+    log.info(f"ipcstore-Bilder: {len(ipc_rows)}")
 
     if args.limit:
         ipc_rows = ipc_rows[:args.limit]
-        log.info(f"Limitiert auf: {args.limit}")
+        log.info(f"Limit: {args.limit}")
 
     if not args.dry_run:
         shutil.copy2(ENRICHMENT_FILE, "enrichment_index_backup_ipcstore.csv")
 
-    fixed_icecat = 0
-    fixed_ddg    = 0
-    failed       = 0
+    fixed_icecat = fixed_ddg = failed = 0
+    pending_save = False
 
     for n, (idx, row) in enumerate(ipc_rows, 1):
         ean   = (row.get("ean") or "").strip()
         title = (row.get("title_full") or "").strip()[:70]
-        old_img = (row.get("image_main") or "").strip()
-
         log.info(f"[{n}/{len(ipc_rows)}] EAN={ean}  {title[:50]}")
 
-        new_img = ""
-        new_all = ""
-        new_brand = ""
+        new_img = new_all = new_brand = ""
 
-        # 1. Icecat (bevorzugt für IT-Produkte)
-        if ean:
-            if ean in cache and cache[ean] and cache[ean].get("image_main"):
-                new_img   = cache[ean]["image_main"]
-                new_all   = cache[ean].get("images_all", "")
-                new_brand = cache[ean].get("brand", "")
-                log.info(f"  → Cache-Hit: {new_img[:60]}")
+        # 1. Cache — aber nur wenn gecachtes Bild KEIN ipcstore ist
+        cached = cache.get(ean) or {}
+        cached_img = cached.get("image_main", "")
+        if cached_img and not is_bad_url(cached_img):
+            new_img   = cached_img
+            new_all   = cached.get("images_all", "")
+            new_brand = cached.get("brand", "")
+            log.info(f"  → Cache: {new_img[:70]}")
+
+        # 2. Icecat (frische Abfrage wenn Cache leer oder ipcstore)
+        if not new_img and ean:
+            main_img, all_imgs, brand = icecat_images(ean)
+            if main_img and not is_bad_url(main_img):
+                new_img = main_img
+                new_all = all_imgs
+                new_brand = brand
+                cache[ean] = {"image_main": new_img, "images_all": new_all, "brand": new_brand}
+                log.info(f"  → Icecat: {new_img[:70]}")
             else:
-                main_img, all_imgs, brand = icecat_images(ean)
-                cache[ean] = {"image_main": main_img, "images_all": all_imgs, "brand": brand}
-                if main_img:
-                    new_img   = main_img
-                    new_all   = all_imgs
-                    new_brand = brand
-                    log.info(f"  → Icecat: {new_img[:60]}")
-                time.sleep(DELAY)
+                cache[ean] = {"image_main": "", "images_all": "", "brand": ""}
+            time.sleep(DELAY)
 
-        # 2. DDG Fallback
+        # 3. DDG Fallback
         if not new_img:
-            query = f"{title} product"
-            new_img = ddg_image(query) or ""
-            if new_img:
-                log.info(f"  → DDG: {new_img[:60]}")
-                time.sleep(0.5)
+            ddg = ddg_image(f"{title} product photo")
+            if ddg and not is_bad_url(ddg):
+                new_img = ddg
+                log.info(f"  → DDG: {new_img[:70]}")
+                time.sleep(DDG_DELAY)
 
         if new_img:
             if not args.dry_run:
                 rows[idx]["image_main"] = new_img
                 if new_all:
                     rows[idx]["images_all"] = new_all
-                if new_brand and (not rows[idx].get("brand") or rows[idx].get("brand") == "Unbekannt"):
+                if new_brand and rows[idx].get("brand", "") in ("", "Unbekannt"):
                     rows[idx]["brand"] = new_brand
-                if new_brand:
-                    rows[idx]["source"] = "icecat+ipcstore_fix"
-                else:
-                    rows[idx]["source"] = "ddg_ipcstore_fix"
+                rows[idx]["source"] = "icecat_fixed" if new_brand else "ddg_fixed2"
             if new_brand:
                 fixed_icecat += 1
             else:
                 fixed_ddg += 1
+            pending_save = True
         else:
-            log.warning(f"  → KEIN Bild gefunden für EAN={ean}")
+            log.warning(f"  → KEIN Bild für EAN={ean}")
             failed += 1
 
-        # Cache alle 20 speichern
-        if n % 20 == 0:
+        # Checkpoint alle SAVE_EVERY Produkte
+        if n % SAVE_EVERY == 0:
             save_cache(CACHE_FILE, cache)
-            log.info(f"  Cache gespeichert ({len(cache)} Einträge)")
+            if not args.dry_run and pending_save:
+                save_csv(ENRICHMENT_FILE, fieldnames, rows)
+                log.info(f"  [Checkpoint {n}/{len(ipc_rows)}] gespeichert")
+                pending_save = False
 
+    # Finales Speichern
     save_cache(CACHE_FILE, cache)
-
-    if not args.dry_run and (fixed_icecat + fixed_ddg) > 0:
-        with open(ENRICHMENT_FILE, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(rows)
+    if not args.dry_run:
+        save_csv(ENRICHMENT_FILE, fieldnames, rows)
         log.info(f"\n✓ {ENRICHMENT_FILE} gespeichert")
 
     log.info(f"\n{'─'*60}")
-    log.info(f"  Icecat fixes:  {fixed_icecat}")
-    log.info(f"  DDG fixes:     {fixed_ddg}")
-    log.info(f"  Nicht gefunden:{failed}")
-    log.info(f"  Gesamt:        {fixed_icecat + fixed_ddg + failed}/{len(ipc_rows)}")
+    log.info(f"  Icecat:         {fixed_icecat}")
+    log.info(f"  DDG:            {fixed_ddg}")
+    log.info(f"  Nicht gefunden: {failed}")
+    log.info(f"  Gesamt:         {fixed_icecat + fixed_ddg + failed}/{len(ipc_rows)}")
 
 
 if __name__ == "__main__":

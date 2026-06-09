@@ -16,7 +16,7 @@ on:
 jobs:
   fix-images:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
 
     steps:
       - uses: actions/checkout@v4
@@ -72,12 +72,13 @@ jobs:
 
       - name: Step 2 – Replace ipcstore images via icecat
         if: ${{ github.event.inputs.mode == 'ipcstore' || github.event.inputs.mode == 'all' }}
+        timeout-minutes: 75
         run: |
           LIMIT="${{ github.event.inputs.limit }}"
           if [ "$LIMIT" = "0" ]; then
-            python3 fix_ipcstore_images.py
+            python3 fix_ipcstore_images.py --no-validate
           else
-            python3 fix_ipcstore_images.py --limit "$LIMIT"
+            python3 fix_ipcstore_images.py --no-validate --limit "$LIMIT"
           fi
 
       - name: Save icecat cache
@@ -108,6 +109,7 @@ jobs:
           PYEOF
 
       - name: Commit updated enrichment_index.csv
+        if: always()
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
