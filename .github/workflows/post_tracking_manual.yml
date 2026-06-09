@@ -1,0 +1,34 @@
+name: Post Tracking Manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run? (true/false)"
+        required: false
+        default: "false"
+
+jobs:
+  post-tracking:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - name: Post tracking to eBay
+        env:
+          CSV_HTTP_USER: ${{ secrets.CSV_HTTP_USER }}
+          CSV_HTTP_PASSWORD: ${{ secrets.CSV_HTTP_PASSWORD }}
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python post_tracking_manual.py --dry-run
+          else
+            python post_tracking_manual.py
+          fi
