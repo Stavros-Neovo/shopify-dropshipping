@@ -1,22 +1,21 @@
-name: Fix Product Images (one-time)
+name: Fix Product Images
 
-# Manuell starten wenn Bilder gefixed werden sollen
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "Was fixen? (promote / ipcstore / all)"
+        description: "Was fixen? (promote / ipcstore / missing / all)"
         required: false
-        default: "all"
+        default: "missing"
       limit:
-        description: "Max Produkte für ipcstore-Fix (0 = alle)"
+        description: "Max Produkte (0 = alle)"
         required: false
         default: "0"
 
 jobs:
   fix-images:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 100
 
     steps:
       - uses: actions/checkout@v4
@@ -38,39 +37,34 @@ jobs:
           restore-keys: |
             icecat-cache-
 
-      - name: Step 1 – Promote images_all → image_main (for 549 products)
+      # ── Step 1: images_all[0] → image_main ───────────────────────────────
+      - name: Step 1 – Promote images_all → image_main
         if: ${{ github.event.inputs.mode == 'promote' || github.event.inputs.mode == 'all' }}
         run: |
           python3 - <<'PYEOF'
           import csv, shutil
-
           ENRICHMENT_FILE = "enrichment_index.csv"
           shutil.copy2(ENRICHMENT_FILE, "enrichment_index_backup.csv")
-
           with open(ENRICHMENT_FILE, encoding="utf-8", newline="") as f:
               reader = csv.DictReader(f)
               fieldnames = list(reader.fieldnames or [])
               rows = list(reader)
-
           promoted = 0
           for row in rows:
-              img_main = (row.get("image_main") or "").strip()
-              imgs_all = (row.get("images_all") or "").strip()
-              if not img_main and imgs_all:
-                  first = imgs_all.split("|")[0].strip()
+              if not (row.get("image_main") or "").strip() and (row.get("images_all") or "").strip():
+                  first = row["images_all"].split("|")[0].strip()
                   if first:
                       row["image_main"] = first
                       promoted += 1
-
           with open(ENRICHMENT_FILE, "w", encoding="utf-8", newline="") as f:
               writer = csv.DictWriter(f, fieldnames=fieldnames)
               writer.writeheader()
               writer.writerows(rows)
-
           print(f"✓ Promoted {promoted} images_all[0] -> image_main")
           PYEOF
 
-      - name: Step 2 – Replace ipcstore images via icecat
+      # ── Step 2: ipcstore → Icecat/DDG (erste Runde) ───────────────────────
+      - name: Step 2 – Replace ipcstore images (Icecat + DDG)
         if: ${{ github.event.inputs.mode == 'ipcstore' || github.event.inputs.mode == 'all' }}
         timeout-minutes: 75
         run: |
@@ -81,6 +75,19 @@ jobs:
             python3 fix_ipcstore_images.py --no-validate --limit "$LIMIT"
           fi
 
+      # ── Step 3: verbleibende ipcstore → Amazon + barcodelookup + DDG-EAN ──
+      - name: Step 3 – Fix remaining ipcstore images (multi-source)
+        if: ${{ github.event.inputs.mode == 'missing' || github.event.inputs.mode == 'all' }}
+        timeout-minutes: 80
+        run: |
+          LIMIT="${{ github.event.inputs.limit }}"
+          if [ "$LIMIT" = "0" ]; then
+            python3 fix_missing_images_v2.py
+          else
+            python3 fix_missing_images_v2.py --limit "$LIMIT"
+          fi
+
+      # ── Cache speichern ───────────────────────────────────────────────────
       - name: Save icecat cache
         uses: actions/cache/save@v4
         if: always()
@@ -88,32 +95,32 @@ jobs:
           path: icecat_cache.json
           key: icecat-cache-${{ github.run_id }}
 
+      # ── Analyse ───────────────────────────────────────────────────────────
       - name: Analyse result
+        if: always()
         run: |
           python3 - <<'PYEOF'
-          import csv, collections
-
+          import csv
           with open("enrichment_index.csv", encoding="utf-8") as f:
               rows = list(csv.DictReader(f))
-
           no_img = sum(1 for r in rows if not (r.get("image_main") or "").strip())
           ipc    = sum(1 for r in rows if "ipcstore" in (r.get("image_main") or "").lower())
           total  = len(rows)
           ok     = total - no_img - ipc
-
           print(f"=== BILD-STATUS ===")
-          print(f"  Gesamt:              {total}")
-          print(f"  Gutes Bild:          {ok}")
-          print(f"  ipcstore (prüfen):   {ipc}")
-          print(f"  Kein Bild:           {no_img}")
+          print(f"  Gesamt:            {total}")
+          print(f"  Gutes Bild:        {ok}  ({ok*100//total}%)")
+          print(f"  ipcstore (fehlt):  {ipc}")
+          print(f"  Kein Bild:         {no_img}")
           PYEOF
 
+      # ── Commit ────────────────────────────────────────────────────────────
       - name: Commit updated enrichment_index.csv
         if: always()
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add enrichment_index.csv
+          git add enrichment_index.csv icecat_cache.json || true
           git diff --staged --stat
-          git diff --staged --quiet || git commit -m "fix: update product images (promote + ipcstore replacement)"
+          git diff --staged --quiet || git commit -m "fix: update product images (multi-source fix)"
           git push
