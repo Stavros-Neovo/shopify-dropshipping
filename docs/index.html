@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  <meta name="theme-color" content="#0f1117"/>
+  <meta name="theme-color" content="#0a0c14"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   <meta name="apple-mobile-web-app-title" content="Neodeals"/>
@@ -13,129 +13,270 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bg:#0f1117; --surface:#1a1d27; --surface2:#22263a;
-      --border:#2a2d3a; --text:#e8eaf0; --muted:#6b7280;
+      --bg:#0a0c14; --surface:#12151f; --surface2:#1a1e2e;
+      --border:#1e2235; --text:#e8eaf0; --muted:#5a6280;
       --green:#22c55e; --red:#ef4444; --yellow:#f59e0b;
       --blue:#3b82f6; --purple:#8b5cf6; --teal:#14b8a6;
+      --green-glow: 0 0 20px #22c55e30;
+      --blue-glow:  0 0 20px #3b82f630;
     }
-    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;min-height:100dvh;padding-bottom:32px}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:14px;
+      min-height:100dvh;
+      padding-bottom:40px;
+    }
 
-    /* Header */
-    header{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 16px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between}
-    .shop-name{font-size:15px;font-weight:700;color:var(--text)}
-    .shop-sub{font-size:11px;color:var(--muted);margin-top:1px}
-    .live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-    .header-right{display:flex;align-items:center;gap:10px}
-    #lastUpdate{font-size:10px;color:var(--muted)}
+    /* ── Header ── */
+    header{
+      background:linear-gradient(180deg,#12151f 0%,#0a0c14 100%);
+      border-bottom:1px solid var(--border);
+      padding:14px 16px;
+      position:sticky;top:0;z-index:100;
+      display:flex;align-items:center;justify-content:space-between;
+      backdrop-filter:blur(12px);
+    }
+    .shop-name{
+      font-size:16px;font-weight:800;
+      background:linear-gradient(135deg,#fff 0%,#7eb3ff 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .shop-sub{font-size:11px;color:var(--muted);margin-top:2px}
+    .live-badge{
+      display:flex;align-items:center;gap:6px;
+      background:#22c55e15;border:1px solid #22c55e30;
+      border-radius:20px;padding:4px 10px;
+    }
+    .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+    .live-text{font-size:10px;font-weight:600;color:var(--green)}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 #22c55e50}50%{box-shadow:0 0 0 4px #22c55e00}}
 
-    /* Layout */
-    main{max-width:480px;margin:0 auto;padding:12px}
-    .section-title{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:20px 0 8px}
-    .section-title:first-child{margin-top:0}
+    /* ── Layout ── */
+    main{max-width:480px;margin:0 auto;padding:14px}
+    .section-title{
+      font-size:11px;font-weight:700;color:var(--muted);
+      text-transform:uppercase;letter-spacing:.08em;
+      margin:22px 0 10px;
+      display:flex;align-items:center;gap:8px;
+    }
+    .section-title::after{content:'';flex:1;height:1px;background:var(--border)}
 
-    /* Cards */
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
-    .card-pad{padding:14px}
+    /* ── Karten ── */
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:16px;overflow:hidden;
+      margin-bottom:10px;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .card:hover{transform:translateY(-1px);box-shadow:0 4px 24px #00000040}
 
-    /* Stats Grid */
-    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-    .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
-    .stat-label{font-size:11px;color:var(--muted);margin-bottom:4px}
-    .stat-value{font-size:22px;font-weight:700}
-    .stat-sub{font-size:11px;color:var(--muted);margin-top:3px}
-    .stat-delta{font-size:11px;margin-top:2px}
-    .delta-up{color:var(--green)} .delta-down{color:var(--red)} .delta-flat{color:var(--muted)}
+    /* ── Heute-Karten (Hero) ── */
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .hero-card{
+      border-radius:16px;padding:14px;
+      border:1px solid var(--border);
+      position:relative;overflow:hidden;
+      background:var(--surface);
+      transition:transform .2s,box-shadow .2s;
+    }
+    .hero-card:hover{transform:translateY(-2px)}
+    .hero-card::before{
+      content:'';position:absolute;top:-30px;right:-30px;
+      width:80px;height:80px;border-radius:50%;
+      opacity:.12;
+    }
+    .hero-card.blue::before{background:var(--blue)}
+    .hero-card.green::before{background:var(--green)}
+    .hero-card.purple::before{background:var(--purple)}
+    .hero-card.teal::before{background:var(--teal)}
+    .hero-label{font-size:11px;color:var(--muted);font-weight:500;margin-bottom:6px}
+    .hero-value{font-size:26px;font-weight:800;line-height:1}
+    .hero-sub{font-size:11px;color:var(--muted);margin-top:5px}
+    .hero-card.blue  .hero-value{color:var(--blue)}
+    .hero-card.green .hero-value{
+      color:var(--green);
+      text-shadow:var(--green-glow);
+    }
+    .hero-card.purple .hero-value{color:var(--purple)}
+    .hero-card.teal   .hero-value{color:var(--teal)}
+    .hero-wide{grid-column:span 2}
 
-    /* Colors */
-    .green{color:var(--green)} .red{color:var(--red)} .yellow{color:var(--yellow)}
-    .blue{color:var(--blue)} .purple{color:var(--purple)} .teal{color:var(--teal)}
-
-    /* Comparison row */
-    .compare-row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border)}
+    /* ── Wochenvergleich ── */
+    .compare-row{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:11px 16px;border-bottom:1px solid var(--border);
+      transition:background .15s;
+    }
     .compare-row:last-child{border-bottom:none}
+    .compare-row:hover{background:var(--surface2)}
     .compare-label{font-size:12px;color:var(--muted)}
-    .compare-vals{display:flex;gap:12px;align-items:center;font-size:13px}
-    .compare-this{font-weight:600}
-    .compare-prev{color:var(--muted);font-size:11px}
+    .compare-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+    .compare-this{font-size:14px;font-weight:700}
+    .compare-delta{font-size:11px;padding:1px 7px;border-radius:10px;font-weight:600}
+    .delta-up{background:#22c55e18;color:var(--green)}
+    .delta-down{background:#ef444418;color:var(--red)}
+    .delta-flat{background:#6b728018;color:var(--muted)}
 
-    /* Tax cards */
-    .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-    .tax-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
-    .tax-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
-    .tax-value{font-size:18px;font-weight:700;color:var(--yellow)}
-    .tax-total .tax-value{font-size:22px;color:var(--red)}
+    /* ── Fortschrittsbalken für Monat ── */
+    .month-progress{padding:14px 16px}
+    .mp-row{margin-bottom:12px}
+    .mp-row:last-child{margin-bottom:0}
+    .mp-header{display:flex;justify-content:space-between;margin-bottom:6px;font-size:12px}
+    .mp-label{color:var(--muted)}
+    .mp-value{font-weight:700}
+    .mp-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+    .mp-fill{height:100%;border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+    .mp-fill.blue{background:linear-gradient(90deg,#3b82f6,#60a5fa)}
+    .mp-fill.green{background:linear-gradient(90deg,#22c55e,#4ade80)}
+    .mp-fill.purple{background:linear-gradient(90deg,#8b5cf6,#a78bfa)}
 
-    /* Chart */
+    /* ── Steuer-Karten ── */
+    .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .tax-card{
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:16px;padding:14px;
+      transition:transform .2s;
+    }
+    .tax-card:hover{transform:translateY(-1px)}
+    .tax-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+    .tax-value{font-size:20px;font-weight:800;color:var(--yellow)}
+    .tax-note{font-size:10px;color:var(--muted);margin-top:4px}
+    .tax-card.total{background:linear-gradient(135deg,#ef444412,#f59e0b08);border-color:#ef444425}
+    .tax-card.total .tax-value{font-size:24px;color:var(--red)}
+
+    /* ── Auszahlung ── */
+    .payout-card{
+      background:linear-gradient(135deg,#14b8a615,#3b82f610);
+      border:1px solid #14b8a625;
+      border-radius:16px;padding:16px;
+      display:flex;justify-content:space-between;align-items:center;
+      transition:transform .2s;
+    }
+    .payout-card:hover{transform:translateY(-1px)}
+    .payout-amount{font-size:28px;font-weight:800;color:var(--teal);text-shadow:0 0 20px #14b8a640}
+    .payout-label{font-size:11px;color:var(--muted);margin-bottom:4px}
+    .payout-note{font-size:10px;color:var(--muted)}
+
+    /* ── Chart ── */
+    .chart-toggle{display:flex;gap:6px;padding:12px 14px 0}
+    .chart-btn{
+      font-size:11px;font-weight:600;padding:5px 12px;
+      border-radius:8px;border:1px solid var(--border);
+      background:transparent;color:var(--muted);cursor:pointer;
+      transition:all .15s;
+    }
+    .chart-btn:hover{border-color:var(--blue);color:var(--blue)}
+    .chart-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:var(--blue-glow)}
     .chart-container{padding:12px;height:160px;position:relative}
-    .chart-toggle{display:flex;gap:6px;padding:10px 12px 0;border-bottom:1px solid var(--border)}
-    .chart-btn{font-size:11px;padding:4px 10px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:.15s}
-    .chart-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
 
-    /* Repricing stats */
-    .reprice-stats{display:flex;justify-content:space-around;padding:12px 0;border-bottom:1px solid var(--border)}
-    .reprice-stat{text-align:center}
-    .rs-val{font-size:22px;font-weight:700}
+    /* ── Repricing Stats ── */
+    .reprice-stats{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      padding:14px 0;border-bottom:1px solid var(--border);
+    }
+    .reprice-stat{text-align:center;padding:0 8px}
+    .rs-val{font-size:24px;font-weight:800}
     .rs-lbl{font-size:10px;color:var(--muted);margin-top:2px}
+    .reprice-head{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 16px 0;
+    }
+    .reprice-time{font-size:12px;color:var(--muted)}
 
-    /* List rows */
-    .list-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border)}
+    /* ── List rows ── */
+    .list-row{
+      display:flex;align-items:center;gap:10px;
+      padding:11px 14px;border-bottom:1px solid var(--border);
+      transition:background .15s;
+    }
     .list-row:last-child{border-bottom:none}
-    .row-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
-    .icon-green{background:#22c55e20;color:var(--green)}
-    .icon-blue{background:#3b82f620;color:var(--blue)}
-    .icon-red{background:#ef444420;color:var(--red)}
-    .icon-yellow{background:#f59e0b20;color:var(--yellow)}
-    .icon-purple{background:#8b5cf620;color:var(--purple)}
-    .icon-teal{background:#14b8a620;color:var(--teal)}
+    .list-row:hover{background:var(--surface2)}
+    .row-icon{
+      width:34px;height:34px;border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:15px;flex-shrink:0;
+    }
+    .icon-green{background:#22c55e18;color:var(--green)}
+    .icon-blue{background:#3b82f618;color:var(--blue)}
+    .icon-red{background:#ef444418;color:var(--red)}
+    .icon-yellow{background:#f59e0b18;color:var(--yellow)}
+    .icon-purple{background:#8b5cf618;color:var(--purple)}
+    .icon-teal{background:#14b8a618;color:var(--teal)}
     .row-content{flex:1;min-width:0}
     .row-title{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .row-sub{font-size:11px;color:var(--muted);margin-top:2px}
     .row-right{text-align:right;flex-shrink:0}
-    .row-value{font-size:13px;font-weight:600}
+    .row-value{font-size:13px;font-weight:700}
 
-    /* Profit Dropdown */
-    .product-row{cursor:pointer;user-select:none}
-    .product-row:active{background:var(--surface2)}
-    .expand-icon{font-size:10px;color:var(--muted);transition:.2s;margin-left:4px}
-    .expand-icon.open{transform:rotate(180deg)}
-    .profit-breakdown{display:none;background:var(--surface2);border-top:1px solid var(--border);padding:12px 14px;font-size:12px}
-    .profit-breakdown.open{display:block}
+    /* ── Gewinn-Dropdown ── */
+    .product-row{cursor:pointer}
+    .pb-wrap{
+      max-height:0;overflow:hidden;
+      transition:max-height .35s cubic-bezier(.4,0,.2,1);
+    }
+    .pb-wrap.open{max-height:300px}
+    .profit-breakdown{
+      background:linear-gradient(180deg,var(--surface2),var(--surface));
+      border-top:1px solid var(--border);
+      padding:12px 14px;font-size:12px;
+    }
     .pb-row{display:flex;justify-content:space-between;padding:3px 0;color:var(--muted)}
-    .pb-row.total{color:var(--text);font-weight:600;border-top:1px solid var(--border);margin-top:6px;padding-top:8px}
+    .pb-row.total{
+      color:var(--text);font-weight:700;
+      border-top:1px solid var(--border);margin-top:8px;padding-top:8px;
+    }
     .pb-row.total .pb-val{color:var(--green)}
     .pb-neg{color:var(--red)} .pb-pos{color:var(--green)}
+    .expand-btn{
+      font-size:11px;color:var(--muted);
+      transition:transform .3s;display:inline-block;
+    }
+    .expand-btn.open{transform:rotate(180deg)}
 
-    /* Badges */
-    .badge{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600}
-    .badge-green{background:#22c55e20;color:var(--green)}
-    .badge-yellow{background:#f59e0b20;color:var(--yellow)}
-    .badge-red{background:#ef444420;color:var(--red)}
-    .badge-blue{background:#3b82f620;color:var(--blue)}
+    /* ── Badges ── */
+    .badge{font-size:10px;padding:3px 8px;border-radius:10px;font-weight:700}
+    .badge-green{background:#22c55e18;color:var(--green);border:1px solid #22c55e25}
+    .badge-yellow{background:#f59e0b18;color:var(--yellow);border:1px solid #f59e0b25}
+    .badge-red{background:#ef444418;color:var(--red);border:1px solid #ef444425}
 
-    /* Deadline coloring */
+    /* ── Deadline ── */
     .deadline-urgent .row-title,.deadline-urgent .row-value{color:var(--red)}
     .deadline-warn .row-title,.deadline-warn .row-value{color:var(--yellow)}
 
-    /* Summary row */
-    .summary-row{display:flex;justify-content:space-between;padding:10px 14px;font-size:13px;font-weight:600;border-top:1px solid var(--border);color:var(--text)}
+    /* ── Summary ── */
+    .summary-row{
+      display:flex;justify-content:space-between;
+      padding:12px 16px;font-size:13px;font-weight:700;
+      border-top:1px solid var(--border);
+      background:linear-gradient(90deg,#22c55e08,transparent);
+    }
 
-    /* Payout card */
-    .payout-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center}
-    .payout-amount{font-size:26px;font-weight:700;color:var(--teal)}
-    .payout-note{font-size:11px;color:var(--muted);margin-top:3px}
+    /* ── Alert ── */
+    .alert-banner{
+      background:linear-gradient(135deg,#ef444412,#f59e0b08);
+      border:1px solid #ef444430;border-radius:16px;
+      padding:12px 14px;display:flex;gap:10px;
+      animation:slideIn .3s ease;margin-bottom:10px;
+    }
+    .alert-title{font-weight:700;color:var(--red);margin-bottom:3px;font-size:13px}
+    .alert-text{font-size:12px;color:var(--muted)}
 
-    /* Empty */
-    .empty{padding:14px;color:var(--muted);font-size:12px;text-align:center}
+    /* ── Animationen ── */
+    @keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .animate-in{animation:fadeUp .4s ease forwards}
+    .animate-in:nth-child(1){animation-delay:.05s}
+    .animate-in:nth-child(2){animation-delay:.1s}
+    .animate-in:nth-child(3){animation-delay:.15s}
+    .animate-in:nth-child(4){animation-delay:.2s}
 
-    /* Tracking alert */
-    .alert-banner{background:#ef444415;border:1px solid #ef444430;border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
-    .alert-icon{font-size:18px}
-    .alert-text{font-size:12px;color:var(--text)}
-    .alert-title{font-weight:600;color:var(--red);margin-bottom:4px}
-
-    /* Loading */
-    .loading{padding:60px 20px;text-align:center;color:var(--muted)}
+    .empty{padding:16px;color:var(--muted);font-size:12px;text-align:center}
+    .loading{padding:80px 20px;text-align:center;color:var(--muted)}
+    .spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 12px}
+    @keyframes spin{to{transform:rotate(360deg)}}
   </style>
 </head>
 <body>
@@ -145,273 +286,298 @@
     <div class="shop-name">Best_Neodeals eBay Shop</div>
     <div class="shop-sub" id="lastUpdate">Lädt…</div>
   </div>
-  <div class="header-right">
+  <div class="live-badge">
     <div class="live-dot"></div>
+    <span class="live-text">LIVE</span>
   </div>
 </header>
 
 <main id="app">
   <div class="loading">
-    <div style="font-size:32px;margin-bottom:8px">📊</div>
-    Daten werden geladen…
+    <div class="spinner"></div>
+    Dashboard wird geladen…
   </div>
 </main>
 
 <script src="dashboard_data.js"></script>
 <script>
-function fmt(n,d=2){return Number(n).toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d})}
-function eur(n){return fmt(n)+' €'}
-function pct(n){return (n>=0?'+':'')+fmt(n,1)+' %'}
-function delta(cur,prev,type='abs'){
-  if(!prev) return '';
-  const diff = cur - prev;
-  const p    = prev ? (diff/prev*100) : 0;
-  const cls  = diff>0?'delta-up':diff<0?'delta-down':'delta-flat';
-  const sym  = diff>0?'↑':'↓';
-  const val  = type==='pct' ? pct(p) : (diff>=0?'+':'')+fmt(Math.abs(diff))+' €';
-  return `<span class="${cls}">${sym} ${val} vs Vorwoche</span>`;
+// ─── Zahl-Counter Animation ───────────────────────────────────────────────────
+function countUp(el, target, duration=900, prefix='', suffix='') {
+  const start = performance.now();
+  const isFloat = target % 1 !== 0;
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    const val = isFloat ? (target * ease).toFixed(2) : Math.round(target * ease);
+    el.textContent = prefix + Number(val).toLocaleString('de-DE', {
+      minimumFractionDigits: isFloat ? 2 : 0,
+      maximumFractionDigits: isFloat ? 2 : 0,
+    }) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
 }
 
-// ─── Charts ──────────────────────────────────────────────────────────────────
-let chartInst = null;
-let currentRange = '30d';
+function fmt(n,d=2){return Number(n).toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d})}
+function eur(n){return fmt(n)+' €'}
+function deltaHTML(cur, prev) {
+  if (!prev) return '';
+  const pct = (cur - prev) / prev * 100;
+  if (Math.abs(pct) < 0.5) return `<span class="compare-delta delta-flat">→ 0%</span>`;
+  return pct > 0
+    ? `<span class="compare-delta delta-up">↑ ${fmt(Math.abs(pct),1)} %</span>`
+    : `<span class="compare-delta delta-down">↓ ${fmt(Math.abs(pct),1)} %</span>`;
+}
 
-function buildChart(data, canvasId) {
-  const ctx = document.getElementById(canvasId);
+// ─── Chart ───────────────────────────────────────────────────────────────────
+let chartInst = null, currentRange = '30d', _data = null;
+
+function buildChart(data) {
+  const ctx = document.getElementById('revenueChart');
   if (!ctx) return;
   if (typeof Chart === 'undefined') {
-    ctx.parentElement.innerHTML = '<div class="empty" style="height:120px;display:flex;align-items:center;justify-content:center">Chart.js nicht geladen</div>';
+    ctx.parentElement.innerHTML = '<div class="empty">Chart.js nicht geladen</div>';
     return;
   }
   if (chartInst) { chartInst.destroy(); chartInst = null; }
-  const labels = data.map(d => d.date);
-  const revs   = data.map(d => d.revenue);
-  const profs  = data.map(d => d.profit);
   chartInst = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [
-        { label: 'Umsatz', data: revs,  backgroundColor: '#3b82f625', borderColor: '#3b82f6', borderWidth: 1.5, borderRadius: 3 },
-        { label: 'Gewinn', data: profs, backgroundColor: '#22c55e30', borderColor: '#22c55e', borderWidth: 1.5, borderRadius: 3 },
+    type:'bar',
+    data:{
+      labels: data.map(d=>d.date),
+      datasets:[
+        {label:'Umsatz',  data:data.map(d=>d.revenue), backgroundColor:'#3b82f620', borderColor:'#3b82f6', borderWidth:1.5, borderRadius:4},
+        {label:'Gewinn',  data:data.map(d=>d.profit),  backgroundColor:'#22c55e28', borderColor:'#22c55e', borderWidth:1.5, borderRadius:4},
       ]
     },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: {
-        callbacks: {
-          label: ctx => ctx.dataset.label + ': ' + fmt(ctx.raw) + ' €'
-        }
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      animation:{duration:600},
+      plugins:{legend:{display:false},tooltip:{
+        backgroundColor:'#12151f',borderColor:'#1e2235',borderWidth:1,
+        callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)+' €'}
       }},
-      scales: {
-        x: { grid: { color: '#2a2d3a' }, ticks: { color: '#6b7280', font: { size: 9 },
-             maxTicksLimit: data.length <= 7 ? 7 : data.length <= 30 ? 10 : 12 } },
-        y: { grid: { color: '#2a2d3a' }, ticks: { color: '#6b7280', font: { size: 9 },
-             callback: v => v >= 1000 ? (v/1000).toFixed(1)+'k' : v } }
+      scales:{
+        x:{grid:{color:'#1e2235'},ticks:{color:'#5a6280',font:{size:9},
+           maxTicksLimit:data.length<=7?7:data.length<=30?10:12}},
+        y:{grid:{color:'#1e2235'},ticks:{color:'#5a6280',font:{size:9},
+           callback:v=>v>=1000?(v/1000).toFixed(1)+'k':v}}
       }
     }
   });
 }
 
-// ─── Profit-Dropdown ─────────────────────────────────────────────────────────
+function switchChart(range) {
+  currentRange = range;
+  if (!_data) return;
+  document.querySelectorAll('.chart-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.range===range);
+  });
+  const map = {'7d':_data.orders.chart_7d,'30d':_data.orders.chart_30d,'90d':_data.orders.chart_90d};
+  buildChart(map[range] || []);
+}
+
+// ─── Gewinn-Dropdown ─────────────────────────────────────────────────────────
 function toggleBreakdown(sku) {
-  const el = document.getElementById('pb_'+sku);
-  const ic = document.getElementById('ic_'+sku);
-  if (!el) return;
-  el.classList.toggle('open');
-  ic.classList.toggle('open');
+  const wrap = document.getElementById('pb_'+sku);
+  const btn  = document.getElementById('ic_'+sku);
+  if (!wrap) return;
+  wrap.classList.toggle('open');
+  btn.classList.toggle('open');
 }
 
 function breakdownHTML(p) {
   const c = p.calc;
   if (!c) return '<div class="empty">Keine Detaildaten</div>';
   return `
-    <div class="pb-row"><span>Verkaufspreis (brutto)</span><span class="pb-val">${eur(c.vk_brutto)}</span></div>
-    <div class="pb-row"><span>eBay-Gebühren (13 %)</span><span class="pb-neg">−${eur(c.ebay_fee)}</span></div>
-    <div class="pb-row"><span>MwSt.-Anteil (19 %)</span><span class="pb-neg">−${eur(c.vat)}</span></div>
-    <div class="pb-row"><span>Netto-VK</span><span class="pb-val">${eur(c.netto_vk)}</span></div>
-    <div class="pb-row"><span>Versand / Handling</span><span class="pb-neg">−${eur(c.ship)}</span></div>
-    <div class="pb-row"><span>Einkaufspreis (EK)</span><span class="pb-neg">−${eur(c.ek)}</span></div>
-    <div class="pb-row total"><span>Gewinn / Stück</span><span class="pb-val">${eur(c.profit_u)}</span></div>
-    ${p.sold > 1 ? `<div class="pb-row total"><span>× ${p.sold} Stück gesamt</span><span class="pb-val">${eur(p.profit)}</span></div>` : ''}
+    <div class="pb-row"><span>Verkaufspreis</span><span>${eur(c.vk_brutto)}</span></div>
+    <div class="pb-row"><span>− eBay Gebühren (13 %)</span><span class="pb-neg">−${eur(c.ebay_fee)}</span></div>
+    <div class="pb-row"><span>− MwSt.-Anteil (19 %)</span><span class="pb-neg">−${eur(c.vat)}</span></div>
+    <div class="pb-row"><span>− Versand / Handling</span><span class="pb-neg">−${eur(c.ship)}</span></div>
+    <div class="pb-row"><span>− Einkaufspreis</span><span class="pb-neg">−${eur(c.ek)}</span></div>
+    <div class="pb-row total"><span>Gewinn / Stück</span><span class="pb-val pb-pos">${eur(c.profit_u)}</span></div>
+    ${p.sold>1?`<div class="pb-row total"><span>× ${p.sold} Stück</span><span class="pb-val pb-pos">${eur(p.profit)}</span></div>`:''}
   `;
 }
 
 // ─── Render ──────────────────────────────────────────────────────────────────
 function render(d) {
-  const app  = document.getElementById('app');
-  const gen  = new Date(d.generated_at);
+  _data = d;
+  const app = document.getElementById('app');
+  const gen = new Date(d.generated_at);
   document.getElementById('lastUpdate').textContent =
-    gen.toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+    'Stand: ' + gen.toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) + ' Uhr';
 
   const s  = d.orders.stats;
   const rp = d.repricing;
   const tx = d.orders.tax_reserves;
   const od = d.orders;
 
-  // Wochenvergleich Delta
-  const revDelta  = s.prev_week_revenue ? (s.week_revenue - s.prev_week_revenue) / s.prev_week_revenue * 100 : 0;
-  const profDelta = s.prev_week_profit  ? (s.week_profit  - s.prev_week_profit)  / s.prev_week_profit  * 100 : 0;
-  const deltaIcon = (n) => n > 0 ? `<span class="delta-up">↑ ${fmt(Math.abs(n),1)} %</span>` :
-                           n < 0 ? `<span class="delta-down">↓ ${fmt(Math.abs(n),1)} %</span>` :
-                                   `<span class="delta-flat">— 0 %</span>`;
+  // Zielwert für Fortschrittsbalken (Monat → 30-Tage-Wert als Basis)
+  const revGoal  = s.total_revenue_30d || 1;
+  const profGoal = s.total_profit_30d  || 1;
+  const ordGoal  = s.total_sales_30d   || 1;
+  const revPct   = Math.min(s.month_revenue / revGoal * 100, 100);
+  const profPct  = Math.min(s.month_profit  / profGoal * 100, 100);
+  const ordPct   = Math.min(s.month_sales   / ordGoal * 100, 100);
 
-  // Tracking-Alert
-  const trackAlert = od.tracking_missing.length > 0 ? `
-    <div class="alert-banner" style="margin-bottom:8px">
-      <div class="alert-icon">🚨</div>
-      <div class="alert-text">
+  const trackAlert = od.tracking_missing?.length > 0 ? `
+    <div class="alert-banner">
+      <div style="font-size:20px">🚨</div>
+      <div>
         <div class="alert-title">${od.tracking_missing.length} Bestellung${od.tracking_missing.length>1?'en':''} ohne Tracking</div>
-        ${od.tracking_missing.map(t=>`<div>${t.items[0]} · ${t.date}</div>`).join('')}
+        <div class="alert-text">${od.tracking_missing.map(t=>t.items[0]+' · '+t.date).join(' &nbsp;|&nbsp; ')}</div>
       </div>
     </div>` : '';
 
   app.innerHTML = `
-
     ${trackAlert}
 
-    <!-- ── Heute ── -->
+    <!-- Heute -->
     <div class="section-title">Heute</div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-label">Bestellungen</div>
-        <div class="stat-value blue">${s.today_sales}</div>
-        <div class="stat-sub">${s.week_sales} diese Woche</div>
+    <div class="hero-grid">
+      <div class="hero-card blue animate-in">
+        <div class="hero-label">Bestellungen</div>
+        <div class="hero-value" id="c_today_sales">0</div>
+        <div class="hero-sub">${s.week_sales} diese Woche</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-label">Umsatz</div>
-        <div class="stat-value">${eur(s.today_revenue)}</div>
-        <div class="stat-sub">${eur(s.week_revenue)} diese Woche</div>
+      <div class="hero-card teal animate-in">
+        <div class="hero-label">Umsatz</div>
+        <div class="hero-value" id="c_today_rev">0</div>
+        <div class="hero-sub">${eur(s.week_revenue)} Woche</div>
       </div>
-      <div class="stat-card" style="grid-column:span 2">
-        <div class="stat-label">Gewinn heute</div>
-        <div class="stat-value ${s.today_profit>=0?'green':'red'}">${eur(s.today_profit)}</div>
-        <div class="stat-sub">${eur(s.week_profit)} diese Woche · ${eur(s.month_profit)} diesen Monat</div>
+      <div class="hero-card green hero-wide animate-in">
+        <div class="hero-label">Gewinn heute</div>
+        <div class="hero-value" id="c_today_prof">0</div>
+        <div class="hero-sub">${eur(s.week_profit)} diese Woche &nbsp;·&nbsp; ${eur(s.month_profit)} diesen Monat</div>
       </div>
     </div>
 
-    <!-- ── Wochenvergleich ── -->
-    <div class="section-title">Diese Woche vs. Vorwoche</div>
+    <!-- Wochenvergleich -->
+    <div class="section-title">Woche vs. Vorwoche</div>
     <div class="card">
       <div class="compare-row">
-        <div class="compare-label">Bestellungen</div>
-        <div class="compare-vals">
+        <span class="compare-label">Bestellungen</span>
+        <div class="compare-right">
           <span class="compare-this blue">${s.week_sales}</span>
-          <span class="compare-prev">vs ${s.prev_week_sales}</span>
-          ${deltaIcon((s.week_sales - s.prev_week_sales) / (s.prev_week_sales||1) * 100)}
+          ${deltaHTML(s.week_sales, s.prev_week_sales)}
         </div>
       </div>
       <div class="compare-row">
-        <div class="compare-label">Umsatz</div>
-        <div class="compare-vals">
+        <span class="compare-label">Umsatz</span>
+        <div class="compare-right">
           <span class="compare-this">${eur(s.week_revenue)}</span>
-          <span class="compare-prev">vs ${eur(s.prev_week_revenue)}</span>
-          ${deltaIcon(revDelta)}
+          ${deltaHTML(s.week_revenue, s.prev_week_revenue)}
         </div>
       </div>
       <div class="compare-row">
-        <div class="compare-label">Gewinn</div>
-        <div class="compare-vals">
-          <span class="compare-this green">${eur(s.week_profit)}</span>
-          <span class="compare-prev">vs ${eur(s.prev_week_profit)}</span>
-          ${deltaIcon(profDelta)}
+        <span class="compare-label">Gewinn</span>
+        <div class="compare-right">
+          <span class="compare-this" style="color:var(--green)">${eur(s.week_profit)}</span>
+          ${deltaHTML(s.week_profit, s.prev_week_profit)}
         </div>
       </div>
     </div>
 
-    <!-- ── Dieser Monat ── -->
+    <!-- Dieser Monat -->
     <div class="section-title">Dieser Monat</div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-label">Bestellungen</div>
-        <div class="stat-value blue">${s.month_sales}</div>
-        <div class="stat-sub">${s.total_sales_30d} letzte 30 Tage</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Umsatz</div>
-        <div class="stat-value">${eur(s.month_revenue)}</div>
-        <div class="stat-sub">${eur(s.total_revenue_30d)} / 30d</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Gewinn</div>
-        <div class="stat-value green">${eur(s.month_profit)}</div>
-        <div class="stat-sub">${eur(s.total_profit_30d)} / 30d</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Aktive Listings</div>
-        <div class="stat-value blue">${(d.active_listings||0).toLocaleString('de-DE')}</div>
-        <div class="stat-sub">eBay Shop</div>
+    <div class="card">
+      <div class="month-progress">
+        <div class="mp-row">
+          <div class="mp-header">
+            <span class="mp-label">Bestellungen</span>
+            <span class="mp-value blue" id="c_month_sales">0</span>
+          </div>
+          <div class="mp-bar"><div class="mp-fill blue" id="bar_orders" style="width:0%"></div></div>
+        </div>
+        <div class="mp-row">
+          <div class="mp-header">
+            <span class="mp-label">Umsatz</span>
+            <span class="mp-value" id="c_month_rev">0</span>
+          </div>
+          <div class="mp-bar"><div class="mp-fill blue" id="bar_rev" style="width:0%"></div></div>
+        </div>
+        <div class="mp-row">
+          <div class="mp-header">
+            <span class="mp-label">Gewinn</span>
+            <span class="mp-value" id="c_month_prof">0</span>
+          </div>
+          <div class="mp-bar"><div class="mp-fill green" id="bar_prof" style="width:0%"></div></div>
+        </div>
+        <div class="mp-row" style="margin-bottom:0">
+          <div class="mp-header">
+            <span class="mp-label">Aktive Listings</span>
+            <span class="mp-value purple" id="c_listings">0</span>
+          </div>
+          <div class="mp-bar"><div class="mp-fill purple" style="width:${Math.min(d.active_listings/1500*100,100).toFixed(1)}%"></div></div>
+        </div>
       </div>
     </div>
 
-    <!-- ── Umsatzdiagramm ── -->
+    <!-- Chart -->
     <div class="section-title">Umsatz & Gewinn</div>
     <div class="card">
       <div class="chart-toggle">
-        <button class="chart-btn ${currentRange==='7d'?'active':''}" onclick="switchChart('7d')">7 Tage</button>
-        <button class="chart-btn ${currentRange==='30d'?'active':''}" onclick="switchChart('30d')">30 Tage</button>
-        <button class="chart-btn ${currentRange==='90d'?'active':''}" onclick="switchChart('90d')">90 Tage</button>
+        <button class="chart-btn ${currentRange==='7d'?'active':''}"  data-range="7d"  onclick="switchChart('7d')">7 Tage</button>
+        <button class="chart-btn ${currentRange==='30d'?'active':''}" data-range="30d" onclick="switchChart('30d')">30 Tage</button>
+        <button class="chart-btn ${currentRange==='90d'?'active':''}" data-range="90d" onclick="switchChart('90d')">90 Tage</button>
       </div>
-      <div class="chart-container">
-        <canvas id="revenueChart"></canvas>
-      </div>
+      <div class="chart-container"><canvas id="revenueChart"></canvas></div>
     </div>
 
-    <!-- ── Erwartete Auszahlung ── -->
+    <!-- Auszahlung -->
     <div class="section-title">Erwartete eBay-Auszahlung</div>
     <div class="payout-card">
       <div>
-        <div class="payout-amount">${eur(d.orders.expected_payout)}</div>
-        <div class="payout-note">Schätzung: Umsatz 30d × 87 % (nach eBay-Gebühren)</div>
+        <div class="payout-label">Geschätzte Auszahlung</div>
+        <div class="payout-amount" id="c_payout">0</div>
+        <div class="payout-note">Umsatz 30d × 87 % (nach eBay-Gebühren)</div>
       </div>
-      <div style="font-size:28px">💳</div>
+      <div style="font-size:36px">💳</div>
     </div>
 
-    <!-- ── Steuer-Rücklagen ── -->
-    <div class="section-title">Steuer-Rücklagen (diesen Monat)</div>
+    <!-- Steuer -->
+    <div class="section-title">Steuer-Rücklagen (Monat)</div>
     <div class="tax-grid">
       <div class="tax-card">
         <div class="tax-label">Umsatzsteuer</div>
-        <div class="tax-value">${eur(tx.ust_month)}</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:3px">19/119 vom Umsatz</div>
+        <div class="tax-value" id="c_ust">0</div>
+        <div class="tax-note">19/119 vom Umsatz</div>
       </div>
       <div class="tax-card">
         <div class="tax-label">Einkommensteuer</div>
-        <div class="tax-value">${eur(tx.est_month)}</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:3px">30 % vom Gewinn</div>
+        <div class="tax-value" id="c_est">0</div>
+        <div class="tax-note">30 % vom Gewinn</div>
       </div>
       <div class="tax-card">
         <div class="tax-label">Gewerbesteuer</div>
-        <div class="tax-value">${eur(tx.gewst_month)}</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:3px">15 % vom Gewinn</div>
+        <div class="tax-value" id="c_gwst">0</div>
+        <div class="tax-note">15 % vom Gewinn</div>
       </div>
-      <div class="tax-card tax-total">
+      <div class="tax-card total">
         <div class="tax-label">Gesamt zurücklegen</div>
-        <div class="tax-value">${eur(tx.total_month)}</div>
-        <div style="font-size:10px;color:var(--muted);margin-top:3px">USt + ESt + GewSt</div>
+        <div class="tax-value" id="c_tax_total">0</div>
+        <div class="tax-note">USt + ESt + GewSt</div>
       </div>
     </div>
 
-    <!-- ── Repricing ── -->
-    <div class="section-title">Repricing — Letzter Run</div>
+    <!-- Repricing -->
+    <div class="section-title">Repricing</div>
     <div class="card">
-      <div class="card-pad" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0">
-        <span style="font-size:12px;color:var(--muted)">
+      <div class="reprice-head">
+        <span class="reprice-time">
           ${rp.last_run.timestamp
             ? new Date(rp.last_run.timestamp).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})
             : 'Kein Run'}
         </span>
-        ${rp.last_run.dry_run
-          ? '<span class="badge badge-yellow">DRY-RUN</span>'
-          : '<span class="badge badge-green">LIVE</span>'}
+        ${rp.last_run.dry_run ? '<span class="badge badge-yellow">DRY-RUN</span>' : '<span class="badge badge-green">LIVE</span>'}
       </div>
       <div class="reprice-stats">
-        <div class="reprice-stat"><div class="rs-val green">${rp.last_run.lowered??0}</div><div class="rs-lbl">Gesenkt</div></div>
-        <div class="reprice-stat"><div class="rs-val blue">${rp.last_run.raised??0}</div><div class="rs-lbl">Erhöht</div></div>
-        <div class="reprice-stat"><div class="rs-val yellow">${rp.last_run.skipped_floor??0}</div><div class="rs-lbl">Floor</div></div>
-        <div class="reprice-stat"><div class="rs-val red">${rp.last_run.errors??0}</div><div class="rs-lbl">Fehler</div></div>
+        <div class="reprice-stat"><div class="rs-val" style="color:var(--green)">${rp.last_run.lowered??0}</div><div class="rs-lbl">Gesenkt</div></div>
+        <div class="reprice-stat"><div class="rs-val" style="color:var(--blue)">${rp.last_run.raised??0}</div><div class="rs-lbl">Erhöht</div></div>
+        <div class="reprice-stat"><div class="rs-val" style="color:var(--yellow)">${rp.last_run.skipped_floor??0}</div><div class="rs-lbl">Floor</div></div>
+        <div class="reprice-stat"><div class="rs-val" style="color:var(--red)">${rp.last_run.errors??0}</div><div class="rs-lbl">Fehler</div></div>
       </div>
-      ${rp.recent_changes.length === 0
+      ${rp.recent_changes.length===0
         ? '<div class="empty">Keine Preisänderungen</div>'
         : rp.recent_changes.map(c=>`
         <div class="list-row">
@@ -426,19 +592,17 @@ function render(d) {
         </div>`).join('')}
     </div>
 
-    <!-- ── BAB Fristen ── -->
+    <!-- BAB -->
     <div class="section-title">BAB Zahlungsfristen</div>
     <div class="card">
-      ${od.bab_deadlines.length === 0
-        ? '<div class="empty">Keine offenen Fristen ✓</div>'
+      ${od.bab_deadlines.length===0
+        ? '<div class="empty">✓ Keine offenen Fristen</div>'
         : od.bab_deadlines.map(b=>`
         <div class="list-row ${b.urgent?'deadline-urgent':b.days_left<=5?'deadline-warn':''}">
-          <div class="row-icon ${b.urgent?'icon-red':b.days_left<=5?'icon-yellow':'icon-blue'}">
-            ${b.urgent?'🔥':b.days_left<=5?'⚠️':'📅'}
-          </div>
+          <div class="row-icon ${b.urgent?'icon-red':b.days_left<=5?'icon-yellow':'icon-blue'}">${b.urgent?'🔥':b.days_left<=5?'⚠️':'📅'}</div>
           <div class="row-content">
             <div class="row-title">${b.items[0]}${b.items.length>1?' +'+(b.items.length-1)+' weitere':''}</div>
-            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})} · Bestell-Nr. ${b.order_id}</div>
+            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})} · ${b.order_id}</div>
           </div>
           <div class="row-right">
             <div class="row-value ${b.urgent?'red':b.days_left<=5?'yellow':''}">${b.days_left}d</div>
@@ -446,36 +610,40 @@ function render(d) {
         </div>`).join('')}
     </div>
 
-    <!-- ── Best Seller mit Gewinn-Dropdown ── -->
-    <div class="section-title">Best Seller — 30 Tage <span style="color:var(--muted);font-weight:400">(tippen für Gewinnrechnung)</span></div>
+    <!-- Best Seller -->
+    <div class="section-title">Best Seller — 30 Tage</div>
     <div class="card">
-      ${od.top_products.length === 0
+      ${od.top_products.length===0
         ? '<div class="empty">Keine Daten</div>'
         : od.top_products.map((p,i)=>`
         <div>
           <div class="list-row product-row" onclick="toggleBreakdown('${p.sku}')">
-            <div class="row-icon icon-purple" style="font-size:12px;font-weight:700">#${i+1}</div>
+            <div class="row-icon icon-purple" style="font-size:12px;font-weight:800">#${i+1}</div>
             <div class="row-content">
               <div class="row-title">${p.title}</div>
-              <div class="row-sub">${p.sold}× verkauft · ${eur(p.revenue)} Umsatz</div>
+              <div class="row-sub">${p.sold}× &nbsp;·&nbsp; ${eur(p.revenue)} Umsatz</div>
             </div>
             <div class="row-right">
-              <div class="row-value green">+${eur(p.profit)}</div>
-              <div class="row-sub" style="margin-top:2px">▾<span id="ic_${p.sku}" class="expand-icon"></span></div>
+              <div class="row-value" style="color:var(--green)">+${eur(p.profit)}</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:2px">
+                <span id="ic_${p.sku}" class="expand-btn">▾</span>
+              </div>
             </div>
           </div>
-          <div id="pb_${p.sku}" class="profit-breakdown">${breakdownHTML(p)}</div>
+          <div id="pb_${p.sku}" class="pb-wrap">
+            <div class="profit-breakdown">${breakdownHTML(p)}</div>
+          </div>
         </div>`).join('')}
       <div class="summary-row">
         <span>Gewinn gesamt (30d)</span>
-        <span class="green">+${eur(s.total_profit_30d)}</span>
+        <span style="color:var(--green)" id="c_total_profit">0</span>
       </div>
     </div>
 
-    <!-- ── Letzte Verkäufe ── -->
+    <!-- Letzte Verkäufe -->
     <div class="section-title">Letzte Verkäufe</div>
     <div class="card">
-      ${od.recent_sales.length === 0
+      ${od.recent_sales.length===0
         ? '<div class="empty">Keine Verkäufe</div>'
         : od.recent_sales.map(sale=>`
         <div class="list-row">
@@ -486,32 +654,41 @@ function render(d) {
           </div>
           <div class="row-right">
             <div class="row-value">${eur(sale.revenue)}</div>
-            <div class="row-sub green">+${eur(sale.profit)}</div>
+            <div class="row-sub" style="color:var(--green)">+${eur(sale.profit)}</div>
           </div>
         </div>`).join('')}
     </div>
-
   `;
 
-  // Chart initialisieren
-  const chartData = currentRange === '7d' ? d.orders.chart_7d :
-                    currentRange === '30d' ? d.orders.chart_30d : d.orders.chart_90d;
-  buildChart(chartData, 'revenueChart');
+  // ── Count-up Animationen ──
+  setTimeout(() => {
+    countUp(document.getElementById('c_today_sales'), s.today_sales, 600);
+    countUp(document.getElementById('c_today_rev'),   s.today_revenue, 800, '', ' €');
+    countUp(document.getElementById('c_today_prof'),  s.today_profit,  800, '', ' €');
+    countUp(document.getElementById('c_month_sales'), s.month_sales, 700);
+    countUp(document.getElementById('c_month_rev'),   s.month_revenue, 900, '', ' €');
+    countUp(document.getElementById('c_month_prof'),  s.month_profit,  900, '', ' €');
+    countUp(document.getElementById('c_listings'),    d.active_listings, 800);
+    countUp(document.getElementById('c_payout'),      od.expected_payout, 1000, '', ' €');
+    countUp(document.getElementById('c_ust'),         tx.ust_month,  700, '', ' €');
+    countUp(document.getElementById('c_est'),         tx.est_month,  750, '', ' €');
+    countUp(document.getElementById('c_gwst'),        tx.gewst_month, 800, '', ' €');
+    countUp(document.getElementById('c_tax_total'),   tx.total_month, 900, '', ' €');
+    countUp(document.getElementById('c_total_profit'),s.total_profit_30d, 1000, '+', ' €');
 
-  // Chart-Toggle global zugänglich machen
-  window._dashboardData = d;
-}
+    // Balken animieren
+    setTimeout(()=>{
+      const b = document.getElementById('bar_orders');
+      const r = document.getElementById('bar_rev');
+      const p = document.getElementById('bar_prof');
+      if(b) b.style.width = ordPct.toFixed(1)+'%';
+      if(r) r.style.width = revPct.toFixed(1)+'%';
+      if(p) p.style.width = profPct.toFixed(1)+'%';
+    }, 200);
 
-function switchChart(range) {
-  currentRange = range;
-  if (!window._dashboardData) return;
-  document.querySelectorAll('.chart-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.chart-btn').forEach(b=>{
-    if(b.textContent.includes(range==='7d'?'7':range==='30d'?'30':'90')) b.classList.add('active');
-  });
-  const data = range==='7d' ? window._dashboardData.orders.chart_7d :
-               range==='30d' ? window._dashboardData.orders.chart_30d : window._dashboardData.orders.chart_90d;
-  buildChart(data, 'revenueChart');
+    // Chart
+    buildChart(currentRange==='7d'?od.chart_7d:currentRange==='90d'?od.chart_90d:od.chart_30d);
+  }, 50);
 }
 
 function loadData() {
@@ -520,11 +697,9 @@ function loadData() {
   } else {
     document.getElementById('app').innerHTML = `
       <div class="loading">
-        <div style="font-size:32px">⚠️</div>
-        <div style="margin-top:8px">Daten nicht gefunden</div>
-        <div style="font-size:11px;margin-top:4px;color:var(--muted)">
-          dashboard_data.js fehlt – bitte <code>python dashboard_generator.py --mock</code> ausführen
-        </div>
+        <div style="font-size:40px;margin-bottom:12px">⚠️</div>
+        <div style="color:var(--text);margin-bottom:6px">Daten nicht gefunden</div>
+        <div style="font-size:11px">dashboard_data.js fehlt –<br>bitte <code>python dashboard_generator.py --mock</code> ausführen</div>
       </div>`;
   }
 }
