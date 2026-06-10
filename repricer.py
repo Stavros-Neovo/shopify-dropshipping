@@ -394,11 +394,24 @@ def reprice_product(
     target_price = psychological_round(lowest - UNDERCUT_EUR)
 
     # Sicherheit: Nicht unter Floor
+    # Aber: statt komplett zu skippen → auf Floor senken (bestmöglich ohne Verlust)
     if target_price < floor_price:
-        result["action"] = "skipped"
-        result["reason"] = "floor_would_be_breached"
+        if current_price <= floor_price + 0.02:
+            # Sind schon am Floor → nichts zu tun
+            result["action"] = "unchanged"
+            result["reason"] = "at_floor_cannot_undercut"
+            log.debug(f"  {sku}: bereits am Floor {floor_price:.2f}€, Mitbewerber günstiger → keine Änderung")
+            return result
+        # Preis auf Floor senken — so günstig wie möglich ohne Verlust
+        result["action"]    = "lowered"
+        result["reason"]    = "floor_protection_set_to_floor"
         result["new_price"] = floor_price
-        log.info(f"  ⚠ {sku}: Zielpreis {target_price:.2f}€ < Floor {floor_price:.2f}€ → nicht senken")
+        log.info(
+            f"  ↓ {sku}: {current_price:.2f}€ → {floor_price:.2f}€ "
+            f"(Mitbewerber {lowest:.2f}€ günstiger als Floor — auf Floor setzen)"
+        )
+        if not dry_run:
+            update_offer_price(client, offer_id, sku, floor_price)
         return result
 
     # Sicherheit: Max 15% Senkung pro Lauf
@@ -523,7 +536,8 @@ def main():
         "checked":      0,
         "lowered":      0,
         "raised":       0,
-        "skipped_floor":0,
+        "set_to_floor": 0,   # Mitbewerber günstiger als Floor → auf Floor gesetzt
+        "skipped_floor":0,   # bereits am Floor, kein Spielraum mehr
         "skipped_few":  0,
         "unchanged":    0,
         "errors":       0,
@@ -563,13 +577,16 @@ def main():
         reason = result["reason"]
 
         if action == "lowered":
-            stats["lowered"] += 1
+            if reason == "floor_protection_set_to_floor":
+                stats["set_to_floor"] += 1
+            else:
+                stats["lowered"] += 1
             all_changes.append(result)
         elif action == "raised":
             stats["raised"] += 1
             all_changes.append(result)
         elif action == "skipped":
-            if "floor" in reason:
+            if "floor" in reason or "at_floor" in reason:
                 stats["skipped_floor"] += 1
             elif "few_comp" in reason or "no_comp" in reason:
                 stats["skipped_few"] += 1
@@ -580,13 +597,14 @@ def main():
 
     # ── Ergebnis ──────────────────────────────────────────────────────────
     log.info(f"\n{'─'*60}")
-    log.info(f"  Geprüft:             {stats['checked']}")
-    log.info(f"  Preis gesenkt:       {stats['lowered']}")
-    log.info(f"  Preis erhöht:        {stats['raised']}")
-    log.info(f"  Floor-Schutz aktiv:  {stats['skipped_floor']}")
-    log.info(f"  Zu wenig Konkurrenz: {stats['skipped_few']}")
-    log.info(f"  Unverändert:         {stats['unchanged']}")
-    log.info(f"  Fehler:              {stats['errors']}")
+    log.info(f"  Geprüft:                    {stats['checked']}")
+    log.info(f"  Preis gesenkt:              {stats['lowered']}")
+    log.info(f"  Auf Floor gesetzt:          {stats['set_to_floor']}")
+    log.info(f"  Preis erhöht:               {stats['raised']}")
+    log.info(f"  Bereits am Floor (kein Sp): {stats['skipped_floor']}")
+    log.info(f"  Zu wenig Konkurrenz:        {stats['skipped_few']}")
+    log.info(f"  Unverändert:                {stats['unchanged']}")
+    log.info(f"  Fehler:                     {stats['errors']}")
     if args.dry_run:
         log.info("  [DRY-RUN — keine echten Änderungen]")
 
