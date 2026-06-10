@@ -145,49 +145,32 @@ def load_bab_feed(cfg: dict) -> dict:
 
 # ─── eBay Offers ──────────────────────────────────────────────────────────────
 
-def get_all_offers(client: EbayClient) -> dict:
-    """Alle aktiven eBay-Offers → {SKU: {offerId, currentPrice}}"""
-    offers_map = {}
-    offset, limit = 0, 100
-    while True:
+def get_offer_data(client: EbayClient, sku: str) -> Optional[dict]:
+    """
+    Gibt {offerId, currentPrice} für eine SKU zurück oder None.
+    GET /offer?sku=X ist der korrekte Endpoint (braucht zwingend SKU).
+    """
+    try:
+        offer = client.get_offer_for_sku(sku)
+        if not offer:
+            return None
+        price_val = 0.0
         try:
-            data = client._request(
-                "GET", OFFER_PATH,
-                params={"limit": limit, "offset": offset}
-            ) or {}
-        except Exception as e:
-            log.warning(f"Offers-Fetch Fehler: {e}")
-            break
-
-        batch = data.get("offers", [])
-        if not batch:
-            break
-
-        for offer in batch:
-            sku = (offer.get("sku") or "").strip()
-            if not sku:
-                continue
-            price_val = 0.0
-            try:
-                price_val = float(
-                    offer.get("pricingSummary", {})
-                        .get("price", {})
-                        .get("value", 0)
-                )
-            except (TypeError, ValueError):
-                pass
-            offers_map[sku] = {
-                "offerId": offer.get("offerId", ""),
-                "currentPrice": price_val,
-                "status": offer.get("status", ""),
-            }
-
-        offset += limit
-        if offset >= data.get("total", 0):
-            break
-
-    log.info(f"eBay Offers geladen: {len(offers_map)} aktive Listings")
-    return offers_map
+            price_val = float(
+                offer.get("pricingSummary", {})
+                    .get("price", {})
+                    .get("value", 0)
+            )
+        except (TypeError, ValueError):
+            pass
+        return {
+            "offerId":      offer.get("offerId", ""),
+            "currentPrice": price_val,
+            "status":       offer.get("status", ""),
+        }
+    except Exception as e:
+        log.debug(f"Offer-Fetch SKU={sku}: {e}")
+        return None
 
 
 def update_offer_price(client: EbayClient, offer_id: str, sku: str, new_price: float):
@@ -486,30 +469,11 @@ def main():
     app_token = client._get_app_token()
     base_url  = client.base
 
-    # ── Daten laden ───────────────────────────────────────────────────────
+    # ── BAB-Feed laden ────────────────────────────────────────────────────
     bab_feed = load_bab_feed(cfg)
-    offers   = get_all_offers(client)
+    products = list(bab_feed.items())   # [(ean, feed_data), ...]
 
-    # ── EAN → {ek, sku, title, offerId, currentPrice} zusammenführen ─────
-    products = []
-    for ean, feed_data in bab_feed.items():
-        sku = feed_data["sku"]
-        if sku not in offers:
-            continue
-        offer = offers[sku]
-        if offer["currentPrice"] <= 0:
-            continue
-        products.append({
-            "ean":          ean,
-            "sku":          sku,
-            "ek":           feed_data["ek"],
-            "title":        feed_data["title"],
-            "brand":        feed_data["brand"],
-            "offerId":      offer["offerId"],
-            "currentPrice": offer["currentPrice"],
-        })
-
-    log.info(f"Produkte zum Repricing: {len(products)}")
+    log.info(f"Produkte aus Feed: {len(products)}")
 
     if args.limit:
         products = products[: args.limit]
@@ -529,15 +493,26 @@ def main():
     }
     all_changes = []
 
-    for n, p in enumerate(products, 1):
-        log.info(f"[{n}/{len(products)}] {p['sku']}  {p['title'][:50]}")
+    for n, (ean, feed_data) in enumerate(products, 1):
+        sku   = feed_data["sku"]
+        ek    = feed_data["ek"]
+        title = feed_data["title"]
+        log.info(f"[{n}/{len(products)}] {sku}  {title[:50]}")
         stats["checked"] += 1
+
+        # Offer von eBay abrufen (Preis + offerId)
+        offer = get_offer_data(client, sku)
+        if not offer or offer["currentPrice"] <= 0:
+            log.debug(f"  Kein aktives Offer für SKU {sku} → überspringen")
+            stats["unchanged"] += 1
+            time.sleep(0.2)
+            continue
 
         try:
             result = reprice_product(
-                ean=p["ean"], sku=p["sku"], ek=p["ek"],
-                title=p["title"], current_price=p["currentPrice"],
-                offer_id=p["offerId"], cfg=cfg,
+                ean=ean, sku=sku, ek=ek,
+                title=title, current_price=offer["currentPrice"],
+                offer_id=offer["offerId"], cfg=cfg,
                 app_token=app_token, base_url=base_url,
                 dry_run=args.dry_run, client=client,
             )
