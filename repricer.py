@@ -190,7 +190,18 @@ def update_offer_price(client: EbayClient, offer_id: str, sku: str, new_price: f
                   "listingId", "auditInfo", "availableQuantity"]:
         existing.pop(field, None)
 
-    client._request("PUT", f"{OFFER_PATH}/{offer_id}", json_body=existing)
+    try:
+        client._request("PUT", f"{OFFER_PATH}/{offer_id}", json_body=existing)
+    except RuntimeError as e:
+        err_str = str(e)
+        # Fehler 25002: Bild zu niedrig aufgelöst → Preis-Update nicht möglich
+        # eBay verweigert den PUT wegen altem Bild-Problem — SKU überspringen
+        if "25002" in err_str:
+            raise RuntimeError(
+                f"Bild-Auflösung zu gering (eBay Error 25002) – SKU {sku} wird übersprungen. "
+                f"Lösung: Bild ersetzen via image-fix workflow."
+            ) from None
+        raise
 
 
 # ─── Browse API: Mitbewerber-Preise ──────────────────────────────────────────
@@ -517,7 +528,7 @@ def main():
                 dry_run=args.dry_run, client=client,
             )
         except Exception as e:
-            log.error(f"  FEHLER {p['sku']}: {e}")
+            log.error(f"  FEHLER {sku}: {e}")
             stats["errors"] += 1
             continue
 
