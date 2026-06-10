@@ -29,69 +29,19 @@
       "skipped_few": 186,
       "unchanged": 144,
       "errors": 0
+    },
+    {
+      "timestamp": "2026-06-10T16:33:05.588168+00:00",
+      "checked": 1182,
+      "lowered": 31,
+      "raised": 0,
+      "skipped_floor": 808,
+      "skipped_few": 186,
+      "unchanged": 152,
+      "errors": 5
     }
   ],
   "last_changes": [
-    {
-      "ean": "6972822121000",
-      "sku": "ENAB0011",
-      "title": "Enabot EBO Air2 Pink",
-      "ek": 131.95,
-      "floor_price": 223.99,
-      "normal_price": 232.99,
-      "old_price": 232.99,
-      "new_price": 227.99,
-      "competitor_count": 2,
-      "lowest_competitor": 229.0,
-      "action": "lowered",
-      "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:01:43.297616+00:00"
-    },
-    {
-      "ean": "5060356734306",
-      "sku": "HHWG1043",
-      "title": "Ghd Shiny Ever After - Hitzeschutz Spray",
-      "ek": 7.31,
-      "floor_price": 18.99,
-      "normal_price": 19.99,
-      "old_price": 23.99,
-      "new_price": 20.99,
-      "competitor_count": 4,
-      "lowest_competitor": 21.99,
-      "action": "lowered",
-      "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:03:59.630204+00:00"
-    },
-    {
-      "ean": "5060356734290",
-      "sku": "HHWG1046",
-      "title": "Ghd Dramatic Ending - Haarserum",
-      "ek": 9.44,
-      "floor_price": 22.99,
-      "normal_price": 22.99,
-      "old_price": 26.99,
-      "new_price": 22.99,
-      "competitor_count": 4,
-      "lowest_competitor": 23.99,
-      "action": "lowered",
-      "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:04:00.849151+00:00"
-    },
-    {
-      "ean": "8885020622416",
-      "sku": "NETT0167",
-      "title": "TP-LINK Festa FR365 - Router",
-      "ek": 116.73,
-      "floor_price": 198.99,
-      "normal_price": 206.99,
-      "old_price": 206.99,
-      "new_price": 201.99,
-      "competitor_count": 2,
-      "lowest_competitor": 202.07,
-      "action": "lowered",
-      "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:05:56.537952+00:00"
-    },
     {
       "ean": "1210000619273",
       "sku": "NOCO0011",
@@ -105,7 +55,7 @@
       "lowest_competitor": 132.8,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:07:32.946681+00:00"
+      "timestamp": "2026-06-10T16:38:48.830555+00:00"
     },
     {
       "ean": "1210000617286",
@@ -120,7 +70,7 @@
       "lowest_competitor": 38.59,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:07:42.943202+00:00"
+      "timestamp": "2026-06-10T16:38:58.672313+00:00"
     },
     {
       "ean": "1210000621047",
@@ -135,7 +85,7 @@
       "lowest_competitor": 37.8,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:07:43.976404+00:00"
+      "timestamp": "2026-06-10T16:39:03.279489+00:00"
     },
     {
       "ean": "1210000621054",
@@ -150,37 +100,7 @@
       "lowest_competitor": 43.75,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:07:44.959159+00:00"
-    },
-    {
-      "ean": "0740617337426",
-      "sku": "RAM4K0057",
-      "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8GB (KF436C18BB2A/16)",
-      "ek": 119.01,
-      "floor_price": 202.99,
-      "normal_price": 210.99,
-      "old_price": 210.99,
-      "new_price": 205.99,
-      "competitor_count": 3,
-      "lowest_competitor": 206.07,
-      "action": "lowered",
-      "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:12:08.295710+00:00"
-    },
-    {
-      "ean": "0740617337815",
-      "sku": "RAM4K0060",
-      "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8GB (KF436C16RB2K2/16)",
-      "ek": 145.0,
-      "floor_price": 244.99,
-      "normal_price": 254.99,
-      "old_price": 254.99,
-      "new_price": 246.99,
-      "competitor_count": 3,
-      "lowest_competitor": 247.09,
-      "action": "lowered",
-      "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:12:10.547201+00:00"
+      "timestamp": "2026-06-10T16:39:07.107889+00:00"
     },
     {
       "ean": "6974316993070",
@@ -189,28 +109,13 @@
       "ek": 4.54,
       "floor_price": 14.99,
       "normal_price": 14.99,
-      "old_price": 19.99,
-      "new_price": 17.99,
+      "old_price": 15.99,
+      "new_price": 14.99,
       "competitor_count": 2,
       "lowest_competitor": 15.1,
       "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:13:44.254093+00:00"
-    },
-    {
-      "ean": "4015867205341",
-      "sku": "SUPE2010",
-      "title": "Equip USB 3.2 Cable - USB-A - USB-C - 0,25m - Black",
-      "ek": 2.44,
-      "floor_price": 10.99,
-      "normal_price": 11.99,
-      "old_price": 17.99,
-      "new_price": 15.99,
-      "competitor_count": 5,
-      "lowest_competitor": 14.96,
-      "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:23.765613+00:00"
+      "reason": "competitor_undercut",
+      "timestamp": "2026-06-10T16:44:02.543182+00:00"
     },
     {
       "ean": "4015867164730",
@@ -219,13 +124,13 @@
       "ek": 1.11,
       "floor_price": 8.99,
       "normal_price": 8.99,
-      "old_price": 15.99,
-      "new_price": 13.99,
+      "old_price": 11.99,
+      "new_price": 10.99,
       "competitor_count": 6,
       "lowest_competitor": 9.79,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:31.102656+00:00"
+      "timestamp": "2026-06-10T16:46:27.998321+00:00"
     },
     {
       "ean": "4015867164686",
@@ -234,13 +139,13 @@
       "ek": 0.66,
       "floor_price": 7.99,
       "normal_price": 7.99,
-      "old_price": 14.99,
-      "new_price": 12.99,
-      "competitor_count": 5,
+      "old_price": 11.99,
+      "new_price": 10.99,
+      "competitor_count": 6,
       "lowest_competitor": 8.99,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:32.268302+00:00"
+      "timestamp": "2026-06-10T16:46:31.844250+00:00"
     },
     {
       "ean": "4015867239223",
@@ -249,13 +154,13 @@
       "ek": 1.11,
       "floor_price": 8.99,
       "normal_price": 8.99,
-      "old_price": 15.99,
-      "new_price": 13.99,
+      "old_price": 13.99,
+      "new_price": 11.99,
       "competitor_count": 6,
       "lowest_competitor": 10.95,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:33.449121+00:00"
+      "timestamp": "2026-06-10T16:46:35.956314+00:00"
     },
     {
       "ean": "4015867164754",
@@ -264,73 +169,13 @@
       "ek": 0.84,
       "floor_price": 8.99,
       "normal_price": 8.99,
-      "old_price": 14.99,
-      "new_price": 12.99,
+      "old_price": 12.99,
+      "new_price": 11.99,
       "competitor_count": 6,
       "lowest_competitor": 9.34,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:34.525028+00:00"
-    },
-    {
-      "ean": "4015867198698",
-      "sku": "SUPE2032",
-      "title": "Equip USB 2.0 Cable - USB-C (M) - USB-A (M) - 1m - Black",
-      "ek": 1.73,
-      "floor_price": 9.99,
-      "normal_price": 9.99,
-      "old_price": 16.99,
-      "new_price": 14.99,
-      "competitor_count": 6,
-      "lowest_competitor": 10.19,
-      "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:36.101998+00:00"
-    },
-    {
-      "ean": "4015867198711",
-      "sku": "SUPE2033",
-      "title": "Equip USB 2.0 Cable - USB-C (M) - USB-C (M) - 1m - Black",
-      "ek": 1.83,
-      "floor_price": 9.99,
-      "normal_price": 9.99,
-      "old_price": 16.99,
-      "new_price": 14.99,
-      "competitor_count": 6,
-      "lowest_competitor": 10.74,
-      "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:37.225954+00:00"
-    },
-    {
-      "ean": "4015867203736",
-      "sku": "SUPE2049",
-      "title": "Equip Adapter - DisplayPort (M) - USB-C (M) - 1,8m - Black",
-      "ek": 8.53,
-      "floor_price": 20.99,
-      "normal_price": 21.99,
-      "old_price": 25.99,
-      "new_price": 22.99,
-      "competitor_count": 5,
-      "lowest_competitor": 22.67,
-      "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:46.108762+00:00"
-    },
-    {
-      "ean": "4015867225172",
-      "sku": "SUPE2053",
-      "title": "Equip Audiokabel - 2 RCA (W) - mini-phone 3.5mm (M) - 2,5m - Black",
-      "ek": 0.82,
-      "floor_price": 8.99,
-      "normal_price": 8.99,
-      "old_price": 14.99,
-      "new_price": 12.99,
-      "competitor_count": 3,
-      "lowest_competitor": 11.07,
-      "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:16:47.409693+00:00"
+      "timestamp": "2026-06-10T16:46:39.987806+00:00"
     },
     {
       "ean": "4015867166178",
@@ -345,7 +190,7 @@
       "lowest_competitor": 24.35,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:16:59.611766+00:00"
+      "timestamp": "2026-06-10T16:47:11.325366+00:00"
     },
     {
       "ean": "4015867102244",
@@ -360,7 +205,7 @@
       "lowest_competitor": 9.19,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:01.871743+00:00"
+      "timestamp": "2026-06-10T16:47:19.212821+00:00"
     },
     {
       "ean": "4015867151723",
@@ -375,7 +220,7 @@
       "lowest_competitor": 9.39,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:10.618143+00:00"
+      "timestamp": "2026-06-10T16:47:42.269656+00:00"
     },
     {
       "ean": "4015867204122",
@@ -390,7 +235,7 @@
       "lowest_competitor": 11.96,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:13.869239+00:00"
+      "timestamp": "2026-06-10T16:47:58.815460+00:00"
     },
     {
       "ean": "4015867204139",
@@ -405,7 +250,7 @@
       "lowest_competitor": 12.87,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:15.196766+00:00"
+      "timestamp": "2026-06-10T16:48:04.028150+00:00"
     },
     {
       "ean": "4015867204146",
@@ -420,7 +265,7 @@
       "lowest_competitor": 11.42,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:16.359509+00:00"
+      "timestamp": "2026-06-10T16:48:07.480705+00:00"
     },
     {
       "ean": "4015867204207",
@@ -435,7 +280,7 @@
       "lowest_competitor": 22.16,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:22.199839+00:00"
+      "timestamp": "2026-06-10T16:48:29.009132+00:00"
     },
     {
       "ean": "4015867204214",
@@ -450,7 +295,7 @@
       "lowest_competitor": 28.11,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:17:23.359421+00:00"
+      "timestamp": "2026-06-10T16:48:33.366526+00:00"
     },
     {
       "ean": "4015867237083",
@@ -465,7 +310,7 @@
       "lowest_competitor": 35.71,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:17:27.170913+00:00"
+      "timestamp": "2026-06-10T16:48:48.442491+00:00"
     },
     {
       "ean": "4015867209547",
@@ -480,7 +325,7 @@
       "lowest_competitor": 11.62,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:32.542979+00:00"
+      "timestamp": "2026-06-10T16:48:59.395967+00:00"
     },
     {
       "ean": "4015867209554",
@@ -495,7 +340,7 @@
       "lowest_competitor": 11.75,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:33.517423+00:00"
+      "timestamp": "2026-06-10T16:49:03.842704+00:00"
     },
     {
       "ean": "4015867209578",
@@ -510,7 +355,7 @@
       "lowest_competitor": 12.96,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:35.543269+00:00"
+      "timestamp": "2026-06-10T16:49:14.455246+00:00"
     },
     {
       "ean": "4015867209608",
@@ -525,7 +370,7 @@
       "lowest_competitor": 18.76,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:17:38.933378+00:00"
+      "timestamp": "2026-06-10T16:49:23.891034+00:00"
     },
     {
       "ean": "4015867209646",
@@ -540,7 +385,7 @@
       "lowest_competitor": 13.85,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:39.986968+00:00"
+      "timestamp": "2026-06-10T16:49:29.520954+00:00"
     },
     {
       "ean": "4015867209660",
@@ -555,7 +400,7 @@
       "lowest_competitor": 12.18,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:42.295380+00:00"
+      "timestamp": "2026-06-10T16:49:40.571681+00:00"
     },
     {
       "ean": "4015867209707",
@@ -570,7 +415,7 @@
       "lowest_competitor": 17.07,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:46.967240+00:00"
+      "timestamp": "2026-06-10T16:49:48.775790+00:00"
     },
     {
       "ean": "4015867229583",
@@ -585,7 +430,7 @@
       "lowest_competitor": 12.53,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:17:51.726936+00:00"
+      "timestamp": "2026-06-10T16:50:01.236403+00:00"
     },
     {
       "ean": "4015867229675",
@@ -600,7 +445,7 @@
       "lowest_competitor": 27.16,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:18:00.721903+00:00"
+      "timestamp": "2026-06-10T16:50:16.137140+00:00"
     },
     {
       "ean": "4015867229682",
@@ -615,7 +460,7 @@
       "lowest_competitor": 37.87,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:18:01.837750+00:00"
+      "timestamp": "2026-06-10T16:50:20.534365+00:00"
     },
     {
       "ean": "4015867237281",
@@ -630,22 +475,7 @@
       "lowest_competitor": 14.46,
       "action": "lowered",
       "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:18:03.411633+00:00"
-    },
-    {
-      "ean": "5710957010476",
-      "sku": "SUPL1002",
-      "title": "Libratone Zipp Cover Mesh Schutzhülle grau",
-      "ek": 2.03,
-      "floor_price": 10.99,
-      "normal_price": 10.99,
-      "old_price": 16.99,
-      "new_price": 14.99,
-      "competitor_count": 2,
-      "lowest_competitor": 14.9,
-      "action": "lowered",
-      "reason": "max_drop_limit_applied",
-      "timestamp": "2026-06-10T15:20:13.377098+00:00"
+      "timestamp": "2026-06-10T16:50:25.131461+00:00"
     },
     {
       "ean": "4582563850804",
@@ -660,7 +490,7 @@
       "lowest_competitor": 23.56,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:23:20.824196+00:00"
+      "timestamp": "2026-06-10T16:55:56.841363+00:00"
     },
     {
       "ean": "4582563850200",
@@ -675,18 +505,18 @@
       "lowest_competitor": 23.78,
       "action": "lowered",
       "reason": "competitor_undercut",
-      "timestamp": "2026-06-10T15:23:21.840029+00:00"
+      "timestamp": "2026-06-10T16:56:01.037645+00:00"
     }
   ],
   "last_run": {
-    "timestamp": "2026-06-10T15:01:07.127451+00:00",
-    "checked": 1193,
-    "lowered": 43,
+    "timestamp": "2026-06-10T16:33:05.588168+00:00",
+    "checked": 1182,
+    "lowered": 31,
     "raised": 0,
-    "skipped_floor": 820,
+    "skipped_floor": 808,
     "skipped_few": 186,
-    "unchanged": 144,
-    "errors": 0,
-    "dry_run": true
+    "unchanged": 152,
+    "errors": 5,
+    "dry_run": false
   }
 }
