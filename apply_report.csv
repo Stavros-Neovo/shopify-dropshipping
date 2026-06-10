@@ -1,21 +1,21 @@
 ﻿ean,sku,title,status
-0017817768429,SUPB1066,Bose SoundLink Micro Bluetooth Lautsprecher 9m kabellos NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0017817846141,SUPB1045,Bose QuietComfort Ultra Headset kabellos NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0017817846912,SUPB1054,Bose 881046-0020 headphones/headset,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0017817847643,SUPB1047,Bose QuietComfort Ultra Headset kabellos NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0017817847681,SUPB1046,Bose QuietComfort Ultra Headset kabellos NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0017817852470,SUPB1065,Bose 887612-0100 portable/party speaker,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0017817859561,SUPB1061,Bose 890101-0200 headphones/headset,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942301882,SUPV0068,Verbatim Charge 'n' Travel 70W Universal Violett AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942301929,SUPV0070,Verbatim 30192 Ladegerät für Mobilgeräte Universal Blau AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942301936,SUPV0071,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942302117,USBV0018,Verbatim V200 USB-Stick 64GB NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942302278,USBV0003,Verbatim USB-S USB-Stick 512GB NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942302292,USBV0005,Verbatim USB-S USB-Stick 128GB NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942302308,USBV0006,Verbatim USB-S USB-Stick 256GB NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942302315,USBV0007,Verbatim USB-S USB-Stick 512GB NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942318644,SUPV0026,Verbatim USB Kabel 2.0 2m 60W NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942320319,SDXV0009,Verbatim 32031 Externes Solid State Drive 1 TB USB Typ-C USB 3.2 Gen 2x2 Grau,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942320883,SUPV0075,Verbatim LED 1920 Monitor Full HD NEU,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942321200,SUPV0039,Verbatim UTA-05 Universal Schwarz AC Drinnen,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
-0023942321217,SUPV0040,Verbatim UTA-06 Schwarz Drinnen,error: HTTP 400 | Codes: 25709 | Invalid value for header Content-Language.
+0017817768429,SUPB1066,Bose SoundLink Micro Bluetooth Lautsprecher 9m kabellos NEU,updated
+0017817846141,SUPB1045,Bose QuietComfort Ultra Headset kabellos NEU,updated
+0017817846912,SUPB1054,Bose 881046-0020 headphones/headset,updated
+0017817847643,SUPB1047,Bose QuietComfort Ultra Headset kabellos NEU,updated
+0017817847681,SUPB1046,Bose QuietComfort Ultra Headset kabellos NEU,updated
+0017817852470,SUPB1065,Bose 887612-0100 portable/party speaker,updated
+0017817859561,SUPB1061,Bose 890101-0200 headphones/headset,updated
+0023942301882,SUPV0068,Verbatim Charge 'n' Travel 70W Universal Violett AC Schnellladung Drinnen,updated
+0023942301929,SUPV0070,Verbatim 30192 Ladegerät für Mobilgeräte Universal Blau AC Schnellladung Drinnen,updated
+0023942301936,SUPV0071,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942302117,USBV0018,Verbatim V200 USB-Stick 64GB NEU,updated
+0023942302278,USBV0003,Verbatim USB-S USB-Stick 512GB NEU,updated
+0023942302292,USBV0005,Verbatim USB-S USB-Stick 128GB NEU,updated
+0023942302308,USBV0006,Verbatim USB-S USB-Stick 256GB NEU,updated
+0023942302315,USBV0007,Verbatim USB-S USB-Stick 512GB NEU,updated
+0023942318644,SUPV0026,Verbatim USB Kabel 2.0 2m 60W NEU,updated
+0023942320319,SDXV0009,Verbatim 32031 Externes Solid State Drive 1 TB USB Typ-C USB 3.2 Gen 2x2 Grau,updated
+0023942320883,SUPV0075,Verbatim LED 1920 Monitor Full HD NEU,updated
+0023942321200,SUPV0039,Verbatim UTA-05 Universal Schwarz AC Drinnen,updated
+0023942321217,SUPV0040,Verbatim UTA-06 Schwarz Drinnen,updated
