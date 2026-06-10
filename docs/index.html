@@ -1,355 +1,398 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="theme-color" content="#0f1117" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Shop 2" />
-  <title>Neovogen Shop 2</title>
-  <link rel="manifest" href="manifest.json" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="theme-color" content="#0f1117"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Neodeals"/>
+  <title>Best_Neodeals eBay Shop</title>
+  <link rel="manifest" href="manifest.json"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f1117; --surface:#1a1d27; --surface2:#22263a;
+      --border:#2a2d3a; --text:#e8eaf0; --muted:#6b7280;
+      --green:#22c55e; --red:#ef4444; --yellow:#f59e0b;
+      --blue:#3b82f6; --purple:#8b5cf6; --teal:#14b8a6;
+    }
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;min-height:100dvh;padding-bottom:32px}
 
-    :root {
-      --bg:       #0f1117;
-      --surface:  #1a1d27;
-      --border:   #2a2d3a;
-      --text:     #e8eaf0;
-      --muted:    #6b7280;
-      --green:    #22c55e;
-      --red:      #ef4444;
-      --yellow:   #f59e0b;
-      --blue:     #3b82f6;
-      --purple:   #8b5cf6;
-    }
+    /* Header */
+    header{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 16px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between}
+    .shop-name{font-size:15px;font-weight:700;color:var(--text)}
+    .shop-sub{font-size:11px;color:var(--muted);margin-top:1px}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green);animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .header-right{display:flex;align-items:center;gap:10px}
+    #lastUpdate{font-size:10px;color:var(--muted)}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-      min-height: 100vh;
-      padding-bottom: 32px;
-    }
+    /* Layout */
+    main{max-width:480px;margin:0 auto;padding:12px}
+    .section-title{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:20px 0 8px}
+    .section-title:first-child{margin-top:0}
 
-    /* ── Header ── */
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header h1 {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -0.3px;
-    }
-    header h1 span { color: var(--blue); }
-    .last-update {
-      font-size: 11px;
-      color: var(--muted);
-    }
-    .refresh-btn {
-      background: var(--border);
-      border: none;
-      color: var(--text);
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 13px;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .refresh-btn:active { background: var(--blue); }
+    /* Cards */
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+    .card-pad{padding:14px}
 
-    /* ── Content ── */
-    main { padding: 16px; max-width: 480px; margin: 0 auto; }
+    /* Stats Grid */
+    .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+    .stat-label{font-size:11px;color:var(--muted);margin-bottom:4px}
+    .stat-value{font-size:22px;font-weight:700}
+    .stat-sub{font-size:11px;color:var(--muted);margin-top:3px}
+    .stat-delta{font-size:11px;margin-top:2px}
+    .delta-up{color:var(--green)} .delta-down{color:var(--red)} .delta-flat{color:var(--muted)}
 
-    /* ── Section title ── */
-    .section-title {
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--muted);
-      margin: 24px 0 10px;
-    }
+    /* Colors */
+    .green{color:var(--green)} .red{color:var(--red)} .yellow{color:var(--yellow)}
+    .blue{color:var(--blue)} .purple{color:var(--purple)} .teal{color:var(--teal)}
 
-    /* ── Quick Stats Grid ── */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-    }
-    .stat-card .label {
-      font-size: 11px;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-    .stat-card .value {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      line-height: 1;
-    }
-    .stat-card .sub {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-    .green { color: var(--green); }
-    .red   { color: var(--red); }
-    .blue  { color: var(--blue); }
-    .yellow { color: var(--yellow); }
+    /* Comparison row */
+    .compare-row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border)}
+    .compare-row:last-child{border-bottom:none}
+    .compare-label{font-size:12px;color:var(--muted)}
+    .compare-vals{display:flex;gap:12px;align-items:center;font-size:13px}
+    .compare-this{font-weight:600}
+    .compare-prev{color:var(--muted);font-size:11px}
 
-    /* ── Card ── */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .card-header {
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .card-header .title {
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .card-header .badge {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-    .badge-green  { background: rgba(34,197,94,0.15);  color: var(--green); }
-    .badge-red    { background: rgba(239,68,68,0.15);  color: var(--red); }
-    .badge-yellow { background: rgba(245,158,11,0.15); color: var(--yellow); }
-    .badge-blue   { background: rgba(59,130,246,0.15); color: var(--blue); }
+    /* Tax cards */
+    .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .tax-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+    .tax-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+    .tax-value{font-size:18px;font-weight:700;color:var(--yellow)}
+    .tax-total .tax-value{font-size:22px;color:var(--red)}
 
-    /* ── List rows ── */
-    .list-row {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .list-row:last-child { border-bottom: none; }
-    .list-row .row-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-    .icon-green  { background: rgba(34,197,94,0.15); }
-    .icon-red    { background: rgba(239,68,68,0.15); }
-    .icon-yellow { background: rgba(245,158,11,0.15); }
-    .icon-blue   { background: rgba(59,130,246,0.15); }
-    .icon-purple { background: rgba(139,92,246,0.15); }
-    .row-content { flex: 1; min-width: 0; }
-    .row-content .row-title {
-      font-size: 13px;
-      font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .row-content .row-sub {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-    .row-right { text-align: right; flex-shrink: 0; }
-    .row-right .row-value {
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .row-right .row-sub {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
+    /* Chart */
+    .chart-container{padding:12px;height:160px;position:relative}
+    .chart-toggle{display:flex;gap:6px;padding:10px 12px 0;border-bottom:1px solid var(--border)}
+    .chart-btn{font-size:11px;padding:4px 10px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:.15s}
+    .chart-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
 
-    /* ── Repricing Stats Row ── */
-    .reprice-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-    }
-    .reprice-stat {
-      background: var(--surface);
-      padding: 14px 8px;
-      text-align: center;
-    }
-    .reprice-stat .rs-val {
-      font-size: 20px;
-      font-weight: 700;
-    }
-    .reprice-stat .rs-lbl {
-      font-size: 10px;
-      color: var(--muted);
-      margin-top: 3px;
-    }
+    /* Repricing stats */
+    .reprice-stats{display:flex;justify-content:space-around;padding:12px 0;border-bottom:1px solid var(--border)}
+    .reprice-stat{text-align:center}
+    .rs-val{font-size:22px;font-weight:700}
+    .rs-lbl{font-size:10px;color:var(--muted);margin-top:2px}
 
-    /* ── BAB Deadline ── */
-    .deadline-urgent {
-      border-left: 3px solid var(--red);
-    }
-    .deadline-warning {
-      border-left: 3px solid var(--yellow);
-    }
-    .deadline-ok {
-      border-left: 3px solid var(--border);
-    }
+    /* List rows */
+    .list-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border)}
+    .list-row:last-child{border-bottom:none}
+    .row-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+    .icon-green{background:#22c55e20;color:var(--green)}
+    .icon-blue{background:#3b82f620;color:var(--blue)}
+    .icon-red{background:#ef444420;color:var(--red)}
+    .icon-yellow{background:#f59e0b20;color:var(--yellow)}
+    .icon-purple{background:#8b5cf620;color:var(--purple)}
+    .icon-teal{background:#14b8a620;color:var(--teal)}
+    .row-content{flex:1;min-width:0}
+    .row-title{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .row-sub{font-size:11px;color:var(--muted);margin-top:2px}
+    .row-right{text-align:right;flex-shrink:0}
+    .row-value{font-size:13px;font-weight:600}
 
-    /* ── Empty state ── */
-    .empty {
-      padding: 28px 16px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
+    /* Profit Dropdown */
+    .product-row{cursor:pointer;user-select:none}
+    .product-row:active{background:var(--surface2)}
+    .expand-icon{font-size:10px;color:var(--muted);transition:.2s;margin-left:4px}
+    .expand-icon.open{transform:rotate(180deg)}
+    .profit-breakdown{display:none;background:var(--surface2);border-top:1px solid var(--border);padding:12px 14px;font-size:12px}
+    .profit-breakdown.open{display:block}
+    .pb-row{display:flex;justify-content:space-between;padding:3px 0;color:var(--muted)}
+    .pb-row.total{color:var(--text);font-weight:600;border-top:1px solid var(--border);margin-top:6px;padding-top:8px}
+    .pb-row.total .pb-val{color:var(--green)}
+    .pb-neg{color:var(--red)} .pb-pos{color:var(--green)}
 
-    /* ── Loading ── */
-    .loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 60vh;
-      flex-direction: column;
-      gap: 12px;
-      color: var(--muted);
-    }
-    .spinner {
-      width: 32px;
-      height: 32px;
-      border: 3px solid var(--border);
-      border-top-color: var(--blue);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
+    /* Badges */
+    .badge{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600}
+    .badge-green{background:#22c55e20;color:var(--green)}
+    .badge-yellow{background:#f59e0b20;color:var(--yellow)}
+    .badge-red{background:#ef444420;color:var(--red)}
+    .badge-blue{background:#3b82f620;color:var(--blue)}
 
-    /* ── 30d Summary ── */
-    .summary-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 16px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .summary-row span:last-child {
-      font-weight: 600;
-      color: var(--text);
-    }
+    /* Deadline coloring */
+    .deadline-urgent .row-title,.deadline-urgent .row-value{color:var(--red)}
+    .deadline-warn .row-title,.deadline-warn .row-value{color:var(--yellow)}
+
+    /* Summary row */
+    .summary-row{display:flex;justify-content:space-between;padding:10px 14px;font-size:13px;font-weight:600;border-top:1px solid var(--border);color:var(--text)}
+
+    /* Payout card */
+    .payout-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;display:flex;justify-content:space-between;align-items:center}
+    .payout-amount{font-size:26px;font-weight:700;color:var(--teal)}
+    .payout-note{font-size:11px;color:var(--muted);margin-top:3px}
+
+    /* Empty */
+    .empty{padding:14px;color:var(--muted);font-size:12px;text-align:center}
+
+    /* Tracking alert */
+    .alert-banner{background:#ef444415;border:1px solid #ef444430;border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+    .alert-icon{font-size:18px}
+    .alert-text{font-size:12px;color:var(--text)}
+    .alert-title{font-weight:600;color:var(--red);margin-bottom:4px}
+
+    /* Loading */
+    .loading{padding:60px 20px;text-align:center;color:var(--muted)}
   </style>
 </head>
 <body>
 
 <header>
   <div>
-    <h1>Neovogen <span>Shop 2</span></h1>
-    <div class="last-update" id="lastUpdate">Wird geladen…</div>
+    <div class="shop-name">Best_Neodeals eBay Shop</div>
+    <div class="shop-sub" id="lastUpdate">Lädt…</div>
   </div>
-  <button class="refresh-btn" onclick="loadData()">↻ Reload</button>
+  <div class="header-right">
+    <div class="live-dot"></div>
+  </div>
 </header>
 
 <main id="app">
   <div class="loading">
-    <div class="spinner"></div>
-    <div>Daten werden geladen…</div>
+    <div style="font-size:32px;margin-bottom:8px">📊</div>
+    Daten werden geladen…
   </div>
 </main>
 
 <script src="dashboard_data.js"></script>
 <script>
-function fmt(n, decimals=2) {
-  return Number(n).toLocaleString('de-DE', {
-    minimumFractionDigits: decimals,
-    maximumFractionDigits: decimals,
+function fmt(n,d=2){return Number(n).toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d})}
+function eur(n){return fmt(n)+' €'}
+function pct(n){return (n>=0?'+':'')+fmt(n,1)+' %'}
+function delta(cur,prev,type='abs'){
+  if(!prev) return '';
+  const diff = cur - prev;
+  const p    = prev ? (diff/prev*100) : 0;
+  const cls  = diff>0?'delta-up':diff<0?'delta-down':'delta-flat';
+  const sym  = diff>0?'↑':'↓';
+  const val  = type==='pct' ? pct(p) : (diff>=0?'+':'')+fmt(Math.abs(diff))+' €';
+  return `<span class="${cls}">${sym} ${val} vs Vorwoche</span>`;
+}
+
+// ─── Charts ──────────────────────────────────────────────────────────────────
+let chartInst = null;
+let currentRange = '30d';
+
+function buildChart(data, canvasId) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+  if (chartInst) { chartInst.destroy(); chartInst = null; }
+  const labels = data.map(d => d.date);
+  const revs   = data.map(d => d.revenue);
+  const profs  = data.map(d => d.profit);
+  chartInst = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Umsatz', data: revs,  backgroundColor: '#3b82f625', borderColor: '#3b82f6', borderWidth: 1.5, borderRadius: 3 },
+        { label: 'Gewinn', data: profs, backgroundColor: '#22c55e30', borderColor: '#22c55e', borderWidth: 1.5, borderRadius: 3 },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: {
+        callbacks: {
+          label: ctx => ctx.dataset.label + ': ' + fmt(ctx.raw) + ' €'
+        }
+      }},
+      scales: {
+        x: { grid: { color: '#2a2d3a' }, ticks: { color: '#6b7280', font: { size: 9 },
+             maxTicksLimit: data.length <= 7 ? 7 : data.length <= 30 ? 10 : 12 } },
+        y: { grid: { color: '#2a2d3a' }, ticks: { color: '#6b7280', font: { size: 9 },
+             callback: v => v >= 1000 ? (v/1000).toFixed(1)+'k' : v } }
+      }
+    }
   });
 }
-function fmtEur(n) { return fmt(n) + ' €'; }
-function colorClass(n) { return n >= 0 ? 'green' : 'red'; }
 
-function loadData() {
-  if (window.DASHBOARD_DATA) {
-    render(window.DASHBOARD_DATA);
-  } else {
-    document.getElementById('app').innerHTML = `
-      <div class="loading">
-        <div style="font-size:32px">⚠️</div>
-        <div>Daten nicht gefunden</div>
-        <div style="font-size:11px;margin-top:4px">dashboard_data.js fehlt &ndash; bitte <code>python dashboard_generator.py --mock</code> ausführen</div>
-      </div>`;
-  }
+// ─── Profit-Dropdown ─────────────────────────────────────────────────────────
+function toggleBreakdown(sku) {
+  const el = document.getElementById('pb_'+sku);
+  const ic = document.getElementById('ic_'+sku);
+  if (!el) return;
+  el.classList.toggle('open');
+  ic.classList.toggle('open');
 }
 
+function breakdownHTML(p) {
+  const c = p.calc;
+  if (!c) return '<div class="empty">Keine Detaildaten</div>';
+  return `
+    <div class="pb-row"><span>Verkaufspreis (brutto)</span><span class="pb-val">${eur(c.vk_brutto)}</span></div>
+    <div class="pb-row"><span>eBay-Gebühren (13 %)</span><span class="pb-neg">−${eur(c.ebay_fee)}</span></div>
+    <div class="pb-row"><span>MwSt.-Anteil (19 %)</span><span class="pb-neg">−${eur(c.vat)}</span></div>
+    <div class="pb-row"><span>Netto-VK</span><span class="pb-val">${eur(c.netto_vk)}</span></div>
+    <div class="pb-row"><span>Versand / Handling</span><span class="pb-neg">−${eur(c.ship)}</span></div>
+    <div class="pb-row"><span>Einkaufspreis (EK)</span><span class="pb-neg">−${eur(c.ek)}</span></div>
+    <div class="pb-row total"><span>Gewinn / Stück</span><span class="pb-val">${eur(c.profit_u)}</span></div>
+    ${p.sold > 1 ? `<div class="pb-row total"><span>× ${p.sold} Stück gesamt</span><span class="pb-val">${eur(p.profit)}</span></div>` : ''}
+  `;
+}
+
+// ─── Render ──────────────────────────────────────────────────────────────────
 function render(d) {
-  const app = document.getElementById('app');
-  const gen = new Date(d.generated_at);
+  const app  = document.getElementById('app');
+  const gen  = new Date(d.generated_at);
   document.getElementById('lastUpdate').textContent =
-    'Aktualisiert ' + gen.toLocaleString('de-DE', {
-      day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'
-    });
+    gen.toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
 
   const s  = d.orders.stats;
   const rp = d.repricing;
+  const tx = d.orders.tax_reserves;
+  const od = d.orders;
+
+  // Wochenvergleich Delta
+  const revDelta  = s.prev_week_revenue ? (s.week_revenue - s.prev_week_revenue) / s.prev_week_revenue * 100 : 0;
+  const profDelta = s.prev_week_profit  ? (s.week_profit  - s.prev_week_profit)  / s.prev_week_profit  * 100 : 0;
+  const deltaIcon = (n) => n > 0 ? `<span class="delta-up">↑ ${fmt(Math.abs(n),1)} %</span>` :
+                           n < 0 ? `<span class="delta-down">↓ ${fmt(Math.abs(n),1)} %</span>` :
+                                   `<span class="delta-flat">— 0 %</span>`;
+
+  // Tracking-Alert
+  const trackAlert = od.tracking_missing.length > 0 ? `
+    <div class="alert-banner" style="margin-bottom:8px">
+      <div class="alert-icon">🚨</div>
+      <div class="alert-text">
+        <div class="alert-title">${od.tracking_missing.length} Bestellung${od.tracking_missing.length>1?'en':''} ohne Tracking</div>
+        ${od.tracking_missing.map(t=>`<div>${t.items[0]} · ${t.date}</div>`).join('')}
+      </div>
+    </div>` : '';
 
   app.innerHTML = `
 
-    <!-- ── Quick Stats ── -->
+    ${trackAlert}
+
+    <!-- ── Heute ── -->
     <div class="section-title">Heute</div>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="label">Verkäufe</div>
-        <div class="value blue">${s.today_sales}</div>
-        <div class="sub">${s.total_sales_30d} letzte 30 Tage</div>
+        <div class="stat-label">Bestellungen</div>
+        <div class="stat-value blue">${s.today_sales}</div>
+        <div class="stat-sub">${s.week_sales} diese Woche</div>
       </div>
       <div class="stat-card">
-        <div class="label">Umsatz</div>
-        <div class="value">${fmtEur(s.today_revenue)}</div>
-        <div class="sub">${fmtEur(s.total_revenue_30d)} / 30d</div>
+        <div class="stat-label">Umsatz</div>
+        <div class="stat-value">${eur(s.today_revenue)}</div>
+        <div class="stat-sub">${eur(s.week_revenue)} diese Woche</div>
+      </div>
+      <div class="stat-card" style="grid-column:span 2">
+        <div class="stat-label">Gewinn heute</div>
+        <div class="stat-value ${s.today_profit>=0?'green':'red'}">${eur(s.today_profit)}</div>
+        <div class="stat-sub">${eur(s.week_profit)} diese Woche · ${eur(s.month_profit)} diesen Monat</div>
+      </div>
+    </div>
+
+    <!-- ── Wochenvergleich ── -->
+    <div class="section-title">Diese Woche vs. Vorwoche</div>
+    <div class="card">
+      <div class="compare-row">
+        <div class="compare-label">Bestellungen</div>
+        <div class="compare-vals">
+          <span class="compare-this blue">${s.week_sales}</span>
+          <span class="compare-prev">vs ${s.prev_week_sales}</span>
+          ${deltaIcon((s.week_sales - s.prev_week_sales) / (s.prev_week_sales||1) * 100)}
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Umsatz</div>
+        <div class="compare-vals">
+          <span class="compare-this">${eur(s.week_revenue)}</span>
+          <span class="compare-prev">vs ${eur(s.prev_week_revenue)}</span>
+          ${deltaIcon(revDelta)}
+        </div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Gewinn</div>
+        <div class="compare-vals">
+          <span class="compare-this green">${eur(s.week_profit)}</span>
+          <span class="compare-prev">vs ${eur(s.prev_week_profit)}</span>
+          ${deltaIcon(profDelta)}
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Dieser Monat ── -->
+    <div class="section-title">Dieser Monat</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Bestellungen</div>
+        <div class="stat-value blue">${s.month_sales}</div>
+        <div class="stat-sub">${s.total_sales_30d} letzte 30 Tage</div>
       </div>
       <div class="stat-card">
-        <div class="label">Gewinn heute</div>
-        <div class="value ${colorClass(s.today_profit)}">${fmtEur(s.today_profit)}</div>
-        <div class="sub">${fmtEur(s.total_profit_30d)} / 30d</div>
+        <div class="stat-label">Umsatz</div>
+        <div class="stat-value">${eur(s.month_revenue)}</div>
+        <div class="stat-sub">${eur(s.total_revenue_30d)} / 30d</div>
       </div>
       <div class="stat-card">
-        <div class="label">Aktive Listings</div>
-        <div class="value blue">${d.active_listings.toLocaleString('de-DE')}</div>
-        <div class="sub">eBay Shop 2</div>
+        <div class="stat-label">Gewinn</div>
+        <div class="stat-value green">${eur(s.month_profit)}</div>
+        <div class="stat-sub">${eur(s.total_profit_30d)} / 30d</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Aktive Listings</div>
+        <div class="stat-value blue">${(d.active_listings||0).toLocaleString('de-DE')}</div>
+        <div class="stat-sub">eBay Shop</div>
+      </div>
+    </div>
+
+    <!-- ── Umsatzdiagramm ── -->
+    <div class="section-title">Umsatz & Gewinn</div>
+    <div class="card">
+      <div class="chart-toggle">
+        <button class="chart-btn ${currentRange==='7d'?'active':''}" onclick="switchChart('7d')">7 Tage</button>
+        <button class="chart-btn ${currentRange==='30d'?'active':''}" onclick="switchChart('30d')">30 Tage</button>
+        <button class="chart-btn ${currentRange==='90d'?'active':''}" onclick="switchChart('90d')">90 Tage</button>
+      </div>
+      <div class="chart-container">
+        <canvas id="revenueChart"></canvas>
+      </div>
+    </div>
+
+    <!-- ── Erwartete Auszahlung ── -->
+    <div class="section-title">Erwartete eBay-Auszahlung</div>
+    <div class="payout-card">
+      <div>
+        <div class="payout-amount">${eur(d.orders.expected_payout)}</div>
+        <div class="payout-note">Schätzung: Umsatz 30d × 87 % (nach eBay-Gebühren)</div>
+      </div>
+      <div style="font-size:28px">💳</div>
+    </div>
+
+    <!-- ── Steuer-Rücklagen ── -->
+    <div class="section-title">Steuer-Rücklagen (diesen Monat)</div>
+    <div class="tax-grid">
+      <div class="tax-card">
+        <div class="tax-label">Umsatzsteuer</div>
+        <div class="tax-value">${eur(tx.ust_month)}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">19/119 vom Umsatz</div>
+      </div>
+      <div class="tax-card">
+        <div class="tax-label">Einkommensteuer</div>
+        <div class="tax-value">${eur(tx.est_month)}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">30 % vom Gewinn</div>
+      </div>
+      <div class="tax-card">
+        <div class="tax-label">Gewerbesteuer</div>
+        <div class="tax-value">${eur(tx.gewst_month)}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">15 % vom Gewinn</div>
+      </div>
+      <div class="tax-card tax-total">
+        <div class="tax-label">Gesamt zurücklegen</div>
+        <div class="tax-value">${eur(tx.total_month)}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">USt + ESt + GewSt</div>
       </div>
     </div>
 
     <!-- ── Repricing ── -->
     <div class="section-title">Repricing — Letzter Run</div>
     <div class="card">
-      <div class="card-header">
-        <span class="title">
+      <div class="card-pad" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:0">
+        <span style="font-size:12px;color:var(--muted)">
           ${rp.last_run.timestamp
             ? new Date(rp.last_run.timestamp).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})
             : 'Kein Run'}
@@ -359,108 +402,130 @@ function render(d) {
           : '<span class="badge badge-green">LIVE</span>'}
       </div>
       <div class="reprice-stats">
-        <div class="reprice-stat">
-          <div class="rs-val green">${rp.last_run.lowered ?? 0}</div>
-          <div class="rs-lbl">Gesenkt</div>
-        </div>
-        <div class="reprice-stat">
-          <div class="rs-val blue">${rp.last_run.raised ?? 0}</div>
-          <div class="rs-lbl">Erhöht</div>
-        </div>
-        <div class="reprice-stat">
-          <div class="rs-val yellow">${rp.last_run.skipped_floor ?? 0}</div>
-          <div class="rs-lbl">Floor</div>
-        </div>
-        <div class="reprice-stat">
-          <div class="rs-val red">${rp.last_run.errors ?? 0}</div>
-          <div class="rs-lbl">Fehler</div>
-        </div>
+        <div class="reprice-stat"><div class="rs-val green">${rp.last_run.lowered??0}</div><div class="rs-lbl">Gesenkt</div></div>
+        <div class="reprice-stat"><div class="rs-val blue">${rp.last_run.raised??0}</div><div class="rs-lbl">Erhöht</div></div>
+        <div class="reprice-stat"><div class="rs-val yellow">${rp.last_run.skipped_floor??0}</div><div class="rs-lbl">Floor</div></div>
+        <div class="reprice-stat"><div class="rs-val red">${rp.last_run.errors??0}</div><div class="rs-lbl">Fehler</div></div>
       </div>
       ${rp.recent_changes.length === 0
         ? '<div class="empty">Keine Preisänderungen</div>'
-        : rp.recent_changes.map(c => `
+        : rp.recent_changes.map(c=>`
         <div class="list-row">
-          <div class="row-icon ${c.action==='lowered'?'icon-green':'icon-blue'}">
-            ${c.action==='lowered'?'↓':'↑'}
-          </div>
+          <div class="row-icon ${c.action==='lowered'?'icon-green':'icon-blue'}">${c.action==='lowered'?'↓':'↑'}</div>
           <div class="row-content">
             <div class="row-title">${c.title}</div>
-            <div class="row-sub">${fmtEur(c.old)} → <strong>${fmtEur(c.new)}</strong></div>
+            <div class="row-sub">${eur(c.old)} → <strong>${eur(c.new)}</strong></div>
           </div>
           <div class="row-right">
-            <div class="row-value ${c.diff<=0?'green':'red'}">${c.diff > 0 ? '+' : ''}${fmtEur(c.diff)}</div>
+            <div class="row-value ${c.diff<=0?'green':'red'}">${c.diff>0?'+':''}${eur(c.diff)}</div>
           </div>
         </div>`).join('')}
     </div>
 
-    <!-- ── BAB Zahlungsfristen ── -->
+    <!-- ── BAB Fristen ── -->
     <div class="section-title">BAB Zahlungsfristen</div>
     <div class="card">
-      ${d.orders.bab_deadlines.length === 0
+      ${od.bab_deadlines.length === 0
         ? '<div class="empty">Keine offenen Fristen ✓</div>'
-        : d.orders.bab_deadlines.map(b => `
-        <div class="list-row ${b.urgent ? 'deadline-urgent' : b.days_left <= 5 ? 'deadline-warning' : 'deadline-ok'}">
-          <div class="row-icon ${b.urgent ? 'icon-red' : b.days_left <= 5 ? 'icon-yellow' : 'icon-blue'}">
-            ${b.urgent ? '🔥' : b.days_left <= 5 ? '⚠️' : '📅'}
+        : od.bab_deadlines.map(b=>`
+        <div class="list-row ${b.urgent?'deadline-urgent':b.days_left<=5?'deadline-warn':''}">
+          <div class="row-icon ${b.urgent?'icon-red':b.days_left<=5?'icon-yellow':'icon-blue'}">
+            ${b.urgent?'🔥':b.days_left<=5?'⚠️':'📅'}
           </div>
           <div class="row-content">
-            <div class="row-title">${b.items[0]}${b.items.length>1?' +'+( b.items.length-1)+' weitere':''}</div>
-            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})}</div>
+            <div class="row-title">${b.items[0]}${b.items.length>1?' +'+(b.items.length-1)+' weitere':''}</div>
+            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})} · Bestell-Nr. ${b.order_id}</div>
           </div>
           <div class="row-right">
-            <div class="row-value ${b.urgent ? 'red' : b.days_left <= 5 ? 'yellow' : ''}">${b.days_left}d</div>
-            <div class="row-sub">${fmtEur(b.amount_ek)} EK</div>
+            <div class="row-value ${b.urgent?'red':b.days_left<=5?'yellow':''}">${b.days_left}d</div>
           </div>
         </div>`).join('')}
+    </div>
+
+    <!-- ── Best Seller mit Gewinn-Dropdown ── -->
+    <div class="section-title">Best Seller — 30 Tage <span style="color:var(--muted);font-weight:400">(tippen für Gewinnrechnung)</span></div>
+    <div class="card">
+      ${od.top_products.length === 0
+        ? '<div class="empty">Keine Daten</div>'
+        : od.top_products.map((p,i)=>`
+        <div>
+          <div class="list-row product-row" onclick="toggleBreakdown('${p.sku}')">
+            <div class="row-icon icon-purple" style="font-size:12px;font-weight:700">#${i+1}</div>
+            <div class="row-content">
+              <div class="row-title">${p.title}</div>
+              <div class="row-sub">${p.sold}× verkauft · ${eur(p.revenue)} Umsatz</div>
+            </div>
+            <div class="row-right">
+              <div class="row-value green">+${eur(p.profit)}</div>
+              <div class="row-sub" style="margin-top:2px">▾<span id="ic_${p.sku}" class="expand-icon"></span></div>
+            </div>
+          </div>
+          <div id="pb_${p.sku}" class="profit-breakdown">${breakdownHTML(p)}</div>
+        </div>`).join('')}
+      <div class="summary-row">
+        <span>Gewinn gesamt (30d)</span>
+        <span class="green">+${eur(s.total_profit_30d)}</span>
+      </div>
     </div>
 
     <!-- ── Letzte Verkäufe ── -->
     <div class="section-title">Letzte Verkäufe</div>
     <div class="card">
-      ${d.orders.recent_sales.length === 0
-        ? '<div class="empty">Keine Verkäufe in den letzten 30 Tagen</div>'
-        : d.orders.recent_sales.map(sale => `
+      ${od.recent_sales.length === 0
+        ? '<div class="empty">Keine Verkäufe</div>'
+        : od.recent_sales.map(sale=>`
         <div class="list-row">
-          <div class="row-icon icon-green">🛒</div>
+          <div class="row-icon icon-teal">🛒</div>
           <div class="row-content">
             <div class="row-title">${sale.title}</div>
             <div class="row-sub">${sale.date}</div>
           </div>
           <div class="row-right">
-            <div class="row-value">${fmtEur(sale.revenue)}</div>
-            <div class="row-sub green">+${fmtEur(sale.profit)}</div>
+            <div class="row-value">${eur(sale.revenue)}</div>
+            <div class="row-sub green">+${eur(sale.profit)}</div>
           </div>
         </div>`).join('')}
     </div>
 
-    <!-- ── Best Sellers ── -->
-    <div class="section-title">Best Seller — 30 Tage</div>
-    <div class="card">
-      ${d.orders.top_products.length === 0
-        ? '<div class="empty">Keine Daten verfügbar</div>'
-        : d.orders.top_products.map((p, i) => `
-        <div class="list-row">
-          <div class="row-icon icon-purple" style="font-size:13px;font-weight:700;">#${i+1}</div>
-          <div class="row-content">
-            <div class="row-title">${p.title}</div>
-            <div class="row-sub">${p.sold}× verkauft · ${fmtEur(p.revenue)}</div>
-          </div>
-          <div class="row-right">
-            <div class="row-value green">+${fmtEur(p.profit)}</div>
-            <div class="row-sub">Gewinn</div>
-          </div>
-        </div>`).join('')}
-      <div class="summary-row">
-        <span>Gesamt Gewinn 30d</span>
-        <span class="green">+${fmtEur(s.total_profit_30d)}</span>
-      </div>
-    </div>
   `;
+
+  // Chart initialisieren
+  const chartData = currentRange === '7d' ? d.orders.chart_7d :
+                    currentRange === '30d' ? d.orders.chart_30d : d.orders.chart_90d;
+  buildChart(chartData, 'revenueChart');
+
+  // Chart-Toggle global zugänglich machen
+  window._dashboardData = d;
 }
 
-// Automatisch laden
-loadData();
+function switchChart(range) {
+  currentRange = range;
+  if (!window._dashboardData) return;
+  document.querySelectorAll('.chart-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.chart-btn').forEach(b=>{
+    if(b.textContent.includes(range==='7d'?'7':range==='30d'?'30':'90')) b.classList.add('active');
+  });
+  const data = range==='7d' ? window._dashboardData.orders.chart_7d :
+               range==='30d' ? window._dashboardData.orders.chart_30d : window._dashboardData.orders.chart_90d;
+  buildChart(data, 'revenueChart');
+}
 
+function loadData() {
+  if (window.DASHBOARD_DATA) {
+    render(window.DASHBOARD_DATA);
+  } else {
+    document.getElementById('app').innerHTML = `
+      <div class="loading">
+        <div style="font-size:32px">⚠️</div>
+        <div style="margin-top:8px">Daten nicht gefunden</div>
+        <div style="font-size:11px;margin-top:4px;color:var(--muted)">
+          dashboard_data.js fehlt – bitte <code>python dashboard_generator.py --mock</code> ausführen
+        </div>
+      </div>`;
+  }
+}
+
+loadData();
 </script>
 </body>
 </html>
