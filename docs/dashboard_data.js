@@ -1,52 +1,20 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-10T16:57:06.922276+00:00",
+  "generated_at": "2026-06-10T18:24:56.522469+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 1193,
+  "active_listings": 1182,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-10T15:01:07.127451+00:00",
-      "checked": 1193,
-      "lowered": 43,
+      "timestamp": "2026-06-10T16:33:05.588168+00:00",
+      "checked": 1182,
+      "lowered": 31,
       "raised": 0,
-      "skipped_floor": 820,
+      "skipped_floor": 808,
       "skipped_few": 186,
-      "unchanged": 144,
-      "errors": 0,
-      "dry_run": true
+      "unchanged": 152,
+      "errors": 5,
+      "dry_run": false
     },
     "recent_changes": [
-      {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 232.99,
-        "new": 227.99,
-        "diff": -5.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HHWG1043",
-        "title": "Ghd Shiny Ever After - Hitzeschutz Spray",
-        "old": 23.99,
-        "new": 20.99,
-        "diff": -3.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HHWG1046",
-        "title": "Ghd Dramatic Ending - Haarserum",
-        "old": 26.99,
-        "new": 22.99,
-        "diff": -4.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "NETT0167",
-        "title": "TP-LINK Festa FR365 - Router",
-        "old": 206.99,
-        "new": 201.99,
-        "diff": -5.0,
-        "action": "lowered"
-      },
       {
         "sku": "NOCO0011",
         "title": "NOCO GENIUS10EU | 10A Battery Charger | Geniu",
@@ -80,19 +48,51 @@ window.DASHBOARD_DATA = {
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0057",
-        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 210.99,
-        "new": 205.99,
-        "diff": -5.0,
+        "sku": "SHG0023",
+        "title": "Govee - Double Sided Tape (15pcs) for RGBIC L",
+        "old": 15.99,
+        "new": 14.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0060",
-        "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8G",
-        "old": 254.99,
-        "new": 246.99,
-        "diff": -8.0,
+        "sku": "SUPE2024",
+        "title": "Equip USB 2.0 Extansion Cable - USB (M) - USB",
+        "old": 11.99,
+        "new": 10.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPE2029",
+        "title": "Equip USB 2.0 Cable - USB-A (M) - USB-B (M) -",
+        "old": 11.99,
+        "new": 10.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPE2030",
+        "title": "Equip USB 2.0 Cable - USB-A (M) - USB-B (M) -",
+        "old": 13.99,
+        "new": 11.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPE2031",
+        "title": "Equip USB 2.0 Cable - USB-A (M) - USB-A (M) -",
+        "old": 12.99,
+        "new": 11.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPE2065",
+        "title": "Equip Patch Cable - CAT6 S/FTP - 15m - Grey",
+        "old": 27.99,
+        "new": 23.99,
+        "diff": -4.0,
         "action": "lowered"
       }
     ],
@@ -114,6 +114,12 @@ window.DASHBOARD_DATA = {
         "lowered": 43,
         "raised": 0,
         "floor": 820
+      },
+      {
+        "date": "2026-06-10",
+        "lowered": 31,
+        "raised": 0,
+        "floor": 808
       }
     ]
   },
