@@ -7,7 +7,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
-  group: ebay-main
+  group: ebay-sync   # KRITISCH — läuft immer, wird von nichts blockiert
   cancel-in-progress: false
 
 jobs:

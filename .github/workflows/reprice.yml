@@ -15,8 +15,8 @@ on:
         default: "0"
 
 concurrency:
-  group: ebay-main
-  cancel-in-progress: false   # warten, nicht abbrechen
+  group: ebay-reprice   # eigene Spur — blockiert nicht die stündliche Aktualisierung
+  cancel-in-progress: false
 
 jobs:
   reprice:
