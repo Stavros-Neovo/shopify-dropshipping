@@ -153,8 +153,7 @@ def get_all_offers(client: EbayClient) -> dict:
         try:
             data = client._request(
                 "GET", OFFER_PATH,
-                params={"marketplace_id": client.marketplace_id,
-                        "limit": limit, "offset": offset}
+                params={"limit": limit, "offset": offset}
             ) or {}
         except Exception as e:
             log.warning(f"Offers-Fetch Fehler: {e}")
