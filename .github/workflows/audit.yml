@@ -1,0 +1,58 @@
+name: Shop Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Anzahl Produkte (0 = alle)"
+        required: false
+        default: "0"
+      only_problems:
+        description: "Nur Artikel mit Problemen (true/false)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ebay-main
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run audit
+        env:
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+          CSV_HTTP_USER:        ${{ secrets.CSV_HTTP_USER }}
+          CSV_HTTP_PASSWORD:    ${{ secrets.CSV_HTTP_PASSWORD }}
+        run: |
+          ARGS=""
+          if [ "${{ github.event.inputs.limit }}" != "0" ]; then
+            ARGS="$ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          if [ "${{ github.event.inputs.only_problems }}" = "true" ]; then
+            ARGS="$ARGS --only-problems"
+          fi
+          python audit.py $ARGS
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-report-${{ github.run_id }}
+          path: audit_report.csv
+          retention-days: 30

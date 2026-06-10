@@ -35,9 +35,9 @@ jobs:
 
       - name: Generate dashboard data
         env:
-          EBAY_CLIENT_ID:     ${{ secrets.EBAY_CLIENT_ID }}
-          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
-          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_DASHBOARD }}
         run: |
           if [ "${{ github.event.inputs.mock }}" = "true" ]; then
             python dashboard_generator.py --mock
