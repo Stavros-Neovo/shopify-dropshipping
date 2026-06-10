@@ -20,6 +20,10 @@ on:
         required: false
         default: "0"
 
+concurrency:
+  group: ebay-main
+  cancel-in-progress: false   # warten, nicht abbrechen
+
 jobs:
   seo:
     runs-on: ubuntu-latest

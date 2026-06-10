@@ -6,6 +6,10 @@ on:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+concurrency:
+  group: ebay-main
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest

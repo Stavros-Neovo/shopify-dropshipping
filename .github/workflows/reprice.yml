@@ -14,6 +14,10 @@ on:
         required: false
         default: "0"
 
+concurrency:
+  group: ebay-main
+  cancel-in-progress: false   # warten, nicht abbrechen
+
 jobs:
   reprice:
     runs-on: ubuntu-latest

@@ -1,0 +1,240 @@
+window.DASHBOARD_DATA = {
+  "generated_at": "2026-06-10T16:23:48.088032+00:00",
+  "active_listings": 1193,
+  "repricing": {
+    "last_run": {
+      "timestamp": "2026-06-10T15:01:07.127451+00:00",
+      "checked": 1193,
+      "lowered": 43,
+      "raised": 0,
+      "skipped_floor": 820,
+      "skipped_few": 186,
+      "unchanged": 144,
+      "errors": 0,
+      "dry_run": true
+    },
+    "recent_changes": [
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 227.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HHWG1043",
+        "title": "Ghd Shiny Ever After - Hitzeschutz Spray",
+        "old": 23.99,
+        "new": 20.99,
+        "diff": -3.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HHWG1046",
+        "title": "Ghd Dramatic Ending - Haarserum",
+        "old": 26.99,
+        "new": 22.99,
+        "diff": -4.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NETT0167",
+        "title": "TP-LINK Festa FR365 - Router",
+        "old": 206.99,
+        "new": 201.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NOCO0011",
+        "title": "NOCO GENIUS10EU | 10A Battery Charger | Geniu",
+        "old": 136.99,
+        "new": 131.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NOCO0021",
+        "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case |",
+        "old": 38.99,
+        "new": 37.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NOCO0024",
+        "title": "NOCO GBC101 | NOCO GBX45 EVA Protection Case ",
+        "old": 38.99,
+        "new": 36.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NOCO0025",
+        "title": "NOCO GBC102 | NOCO GBX55 EVA Protection Case ",
+        "old": 43.99,
+        "new": 42.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 210.99,
+        "new": 205.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM4K0060",
+        "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8G",
+        "old": 254.99,
+        "new": 246.99,
+        "diff": -8.0,
+        "action": "lowered"
+      }
+    ],
+    "chart_history": [
+      {
+        "date": "2026-06-10",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-10",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-10",
+        "lowered": 43,
+        "raised": 0,
+        "floor": 820
+      }
+    ]
+  },
+  "orders": {
+    "stats": {
+      "today_sales": 4,
+      "today_revenue": 612.5,
+      "today_profit": 142.3,
+      "total_sales_30d": 87,
+      "total_revenue_30d": 14320.0,
+      "total_profit_30d": 3240.8
+    },
+    "top_products": [
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "sold": 8,
+        "revenue": 1863.92,
+        "profit": 432.0
+      },
+      {
+        "sku": "SAN0042",
+        "title": "SanDisk Extreme SSD 1TB",
+        "sold": 14,
+        "revenue": 1260.0,
+        "profit": 280.0
+      },
+      {
+        "sku": "LOG0099",
+        "title": "Logitech MX Keys Mini",
+        "sold": 11,
+        "revenue": 990.0,
+        "profit": 198.0
+      },
+      {
+        "sku": "TP0023",
+        "title": "TP-Link 8-Port Gigabit Switch",
+        "sold": 19,
+        "revenue": 760.0,
+        "profit": 152.0
+      },
+      {
+        "sku": "KIN0031",
+        "title": "Kingston A400 SSD 960GB",
+        "sold": 12,
+        "revenue": 720.0,
+        "profit": 120.0
+      }
+    ],
+    "recent_sales": [
+      {
+        "date": "10.06 14:32",
+        "title": "Logitech M330 Silent Maus",
+        "revenue": 32.99,
+        "profit": 8.2
+      },
+      {
+        "date": "10.06 13:15",
+        "title": "SanDisk Ultra USB-Stick 128GB",
+        "revenue": 18.99,
+        "profit": 4.1
+      },
+      {
+        "date": "10.06 11:44",
+        "title": "TP-Link Netzwerk Switch 5-Port",
+        "revenue": 28.99,
+        "profit": 6.8
+      },
+      {
+        "date": "10.06 09:02",
+        "title": "Kingston DDR4 3200MHz 16GB RAM",
+        "revenue": 54.99,
+        "profit": 12.4
+      },
+      {
+        "date": "09.06 21:18",
+        "title": "Ubiquiti UAP-AC-PRO Access Point",
+        "revenue": 148.99,
+        "profit": 38.5
+      },
+      {
+        "date": "09.06 18:33",
+        "title": "G.Skill Ripjaws V 32GB DDR4 RAM",
+        "revenue": 89.99,
+        "profit": 18.2
+      }
+    ],
+    "bab_deadlines": [
+      {
+        "order_id": "28-12345",
+        "date": "2026-05-28",
+        "deadline": "2026-06-11",
+        "days_left": 1,
+        "amount_ek": 131.95,
+        "items": [
+          "Enabot EBO Air2"
+        ],
+        "urgent": true
+      },
+      {
+        "order_id": "28-12289",
+        "date": "2026-05-30",
+        "deadline": "2026-06-13",
+        "days_left": 3,
+        "amount_ek": 84.5,
+        "items": [
+          "SanDisk SSD 1TB",
+          "USB-Stick 64GB"
+        ],
+        "urgent": true
+      },
+      {
+        "order_id": "28-12201",
+        "date": "2026-06-01",
+        "deadline": "2026-06-15",
+        "days_left": 5,
+        "amount_ek": 42.2,
+        "items": [
+          "TP-Link Switch"
+        ],
+        "urgent": false
+      }
+    ]
+  }
+};

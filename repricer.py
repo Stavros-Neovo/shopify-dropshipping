@@ -195,11 +195,16 @@ def update_offer_price(client: EbayClient, offer_id: str, sku: str, new_price: f
     except RuntimeError as e:
         err_str = str(e)
         # Fehler 25002: Bild zu niedrig aufgelöst → Preis-Update nicht möglich
-        # eBay verweigert den PUT wegen altem Bild-Problem — SKU überspringen
         if "25002" in err_str:
             raise RuntimeError(
-                f"Bild-Auflösung zu gering (eBay Error 25002) – SKU {sku} wird übersprungen. "
-                f"Lösung: Bild ersetzen via image-fix workflow."
+                f"Bild-Auflösung zu gering (eBay Error 25002) – SKU {sku} übersprungen."
+            ) from None
+        # Fehler 25604: Availability nicht gefunden → Inventory Item unvollständig
+        # eBay verweigert den PUT weil das Inventory Item keine Quantity/Availability hat.
+        # Produkt überspringen, kein Crash.
+        if "25604" in err_str:
+            raise RuntimeError(
+                f"Kein Availability im Inventory Item (eBay Error 25604) – SKU {sku} übersprungen."
             ) from None
         raise
 

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#0f1117" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Shop 2" />
+  <title>Neovogen Shop 2</title>
+  <link rel="manifest" href="manifest.json" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f1117;
+      --surface:  #1a1d27;
+      --border:   #2a2d3a;
+      --text:     #e8eaf0;
+      --muted:    #6b7280;
+      --green:    #22c55e;
+      --red:      #ef4444;
+      --yellow:   #f59e0b;
+      --blue:     #3b82f6;
+      --purple:   #8b5cf6;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      padding-bottom: 32px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    header h1 span { color: var(--blue); }
+    .last-update {
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .refresh-btn {
+      background: var(--border);
+      border: none;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .refresh-btn:active { background: var(--blue); }
+
+    /* ── Content ── */
+    main { padding: 16px; max-width: 480px; margin: 0 auto; }
+
+    /* ── Section title ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin: 24px 0 10px;
+    }
+
+    /* ── Quick Stats Grid ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .stat-card .label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .stat-card .value {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .stat-card .sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .green { color: var(--green); }
+    .red   { color: var(--red); }
+    .blue  { color: var(--blue); }
+    .yellow { color: var(--yellow); }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-header .title {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .card-header .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .badge-green  { background: rgba(34,197,94,0.15);  color: var(--green); }
+    .badge-red    { background: rgba(239,68,68,0.15);  color: var(--red); }
+    .badge-yellow { background: rgba(245,158,11,0.15); color: var(--yellow); }
+    .badge-blue   { background: rgba(59,130,246,0.15); color: var(--blue); }
+
+    /* ── List rows ── */
+    .list-row {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .list-row:last-child { border-bottom: none; }
+    .list-row .row-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .icon-green  { background: rgba(34,197,94,0.15); }
+    .icon-red    { background: rgba(239,68,68,0.15); }
+    .icon-yellow { background: rgba(245,158,11,0.15); }
+    .icon-blue   { background: rgba(59,130,246,0.15); }
+    .icon-purple { background: rgba(139,92,246,0.15); }
+    .row-content { flex: 1; min-width: 0; }
+    .row-content .row-title {
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .row-content .row-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .row-right { text-align: right; flex-shrink: 0; }
+    .row-right .row-value {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .row-right .row-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── Repricing Stats Row ── */
+    .reprice-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+    .reprice-stat {
+      background: var(--surface);
+      padding: 14px 8px;
+      text-align: center;
+    }
+    .reprice-stat .rs-val {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .reprice-stat .rs-lbl {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* ── BAB Deadline ── */
+    .deadline-urgent {
+      border-left: 3px solid var(--red);
+    }
+    .deadline-warning {
+      border-left: 3px solid var(--yellow);
+    }
+    .deadline-ok {
+      border-left: 3px solid var(--border);
+    }
+
+    /* ── Empty state ── */
+    .empty {
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ── Loading ── */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--muted);
+    }
+    .spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── 30d Summary ── */
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .summary-row span:last-child {
+      font-weight: 600;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Neovogen <span>Shop 2</span></h1>
+    <div class="last-update" id="lastUpdate">Wird geladen…</div>
+  </div>
+  <button class="refresh-btn" onclick="loadData()">↻ Reload</button>
+</header>
+
+<main id="app">
+  <div class="loading">
+    <div class="spinner"></div>
+    <div>Daten werden geladen…</div>
+  </div>
+</main>
+
+<script src="dashboard_data.js"></script>
+<script>
+function fmt(n, decimals=2) {
+  return Number(n).toLocaleString('de-DE', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+}
+function fmtEur(n) { return fmt(n) + ' €'; }
+function colorClass(n) { return n >= 0 ? 'green' : 'red'; }
+
+function loadData() {
+  if (window.DASHBOARD_DATA) {
+    render(window.DASHBOARD_DATA);
+  } else {
+    document.getElementById('app').innerHTML = `
+      <div class="loading">
+        <div style="font-size:32px">⚠️</div>
+        <div>Daten nicht gefunden</div>
+        <div style="font-size:11px;margin-top:4px">dashboard_data.js fehlt &ndash; bitte <code>python dashboard_generator.py --mock</code> ausführen</div>
+      </div>`;
+  }
+}
+
+function render(d) {
+  const app = document.getElementById('app');
+  const gen = new Date(d.generated_at);
+  document.getElementById('lastUpdate').textContent =
+    'Aktualisiert ' + gen.toLocaleString('de-DE', {
+      day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'
+    });
+
+  const s  = d.orders.stats;
+  const rp = d.repricing;
+
+  app.innerHTML = `
+
+    <!-- ── Quick Stats ── -->
+    <div class="section-title">Heute</div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="label">Verkäufe</div>
+        <div class="value blue">${s.today_sales}</div>
+        <div class="sub">${s.total_sales_30d} letzte 30 Tage</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Umsatz</div>
+        <div class="value">${fmtEur(s.today_revenue)}</div>
+        <div class="sub">${fmtEur(s.total_revenue_30d)} / 30d</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Gewinn heute</div>
+        <div class="value ${colorClass(s.today_profit)}">${fmtEur(s.today_profit)}</div>
+        <div class="sub">${fmtEur(s.total_profit_30d)} / 30d</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Aktive Listings</div>
+        <div class="value blue">${d.active_listings.toLocaleString('de-DE')}</div>
+        <div class="sub">eBay Shop 2</div>
+      </div>
+    </div>
+
+    <!-- ── Repricing ── -->
+    <div class="section-title">Repricing — Letzter Run</div>
+    <div class="card">
+      <div class="card-header">
+        <span class="title">
+          ${rp.last_run.timestamp
+            ? new Date(rp.last_run.timestamp).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})
+            : 'Kein Run'}
+        </span>
+        ${rp.last_run.dry_run
+          ? '<span class="badge badge-yellow">DRY-RUN</span>'
+          : '<span class="badge badge-green">LIVE</span>'}
+      </div>
+      <div class="reprice-stats">
+        <div class="reprice-stat">
+          <div class="rs-val green">${rp.last_run.lowered ?? 0}</div>
+          <div class="rs-lbl">Gesenkt</div>
+        </div>
+        <div class="reprice-stat">
+          <div class="rs-val blue">${rp.last_run.raised ?? 0}</div>
+          <div class="rs-lbl">Erhöht</div>
+        </div>
+        <div class="reprice-stat">
+          <div class="rs-val yellow">${rp.last_run.skipped_floor ?? 0}</div>
+          <div class="rs-lbl">Floor</div>
+        </div>
+        <div class="reprice-stat">
+          <div class="rs-val red">${rp.last_run.errors ?? 0}</div>
+          <div class="rs-lbl">Fehler</div>
+        </div>
+      </div>
+      ${rp.recent_changes.length === 0
+        ? '<div class="empty">Keine Preisänderungen</div>'
+        : rp.recent_changes.map(c => `
+        <div class="list-row">
+          <div class="row-icon ${c.action==='lowered'?'icon-green':'icon-blue'}">
+            ${c.action==='lowered'?'↓':'↑'}
+          </div>
+          <div class="row-content">
+            <div class="row-title">${c.title}</div>
+            <div class="row-sub">${fmtEur(c.old)} → <strong>${fmtEur(c.new)}</strong></div>
+          </div>
+          <div class="row-right">
+            <div class="row-value ${c.diff<=0?'green':'red'}">${c.diff > 0 ? '+' : ''}${fmtEur(c.diff)}</div>
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <!-- ── BAB Zahlungsfristen ── -->
+    <div class="section-title">BAB Zahlungsfristen</div>
+    <div class="card">
+      ${d.orders.bab_deadlines.length === 0
+        ? '<div class="empty">Keine offenen Fristen ✓</div>'
+        : d.orders.bab_deadlines.map(b => `
+        <div class="list-row ${b.urgent ? 'deadline-urgent' : b.days_left <= 5 ? 'deadline-warning' : 'deadline-ok'}">
+          <div class="row-icon ${b.urgent ? 'icon-red' : b.days_left <= 5 ? 'icon-yellow' : 'icon-blue'}">
+            ${b.urgent ? '🔥' : b.days_left <= 5 ? '⚠️' : '📅'}
+          </div>
+          <div class="row-content">
+            <div class="row-title">${b.items[0]}${b.items.length>1?' +'+( b.items.length-1)+' weitere':''}</div>
+            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})}</div>
+          </div>
+          <div class="row-right">
+            <div class="row-value ${b.urgent ? 'red' : b.days_left <= 5 ? 'yellow' : ''}">${b.days_left}d</div>
+            <div class="row-sub">${fmtEur(b.amount_ek)} EK</div>
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <!-- ── Letzte Verkäufe ── -->
+    <div class="section-title">Letzte Verkäufe</div>
+    <div class="card">
+      ${d.orders.recent_sales.length === 0
+        ? '<div class="empty">Keine Verkäufe in den letzten 30 Tagen</div>'
+        : d.orders.recent_sales.map(sale => `
+        <div class="list-row">
+          <div class="row-icon icon-green">🛒</div>
+          <div class="row-content">
+            <div class="row-title">${sale.title}</div>
+            <div class="row-sub">${sale.date}</div>
+          </div>
+          <div class="row-right">
+            <div class="row-value">${fmtEur(sale.revenue)}</div>
+            <div class="row-sub green">+${fmtEur(sale.profit)}</div>
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <!-- ── Best Sellers ── -->
+    <div class="section-title">Best Seller — 30 Tage</div>
+    <div class="card">
+      ${d.orders.top_products.length === 0
+        ? '<div class="empty">Keine Daten verfügbar</div>'
+        : d.orders.top_products.map((p, i) => `
+        <div class="list-row">
+          <div class="row-icon icon-purple" style="font-size:13px;font-weight:700;">#${i+1}</div>
+          <div class="row-content">
+            <div class="row-title">${p.title}</div>
+            <div class="row-sub">${p.sold}× verkauft · ${fmtEur(p.revenue)}</div>
+          </div>
+          <div class="row-right">
+            <div class="row-value green">+${fmtEur(p.profit)}</div>
+            <div class="row-sub">Gewinn</div>
+          </div>
+        </div>`).join('')}
+      <div class="summary-row">
+        <span>Gesamt Gewinn 30d</span>
+        <span class="green">+${fmtEur(s.total_profit_30d)}</span>
+      </div>
+    </div>
+  `;
+}
+
+// Automatisch laden
+loadData();
+
+</script>
+</body>
+</html>
