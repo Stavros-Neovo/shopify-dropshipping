@@ -83,9 +83,14 @@ def get_inventory_item(base_url: str, user_token: str, sku: str) -> Optional[dic
 
 
 def update_inventory_item_title(base_url: str, user_token: str,
-                                sku: str, item: dict, new_title: str) -> bool:
-    """Aktualisiert nur den Titel im bestehenden Inventory Item."""
+                                sku: str, item: dict, new_title: str) -> tuple[bool, str]:
+    """Aktualisiert nur den Titel. Gibt (ok, fehler_msg) zurück."""
     item["product"]["title"] = new_title
+    # Felder entfernen die beim PUT nicht erlaubt sind
+    for field in ["offerId", "listing", "marketplaceId", "status",
+                  "listingId", "auditInfo"]:
+        item.pop(field, None)
+
     r = requests.put(
         f"{base_url}/sell/inventory/v1/inventory_item/{sku}",
         headers={"Authorization": f"Bearer {user_token}",
@@ -94,7 +99,19 @@ def update_inventory_item_title(base_url: str, user_token: str,
         json=item,
         timeout=30,
     )
-    return r.status_code in (200, 204)
+    if r.status_code in (200, 204):
+        return True, ""
+
+    # Fehlermeldung extrahieren
+    try:
+        errs = r.json().get("errors", [])
+        codes = [str(e.get("errorId","")) for e in errs]
+        msgs  = [e.get("message","") for e in errs]
+        detail = f"HTTP {r.status_code} | Codes: {','.join(codes)} | {'; '.join(msgs)}"
+    except Exception:
+        detail = f"HTTP {r.status_code} | {r.text[:120]}"
+
+    return False, detail
 
 
 # ─── BAB-Feed einlesen ────────────────────────────────────────────────────────
@@ -221,16 +238,16 @@ def main():
                 skipped += 1
                 continue
 
-            ok = update_inventory_item_title(base_url, user_token, sku, item, new_title)
+            ok, err_msg = update_inventory_item_title(base_url, user_token, sku, item, new_title)
             if ok:
                 print(f"✓ → {new_title[:50]}")
                 report.append({"ean": ean, "sku": sku, "title": new_title,
                                 "status": "updated"})
                 success += 1
             else:
-                print("FEHLER")
+                print(f"FEHLER: {err_msg}")
                 report.append({"ean": ean, "sku": sku, "title": new_title,
-                                "status": "error"})
+                                "status": f"error: {err_msg}"})
                 errors += 1
 
         except Exception as e:
