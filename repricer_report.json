@@ -1,0 +1,26 @@
+{
+  "history": [
+    {
+      "timestamp": "2026-06-10T14:53:46.563773+00:00",
+      "checked": 0,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "unchanged": 0,
+      "errors": 0
+    }
+  ],
+  "last_changes": [],
+  "last_run": {
+    "timestamp": "2026-06-10T14:53:46.563773+00:00",
+    "checked": 0,
+    "lowered": 0,
+    "raised": 0,
+    "skipped_floor": 0,
+    "skipped_few": 0,
+    "unchanged": 0,
+    "errors": 0,
+    "dry_run": true
+  }
+}
