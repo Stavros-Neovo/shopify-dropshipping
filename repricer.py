@@ -72,16 +72,22 @@ DELAY               = 0.4    # Sekunden zwischen Browse-API-Aufrufen
 
 def calc_vk(ek: float, margin: float, cfg: dict) -> float:
     """
-    VK_brutto = (EK + Versand + EK × Marge) × (1 + MwSt) ÷ (1 - eBay-Gebühr)
-    margin = 0.20 → Mindestpreis (20% Nettomarge auf EK)
-    margin = 0.25 → Normalpreis  (25% Nettomarge auf EK)
+    Korrekte Formel — eBay nimmt Gebühr auf (VK + Käufer-Versand):
+
+      (VK + buyer_ship) × (1 − fee) / (1 + vat) = EK × (1 + margin) + carrier
+
+    Auflösen nach VK:
+      VK = (EK × (1 + margin) + carrier) × (1 + vat) / (1 − fee) − buyer_ship
+
+    margin = 0.20 → Mindestpreis (20% Marge auf EK nach allen Kosten)
+    margin = 0.25 → Normalpreis  (25% Ziel-Marge)
     """
-    ep = cfg["ebay_pricing"]
-    shipping = ep["shipping_cost_eur"]   # 5.00
-    fee      = ep["ebay_fee_rate"]        # 0.13
-    vat      = ep["vat_rate"]             # 0.19
-    base = ek + shipping + ek * margin
-    vk = base * (1 + vat) / (1 - fee)
+    ep         = cfg["ebay_pricing"]
+    carrier    = ep.get("shipping_cost_eur", 5.00)   # was wir zahlen
+    buyer_ship = ep.get("buyer_shipping_eur", 0.00)  # was Käufer zahlt (eBay nimmt davon auch Gebühr)
+    fee        = ep.get("ebay_fee_rate", 0.13)
+    vat        = ep.get("vat_rate", 0.19)
+    vk = (ek * (1 + margin) + carrier) * (1 + vat) / (1 - fee) - buyer_ship
     return vk
 
 

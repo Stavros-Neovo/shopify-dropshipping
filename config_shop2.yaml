@@ -73,7 +73,8 @@ shopify:
 # Formel: VK_brutto = (EK + 5€ Versand + EK × 25%) × 1.19 ÷ (1 − 0.13)
 # -----------------------------------------------------------------------------
 ebay_pricing:
-  shipping_cost_eur: 5.00
+  shipping_cost_eur: 5.00        # Was wir dem Spediteur zahlen
+  buyer_shipping_eur: 3.99       # Was der Käufer bei eBay zusätzlich zahlt
   ebay_fee_rate: 0.13
   vat_rate: 0.19
 
