@@ -325,6 +325,22 @@ def reprice_product(
         result["reason"] = "no_active_offer"
         return result
 
+    # ── EK gestiegen? Preis unter Floor → sofort auf Floor anheben ───────
+    # Lieferanten-CSV ändert sich stündlich; wenn EK teurer wird,
+    # steigt der Floor automatisch → wir müssen den eBay-Preis anpassen
+    # bevor wir überhaupt Mitbewerber abfragen.
+    if current_price < floor_price - 0.01:
+        result["action"]    = "raised"
+        result["reason"]    = "ek_increased_price_below_floor"
+        result["new_price"] = floor_price
+        log.info(
+            f"  ↑ {sku}: EK gestiegen! eBay-Preis {current_price:.2f}€ "
+            f"< Floor {floor_price:.2f}€ (EK={ek:.2f}€) → anheben"
+        )
+        if not dry_run:
+            update_offer_price(client, offer_id, sku, floor_price)
+        return result
+
     # ── Mitbewerber abfragen ──────────────────────────────────────────────
     comp_prices = get_competitor_prices(
         ean, app_token, base_url, current_price, floor_price

@@ -179,6 +179,10 @@ let currentRange = '30d';
 function buildChart(data, canvasId) {
   const ctx = document.getElementById(canvasId);
   if (!ctx) return;
+  if (typeof Chart === 'undefined') {
+    ctx.parentElement.innerHTML = '<div class="empty" style="height:120px;display:flex;align-items:center;justify-content:center">Chart.js nicht geladen</div>';
+    return;
+  }
   if (chartInst) { chartInst.destroy(); chartInst = null; }
   const labels = data.map(d => d.date);
   const revs   = data.map(d => d.revenue);
