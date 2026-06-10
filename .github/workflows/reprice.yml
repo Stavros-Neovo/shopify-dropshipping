@@ -1,0 +1,59 @@
+name: Auto Repricing
+
+on:
+  schedule:
+    - cron: "0 5 * * *"   # täglich 06:00 Uhr DE-Zeit (05:00 UTC)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run? (true = nur Simulation)"
+        required: false
+        default: "false"
+      limit:
+        description: "Max. Produkte (0 = alle)"
+        required: false
+        default: "0"
+
+jobs:
+  reprice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Repricer
+        env:
+          CSV_HTTP_USER:        ${{ secrets.CSV_HTTP_USER }}
+          CSV_HTTP_PASSWORD:    ${{ secrets.CSV_HTTP_PASSWORD }}
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          ARGS=""
+          [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
+          [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ] && ARGS="$ARGS --limit $LIMIT"
+          python repricer.py $ARGS
+
+      - name: Commit repricer_report.json
+        if: always()
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add repricer_report.json || true
+          git diff --staged --quiet || git commit -m "chore: repricer report $(date -u '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin main || true
+          git push || true
