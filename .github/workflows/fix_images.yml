@@ -123,4 +123,5 @@ jobs:
           git add enrichment_index.csv icecat_cache.json || true
           git diff --staged --stat
           git diff --staged --quiet || git commit -m "fix: update product images (multi-source fix)"
+          git pull --rebase origin main || true
           git push
