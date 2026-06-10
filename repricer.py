@@ -54,6 +54,7 @@ from ebay_client import EbayClient
 log = logging.getLogger("repricer")
 
 REPORT_FILE    = "repricer_report.json"
+STATE_FILE     = "repricer_state.json"   # Checkpoint: wo haben wir aufgehört?
 OFFER_PATH     = "/sell/inventory/v1/offer"
 BROWSE_PATH    = "/buy/browse/v1/item_summary/search"
 IDENTITY_PATH  = "/commerce/identity/v1/user/"
@@ -66,6 +67,7 @@ MIN_COMPETITORS     = 2      # Mindestanzahl Mitbewerber
 MAX_DROP_PCT        = 0.15   # Max 15% Preissenkung pro Lauf
 COMPETITOR_MIN_RATIO = 0.70  # Konkurrent-Preis muss >= 70% des Floor-Preises sein
 DELAY               = 0.4    # Sekunden zwischen Browse-API-Aufrufen
+CHUNK_SIZE          = 300    # Produkte pro stündlichem Run
 
 
 # ─── Preisformel (identisch mit sync.py) ─────────────────────────────────────
@@ -447,6 +449,26 @@ def reprice_product(
 
 # ─── Report / Dashboard ──────────────────────────────────────────────────────
 
+def load_state(config_key: str) -> dict:
+    """Lädt den Checkpoint-State: welcher Offset ist dran."""
+    try:
+        data = json.loads(Path(STATE_FILE).read_text(encoding="utf-8"))
+        return data.get(config_key, {"offset": 0, "cycle": 1})
+    except Exception:
+        return {"offset": 0, "cycle": 1}
+
+
+def save_state(config_key: str, offset: int, total: int, cycle: int):
+    """Speichert den Checkpoint-State nach jedem Run."""
+    try:
+        data = json.loads(Path(STATE_FILE).read_text(encoding="utf-8")) if Path(STATE_FILE).exists() else {}
+    except Exception:
+        data = {}
+    data[config_key] = {"offset": offset, "total": total, "cycle": cycle,
+                        "updated": datetime.now(timezone.utc).isoformat()}
+    Path(STATE_FILE).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def load_report(path: str) -> dict:
     p = Path(path)
     if p.exists():
@@ -494,9 +516,12 @@ def save_report(path: str, summary: dict, changes: list):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config",  default="config_shop2.yaml")
-    parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--limit",   type=int, default=0)
+    parser.add_argument("--config",     default="config_shop2.yaml")
+    parser.add_argument("--dry-run",    action="store_true")
+    parser.add_argument("--limit",      type=int, default=0,
+                        help="Überschreibt CHUNK_SIZE für diesen Run")
+    parser.add_argument("--reset",      action="store_true",
+                        help="Checkpoint zurücksetzen (von vorne anfangen)")
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -523,12 +548,27 @@ def main():
     # ── BAB-Feed laden ────────────────────────────────────────────────────
     bab_feed = load_bab_feed(cfg)
     products = list(bab_feed.items())   # [(ean, feed_data), ...]
+    total    = len(products)
+    log.info(f"Produkte aus Feed: {total}")
 
-    log.info(f"Produkte aus Feed: {len(products)}")
+    # ── Checkpoint laden ──────────────────────────────────────────────────
+    config_key = Path(args.config).stem   # "config_shop2"
+    if args.reset:
+        save_state(config_key, 0, total, 1)
+        log.info("Checkpoint zurückgesetzt.")
 
-    if args.limit:
-        products = products[: args.limit]
-        log.info(f"Limit: {args.limit}")
+    state     = load_state(config_key)
+    offset    = state["offset"]
+    cycle     = state["cycle"]
+    chunk     = args.limit if args.limit else CHUNK_SIZE
+
+    # Chunk aus der Produktliste schneiden
+    chunk_products = products[offset: offset + chunk]
+    next_offset    = offset + len(chunk_products)
+    cycle_complete = next_offset >= total
+
+    log.info(f"Zyklus {cycle} | Produkte {offset+1}–{next_offset} von {total} "
+             f"({'letzter Block' if cycle_complete else f'nächster Start: {next_offset}'})")
 
     # ── Repricing ─────────────────────────────────────────────────────────
     stats = {
@@ -545,11 +585,11 @@ def main():
     }
     all_changes = []
 
-    for n, (ean, feed_data) in enumerate(products, 1):
+    for n, (ean, feed_data) in enumerate(chunk_products, 1):
         sku   = feed_data["sku"]
         ek    = feed_data["ek"]
         title = feed_data["title"]
-        log.info(f"[{n}/{len(products)}] {sku}  {title[:50]}")
+        log.info(f"[{offset+n}/{total}] {sku}  {title[:50]}")
         stats["checked"] += 1
 
         # Offer von eBay abrufen (Preis + offerId)
@@ -595,8 +635,20 @@ def main():
 
         time.sleep(DELAY)
 
+    # ── Checkpoint speichern ──────────────────────────────────────────────
+    if not args.dry_run:
+        if cycle_complete:
+            new_offset = 0
+            new_cycle  = cycle + 1
+            log.info(f"✅ Zyklus {cycle} abgeschlossen — starte nächsten Zyklus {new_cycle} von vorne")
+        else:
+            new_offset = next_offset
+            new_cycle  = cycle
+        save_state(config_key, new_offset, total, new_cycle)
+
     # ── Ergebnis ──────────────────────────────────────────────────────────
     log.info(f"\n{'─'*60}")
+    log.info(f"  Zyklus:                     {cycle} ({'komplett' if cycle_complete else f'Offset → {next_offset}'})")
     log.info(f"  Geprüft:                    {stats['checked']}")
     log.info(f"  Preis gesenkt:              {stats['lowered']}")
     log.info(f"  Auf Floor gesetzt:          {stats['set_to_floor']}")
@@ -606,11 +658,11 @@ def main():
     log.info(f"  Unverändert:                {stats['unchanged']}")
     log.info(f"  Fehler:                     {stats['errors']}")
     if args.dry_run:
-        log.info("  [DRY-RUN — keine echten Änderungen]")
+        log.info("  [DRY-RUN — keine echten Änderungen, kein Checkpoint gespeichert]")
 
     # ── Report speichern ──────────────────────────────────────────────────
     save_report(REPORT_FILE, stats, all_changes)
-    log.info(f"\n✓ Report gespeichert: {REPORT_FILE}")
+    log.info(f"✓ Report gespeichert: {REPORT_FILE}")
 
 
 if __name__ == "__main__":

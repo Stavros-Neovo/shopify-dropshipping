@@ -2,7 +2,7 @@ name: Auto Repricing
 
 on:
   schedule:
-    - cron: "0 5 * * *"   # täglich 06:00 Uhr DE-Zeit (05:00 UTC)
+    - cron: "20 * * * *"   # Stündlich um :20 (nach der Artikel-Aktualisierung um :05)
   workflow_dispatch:
     inputs:
       dry_run:
@@ -10,9 +10,13 @@ on:
         required: false
         default: "false"
       limit:
-        description: "Max. Produkte (0 = alle)"
+        description: "Max. Produkte (0 = Chunk aus Checkpoint)"
         required: false
         default: "0"
+      reset:
+        description: "Checkpoint zurücksetzen? (true = von vorne)"
+        required: false
+        default: "false"
 
 concurrency:
   group: ebay-reprice   # eigene Spur — blockiert nicht die stündliche Aktualisierung
@@ -21,7 +25,7 @@ concurrency:
 jobs:
   reprice:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v4
@@ -47,17 +51,19 @@ jobs:
         run: |
           DRY="${{ github.event.inputs.dry_run }}"
           LIMIT="${{ github.event.inputs.limit }}"
+          RESET="${{ github.event.inputs.reset }}"
           ARGS=""
-          [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
+          [ "$DRY"   = "true" ] && ARGS="$ARGS --dry-run"
+          [ "$RESET" = "true" ] && ARGS="$ARGS --reset"
           [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ] && ARGS="$ARGS --limit $LIMIT"
           python repricer.py $ARGS
 
-      - name: Commit repricer_report.json
+      - name: Commit report + checkpoint
         if: always()
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add repricer_report.json || true
-          git diff --staged --quiet || git commit -m "chore: repricer report $(date -u '+%Y-%m-%d %H:%M')"
+          git add repricer_report.json repricer_state.json || true
+          git diff --staged --quiet || git commit -m "chore: repricer $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
           git pull --rebase origin main || true
           git push || true
