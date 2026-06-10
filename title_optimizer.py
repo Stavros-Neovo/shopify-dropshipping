@@ -39,7 +39,8 @@ KNOWN_BRANDS = [
     # Multi-Word / Sonderzeichen zuerst
     "G.Skill", "TP-Link", "D-Link", "Micro-Star", "Be Quiet", "be quiet!",
     "Club 3D", "Club3D", "Western Digital", "Kingston Technology",
-    "Crucial Technology",
+    "Crucial Technology", "Ultimate Ears", "Teltonika Networks",
+    "upcycle it",
     # Einwort
     "AVM", "APC", "Asus", "ASUS", "MSI", "Gigabyte", "ASRock", "Corsair",
     "Kingston", "Crucial", "Samsung", "Seagate", "WD", "Toshiba", "Hitachi",
@@ -342,12 +343,20 @@ def extract_specs(title: str, summary: str, product_type: str = "") -> list[str]
 # ─── Modellnummer-Extraktion ──────────────────────────────────────────────────
 
 MODEL_NOISE_WORDS = {
-    "usb", "hdmi", "vga", "lan", "wan", "poe", "rgb", "ssd", "hdd",
-    "ram", "ddr", "nvme", "wireless", "bluetooth", "wifi", "wlan",
+    # Einheiten
+    "gb", "tb", "mb", "kb", "ghz", "mhz", "khz", "w", "mw",
+    # Schnittstellen
+    "usb", "hdmi", "vga", "dvi", "lan", "wan", "poe", "rgb",
+    # Speicher-Typen
+    "ssd", "hdd", "ram", "ddr", "ddr4", "ddr5", "nvme", "emmc",
+    # Verbindung
+    "wireless", "bluetooth", "wifi", "wlan", "nfc", "lte", "5g",
+    # Produkttyp-Wörter
     "cable", "kabel", "hub", "adapter", "switch", "dock", "charger",
     "mouse", "keyboard", "headset", "speaker", "webcam", "monitor",
-    "printer", "scanner", "stick", "drive", "blade", "mini", "plus",
-    "silent", "pro", "max", "lite", "slim", "nano", "new",
+    "printer", "scanner", "stick", "drive", "blade",
+    # Adjektive
+    "mini", "plus", "silent", "pro", "max", "lite", "slim", "nano", "new",
 }
 
 
@@ -383,8 +392,11 @@ def extract_model(title: str, brand: str) -> str:
     m = re.search(r"([A-Z][A-Z0-9]{1,}\s*[A-Z0-9]+[A-Z0-9\-]*|[A-Z]+[-]?[A-Z]*\d+[A-Z0-9\-]*)", t)
     if m:
         model = m.group(1).strip()
-        # Reine Noise-Words ablehnen
-        if model.lower() not in MODEL_NOISE_WORDS and 2 <= len(model) <= 25:
+        first_word = model.split()[0].lower()
+        # Ablehnen: reines Noise-Word ODER erstes Wort ist Noise (z.B. "GB DDR4-3000")
+        if (model.lower() not in MODEL_NOISE_WORDS
+                and first_word not in MODEL_NOISE_WORDS
+                and 2 <= len(model) <= 25):
             return model
 
     # Fallback: ganzer Rest, wenn kurz und kein Noise-Word
@@ -444,20 +456,36 @@ def generate_seo_title(title_full: str, short_summary: str, brand_stored: str) -
     parts.append("NEU")
 
     # Duplikate auf Wort-Ebene entfernen (case-insensitive, Reihenfolge erhalten)
-    # Damit "Bluetooth Audio" + "Audio Empfänger" → "Bluetooth Audio Empfänger"
+    # Sonderfall: "960" und "960GB" → wenn "960" schon gesehen → "960GB" auch überspringen
     seen_words: set[str] = set()
     deduped_words: list[str] = []
     for part in parts:
         for word in part.split():
             wkey = word.lower().strip(".,")
-            if wkey not in seen_words:
+            # Zahlen-Einheit-Kombo: "32GB" → mark "32" als gesehen um Dopplung zu verhindern
+            num_match = re.match(r"^(\d+)(gb|tb|mb|mhz|w)$", wkey)
+            if num_match:
+                num_only = num_match.group(1)
+                if num_only in seen_words or wkey in seen_words:
+                    continue   # "960" schon gesehen → "960GB" überspringen
                 seen_words.add(wkey)
-                deduped_words.append(word)
+                seen_words.add(num_only)
+            else:
+                if wkey in seen_words:
+                    continue
+                seen_words.add(wkey)
+            deduped_words.append(word)
 
     title = " ".join(deduped_words)
 
     # Sonderzeichen bereinigen (eBay erlaubt keine ! @ # etc.)
     title = re.sub(r"[!@#$%^&*()+={}\[\];:'\"\\|<>?]", "", title)
+    title = re.sub(r"\s+", " ", title).strip()
+
+    # Einzelne isolierte Großbuchstaben entfernen (Artefakte aus Modell-Extraktion)
+    # z.B. "Jabra USB T Bluetooth" → "Jabra USB Bluetooth"
+    # Ausnahme: "S" in Verbindungen wie "USB-S" wird nicht berührt (Bindestrich)
+    title = re.sub(r"(?<!\S)\b([A-Z])\b(?!\S)", "", title)
     title = re.sub(r"\s+", " ", title).strip()
 
     # Zu lang → am letzten Leerzeichen kürzen
