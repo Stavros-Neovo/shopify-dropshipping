@@ -50,13 +50,14 @@ jobs:
           echo "BAB: $(wc -l < bab_preisliste.csv) Zeilen"
           echo "Kosatec: $(wc -l < kosatec_preisliste.csv) Zeilen"
 
-      - name: Restore Score-Cache
-        uses: actions/cache@v4
-        with:
-          path: ebay_score_cache.json
-          key: ebay-score-cache-main
-          restore-keys: |
-            ebay-score-cache-
+      - name: Cache-Status prüfen
+        run: |
+          if [ -f ebay_score_cache.json ]; then
+            COUNT=$(python3 -c "import json; print(len(json.load(open('ebay_score_cache.json'))))" 2>/dev/null || echo "?")
+            echo "Cache im Repo: $COUNT EANs"
+          else
+            echo "Kein Cache im Repo — starte frisch"
+          fi
 
       - name: Smart Lister ausführen
         env:
@@ -83,19 +84,15 @@ jobs:
           echo "Starte: python smart_lister.py $ARGS"
           python smart_lister.py $ARGS
 
-      - name: Save Score-Cache
+      - name: Commit Cache + supplier_map
         if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: ebay_score_cache.json
-          key: ebay-score-cache-main
-
-      - name: Commit supplier_map + cache
-        if: github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add supplier_map.json ebay_score_cache.json || true
-          git diff --staged --quiet || git commit -m "chore: smart_lister update $(date -u '+%Y-%m-%d')"
+          git add ebay_score_cache.json || true
+          if [ "${{ github.event.inputs.dry_run }}" != "true" ]; then
+            git add supplier_map.json || true
+          fi
+          git diff --staged --quiet || git commit -m "chore: smart_lister cache update $(date -u '+%Y-%m-%d %H:%M')"
           git pull --rebase origin main || true
           git push || true
