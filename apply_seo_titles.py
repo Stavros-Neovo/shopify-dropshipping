@@ -34,8 +34,10 @@ import yaml
 
 ENRICHMENT_FILE  = "enrichment_index.csv"
 REPORT_FILE      = "apply_report.csv"
+STATE_FILE       = "seo_state.json"
 CONFIG_FILE      = "config_shop2.yaml"
 DELAY            = 0.4  # Sekunden zwischen API-Calls
+CHUNK_SIZE       = 200  # Produkte pro Run (~25 Min)
 
 # ─── eBay OAuth ───────────────────────────────────────────────────────────────
 
@@ -160,12 +162,34 @@ def load_seo_titles() -> dict[str, str]:
         }
 
 
+# ─── Checkpoint ───────────────────────────────────────────────────────────────
+
+def load_seo_state() -> dict:
+    try:
+        return json.loads(Path(STATE_FILE).read_text(encoding="utf-8"))
+    except Exception:
+        return {"offset": 0, "cycle": 1, "total_updated": 0}
+
+
+def save_seo_state(offset: int, cycle: int, total_updated: int):
+    Path(STATE_FILE).write_text(
+        json.dumps({"offset": offset, "cycle": cycle,
+                    "total_updated": total_updated,
+                    "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())},
+                   indent=2),
+        encoding="utf-8"
+    )
+
+
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--limit",   type=int, default=0,
+                        help="Überschreibt CHUNK_SIZE für diesen Run")
+    parser.add_argument("--reset",   action="store_true",
+                        help="Checkpoint zurücksetzen")
     args = parser.parse_args()
 
     # Config laden
@@ -196,19 +220,37 @@ def main():
     ean_to_title = load_seo_titles()
 
     # Schnittmenge: EANs die sowohl Feed als auch SEO-Titel haben
-    common_eans = sorted(set(ean_to_sku.keys()) & set(ean_to_title.keys()))
-    if args.limit:
-        common_eans = common_eans[:args.limit]
+    all_eans = sorted(set(ean_to_sku.keys()) & set(ean_to_title.keys()))
+    total    = len(all_eans)
 
-    print(f"Zu aktualisieren: {len(common_eans)} Produkte")
+    print(f"Gesamt zu aktualisieren: {total} Produkte")
+
     if args.dry_run:
         print("[DRY-RUN] Erste 10 Beispiele:\n")
-        for ean in common_eans[:10]:
+        for ean in all_eans[:10]:
             sku   = ean_to_sku[ean]
             title = ean_to_title[ean]
             print(f"  SKU={sku}  EAN={ean}")
             print(f"  Titel: {title}\n")
         return
+
+    # Checkpoint laden
+    if args.reset:
+        save_seo_state(0, 1, 0)
+        print("Checkpoint zurückgesetzt.")
+
+    state         = load_seo_state()
+    offset        = state["offset"]
+    cycle         = state["cycle"]
+    total_updated = state["total_updated"]
+    chunk         = args.limit if args.limit else CHUNK_SIZE
+
+    chunk_eans     = all_eans[offset: offset + chunk]
+    next_offset    = offset + len(chunk_eans)
+    cycle_complete = next_offset >= total
+
+    print(f"Zyklus {cycle} | EANs {offset+1}–{next_offset} von {total} "
+          f"({'letzter Block' if cycle_complete else f'weiter ab {next_offset}'})")
 
     # Live-Update
     report   = []
@@ -216,11 +258,11 @@ def main():
     skipped  = 0
     errors   = 0
 
-    for i, ean in enumerate(common_eans, 1):
+    for i, ean in enumerate(chunk_eans, 1):
         sku       = ean_to_sku[ean]
         new_title = ean_to_title[ean]
 
-        print(f"[{i:4}/{len(common_eans)}] SKU={sku} …", end=" ", flush=True)
+        print(f"[{offset+i:4}/{total}] SKU={sku} …", end=" ", flush=True)
 
         try:
             item = get_inventory_item(base_url, user_token, sku)
@@ -259,16 +301,30 @@ def main():
 
         time.sleep(DELAY)
 
-    # Report schreiben
-    with open(REPORT_FILE, "w", encoding="utf-8-sig", newline="") as f:
+    # Checkpoint speichern
+    total_updated += success
+    if cycle_complete:
+        save_seo_state(0, cycle + 1, total_updated)
+        print(f"\n✅ Zyklus {cycle} komplett — alle {total} Produkte einmal aktualisiert")
+    else:
+        save_seo_state(next_offset, cycle, total_updated)
+
+    # Report schreiben (anhängen wenn nicht erster Block)
+    report_path = Path(REPORT_FILE)
+    write_header = not report_path.exists() or offset == 0
+    with open(REPORT_FILE, "a" if not write_header else "w",
+              encoding="utf-8-sig", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["ean", "sku", "title", "status"])
-        writer.writeheader()
+        if write_header:
+            writer.writeheader()
         writer.writerows(report)
 
     print(f"\n─── Ergebnis ───────────────────────────────")
+    print(f"  Zyklus:        {cycle} ({'komplett' if cycle_complete else f'Offset → {next_offset}'})")
     print(f"  Aktualisiert:  {success}")
     print(f"  Übersprungen:  {skipped}")
     print(f"  Fehler:        {errors}")
+    print(f"  Gesamt bisher: {total_updated}")
     print(f"  Report:        {REPORT_FILE}")
 
 

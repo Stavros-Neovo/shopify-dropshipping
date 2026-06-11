@@ -16,9 +16,13 @@ on:
         required: false
         default: "true"
       limit:
-        description: "Max. Produkte (0 = alle)"
+        description: "Max. Produkte (0 = Chunk aus Checkpoint)"
         required: false
         default: "0"
+      reset:
+        description: "Checkpoint zurücksetzen? (true = von vorne)"
+        required: false
+        default: "false"
 
 concurrency:
   group: ebay-background   # Hintergrund — blockiert nie Sync oder Repricing
@@ -27,7 +31,7 @@ concurrency:
 jobs:
   seo:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - uses: actions/checkout@v4
@@ -62,6 +66,7 @@ jobs:
           ARGS=""
           LIMIT="${{ github.event.inputs.limit }}"
           [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ "${{ github.event.inputs.reset }}"   = "true" ] && ARGS="$ARGS --reset"
           [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ] && ARGS="$ARGS --limit $LIMIT"
           python apply_seo_titles.py $ARGS
 
@@ -70,7 +75,7 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add enrichment_index.csv title_review.csv apply_report.csv || true
+          git add enrichment_index.csv title_review.csv apply_report.csv seo_state.json || true
           git diff --staged --quiet || git commit -m "chore: SEO titles $(date -u '+%Y-%m-%d %H:%M')"
           git pull --rebase origin main || true
           git push || true
