@@ -7,21 +7,47 @@ Schreibt docs/dashboard_data.js mit allen Metriken.
   python dashboard_generator.py --mock    # Demo-Daten
 """
 from __future__ import annotations
-import argparse, json, os, random
+import argparse, csv, json, os, random
 from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
 import requests, yaml
 
-REPORT_FILE = "repricer_report.json"
-OUTPUT_FILE = "docs/dashboard_data.js"
-CONFIG_FILE = "config_shop2.yaml"
-ORDERS_PATH = "/sell/fulfillment/v1/order"
+REPORT_FILE    = "repricer_report.json"
+OUTPUT_FILE    = "docs/dashboard_data.js"
+CONFIG_FILE    = "config_shop2.yaml"
+ORDERS_PATH    = "/sell/fulfillment/v1/order"
+SHOPIFY_CSV    = "docs/shopify_products.csv"
 
 EBAY_FEE   = 0.13   # 13 % eBay-Gebühren
 VAT_FACTOR = 1.19   # Brutto → Netto
 SHIP_COST  = 5.0    # Pauschale Versandkosten
 EST_RATE   = 0.30   # Einkommensteuer-Rücklage
 GEWST_RATE = 0.15   # Gewerbesteuer-Rücklage
+
+
+# ─── EK-Map aus shopify_products.csv ─────────────────────────────────────────
+
+def load_ek_map(csv_path: str = SHOPIFY_CSV) -> dict:
+    """Gibt {sku: ek_float} zurück. Nutzt Metafield custom.ek_price falls vorhanden,
+    sonst Variant Cost."""
+    ek_map: dict = {}
+    p = Path(csv_path)
+    if not p.exists():
+        return ek_map
+    with open(p, newline="", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            sku = (row.get("Variant SKU") or "").strip()
+            if not sku:
+                continue
+            # Bevorzuge das ek_price Metafield, Fallback auf Variant Cost
+            raw = (row.get("Metafield: custom.ek_price [number_decimal]") or
+                   row.get("Variant Cost") or "0").strip()
+            try:
+                ek_map[sku] = float(raw)
+            except ValueError:
+                pass
+    return ek_map
 
 
 # ─── OAuth ────────────────────────────────────────────────────────────────────
@@ -406,7 +432,9 @@ def main():
             refresh_token = os.getenv(cfg["ebay"]["refresh_token_env_var"], "")
             token      = get_user_token(client_id, client_secret, refresh_token, sandbox)
             raw_orders = fetch_orders(base_url, token, days=90)
-            orders_data = process_orders(raw_orders, ek_map={})
+            ek_map     = load_ek_map()
+            print(f"  EK-Map geladen: {len(ek_map)} SKUs")
+            orders_data = process_orders(raw_orders, ek_map=ek_map)
             print(f"  eBay Orders geladen: {len(raw_orders)}")
         except Exception as e:
             print(f"  eBay API nicht verfügbar ({e}) → Demo-Daten")
