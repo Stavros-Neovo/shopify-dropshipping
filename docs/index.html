@@ -705,6 +705,18 @@ function loadData() {
 }
 
 loadData();
+
+// Auto-Refresh: dashboard_data.js alle 5 Minuten neu laden
+function autoRefresh() {
+  const script = document.createElement('script');
+  script.src = 'dashboard_data.js?v=' + Date.now();
+  script.onload = () => {
+    if (window.DASHBOARD_DATA) render(window.DASHBOARD_DATA);
+    document.head.removeChild(script);
+  };
+  document.head.appendChild(script);
+}
+setInterval(autoRefresh, 5 * 60 * 1000);
 </script>
 </body>
 </html>
