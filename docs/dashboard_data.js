@@ -1,98 +1,99 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-10T23:19:26.033831+00:00",
+  "generated_at": "2026-06-11T13:06:08.701933+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 1182,
+  "active_listings": 300,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-10T16:33:05.588168+00:00",
-      "checked": 1182,
-      "lowered": 31,
+      "timestamp": "2026-06-11T00:04:46.352411+00:00",
+      "checked": 300,
+      "lowered": 8,
       "raised": 0,
-      "skipped_floor": 808,
-      "skipped_few": 186,
-      "unchanged": 152,
-      "errors": 5,
+      "set_to_floor": 211,
+      "skipped_floor": 0,
+      "skipped_few": 21,
+      "unchanged": 45,
+      "errors": 15,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "NOCO0011",
-        "title": "NOCO GENIUS10EU | 10A Battery Charger | Geniu",
-        "old": 136.99,
-        "new": 131.99,
-        "diff": -5.0,
+        "sku": "CAMD0003",
+        "title": "DJI O4 Air Unit für FPV-Drohne",
+        "old": 157.99,
+        "new": 147.99,
+        "diff": -10.0,
         "action": "lowered"
       },
       {
-        "sku": "NOCO0021",
-        "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case |",
-        "old": 38.99,
-        "new": 37.99,
-        "diff": -1.0,
+        "sku": "CPUA0065",
+        "title": "AMD Ryzen 5 5600X BOX | 100-100000065BOX",
+        "old": 206.99,
+        "new": 194.99,
+        "diff": -12.0,
         "action": "lowered"
       },
       {
-        "sku": "NOCO0024",
-        "title": "NOCO GBC101 | NOCO GBX45 EVA Protection Case ",
-        "old": 38.99,
-        "new": 36.99,
-        "diff": -2.0,
+        "sku": "CPUA0067",
+        "title": "AMD Ryzen 9 5950X BOX | 100-100000059WOF",
+        "old": 460.99,
+        "new": 438.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "NOCO0025",
-        "title": "NOCO GBC102 | NOCO GBX55 EVA Protection Case ",
-        "old": 43.99,
-        "new": 42.99,
-        "diff": -1.0,
+        "sku": "CPUA0098",
+        "title": "AMD Ryzen 7 7700X BOX | 100-100000591WOF",
+        "old": 293.99,
+        "new": 277.99,
+        "diff": -16.0,
         "action": "lowered"
       },
       {
-        "sku": "SHG0023",
-        "title": "Govee - Double Sided Tape (15pcs) for RGBIC L",
-        "old": 15.99,
-        "new": 14.99,
-        "diff": -1.0,
+        "sku": "CPUA0125",
+        "title": "AMD Ryzen 9 9900X BOX | 100-100000662WOF",
+        "old": 461.99,
+        "new": 439.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2024",
-        "title": "Equip USB 2.0 Extansion Cable - USB (M) - USB",
-        "old": 11.99,
-        "new": 10.99,
-        "diff": -1.0,
+        "sku": "CPUA0130",
+        "title": "AMD Ryzen 7 9800X3D BOX | 100-100001084WOF",
+        "old": 579.99,
+        "new": 552.95,
+        "diff": -27.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2029",
-        "title": "Equip USB 2.0 Cable - USB-A (M) - USB-B (M) -",
-        "old": 11.99,
-        "new": 10.99,
-        "diff": -1.0,
+        "sku": "CPUA0135",
+        "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
+        "old": 706.99,
+        "new": 675.95,
+        "diff": -31.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2030",
-        "title": "Equip USB 2.0 Cable - USB-A (M) - USB-B (M) -",
-        "old": 13.99,
-        "new": 11.99,
-        "diff": -2.0,
+        "sku": "CPUA0136",
+        "title": "AMD Ryzen 9 9950X3D BOX | 100-100000719WOF",
+        "old": 839.99,
+        "new": 802.95,
+        "diff": -37.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2031",
-        "title": "Equip USB 2.0 Cable - USB-A (M) - USB-A (M) -",
-        "old": 12.99,
-        "new": 11.99,
-        "diff": -1.0,
+        "sku": "CPUA0139",
+        "title": "AMD Ryzen 7 9850X3D BOX | 100-100001973WOF",
+        "old": 626.99,
+        "new": 597.95,
+        "diff": -29.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2065",
-        "title": "Equip Patch Cable - CAT6 S/FTP - 15m - Grey",
-        "old": 27.99,
-        "new": 23.99,
-        "diff": -4.0,
+        "sku": "CPUI0173",
+        "title": "Intel Cpu Core i9-13900KF, box | BX8071513900",
+        "old": 604.99,
+        "new": 576.95,
+        "diff": -28.04,
         "action": "lowered"
       }
     ],
@@ -120,6 +121,12 @@ window.DASHBOARD_DATA = {
         "lowered": 31,
         "raised": 0,
         "floor": 808
+      },
+      {
+        "date": "2026-06-11",
+        "lowered": 8,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -143,43 +150,43 @@ window.DASHBOARD_DATA = {
     },
     "chart_7d": [
       {
-        "date": "04.06",
+        "date": "05.06",
         "revenue": 468.47,
         "profit": 105.68,
         "sales": 3
       },
       {
-        "date": "05.06",
+        "date": "06.06",
         "revenue": 481.41,
         "profit": 123.7,
         "sales": 1
       },
       {
-        "date": "06.06",
+        "date": "07.06",
         "revenue": 404.96,
         "profit": 62.73,
         "sales": 1
       },
       {
-        "date": "07.06",
+        "date": "08.06",
         "revenue": 462.87,
         "profit": 106.58,
         "sales": 1
       },
       {
-        "date": "08.06",
+        "date": "09.06",
         "revenue": 498.58,
         "profit": 139.09,
         "sales": 1
       },
       {
-        "date": "09.06",
+        "date": "10.06",
         "revenue": 362.35,
         "profit": 95.11,
         "sales": 6
       },
       {
-        "date": "10.06",
+        "date": "11.06",
         "revenue": 425.78,
         "profit": 105.08,
         "sales": 5
@@ -187,181 +194,181 @@ window.DASHBOARD_DATA = {
     ],
     "chart_30d": [
       {
-        "date": "12.05",
+        "date": "13.05",
         "revenue": 451.56,
         "profit": 159.64,
         "sales": 2
       },
       {
-        "date": "13.05",
+        "date": "14.05",
         "revenue": 456.64,
         "profit": 88.4,
         "sales": 2
       },
       {
-        "date": "14.05",
+        "date": "15.05",
         "revenue": 509.37,
         "profit": 151.45,
         "sales": 1
       },
       {
-        "date": "15.05",
+        "date": "16.05",
         "revenue": 510.13,
         "profit": 116.21,
         "sales": 3
       },
       {
-        "date": "16.05",
+        "date": "17.05",
         "revenue": 364.61,
         "profit": 82.49,
         "sales": 6
       },
       {
-        "date": "17.05",
+        "date": "18.05",
         "revenue": 440.02,
         "profit": 113.26,
         "sales": 4
       },
       {
-        "date": "18.05",
+        "date": "19.05",
         "revenue": 538.64,
         "profit": 119.9,
         "sales": 6
       },
       {
-        "date": "19.05",
+        "date": "20.05",
         "revenue": 362.99,
         "profit": 76.3,
         "sales": 5
       },
       {
-        "date": "20.05",
+        "date": "21.05",
         "revenue": 490.78,
         "profit": 118.88,
         "sales": 6
       },
       {
-        "date": "21.05",
+        "date": "22.05",
         "revenue": 489.15,
         "profit": 130.47,
         "sales": 1
       },
       {
-        "date": "22.05",
+        "date": "23.05",
         "revenue": 578.65,
         "profit": 70.42,
         "sales": 4
       },
       {
-        "date": "23.05",
+        "date": "24.05",
         "revenue": 460.12,
         "profit": 144.98,
         "sales": 3
       },
       {
-        "date": "24.05",
+        "date": "25.05",
         "revenue": 519.1,
         "profit": 129.98,
         "sales": 6
       },
       {
-        "date": "25.05",
+        "date": "26.05",
         "revenue": 459.99,
         "profit": 168.39,
         "sales": 6
       },
       {
-        "date": "26.05",
+        "date": "27.05",
         "revenue": 582.34,
         "profit": 125.39,
         "sales": 5
       },
       {
-        "date": "27.05",
+        "date": "28.05",
         "revenue": 473.75,
         "profit": 95.19,
         "sales": 4
       },
       {
-        "date": "28.05",
+        "date": "29.05",
         "revenue": 457.21,
         "profit": 166.51,
         "sales": 6
       },
       {
-        "date": "29.05",
+        "date": "30.05",
         "revenue": 366.16,
         "profit": 96.7,
         "sales": 1
       },
       {
-        "date": "30.05",
+        "date": "31.05",
         "revenue": 482.68,
         "profit": 116.33,
         "sales": 3
       },
       {
-        "date": "31.05",
+        "date": "01.06",
         "revenue": 455.92,
         "profit": 115.38,
         "sales": 5
       },
       {
-        "date": "01.06",
+        "date": "02.06",
         "revenue": 529.6,
         "profit": 94.76,
         "sales": 6
       },
       {
-        "date": "02.06",
+        "date": "03.06",
         "revenue": 313.72,
         "profit": 110.25,
         "sales": 6
       },
       {
-        "date": "03.06",
+        "date": "04.06",
         "revenue": 419.33,
         "profit": 115.01,
         "sales": 2
       },
       {
-        "date": "04.06",
+        "date": "05.06",
         "revenue": 476.87,
         "profit": 78.9,
         "sales": 6
       },
       {
-        "date": "05.06",
+        "date": "06.06",
         "revenue": 332.7,
         "profit": 82.94,
         "sales": 4
       },
       {
-        "date": "06.06",
+        "date": "07.06",
         "revenue": 301.83,
         "profit": 175.61,
         "sales": 2
       },
       {
-        "date": "07.06",
+        "date": "08.06",
         "revenue": 445.13,
         "profit": 109.35,
         "sales": 1
       },
       {
-        "date": "08.06",
+        "date": "09.06",
         "revenue": 509.62,
         "profit": 98.97,
         "sales": 2
       },
       {
-        "date": "09.06",
+        "date": "10.06",
         "revenue": 501.9,
         "profit": 84.73,
         "sales": 1
       },
       {
-        "date": "10.06",
+        "date": "11.06",
         "revenue": 399.32,
         "profit": 132.29,
         "sales": 4
@@ -369,541 +376,541 @@ window.DASHBOARD_DATA = {
     ],
     "chart_90d": [
       {
-        "date": "13.03",
+        "date": "14.03",
         "revenue": 270.59,
         "profit": 97.89,
         "sales": 1
       },
       {
-        "date": "14.03",
+        "date": "15.03",
         "revenue": 463.26,
         "profit": 98.83,
         "sales": 5
       },
       {
-        "date": "15.03",
+        "date": "16.03",
         "revenue": 480.75,
         "profit": 67.23,
         "sales": 3
       },
       {
-        "date": "16.03",
+        "date": "17.03",
         "revenue": 545.31,
         "profit": 127.22,
         "sales": 4
       },
       {
-        "date": "17.03",
+        "date": "18.03",
         "revenue": 608.0,
         "profit": 110.82,
         "sales": 6
       },
       {
-        "date": "18.03",
+        "date": "19.03",
         "revenue": 472.08,
         "profit": 139.36,
         "sales": 2
       },
       {
-        "date": "19.03",
+        "date": "20.03",
         "revenue": 442.1,
         "profit": 109.43,
         "sales": 6
       },
       {
-        "date": "20.03",
+        "date": "21.03",
         "revenue": 445.78,
         "profit": 144.04,
         "sales": 5
       },
       {
-        "date": "21.03",
+        "date": "22.03",
         "revenue": 504.43,
         "profit": 132.96,
         "sales": 2
       },
       {
-        "date": "22.03",
+        "date": "23.03",
         "revenue": 345.3,
         "profit": 99.37,
         "sales": 5
       },
       {
-        "date": "23.03",
+        "date": "24.03",
         "revenue": 574.27,
         "profit": 93.44,
         "sales": 4
       },
       {
-        "date": "24.03",
+        "date": "25.03",
         "revenue": 662.67,
         "profit": 117.02,
         "sales": 3
       },
       {
-        "date": "25.03",
+        "date": "26.03",
         "revenue": 483.93,
         "profit": 128.52,
         "sales": 5
       },
       {
-        "date": "26.03",
+        "date": "27.03",
         "revenue": 511.99,
         "profit": 106.54,
         "sales": 4
       },
       {
-        "date": "27.03",
+        "date": "28.03",
         "revenue": 569.08,
         "profit": 46.79,
         "sales": 5
       },
       {
-        "date": "28.03",
+        "date": "29.03",
         "revenue": 484.17,
         "profit": 96.96,
         "sales": 4
       },
       {
-        "date": "29.03",
+        "date": "30.03",
         "revenue": 525.41,
         "profit": 105.08,
         "sales": 5
       },
       {
-        "date": "30.03",
+        "date": "31.03",
         "revenue": 538.37,
         "profit": 91.16,
         "sales": 2
       },
       {
-        "date": "31.03",
+        "date": "01.04",
         "revenue": 601.06,
         "profit": 91.88,
         "sales": 6
       },
       {
-        "date": "01.04",
+        "date": "02.04",
         "revenue": 500.89,
         "profit": 130.6,
         "sales": 6
       },
       {
-        "date": "02.04",
+        "date": "03.04",
         "revenue": 429.46,
         "profit": 88.3,
         "sales": 5
       },
       {
-        "date": "03.04",
+        "date": "04.04",
         "revenue": 422.4,
         "profit": 115.66,
         "sales": 1
       },
       {
-        "date": "04.04",
+        "date": "05.04",
         "revenue": 423.98,
         "profit": 138.33,
         "sales": 2
       },
       {
-        "date": "05.04",
+        "date": "06.04",
         "revenue": 471.83,
         "profit": 108.42,
         "sales": 6
       },
       {
-        "date": "06.04",
+        "date": "07.04",
         "revenue": 440.8,
         "profit": 96.77,
         "sales": 1
       },
       {
-        "date": "07.04",
+        "date": "08.04",
         "revenue": 499.5,
         "profit": 102.6,
         "sales": 2
       },
       {
-        "date": "08.04",
+        "date": "09.04",
         "revenue": 463.59,
         "profit": 138.36,
         "sales": 5
       },
       {
-        "date": "09.04",
+        "date": "10.04",
         "revenue": 606.23,
         "profit": 153.25,
         "sales": 5
       },
       {
-        "date": "10.04",
+        "date": "11.04",
         "revenue": 427.02,
         "profit": 101.4,
         "sales": 4
       },
       {
-        "date": "11.04",
+        "date": "12.04",
         "revenue": 498.38,
         "profit": 94.8,
         "sales": 1
       },
       {
-        "date": "12.04",
+        "date": "13.04",
         "revenue": 439.5,
         "profit": 90.34,
         "sales": 4
       },
       {
-        "date": "13.04",
+        "date": "14.04",
         "revenue": 353.48,
         "profit": 118.31,
         "sales": 6
       },
       {
-        "date": "14.04",
+        "date": "15.04",
         "revenue": 414.26,
         "profit": 80.39,
         "sales": 1
       },
       {
-        "date": "15.04",
+        "date": "16.04",
         "revenue": 420.38,
         "profit": 123.07,
         "sales": 1
       },
       {
-        "date": "16.04",
+        "date": "17.04",
         "revenue": 480.44,
         "profit": 126.24,
         "sales": 4
       },
       {
-        "date": "17.04",
+        "date": "18.04",
         "revenue": 512.42,
         "profit": 122.28,
         "sales": 4
       },
       {
-        "date": "18.04",
+        "date": "19.04",
         "revenue": 480.22,
         "profit": 166.65,
         "sales": 4
       },
       {
-        "date": "19.04",
+        "date": "20.04",
         "revenue": 536.15,
         "profit": 64.02,
         "sales": 1
       },
       {
-        "date": "20.04",
+        "date": "21.04",
         "revenue": 769.17,
         "profit": 139.73,
         "sales": 1
       },
       {
-        "date": "21.04",
+        "date": "22.04",
         "revenue": 659.28,
         "profit": 98.95,
         "sales": 2
       },
       {
-        "date": "22.04",
+        "date": "23.04",
         "revenue": 526.3,
         "profit": 134.93,
         "sales": 2
       },
       {
-        "date": "23.04",
+        "date": "24.04",
         "revenue": 593.86,
         "profit": 69.46,
         "sales": 2
       },
       {
-        "date": "24.04",
+        "date": "25.04",
         "revenue": 311.6,
         "profit": 160.06,
         "sales": 3
       },
       {
-        "date": "25.04",
+        "date": "26.04",
         "revenue": 605.61,
         "profit": 90.47,
         "sales": 3
       },
       {
-        "date": "26.04",
+        "date": "27.04",
         "revenue": 302.13,
         "profit": 139.2,
         "sales": 5
       },
       {
-        "date": "27.04",
+        "date": "28.04",
         "revenue": 431.42,
         "profit": 85.44,
         "sales": 2
       },
       {
-        "date": "28.04",
+        "date": "29.04",
         "revenue": 419.08,
         "profit": 172.99,
         "sales": 5
       },
       {
-        "date": "29.04",
+        "date": "30.04",
         "revenue": 477.46,
         "profit": 101.17,
         "sales": 3
       },
       {
-        "date": "30.04",
+        "date": "01.05",
         "revenue": 579.22,
         "profit": 121.64,
         "sales": 5
       },
       {
-        "date": "01.05",
+        "date": "02.05",
         "revenue": 566.1,
         "profit": 95.07,
         "sales": 1
       },
       {
-        "date": "02.05",
+        "date": "03.05",
         "revenue": 511.71,
         "profit": 107.51,
         "sales": 2
       },
       {
-        "date": "03.05",
+        "date": "04.05",
         "revenue": 507.28,
         "profit": 113.91,
         "sales": 2
       },
       {
-        "date": "04.05",
+        "date": "05.05",
         "revenue": 323.13,
         "profit": 143.87,
         "sales": 5
       },
       {
-        "date": "05.05",
+        "date": "06.05",
         "revenue": 482.56,
         "profit": 143.58,
         "sales": 5
       },
       {
-        "date": "06.05",
+        "date": "07.05",
         "revenue": 581.9,
         "profit": 128.03,
         "sales": 5
       },
       {
-        "date": "07.05",
+        "date": "08.05",
         "revenue": 295.02,
         "profit": 101.67,
         "sales": 2
       },
       {
-        "date": "08.05",
+        "date": "09.05",
         "revenue": 446.42,
         "profit": 90.99,
         "sales": 3
       },
       {
-        "date": "09.05",
+        "date": "10.05",
         "revenue": 385.29,
         "profit": 132.72,
         "sales": 3
       },
       {
-        "date": "10.05",
+        "date": "11.05",
         "revenue": 302.59,
         "profit": 125.27,
         "sales": 1
       },
       {
-        "date": "11.05",
+        "date": "12.05",
         "revenue": 591.27,
         "profit": 112.04,
         "sales": 5
       },
       {
-        "date": "12.05",
+        "date": "13.05",
         "revenue": 511.2,
         "profit": 109.76,
         "sales": 2
       },
       {
-        "date": "13.05",
+        "date": "14.05",
         "revenue": 437.38,
         "profit": 109.51,
         "sales": 3
       },
       {
-        "date": "14.05",
+        "date": "15.05",
         "revenue": 600.53,
         "profit": 75.01,
         "sales": 3
       },
       {
-        "date": "15.05",
+        "date": "16.05",
         "revenue": 461.27,
         "profit": 136.2,
         "sales": 5
       },
       {
-        "date": "16.05",
+        "date": "17.05",
         "revenue": 448.33,
         "profit": 77.07,
         "sales": 6
       },
       {
-        "date": "17.05",
+        "date": "18.05",
         "revenue": 363.18,
         "profit": 103.29,
         "sales": 5
       },
       {
-        "date": "18.05",
+        "date": "19.05",
         "revenue": 443.96,
         "profit": 145.13,
         "sales": 2
       },
       {
-        "date": "19.05",
+        "date": "20.05",
         "revenue": 464.75,
         "profit": 162.28,
         "sales": 6
       },
       {
-        "date": "20.05",
+        "date": "21.05",
         "revenue": 419.74,
         "profit": 103.46,
         "sales": 5
       },
       {
-        "date": "21.05",
+        "date": "22.05",
         "revenue": 497.95,
         "profit": 132.21,
         "sales": 6
       },
       {
-        "date": "22.05",
+        "date": "23.05",
         "revenue": 438.35,
         "profit": 95.38,
         "sales": 4
       },
       {
-        "date": "23.05",
+        "date": "24.05",
         "revenue": 478.77,
         "profit": 164.63,
         "sales": 1
       },
       {
-        "date": "24.05",
+        "date": "25.05",
         "revenue": 550.24,
         "profit": 124.38,
         "sales": 3
       },
       {
-        "date": "25.05",
+        "date": "26.05",
         "revenue": 549.32,
         "profit": 116.16,
         "sales": 2
       },
       {
-        "date": "26.05",
+        "date": "27.05",
         "revenue": 439.39,
         "profit": 95.21,
         "sales": 6
       },
       {
-        "date": "27.05",
+        "date": "28.05",
         "revenue": 363.14,
         "profit": 123.97,
         "sales": 5
       },
       {
-        "date": "28.05",
+        "date": "29.05",
         "revenue": 511.58,
         "profit": 110.6,
         "sales": 6
       },
       {
-        "date": "29.05",
+        "date": "30.05",
         "revenue": 562.72,
         "profit": 92.18,
         "sales": 3
       },
       {
-        "date": "30.05",
+        "date": "31.05",
         "revenue": 440.66,
         "profit": 102.99,
         "sales": 2
       },
       {
-        "date": "31.05",
+        "date": "01.06",
         "revenue": 553.58,
         "profit": 116.19,
         "sales": 1
       },
       {
-        "date": "01.06",
+        "date": "02.06",
         "revenue": 524.23,
         "profit": 99.81,
         "sales": 2
       },
       {
-        "date": "02.06",
+        "date": "03.06",
         "revenue": 442.74,
         "profit": 89.75,
         "sales": 5
       },
       {
-        "date": "03.06",
+        "date": "04.06",
         "revenue": 540.99,
         "profit": 93.01,
         "sales": 5
       },
       {
-        "date": "04.06",
+        "date": "05.06",
         "revenue": 479.4,
         "profit": 52.99,
         "sales": 2
       },
       {
-        "date": "05.06",
+        "date": "06.06",
         "revenue": 624.25,
         "profit": 58.61,
         "sales": 2
       },
       {
-        "date": "06.06",
+        "date": "07.06",
         "revenue": 493.17,
         "profit": 106.2,
         "sales": 6
       },
       {
-        "date": "07.06",
+        "date": "08.06",
         "revenue": 604.28,
         "profit": 90.05,
         "sales": 4
       },
       {
-        "date": "08.06",
+        "date": "09.06",
         "revenue": 531.52,
         "profit": 62.72,
         "sales": 2
       },
       {
-        "date": "09.06",
+        "date": "10.06",
         "revenue": 465.16,
         "profit": 153.75,
         "sales": 1
       },
       {
-        "date": "10.06",
+        "date": "11.06",
         "revenue": 463.37,
         "profit": 114.73,
         "sales": 4
