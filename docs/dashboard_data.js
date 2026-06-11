@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-11T13:58:06.395072+00:00",
+  "generated_at": "2026-06-11T16:26:57.131152+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 300,
   "repricing": {
@@ -1102,16 +1102,7 @@ window.DASHBOARD_DATA = {
         "urgent": false
       }
     ],
-    "tracking_missing": [
-      {
-        "order_id": "20-14740-74871",
-        "date": "2026-06-11",
-        "items": [
-          "ECOFLOW Smart Plug 2"
-        ],
-        "buyer": "jokez"
-      }
-    ],
+    "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 27.93,
       "est_month": 15.4,
