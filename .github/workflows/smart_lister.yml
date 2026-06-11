@@ -1,0 +1,83 @@
+name: Smart Lister
+
+on:
+  schedule:
+    - cron: "0 2 * * *"      # Täglich 02:00 UTC — Score-Cache aktualisieren
+    - cron: "0 3 * * 1"      # Montags 03:00 UTC — Top-Artikel neu auswählen
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "scan = Cache, select = Auswahl, both = beides"
+        required: false
+        default: "both"
+      top:
+        description: "Anzahl Artikel (Standard: 2300)"
+        required: false
+        default: "2300"
+      dry_run:
+        description: "Dry-run? (true/false)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: smart-lister
+  cancel-in-progress: false
+
+jobs:
+  smart-lister:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore Score-Cache
+        uses: actions/cache@v4
+        with:
+          path: ebay_score_cache.json
+          key: ebay-score-cache-${{ github.run_id }}
+          restore-keys: |
+            ebay-score-cache-
+
+      - name: Score-Cache aktualisieren (täglich)
+        if: github.event.schedule == '0 2 * * *' || github.event.inputs.mode == 'scan' || github.event.inputs.mode == 'both'
+        env:
+          EBAY_CLIENT_ID:     ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+        run: python smart_lister.py --scan
+
+      - name: Top-Artikel auswählen (montags)
+        if: github.event.schedule == '0 3 * * 1' || github.event.inputs.mode == 'select' || github.event.inputs.mode == 'both'
+        env:
+          EBAY_CLIENT_ID:     ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+        run: |
+          ARGS="--select --top ${{ github.event.inputs.top || '2300' }}"
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          python smart_lister.py $ARGS
+
+      - name: Save Score-Cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: ebay_score_cache.json
+          key: ebay-score-cache-${{ github.run_id }}
+
+      - name: Commit supplier_map + cache
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add supplier_map.json ebay_score_cache.json || true
+          git diff --staged --quiet || git commit -m "chore: smart_lister update $(date -u '+%Y-%m-%d')"
+          git pull --rebase origin main || true
+          git push || true
