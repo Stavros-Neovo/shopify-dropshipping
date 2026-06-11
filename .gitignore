@@ -22,3 +22,10 @@ processed_orders_state_shop2.json
 tracked_shipments_state.json
 tracked_shipments_state_shop2.json
 image_report.csv
+
+# Temporäre/lokale Dateien
+*.bak
+*_backup*.csv
+image_review.html
+wrong_images.json
+outbox/
