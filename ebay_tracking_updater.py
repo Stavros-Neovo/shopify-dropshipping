@@ -24,6 +24,7 @@ from __future__ import annotations
 import argparse
 import email
 import imaplib
+import io
 import json
 import logging
 import os
@@ -38,6 +39,13 @@ import yaml
 from dotenv import load_dotenv
 
 from ebay_client import EbayClient
+
+# PDF-Parsing (optional — wird nur genutzt wenn installiert)
+try:
+    import pdfplumber
+    HAS_PDFPLUMBER = True
+except ImportError:
+    HAS_PDFPLUMBER = False
 
 log = logging.getLogger("ebay_tracking_updater")
 
@@ -69,8 +77,15 @@ def _detect_carrier(tracking: str) -> str:
 # ---------------------------------------------------------------------------
 # IMAP: Mails von BAB lesen
 # ---------------------------------------------------------------------------
+BAB_SENDERS = [
+    "sschulze@bab-distribution.de",
+    "noreply@bab-distribution.de",
+    "info@bab-distribution.de",
+]
+
+
 def fetch_bab_emails(supplier_email: str) -> list[tuple[bytes, email.message.Message]]:
-    """Holt ungelesene Mails vom konfigurierten IMAP-Konto."""
+    """Holt ungelesene Mails von BAB (alle bekannten Absender)."""
     host = os.environ.get("IMAP_HOST") or os.environ.get("SMTP_HOST", "")
     port = int(os.environ.get("IMAP_PORT", 993))
     user = os.environ.get("IMAP_USER") or os.environ.get("SMTP_USER", "")
@@ -80,23 +95,29 @@ def fetch_bab_emails(supplier_email: str) -> list[tuple[bytes, email.message.Mes
         log.error("IMAP-Zugangsdaten fehlen (IMAP_HOST/IMAP_USER/IMAP_PASSWORD)")
         return []
 
+    # Alle BAB-Absender abfragen (inkl. aus config)
+    senders = list({supplier_email.lower()} | {s.lower() for s in BAB_SENDERS})
+
     results = []
+    seen_ids: set = set()
     try:
         M = imaplib.IMAP4_SSL(host, port)
         M.login(user, pw)
         M.select("INBOX")
 
-        # Suche: Von BAB, ungelesen
-        search = f'(FROM "{supplier_email}" UNSEEN)'
-        _, data = M.search(None, search)
-        ids = data[0].split()
-        log.info(f"IMAP: {len(ids)} ungelesene Mails von {supplier_email}")
-
-        for msg_id in ids:
-            _, msg_data = M.fetch(msg_id, "(RFC822)")
-            raw = msg_data[0][1]
-            msg = email.message_from_bytes(raw)
-            results.append((msg_id, msg))
+        for sender in senders:
+            search = f'(FROM "{sender}" UNSEEN)'
+            _, data = M.search(None, search)
+            ids = data[0].split()
+            log.info(f"IMAP: {len(ids)} ungelesene Mails von {sender}")
+            for msg_id in ids:
+                if msg_id in seen_ids:
+                    continue
+                seen_ids.add(msg_id)
+                _, msg_data = M.fetch(msg_id, "(RFC822)")
+                raw = msg_data[0][1]
+                msg = email.message_from_bytes(raw)
+                results.append((msg_id, msg))
 
         M.close()
         M.logout()
@@ -124,19 +145,41 @@ def mark_as_read(msg_id: bytes, supplier_email: str):
 
 
 # ---------------------------------------------------------------------------
-# Text aus Mail extrahieren
+# Text + PDF-Anhänge aus Mail extrahieren
 # ---------------------------------------------------------------------------
+def extract_pdf_text(pdf_bytes: bytes) -> str:
+    """Extrahiert Text aus einem PDF (benötigt pdfplumber)."""
+    if not HAS_PDFPLUMBER:
+        return ""
+    try:
+        with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
+            return "\n".join(p.extract_text() or "" for p in pdf.pages)
+    except Exception as e:
+        log.warning(f"PDF-Parsing fehlgeschlagen: {e}")
+        return ""
+
+
 def extract_text(msg: email.message.Message) -> str:
+    """Extrahiert Text aus Email-Body + PDF-Anhängen."""
     parts = []
     if msg.is_multipart():
         for part in msg.walk():
-            if part.get_content_type() == "text/plain":
+            ct = part.get_content_type()
+            if ct == "text/plain":
                 try:
                     parts.append(part.get_payload(decode=True).decode(
                         part.get_content_charset() or "utf-8", errors="replace"
                     ))
                 except Exception:
                     pass
+            elif ct == "application/pdf":
+                # PDF-Anhang → Text extrahieren
+                pdf_bytes = part.get_payload(decode=True)
+                if pdf_bytes:
+                    pdf_text = extract_pdf_text(pdf_bytes)
+                    if pdf_text:
+                        log.info(f"PDF-Anhang '{part.get_filename()}' gelesen ({len(pdf_text)} Zeichen)")
+                        parts.append(pdf_text)
     else:
         try:
             parts.append(msg.get_payload(decode=True).decode(
@@ -179,17 +222,34 @@ def extract_order_and_tracking(subject: str, body: str) -> tuple[Optional[str], 
 # ---------------------------------------------------------------------------
 # eBay: Versand melden
 # ---------------------------------------------------------------------------
+def get_line_item_ids(client: EbayClient, order_id: str) -> list[str]:
+    """Holt alle Line Item IDs einer eBay-Bestellung."""
+    try:
+        order = client._request("GET", f"{FULFILLMENT_PATH}/{order_id}")
+        return [item["lineItemId"] for item in order.get("lineItems", [])]
+    except Exception as e:
+        log.warning(f"Line Items für {order_id} nicht abrufbar: {e}")
+        return []
+
+
 def mark_shipped_on_ebay(client: EbayClient, order_id: str, tracking: str, dry_run: bool = False):
     """Meldet den Versand einer eBay-Bestellung mit Tracking-Nummer."""
     carrier = _detect_carrier(tracking)
+
+    # Line Item IDs abrufen (eBay erfordert diese)
+    line_item_ids = get_line_item_ids(client, order_id)
+    if not line_item_ids:
+        log.error(f"Keine Line Items für Order {order_id} gefunden — Abbruch")
+        return
+
     payload = {
-        "lineItems": [],  # leer = alle Artikel in der Bestellung
+        "lineItems": [{"lineItemId": lid} for lid in line_item_ids],
         "shippedDate": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
         "shippingCarrierCode": carrier,
         "trackingNumber": tracking,
     }
 
-    log.info(f"eBay Versand melden: Order {order_id} | {carrier} {tracking}")
+    log.info(f"eBay Versand melden: Order {order_id} | {carrier} {tracking} | Items: {line_item_ids}")
 
     if dry_run:
         log.warning(f"DRY-RUN — würde senden: {json.dumps(payload, indent=2)}")

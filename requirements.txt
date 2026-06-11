@@ -4,3 +4,4 @@ python-dotenv>=1.0.0
 flask>=3.0.0
 # eBay OAuth Flow (lokaler Callback-Server)
 # requests ist bereits oben — kein extra Package nötig
+pdfplumber
