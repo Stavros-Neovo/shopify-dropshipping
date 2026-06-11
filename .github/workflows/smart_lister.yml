@@ -18,6 +18,10 @@ on:
         description: "Dry-run? (true/false)"
         required: false
         default: "false"
+      limit:
+        description: "Max API-Calls pro Run (Standard: 1200)"
+        required: false
+        default: "1200"
 
 concurrency:
   group: smart-lister
@@ -54,7 +58,7 @@ jobs:
         run: |
           if [ -f ebay_score_cache.json ]; then
             COUNT=$(python3 -c "import json; print(len(json.load(open('ebay_score_cache.json'))))" 2>/dev/null || echo "?")
-            echo "Cache im Repo: $COUNT EANs"
+            echo "Cache im Repo: $COUNT EANs gecacht"
           else
             echo "Kein Cache im Repo — starte frisch"
           fi
@@ -67,16 +71,17 @@ jobs:
           MODE="${{ github.event.inputs.mode }}"
           TOP="${{ github.event.inputs.top || '2300' }}"
           DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          LIMIT="${{ github.event.inputs.limit || '4800' }}"
 
           # Schedule: täglich nur scan, montags beides
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            HOUR=$(date -u +%H)
             DOW=$(date -u +%u)
             if [ "$DOW" = "1" ]; then MODE="both"; else MODE="scan"; fi
+            LIMIT="4800"
           fi
 
           # Argumente aufbauen
-          ARGS=""
+          ARGS="--limit $LIMIT"
           [ "$MODE" = "scan" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --scan"
           [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --select --top $TOP"
           [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
@@ -84,7 +89,7 @@ jobs:
           echo "Starte: python smart_lister.py $ARGS"
           python smart_lister.py $ARGS
 
-      - name: Commit Cache + supplier_map
+      - name: Cache ins Repo committen
         if: always()
         run: |
           git config user.name "github-actions[bot]"
@@ -93,6 +98,6 @@ jobs:
           if [ "${{ github.event.inputs.dry_run }}" != "true" ]; then
             git add supplier_map.json || true
           fi
-          git diff --staged --quiet || git commit -m "chore: smart_lister cache update $(date -u '+%Y-%m-%d %H:%M')"
+          git diff --staged --quiet || git commit -m "chore: smart_lister cache $(date -u '+%Y-%m-%d %H:%M') UTC"
           git pull --rebase origin main || true
           git push || true

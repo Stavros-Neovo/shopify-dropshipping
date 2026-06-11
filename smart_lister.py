@@ -502,6 +502,7 @@ def main():
     parser.add_argument("--select",   action="store_true", help="Top-Artikel auswählen + supplier_map schreiben")
     parser.add_argument("--dry-run",  action="store_true", help="Nichts schreiben, nur anzeigen")
     parser.add_argument("--top",      type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
+    parser.add_argument("--limit",    type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
     parser.add_argument("--config",   default=CONFIG_FILE)
     args = parser.parse_args()
 
@@ -540,7 +541,7 @@ def main():
             log.error("EBAY_CLIENT_ID / EBAY_CLIENT_SECRET fehlen")
             sys.exit(1)
         all_eans = list(catalog.keys())
-        cache = update_score_cache(all_eans, cache, client_id, client_secret)
+        cache = update_score_cache(all_eans, cache, client_id, client_secret, max_calls=args.limit)
 
     # Top-Artikel auswählen
     if args.select:
