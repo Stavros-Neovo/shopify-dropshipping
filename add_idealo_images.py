@@ -129,7 +129,8 @@ def main():
         ean = row.get(cols.get("ean", "GTIN"), "").strip()
         if not ean:
             continue
-        if ean in index and index[ean].get("images_all", "").strip():
+        BAD = ["logitech_cdn", "resource.logitech.com", "ipcstore"]
+        if ean in index and index[ean].get("images_all", "").strip() and not any(b in (index[ean].get("image_main","") + index[ean].get("source","")).lower() for b in BAD):
             continue
         missing.append({
             "ean":   ean,

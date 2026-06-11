@@ -32,7 +32,9 @@ from typing import Optional
 log = logging.getLogger("fix_images")
 
 ENRICHMENT_FILE = "enrichment_index.csv"
-BACKUP_FILE = "enrichment_index_backup.csv"
+BACKUP_FILE  = "enrichment_index_backup.csv"
+STATE_FILE   = "fix_images_state.json"
+CHUNK_SIZE   = 80   # Produkte pro Run (~50 Min)
 
 # ─── HTTP-Helper ─────────────────────────────────────────────────────────────
 HEADERS = {
@@ -154,6 +156,21 @@ def opd_image_by_ean(ean: str, timeout: int = 8) -> Optional[str]:
         pass
     return None
 
+
+
+def load_fix_state() -> dict:
+    try:
+        return json.loads(Path(STATE_FILE).read_text(encoding="utf-8"))
+    except Exception:
+        return {"offset": 0, "cycle": 1, "total_fixed": 0}
+
+def save_fix_state(offset: int, cycle: int, total_fixed: int):
+    Path(STATE_FILE).write_text(
+        json.dumps({"offset": offset, "cycle": cycle,
+                    "total_fixed": total_fixed,
+                    "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}, indent=2),
+        encoding="utf-8"
+    )
 
 # ─── Haupt-Logik ──────────────────────────────────────────────────────────────
 def load_csv(path: str) -> tuple[list[str], list[dict]]:
