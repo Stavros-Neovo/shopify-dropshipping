@@ -18,6 +18,10 @@ on:
         description: "Dry-run? (true/false)"
         required: false
         default: "false"
+      list_products:
+        description: "Artikel auf eBay listen? (true/false)"
+        required: false
+        default: "false"
       limit:
         description: "Max API-Calls pro Run (Standard: 1200)"
         required: false
@@ -84,6 +88,7 @@ jobs:
           ARGS="--limit $LIMIT"
           [ "$MODE" = "scan" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --scan"
           [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --select --top $TOP"
+          [ "${{ github.event.inputs.list_products }}" = "true" ] && ARGS="$ARGS --list"
           [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
 
           echo "Starte: python smart_lister.py $ARGS"

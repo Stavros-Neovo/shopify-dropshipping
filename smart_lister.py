@@ -503,10 +503,11 @@ def main():
     parser.add_argument("--dry-run",  action="store_true", help="Nichts schreiben, nur anzeigen")
     parser.add_argument("--top",      type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
     parser.add_argument("--limit",    type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
+    parser.add_argument("--list",     action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
     parser.add_argument("--config",   default=CONFIG_FILE)
     args = parser.parse_args()
 
-    if not args.scan and not args.select:
+    if not args.scan and not args.select and not args.list:
         parser.print_help()
         sys.exit(0)
 
@@ -588,8 +589,107 @@ def main():
         if args.dry_run:
             log.warning("DRY-RUN — supplier_map.json nicht gespeichert")
 
+    # Artikel listen
+    if args.list:
+        log.info("=== Artikel auf eBay listen ===")
+        # Aus supplier_map.json lesen (bereits durch --select gefüllt)
+        smap = load_supplier_map()
+        if not smap:
+            log.error("supplier_map.json leer — zuerst --select ausführen")
+        else:
+            # Supplier-Map in selected-Format konvertieren
+            to_list = []
+            for sku, entry in smap.items():
+                ean = entry.get("ean", "")
+                prod = catalog.get(ean, {})
+                art  = artdata.get(ean, {})
+                enr  = enrich.get(ean, {})
+                image = enr.get("image_main") or art.get("image") or ""
+                title = enr.get("title_seo") or art.get("title") or prod.get("name", sku)
+                to_list.append({
+                    "sku":      sku,
+                    "ean":      ean,
+                    "name":     title,
+                    "supplier": entry.get("supplier", ""),
+                    "vk":       entry.get("vk", 0.0),
+                    "image":    image,
+                })
+            log.info(f"Artikel zum Listen: {len(to_list)}")
+            list_products(to_list, cfg, dry_run=args.dry_run)
+
     log.info("=== Fertig ===")
 
 
 if __name__ == "__main__":
     main()
+
+
+# ---------------------------------------------------------------------------
+# --list: Ausgewählte Artikel auf eBay listen
+# ---------------------------------------------------------------------------
+def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dict:
+    """
+    Listet alle Artikel aus selected[] auf eBay via Inventory API.
+    Nutzt ebay_client.upsert_product() (Inventory + Offer + Publish).
+    Gibt {"ok": N, "skip": N, "error": N} zurück.
+    """
+    from ebay_client import EbayClient
+
+    ebay_cfg = cfg.get("ebay", {})
+    if not ebay_cfg.get("enabled", False):
+        log.error("eBay nicht aktiviert in config — abgebrochen")
+        return {"ok": 0, "skip": 0, "error": 0}
+
+    try:
+        client = EbayClient.from_env(ebay_cfg)
+    except Exception as e:
+        log.error(f"eBay Client Fehler: {e}")
+        return {"ok": 0, "skip": 0, "error": 0}
+
+    stats = {"ok": 0, "skip": 0, "error": 0}
+    total = len(selected)
+
+    for i, prod in enumerate(selected, 1):
+        sku  = prod["sku"]
+        ean  = prod["ean"]
+        name = prod["name"]
+        vk   = prod["vk"]
+
+        # Produkt-Dict für ebay_client aufbauen
+        product = {
+            "sku":         sku,
+            "ean":         ean,
+            "title":       name,
+            "description": name,  # Basis-Beschreibung — später Anthropic API
+            "category":    "",    # ebay_client bestimmt per Taxonomy-API
+            "stock":       1,     # Dropshipping: immer 1 verfügbar
+            "image_url":   prod.get("image", ""),
+            "image_urls":  [prod["image"]] if prod.get("image") else [],
+            "condition":   "NEW",
+        }
+
+        log.info(f"[{i}/{total}] Liste: SKU {sku} | {name[:50]} | VK {vk:.2f}€")
+
+        if dry_run:
+            log.warning(f"  DRY-RUN — würde listen: {sku}")
+            stats["ok"] += 1
+            continue
+
+        try:
+            result = client.upsert_product(product, vk)
+            listing_id = result.get("listing_id", "")
+            if listing_id:
+                log.info(f"  ✓ Gelistet: listingId {listing_id}")
+                stats["ok"] += 1
+            else:
+                log.warning(f"  ⚠ Kein listingId (Draft?): SKU {sku}")
+                stats["skip"] += 1
+        except Exception as e:
+            log.error(f"  ✗ Fehler SKU {sku}: {e}")
+            stats["error"] += 1
+
+        # Kurze Pause um Rate-Limits zu vermeiden
+        time.sleep(0.3)
+
+    log.info(f"=== Listing abgeschlossen: {stats['ok']} OK | {stats['skip']} Drafts | {stats['error']} Fehler ===")
+    return stats
