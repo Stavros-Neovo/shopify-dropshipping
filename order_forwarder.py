@@ -39,6 +39,34 @@ from typing import Any, Dict
 import yaml
 from dotenv import load_dotenv
 
+# ---------------------------------------------------------------------------
+# Supplier-Map: SKU → Lieferant
+# ---------------------------------------------------------------------------
+SUPPLIER_MAP_FILE = "supplier_map.json"
+
+SUPPLIER_EMAILS = {
+    "bab":     "SSchulze@bab-distribution.de",
+    "kosatec": "f.wueffel@kosatec.de",
+}
+
+def load_supplier_map(path: str = SUPPLIER_MAP_FILE) -> dict:
+    """Lädt supplier_map.json — {sku: {supplier, ek, email, ...}}"""
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def split_items_by_supplier(items: list, supplier_map: dict, default_supplier: str = "bab") -> dict[str, list]:
+    """Gruppiert Order-Items nach Lieferant. Gibt {supplier: [items]} zurück."""
+    groups: dict[str, list] = {}
+    for item in items:
+        sku = item.get("sku", "")
+        entry = supplier_map.get(sku, {})
+        supplier = entry.get("supplier", default_supplier).lower()
+        groups.setdefault(supplier, []).append(item)
+    return groups
+
 log = logging.getLogger("order_forwarder")
 
 
@@ -117,19 +145,19 @@ def build_email_body(order: Dict[str, Any], lang: str = "de") -> tuple[str, str]
     return subject, "\n".join(l for l in lines if l is not None)
 
 
-def _make_message(cfg: dict, subject: str, body: str) -> EmailMessage:
+def _make_message(cfg: dict, subject: str, body: str, recipient: str = None) -> EmailMessage:
     msg = EmailMessage()
     sender = os.environ.get("SMTP_USER", "no-reply@example.com")
     msg["From"] = f"{cfg['supplier_email']['from_name']} <{sender}>"
-    msg["To"] = cfg["supplier_email"]["to"]
+    msg["To"] = recipient or cfg["supplier_email"]["to"]
     msg["Subject"] = subject
     msg.set_content(body)
     return msg
 
 
-def send_email(cfg: dict, subject: str, body: str) -> None:
+def send_email(cfg: dict, subject: str, body: str, recipient: str = None) -> None:
     """Sendet die Mail via SMTP (oder schreibt sie nur in outbox/)."""
-    msg = _make_message(cfg, subject, body)
+    msg = _make_message(cfg, subject, body, recipient=recipient)
     auto_send = bool(cfg["supplier_email"].get("auto_send", False))
 
     if not auto_send:
@@ -194,8 +222,7 @@ def serve(cfg: dict, port: int):
             if not verify_hmac(raw, given, secret):
                 return jsonify({"error": "invalid hmac"}), 401
         order = json.loads(raw.decode("utf-8"))
-        subject, body = build_email_body(order, cfg["supplier_email"].get("language", "de"))
-        send_email(cfg, subject, body)
+        forward_order(cfg, order)
         return jsonify({"ok": True})
 
     @app.route("/health")
@@ -209,10 +236,38 @@ def serve(cfg: dict, port: int):
 # ---------------------------------------------------------------------------
 # Modus B: Manueller Send aus Order-JSON
 # ---------------------------------------------------------------------------
+def forward_order(cfg: dict, order: dict) -> None:
+    """Leitet eine Bestellung an den/die richtigen Lieferanten weiter."""
+    lang = cfg["supplier_email"].get("language", "de")
+    supplier_map = load_supplier_map()
+    default_supplier = "bab"
+
+    items = order.get("line_items", [])
+    groups = split_items_by_supplier(items, supplier_map, default_supplier)
+
+    for supplier, supplier_items in groups.items():
+        # Bestellung mit nur den Items dieses Lieferanten
+        sub_order = {**order, "line_items": supplier_items}
+        subject, body = build_email_body(sub_order, lang)
+
+        # Empfänger: aus supplier_map.email oder SUPPLIER_EMAILS lookup
+        recipient = None
+        for item in supplier_items:
+            sku = item.get("sku", "")
+            entry = supplier_map.get(sku, {})
+            if entry.get("email"):
+                recipient = entry["email"]
+                break
+        if not recipient:
+            recipient = SUPPLIER_EMAILS.get(supplier, cfg["supplier_email"]["to"])
+
+        log.info(f"Bestellung → {supplier.upper()} ({recipient}): {len(supplier_items)} Artikel")
+        send_email(cfg, subject, body, recipient=recipient)
+
+
 def send_from_file(cfg: dict, path: str):
     order = json.loads(Path(path).read_text(encoding="utf-8"))
-    subject, body = build_email_body(order, cfg["supplier_email"].get("language", "de"))
-    send_email(cfg, subject, body)
+    forward_order(cfg, order)
 
 
 # ---------------------------------------------------------------------------
