@@ -18,9 +18,10 @@ CONFIG_FILE    = "config_shop2.yaml"
 ORDERS_PATH    = "/sell/fulfillment/v1/order"
 SHOPIFY_CSV    = "docs/shopify_products.csv"
 
-EBAY_FEE   = 0.13   # 13 % eBay-Gebühren
-VAT_FACTOR = 1.19   # Brutto → Netto
-SHIP_COST  = 5.0    # Pauschale Versandkosten
+EBAY_FEE    = 0.13   # 13 % eBay-Gebühren
+VAT_FACTOR  = 1.19   # Brutto → Netto
+SHIP_COST   = 5.0    # Pauschale Versandkosten (was wir zahlen)
+BUYER_SHIP  = 3.99   # Versandanteil den Käufer zahlt
 EST_RATE   = 0.30   # Einkommensteuer-Rücklage
 GEWST_RATE = 0.15   # Gewerbesteuer-Rücklage
 
@@ -96,13 +97,14 @@ def fetch_orders(base_url, token, days=90):
 
 def calc_profit_item(unit_price: float, ek: float, qty: int = 1) -> dict:
     """Gibt vollständige Gewinnrechnung zurück."""
-    ebay_fee  = round(unit_price * EBAY_FEE, 2)
-    vat       = round((unit_price - ebay_fee) * (1 - 1 / VAT_FACTOR), 2)
-    netto_vk  = round(unit_price - ebay_fee - vat, 2)
+    total_vk  = unit_price + BUYER_SHIP          # Gesamtbetrag inkl. Käufer-Versand
+    ebay_fee  = round(total_vk * EBAY_FEE, 2)   # eBay Gebühr auf Gesamtbetrag
+    vat       = round((total_vk - ebay_fee) * (1 - 1 / VAT_FACTOR), 2)
+    netto_vk  = round(total_vk - ebay_fee - vat, 2)
     profit_u  = round(netto_vk - SHIP_COST - ek, 2)
     profit_t  = round(profit_u * qty, 2)
     return {
-        "vk_brutto":  round(unit_price, 2),
+        "vk_brutto":  round(total_vk, 2),
         "ebay_fee":   ebay_fee,
         "vat":        vat,
         "netto_vk":   netto_vk,
