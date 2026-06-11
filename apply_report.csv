@@ -8,7 +8,7 @@
 0017817859561,SUPB1061,Bose 890101-0200 headphones/headset,updated
 0023942301882,SUPV0068,Verbatim Charge 'n' Travel 70W Universal Violett AC Schnellladung Drinnen,updated
 0023942301929,SUPV0070,Verbatim 30192 Ladegerät für Mobilgeräte Universal Blau AC Schnellladung Drinnen,updated
-0023942301936,SUPV0071,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942301936,SUPV0071,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPV0071
 0023942302117,USBV0018,Verbatim V200 USB-Stick 64GB NEU,updated
 0023942302278,USBV0003,Verbatim USB-S USB-Stick 512GB NEU,updated
 0023942302292,USBV0005,Verbatim USB-S USB-Stick 128GB NEU,updated
@@ -19,3 +19,183 @@
 0023942320883,SUPV0075,Verbatim LED 1920 Monitor Full HD NEU,updated
 0023942321200,SUPV0039,Verbatim UTA-05 Universal Schwarz AC Drinnen,updated
 0023942321217,SUPV0040,Verbatim UTA-06 Schwarz Drinnen,updated
+0023942321460,SUPV0027,Verbatim WLAN USB Adapter 3.2 802.11a NEU,updated
+0023942321514,SUPV0022,Verbatim CMH-08 USB Typ-C 5000 Mbit/s Silber,updated
+0023942321521,SUPV0012,Verbatim CMH-09 USB Typ-C 10000 Mbit/s Silber,updated
+0023942321538,SUPV0032,Verbatim CMH-13 USB Typ-C 10000 Mbit/s Silber,updated
+0023942321545,SUPV0013,Verbatim CMH-14 USB Typ-C 5000 Mbit/s Silber,updated
+0023942321552,SUPV0031,Verbatim 32155 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942321569,SUPV0029,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942321583,SUPV0020,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942322009,SUPV0044,"Verbatim GNC-35 Universal Schwarz, Grau AC Schnellladung Drinnen",updated
+0023942322030,SUPV0047,"Verbatim GNC-140 Universal Schwarz, Grau AC Schnellladung Drinnen",updated
+0023942322047,SUPV0048,"Verbatim GNC-200 Universal Schwarz, Grau AC Schnellladung Drinnen",updated
+0023942322177,SUPV0053,Verbatim GaN Charger 65W Universal Schwarz AC Schnellladung Drinnen,updated
+0023942322382,SUPV0038,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942322399,SUPV0037,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942323402,SUPV0084,"Verbatim Cool 'n' Go AirJet Grau, Violett Handventilator",updated
+0023942323419,SUPV0085,"Verbatim Cool 'n' Go AirJet Silber, Weiß Handventilator",updated
+0023942324034,SUPV0073,Verbatim FHD Monitor Full HD NEU,updated
+0023942435082,SUPV0056,"Verbatim 43508 DVD-Rohling 4,7 GB DVD+R 10 Stück(e)",updated
+0023942435334,SUPV0005,"Verbatim 43533 DVD-Rohling 4,7 GB DVD-R 50 Stück(e)",updated
+0023942437895,SUPV0064,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar, Jewel Case, 5er-Pack",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942438892,SUPV0011,Verbatim 43889 Optisches Laufwerk Blu-Ray RW Schwarz,updated
+0023942438908,SUPV0004,Verbatim External Slimline Optisches Laufwerk Blu-Ray RW Schwarz,updated
+0023942490623,USBV0013,Verbatim USB-S USB-Stick 8GB NEU,updated
+0023942490654,USBV0016,Verbatim USB-S USB-Stick 64GB NEU,updated
+0023942490715,USBV0017,Verbatim USB-S USB-Stick 128GB NEU,updated
+0023942491729,USBV0008,Verbatim V3 USB-Stick 16GB USB 3.0 NEU,updated
+0023942495918,SUPV0034,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942495925,SUPV0036,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942495932,SUPV0035,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942530718,HDXV0002,Verbatim Festplatte HDD 1TB USB 3.0 NEU,updated
+0023942531777,HDXV0003,Verbatim Festplatte HDD 2TB USB 3.0 NEU,updated
+0023942531944,HDXV0005,Verbatim Festplatte HDD 1TB USB 3.0 NEU,updated
+0023942531975,HDXV0006,Verbatim Festplatte HDD 1TB USB 3.0 NEU,updated
+0023942532231,HDXV0011,Verbatim Festplatte HDD 4TB USB 3.0 NEU,updated
+0023942535041,SUPV0001,Verbatim External Slimline CD/DVD Writer Optisches Laufwerk DVD±RW Schwarz,updated
+0023942991045,USBV0020,Verbatim USB-Stick 16GB USB 3.0 NEU,updated
+0023942991052,USBV0021,Verbatim Metal Executive 32 GB - USB 3.0 Drive – Gold,updated
+0023942991069,USBV0022,Verbatim USB-Stick 64GB USB 3.0 NEU,updated
+0088381430128,HHWM0030,Makita Makpac 2 - Tasche für Elektrowerkzeuge,updated
+0088381443395,HHWM0027,Makita P-81050 - Schraubenziehersatz - 99 Stücke,updated
+0088381445474,HHWM0017,Makita B-44410 jigsaw/scroll saw/reciprocating saw blade,updated
+0088381464123,HHWM0024,Makita LXT BL1860B - Batterie - Li-Ion - 6 Ah,updated
+0088381661768,HHWM0023,Makita Bohrhammer - schnurlos - 3 Modi,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Spannung fehlt. Fügen Sie Spannung zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0088381704038,HHWM0015,Makita P-73374 screwdriver bit,updated
+0088381723831,HHWM0038,Makita DTW700Z - Schlagschrauber - schnurlos - 18 V,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Spannung fehlt. Fügen Sie Spannung zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0088381736558,HHWM0034,Makita DDF487Z - Bohrer/Schrauber - schnurlos,updated
+0088381775601,HHWM0029,Makita DHP489Z - Elektrischer Schraubendreher - Pistolengriff - 1800 RPM,updated
+0088381891424,HHWM0019,Makita DHK180Z - Schlackenhammer - schnurlos,updated
+0097855119551,SUPL0285,Logitech Mikrofon kabellos NEU,updated
+0097855131171,SUPL0329,Logitech ConferenceCam MeetUp Expansion Microphone,unchanged
+0097855143143,SUPL0328,Logitech ConferenceCam Rally Mic Pod Hub microphone Interface adapter,unchanged
+0097855153197,SUPL0439,Logitech Rally Mic Pod Mount Mikrofon NEU,not_found
+0097855162045,SUPL0402,Logitech 960-001360 webcam,updated
+0097855166067,SUPL0438,Logitech 952-000020 video conferencing system,updated
+0097855181596,SUPL0589,Logitech Sight video conferencing system,not_found
+0190198496201,SUPA0096,Apple MW2R3ZM/A lightning cable,not_found
+0191999788403,SUPL2003,Lenovo AF0135EU Docking Station 4K UHD NEU,updated
+0194252157022,SUPA0236,Apple MHJE3ZM/A mobile device charger,not_found
+0194252750872,SUPA0171,Apple MUQ93ZM USB-C Kabel 1m NEU,not_found
+0194253494850,SUPA0199,Apple MW493ZM USB Kabel 1m NEU,not_found
+0194644126339,PPCA0007,Anker EverFrost Powered Cooler 53L + Cooler Battery SET,not_found
+0194644126346,PPCA0006,Anker EverFrost Powered Cooler 43L + Cooler Battery SET,unchanged
+0194644126353,PPCA0005,Anker EverFrost Powered Cooler 33L + Cooler Battery SET,unchanged
+0195348192095,SUPL2002,Lenovo USB-C Kabel USB 3.2 4K UHD NEU,updated
+0195348677295,SUPL2008,Lenovo B00300EU Thunderbolt Kabel 230W NEU,updated
+0195892052982,SUPL2024,Lenovo B30090EU Docking Station USB 3.2 NEU,updated
+0195892120551,SUPL2027,Lenovo USB4 USB-C Kabel USB 4 65W NEU,updated
+0195892130499,SUPL2030,Lenovo USB4 USB-C Kabel USB 4 135W NEU,updated
+0195949085611,SUPA0219,Apple MUQ93ZM USB-C Kabel 1m NEU,not_found
+0195949087714,SUPA0228,Apple MUQW3ZM USB Kabel 1m NEU,not_found
+0195949093432,SUPA0204,Apple MU2G3ZM USB Kabel 2.0 2m NEU,not_found
+0195949333002,SUPA0224,Apple MW2P3ZM HDMI Adapter NEU,not_found
+0195949333989,SUPA0222,Apple MW2R3ZM/A lightning cable,not_found
+0195949371905,SUPA0229,Apple MW493ZM USB Kabel 1m NEU,not_found
+0195949506123,SUPA0218,Apple EarPods,not_found
+0195949508967,SUPA0209,Apple EarPods,not_found
+0195949775390,SUPA0230,Apple MYQT3ZM USB Kabel 2m NEU,not_found
+0195950084658,SUPA0234,Apple MD3J4ZM/A mobile device charger,not_found
+0195950543742,SUPA0237,Apple AirPods Pro (3rd generation),not_found
+0195950667523,SUPA0242,Apple AirTag,not_found
+0196068757403,SUPH0029,HP G4 Docking Station 120W NEU,updated
+0197050011855,HHWM0031,Makita DJV186Z - Akku-Pendelhubstichsäge - 18V,updated
+0197050364623,HHWM0028,Makita E-25096 - Bit-Set mit Ratschengriff - 44-teilig,updated
+0197498152394,SUPH4049,HP Poly Poly CS540A Headset mit Handset Lifter,updated
+0198122902057,MOHP0024,"HP Series 5 Pro Serie 5 Pro 23,8-Zoll-FHD-USB-C-Konferenzmonitor – 524pm",updated
+0198156725684,MOL0000,Lenovo T24D-40 Monitor Full HD NEU,updated
+0198415233004,SUPH0050,HP G6 Thunderbolt Kabel 100W NEU,updated
+0198415314048,SUPH0051,HP USB-C Kabel USB 3.2 100W NEU,updated
+0198415314925,SUPH0049,HP G6 Thunderbolt Kabel 180W NEU,updated
+0199274117238,SUPL6003,Lenovo Thinkpad P14s G5 RYZ5Pro 8640HS/16GB/512SSD/W11Pro LTE 4G,not_found
+0199485355665,SUPH0053,"HP ProBook 4 G1a AMD Ryzen™ 5 230 Notebook AI 40,6 cm (16"") 16GB 512GB W11Pro",not_found
+023942301875,SUPV0067,Verbatim Charge 'n' Travel 70W Universal Blau AC Schnellladung Drinnen,updated
+023942301912,SUPV0069,Verbatim 30191 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+023942302254,USBV0000,Verbatim USB-S USB-Stick 128GB NEU,updated
+023942302261,USBV0002,Verbatim USB-S USB-Stick 256GB NEU,updated
+023942491682,USBV0012,Verbatim V3 USB-Stick 256GB USB 3.0 NEU,updated
+04897082668718,PPE0209,ECOFLOW Battery 2kWh,not_found
+0610371446279,PPE1001,everHome EcoTracker IR - Energiemessgerät,unchanged
+0619659069193,USBS1019,SanDisk Cruzer Blade 32GB USB-Stick NEU,updated
+0619659097318,USBS1094,SanDisk Cruzer USB-Stick 64GB NEU,updated
+0619659125905,USBS1093,SanDisk Cruzer USB-Stick 128GB NEU,updated
+0619659163082,USBS0073,SanDisk Ultra Flair USB-Stick 128GB NEU,updated
+0619659172510,USBS0074,SanDisk 00183579 USB flash drive,updated
+0619659172831,USBS0075,SanDisk Ultra Luxe USB-Stick 64GB NEU,updated
+0619659172855,USBS0076,SanDisk 00183581 USB flash drive,updated
+0619659177171,USBS0019,SanDisk Ultra Dual Drive Go USB-Stick 64GB NEU,updated
+0619659178581,USBS1092,SanDisk Ultra Dual Drive Luxe USB flash drive,updated
+0619659182557,SDXS0015,SanDisk Extreme Portable 1TB NEU,updated
+0619659184384,USBS0071,SanDisk SDSQUNR-032G-GN3MN Speicherkarte 32GB NEU,updated
+0619659184735,SDXS0023,SanDisk Extreme PRO,updated
+0619659188566,USBS0082,SanDisk Extreme Speicherkarte 512GB NEU,updated
+0619659204877,SDXS0028,SanDisk SDSSDE30-1T00-G26 1TB NEU,updated
+0619659220860,SSDW0095,Western Digital HDSSD M.2 NVMe SSD 2TB NEU,updated
+0619659220884,SSDW0094,Western Digital BLACK SN8100 M.2 NVMe SSD 1TB NEU,updated
+0649528906564,RAM5C0021,Crucial CT2K32G48C40S5 RAM Arbeitsspeicher 64GB 4800MHz DDR5 2x Kit NEU,updated
+0649528937735,RAM4C0110,3200 16GB Crucial 16GB Tray,updated
+0649528937803,RAM5C0022,Crucial CP2K16G56C46U5 RAM Arbeitsspeicher 32GB 5600MHz DDR5 2x Kit NEU,updated
+0649528942081,SSDC0076,Crucial P310,updated
+0649528944771,SSDC0078,Crucial P310,updated
+0718037868448,HDXW0204,Western Digital My Passport 5TB Black,unchanged
+0718037872339,SSDW0036,Western Digital HDSSD M.2 NVMe SSD 2TB NEU,updated
+0718037872353,SSDW0034,Western Digital HDSSD M.2 NVMe SSD 500GB NEU,updated
+0718037877501,HDIW0165,Western Digital Blue internal hard 2TB NEU,updated
+0718037877662,HDIW0162,Western Digital Red Pro internal hard drive,not_found
+0718037884653,SSDW0069,Western Digital Blue SA510,updated
+0718037884660,SSDW0089,Western Digital Blue SA510,updated
+0718037891378,SSDW0075,Western Digital BLACK SN850X M.2 NVMe SSD 4TB NEU,updated
+0718037891392,SSDW0071,Western Digital BLACK SN850X M.2 NVMe SSD 1TB NEU,updated
+0718037893204,SSDW0091,Western Digital WDS100T4X0E-00CJA0 1TB NEU,updated
+0718037893211,SSDW0092,Western Digital WDS200T4X0E-00CJA0 2TB NEU,updated
+0718037893228,SSDW0085,Western Digital WDS200T4B0E 2TB NEU,updated
+0718037894843,SSDW0084,Western Digital SN5000 1TB NEU,updated
+0718037894850,SSDW0083,Western Digital SN5000 500GB NEU,updated
+0718037899770,HDIW0214,Western Digital Red Plus internal hard drive,updated
+0718037899794,HDIW0206,Western Digital Red Plus internal hard drive,updated
+0718037901275,HDIW0224,Western Digital WD102PURP 10TB NEU,updated
+0718037901442,HDIW0244,Western Digital WD122KRYZ 12TB NEU,updated
+0718037902814,HDIW0220,Western Digital Red Pro internal hard drive,updated
+0718037902821,HDIW0219,Western Digital Red Pro internal hard drive,updated
+0718037903613,SSDW0088,Western Digital WDS200T2R0A-68CKB0 2TB NEU,updated
+0718037903873,HDXW0236,Western Digital WDBR9S0060BBK-WESN 6TB NEU,updated
+0718037906201,HDIW0230,Western Digital WD100EFGX 10TB NEU,updated
+0718037906256,SSDW0097,Western Digital WD Blue SN5100,updated
+0718037906263,SSDW0100,Western Digital WD Blue SN5100,updated
+0718037906287,SSDW0101,Western Digital WD B 500GB NEU,updated
+0718037907154,SSDW0102,Western Digital WD SN3000 M.2 NVMe SSD 1TB NEU,updated
+0730143312042,CPUA0065,Advanced Micro Devices AMD Prozessor CPU NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Prozessormodell fehlt. Fügen Sie Prozessormodell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0730143312745,CPUA0067,Advanced Micro Devices AMD Prozessor CPU NEU,updated
+0730143315289,CPUA0130,AMD Ryzen 7 9800X3D processor,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Prozessormodell fehlt. Fügen Sie Prozessormodell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0730143315296,CPUA0125,Advanced Micro Devices AMD Prozessor CPU NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Prozessormodell fehlt. Fügen Sie Prozessormodell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0730143315555,CPUA0136,AMD Ryzen 9 9950X3D processor,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Prozessormodell fehlt. Fügen Sie Prozessormodell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0730143315579,CPUA0135,AMD Ryzen 9 9900X3D processor,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Prozessormodell fehlt. Fügen Sie Prozessormodell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0730143318280,CPUA0139,AMD Ryzen 7 9850X3D processor,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Prozessormodell fehlt. Fügen Sie Prozessormodell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+0740617277357,SSDK0018,Kingston Technology A400 960 NEU,updated
+0740617319903,RAM4K0015,Kingston Technology FURY RAM Arbeitsspeicher 16GB DDR4 2x Kit NEU,updated
+0740617326130,RAM5K0015,Kingston Technology FURY 64GB RAM Arbeitsspeicher DDR5 2x Kit NEU,not_found
+0740617328509,RAM5K0044,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,not_found
+0740617337426,RAM4K0057,Kingston Technology FURY RAM Arbeitsspeicher 16GB DDR4 NEU,updated
+0740617337532,RAM4K0058,Kingston Technology FURY RAM Arbeitsspeicher 16GB DDR4 2x Kit NEU,updated
+0740617337815,RAM4K0060,Kingston Technology FURY 16GB RAM Arbeitsspeicher DDR4 2x Kit NEU,updated
+0740617350173,RAM5K0045,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,not_found
+0740617350180,RAM5K0043,Kingston Technology FURY RAM Arbeitsspeicher 32GB DDR5 NEU,updated
+0756893004464,PVSJ0006,Jolywood HD108N-R2-500W 500W NEU,not_found
+0763649113653,HDIS0139,Seagate ST2000DM008 Festplatte HDD 2TB NEU,updated
+0763649139103,HDIS0297,Seagate ST14000NM005J Festplatte HDD 14TB NEU,updated
+0763649150474,HDIS0241,Seagate ST10000VE001 S 10TB NEU,updated
+0763649174883,HDIS0273,Seagate X24 Festplatte HDD 24TB NEU,not_found
+0763649174920,HDIS0294,Seagate X24 Festplatte HDD 24TB NEU,not_found
+0763649175095,HDIS0321,Seagate X24 Festplatte HDD 20TB NEU,not_found
+0810010071163,NETU0067,Ubiquiti UniFi Switch Lite 16 PoE NEU,updated
+0810010072146,NETU0016,Ubiquiti USW-48-POE Netzwerk Switch PoE NEU,updated
+0810010074300,NETU0154,"Ubiquiti UniFi Express 7 - Gateway - Wi-Fi 7, 10GbE, 2.5GbE",unchanged
+0810010074386,NETU0143,Ubiquiti UISP Netzwerk Switch NEU,updated
+0810010074775,NETU0079,Ubiquiti UniFi Enterprise 8 PoE NEU,updated
+0810010075574,NETU0090,Ubiquiti UNVR-Pro-EU,updated
+0810010077769,NETU0024,UbiQuiti UniFi Dream Machine Special Edition,unchanged
+0810010078278,NETU0010,Ubiquiti WiFi 6 Mesh WLAN Access Point Wi-Fi NEU,updated
+0810010079251,NETU0152,Ubiquiti UniFi UNAS Pro - NAS-Server - Rack - einbaufähig,unchanged
+0810084690185,NETU0084,UbiQuiti UniFi Protect UVC-G5-BULLET - Netzwerk-Überwachungskamera,unchanged
+0810084690246,NETU0100,Ubiquiti G5 Professional,updated
