@@ -34,7 +34,7 @@ def get_user_token(client_id, client_secret, refresh_token, sandbox=False):
         data={
             "grant_type": "refresh_token",
             "refresh_token": refresh_token,
-            "scope": "https://api.ebay.com/oauth/api_scope/sell.fulfillment.readonly",
+            "scope": "https://api.ebay.com/oauth/api_scope/sell.fulfillment",
         },
         timeout=30,
     )
