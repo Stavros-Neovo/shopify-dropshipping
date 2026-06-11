@@ -48,21 +48,29 @@ jobs:
           restore-keys: |
             ebay-score-cache-
 
-      - name: Score-Cache aktualisieren (täglich)
-        if: github.event.schedule == '0 2 * * *' || github.event.inputs.mode == 'scan' || github.event.inputs.mode == 'both'
-        env:
-          EBAY_CLIENT_ID:     ${{ secrets.EBAY_CLIENT_ID }}
-          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
-        run: python smart_lister.py --scan
-
-      - name: Top-Artikel auswählen (montags)
-        if: github.event.schedule == '0 3 * * 1' || github.event.inputs.mode == 'select' || github.event.inputs.mode == 'both'
+      - name: Smart Lister ausführen
         env:
           EBAY_CLIENT_ID:     ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
         run: |
-          ARGS="--select --top ${{ github.event.inputs.top || '2300' }}"
-          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          MODE="${{ github.event.inputs.mode }}"
+          TOP="${{ github.event.inputs.top || '2300' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+
+          # Schedule: täglich nur scan, montags beides
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            HOUR=$(date -u +%H)
+            DOW=$(date -u +%u)
+            if [ "$DOW" = "1" ]; then MODE="both"; else MODE="scan"; fi
+          fi
+
+          # Argumente aufbauen
+          ARGS=""
+          [ "$MODE" = "scan" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --scan"
+          [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --select --top $TOP"
+          [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
+
+          echo "Starte: python smart_lister.py $ARGS"
           python smart_lister.py $ARGS
 
       - name: Save Score-Cache
