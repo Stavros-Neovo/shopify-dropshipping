@@ -1,0 +1,56 @@
+name: eBay Bestellungen weiterleiten
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # Alle 15 Minuten
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run? (true = nur simulieren, keine Mail)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ebay-orders
+  cancel-in-progress: false
+
+jobs:
+  forward-orders:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Bestellungen weiterleiten
+        env:
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+          SMTP_HOST:            smtp.gmail.com
+          SMTP_PORT:            587
+          SMTP_USER:            ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD:        ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          ARGS="--config config_shop2.yaml"
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          python ebay_order_forwarder.py $ARGS
+
+      - name: Commit processed_orders.json
+        if: always()
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add processed_orders.json || true
+          git diff --staged --quiet || git commit -m "chore: bestellungen verarbeitet $(date -u '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin main || true
+          git push || true

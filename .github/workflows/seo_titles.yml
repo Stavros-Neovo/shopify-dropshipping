@@ -25,7 +25,7 @@ on:
         default: "false"
 
 concurrency:
-  group: ebay-background   # Hintergrund — blockiert nie Sync oder Repricing
+  group: ebay-seo   # Hintergrund — blockiert nie Sync oder Repricing
   cancel-in-progress: false
 
 jobs:

@@ -11,7 +11,7 @@ on:
         default: "false"
 
 concurrency:
-  group: ebay-background   # Hintergrund — blockiert nie Sync oder Repricing
+  group: ebay-dashboard   # Hintergrund — blockiert nie Sync oder Repricing
   cancel-in-progress: false
 
 jobs:

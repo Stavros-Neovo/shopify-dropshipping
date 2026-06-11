@@ -37,7 +37,7 @@ def main():
         img = (row.get("image_main") or "").strip()
         if not img:
             continue
-        source = (row.get("image_source") or "").strip().lower()
+        source = (row.get("image_source") or row.get("source") or "").strip().lower()
         if filter_sources and not any(s in source for s in filter_sources):
             continue
         products.append({

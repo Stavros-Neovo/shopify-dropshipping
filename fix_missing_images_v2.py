@@ -51,7 +51,7 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
       "AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/124.0.0.0 Safari/537.36")
 
-BAD = ["ipcstore", "placeholder", "noimage", "no-image", "notfound",
+BAD = ["ipcstore", "logitech_cdn", "resource.logitech.com", "placeholder", "noimage", "no-image", "notfound",
        "data:image", "blank", "missing"]
 
 
@@ -255,10 +255,10 @@ def main():
 
     cache = load_cache(CACHE_FILE)
 
-    # Nur Zeilen mit ipcstore-image_main
+    # Zeilen mit schlechtem/fehlendem Bild
     targets = [
         (i, r) for i, r in enumerate(rows)
-        if "ipcstore" in (r.get("image_main") or "").lower()
+        if not (r.get("image_main") or "").strip() or any(b in (r.get("image_main","") + r.get("source","")).lower() for b in ["ipcstore", "logitech_cdn", "resource.logitech.com"])
     ]
     log.info(f"Produkte ohne gültiges Bild: {len(targets)}")
 

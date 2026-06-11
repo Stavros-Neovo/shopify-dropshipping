@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bild Review — 81 Produkte</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, sans-serif; background: #0f0f13; color: #e0e0e0; }
+
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    background: #1a1a2e; border-bottom: 1px solid #333;
+    padding: 12px 20px; display: flex; align-items: center; gap: 16px;
+    flex-wrap: wrap;
+  }
+  .header h1 { font-size: 16px; font-weight: 600; color: #fff; }
+  .counter {
+    background: #e74c3c; color: #fff; padding: 4px 12px;
+    border-radius: 20px; font-size: 14px; font-weight: 600;
+    min-width: 80px; text-align: center;
+  }
+  .counter.zero { background: #27ae60; }
+  .btn {
+    padding: 8px 18px; border-radius: 8px; border: none;
+    cursor: pointer; font-size: 14px; font-weight: 600;
+  }
+  .btn-export { background: #e74c3c; color: #fff; }
+  .btn-export:hover { background: #c0392b; }
+  .btn-export:disabled { background: #555; cursor: not-allowed; }
+  .btn-clear { background: #333; color: #aaa; }
+  .btn-clear:hover { background: #444; }
+  .search {
+    padding: 7px 14px; border-radius: 8px; border: 1px solid #444;
+    background: #252535; color: #e0e0e0; font-size: 14px; width: 220px;
+  }
+  .stats { color: #888; font-size: 13px; margin-left: auto; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px; padding: 16px;
+  }
+
+  .card {
+    background: #1e1e2e; border-radius: 10px; overflow: hidden;
+    border: 2px solid transparent; cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+    position: relative;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+  .card.wrong { border-color: #e74c3c; background: #2a1a1e; }
+  .card.wrong .img-wrap { opacity: 0.6; }
+
+  .wrong-badge {
+    display: none; position: absolute; top: 8px; right: 8px;
+    background: #e74c3c; color: #fff; border-radius: 50%;
+    width: 28px; height: 28px; font-size: 16px;
+    align-items: center; justify-content: center; font-weight: bold;
+  }
+  .card.wrong .wrong-badge { display: flex; }
+
+  .img-wrap {
+    width: 100%; aspect-ratio: 1;
+    background: #252535; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .img-wrap img {
+    width: 100%; height: 100%; object-fit: contain;
+    transition: opacity 0.2s;
+  }
+  .img-wrap img.error { opacity: 0.2; }
+
+  .info {
+    padding: 8px 10px;
+  }
+  .info .title {
+    font-size: 11px; color: #ccc; line-height: 1.3;
+    display: -webkit-box; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .info .meta {
+    font-size: 10px; color: #666;
+    display: flex; justify-content: space-between;
+  }
+  .source-badge {
+    font-size: 9px; padding: 1px 5px; border-radius: 4px;
+    background: #2a3a2a; color: #5a9a5a;
+  }
+  .source-badge.ddg { background: #3a2a2a; color: #9a5a5a; }
+  .source-badge.amazon { background: #3a3020; color: #9a8a40; }
+  .source-badge.ipcstore { background: #3a2a3a; color: #9a5a9a; }
+
+  .ean-link {
+    display: block; margin-top: 5px;
+    font-size: 10px; color: #5a9adf; text-decoration: none;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .ean-link:hover { color: #7ab8ff; text-decoration: underline; }
+
+  .no-results { text-align: center; color: #555; padding: 60px; font-size: 18px; }
+
+  .export-info {
+    display: none; position: fixed; bottom: 20px; right: 20px;
+    background: #27ae60; color: #fff; padding: 12px 20px;
+    border-radius: 10px; font-size: 14px; font-weight: 600;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🖼️ Bild Review</h1>
+  <div class="counter zero" id="counter">0 markiert</div>
+  <button class="btn btn-export" id="btnExport" onclick="exportWrong()" disabled>
+    ❌ Falsche exportieren
+  </button>
+  <button class="btn btn-clear" onclick="clearAll()">Alles zurücksetzen</button>
+  <input class="search" type="text" id="search" placeholder="SKU oder Titel suchen…" oninput="filterCards()">
+  <span class="stats" id="stats">81 Produkte</span>
+</div>
+
+<div class="grid" id="grid"></div>
+<div class="no-results" id="noResults" style="display:none">Keine Treffer</div>
+<div class="export-info" id="exportInfo">✓ wrong_images.json gespeichert!</div>
+
+<script>
+const PRODUCTS = [{"sku": "", "ean": "5099206066670", "title": "Logitech M330 SILENT Maus 1000 DPI kabellos leise NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206051805", "title": "Logitech Bluetooth Audio Empfänger 15m NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206066823", "title": "Logitech 920-008221 keyboard", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855119551", "title": "Logitech Mikrofon kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206066687", "title": "Logitech Maus 1000 DPI kabellos leise NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206038844", "title": "Logitech 981-000475 headphones/headset", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206039179", "title": "Logitech 920-004511 keyboard", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206063846", "title": "Logitech 920-007905 keyboard", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206059429", "title": "Logitech Tastatur kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206061309", "title": "Logitech 960-001055 webcam", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206066199", "title": "Logitech M220 Maus 1000 DPI kabellos leise NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206023901", "title": "Logitech M705 Maus 1000 DPI kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206048782", "title": "Logitech 980-000814 loudspeaker", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206027282", "title": "Logitech Maus 1000 DPI kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206059030", "title": "Logitech 960-001034 video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206070011", "title": "Logitech 910-004861 wireless presenter", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206065086", "title": "Logitech Maus Bluetooth 1000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206072060", "title": "Logitech MeetUp video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206080270", "title": "Logitech G 910-005471 Maus NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206079526", "title": "Logitech Rally Plus video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206088252", "title": "Logitech 920-009474 mobile device keyboard", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206077461", "title": "Logitech Netzwerk Switch kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206092372", "title": "Logitech Maus kabellos leise NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206079359", "title": "Logitech MK545 ADVANCED Maus kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855167675", "title": "Logitech 952-000047 video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855166067", "title": "Logitech 952-000020 video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855162045", "title": "Logitech 960-001360 webcam", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206089365", "title": "Logitech 960-001323 video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206090828", "title": "Logitech 910-005843 wireless presenter", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206099784", "title": "Logitech Maus Bluetooth 4000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206103016", "title": "Logitech Netzwerk Switch Bluetooth NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206105140", "title": "Logitech Netzwerk Switch Bluetooth NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206099876", "title": "Logitech Maus Bluetooth 4000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206096547", "title": "Logitech Maus Bluetooth 2000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206107885", "title": "Logitech Maus Bluetooth 8000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206104419", "title": "Logitech Tastatur Bluetooth NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206104884", "title": "Logitech 960-001459 webcam", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855181596", "title": "Logitech Sight video conferencing system", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206112490", "title": "Logitech Maus Bluetooth 8000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206107601", "title": "Logitech 920-011435 mobile device keyboard", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206097254", "title": "Logitech Maus Bluetooth 4000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206097278", "title": "Logitech Maus Bluetooth 4000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206105324", "title": "Logitech Netzwerk Switch Bluetooth NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206097353", "title": "Logitech 920-010361 mobile device keyboard", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206106895", "title": "Logitech Rugged Combo 4 Touch Touchpad NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206133143", "title": "Logitech MX Maus Bluetooth 8000 DPI NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206041271", "title": "Logitech Mouse B100 Optical Corded Black OEM", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206008441", "title": "Logitech Headset 960 Wired NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206073173", "title": "Logitech Desktop MK330 Wireless Black", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206081901", "title": "Logitech MX V Maus kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206027275", "title": "Logitech M185 Maus kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206065062", "title": "Logitech B170 Maus kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206033139", "title": "Logitech K270 Tastatur kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206085855", "title": "Logitech ERGO K860 Tastatur kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206053304", "title": "Logitech Headset H570e Wired / Type Binaural", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206086449", "title": "Logitech Desktop MK470 Slim Wireless Combo Black", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206041196", "title": "Logitech Headset H650e Stereo Wired", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855143143", "title": "Logitech ConferenceCam Rally Mic Pod Hub microphone Interface adapter", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855131171", "title": "Logitech ConferenceCam MeetUp Expansion Microphone", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855163769", "title": "Logitech Tap - Control Station", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855153197", "title": "Logitech Rally Mic Pod Mount Mikrofon NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206104914", "title": "Logitech Brio 500 Webcam Black", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206097223", "title": "Logitech Mouse Signature M650 Graphite", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206089327", "title": "Logitech ConferenceCam Rally Bar - Graphite", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206090347", "title": "Logitech Zone Wired MS-Teams Headseat", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206105508", "title": "Logitech Signature K650 Keyboard Black", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206093089", "title": "Logitech Rally Bar Mini - Webcam", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "0097855147097", "title": "Logitech Strong USB Kabel 10M USB-C NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206107427", "title": "Logitech Slim Folio Keyboard black", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206121942", "title": "Logitech Combo Touch Keyboard for iPad Air 11", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206113053", "title": "Logitech MK370 Tastatur kabellos NEU", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206127098", "title": "Logitech Ultimate Ears MINIROLL majestätisches blau", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206127104", "title": "Logitech Ultimate Ears MINIROLL Revive Grey", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206123113", "title": "Logitech Combo Touch Keyboard for iPad Pro11", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206106710", "title": "Logitech Combo Touch Keyboard for iPad 10.9", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206066878", "title": "Logitech Desktop MK850 Performance - Tastatur-und-Maus-Set - US-Layout", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206123069", "title": "Logitech Bluetooth Combo Touch iPad Pro 13\" M4", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206077379", "title": "Logitech Desktop MK540 Advanced Wireless Black/White", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206133082", "title": "Logitech Mouse MX Master 4 Graphite", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206133099", "title": "Logitech Mouse MX Master 4 Pale Grey", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}, {"sku": "", "ean": "5099206133112", "title": "Logitech Mouse MX Master 4 Space Black", "image": "https://resource.logitech.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/homepage/delorean-hp/logitech-global-og-image.png", "source": "logitech_cdn"}];
+const wrong = new Set();
+
+function renderGrid(items) {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  items.forEach((p, idx) => {
+    const uid = p.sku || p.ean || ('idx_' + idx);  // eindeutige ID
+    const isWrong = wrong.has(uid);
+    const srcClass = p.source.includes('ddg') ? 'ddg'
+                   : p.source.includes('amazon') ? 'amazon'
+                   : p.source.includes('ipcstore') ? 'ipcstore' : '';
+    const div = document.createElement('div');
+    div.className = 'card' + (isWrong ? ' wrong' : '');
+    div.dataset.uid = uid;
+    div.onclick = () => toggleWrong(uid, div);
+    div.innerHTML = `
+      <div class="wrong-badge">✕</div>
+      <div class="img-wrap">
+        <img src="${p.image}" alt="${p.title}"
+             onerror="this.classList.add('error'); this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><text y=\'.9em\'font-size=\'80\'> 🚫</text></svg>'"
+             loading="lazy">
+      </div>
+      <div class="info">
+        <div class="title">${p.title || p.sku}</div>
+        <div class="meta">
+          <span>${p.sku}</span>
+          <span class="source-badge ${srcClass}">${p.source || '?'}</span>
+        </div>
+        <a class="ean-link" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(p.ean || p.sku)}" target="_blank" onclick="event.stopPropagation()">🔍 EAN: ${p.ean || '—'}</a>
+      </div>`;
+    grid.appendChild(div);
+  });
+  document.getElementById('noResults').style.display = items.length ? 'none' : 'block';
+}
+
+function toggleWrong(uid, el) {
+  if (wrong.has(uid)) { wrong.delete(uid); el.classList.remove('wrong'); }
+  else { wrong.add(uid); el.classList.add('wrong'); }
+  updateCounter();
+}
+
+function updateCounter() {
+  const n = wrong.size;
+  const el = document.getElementById('counter');
+  el.textContent = n + ' markiert';
+  el.className = 'counter' + (n === 0 ? ' zero' : '');
+  document.getElementById('btnExport').disabled = n === 0;
+}
+
+function clearAll() {
+  wrong.clear();
+  document.querySelectorAll('.card.wrong').forEach(c => c.classList.remove('wrong'));
+  updateCounter();
+}
+
+function filterCards() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const filtered = q ? PRODUCTS.filter(p =>
+    p.sku.toLowerCase().includes(q) || p.title.toLowerCase().includes(q)
+  ) : PRODUCTS;
+  renderGrid(filtered);
+  document.getElementById('stats').textContent = filtered.length + ' Produkte';
+}
+
+function exportWrong() {
+  const data = Array.from(wrong).map(uid => {
+    const p = PRODUCTS.find(x => (x.sku || x.ean) === uid || ('idx_' + PRODUCTS.indexOf(x)) === uid);
+    return { sku: p?.sku || uid, ean: p?.ean || '', title: p?.title || '', image: p?.image || '' };
+  });
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'wrong_images.json';
+  a.click();
+
+  const info = document.getElementById('exportInfo');
+  info.style.display = 'block';
+  setTimeout(() => info.style.display = 'none', 3000);
+}
+
+// Init
+renderGrid(PRODUCTS);
+</script>
+</body>
+</html>
