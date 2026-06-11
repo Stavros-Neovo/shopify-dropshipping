@@ -26,6 +26,7 @@ import csv
 import json
 import logging
 import os
+import signal
 import sys
 import time
 from datetime import datetime, timezone, timedelta
@@ -536,6 +537,17 @@ def main():
 
     # Score-Cache aktualisieren
     cache = load_score_cache()
+
+    # Graceful shutdown: Cache bei SIGTERM/SIGINT speichern
+    def _save_and_exit(signum, frame):
+        log.warning(f"Signal {signum} empfangen — Cache speichern und beenden...")
+        save_score_cache(cache)
+        log.info(f"Cache gespeichert ({len(cache)} EANs). Beende.")
+        sys.exit(0)
+
+    signal.signal(signal.SIGTERM, _save_and_exit)
+    signal.signal(signal.SIGINT, _save_and_exit)
+
     if args.scan:
         log.info("=== eBay Score-Cache aktualisieren ===")
         if not client_id or not client_secret:
