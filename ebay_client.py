@@ -887,6 +887,10 @@ class EbayClient:
                     "currency": "EUR",
                 }
             },
+            "tax": {
+                "vatPercentage": 19.0,
+                "applyTax": True,
+            },
             "listingDuration": "GTC",  # Good Till Cancelled
             "includeCatalogProductDetails": False,
         }
@@ -932,7 +936,11 @@ class EbayClient:
                         "value": f"{vk_gross:.2f}",
                         "currency": "EUR",
                     }
-                }
+                },
+                "tax": {
+                    "vatPercentage": 19.0,
+                    "applyTax": True,
+                },
             }
             if self.merchant_location_key:
                 update_payload["merchantLocationKey"] = self.merchant_location_key
@@ -1081,6 +1089,10 @@ class EbayClient:
                             "includeCatalogProductDetails": False,
                             "pricingSummary": {
                                 "price": {"value": f"{vk_gross:.2f}", "currency": "EUR"}
+                            },
+                            "tax": {
+                                "vatPercentage": 19.0,
+                                "applyTax": True,
                             },
                         }
                         if self.merchant_location_key:
