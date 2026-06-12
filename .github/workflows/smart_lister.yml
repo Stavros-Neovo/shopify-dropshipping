@@ -2,9 +2,10 @@ name: Smart Lister
 
 on:
   schedule:
-    - cron: "0 2 * * *"      # Täglich 02:00 UTC — Score-Cache aktualisieren
-    - cron: "0 14 * * *"     # Täglich 14:00 UTC — Score-Cache aktualisieren (2. Run)
-    - cron: "0 3 * * 1"      # Montags 03:00 UTC — Top-Artikel neu auswählen
+    - cron: "0 2 * * *"      # 02:00 UTC — Scan + Select + List
+    - cron: "0 8 * * *"      # 08:00 UTC — Select + List (Preisänderungen morgens)
+    - cron: "0 14 * * *"     # 14:00 UTC — Scan + Select + List
+    - cron: "0 20 * * *"     # 20:00 UTC — Select + List (Abend)
   workflow_dispatch:
     inputs:
       mode:
@@ -82,18 +83,28 @@ jobs:
           DRY="${{ github.event.inputs.dry_run || 'false' }}"
           LIMIT="${{ github.event.inputs.limit || '4800' }}"
 
-          # Schedule: täglich nur scan, montags beides
+          # Schedule: 02:00 + 14:00 → scan+select+list, 08:00 + 20:00 → select+list
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            DOW=$(date -u +%u)
-            if [ "$DOW" = "1" ]; then MODE="both"; else MODE="scan"; fi
-            LIMIT="10000"
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" = "02" ] || [ "$HOUR" = "14" ]; then
+              MODE="both"
+              LIMIT="10000"
+            else
+              MODE="select"
+              LIMIT="0"
+            fi
           fi
 
           # Argumente aufbauen
           ARGS="--limit $LIMIT"
           [ "$MODE" = "scan" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --scan"
           [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --select --top $TOP"
-          [ "${{ github.event.inputs.list_products }}" = "true" ] && ARGS="$ARGS --list"
+          # Schedule läuft immer mit --list; manuell nur wenn list_products=true
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --list"
+          else
+            [ "${{ github.event.inputs.list_products }}" = "true" ] && ARGS="$ARGS --list"
+          fi
           [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
 
           echo "Starte: python smart_lister.py $ARGS"
