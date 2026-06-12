@@ -655,14 +655,13 @@ def main():
                     "vk":       entry.get("vk", 0.0),
                     "image":    image,
                 })
+            # Auf top_n beschränken wenn --select + --list zusammen läuft
+            if len(to_list) > args.top:
+                to_list = to_list[:args.top]
             log.info(f"Artikel zum Listen: {len(to_list)}")
             list_products(to_list, cfg, dry_run=args.dry_run)
 
     log.info("=== Fertig ===")
-
-
-if __name__ == "__main__":
-    main()
 
 
 # ---------------------------------------------------------------------------
@@ -734,3 +733,7 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
 
     log.info(f"=== Listing abgeschlossen: {stats['ok']} OK | {stats['skip']} Drafts | {stats['error']} Fehler ===")
     return stats
+
+
+if __name__ == "__main__":
+    main()
