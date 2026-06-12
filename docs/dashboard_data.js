@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-12T13:38:36.528482+00:00",
+  "generated_at": "2026-06-12T19:32:45.635032+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 1220,
   "repricing": {
@@ -146,19 +146,19 @@ window.DASHBOARD_DATA = {
     "stats": {
       "today_sales": 1,
       "today_revenue": 63.98,
-      "today_profit": 10.99,
+      "today_profit": 6.69,
       "week_sales": 4,
       "week_revenue": 184.92,
-      "week_profit": 37.39,
+      "week_profit": 24.95,
       "prev_week_sales": 2,
       "prev_week_revenue": 53.96,
-      "prev_week_profit": 24.93,
+      "prev_week_profit": 21.3,
       "month_sales": 6,
       "month_revenue": 238.88,
-      "month_profit": 62.32,
+      "month_profit": 46.25,
       "total_sales_30d": 6,
       "total_revenue_30d": 238.88,
-      "total_profit_30d": 62.32
+      "total_profit_30d": 46.25
     },
     "chart_7d": [
       {
@@ -170,13 +170,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "07.06",
         "revenue": 53.96,
-        "profit": 24.93,
+        "profit": 21.3,
         "sales": 2
       },
       {
         "date": "08.06",
         "revenue": 64.96,
-        "profit": 16.36,
+        "profit": 11.98,
         "sales": 2
       },
       {
@@ -194,13 +194,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "11.06",
         "revenue": 55.98,
-        "profit": 10.04,
+        "profit": 6.28,
         "sales": 1
       },
       {
         "date": "12.06",
         "revenue": 63.98,
-        "profit": 10.99,
+        "profit": 6.69,
         "sales": 1
       }
     ],
@@ -352,13 +352,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "07.06",
         "revenue": 53.96,
-        "profit": 24.93,
+        "profit": 21.3,
         "sales": 2
       },
       {
         "date": "08.06",
         "revenue": 64.96,
-        "profit": 16.36,
+        "profit": 11.98,
         "sales": 2
       },
       {
@@ -376,13 +376,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "11.06",
         "revenue": 55.98,
-        "profit": 10.04,
+        "profit": 6.28,
         "sales": 1
       },
       {
         "date": "12.06",
         "revenue": 63.98,
-        "profit": 10.99,
+        "profit": 6.69,
         "sales": 1
       }
     ],
@@ -894,13 +894,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "07.06",
         "revenue": 53.96,
-        "profit": 24.93,
+        "profit": 21.3,
         "sales": 2
       },
       {
         "date": "08.06",
         "revenue": 64.96,
-        "profit": 16.36,
+        "profit": 11.98,
         "sales": 2
       },
       {
@@ -918,13 +918,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "11.06",
         "revenue": 55.98,
-        "profit": 10.04,
+        "profit": 6.28,
         "sales": 1
       },
       {
         "date": "12.06",
         "revenue": 63.98,
-        "profit": 10.99,
+        "profit": 6.69,
         "sales": 1
       }
     ],
@@ -934,19 +934,19 @@ window.DASHBOARD_DATA = {
         "title": "Kioxia TransMemory U301 128GB USB 3.0",
         "sold": 1,
         "revenue": 25.99,
-        "profit": 16.92,
+        "profit": 14.9,
         "vk": 25.99,
         "ek": 0,
         "calc": {
           "vk_brutto": 29.98,
-          "ebay_fee": 3.9,
-          "vat": 4.16,
-          "netto_vk": 21.92,
+          "ebay_fee": 6.3,
+          "vat": 3.78,
+          "netto_vk": 19.9,
           "ship": 5.0,
           "ek": 0,
-          "profit_u": 16.92,
+          "profit_u": 14.9,
           "qty": 1,
-          "profit_t": 16.92
+          "profit_t": 14.9
         }
       },
       {
@@ -954,79 +954,19 @@ window.DASHBOARD_DATA = {
         "title": "Govee - Glide Wall Light (4+1)",
         "sold": 1,
         "revenue": 59.99,
-        "profit": 10.99,
+        "profit": 6.69,
         "vk": 59.99,
         "ek": 30.78,
         "calc": {
           "vk_brutto": 63.98,
-          "ebay_fee": 8.32,
-          "vat": 8.89,
-          "netto_vk": 46.77,
+          "ebay_fee": 13.44,
+          "vat": 8.07,
+          "netto_vk": 42.47,
           "ship": 5.0,
           "ek": 30.78,
-          "profit_u": 10.99,
+          "profit_u": 6.69,
           "qty": 1,
-          "profit_t": 10.99
-        }
-      },
-      {
-        "sku": "PPSE0102",
-        "title": "ECOFLOW Smart Plug 2",
-        "sold": 1,
-        "revenue": 51.99,
-        "profit": 10.04,
-        "vk": 51.99,
-        "ek": 25.88,
-        "calc": {
-          "vk_brutto": 55.98,
-          "ebay_fee": 7.28,
-          "vat": 7.78,
-          "netto_vk": 40.92,
-          "ship": 5.0,
-          "ek": 25.88,
-          "profit_u": 10.04,
-          "qty": 1,
-          "profit_t": 10.04
-        }
-      },
-      {
-        "sku": "HHWB5012",
-        "title": "Beurer IL 11 Infrarotlampe",
-        "sold": 1,
-        "revenue": 34.99,
-        "profit": 8.27,
-        "vk": 34.99,
-        "ek": 15.23,
-        "calc": {
-          "vk_brutto": 38.98,
-          "ebay_fee": 5.07,
-          "vat": 5.41,
-          "netto_vk": 28.5,
-          "ship": 5.0,
-          "ek": 15.23,
-          "profit_u": 8.27,
-          "qty": 1,
-          "profit_t": 8.27
-        }
-      },
-      {
-        "sku": "USBK1023",
-        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
-        "sold": 1,
-        "revenue": 21.99,
-        "profit": 8.09,
-        "vk": 21.99,
-        "ek": 5.9,
-        "calc": {
-          "vk_brutto": 25.98,
-          "ebay_fee": 3.38,
-          "vat": 3.61,
-          "netto_vk": 18.99,
-          "ship": 5.0,
-          "ek": 5.9,
-          "profit_u": 8.09,
-          "qty": 1,
-          "profit_t": 8.09
+          "profit_t": 6.69
         }
       },
       {
@@ -1034,19 +974,79 @@ window.DASHBOARD_DATA = {
         "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
         "sold": 1,
         "revenue": 19.99,
-        "profit": 8.01,
+        "profit": 6.4,
         "vk": 19.99,
         "ek": 4.52,
         "calc": {
           "vk_brutto": 23.98,
-          "ebay_fee": 3.12,
-          "vat": 3.33,
-          "netto_vk": 17.53,
+          "ebay_fee": 5.04,
+          "vat": 3.02,
+          "netto_vk": 15.92,
           "ship": 5.0,
           "ek": 4.52,
-          "profit_u": 8.01,
+          "profit_u": 6.4,
           "qty": 1,
-          "profit_t": 8.01
+          "profit_t": 6.4
+        }
+      },
+      {
+        "sku": "USBK1023",
+        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
+        "sold": 1,
+        "revenue": 21.99,
+        "profit": 6.34,
+        "vk": 21.99,
+        "ek": 5.9,
+        "calc": {
+          "vk_brutto": 25.98,
+          "ebay_fee": 5.46,
+          "vat": 3.28,
+          "netto_vk": 17.24,
+          "ship": 5.0,
+          "ek": 5.9,
+          "profit_u": 6.34,
+          "qty": 1,
+          "profit_t": 6.34
+        }
+      },
+      {
+        "sku": "PPSE0102",
+        "title": "ECOFLOW Smart Plug 2",
+        "sold": 1,
+        "revenue": 51.99,
+        "profit": 6.28,
+        "vk": 51.99,
+        "ek": 25.88,
+        "calc": {
+          "vk_brutto": 55.98,
+          "ebay_fee": 11.76,
+          "vat": 7.06,
+          "netto_vk": 37.16,
+          "ship": 5.0,
+          "ek": 25.88,
+          "profit_u": 6.28,
+          "qty": 1,
+          "profit_t": 6.28
+        }
+      },
+      {
+        "sku": "HHWB5012",
+        "title": "Beurer IL 11 Infrarotlampe",
+        "sold": 1,
+        "revenue": 34.99,
+        "profit": 5.64,
+        "vk": 34.99,
+        "ek": 15.23,
+        "calc": {
+          "vk_brutto": 38.98,
+          "ebay_fee": 8.19,
+          "vat": 4.92,
+          "netto_vk": 25.87,
+          "ship": 5.0,
+          "ek": 15.23,
+          "profit_u": 5.64,
+          "qty": 1,
+          "profit_t": 5.64
         }
       }
     ],
@@ -1055,37 +1055,37 @@ window.DASHBOARD_DATA = {
         "date": "12.06 06:07",
         "title": "Govee - Glide Wall Light (4+1)",
         "revenue": 63.98,
-        "profit": 10.99
+        "profit": 6.69
       },
       {
         "date": "11.06 12:07",
         "title": "ECOFLOW Smart Plug 2",
         "revenue": 55.98,
-        "profit": 10.04
+        "profit": 6.28
       },
       {
         "date": "08.06 16:00",
         "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
         "revenue": 25.98,
-        "profit": 8.09
+        "profit": 6.34
       },
       {
         "date": "08.06 09:44",
         "title": "Beurer IL 11 Infrarotlampe",
         "revenue": 38.98,
-        "profit": 8.27
+        "profit": 5.64
       },
       {
         "date": "07.06 17:46",
         "title": "Kioxia TransMemory U301 128GB USB 3.0",
         "revenue": 29.98,
-        "profit": 16.92
+        "profit": 14.9
       },
       {
         "date": "07.06 12:17",
         "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebu",
         "revenue": 23.98,
-        "profit": 8.01
+        "profit": 6.4
       }
     ],
     "bab_deadlines": [
@@ -1153,10 +1153,10 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 38.14,
-      "est_month": 18.7,
-      "gewst_month": 9.35,
-      "total_month": 66.18
+      "est_month": 13.88,
+      "gewst_month": 6.94,
+      "total_month": 58.95
     },
-    "expected_payout": 207.83
+    "expected_payout": 188.72
   }
 };
