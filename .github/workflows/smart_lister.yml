@@ -52,11 +52,14 @@ jobs:
         env:
           BAB_URL:     ${{ secrets.BAB_PRICELIST_URL }}
           KOSATEC_URL: ${{ secrets.KOSATEC_PRICELIST_URL }}
+          GH_TOKEN:    ${{ secrets.GITHUB_TOKEN }}
         run: |
           curl -fL "$BAB_URL" -o bab_preisliste.csv
           curl -fL "$KOSATEC_URL" -o kosatec_preisliste.csv
           echo "BAB: $(wc -l < bab_preisliste.csv) Zeilen"
           echo "Kosatec: $(wc -l < kosatec_preisliste.csv) Zeilen"
+          gh release download static-data-v1 -p "artikeldaten.csv" --clobber
+          echo "Artikeldaten: $(wc -l < artikeldaten.csv) Zeilen"
 
       - name: Cache-Status prüfen
         run: |
