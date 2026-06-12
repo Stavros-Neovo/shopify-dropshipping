@@ -33,3 +33,4 @@ outbox/
 # Smart Lister — temporäre Lieferanten-CSVs (werden bei jedem Run neu geladen)
 bab_preisliste.csv
 kosatec_preisliste.csv
+artikeldaten.csv
