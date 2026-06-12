@@ -414,6 +414,13 @@ def select_top_products(catalog: dict, cache: dict, artikeldaten: dict,
             dbg["profit"] += 1
             continue
 
+        # Marktpreis-Check: wenn Cache vorhanden und Konkurrenz günstiger → überspringen
+        ebay_data = cache.get(ean, {})
+        min_price = ebay_data.get("min_price", 0)
+        if min_price > 0 and vk > min_price * 1.05:  # 5% Toleranz
+            dbg["profit"] += 1
+            continue
+
         # Bild vorhanden?
         art = artikeldaten.get(ean, {})
         enr = enrichment.get(ean, {})
