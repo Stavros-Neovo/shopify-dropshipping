@@ -36,6 +36,10 @@ def fetch_all_offers(client: EbayClient) -> list[dict]:
             log.error(f"Fehler beim Abrufen der Angebote: {e}")
             break
 
+        if offset == 0:
+            import json
+            log.info(f"API-Antwort (erste Seite): {json.dumps(data, ensure_ascii=False)[:500]}")
+
         batch = (data or {}).get("offers", [])
         if not batch:
             break
