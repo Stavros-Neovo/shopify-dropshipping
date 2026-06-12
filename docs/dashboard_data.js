@@ -1,21 +1,102 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-12T11:55:36.304624+00:00",
+  "generated_at": "2026-06-12T13:38:36.528482+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 915,
+  "active_listings": 1220,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-11T22:24:02.623383+00:00",
-      "checked": 915,
-      "lowered": 0,
+      "timestamp": "2026-06-12T12:03:55.799916+00:00",
+      "checked": 1220,
+      "lowered": 3,
       "raised": 0,
-      "set_to_floor": 0,
+      "set_to_floor": 89,
       "skipped_floor": 0,
-      "skipped_few": 821,
-      "unchanged": 94,
-      "errors": 0,
+      "skipped_few": 903,
+      "unchanged": 138,
+      "errors": 87,
       "dry_run": false
     },
-    "recent_changes": [],
+    "recent_changes": [
+      {
+        "sku": "CAMD0003",
+        "title": "DJI O4 Air Unit für FPV-Drohne",
+        "old": 157.99,
+        "new": 147.99,
+        "diff": -10.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUA0067",
+        "title": "AMD Ryzen 9 5950X BOX | 100-100000059WOF",
+        "old": 460.99,
+        "new": 438.99,
+        "diff": -22.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUI0204",
+        "title": "Intel Cpu Core i7-14700KF, box | BX8071514700",
+        "old": 514.99,
+        "new": 490.99,
+        "diff": -24.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 533.99,
+        "new": 508.95,
+        "diff": -25.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUI0235",
+        "title": "Intel Cpu Ultra 7 265KF, box | BX80768265KF",
+        "old": 369.99,
+        "new": 350.99,
+        "diff": -19.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 241.99,
+        "new": 227.99,
+        "diff": -14.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 227.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 166.99,
+        "new": 155.99,
+        "diff": -11.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0258",
+        "title": "Seagate Exos 7E10 / ST6000NM019B / 6TB / 3,5\"",
+        "old": 682.99,
+        "new": 651.95,
+        "diff": -31.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 230.99,
+        "new": 217.99,
+        "diff": -13.0,
+        "action": "lowered"
+      }
+    ],
     "chart_history": [
       {
         "date": "2026-06-10",
@@ -50,6 +131,12 @@ window.DASHBOARD_DATA = {
       {
         "date": "2026-06-11",
         "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-12",
+        "lowered": 3,
         "raised": 0,
         "floor": 0
       }
