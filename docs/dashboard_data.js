@@ -1,102 +1,21 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-11T21:36:45.653512+00:00",
+  "generated_at": "2026-06-12T07:38:25.853692+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 300,
+  "active_listings": 915,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-11T00:04:46.352411+00:00",
-      "checked": 300,
-      "lowered": 8,
+      "timestamp": "2026-06-11T22:24:02.623383+00:00",
+      "checked": 915,
+      "lowered": 0,
       "raised": 0,
-      "set_to_floor": 211,
+      "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 21,
-      "unchanged": 45,
-      "errors": 15,
+      "skipped_few": 821,
+      "unchanged": 94,
+      "errors": 0,
       "dry_run": false
     },
-    "recent_changes": [
-      {
-        "sku": "CAMD0003",
-        "title": "DJI O4 Air Unit für FPV-Drohne",
-        "old": 157.99,
-        "new": 147.99,
-        "diff": -10.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0065",
-        "title": "AMD Ryzen 5 5600X BOX | 100-100000065BOX",
-        "old": 206.99,
-        "new": 194.99,
-        "diff": -12.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0067",
-        "title": "AMD Ryzen 9 5950X BOX | 100-100000059WOF",
-        "old": 460.99,
-        "new": 438.99,
-        "diff": -22.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0098",
-        "title": "AMD Ryzen 7 7700X BOX | 100-100000591WOF",
-        "old": 293.99,
-        "new": 277.99,
-        "diff": -16.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0125",
-        "title": "AMD Ryzen 9 9900X BOX | 100-100000662WOF",
-        "old": 461.99,
-        "new": 439.99,
-        "diff": -22.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0130",
-        "title": "AMD Ryzen 7 9800X3D BOX | 100-100001084WOF",
-        "old": 579.99,
-        "new": 552.95,
-        "diff": -27.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0135",
-        "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
-        "old": 706.99,
-        "new": 675.95,
-        "diff": -31.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0136",
-        "title": "AMD Ryzen 9 9950X3D BOX | 100-100000719WOF",
-        "old": 839.99,
-        "new": 802.95,
-        "diff": -37.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUA0139",
-        "title": "AMD Ryzen 7 9850X3D BOX | 100-100001973WOF",
-        "old": 626.99,
-        "new": 597.95,
-        "diff": -29.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUI0173",
-        "title": "Intel Cpu Core i9-13900KF, box | BX8071513900",
-        "old": 604.99,
-        "new": 576.95,
-        "diff": -28.04,
-        "action": "lowered"
-      }
-    ],
+    "recent_changes": [],
     "chart_history": [
       {
         "date": "2026-06-10",
@@ -127,34 +46,34 @@ window.DASHBOARD_DATA = {
         "lowered": 8,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-11",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
   "orders": {
     "stats": {
       "today_sales": 1,
-      "today_revenue": 55.98,
-      "today_profit": 10.04,
-      "week_sales": 3,
-      "week_revenue": 120.94,
-      "week_profit": 26.4,
+      "today_revenue": 63.98,
+      "today_profit": 10.99,
+      "week_sales": 4,
+      "week_revenue": 184.92,
+      "week_profit": 37.39,
       "prev_week_sales": 2,
       "prev_week_revenue": 53.96,
       "prev_week_profit": 24.93,
-      "month_sales": 5,
-      "month_revenue": 174.9,
-      "month_profit": 51.33,
-      "total_sales_30d": 5,
-      "total_revenue_30d": 174.9,
-      "total_profit_30d": 51.33
+      "month_sales": 6,
+      "month_revenue": 238.88,
+      "month_profit": 62.32,
+      "total_sales_30d": 6,
+      "total_revenue_30d": 238.88,
+      "total_profit_30d": 62.32
     },
     "chart_7d": [
-      {
-        "date": "05.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "06.06",
         "revenue": 0,
@@ -190,15 +109,15 @@ window.DASHBOARD_DATA = {
         "revenue": 55.98,
         "profit": 10.04,
         "sales": 1
+      },
+      {
+        "date": "12.06",
+        "revenue": 63.98,
+        "profit": 10.99,
+        "sales": 1
       }
     ],
     "chart_30d": [
-      {
-        "date": "13.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "14.05",
         "revenue": 0,
@@ -372,15 +291,15 @@ window.DASHBOARD_DATA = {
         "revenue": 55.98,
         "profit": 10.04,
         "sales": 1
+      },
+      {
+        "date": "12.06",
+        "revenue": 63.98,
+        "profit": 10.99,
+        "sales": 1
       }
     ],
     "chart_90d": [
-      {
-        "date": "14.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "15.03",
         "revenue": 0,
@@ -914,6 +833,12 @@ window.DASHBOARD_DATA = {
         "revenue": 55.98,
         "profit": 10.04,
         "sales": 1
+      },
+      {
+        "date": "12.06",
+        "revenue": 63.98,
+        "profit": 10.99,
+        "sales": 1
       }
     ],
     "top_products": [
@@ -935,6 +860,26 @@ window.DASHBOARD_DATA = {
           "profit_u": 16.92,
           "qty": 1,
           "profit_t": 16.92
+        }
+      },
+      {
+        "sku": "SHG0003",
+        "title": "Govee - Glide Wall Light (4+1)",
+        "sold": 1,
+        "revenue": 59.99,
+        "profit": 10.99,
+        "vk": 59.99,
+        "ek": 30.78,
+        "calc": {
+          "vk_brutto": 63.98,
+          "ebay_fee": 8.32,
+          "vat": 8.89,
+          "netto_vk": 46.77,
+          "ship": 5.0,
+          "ek": 30.78,
+          "profit_u": 10.99,
+          "qty": 1,
+          "profit_t": 10.99
         }
       },
       {
@@ -1020,6 +965,12 @@ window.DASHBOARD_DATA = {
     ],
     "recent_sales": [
       {
+        "date": "12.06 06:07",
+        "title": "Govee - Glide Wall Light (4+1)",
+        "revenue": 63.98,
+        "profit": 10.99
+      },
+      {
         "date": "11.06 12:07",
         "title": "ECOFLOW Smart Plug 2",
         "revenue": 55.98,
@@ -1055,7 +1006,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1065,7 +1016,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1075,7 +1026,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1085,7 +1036,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1095,20 +1046,30 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "ECOFLOW Smart Plug 2"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "08-14763-57410",
+        "date": "2026-06-12",
+        "deadline": "2026-06-26",
+        "days_left": 14,
+        "items": [
+          "Govee - Glide Wall Light (4+1)"
         ],
         "urgent": false
       }
     ],
     "tracking_missing": [],
     "tax_reserves": {
-      "ust_month": 27.93,
-      "est_month": 15.4,
-      "gewst_month": 7.7,
-      "total_month": 51.02
+      "ust_month": 38.14,
+      "est_month": 18.7,
+      "gewst_month": 9.35,
+      "total_month": 66.18
     },
-    "expected_payout": 152.16
+    "expected_payout": 207.83
   }
 };
