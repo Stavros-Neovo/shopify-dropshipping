@@ -590,15 +590,28 @@ def main():
             log.info(f"supplier_map.json: {len(smap)} Einträge gespeichert")
 
         # Ausgabe
-        log.info(f"\n{'='*60}")
-        log.info(f"TOP {len(selected)} ARTIKEL:")
-        log.info(f"{'EAN':<15} {'SKU':<12} {'EK':>7} {'VK':>7} {'Profit':>7} {'Score':>6} {'Watch':>5} {'Konkurrenz':>10} Lieferant")
-        log.info("-" * 90)
-        for p in selected[:50]:  # Nur erste 50 anzeigen
+        log.info(f"\n{'='*70}")
+        log.info(f"TOP {len(selected)} ARTIKEL (Score-Erklärung: Watch=Nachfrage, Komp=Konkurrenz, Preis=günstiger als Markt):")
+        log.info(f"{'#':<4} {'EAN':<15} {'EK':>7} {'VK':>7} {'Profit':>7} {'Score':>6} {'Watch':>5} {'Komp':>5} {'Grund'}")
+        log.info("-" * 80)
+        for i, p in enumerate(selected[:50], 1):
+            # Score-Begründung
+            reasons = []
+            if p["watch_count"] >= 20:
+                reasons.append(f"🔥{p['watch_count']} Watches")
+            elif p["watch_count"] > 0:
+                reasons.append(f"{p['watch_count']} Watches")
+            if p["competitor_count"] <= 3 and p["competitor_count"] > 0:
+                reasons.append(f"wenig Konkurrenz ({p['competitor_count']})")
+            elif p["competitor_count"] == 0:
+                reasons.append("kein Cache (neutral)")
+            if p["profit"] >= 30:
+                reasons.append(f"💰 {p['profit']:.0f}€ Gewinn")
+            reason_str = " | ".join(reasons) if reasons else "Standardauswahl"
             log.info(
-                f"{p['ean']:<15} {p['sku']:<12} {p['ek']:>7.2f} {p['vk']:>7.2f} "
+                f"{i:<4} {p['ean']:<15} {p['ek']:>7.2f} {p['vk']:>7.2f} "
                 f"{p['profit']:>7.2f} {p['score']:>6.1f} {p['watch_count']:>5} "
-                f"{p['competitor_count']:>10} {p['supplier']}"
+                f"{p['competitor_count']:>5}  {p['name'][:30]} | {reason_str}"
             )
         if len(selected) > 50:
             log.info(f"  ... und {len(selected)-50} weitere")
