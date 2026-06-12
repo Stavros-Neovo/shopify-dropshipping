@@ -51,6 +51,8 @@ SUPPLIER_MAP    = "supplier_map.json"
 CONFIG_FILE     = "config_shop2.yaml"
 
 EBAY_FEE        = 0.13
+CAMPAIGN_FEE    = 0.08   # 8% Promoted Listings Standard
+TOTAL_FEE       = EBAY_FEE + CAMPAIGN_FEE  # 21% gesamt
 VAT_FACTOR      = 1.19
 BUYER_SHIP      = 3.99
 SHIP_COST       = 5.0
@@ -72,7 +74,7 @@ def calc_vk(ek: float) -> float:
     # Vereinfacht: VK_netto = EK * (1 + MARGIN_TARGET) + SHIP_COST
     # VK_brutto = VK_netto * VAT_FACTOR / (1 - EBAY_FEE)
     vk_netto = ek * (1 + MARGIN_TARGET) + SHIP_COST
-    vk_brutto = vk_netto * VAT_FACTOR / (1 - EBAY_FEE)
+    vk_brutto = vk_netto * VAT_FACTOR / (1 - TOTAL_FEE)
     vk_brutto -= BUYER_SHIP  # Käufer zahlt Versand separat
     # Psychological rounding
     vk_rounded = round(vk_brutto) - 0.01
@@ -82,9 +84,9 @@ def calc_vk(ek: float) -> float:
 
 
 def calc_profit(vk: float, ek: float) -> float:
-    """Nettogewinn nach allen Kosten."""
+    """Nettogewinn nach allen Kosten inkl. 8% Kampagnengebühr."""
     total = vk + BUYER_SHIP
-    fee = total * EBAY_FEE
+    fee = total * TOTAL_FEE   # eBay 13% + Kampagne 8%
     vat = (total - fee) * (1 - 1 / VAT_FACTOR)
     netto = total - fee - vat
     return round(netto - SHIP_COST - ek, 2)
