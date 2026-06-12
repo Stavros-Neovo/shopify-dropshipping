@@ -588,6 +588,13 @@ def main():
     }
     all_changes = []
 
+    # Bild-Problemliste laden (SKUs mit eBay Error 25002)
+    IMAGE_FIX_FILE = "image_fix_needed.json"
+    try:
+        image_fix = json.loads(Path(IMAGE_FIX_FILE).read_text(encoding="utf-8")) if Path(IMAGE_FIX_FILE).exists() else {}
+    except Exception:
+        image_fix = {}
+
     for n, (ean, feed_data) in enumerate(chunk_products, 1):
         sku   = feed_data["sku"]
         ek    = feed_data["ek"]
@@ -612,8 +619,16 @@ def main():
                 dry_run=args.dry_run, client=client,
             )
         except Exception as e:
+            err_str = str(e)
             log.error(f"  FEHLER {sku}: {e}")
             stats["errors"] += 1
+            # 25002 = Bild-Auflösung zu gering → für Fixer merken
+            if "25002" in err_str and not args.dry_run:
+                image_fix[sku] = {
+                    "ean":   ean,
+                    "title": title,
+                    "detected_at": datetime.now(timezone.utc).isoformat(),
+                }
             continue
 
         action = result["action"]
@@ -637,6 +652,13 @@ def main():
             stats["unchanged"] += 1
 
         time.sleep(DELAY)
+
+    # ── Bild-Problemliste speichern ───────────────────────────────────────
+    if not args.dry_run and image_fix:
+        Path(IMAGE_FIX_FILE).write_text(
+            json.dumps(image_fix, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        log.info(f"  Bilder zu fixen: {len(image_fix)} SKUs → {IMAGE_FIX_FILE}")
 
     # ── Checkpoint speichern ──────────────────────────────────────────────
     if not args.dry_run:
