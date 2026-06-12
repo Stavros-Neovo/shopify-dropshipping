@@ -3,6 +3,7 @@ name: Smart Lister
 on:
   schedule:
     - cron: "0 2 * * *"      # Täglich 02:00 UTC — Score-Cache aktualisieren
+    - cron: "0 14 * * *"     # Täglich 14:00 UTC — Score-Cache aktualisieren (2. Run)
     - cron: "0 3 * * 1"      # Montags 03:00 UTC — Top-Artikel neu auswählen
   workflow_dispatch:
     inputs:
@@ -85,7 +86,7 @@ jobs:
           if [ "${{ github.event_name }}" = "schedule" ]; then
             DOW=$(date -u +%u)
             if [ "$DOW" = "1" ]; then MODE="both"; else MODE="scan"; fi
-            LIMIT="4800"
+            LIMIT="10000"
           fi
 
           # Argumente aufbauen
