@@ -18,7 +18,9 @@ CONFIG_FILE    = "config_shop2.yaml"
 ORDERS_PATH    = "/sell/fulfillment/v1/order"
 SHOPIFY_CSV    = "docs/shopify_products.csv"
 
-EBAY_FEE    = 0.13   # 13 % eBay-Gebühren
+EBAY_FEE      = 0.13   # 13 % eBay-Grundgebühr
+CAMPAIGN_FEE  = 0.08   # 8 % Promoted Listings (cost-per-sale)
+TOTAL_FEE     = EBAY_FEE + CAMPAIGN_FEE  # 21 %
 VAT_FACTOR  = 1.19   # Brutto → Netto
 SHIP_COST   = 5.0    # Pauschale Versandkosten (was wir zahlen)
 BUYER_SHIP  = 3.99   # Versandanteil den Käufer zahlt
@@ -97,11 +99,14 @@ def fetch_orders(base_url, token, days=90):
 
 def calc_profit_item(unit_price: float, ek: float, qty: int = 1) -> dict:
     """Gibt vollständige Gewinnrechnung zurück."""
-    total_vk  = unit_price + BUYER_SHIP          # Gesamtbetrag inkl. Käufer-Versand
-    ebay_fee  = round(total_vk * EBAY_FEE, 2)   # eBay Gebühr auf Gesamtbetrag
-    vat       = round((total_vk - ebay_fee) * (1 - 1 / VAT_FACTOR), 2)
-    netto_vk  = round(total_vk - ebay_fee - vat, 2)
-    profit_u  = round(netto_vk - SHIP_COST - ek, 2)
+    total_vk    = unit_price + BUYER_SHIP              # Gesamtbetrag inkl. Käufer-Versand
+    ebay_fee    = round(total_vk * EBAY_FEE, 2)        # eBay Grundgebühr 13%
+    campaign    = round(total_vk * CAMPAIGN_FEE, 2)    # Promoted Listings 8%
+    total_fees  = round(total_vk * TOTAL_FEE, 2)       # 21% gesamt
+    vat         = round((total_vk - total_fees) * (1 - 1 / VAT_FACTOR), 2)
+    netto_vk    = round(total_vk - total_fees - vat, 2)
+    profit_u    = round(netto_vk - SHIP_COST - ek, 2)
+    ebay_fee    = total_fees  # für Dashboard-Ausgabe: Gesamtgebühr anzeigen
     profit_t  = round(profit_u * qty, 2)
     return {
         "vk_brutto":  round(total_vk, 2),
@@ -280,7 +285,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
     }
 
     # Erwartete Auszahlung (eBay Managed Payments: ~wöchentlich)
-    payout = rnd(agg["d30"]["revenue"] * (1 - EBAY_FEE))
+    payout = rnd(agg["d30"]["revenue"] * (1 - TOTAL_FEE))
 
     return {
         "stats": {

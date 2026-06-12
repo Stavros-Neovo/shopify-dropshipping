@@ -76,6 +76,7 @@ ebay_pricing:
   shipping_cost_eur: 5.00        # Was wir dem Spediteur zahlen
   buyer_shipping_eur: 3.99       # Was der Käufer bei eBay zusätzlich zahlt
   ebay_fee_rate: 0.13
+  campaign_fee_rate: 0.08        # Promoted Listings Standard 8% (cost-per-sale)
   vat_rate: 0.19
 
   # Fixe 25% Marge für alle Preisklassen
