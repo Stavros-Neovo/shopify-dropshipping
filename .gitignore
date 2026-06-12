@@ -29,3 +29,7 @@ image_report.csv
 image_review.html
 wrong_images.json
 outbox/
+
+# Smart Lister — temporäre Lieferanten-CSVs (werden bei jedem Run neu geladen)
+bab_preisliste.csv
+kosatec_preisliste.csv
