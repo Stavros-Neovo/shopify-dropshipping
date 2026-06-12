@@ -246,6 +246,27 @@
     .deadline-urgent .row-title,.deadline-urgent .row-value{color:var(--red)}
     .deadline-warn .row-title,.deadline-warn .row-value{color:var(--yellow)}
 
+    /* ── Bezahlt-Button ── */
+    .pay-btn{
+      font-size:11px;font-weight:700;padding:5px 10px;
+      border-radius:10px;border:1px solid #22c55e40;
+      background:#22c55e12;color:var(--green);cursor:pointer;
+      transition:all .2s;white-space:nowrap;
+    }
+    .pay-btn:hover{background:#22c55e30;border-color:var(--green)}
+    .pay-btn.paid{
+      background:#6b728018;border-color:var(--border);
+      color:var(--muted);cursor:default;
+    }
+    .row-paid{opacity:.45}
+    .row-paid .row-title{text-decoration:line-through}
+    .invoice-badge{
+      font-size:10px;color:var(--muted);
+      background:var(--surface2);border:1px solid var(--border);
+      border-radius:6px;padding:2px 6px;margin-top:3px;
+      display:inline-block;font-family:monospace;
+    }
+
     /* ── Summary ── */
     .summary-row{
       display:flex;justify-content:space-between;
@@ -374,6 +395,27 @@ function switchChart(range) {
   });
   const map = {'7d':_data.orders.chart_7d,'30d':_data.orders.chart_30d,'90d':_data.orders.chart_90d};
   buildChart(map[range] || []);
+}
+
+// ─── Bezahlt-Status ─────────────────────────────────────────────────────────
+function getPaidSet() {
+  try { return new Set(JSON.parse(localStorage.getItem('bab_paid') || '[]')); }
+  catch { return new Set(); }
+}
+function isPaid(orderId) { return getPaidSet().has(orderId); }
+function togglePaid(orderId) {
+  const paid = getPaidSet();
+  paid.add(orderId);
+  localStorage.setItem('bab_paid', JSON.stringify([...paid]));
+  // Row sofort updaten
+  const row = document.getElementById('row_'+orderId);
+  if (row) {
+    row.classList.add('row-paid');
+    row.querySelector('.row-icon').textContent = '✓';
+    row.querySelector('.row-icon').className = 'row-icon icon-teal';
+    const btn = row.querySelector('.pay-btn');
+    if (btn) { btn.textContent = '✓ Bezahlt'; btn.classList.add('paid'); btn.disabled = true; }
+  }
 }
 
 // ─── Gewinn-Dropdown ─────────────────────────────────────────────────────────
@@ -556,7 +598,7 @@ function render(d) {
       <div class="tax-card total">
         <div class="tax-label">Gesamt zurücklegen</div>
         <div class="tax-value" id="c_tax_total">0</div>
-        <div class="tax-note">USt + ESt + GewSt</div>
+        <div class="tax-note">USt (vom Umsatz) + ESt + GewSt</div>
       </div>
     </div>
 
@@ -597,17 +639,23 @@ function render(d) {
     <div class="card">
       ${od.bab_deadlines.length===0
         ? '<div class="empty">✓ Keine offenen Fristen</div>'
-        : od.bab_deadlines.map(b=>`
-        <div class="list-row ${b.urgent?'deadline-urgent':b.days_left<=5?'deadline-warn':''}">
-          <div class="row-icon ${b.urgent?'icon-red':b.days_left<=5?'icon-yellow':'icon-blue'}">${b.urgent?'🔥':b.days_left<=5?'⚠️':'📅'}</div>
+        : od.bab_deadlines.map(b=>{
+            const paid = isPaid(b.order_id);
+            return `
+        <div class="list-row ${paid?'row-paid':b.urgent?'deadline-urgent':b.days_left<=5?'deadline-warn':''}" id="row_${b.order_id}">
+          <div class="row-icon ${paid?'icon-teal':b.urgent?'icon-red':b.days_left<=5?'icon-yellow':'icon-blue'}">${paid?'✓':b.urgent?'🔥':b.days_left<=5?'⚠️':'📅'}</div>
           <div class="row-content">
             <div class="row-title">${b.items[0]}${b.items.length>1?' +'+(b.items.length-1)+' weitere':''}</div>
-            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})} · ${b.order_id}</div>
+            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})} · ${b.days_left}d</div>
+            <span class="invoice-badge">📄 ${b.order_id}${b.amount_ek?' · '+eur(b.amount_ek):''}</span>
           </div>
-          <div class="row-right">
-            <div class="row-value ${b.urgent?'red':b.days_left<=5?'yellow':''}">${b.days_left}d</div>
+          <div class="row-right" style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+            <div class="row-value ${paid?'':b.urgent?'red':b.days_left<=5?'yellow':''}">${eur(b.amount_ek||0)}</div>
+            <button class="pay-btn ${paid?'paid':''}" onclick="togglePaid('${b.order_id}')" ${paid?'disabled':''}>
+              ${paid?'✓ Bezahlt':'Bezahlt'}
+            </button>
           </div>
-        </div>`).join('')}
+        </div>`}).join('')}
     </div>
 
     <!-- Best Seller -->
