@@ -398,9 +398,11 @@ def select_top_products(catalog: dict, cache: dict, artikeldaten: dict,
     Filtert: kein Bild, Gewinn unter Minimum, bereits gelistet.
     """
     candidates = []
+    dbg = {"listed": 0, "profit": 0, "no_image": 0, "no_title": 0}
 
     for ean, prod in catalog.items():
         if ean in already_listed:
+            dbg["listed"] += 1
             continue
 
         ek = prod["ek"]
@@ -409,6 +411,7 @@ def select_top_products(catalog: dict, cache: dict, artikeldaten: dict,
         min_p = min_profit(ek)
 
         if profit < min_p:
+            dbg["profit"] += 1
             continue
 
         # Bild vorhanden?
@@ -416,11 +419,13 @@ def select_top_products(catalog: dict, cache: dict, artikeldaten: dict,
         enr = enrichment.get(ean, {})
         image = enr.get("image_main") or art.get("image") or ""
         if not image:
+            dbg["no_image"] += 1
             continue
 
         # Titel
         title = enr.get("title_seo") or art.get("title") or prod.get("name", "")
         if not title:
+            dbg["no_title"] += 1
             continue
 
         ebay = cache.get(ean, {})
@@ -443,7 +448,13 @@ def select_top_products(catalog: dict, cache: dict, artikeldaten: dict,
 
     # Sortieren nach Score
     candidates.sort(key=lambda x: x["score"], reverse=True)
-    log.info(f"Kandidaten: {len(candidates)} (nach Filter) → Top {min(top_n, len(candidates))} ausgewählt")
+    log.info(
+        f"Filter: {dbg['listed']} bereits gelistet | "
+        f"{dbg['profit']} Gewinn zu gering | "
+        f"{dbg['no_image']} kein Bild | "
+        f"{dbg['no_title']} kein Titel"
+    )
+    log.info(f"Kandidaten: {len(candidates)} → Top {min(top_n, len(candidates))} ausgewählt")
     return candidates[:top_n]
 
 
@@ -533,7 +544,12 @@ def main():
     enrich   = load_enrichment()
     listed   = load_already_listed()
 
-    log.info(f"Bereits bekannte EANs (enrichment): {len(listed)}")
+    log.info(
+        f"Katalog: {len(catalog)} EANs | "
+        f"Artikeldaten: {len(artdata)} | "
+        f"Enrichment: {len(enrich)} | "
+        f"Bereits bekannt: {len(listed)}"
+    )
 
     # Score-Cache aktualisieren
     cache = load_score_cache()
