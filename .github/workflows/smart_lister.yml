@@ -74,6 +74,7 @@ jobs:
         env:
           EBAY_CLIENT_ID:     ${{ secrets.EBAY_CLIENT_ID }}
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
         run: |
           MODE="${{ github.event.inputs.mode }}"
           TOP="${{ github.event.inputs.top || '2300' }}"
