@@ -51,6 +51,8 @@ jobs:
           EBAY_REFRESH_TOKEN: ${{ secrets.EBAY_REFRESH_TOKEN }}
           # eBay API – Shop 2
           EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+          # Kosatec Feed (für Bestandscheck)
+          KOSATEC_URL: ${{ secrets.KOSATEC_PRICELIST_URL }}
           # SMTP (Bestellmails senden)
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}

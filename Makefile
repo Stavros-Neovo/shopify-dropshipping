@@ -9,10 +9,10 @@
 #   make dry           → alles im Dry-Run (kein echtes Senden)
 # =============================================================================
 
-.PHONY: all sync orders tracking dry
+.PHONY: all sync orders tracking kosatec_stock dry
 
 # Stündlicher Komplett-Durchlauf (GitHub Actions)
-all: sync orders tracking
+all: sync orders tracking kosatec_stock
 
 # Produkt-Sync: Preise + Bestand auf eBay aktualisieren
 sync:
@@ -28,6 +28,11 @@ orders:
 tracking:
 	python ebay_tracking_updater.py --config config.yaml
 	python ebay_tracking_updater.py --config config_shop2.yaml
+
+# Kosatec Bestandscheck: out-of-stock Artikel sofort deaktivieren
+kosatec_stock:
+	curl -fL "$$KOSATEC_URL" -o kosatec_preisliste.csv 2>/dev/null || true
+	python kosatec_stock_check.py
 
 # Alles im Dry-Run (nichts wird wirklich gesendet)
 dry:
