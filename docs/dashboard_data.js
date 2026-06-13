@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-12T19:32:45.635032+00:00",
+  "generated_at": "2026-06-13T08:33:36.344907+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 1220,
   "repricing": {
@@ -144,9 +144,9 @@ window.DASHBOARD_DATA = {
   },
   "orders": {
     "stats": {
-      "today_sales": 1,
-      "today_revenue": 63.98,
-      "today_profit": 6.69,
+      "today_sales": 0,
+      "today_revenue": 0.0,
+      "today_profit": 0.0,
       "week_sales": 4,
       "week_revenue": 184.92,
       "week_profit": 24.95,
@@ -161,12 +161,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 46.25
     },
     "chart_7d": [
-      {
-        "date": "06.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "07.06",
         "revenue": 53.96,
@@ -202,15 +196,15 @@ window.DASHBOARD_DATA = {
         "revenue": 63.98,
         "profit": 6.69,
         "sales": 1
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "14.05",
+        "date": "13.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "15.05",
         "revenue": 0,
@@ -384,15 +378,15 @@ window.DASHBOARD_DATA = {
         "revenue": 63.98,
         "profit": 6.69,
         "sales": 1
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "15.03",
+        "date": "13.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "16.03",
         "revenue": 0,
@@ -926,6 +920,12 @@ window.DASHBOARD_DATA = {
         "revenue": 63.98,
         "profit": 6.69,
         "sales": 1
+      },
+      {
+        "date": "13.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1093,7 +1093,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1103,7 +1103,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1113,7 +1113,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1123,7 +1123,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1133,7 +1133,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 13,
+        "days_left": 12,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1143,7 +1143,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
