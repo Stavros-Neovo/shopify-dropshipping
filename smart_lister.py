@@ -516,8 +516,20 @@ def update_supplier_map(selected: list[dict], smap: dict) -> dict:
 # Bereits gelistete Artikel ermitteln
 # ---------------------------------------------------------------------------
 def load_already_listed(enrichment_path: str = ENRICHMENT) -> set[str]:
-    """EANs die bereits in enrichment_index sind (= schon gelistet oder bekannt)."""
+    """EANs die bereits aktiv auf eBay gelistet sind (aus supplier_map.json)."""
     eans = set()
+    if Path(SUPPLIER_MAP).exists():
+        try:
+            sm = json.loads(Path(SUPPLIER_MAP).read_text(encoding="utf-8"))
+            for d in sm.values():
+                ean = d.get("ean", "").strip()
+                if ean:
+                    eans.add(ean)
+            log.info(f"Already listed (supplier_map): {len(eans)} EANs")
+            return eans
+        except Exception:
+            pass
+    # Fallback: enrichment_index
     if not Path(enrichment_path).exists():
         return eans
     with open(enrichment_path, newline="", encoding="utf-8-sig") as f:
