@@ -14,16 +14,6 @@
     "title": "Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m, 1300 W, 220-240 V",
     "detected_at": "2026-06-12T14:55:44.870851+00:00"
   },
-  "HHWM0015": {
-    "ean": "0088381704038",
-    "title": "Makita P-73374 - Universal-Bit-Set mit Universalhalter - 31-teilig",
-    "detected_at": "2026-06-12T14:55:47.830661+00:00"
-  },
-  "HHWM0017": {
-    "ean": "0088381445474",
-    "title": "Makita B-44410 - Stichsägeblatt-Set A, 10-teilig für Holz, Metall, Kunststoff",
-    "detected_at": "2026-06-12T14:55:50.707846+00:00"
-  },
   "HHWM0019": {
     "ean": "0088381891424",
     "title": "Makita DHK180Z - Meißelhammer, 18V",
@@ -38,11 +28,6 @@
     "ean": "0088381464123",
     "title": "Makita BL1860B - LXT Batterie, 18V, Li-Ion, 6 Ah",
     "detected_at": "2026-06-12T14:56:01.767632+00:00"
-  },
-  "HHWM0027": {
-    "ean": "0088381443395",
-    "title": "Makita P-81050 - Bit-Box mit Bits in den Längen 25 mm und 75 mm - 99-teilig",
-    "detected_at": "2026-06-12T14:56:05.453535+00:00"
   },
   "HHWM0028": {
     "ean": "0197050364623",
@@ -63,11 +48,6 @@
     "ean": "0197050011855",
     "title": "Makita DJV186Z - Stichsäge - 18V",
     "detected_at": "2026-06-12T14:56:18.201445+00:00"
-  },
-  "HHWM0034": {
-    "ean": "0088381736558",
-    "title": "Makita DDF487Z - Bohrschrauber, 18V",
-    "detected_at": "2026-06-12T14:56:21.119491+00:00"
   },
   "HHWM0038": {
     "ean": "0088381723831",
@@ -99,21 +79,6 @@
     "title": "OutIn Mino - Space Grey - Portable Electric Espresso Machine",
     "detected_at": "2026-06-12T14:56:44.786084+00:00"
   },
-  "HHWP0101": {
-    "ean": "8720389015809",
-    "title": "Philips 7000 series DST7050/70 - Dampfbügeleisen - Grün",
-    "detected_at": "2026-06-12T14:56:48.673448+00:00"
-  },
-  "HHWR0018": {
-    "ean": "5038061139082",
-    "title": "Remington Haarschneider HC5020",
-    "detected_at": "2026-06-12T14:56:51.533905+00:00"
-  },
-  "HHWR3019": {
-    "ean": "3221616007222",
-    "title": "ROWENTA Dual Force RH6737WH (2-in-1) - Vaccum cleaner",
-    "detected_at": "2026-06-12T14:56:55.834462+00:00"
-  },
   "HHWR8000": {
     "ean": "4892210113375",
     "title": "Ryobi RAK30MIX - Schraubendreher- und Bohrer-Bitsatz",
@@ -124,495 +89,35 @@
     "title": "WMF Perfect Plus One Pot Schnellkochtopf-Set 4,5L+3L",
     "detected_at": "2026-06-12T14:57:04.292562+00:00"
   },
-  "HHWW032": {
-    "ean": "4211129226776",
-    "title": "WMF KÜCHENminis Smoothie-to-go, Deep Black",
-    "detected_at": "2026-06-12T14:57:07.508601+00:00"
-  },
-  "HHWX0140": {
-    "ean": "6976233677163",
-    "title": "Dreame X40 Master Robotersauger Schwarz",
-    "detected_at": "2026-06-12T14:57:11.501841+00:00"
-  },
-  "HHWX0145": {
-    "ean": "6978515250514",
-    "title": "Dreame H15 Mix Handstaubsauger",
-    "detected_at": "2026-06-12T14:57:14.585547+00:00"
-  },
-  "MBAI0031": {
-    "ean": "4711387095119",
-    "title": "TUF GAMING B760-PLUS WIFI | 90MB1ER0-M1EAY0",
-    "detected_at": "2026-06-12T14:57:27.476527+00:00"
-  },
-  "MBAI0044": {
-    "ean": "4711387730775",
-    "title": "ProArt X870E-CREATOR WIFI | 90MB1IG0-M0EAY0",
-    "detected_at": "2026-06-12T14:57:30.548543+00:00"
-  },
-  "MBAI0046": {
-    "ean": "4711387797273",
-    "title": "ASUS PRIME B840-PLUS WIFI | 90MB1IZ0-M0EAY0",
-    "detected_at": "2026-06-12T14:57:34.235650+00:00"
-  },
-  "MBAI0047": {
-    "ean": "4711387797143",
-    "title": "ASUS PRIME B840M-A WIFI | 90MB1J20-M0EAY0",
-    "detected_at": "2026-06-12T14:57:37.614541+00:00"
-  },
-  "MBAI0048": {
-    "ean": "4711387931509",
-    "title": "PRIME B850-PLUS WIFI | 90MB1L80-M0EAY0",
-    "detected_at": "2026-06-12T14:57:40.743324+00:00"
-  },
-  "MOHP0024": {
-    "ean": "0198122902057",
-    "title": "HP 524pm - Series 5 Pro - LED-Monitor - 61 cm (24\") (9E0G9UT#ABB)",
-    "detected_at": "2026-06-12T14:57:44.065487+00:00"
-  },
-  "MOL0000": {
-    "ean": "0198156725684",
-    "title": "Lenovo ThinkVision T24D-40 - LED-Monitor - 61 cm (23,8\") (64B9GAT1EU)",
-    "detected_at": "2026-06-12T14:57:47.137337+00:00"
-  },
-  "NASS0085": {
-    "ean": "4711174725991",
-    "title": "Synology DiskStation DS425+ - NAS-Server",
-    "detected_at": "2026-06-12T14:57:50.514707+00:00"
-  },
-  "NASS0086": {
-    "ean": "4711174726387",
-    "title": "Synology Disk Station DS225+ - NAS-Server",
-    "detected_at": "2026-06-12T14:57:53.360037+00:00"
-  },
-  "NETA0011": {
-    "ean": "4023125030963",
-    "title": "FRITZ!BOX 5690 FIBER - WiFi 7",
-    "detected_at": "2026-06-12T14:57:56.352713+00:00"
-  },
-  "NETT0085": {
-    "ean": "6935364030773",
-    "title": "TP-LINK JetStream TL-SG3428XMP - Switch - managed - 24 x 10/100/1000 (PoE+)",
-    "detected_at": "2026-06-12T14:58:09.885587+00:00"
-  },
-  "NETT0086": {
-    "ean": "6935364010751",
-    "title": "TP-LINK JetStream - TL-SG3452 - T2600G-52TS - Switch - managed",
-    "detected_at": "2026-06-12T14:58:13.110146+00:00"
-  },
-  "NETT0097": {
-    "ean": "6935364086862",
-    "title": "TP-LINK Archer MR400 V3 - Wireless Router - WWAN",
-    "detected_at": "2026-06-12T14:58:17.358443+00:00"
-  },
-  "NETT0147": {
-    "ean": "4897098687765",
-    "title": "TP-LINK EAP620HD - AccessPoint",
-    "detected_at": "2026-06-12T14:58:20.316846+00:00"
-  },
-  "NETT0149": {
-    "ean": "8885021370170",
-    "title": "TP-LINK Festa F65 - Access Point",
-    "detected_at": "2026-06-12T14:58:23.388700+00:00"
-  },
-  "NETT0150": {
-    "ean": "8885021370156",
-    "title": "TP-LINK Festa F65-WALL - Access Point",
-    "detected_at": "2026-06-12T14:58:26.459021+00:00"
-  },
-  "NETT0151": {
-    "ean": "8885021370163",
-    "title": "TP-LINK Festa F65-Outdoor - Access Point",
-    "detected_at": "2026-06-12T14:58:29.902343+00:00"
-  },
-  "NETT0152": {
-    "ean": "8885021370194",
-    "title": "TP-LINK Festa F61 - Access Point",
-    "detected_at": "2026-06-12T14:58:33.832679+00:00"
-  },
-  "NETT0153": {
-    "ean": "8885021370187",
-    "title": "TP-LINK Festa F61-Outdoor - Access Point",
-    "detected_at": "2026-06-12T14:58:37.490420+00:00"
-  },
   "NETT0154": {
     "ean": "8885021370200",
     "title": "TP-LINK Festa F54 - Access Point",
     "detected_at": "2026-06-12T14:58:41.509763+00:00"
-  },
-  "NETT0155": {
-    "ean": "8885021370231",
-    "title": "TP-LINK Festa F52 - Access Point",
-    "detected_at": "2026-06-12T14:58:44.519202+00:00"
-  },
-  "NETT0156": {
-    "ean": "8885021370217",
-    "title": "TP-LINK Festa F52-Wall - Access Point",
-    "detected_at": "2026-06-12T14:58:48.044301+00:00"
-  },
-  "NETT0157": {
-    "ean": "8885021370224",
-    "title": "TP-LINK Festa F52-Outdoor - Access Point",
-    "detected_at": "2026-06-12T14:58:51.955949+00:00"
-  },
-  "NETT0158": {
-    "ean": "8885020622393",
-    "title": "TP-LINK Festa FS352GP - Switch",
-    "detected_at": "2026-06-12T14:58:55.642985+00:00"
-  },
-  "NETT0160": {
-    "ean": "8885020621501",
-    "title": "TP-LINK Festa FS328GP - Switch",
-    "detected_at": "2026-06-12T14:58:59.636505+00:00"
-  },
-  "NETT0161": {
-    "ean": "8885020624014",
-    "title": "TP-LINK Festa FS328G - Switch",
-    "detected_at": "2026-06-12T14:59:03.017102+00:00"
-  },
-  "NETT0162": {
-    "ean": "8885020621488",
-    "title": "TP-LINK Festa FS318GP - Switch",
-    "detected_at": "2026-06-12T14:59:06.701660+00:00"
-  },
-  "NETT0163": {
-    "ean": "8885020623994",
-    "title": "TP-LINK Festa FS318G - Switch",
-    "detected_at": "2026-06-12T14:59:09.914742+00:00"
-  },
-  "NETT0165": {
-    "ean": "8885020621440",
-    "title": "TP-LINK Festa FS308GP - Switch",
-    "detected_at": "2026-06-12T14:59:12.893060+00:00"
-  },
-  "NETT0166": {
-    "ean": "8885020622379",
-    "title": "TP-LINK Festa FS308G - Switch",
-    "detected_at": "2026-06-12T14:59:16.839080+00:00"
-  },
-  "NETT0167": {
-    "ean": "8885020622416",
-    "title": "TP-LINK Festa FR365 - Router",
-    "detected_at": "2026-06-12T14:59:20.527376+00:00"
-  },
-  "NETT0168": {
-    "ean": "8885020621525",
-    "title": "TP-LINK Festa FR205 - Router",
-    "detected_at": "2026-06-12T14:59:23.877302+00:00"
-  },
-  "NETT0192": {
-    "ean": "4897098685105",
-    "title": "TP-LINK Tapo C420S1 - Überwachungskamera",
-    "detected_at": "2026-06-12T14:59:26.671119+00:00"
-  },
-  "NETT0227": {
-    "ean": "4895252503517",
-    "title": "TP-LINK Omada EAP783 V1 - Accesspoint - Wi-Fi 7",
-    "detected_at": "2026-06-12T14:59:34.350838+00:00"
-  },
-  "NETT1004": {
-    "ean": "4779051840175",
-    "title": "Teltonika RUT956 - Wireless Router",
-    "detected_at": "2026-06-12T14:59:37.730528+00:00"
-  },
-  "NETT1008": {
-    "ean": "4779051841370",
-    "title": "Teltonika TSW212 - Switch",
-    "detected_at": "2026-06-12T14:59:40.800915+00:00"
-  },
-  "NETT1010": {
-    "ean": "4779051840229",
-    "title": "Teltonika RUT200 - Wireless Router",
-    "detected_at": "2026-06-12T14:59:43.652994+00:00"
-  },
-  "NETT1011": {
-    "ean": "4779051841332",
-    "title": "Teltonika RUT260 - Wireless Router",
-    "detected_at": "2026-06-12T14:59:46.950202+00:00"
-  },
-  "NETT1013": {
-    "ean": "4779051840830",
-    "title": "Teltonika RUT906 - Wireless Router",
-    "detected_at": "2026-06-12T14:59:50.017881+00:00"
   },
   "NETT1014": {
     "ean": "4779051840540",
     "title": "Teltonika RUTM50 - Wireless Router",
     "detected_at": "2026-06-12T14:59:53.394622+00:00"
   },
-  "NETT1022": {
-    "ean": "4779027312385",
-    "title": "Teletonika TRB142 - Gateway",
-    "detected_at": "2026-06-12T14:59:57.082371+00:00"
-  },
-  "NETT1023": {
-    "ean": "4779051840137",
-    "title": "Teltonika TRB143 - Gateway",
-    "detected_at": "2026-06-12T15:00:00.155269+00:00"
-  },
-  "NETT1024": {
-    "ean": "4779027312415",
-    "title": "Teltonika TRB145 - Gateway",
-    "detected_at": "2026-06-12T15:00:03.227047+00:00"
-  },
-  "NETT1026": {
-    "ean": "4779051840236",
-    "title": "Teltonika TRB500 - Gateway",
-    "detected_at": "2026-06-12T15:00:06.606817+00:00"
-  },
-  "NETT1029": {
-    "ean": "4779051840113",
-    "title": "Teltonika TSW101 - Switch",
-    "detected_at": "2026-06-12T15:00:09.986676+00:00"
-  },
-  "NETT1035": {
-    "ean": "4779027312774",
-    "title": "Teltonika TRM240 - Modem",
-    "detected_at": "2026-06-12T15:00:14.789093+00:00"
-  },
-  "NETT1047": {
-    "ean": "4779051841394",
-    "title": "Teltonika PR1KC640 - Antenne",
-    "detected_at": "2026-06-12T15:00:18.280412+00:00"
-  },
-  "NETT1060": {
-    "ean": "4779051843268",
-    "title": "Teltonika DAP142 - Accesspoint",
-    "detected_at": "2026-06-12T15:00:26.272081+00:00"
-  },
-  "NETT1066": {
-    "ean": "4779051840472",
-    "title": "Teltonika RUTM09 - Router",
-    "detected_at": "2026-06-12T15:00:29.371471+00:00"
-  },
-  "NETT1071": {
-    "ean": "4779051840700",
-    "title": "Teltonika RUT140 - Wireless Router",
-    "detected_at": "2026-06-12T15:00:33.333339+00:00"
-  },
-  "NETT1072": {
-    "ean": "4779051840724",
-    "title": "Teltonika RUT142 - Wireless Router",
-    "detected_at": "2026-06-12T15:00:37.020783+00:00"
-  },
-  "NETT1075": {
-    "ean": "4779027312620",
-    "title": "Teltonika TRB141 - Gateway",
-    "detected_at": "2026-06-12T15:00:40.530610+00:00"
-  },
-  "NETT1078": {
-    "ean": "4779051841455",
-    "title": "Teltonika TRM500 - Wireless Router",
-    "detected_at": "2026-06-12T15:00:44.294187+00:00"
-  },
   "NETT1082": {
     "ean": "4779051841851",
     "title": "Teltonika TRB256 - Gateway",
     "detected_at": "2026-06-12T15:00:47.395789+00:00"
-  },
-  "NETT1083": {
-    "ean": "4779051841844",
-    "title": "Teltonika TRB246 - Gateway",
-    "detected_at": "2026-06-12T15:00:50.556173+00:00"
-  },
-  "NETU0008": {
-    "ean": "0817882028547",
-    "title": "UbiQuiti UniFi USW-16-POE Switch",
-    "detected_at": "2026-06-12T15:00:57.914614+00:00"
-  },
-  "NETU0010": {
-    "ean": "0810010078278",
-    "title": "UbiQuiti WiFi 6 Mesh Access Point",
-    "detected_at": "2026-06-12T15:01:01.595443+00:00"
-  },
-  "NETU0013": {
-    "ean": "0810010076830",
-    "title": "UbiQuiti UniFi U6-PRO Wi-Fi 6 Access Point",
-    "detected_at": "2026-06-12T15:01:04.695688+00:00"
-  },
-  "NETU0016": {
-    "ean": "0810010072146",
-    "title": "UbiQuiti UniFi USW-48-POE Switch",
-    "detected_at": "2026-06-12T15:01:08.968783+00:00"
-  },
-  "NETU0024": {
-    "ean": "0810010077769",
-    "title": "UbiQuiti UniFi Dream Machine Special Edition",
-    "detected_at": "2026-06-12T15:01:14.437501+00:00"
-  },
-  "NETU0028": {
-    "ean": "0817882027373",
-    "title": "UbiQuiti UniFi Dream Machine Pro Access Point",
-    "detected_at": "2026-06-12T15:01:19.106039+00:00"
-  },
-  "NETU0067": {
-    "ean": "0810010071163",
-    "title": "UbiQuiti UniFi Switch Lite USW-Lite-16-POE - Switch",
-    "detected_at": "2026-06-12T15:01:27.627184+00:00"
-  },
-  "NETU0076": {
-    "ean": "0810084691090",
-    "title": "UbiQuiti WiFi U6-PLUS Access Point",
-    "detected_at": "2026-06-12T15:01:31.088220+00:00"
-  },
-  "NETU0079": {
-    "ean": "0810010074775",
-    "title": "UbiQuiti USW-ENTERPRISE-8-POE- Switch - L3 - managed - 8 x 10/100/1000/2.5G (PoE+)",
-    "detected_at": "2026-06-12T15:01:34.158619+00:00"
-  },
-  "NETU0084": {
-    "ean": "0810084690185",
-    "title": "UbiQuiti UniFi Protect UVC-G5-BULLET - Netzwerk-Überwachungskamera",
-    "detected_at": "2026-06-12T15:01:37.538695+00:00"
-  },
-  "NETU0090": {
-    "ean": "0810010075574",
-    "title": "UbiQuiti UniFi Protect Pro - UNVR-PRO - netzwerkfähig",
-    "detected_at": "2026-06-12T15:01:40.610576+00:00"
-  },
-  "NETU0100": {
-    "ean": "0810084690246",
-    "title": "UbiQuiti UniFi Protect UVC-G5-PRO - Netzwerk-Überwachungskamera",
-    "detected_at": "2026-06-12T15:01:43.375793+00:00"
-  },
-  "NETU0104": {
-    "ean": "0810084693650",
-    "title": "UbiQuiti UniFi U7-PRO - AccessPoint - WiFi 7 - Indoor",
-    "detected_at": "2026-06-12T15:01:46.447289+00:00"
-  },
-  "NETU0107": {
-    "ean": "0810084695203",
-    "title": "UbiQuiti UniFi Cloud Gateway Ultra UniFi - UCG-ULTRA",
-    "detected_at": "2026-06-12T15:01:50.463284+00:00"
-  },
-  "NETU0110": {
-    "ean": "0810084691656",
-    "title": "UbiQuiti UniFi Access Reader G2 Professional - UA-G2-PRO",
-    "detected_at": "2026-06-12T15:01:53.821032+00:00"
   },
   "NETU0122": {
     "ean": "810084695210",
     "title": "UbiQuiti Gateway Pro UniFi UXG-MAX",
     "detected_at": "2026-06-12T15:01:57.604946+00:00"
   },
-  "NETU0129": {
-    "ean": "0810084695555",
-    "title": "UbiQuiti U7 Pro Max - Access Point",
-    "detected_at": "2026-06-12T15:02:00.884370+00:00"
-  },
-  "NETU0130": {
-    "ean": "0810084695548",
-    "title": "UbiQuiti UniFi U7 Pro Wall - Access Point",
-    "detected_at": "2026-06-12T15:02:03.647310+00:00"
-  },
-  "NETU0136": {
-    "ean": "0810084691670",
-    "title": "UbiQuiti UniFi G2 Starter Kit - Zugangskontrollgerät",
-    "detected_at": "2026-06-12T15:02:07.180048+00:00"
-  },
   "NETU0143": {
     "ean": "0810010074386",
     "title": "UbiQuiti UISP Professional - UISP-S-PRO - Switch - managed",
     "detected_at": "2026-06-12T15:02:11.328636+00:00"
   },
-  "NETU0147": {
-    "ean": "0810084690154",
-    "title": "Ubiquiti SFP+-Transceiver-Modul - UACC-CM-RJ45-MG",
-    "detected_at": "2026-06-12T15:02:14.637355+00:00"
-  },
-  "NETU0148": {
-    "ean": "0810084698747",
-    "title": "UbiQuiti U7-LITE - Access Point - WiFi 7 - Indoor",
-    "detected_at": "2026-06-12T15:02:19.094186+00:00"
-  },
-  "NETU0150": {
-    "ean": "0810177161288",
-    "title": "Ubiquiti UniFi Cloud Gateway Fiber - Gateway",
-    "detected_at": "2026-06-12T15:02:23.006780+00:00"
-  },
-  "NETU0151": {
-    "ean": "0810177161929",
-    "title": "UbiQuiti WiFi 7 Long-Range Access Point",
-    "detected_at": "2026-06-12T15:02:26.422832+00:00"
-  },
-  "NETU0152": {
-    "ean": "0810010079251",
-    "title": "Ubiquiti UniFi UNAS Pro - NAS-Server - Rack - einbaufähig",
-    "detected_at": "2026-06-12T15:02:30.072037+00:00"
-  },
-  "NETU0154": {
-    "ean": "0810010074300",
-    "title": "Ubiquiti UniFi Express 7 - Gateway - Wi-Fi 7, 10GbE, 2.5GbE",
-    "detected_at": "2026-06-12T15:02:33.946471+00:00"
-  },
-  "NETU0156": {
-    "ean": "0810084696057",
-    "title": "Ubiquiti UniFi Flex 2.5G - Switch - managed",
-    "detected_at": "2026-06-12T15:02:37.136367+00:00"
-  },
-  "NETU0157": {
-    "ean": "0810084696040",
-    "title": "Ubiquiti UniFi Flex 2.5G - Switch - 5-Port - managed",
-    "detected_at": "2026-06-12T15:02:40.821644+00:00"
-  },
-  "NETU0160": {
-    "ean": "0810084698730",
-    "title": "Ubiquiti UniFi U7 Pro Outdoor - Accesspoint - Wi-Fi 7",
-    "detected_at": "2026-06-12T15:02:43.589010+00:00"
-  },
-  "NETU0170": {
-    "ean": "0810084693582",
-    "title": "Ubiquiti UniFi Protect G5 PTZ - Netzwerk-Überwachungskamera",
-    "detected_at": "2026-06-12T15:02:48.188102+00:00"
-  },
-  "NETU0171": {
-    "ean": "0810084691915",
-    "title": "Ubiquiti UniFi Touch - VoIP-Telefon",
-    "detected_at": "2026-06-12T15:02:51.573561+00:00"
-  },
-  "NETU0172": {
-    "ean": "0810084698341",
-    "title": "Ubiquiti UniFi U7 Pro XGS - Accesspoint - Wi-Fi 7",
-    "detected_at": "2026-06-12T15:02:54.758244+00:00"
-  },
-  "NETU0173": {
-    "ean": "0810084698815",
-    "title": "Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret",
-    "detected_at": "2026-06-12T15:02:58.332464+00:00"
-  },
   "NETU0181": {
     "ean": "810177165118",
     "title": "Ubiquiti UniFi U7 Pro XG Wall - Accesspoint",
     "detected_at": "2026-06-12T15:03:01.627014+00:00"
-  },
-  "NETU0183": {
-    "ean": "0810084694275",
-    "title": "Ubiquiti PowerAmp - Netzwerkverstärker - 2 x",
-    "detected_at": "2026-06-12T15:03:05.394932+00:00"
-  },
-  "NETU0186": {
-    "ean": "0810177163398",
-    "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
-    "detected_at": "2026-06-12T15:03:11.849489+00:00"
-  },
-  "NETU0187": {
-    "ean": "0810084698792",
-    "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
-    "detected_at": "2026-06-12T15:03:15.228426+00:00"
-  },
-  "NETU0188": {
-    "ean": "8101771637876",
-    "title": "Ubiquiti  UniFi G6 Pro Turret - Netzwerk-Überwachungskamera",
-    "detected_at": "2026-06-12T15:03:18.297822+00:00"
-  },
-  "NETU0189": {
-    "ean": "0810084693698",
-    "title": "Ubiquiti UniFi Switch Ultra L2, Gigabit Ethernet",
-    "detected_at": "2026-06-12T15:03:21.200425+00:00"
-  },
-  "NOCO0002": {
-    "ean": "1210000615015",
-    "title": "NOCO GB20 | Boost 12V 500A Jump Starter | Boost Jump Starters",
-    "detected_at": "2026-06-12T15:03:25.473500+00:00"
   },
   "NOCO0004": {
     "ean": "1210000618177",
@@ -624,11 +129,6 @@
     "title": "NOCO GB150 | Boost 12V 3000A Jump Starter | Boost Jump Starters",
     "detected_at": "2026-06-12T15:03:38.047038+00:00"
   },
-  "NOCO0010": {
-    "ean": "1210000619266",
-    "title": "NOCO GENIUS5EU | 5A Battery Charger | Genius Battery Chargers",
-    "detected_at": "2026-06-12T15:03:48.703216+00:00"
-  },
   "NOCO0011": {
     "ean": "1210000619273",
     "title": "NOCO GENIUS10EU | 10A Battery Charger | Genius Battery Chargers",
@@ -638,11 +138,6 @@
     "ean": "1210000620088",
     "title": "NOCO GBX75 | Boost X 12V 2500A Jump Starter | Boost Jump Starters",
     "detected_at": "2026-06-12T15:04:02.572300+00:00"
-  },
-  "NOCO0016": {
-    "ean": "1210000624253",
-    "title": "NOCO AX65 | Boost Air 12V 2000A | Jump Starter and Air Compressor",
-    "detected_at": "2026-06-12T15:04:04.996224+00:00"
   },
   "NOCO0017": {
     "ean": "1210000620095",
@@ -659,75 +154,15 @@
     "title": "NOCO XGC4 | Genius Boost | 56W XGC Power Adapter",
     "detected_at": "2026-06-12T15:04:15.747000+00:00"
   },
-  "NUCA0015": {
-    "ean": "4711387949832",
-    "title": "ASUS NUC 15 Pro Slim Kit RNUC15CRKC500002 | 90AR00R2-M00060",
-    "detected_at": "2026-06-12T15:04:28.955811+00:00"
-  },
-  "PETK0011": {
-    "ean": "6975069302713",
-    "title": "Petkit Futterautomat YumShare Dual-Hopper mit Kamera",
-    "detected_at": "2026-06-12T15:04:36.022512+00:00"
-  },
-  "PETK0014": {
-    "ean": "6975069300863",
-    "title": "Petkit Breezy2 Haustier Transporttasche Cremeweiß",
-    "detected_at": "2026-06-12T15:04:40.017243+00:00"
-  },
   "PETK0015": {
     "ean": "6973293808629",
     "title": "Petkit Breezy2 Haustier Transporttasche Grün",
     "detected_at": "2026-06-12T15:04:43.703743+00:00"
   },
-  "PETK0016": {
-    "ean": "6973293808506",
-    "title": "Petkit Breezy2 Haustier Transporttasche Rosa Blau",
-    "detected_at": "2026-06-12T15:04:46.159159+00:00"
-  },
   "PETK0018": {
     "ean": "6975069301389",
     "title": "Petkit AirSalon Max",
     "detected_at": "2026-06-12T15:04:50.459708+00:00"
-  },
-  "PETK0019": {
-    "ean": "6975069301778",
-    "title": "Petkit AirSalon Max Pro",
-    "detected_at": "2026-06-12T15:04:53.657311+00:00"
-  },
-  "PETK0020": {
-    "ean": "6975069301723",
-    "title": "Petkit Tierfell Staubsauger-Set",
-    "detected_at": "2026-06-12T15:04:58.140009+00:00"
-  },
-  "PETK0028": {
-    "ean": "6975069305028",
-    "title": "Petkit Katzenklo Pura Max 2 Premium",
-    "detected_at": "2026-06-12T15:05:12.927071+00:00"
-  },
-  "PETK0045": {
-    "ean": "6975069306278",
-    "title": "Petkit Purobot Max Pro 2",
-    "detected_at": "2026-06-12T15:05:34.614548+00:00"
-  },
-  "PETK0046": {
-    "ean": "6975069307305",
-    "title": "Petkit Trinkbrunnen Eversweet Max - UVC Pump",
-    "detected_at": "2026-06-12T15:05:37.769173+00:00"
-  },
-  "PETK0047": {
-    "ean": "6975069307107",
-    "title": "Petkit Trinkbrunnen Eversweet Max 2 -100",
-    "detected_at": "2026-06-12T15:05:41.149470+00:00"
-  },
-  "PETK0048": {
-    "ean": "6975069307091",
-    "title": "Petkit Trinkbrunnen Eversweet Max 2 - 100 - UVC Pump",
-    "detected_at": "2026-06-12T15:05:43.607408+00:00"
-  },
-  "PETK0051": {
-    "ean": "6973293802276",
-    "title": "Petkit Fresh Element SOLO New - Grey",
-    "detected_at": "2026-06-12T15:05:50.675167+00:00"
   },
   "PETK0062": {
     "ean": "6975069306551",
@@ -738,11 +173,6 @@
     "ean": "6975069306650",
     "title": "Petkit Crystal PH Litter - 4bags Exclusive for PUROBOT CRYSTAL DUO",
     "detected_at": "2026-06-12T15:06:02.983757+00:00"
-  },
-  "PETK0067": {
-    "ean": "6975069307244",
-    "title": "Petkit Purobot Crystal duo",
-    "detected_at": "2026-06-12T15:06:05.954865+00:00"
   },
   "PETK0082": {
     "ean": "6975069307596",
@@ -799,20 +229,10 @@
     "title": "ECOFLOW Delta Max US Extra Battery Bag",
     "detected_at": "2026-06-12T15:07:06.705878+00:00"
   },
-  "PPE0030": {
-    "ean": "4895251600293",
-    "title": "ECOFLOW Portable Power Station Grounding Adapter",
-    "detected_at": "2026-06-12T15:07:09.095398+00:00"
-  },
   "PPE0031": {
     "ean": "4897082665571",
     "title": "ECOFLOW Delta Pro EU EV X-Stream Adapter",
     "detected_at": "2026-06-12T15:07:12.206416+00:00"
-  },
-  "PPE0044": {
-    "ean": "4897082668091",
-    "title": "ECOFLOW Infinity Cable",
-    "detected_at": "2026-06-12T15:07:14.850869+00:00"
   },
   "PPE0047": {
     "ean": "4897082669357",
@@ -829,16 +249,6 @@
     "title": "ECOFLOW Charger 65W",
     "detected_at": "2026-06-12T15:07:30.824328+00:00"
   },
-  "PPE0164": {
-    "ean": "4895251625005",
-    "title": "ECOFLOW Delta Pro 3/Delta Pro Extra Battery Cable",
-    "detected_at": "2026-06-12T15:07:33.280995+00:00"
-  },
-  "PPE0165": {
-    "ean": "4895251624992",
-    "title": "ECOFLOW Delta Pro 3/Delta Pro Extra Battery Cable 2m",
-    "detected_at": "2026-06-12T15:07:36.660687+00:00"
-  },
   "PPE0166": {
     "ean": "4895251609142",
     "title": "ECOFLOW Delta Pro 3 EV-stream adapter",
@@ -849,30 +259,10 @@
     "title": "ECOFLOW RAPID Pro X - Powerbank",
     "detected_at": "2026-06-12T15:07:44.955704+00:00"
   },
-  "PPE0222": {
-    "ean": "4895251641289",
-    "title": "ECOFLOW RAPID Pro 20K - Powerbank",
-    "detected_at": "2026-06-12T15:07:47.721989+00:00"
-  },
-  "PPE0223": {
-    "ean": "4895251653671",
-    "title": "ECOFLOW RAPID 25K Build-in cable - Powerbank Green",
-    "detected_at": "2026-06-12T15:07:51.245577+00:00"
-  },
   "PPE0226": {
     "ean": "4895251653855",
     "title": "ECOFLOW RAPID 25K no build-in cable - Powerbank Green",
     "detected_at": "2026-06-12T15:07:54.789757+00:00"
-  },
-  "PPE0227": {
-    "ean": "4895251653848",
-    "title": "ECOFLOW RAPID 25K no build-in cable - Powerbank Silver",
-    "detected_at": "2026-06-12T15:07:58.163344+00:00"
-  },
-  "PPE0228": {
-    "ean": "4895251653831",
-    "title": "ECOFLOW RAPID 25K no build-in cable - Powerbank Black",
-    "detected_at": "2026-06-12T15:08:03.079715+00:00"
   },
   "PPE0230": {
     "ean": "4895251646376",
@@ -914,11 +304,6 @@
     "title": "everHome EcoTracker IR - Energiemessgerät",
     "detected_at": "2026-06-12T15:09:58.473073+00:00"
   },
-  "PPSE0013": {
-    "ean": "4897082668619",
-    "title": "ECOFLOW 100W - Solar Panel",
-    "detected_at": "2026-06-12T15:10:13.314602+00:00"
-  },
   "PPSE0015": {
     "ean": "4895251605205",
     "title": "ECOFLOW Single Axis Solar Tracker",
@@ -929,25 +314,10 @@
     "title": "ECOFLOW 2 x 100W Rigid Solar Panel Combo",
     "detected_at": "2026-06-12T15:10:27.463515+00:00"
   },
-  "PPSE0041": {
-    "ean": "4897082669210",
-    "title": "ECOFLOW Distribution Panel",
-    "detected_at": "2026-06-12T15:10:30.844140+00:00"
-  },
   "PPSE0046": {
     "ean": "4895251606653",
     "title": "ECOFLOW Balcony Hook Kit",
     "detected_at": "2026-06-12T15:10:35.759083+00:00"
-  },
-  "PPSE0048": {
-    "ean": "4897082669432",
-    "title": "ECOFLOW LFP Battery Power Cable 1,5m",
-    "detected_at": "2026-06-12T15:10:38.831547+00:00"
-  },
-  "PPSE0056": {
-    "ean": "4895251604550",
-    "title": "ECOFLOW Solar adjustable Tilt Mount Bracket",
-    "detected_at": "2026-06-12T15:10:41.594072+00:00"
   },
   "PPSE0063": {
     "ean": "4895251608442",
@@ -1029,56 +399,6 @@
     "title": "Crucial Pro DDR4 - 32GB 3200 DIMM KIT 2x16GB (CP2K16G4DFRA32A)",
     "detected_at": "2026-06-12T15:12:23.902824+00:00"
   },
-  "RAM4C0110": {
-    "ean": "0649528937735",
-    "title": "Crucial DDR4 16GB 3200 CL22 TRAY (CP16G4DFRA32AT)",
-    "detected_at": "2026-06-12T15:12:27.580251+00:00"
-  },
-  "RAM4G0001": {
-    "ean": "4719692013439",
-    "title": "G.Skill AEGIS - DDR4 - 8 GB - DIMM 288-PIN",
-    "detected_at": "2026-06-12T15:12:31.586832+00:00"
-  },
-  "RAM4G0002": {
-    "ean": "4719692013446",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB 2x8 GB",
-    "detected_at": "2026-06-12T15:12:34.645964+00:00"
-  },
-  "RAM4G0003": {
-    "ean": "4719692013453",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB - DIMM 288-PIN",
-    "detected_at": "2026-06-12T15:12:38.334528+00:00"
-  },
-  "RAM4G0004": {
-    "ean": "4719692013460",
-    "title": "G.Skill AEGIS - DDR4 - 32 GB 2x16 GB",
-    "detected_at": "2026-06-12T15:12:41.123782+00:00"
-  },
-  "RAM4G0006": {
-    "ean": "4719692004970",
-    "title": "G.Skill Ripjaws V - DDR4 - 16 GB 2x8 GB",
-    "detected_at": "2026-06-12T15:12:43.862621+00:00"
-  },
-  "RAM4G0011": {
-    "ean": "4719692006417",
-    "title": "G.Skill Ripjaws V - DDR4 - 16 GB 2x8 GB",
-    "detected_at": "2026-06-12T15:12:47.397609+00:00"
-  },
-  "RAM4G0014": {
-    "ean": "4719692015198",
-    "title": "G.Skill TridentZ RGB Series - DDR4 - 16 GB",
-    "detected_at": "2026-06-12T15:12:50.619479+00:00"
-  },
-  "RAM4G0015": {
-    "ean": "4719692015396",
-    "title": "G.Skill TridentZ RGB Series - DDR4 - 32 GB",
-    "detected_at": "2026-06-12T15:12:54.307579+00:00"
-  },
-  "RAM4G0016": {
-    "ean": "4719692015457",
-    "title": "G.Skill TridentZ RGB Series - DDR4 - 16 GB",
-    "detected_at": "2026-06-12T15:12:57.992963+00:00"
-  },
   "RAM4G0020": {
     "ean": "4719692006844",
     "title": "G.Skill Value Series - DDR4 - 4 GB",
@@ -1088,141 +408,6 @@
     "ean": "4719692006851",
     "title": "G.Skill Value Series - DDR4 - 8 GB 2x4 GB",
     "detected_at": "2026-06-12T15:13:05.078810+00:00"
-  },
-  "RAM4G0030": {
-    "ean": "4713294220998",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC2666",
-    "detected_at": "2026-06-12T15:13:14.252747+00:00"
-  },
-  "RAM4G0031": {
-    "ean": "4719692007018",
-    "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
-    "detected_at": "2026-06-12T15:13:16.863068+00:00"
-  },
-  "RAM4G0032": {
-    "ean": "4719692019950",
-    "title": "G.Skill Value Series DDR4 8 GB DIMM 288-PIN",
-    "detected_at": "2026-06-12T15:13:20.110815+00:00"
-  },
-  "RAM4G0033": {
-    "ean": "4713294224378",
-    "title": "G.Skill AEGIS - DDR4 - 8 GB - PC3200",
-    "detected_at": "2026-06-12T15:13:23.347480+00:00"
-  },
-  "RAM4G0034": {
-    "ean": "4713294224385",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC3200",
-    "detected_at": "2026-06-12T15:13:26.255415+00:00"
-  },
-  "RAM4G0035": {
-    "ean": "4713294224408",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC3200",
-    "detected_at": "2026-06-12T15:13:30.261070+00:00"
-  },
-  "RAM4G0036": {
-    "ean": "4713294224415",
-    "title": "G.Skill AEGIS - DDR4 - 32 GB - PC3200",
-    "detected_at": "2026-06-12T15:13:34.060216+00:00"
-  },
-  "RAM4G0037": {
-    "ean": "4713294223623",
-    "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
-    "detected_at": "2026-06-12T15:13:37.684250+00:00"
-  },
-  "RAM4G0039": {
-    "ean": "4713294223449",
-    "title": "G.Skill TridentZ Neo Series - DDR4 - 16 GB",
-    "detected_at": "2026-06-12T15:13:41.003437+00:00"
-  },
-  "RAM4G0050": {
-    "ean": "4713294223104",
-    "title": "G.Skill DDR4 32GB PC 3600 CL18 KIT (2x16GB) 32GVK Ripjaws",
-    "detected_at": "2026-06-12T15:13:45.613624+00:00"
-  },
-  "RAM4G0051": {
-    "ean": "4713294224149",
-    "title": "G.Skill DDR4 32GB PC 4000 CL18 KIT (2x16GB) 32GVK Ripjaws",
-    "detected_at": "2026-06-12T15:13:48.565348+00:00"
-  },
-  "RAM4G0052": {
-    "ean": "4713294223081",
-    "title": "G.Skill DDR4 32GB PC 3600 CL18 KIT (2x16GB) 32GTZR Tri/RGB",
-    "detected_at": "2026-06-12T15:13:52.059522+00:00"
-  },
-  "RAM4G0053": {
-    "ean": "4713294226648",
-    "title": "G.Skill Ripjaws V - DDR4 - 16 GB",
-    "detected_at": "2026-06-12T15:13:56.361102+00:00"
-  },
-  "RAM4G0055": {
-    "ean": "4713294226631",
-    "title": "G.Skill Ripjaws - DDR4 - 16 GB 2x8 GB",
-    "detected_at": "2026-06-12T15:13:59.502822+00:00"
-  },
-  "RAM4G0056": {
-    "ean": "4719692007681",
-    "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-    "detected_at": "2026-06-12T15:14:02.942434+00:00"
-  },
-  "RAM4G0057": {
-    "ean": "4713294226655",
-    "title": "G.Skill DDR4 32GB PC 6000 CL22 KIT (2x16GB) 32GRS Ripjaws",
-    "detected_at": "2026-06-12T15:14:06.498553+00:00"
-  },
-  "RAM4G0058": {
-    "ean": "4713294226624",
-    "title": "G.Skill Ripjaws - DDR4 - 8 GB",
-    "detected_at": "2026-06-12T15:14:10.184222+00:00"
-  },
-  "RAM4G0059": {
-    "ean": "4719692017727",
-    "title": "G.Skill AEGIS - DDR4 - 8 GB 2400 CL17",
-    "detected_at": "2026-06-12T15:14:13.872096+00:00"
-  },
-  "RAM4G0060": {
-    "ean": "4719692019967",
-    "title": "G.Skill Value Series DDR4 16 GB  2x8GB 2666 CL19",
-    "detected_at": "2026-06-12T15:14:16.438575+00:00"
-  },
-  "RAM4G0061": {
-    "ean": "4719692007506",
-    "title": "G.Skill Ripjaws V - DDR4 - 16 GB 3200 CL16",
-    "detected_at": "2026-06-12T15:14:20.323306+00:00"
-  },
-  "RAM4G0063": {
-    "ean": "4719692007667",
-    "title": "G.Skill SO-DIMM Ripjaws - DDR4 - 16 GB 2x8 GB 2400 CL16",
-    "detected_at": "2026-06-12T15:14:22.995077+00:00"
-  },
-  "RAM4K0015": {
-    "ean": "0740617319903",
-    "title": "Kingston FURY Beast DDR4-3200-16GB KIT (KF432C16BBK2/16)",
-    "detected_at": "2026-06-12T15:14:26.669058+00:00"
-  },
-  "RAM4K0057": {
-    "ean": "0740617337426",
-    "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8GB (KF436C18BB2A/16)",
-    "detected_at": "2026-06-12T15:14:30.768531+00:00"
-  },
-  "RAM4K0058": {
-    "ean": "0740617337532",
-    "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB - (KF432C16BB2AK2/16)",
-    "detected_at": "2026-06-12T15:14:34.454931+00:00"
-  },
-  "RAM4K0060": {
-    "ean": "0740617337815",
-    "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8GB (KF436C16RB2K2/16)",
-    "detected_at": "2026-06-12T15:14:37.526605+00:00"
-  },
-  "RAM4L0006": {
-    "ean": "0843367123773",
-    "title": "Lexar DDR4-3200 SO-DIMM 16GB",
-    "detected_at": "2026-06-12T15:14:40.600037+00:00"
-  },
-  "RAM4L0017": {
-    "ean": "0843367123766",
-    "title": "Lexar DDR4-3200 SO-DIMM 8GB",
-    "detected_at": "2026-06-12T15:14:43.669567+00:00"
   },
   "RAM4L0036": {
     "ean": "843367132768",
@@ -1254,111 +439,6 @@
     "title": "Crucial DDR5 - 16GB 5600 DIMM (CT16G56C46U5)",
     "detected_at": "2026-06-12T15:15:05.363945+00:00"
   },
-  "RAM5C0021": {
-    "ean": "0649528906564",
-    "title": "Crucial DDR5 - 64GB 4800 SO-DIMM KIT 2x32GB (CT2K32G48C40S5)",
-    "detected_at": "2026-06-12T15:15:08.243875+00:00"
-  },
-  "RAM5C0022": {
-    "ean": "0649528937803",
-    "title": "Crucial Pro DDR5-5600 Kit 32GB 2x16GB UDIMM CL46 (16Gbit)",
-    "detected_at": "2026-06-12T15:15:11.934628+00:00"
-  },
-  "RAM5C0025": {
-    "ean": "0840440492573",
-    "title": "Corsair Vengeance RGB DDR5 - KIT 32GB-2X16GB -(CMH32GX5M2B6400Z36)",
-    "detected_at": "2026-06-12T15:15:14.478047+00:00"
-  },
-  "RAM5C1004": {
-    "ean": "0840440483045",
-    "title": "Corsair Vengeance SO-DIMM 24GB, DDR5-5200 (CMSX24GX5M1A5200C44)",
-    "detected_at": "2026-06-12T15:15:18.078681+00:00"
-  },
-  "RAM5C1008": {
-    "ean": "0840006684442",
-    "title": "Corsair Vengeance - DDR5 - Kit - 32 GB: 2 x 16 GB (CMK32GX5M2B6000C38)",
-    "detected_at": "2026-06-12T15:15:20.710350+00:00"
-  },
-  "RAM5C1013": {
-    "ean": "0840006667216",
-    "title": "Corsair Vengeance - DDR5 - Kit - 48 GB: 2 x 24 GB (CMK48GX5M2B6400C36)",
-    "detected_at": "2026-06-12T15:15:24.530345+00:00"
-  },
-  "RAM5C1016": {
-    "ean": "0840006666073",
-    "title": "Corsair Vengeance RGB - DDR5 - Kit - 32 GB: 2 x 16 GB (CMH32GX5M2B6400C36)",
-    "detected_at": "2026-06-12T15:15:27.826128+00:00"
-  },
-  "RAM5C1019": {
-    "ean": "0840006667193",
-    "title": "Corsair Vengeance RGB - DDR5 - Kit - 48 GB: 2 x 24 GB (CMH48GX5M2B6400C36)",
-    "detected_at": "2026-06-12T15:15:31.464573+00:00"
-  },
-  "RAM5G0006": {
-    "ean": "4713294231833",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32  KIT (2x16GB) 32-RS5K",
-    "detected_at": "2026-06-12T15:15:36.044525+00:00"
-  },
-  "RAM5G0007": {
-    "ean": "4713294230720",
-    "title": "G.Skill DDR5 32GB PC 6000 CL36  KIT (2x16GB) 32-TZ5RK",
-    "detected_at": "2026-06-12T15:15:39.273364+00:00"
-  },
-  "RAM5G0008": {
-    "ean": "4713294231369",
-    "title": "G.Skill DDR5 32GB PC 6400 CL32 KIT (2x16GB) 32-TZ5RK",
-    "detected_at": "2026-06-12T15:15:42.344926+00:00"
-  },
-  "RAM5G0009": {
-    "ean": "4713294232656",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "detected_at": "2026-06-12T15:15:46.031106+00:00"
-  },
-  "RAM5G0010": {
-    "ean": "4713294232687",
-    "title": "G.Skill DDR5 32GB PC 6000 CL36 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "detected_at": "2026-06-12T15:15:49.718232+00:00"
-  },
-  "RAM5G0011": {
-    "ean": "4713294230539",
-    "title": "G.Skill DDR5 32GB PC 6000 CL30 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "detected_at": "2026-06-12T15:15:52.859070+00:00"
-  },
-  "RAM5G0013": {
-    "ean": "4713294232649",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-TZ5NR AMD EX",
-    "detected_at": "2026-06-12T15:15:55.860512+00:00"
-  },
-  "RAM5G0018": {
-    "ean": "4713294234575",
-    "title": "G.Skill DDR5 32GB PC 6400 CL32 G.Skill (2x16GB) 32-GX2-TZ5NR AMD",
-    "detected_at": "2026-06-12T15:16:00.409168+00:00"
-  },
-  "RAM5G0019": {
-    "ean": "4713294232120",
-    "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT (2x16GB)",
-    "detected_at": "2026-06-12T15:16:04.547891+00:00"
-  },
-  "RAM5G0023": {
-    "ean": "4713294232069",
-    "title": "G.Skill Trident Z5 6800 CL34 - DDR5 - 64 GB 2x32 GB",
-    "detected_at": "2026-06-12T15:16:09.994257+00:00"
-  },
-  "RAM5G0027": {
-    "ean": "4713294231345",
-    "title": "G.Skill Trident Z5 6400 CL32 - DDR5 - 32 GB 2x16 GB",
-    "detected_at": "2026-06-12T15:16:15.525852+00:00"
-  },
-  "RAM5G0028": {
-    "ean": "4713294237590",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "detected_at": "2026-06-12T15:16:18.811239+00:00"
-  },
-  "RAM5K0043": {
-    "ean": "0740617350180",
-    "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BBE2-32)",
-    "detected_at": "2026-06-12T15:16:23.414455+00:00"
-  },
   "RAM5L0006": {
     "ean": "843367133543",
     "title": "Lexar Ares DDR5 2x16GB 6800 Heatsink",
@@ -1368,16 +448,6 @@
     "ean": "843367136094",
     "title": "Lexar DDR5-6000 DIMM 2x16GB THOR Gaming",
     "detected_at": "2026-06-12T15:16:31.805929+00:00"
-  },
-  "REFD0002": {
-    "ean": "5397184513972",
-    "title": "Dell WD19S Dockingstation | 130W - Refurbished",
-    "detected_at": "2026-06-12T15:16:35.492676+00:00"
-  },
-  "REFR2000": {
-    "ean": "4250563440355",
-    "title": "RETEQ Lenovo ThinkPad Yoga X13 (14\")",
-    "detected_at": "2026-06-12T15:16:44.093402+00:00"
   },
   "REFR2002": {
     "ean": "4250563451436",
@@ -1389,30 +459,10 @@
     "title": "tecXL HP EliteBook 850 G7 (15,6\")",
     "detected_at": "2026-06-12T15:16:51.468646+00:00"
   },
-  "REFT0005": {
-    "ean": "4260771516346",
-    "title": "tecXL HP EliteDesk 800 G4 MP",
-    "detected_at": "2026-06-12T15:16:53.782448+00:00"
-  },
   "REFT0007": {
     "ean": "4262431594756",
     "title": "tecXL HP EliteDesk 800 G6 MP",
     "detected_at": "2026-06-12T15:16:58.224245+00:00"
-  },
-  "REFT0010": {
-    "ean": "4262504943337",
-    "title": "tecXL Lenovo ThinkPad T14 Gen2 (14\")",
-    "detected_at": "2026-06-12T15:17:02.523953+00:00"
-  },
-  "REFT0012": {
-    "ean": "4262431593452",
-    "title": "tecXL Lenovo ThinkCentre M80q MP",
-    "detected_at": "2026-06-12T15:17:05.784128+00:00"
-  },
-  "REFT0013": {
-    "ean": "4262504946918",
-    "title": "tecXL Dell OptiPlex 7070 MP",
-    "detected_at": "2026-06-12T15:17:08.053823+00:00"
   },
   "REFT0014": {
     "ean": "4260771516339",
@@ -1429,845 +479,40 @@
     "title": "tecXL Lenovo ThinkVision T24i - LED-Monitor - (24\")",
     "detected_at": "2026-06-12T15:17:18.542013+00:00"
   },
-  "REFT0019": {
-    "ean": "4262431599614",
-    "title": "tecXL HP ProDesk 600 G4 MT",
-    "detected_at": "2026-06-12T15:17:21.265206+00:00"
-  },
-  "REFT1001": {
-    "ean": "5711603083851",
-    "title": "T1A Dell Latitude 5320 (13.3\")",
-    "detected_at": "2026-06-12T15:17:32.323437+00:00"
-  },
-  "REFT1002": {
-    "ean": "5711603088023",
-    "title": "T1A Dell Latitude 5430 (14\")",
-    "detected_at": "2026-06-12T15:17:35.393373+00:00"
-  },
-  "REFT1004": {
-    "ean": "5711603084766",
-    "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-    "detected_at": "2026-06-12T15:17:39.080976+00:00"
-  },
-  "REFT1005": {
-    "ean": "5711603088016",
-    "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-    "detected_at": "2026-06-12T15:17:42.153503+00:00"
-  },
   "REFT1007": {
     "ean": "5711603098626",
     "title": "T1A Lenovo ThinkPad X1 Carbon Gen 8 (14\")",
     "detected_at": "2026-06-12T15:17:45.532059+00:00"
-  },
-  "REFT1010": {
-    "ean": "5711603085060",
-    "title": "T1A Dell Latitude 5320 (13.3\")",
-    "detected_at": "2026-06-12T15:17:48.416489+00:00"
-  },
-  "REFT1011": {
-    "ean": "5711603086135",
-    "title": "T1A Lenovo ThinkPad X1 Yoga Gen 6 (14\")",
-    "detected_at": "2026-06-12T15:17:52.612755+00:00"
-  },
-  "REFT1013": {
-    "ean": "5711603088276",
-    "title": "T1A Dell Latitude 5420 (14\")",
-    "detected_at": "2026-06-12T15:17:56.746664+00:00"
-  },
-  "REFT1014": {
-    "ean": "5711603097995",
-    "title": "T1A Lenovo ThinkPad T14 Gen 2 (14\")",
-    "detected_at": "2026-06-12T15:17:59.972369+00:00"
-  },
-  "REFU0009": {
-    "ean": "5713552042200",
-    "title": "Upcycle IT Lenovo ThinkCentre M90q Tiny",
-    "detected_at": "2026-06-12T15:18:03.044992+00:00"
   },
   "REFU0013": {
     "ean": "5713552043412",
     "title": "Upcycle IT HP EliteBook 840 G8 (14\")",
     "detected_at": "2026-06-12T15:18:06.728783+00:00"
   },
-  "SDXS0015": {
-    "ean": "0619659182557",
-    "title": "SanDisk SDSSDE61-1T00-G25 Extreme Portable 1TB SSD",
-    "detected_at": "2026-06-12T15:18:22.402487+00:00"
-  },
-  "SDXS0023": {
-    "ean": "0619659184735",
-    "title": "SanDisk Extreme Pro Portable SSD 4TB SDSSDE81-4T00-G25",
-    "detected_at": "2026-06-12T15:18:26.083220+00:00"
-  },
-  "SDXS0028": {
-    "ean": "0619659204877",
-    "title": "SanDisk Portable SDSSDE30-1T00-G26 1TB SSD Gen 2",
-    "detected_at": "2026-06-12T15:18:33.457390+00:00"
-  },
-  "SDXS0033": {
-    "ean": "8806094905403",
-    "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/EU",
-    "detected_at": "2026-06-12T15:18:36.530299+00:00"
-  },
-  "SDXS0034": {
-    "ean": "8806094905410",
-    "title": "Samsung Portable 4 TB T5 EVO Black MU-PH4T0S/EU",
-    "detected_at": "2026-06-12T15:18:44.210639+00:00"
-  },
-  "SDXS1020": {
-    "ean": "8806090312403",
-    "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
-    "detected_at": "2026-06-12T15:18:52.507947+00:00"
-  },
-  "SDXV0009": {
-    "ean": "0023942320319",
-    "title": "Verbatim Metal Mini SSD 1TB USB-C Gen 2 32031",
-    "detected_at": "2026-06-12T15:18:55.883115+00:00"
-  },
-  "SHG0013": {
-    "ean": "6974316994251",
-    "title": "Govee - Glide Hexa Light Panels - 5 Stück",
-    "detected_at": "2026-06-12T15:19:01.102978+00:00"
-  },
-  "SHG0042": {
-    "ean": "6974316999874",
-    "title": "Govee - Netflix Envisual TV Backlight 55~65 inch*",
-    "detected_at": "2026-06-12T15:19:18.414553+00:00"
-  },
-  "SHG0043": {
-    "ean": "6974316999881",
-    "title": "Govee - Netflix WIFI & Bluetooth Curtain Lighting",
-    "detected_at": "2026-06-12T15:19:21.687502+00:00"
-  },
-  "SHG0044": {
-    "ean": "6974316999997",
-    "title": "Govee - Govee Gaming Wall light*",
-    "detected_at": "2026-06-12T15:19:25.989524+00:00"
-  },
-  "SHG0057": {
-    "ean": "6974316995098",
-    "title": "Govee - RGBIC RGBIC TV Light Bars for 45-70 inch TVs*",
-    "detected_at": "2026-06-12T15:19:36.333192+00:00"
-  },
-  "SHG0064": {
-    "ean": "6974316995890",
-    "title": "Govee RGBICW Outdoor String Lights",
-    "detected_at": "2026-06-12T15:19:40.734305+00:00"
-  },
-  "SHG0067": {
-    "ean": "6974316993353",
-    "title": "Govee RGBICWW Outdoor Spotlights",
-    "detected_at": "2026-06-12T15:19:44.383290+00:00"
-  },
-  "SHG0074": {
-    "ean": "6974316996798",
-    "title": "Govee Smart Wireless Meat Thermometer (2-Probe)",
-    "detected_at": "2026-06-12T15:19:48.791923+00:00"
-  },
-  "SHG0091": {
-    "ean": "6974316990642",
-    "title": "Govee - String Lights 2S - 20M",
-    "detected_at": "2026-06-12T15:19:54.866557+00:00"
-  },
-  "SHG0094": {
-    "ean": "6974316995784",
-    "title": "Govee - LED Christmas Light 20 Meter",
-    "detected_at": "2026-06-12T15:19:58.113240+00:00"
-  },
-  "SHG0099": {
-    "ean": "6974316993117",
-    "title": "Govee Three-camera TV Backlight 75-85inches",
-    "detected_at": "2026-06-12T15:20:01.623198+00:00"
-  },
-  "SHP0012": {
-    "ean": "8718699771126",
-    "title": "Philips Hue Bloom gen4 EU/UK black",
-    "detected_at": "2026-06-12T15:20:04.695024+00:00"
-  },
-  "SHP0050": {
-    "ean": "8719514404595",
-    "title": "Philips Hue - White and Color Ambiance - Tischlampe - LED - Klasse G",
-    "detected_at": "2026-06-12T15:20:09.938650+00:00"
-  },
-  "SHP0127": {
-    "ean": "8719514356610",
-    "title": "Philips Hue White and Colour Ambiance - LED-Lampe - Form: B39 - E14 - 4 W (Entsprechung 25 W)",
-    "detected_at": "2026-06-12T15:20:16.976503+00:00"
-  },
-  "SHP0130": {
-    "ean": "8719514356719",
-    "title": "Philips Hue White and Color Ambiance - LED-Lampe - Form: B39 - E14 - 4 W (Entsprechung 25 W)",
-    "detected_at": "2026-06-12T15:20:20.362077+00:00"
-  },
-  "SHP0147": {
-    "ean": "8718696170809",
-    "title": "Philips Hue White and Color Ambiance Play extension",
-    "detected_at": "2026-06-12T15:20:25.125998+00:00"
-  },
-  "SOFM0092": {
-    "ean": "4255809918346",
-    "title": "Microsoft 365 Single - Abonnement-Lizenz (1 Jahr) - Digital Key",
-    "detected_at": "2026-06-12T15:20:28.043595+00:00"
-  },
   "SSDC0076": {
     "ean": "0649528942081",
     "title": "HDSSD M.2 (2280) 1TB Crucial P310 Plus NVMe Box",
     "detected_at": "2026-06-12T15:20:32.886155+00:00"
-  },
-  "SSDC0078": {
-    "ean": "0649528944771",
-    "title": "Crucial P310 Gen4 2280 2TB NVMe PCIe M.2 SSD mit heatsink",
-    "detected_at": "2026-06-12T15:20:35.416138+00:00"
-  },
-  "SSDK0018": {
-    "ean": "0740617277357",
-    "title": "HDSSD 2.5\" SA400S37/960G Kingston SSD 960GB A400",
-    "detected_at": "2026-06-12T15:20:39.115980+00:00"
-  },
-  "SSDK0040": {
-    "ean": "740617344790",
-    "title": "Kingston SNV3S/1000G - SSD - 1 TB - intern - M.2 2280 - PCIe 4.0 x4 (NVMe)",
-    "detected_at": "2026-06-12T15:20:42.173336+00:00"
-  },
-  "SSDK1002": {
-    "ean": "4582563851856",
-    "title": "HDSSD 2,5\" 480GB Kioxia Exceria SATA 6Gbit/s",
-    "detected_at": "2026-06-12T15:20:45.259559+00:00"
-  },
-  "SSDK1003": {
-    "ean": "4582563851863",
-    "title": "HDSSD 2,5\" 960GB Kioxia Exceria SATA 6Gbit/s",
-    "detected_at": "2026-06-12T15:20:47.628404+00:00"
-  },
-  "SSDK1016": {
-    "ean": "4582563857872",
-    "title": "SSD M.2 (2280) Kioxia Exceria Plus G3 NVMe 1TB",
-    "detected_at": "2026-06-12T15:20:50.470471+00:00"
   },
   "SSDK1017": {
     "ean": "4582563857889",
     "title": "SSD M.2 (2280) Kioxia Exceria Plus G3 NVMe 2TB",
     "detected_at": "2026-06-12T15:20:53.234710+00:00"
   },
-  "SSDK1023": {
-    "ean": "4582563859975",
-    "title": "SSD M.2 (2280) Kioxia Exceria Plus G4 NVMe 1TB",
-    "detected_at": "2026-06-12T15:20:56.614441+00:00"
-  },
-  "SSDK1024": {
-    "ean": "4582563859982",
-    "title": "SSD M.2 (2280) Kioxia Exceria Plus G4 NVMe 2TB",
-    "detected_at": "2026-06-12T15:20:58.762595+00:00"
-  },
-  "SSDK1028": {
-    "ean": "4582563859630",
-    "title": "SSD Kioxia Exceria Plus G2 Portable 2TB USB 3.2",
-    "detected_at": "2026-06-12T15:21:02.142663+00:00"
-  },
-  "SSDK1029": {
-    "ean": "4582761161108",
-    "title": "SSD M.2 (2280) Kioxia Exceria Basic NVMe 1TB",
-    "detected_at": "2026-06-12T15:21:04.906490+00:00"
-  },
-  "SSDK1030": {
-    "ean": "4582761161115",
-    "title": "SSD M.2 (2280) Kioxia Exceria Basic NVMe 2TB",
-    "detected_at": "2026-06-12T15:21:08.285036+00:00"
-  },
-  "SSDK1033": {
-    "ean": "4582761161504",
-    "title": "SSD Kioxia Exceria G3 1TB (PCIe5.0/NVMe)",
-    "detected_at": "2026-06-12T15:21:11.664099+00:00"
-  },
-  "SSDK1034": {
-    "ean": "4582761161511",
-    "title": "SSD Kioxia Exceria G3 2TB (PCIe5.0/NVMe)",
-    "detected_at": "2026-06-12T15:21:14.291789+00:00"
-  },
-  "SSDK1035": {
-    "ean": "4582761160286",
-    "title": "SSD Kioxia Exceria Pro G2 1TB (PCIe5.0/NVMe)",
-    "detected_at": "2026-06-12T15:21:17.810116+00:00"
-  },
-  "SSDK1036": {
-    "ean": "4582761160293",
-    "title": "SSD Kioxia Exceria Pro G2 2TB (PCIe5.0/NVMe)",
-    "detected_at": "2026-06-12T15:21:20.266688+00:00"
-  },
-  "SSDL0010": {
-    "ean": "0843367123148",
-    "title": "SSD M.2 Lexar NM620 256GB NVME PCIe Gen. 3",
-    "detected_at": "2026-06-12T15:21:23.337650+00:00"
-  },
-  "SSDL0011": {
-    "ean": "0843367123155",
-    "title": "SSD M.2 Lexar NM620 512GB NVME PCIe Gen. 3",
-    "detected_at": "2026-06-12T15:21:26.412214+00:00"
-  },
-  "SSDL0012": {
-    "ean": "0843367123162",
-    "title": "SSD M.2 Lexar NM620 1TB NVME PCIe Gen. 3",
-    "detected_at": "2026-06-12T15:21:28.679737+00:00"
-  },
-  "SSDL0022": {
-    "ean": "0843367123179",
-    "title": "Lexar 2TB High Speed NM620 PCIe Gen3 with 4",
-    "detected_at": "2026-06-12T15:21:31.945667+00:00"
-  },
-  "SSDL0024": {
-    "ean": "0843367129706",
-    "title": "SSD M.2 Lexar 1TB NM710 PCIe Gen4x4 NVMe",
-    "detected_at": "2026-06-12T15:21:35.090682+00:00"
-  },
-  "SSDL0031": {
-    "ean": "0843367130283",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NM790 NVMe",
-    "detected_at": "2026-06-12T15:21:38.084494+00:00"
-  },
-  "SSDL0032": {
-    "ean": "0843367130290",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NM790 NVMe",
-    "detected_at": "2026-06-12T15:21:56.830698+00:00"
-  },
-  "SSDL0040": {
-    "ean": "0843367132218",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NQ790 NVMe",
-    "detected_at": "2026-06-12T15:22:00.202583+00:00"
-  },
-  "SSDL0041": {
-    "ean": "0843367132225",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NQ790 NVMe",
-    "detected_at": "2026-06-12T15:22:03.274575+00:00"
-  },
-  "SSDL0042": {
-    "ean": "0843367132232",
-    "title": "SSD M.2 Lexar 4TB PCIe Gen 4X4 NQ790 NVMe",
-    "detected_at": "2026-06-12T15:22:05.734506+00:00"
-  },
-  "SSDL0044": {
-    "ean": "0843367136780",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 5 NM1090 Pro NVMe",
-    "detected_at": "2026-06-12T15:22:08.483223+00:00"
-  },
-  "SSDL0045": {
-    "ean": "0843367136797",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 5 NM1090 Pro NVMe",
-    "detected_at": "2026-06-12T15:22:11.877404+00:00"
-  },
-  "SSDL0046": {
-    "ean": "0843367136803",
-    "title": "SSD M.2 Lexar 4TB PCIe Gen 5 NM1090 Pro NVMe",
-    "detected_at": "2026-06-12T15:22:18.946657+00:00"
-  },
-  "SSDL0047": {
-    "ean": "0843367136841",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 5 NM990 NVMe",
-    "detected_at": "2026-06-12T15:22:21.817322+00:00"
-  },
-  "SSDL0048": {
-    "ean": "0843367136858",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 5 NM990 NVMe",
-    "detected_at": "2026-06-12T15:22:25.087500+00:00"
-  },
   "SSDL0050": {
     "ean": "843367137008",
     "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NQ780 NVMe",
     "detected_at": "2026-06-12T15:22:33.564381+00:00"
-  },
-  "SSDS0095": {
-    "ean": "8806090545931",
-    "title": "HDSSD 2.5 (Sata) 250GB Samsung 870 EVO Basic",
-    "detected_at": "2026-06-12T15:22:37.683019+00:00"
-  },
-  "SSDS0096": {
-    "ean": "8806090545924",
-    "title": "HDSSD 2.5 (Sata) 500GB Samsung 870 EVO Basic",
-    "detected_at": "2026-06-12T15:22:40.753071+00:00"
-  },
-  "SSDS0097": {
-    "ean": "8806090545917",
-    "title": "HDSSD 2.5 (Sata) 1TB Samsung 870 EVO Basic",
-    "detected_at": "2026-06-12T15:22:44.440992+00:00"
-  },
-  "SSDS0110": {
-    "ean": "8806094215021",
-    "title": "SSD M.2 (2280) 1TB Samsung 990 PRO (PCIe/NVMe)",
-    "detected_at": "2026-06-12T15:22:48.131177+00:00"
-  },
-  "SSDS0111": {
-    "ean": "8806094215038",
-    "title": "SSD M.2 (2280) 2TB Samsung 990 PRO (PCIe/NVMe)",
-    "detected_at": "2026-06-12T15:22:52.136920+00:00"
-  },
-  "SSDS0113": {
-    "ean": "8806094413748",
-    "title": "SSD M.2 (2280) 1TB Samsung 990 PRO Heatsink (PCIe/NVMe)",
-    "detected_at": "2026-06-12T15:22:55.303252+00:00"
-  },
-  "SSDS0115": {
-    "ean": "8806094947205",
-    "title": "SSD M.2 (2280) 4TB Samsung 990 PRO (PCIe/NVMe)",
-    "detected_at": "2026-06-12T15:22:59.187050+00:00"
-  },
-  "SSDS0121": {
-    "ean": "8806095575674",
-    "title": "SSD M.2 (2280) 1TB Samsung 990 EVO Plus",
-    "detected_at": "2026-06-12T15:23:03.795459+00:00"
-  },
-  "SSDS0122": {
-    "ean": "8806095575650",
-    "title": "SSD M.2 (2280) 2TB Samsung 990 EVO Plus",
-    "detected_at": "2026-06-12T15:23:11.167278+00:00"
-  },
-  "SSDS0123": {
-    "ean": "8806095575667",
-    "title": "SSD M.2 (2280) 4TB Samsung 990 EVO Plus",
-    "detected_at": "2026-06-12T15:23:14.554159+00:00"
-  },
-  "SSDS0124": {
-    "ean": "8806095811628",
-    "title": "SSD M.2 (2280) 1TB Samsung 9100 PRO (PCIe 5.0/NVMe)",
-    "detected_at": "2026-06-12T15:23:19.220578+00:00"
-  },
-  "SSDW0034": {
-    "ean": "0718037872353",
-    "title": "HDSSD M.2 500GB WD Red SA500 NAS SSD",
-    "detected_at": "2026-06-12T15:23:22.533340+00:00"
-  },
-  "SSDW0036": {
-    "ean": "0718037872339",
-    "title": "HDSSD M.2 2TB WD Red SA500 NAS SSD",
-    "detected_at": "2026-06-12T15:23:25.911203+00:00"
-  },
-  "SSDW0069": {
-    "ean": "0718037884653",
-    "title": "HDSSD 2.5\" 1 TB WD Blue™ SA510 PC 3D SSD 7mm",
-    "detected_at": "2026-06-12T15:23:28.930981+00:00"
-  },
-  "SSDW0070": {
-    "ean": "0718037884639",
-    "title": "HDSSD 2.5\" 500 GB WD Blue™ SA510 3D PC SSD 7mm",
-    "detected_at": "2026-06-12T15:23:31.443377+00:00"
-  },
-  "SSDW0071": {
-    "ean": "0718037891392",
-    "title": "HDSSD M.2 1 TB WD Black™ SN850X NVMe",
-    "detected_at": "2026-06-12T15:23:34.513616+00:00"
-  },
-  "SSDW0075": {
-    "ean": "0718037891378",
-    "title": "HDSSD M.2 4 TB WD Black™ SN850X NVMe",
-    "detected_at": "2026-06-12T15:23:37.277232+00:00"
-  },
-  "SSDW0083": {
-    "ean": "0718037894850",
-    "title": "HDSSD M.2 500 GB WD Blue™ SN5000 NVMe",
-    "detected_at": "2026-06-12T15:23:45.266968+00:00"
-  },
-  "SSDW0084": {
-    "ean": "0718037894843",
-    "title": "HDSSD M.2 1TB WD Blue™ SN5000 NVMe",
-    "detected_at": "2026-06-12T15:23:48.822356+00:00"
-  },
-  "SSDW0085": {
-    "ean": "0718037893228",
-    "title": "HDSSD M.2 2TB WD Blue™ SN5000 NVMe",
-    "detected_at": "2026-06-12T15:23:52.816583+00:00"
-  },
-  "SSDW0088": {
-    "ean": "0718037903613",
-    "title": "HDSSD 2,5\" 2TB WD Red SA500 NAS SSD",
-    "detected_at": "2026-06-12T15:23:56.017124+00:00"
-  },
-  "SSDW0089": {
-    "ean": "0718037884660",
-    "title": "HDSSD 2.5\" 2 TB WD Blue™ SA510 PC 3D SSD 7mm",
-    "detected_at": "2026-06-12T15:24:00.340817+00:00"
-  },
-  "SSDW0091": {
-    "ean": "0718037893204",
-    "title": "HDSSD M.2 1TB WD Black™ SN7100 NVMe",
-    "detected_at": "2026-06-12T15:24:03.979724+00:00"
-  },
-  "SSDW0092": {
-    "ean": "0718037893211",
-    "title": "HDSSD M.2 2TB WD Black™ SN7100 NVMe",
-    "detected_at": "2026-06-12T15:24:07.473852+00:00"
-  },
-  "SSDW0094": {
-    "ean": "0619659220884",
-    "title": "HDSSD M.2 1TB WD Black™ SN8100 NVMe PCI5.0",
-    "detected_at": "2026-06-12T15:24:10.611219+00:00"
-  },
-  "SSDW0095": {
-    "ean": "0619659220860",
-    "title": "HDSSD M.2 2TB WD Black™ SN8100 NVMe PCI5.0",
-    "detected_at": "2026-06-12T15:24:14.450755+00:00"
-  },
-  "SSDW0097": {
-    "ean": "0718037906256",
-    "title": "HDSSD M.2 1TB WD Blue™ SN5100 NVMe",
-    "detected_at": "2026-06-12T15:24:17.830111+00:00"
-  },
-  "SSDW0100": {
-    "ean": "0718037906263",
-    "title": "HDSSD M.2 2TB WD Blue™ SN5100 NVMe",
-    "detected_at": "2026-06-12T15:24:21.850061+00:00"
-  },
-  "SSDW0101": {
-    "ean": "0718037906287",
-    "title": "HDSSD M.2 500GB WD Blue™ SN5100 NVMe",
-    "detected_at": "2026-06-12T15:24:25.816429+00:00"
-  },
-  "SSDW0102": {
-    "ean": "0718037907154",
-    "title": "HDSSD M.2 1TB WD Green™ SN3000 NVMe",
-    "detected_at": "2026-06-12T15:24:28.595967+00:00"
-  },
-  "SUPA1046": {
-    "ean": "0840414681804",
-    "title": "Amazon Echo Dot Max - Sphärisch - Weiß",
-    "detected_at": "2026-06-12T15:24:49.185735+00:00"
-  },
-  "SUPB1045": {
-    "ean": "0017817846141",
-    "title": "Bose QuietComfort Ultra weiß",
-    "detected_at": "2026-06-12T15:24:52.542139+00:00"
-  },
-  "SUPB1046": {
-    "ean": "0017817847681",
-    "title": "Bose QuietComfort Ultra Earbuds black",
-    "detected_at": "2026-06-12T15:24:56.843278+00:00"
-  },
-  "SUPB1047": {
-    "ean": "0017817847643",
-    "title": "Bose QuietComfort Ultra Earbuds white",
-    "detected_at": "2026-06-12T15:25:02.386389+00:00"
-  },
-  "SUPB1054": {
-    "ean": "0017817846912",
-    "title": "Bose Ultra Open Earbuds | White",
-    "detected_at": "2026-06-12T15:25:06.366247+00:00"
-  },
-  "SUPB1060": {
-    "ean": "0017817859585",
-    "title": "Bose QuietComfort Ultra 2.Gen black",
-    "detected_at": "2026-06-12T15:25:11.285696+00:00"
-  },
-  "SUPB1061": {
-    "ean": "0017817859561",
-    "title": "Bose QuietComfort Ultra 2.Gen white",
-    "detected_at": "2026-06-12T15:25:15.276152+00:00"
-  },
-  "SUPB1065": {
-    "ean": "0017817852470",
-    "title": "Bose SoundLink Flex 2nd - Black",
-    "detected_at": "2026-06-12T15:25:23.572317+00:00"
-  },
-  "SUPB1066": {
-    "ean": "0017817768429",
-    "title": "Bose SoundLink Micro - Lautsprecher - tragbar",
-    "detected_at": "2026-06-12T15:25:27.448682+00:00"
   },
   "SUPC0009": {
     "ean": "8595610601959",
     "title": "Connect IT SNIPER GH3300 USB w/mic black***",
     "detected_at": "2026-06-12T15:25:34.322405+00:00"
   },
-  "SUPC0088": {
-    "ean": "7340086912839",
-    "title": "CHERRY Xtrfy M42 - Maus - optisch - kabellos - Schwarz",
-    "detected_at": "2026-06-12T15:25:40.773453+00:00"
-  },
   "SUPC2016": {
     "ean": "850070419314",
     "title": "Chipolo LOOP 4 Pack – Rechargeable tracking tag (Charcoal, Chalk, Navy, Coral)",
     "detected_at": "2026-06-12T15:26:04.425668+00:00"
-  },
-  "SUPD1024": {
-    "ean": "5397184961735",
-    "title": "Dell Pro Dock WD25 - Dockingstation - USB-C - HDMI, 2 x DP, USB-C",
-    "detected_at": "2026-06-12T15:26:16.718423+00:00"
-  },
-  "SUPD1025": {
-    "ean": "5397184961766",
-    "title": "Dell Pro Smart Dock SD25 - Dockingstation - USB-C - HDMI, 2 x DP, USB-C - 1GbE, 2.5GbE - 180 Watt",
-    "detected_at": "2026-06-12T15:26:20.481130+00:00"
-  },
-  "SUPD1028": {
-    "ean": "5397184961827",
-    "title": "Dell Pro Thunderbolt 5 Smart Dock SD25TB5 - Dockingstation",
-    "detected_at": "2026-06-12T15:26:29.619702+00:00"
-  },
-  "SUPD1030": {
-    "ean": "5397321029045",
-    "title": "Dell Pro Dock WD25Z - Dockingstation - USB-C",
-    "detected_at": "2026-06-12T15:26:33.851724+00:00"
-  },
-  "SUPG4006": {
-    "ean": "6947273705093",
-    "title": "Grandstream WP816 - schnurloses VoIP-Telefon - mit Bluetooth-Schnittstelle - IEEE 802.11a/b/g/n/ac/a",
-    "detected_at": "2026-06-12T15:30:54.125070+00:00"
-  },
-  "SUPG4007": {
-    "ean": "6947273705147",
-    "title": "Grandstream WP826 - schnurloses VoIP-Telefon - mit Bluetooth-Schnittstelle - IEEE 802.11a/b/g/n/ac/a",
-    "detected_at": "2026-06-12T15:30:58.116209+00:00"
-  },
-  "SUPG4011": {
-    "ean": "6947273704874",
-    "title": "Grandstream GWN7665 - Accesspoint - Wi-Fi 6 - Wi-Fi 6E",
-    "detected_at": "2026-06-12T15:31:01.691908+00:00"
-  },
-  "SUPH0029": {
-    "ean": "0196068757403",
-    "title": "HP Thunderbolt G4 Dock - Dockingstation",
-    "detected_at": "2026-06-12T15:31:07.636874+00:00"
-  },
-  "SUPH0049": {
-    "ean": "0198415314925",
-    "title": "HP Thunderbolt Dock G6 - Dockingstation - Thunderbolt 4",
-    "detected_at": "2026-06-12T15:31:11.773539+00:00"
-  },
-  "SUPH0050": {
-    "ean": "0198415233004",
-    "title": "HP Thunderbolt Dock G6 - Dockingstation - Thunderbolt 4",
-    "detected_at": "2026-06-12T15:31:15.168148+00:00"
-  },
-  "SUPH0051": {
-    "ean": "0198415314048",
-    "title": "HP USB-C 100W G6 - Dockingstation",
-    "detected_at": "2026-06-12T15:31:19.005220+00:00"
-  },
-  "SUPH3013": {
-    "ean": "5704174522720",
-    "title": "HONEYWELL Genesis XP 7680g - Barcode-Scanner",
-    "detected_at": "2026-06-12T15:31:22.998918+00:00"
-  },
-  "SUPH4049": {
-    "ean": "0197498152394",
-    "title": "HP Poly CS540A - Headset with handset lifter-EURO",
-    "detected_at": "2026-06-12T15:31:27.640352+00:00"
-  },
-  "SUPJ0121": {
-    "ean": "5706991024302",
-    "title": "JABRA Evolve2 75 - Headset",
-    "detected_at": "2026-06-12T15:31:31.084709+00:00"
-  },
-  "SUPJ0124": {
-    "ean": "5706991024340",
-    "title": "JABRA Evolve2 75 MS Duo - Headset",
-    "detected_at": "2026-06-12T15:31:34.098250+00:00"
-  },
-  "SUPJ0128": {
-    "ean": "5706991029154",
-    "title": "JABRA Evolve2 65 Flex MS Stereo - Headset - mit kabelloses Ladepad - A WLC",
-    "detected_at": "2026-06-12T15:31:36.769614+00:00"
-  },
-  "SUPJ0153": {
-    "ean": "5706991022902",
-    "title": "JABRA  Evolve2 65 UC Stereo - Headset - mit Ladestation - USB-A - Kabellos BT",
-    "detected_at": "2026-06-12T15:31:40.511010+00:00"
-  },
-  "SUPJ0161": {
-    "ean": "5706991031256",
-    "title": "JABRA Engage 65 SE Stereo - Headset - On-Ear",
-    "detected_at": "2026-06-12T15:31:43.107816+00:00"
-  },
-  "SUPJ0168": {
-    "ean": "5706991023213",
-    "title": "JABRA Evolve2 85 UC Stereo - Headset - Bluetooth - kabellos, kabelgebunden - 3,5 mm Stecker",
-    "detected_at": "2026-06-12T15:31:47.575571+00:00"
-  },
-  "SUPJ0170": {
-    "ean": "5706991031539",
-    "title": "JABRA Evolve 65 TE Stereo - Headset -Bluetooth - kabellos - Adapter USB-A via Bluetooth",
-    "detected_at": "2026-06-12T15:31:50.339691+00:00"
-  },
-  "SUPJ0171": {
-    "ean": "5706991030778",
-    "title": "JABRA - Engage 65 SE Mono - Headset - On-Ear - DECT",
-    "detected_at": "2026-06-12T15:31:53.412280+00:00"
-  },
-  "SUPJ0173": {
-    "ean": "5706991024364",
-    "title": "JABRA Evolve2 75 - Headset",
-    "detected_at": "2026-06-12T15:31:56.791196+00:00"
-  },
-  "SUPJ0180": {
-    "ean": "5706991023299",
-    "title": "JABRA Evolve2 85 MS Duo Headset",
-    "detected_at": "2026-06-12T15:32:00.172357+00:00"
-  },
-  "SUPJ0183": {
-    "ean": "5706991034530",
-    "title": "JABRA Evolve2 40 SE - Mono Headset",
-    "detected_at": "2026-06-12T15:32:03.062166+00:00"
-  },
-  "SUPJ0184": {
-    "ean": "5706991027501",
-    "title": "JABRA Evolve2 55 - Mono Headset",
-    "detected_at": "2026-06-12T15:32:05.202787+00:00"
-  },
-  "SUPJ1004": {
-    "ean": "5706991014839",
-    "title": "JABRA SPEAK 510 MS",
-    "detected_at": "2026-06-12T15:32:10.870338+00:00"
-  },
-  "SUPJ1049": {
-    "ean": "5706991024425",
-    "title": "JABRA Evolve2 75 - Headset",
-    "detected_at": "2026-06-12T15:32:14.305512+00:00"
-  },
-  "SUPJ1054": {
-    "ean": "5706991029109",
-    "title": "JABRA Evolve2 65 Flex UC Stereo Headset",
-    "detected_at": "2026-06-12T15:32:17.680929+00:00"
-  },
-  "SUPJ1056": {
-    "ean": "5706991022865",
-    "title": "JABRA Evolve2 65 MS Stereo Headset",
-    "detected_at": "2026-06-12T15:32:21.681248+00:00"
-  },
-  "SUPJ1061": {
-    "ean": "5706991027518",
-    "title": "JABRA Evolve2 55 MS Mono Headset",
-    "detected_at": "2026-06-12T15:32:24.658426+00:00"
-  },
-  "SUPJ1069": {
-    "ean": "5706991023190",
-    "title": "JABRA Evolve2 85 UC Stereo",
-    "detected_at": "2026-06-12T15:32:28.126305+00:00"
-  },
-  "SUPJ1077": {
-    "ean": "5706991030976",
-    "title": "JABRA Engage 75 SE Mono - Headset - On-Ear",
-    "detected_at": "2026-06-12T15:32:30.892024+00:00"
-  },
-  "SUPJ1079": {
-    "ean": "5706991026146",
-    "title": "JABRA Engage 40 Stereo - Headset - On-Ear - kabelgebunden",
-    "detected_at": "2026-06-12T15:32:34.269495+00:00"
-  },
-  "SUPJ1085": {
-    "ean": "5706991031522",
-    "title": "JABRA Evolve 65 TE Stereo - Headset - On-Ear",
-    "detected_at": "2026-06-12T15:32:39.190467+00:00"
-  },
-  "SUPL0046": {
-    "ean": "5099206061309",
-    "title": "Logitech HD Pro Webcam C920",
-    "detected_at": "2026-06-12T15:32:45.637963+00:00"
-  },
-  "SUPL0060": {
-    "ean": "5099206070011",
-    "title": "Logitech Presenter Spotlight Wireless Grey",
-    "detected_at": "2026-06-12T15:32:51.295716+00:00"
-  },
-  "SUPL0125": {
-    "ean": "5099206081901",
-    "title": "Logitech Mouse MX Vertical Wireless Grey",
-    "detected_at": "2026-06-12T15:32:59.292520+00:00"
-  },
-  "SUPL0187": {
-    "ean": "5099206066823",
-    "title": "Logitech Desktop MK850 Performance Wireless Black",
-    "detected_at": "2026-06-12T15:33:05.296533+00:00"
-  },
-  "SUPL0264": {
-    "ean": "5099206059030",
-    "title": "Logitech ConferenceCam Video conference kit Connect",
-    "detected_at": "2026-06-12T15:33:10.677295+00:00"
-  },
-  "SUPL0266": {
-    "ean": "5099206085855",
-    "title": "Logitech Keyboard ERGO K860 Wireless Black",
-    "detected_at": "2026-06-12T15:33:13.875484+00:00"
-  },
-  "SUPL0285": {
-    "ean": "0097855119551",
-    "title": "Logitech ConferenceCam GROUP Expansion Microphones",
-    "detected_at": "2026-06-12T15:33:19.692361+00:00"
-  },
-  "SUPL0328": {
-    "ean": "0097855143143",
-    "title": "Logitech ConferenceCam Rally Mic Pod Hub microphone Interface adapter",
-    "detected_at": "2026-06-12T15:33:30.793968+00:00"
-  },
-  "SUPL0329": {
-    "ean": "0097855131171",
-    "title": "Logitech ConferenceCam MeetUp Expansion Microphone",
-    "detected_at": "2026-06-12T15:33:33.822536+00:00"
-  },
-  "SUPL0395": {
-    "ean": "5099206088252",
-    "title": "Logitech Slim Folio Keyboard black",
-    "detected_at": "2026-06-12T15:33:37.858954+00:00"
-  },
-  "SUPL0402": {
-    "ean": "0097855162045",
-    "title": "Logitech HD Pro Webcam C920e",
-    "detected_at": "2026-06-12T15:33:41.261751+00:00"
-  },
-  "SUPL0438": {
-    "ean": "0097855166067",
-    "title": "Logitech Rally Table and Ceiling Mount for Rally Mic Pod",
-    "detected_at": "2026-06-12T15:33:44.365474+00:00"
-  },
-  "SUPL0446": {
-    "ean": "5099206104914",
-    "title": "Logitech Brio 500 Webcam Black",
-    "detected_at": "2026-06-12T15:33:48.612357+00:00"
-  },
-  "SUPL0464": {
-    "ean": "5099206103016",
-    "title": "Logitech Keyboard Master Series MX Mechanical",
-    "detected_at": "2026-06-12T15:33:59.363706+00:00"
-  },
-  "SUPL0490": {
-    "ean": "5099206104419",
-    "title": "Logitech MX Keys Combo for Business - Keyboard and Mouse Set - Graphite",
-    "detected_at": "2026-06-12T15:34:06.428937+00:00"
-  },
-  "SUPL0501": {
-    "ean": "5099206090347",
-    "title": "Logitech Zone Wired MS-Teams Headseat",
-    "detected_at": "2026-06-12T15:34:10.451876+00:00"
-  },
-  "SUPL0509": {
-    "ean": "5099206099876",
-    "title": "Logitech Lift Vertical Ergonomic Mouse",
-    "detected_at": "2026-06-12T15:34:15.647004+00:00"
-  },
-  "SUPL0546": {
-    "ean": "5099206112490",
-    "title": "Logitech Mouse MX Anywhere 3S Wireless Graphite",
-    "detected_at": "2026-06-12T15:34:20.562399+00:00"
-  },
-  "SUPL0574": {
-    "ean": "5099206107427",
-    "title": "Logitech Slim Folio Keyboard black",
-    "detected_at": "2026-06-12T15:34:23.335327+00:00"
-  },
-  "SUPL0575": {
-    "ean": "5099206121942",
-    "title": "Logitech Combo Touch Keyboard for iPad Air 11",
-    "detected_at": "2026-06-12T15:34:25.831315+00:00"
-  },
-  "SUPL0597": {
-    "ean": "5099206133143",
-    "title": "Logitech Mouse MX Master 4 for Business Wireless Graphite",
-    "detected_at": "2026-06-12T15:34:32.849793+00:00"
-  },
-  "SUPL0598": {
-    "ean": "5099206122017",
-    "title": "Logitech Ultimate Ears WONDERBOOM Play Active Black",
-    "detected_at": "2026-06-12T15:34:36.032740+00:00"
-  },
-  "SUPL0599": {
-    "ean": "5099206127128",
-    "title": "Logitech Ultimate Ears MINIROLL Sanftes Schwarz",
-    "detected_at": "2026-06-12T15:34:38.686780+00:00"
   },
   "SUPL0600": {
     "ean": "5099206127098",
@@ -2279,61 +524,6 @@
     "title": "Logitech Ultimate Ears MINIROLL Revive Grey",
     "detected_at": "2026-06-12T15:34:44.831001+00:00"
   },
-  "SUPL0603": {
-    "ean": "5099206106710",
-    "title": "Logitech Combo Touch Keyboard for iPad 10.9",
-    "detected_at": "2026-06-12T15:34:47.900152+00:00"
-  },
-  "SUPL0604": {
-    "ean": "5099206066878",
-    "title": "Logitech Desktop MK850 Performance - Tastatur-und-Maus-Set - US-Layout",
-    "detected_at": "2026-06-12T15:34:50.668111+00:00"
-  },
-  "SUPL0605": {
-    "ean": "5099206123069",
-    "title": "Logitech Bluetooth Combo Touch iPad Pro 13\" M4",
-    "detected_at": "2026-06-12T15:34:53.740293+00:00"
-  },
-  "SUPL0606": {
-    "ean": "5099206133082",
-    "title": "Logitech Mouse MX Master 4 Graphite",
-    "detected_at": "2026-06-12T15:34:57.347575+00:00"
-  },
-  "SUPL0607": {
-    "ean": "5099206133099",
-    "title": "Logitech Mouse MX Master 4 Pale Grey",
-    "detected_at": "2026-06-12T15:35:00.497800+00:00"
-  },
-  "SUPL0608": {
-    "ean": "5099206133112",
-    "title": "Logitech Mouse MX Master 4 Space Black",
-    "detected_at": "2026-06-12T15:35:03.878054+00:00"
-  },
-  "SUPL2002": {
-    "ean": "0195348192095",
-    "title": "Lenovo ThinkPad Universal USB-C Dock - Dockingstation",
-    "detected_at": "2026-06-12T15:35:08.762057+00:00"
-  },
-  "SUPL2003": {
-    "ean": "0191999788403",
-    "title": "Lenovo ThinkPad Hybrid USB-C with USB-A Dock - Dockingstation",
-    "detected_at": "2026-06-12T15:35:12.371053+00:00"
-  },
-  "SUPL2008": {
-    "ean": "0195348677295",
-    "title": "Lenovo ThinkPad Thunderbolt 4 Dock - Dockingstation",
-    "detected_at": "2026-06-12T15:35:16.165499+00:00"
-  },
-  "SUPL2027": {
-    "ean": "0195892120551",
-    "title": "Lenovo ThinkPad Smart Dock 5500 - Dockingstation",
-    "detected_at": "2026-06-12T15:35:21.536283+00:00"
-  },
-  "SUPL2030": {
-    "ean": "0195892130499",
-    "title": "Lenovo - ThinkPad Smart Dock 5500 - Dockingstation",
-    "detected_at": "2026-06-12T15:35:25.074025+00:00"
-  },
   "SUPM3002": {
     "ean": "7109806196993",
     "title": "Mitel 612dt Set",
@@ -2343,11 +533,6 @@
     "ean": "7109806197006",
     "title": "Mitel 622dt Set",
     "detected_at": "2026-06-12T15:35:31.218675+00:00"
-  },
-  "SUPM3006": {
-    "ean": "7109806196986",
-    "title": "Mitel 632dt Handset",
-    "detected_at": "2026-06-12T15:35:33.674631+00:00"
   },
   "SUPM3007": {
     "ean": "7109806202564",
@@ -2364,71 +549,6 @@
     "title": "NEEWER GL1 Pro Keylight 15,5\"",
     "detected_at": "2026-06-12T15:36:02.679042+00:00"
   },
-  "SUPR0004": {
-    "ean": "8886419332565",
-    "title": "Razer Mamba Elite USB - Gaming-Maus",
-    "detected_at": "2026-06-12T15:36:10.231601+00:00"
-  },
-  "SUPR1011": {
-    "ean": "8886419379874",
-    "title": "Razer Barracuda X - Wireless Headset - white",
-    "detected_at": "2026-06-12T15:36:16.068474+00:00"
-  },
-  "SUPR1013": {
-    "ean": "8886419334163",
-    "title": "Razer Mouse Razer DeathAdder V3 Pro White",
-    "detected_at": "2026-06-12T15:36:18.995588+00:00"
-  },
-  "SUPR1017": {
-    "ean": "8886419379850",
-    "title": "Razer Barracuda X - Wireless Headset - black",
-    "detected_at": "2026-06-12T15:36:23.749848+00:00"
-  },
-  "SUPR1037": {
-    "ean": "8886419379362",
-    "title": "Razer Kraken V3 X - Headset - Black",
-    "detected_at": "2026-06-12T15:36:32.956021+00:00"
-  },
-  "SUPR1038": {
-    "ean": "8886419333937",
-    "title": "Razer Basilisk V3 Pro - Maus - White",
-    "detected_at": "2026-06-12T15:36:36.345339+00:00"
-  },
-  "SUPR1044": {
-    "ean": "8886419334552",
-    "title": "Razer DeathAdder V3 HyperSpeed - Maus - ergonomisch - 5 Tasten - kabellos, kabelgebunden",
-    "detected_at": "2026-06-12T15:36:43.681867+00:00"
-  },
-  "SUPR1047": {
-    "ean": "8886419379645",
-    "title": "Razer Leviathan V2 X - Soundbar - Schwarz",
-    "detected_at": "2026-06-12T15:36:46.790358+00:00"
-  },
-  "SUPR1049": {
-    "ean": "8887910060766",
-    "title": "Razer Kraken V4 X - Headset - ohrumschließend",
-    "detected_at": "2026-06-12T15:36:49.554855+00:00"
-  },
-  "SUPR1051": {
-    "ean": "8886419334521",
-    "title": "Razer Viper V3 Pro - Maus - Für Rechtshänder",
-    "detected_at": "2026-06-12T15:36:53.548947+00:00"
-  },
-  "SUPR1052": {
-    "ean": "8886419351450",
-    "title": "Razer Wolverine V3 - Tournament Edition - Game Pad",
-    "detected_at": "2026-06-12T15:36:56.620727+00:00"
-  },
-  "SUPR1053": {
-    "ean": "8886419334347",
-    "title": "Razer Viper V3 Pro SE schwarz",
-    "detected_at": "2026-06-12T15:36:59.578130+00:00"
-  },
-  "SUPR1054": {
-    "ean": "8886419334576",
-    "title": "Razer Basilisk V3 35K - Maus - Schwarz",
-    "detected_at": "2026-06-12T15:37:02.149844+00:00"
-  },
   "SUPR1055": {
     "ean": "8886419345763",
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
@@ -2438,11 +558,6 @@
     "ean": "8886419346012",
     "title": "Razer Blackwidow V3 Tenkeyless - Tastatur - Schwarz",
     "detected_at": "2026-06-12T15:37:08.452836+00:00"
-  },
-  "SUPR1059": {
-    "ean": "8887910061091",
-    "title": "Razer Kraken Kitty V3 X - Headset - Quartz",
-    "detected_at": "2026-06-12T15:37:11.673935+00:00"
   },
   "SUPR1060": {
     "ean": "8887910061114",
@@ -2459,56 +574,6 @@
     "title": "Razer Kishi V3 - Gamepad - Black",
     "detected_at": "2026-06-12T15:37:20.228040+00:00"
   },
-  "SUPR1065": {
-    "ean": "8887910060889",
-    "title": "Razer Barracuda X Chroma - Headset",
-    "detected_at": "2026-06-12T15:37:23.346802+00:00"
-  },
-  "SUPS0205": {
-    "ean": "4548736132580",
-    "title": "Sony WH-1000XM5 - True Wireless Headset - Black",
-    "detected_at": "2026-06-12T15:37:26.111790+00:00"
-  },
-  "SUPS0283": {
-    "ean": "4548736142428",
-    "title": "Sony WH-CH720N - True Wireless Headset - Black",
-    "detected_at": "2026-06-12T15:37:54.792027+00:00"
-  },
-  "SUPS0291": {
-    "ean": "4548736158283",
-    "title": "Sony HT-AN7 - Nackenlautsprecher",
-    "detected_at": "2026-06-12T15:38:04.203731+00:00"
-  },
-  "SUPS0296": {
-    "ean": "4548736156432",
-    "title": "Sony WH-ULT900N - Kopfhörer - Schwarz",
-    "detected_at": "2026-06-12T15:38:06.968896+00:00"
-  },
-  "SUPS0297": {
-    "ean": "4548736158337",
-    "title": "Sony WH-ULT900N - Kopfhörer - Off White",
-    "detected_at": "2026-06-12T15:38:09.734029+00:00"
-  },
-  "SUPS0328": {
-    "ean": "4548736134294",
-    "title": "Sony WH-1000XM5L True Wireless Headset | Night Blue",
-    "detected_at": "2026-06-12T15:38:12.847849+00:00"
-  },
-  "SUPS0329": {
-    "ean": "4548736132597",
-    "title": "Sony WH-1000XM5S True Wireless Headset | Silver",
-    "detected_at": "2026-06-12T15:38:31.713134+00:00"
-  },
-  "SUPS0355": {
-    "ean": "4548736163591",
-    "title": "Sony WH1000XM5P True Wireless Headset | Pink",
-    "detected_at": "2026-06-12T15:38:42.605451+00:00"
-  },
-  "SUPS1024": {
-    "ean": "8720862502635",
-    "title": "Sonos Ace Bluetooth-Kopfhörer - Weiß",
-    "detected_at": "2026-06-12T15:38:54.894118+00:00"
-  },
   "SUPS3003": {
     "ean": "5707119056502",
     "title": "SteelSeries Arctis Nova 7P - Headset - ohrumschließend - White",
@@ -2519,200 +584,15 @@
     "title": "SteelSeries Arctis Nova 7X - Headset - ohrumschließend - Black",
     "detected_at": "2026-06-12T15:39:01.344310+00:00"
   },
-  "SUPS7004": {
-    "ean": "3800235262214",
-    "title": "Shelly - Hutschiene - \"3EM\" - Stromzähler - max. 3x 120A -Inkl. 3 Klemmen - Messfunktion - WLAN",
-    "detected_at": "2026-06-12T15:39:03.974166+00:00"
-  },
   "SUPT4010": {
     "ean": "4048945034953",
     "title": "Teufel T6 Subwoofer MK2 20 60W Schwarz Wireless",
     "detected_at": "2026-06-12T15:39:09.331163+00:00"
   },
-  "SUPV0004": {
-    "ean": "0023942438908",
-    "title": "Verbatim Mobile Blu-ray Brenner ReWriter USB 3.0 43890",
-    "detected_at": "2026-06-12T15:39:14.246884+00:00"
-  },
-  "SUPV0011": {
-    "ean": "0023942438892",
-    "title": "Verbatim Slimline Blu-ray Writer USB 3.1 GEN 1 USB-C 43889",
-    "detected_at": "2026-06-12T15:39:18.546932+00:00"
-  },
-  "SUPV0013": {
-    "ean": "0023942321545",
-    "title": "Verbatim USB-C Pro Multiport Hub 14 Port CMH-14 32154",
-    "detected_at": "2026-06-12T15:39:24.088478+00:00"
-  },
-  "SUPV0027": {
-    "ean": "0023942321460",
-    "title": "Verbatim Share My Screen USB-C Wirel.Displ.Ad. 1080P/Hub 32146",
-    "detected_at": "2026-06-12T15:39:31.876380+00:00"
-  },
-  "SUPV0032": {
-    "ean": "0023942321538",
-    "title": "Verbatim USB-C Pro Multiport Hub 13 Port CMH-13 32153",
-    "detected_at": "2026-06-12T15:39:39.677281+00:00"
-  },
-  "SUPV0034": {
-    "ean": "0023942495918",
-    "title": "Verbatim PMT-14 Portable Touchscreen Monitor",
-    "detected_at": "2026-06-12T15:39:42.876821+00:00"
-  },
-  "SUPV0035": {
-    "ean": "0023942495932",
-    "title": "Verbatim PMT-17 Portable Touchscreen Monitor",
-    "detected_at": "2026-06-12T15:39:46.347308+00:00"
-  },
-  "SUPV0036": {
-    "ean": "0023942495925",
-    "title": "Verbatim PMT-15 Portable Touchscreen Monitor",
-    "detected_at": "2026-06-12T15:39:49.278551+00:00"
-  },
-  "SUPV0037": {
-    "ean": "0023942322399",
-    "title": "Verbatim PMT-17 4K Portable Touchscreen Display",
-    "detected_at": "2026-06-12T15:39:52.948559+00:00"
-  },
-  "SUPV0038": {
-    "ean": "0023942322382",
-    "title": "Verbatim PMT-15 4K Portable Touchscreen Monitor",
-    "detected_at": "2026-06-12T15:39:56.200504+00:00"
-  },
-  "SUPV0040": {
-    "ean": "0023942321217",
-    "title": "Verbatim GaN III Uni.Travel Adap 100W Welt-zu-Welt UTA-06 32121",
-    "detected_at": "2026-06-12T15:40:00.524790+00:00"
-  },
-  "SUPV0048": {
-    "ean": "0023942322047",
-    "title": "Verbatim GNC-200 GaN Charg. 200W 3xUSB-C PD, 1xUSB-A QC 3.0 32204",
-    "detected_at": "2026-06-12T15:40:06.303033+00:00"
-  },
-  "SUPV0068": {
-    "ean": "0023942301882",
-    "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE UNIVERSAL TRAVEL ADAPTER PURPLE",
-    "detected_at": "2026-06-12T15:40:16.446873+00:00"
-  },
-  "SUPV0069": {
-    "ean": "023942301912",
-    "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRAVEL ADAPTER WITH RETRACTABLE CABLE BLACK",
-    "detected_at": "2026-06-12T15:40:20.411178+00:00"
-  },
-  "SUPV0070": {
-    "ean": "0023942301929",
-    "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRAVEL ADAPTER WITH RETRACTABLE CABLE BLUE",
-    "detected_at": "2026-06-12T15:40:23.366837+00:00"
-  },
-  "SUPV0071": {
-    "ean": "0023942301936",
-    "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRAVEL ADAPTER WITH RETRACTABLE CABLE PURPLE",
-    "detected_at": "2026-06-12T15:40:27.976988+00:00"
-  },
-  "SUPV0073": {
-    "ean": "0023942324034",
-    "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIALS",
-    "detected_at": "2026-06-12T15:40:46.213691+00:00"
-  },
-  "SUPV0075": {
-    "ean": "0023942320883",
-    "title": "Verbatim Portable 14\" FHD Touch Monitor LIGHT with Wireless Power Supply incl. Power Bank 5000mAh",
-    "detected_at": "2026-06-12T15:40:48.798619+00:00"
-  },
-  "SUPY0000": {
-    "ean": "6938818319592",
-    "title": "Yealink DECT Headset WH62 Mono UC",
-    "detected_at": "2026-06-12T15:40:56.572153+00:00"
-  },
-  "SUPY0003": {
-    "ean": "6938818306202",
-    "title": "Yealink DECT Multi-Cell Manager W90DM",
-    "detected_at": "2026-06-12T15:40:59.929856+00:00"
-  },
-  "SUPY0010": {
-    "ean": "6938818303171",
-    "title": "Yealink IP Telefon SIP-T54W V2",
-    "detected_at": "2026-06-12T15:41:03.917795+00:00"
-  },
-  "SUPY0014": {
-    "ean": "6938818307667",
-    "title": "Yealink IP Telefon SIP-T58W",
-    "detected_at": "2026-06-12T15:41:07.622023+00:00"
-  },
-  "SUPY0019": {
-    "ean": "6938818318410",
-    "title": "Yealink IP Telefon MP56-Teams E2",
-    "detected_at": "2026-06-12T15:41:10.983352+00:00"
-  },
-  "SUPY0022": {
-    "ean": "6938818303188",
-    "title": "Yealink IP Telefon SIP-T53W",
-    "detected_at": "2026-06-12T15:41:13.745634+00:00"
-  },
-  "SUPY0038": {
-    "ean": "6938818308497",
-    "title": "Yealink DECT Telefon W79P (Basis W70B und W59R)",
-    "detected_at": "2026-06-12T15:41:17.087044+00:00"
-  },
-  "SUPY0044": {
-    "ean": "6938818319578",
-    "title": "Yealink WH64 Dual Teams - Headset - On-Ear - DECT / Bluetooth",
-    "detected_at": "2026-06-12T15:41:19.584892+00:00"
-  },
-  "SUPY0056": {
-    "ean": "6938818321816",
-    "title": "Yealink BH70 Mono - Headset - Bluetooth",
-    "detected_at": "2026-06-12T15:41:22.160791+00:00"
-  },
-  "SUPY0059": {
-    "ean": "6938818306578",
-    "title": "Yealink WH67 - Headset WH67 Mono UC",
-    "detected_at": "2026-06-12T15:41:26.292487+00:00"
-  },
-  "SUPY0060": {
-    "ean": "6938818319608",
-    "title": "Yealink WH64 Mono - Headset - On-Ear",
-    "detected_at": "2026-06-12T15:41:28.799379+00:00"
-  },
-  "SUPZ0006": {
-    "ean": "2503062116279",
-    "title": "Zebra ZD421d - Etikettendrucker",
-    "detected_at": "2026-06-12T15:41:34.024199+00:00"
-  },
-  "SUPZ0020": {
-    "ean": "8596375242906",
-    "title": "Zebra ZD421t - Etikettendrucker - Thermotransfer - Rolle (11,2 cm)",
-    "detected_at": "2026-06-12T15:41:37.093829+00:00"
-  },
-  "SUPZ0033": {
-    "ean": "5704174529460",
-    "title": "Zebra ZD421t - Etikettendrucker - Thermotransfer",
-    "detected_at": "2026-06-12T15:41:40.474826+00:00"
-  },
-  "USBK1051": {
-    "ean": "4582563857261",
-    "title": "Kioxia Exceria G2 SD Card 1TB",
-    "detected_at": "2026-06-12T15:42:00.627665+00:00"
-  },
   "USBS0072": {
     "ean": "619659188542",
     "title": "SanDisk microSDXC Extreme Pro 256GB",
     "detected_at": "2026-06-12T15:42:17.344907+00:00"
-  },
-  "USBS0082": {
-    "ean": "0619659188566",
-    "title": "SanDisk Extreme Pro Flash-Speicherkarte  512 GB",
-    "detected_at": "2026-06-12T15:42:27.167666+00:00"
-  },
-  "USBV0003": {
-    "ean": "0023942302278",
-    "title": "Verbatim Plectra Black 512GB USB-C Flash Drive 302",
-    "detected_at": "2026-06-12T15:42:41.607308+00:00"
-  },
-  "USBV0007": {
-    "ean": "0023942302315",
-    "title": "Verbatim Plectra White 512GB USB-C Flash Drive 30231",
-    "detected_at": "2026-06-12T15:42:49.595239+00:00"
   },
   "PPSE0102": {
     "ean": "4895251644723",
