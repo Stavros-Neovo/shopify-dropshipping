@@ -383,11 +383,25 @@ def score_product(prod: dict, ebay: dict, vk: float) -> float:
     if min_price > 0 and vk < min_price:
         price_score = 20  # Bonus: wir sind günstiger
 
+    # Velocity-Bonus: günstige Artikel verkaufen sich öfter
+    if vk <= 50:
+        velocity_score = 30
+    elif vk <= 100:
+        velocity_score = 25
+    elif vk <= 150:
+        velocity_score = 20
+    elif vk <= 200:
+        velocity_score = 10
+    elif vk <= 300:
+        velocity_score = 5
+    else:
+        velocity_score = 0
+
     score = (
-        watch * 0.45 +
-        demand * 0.30 +
+        watch * 0.40 +
         comp_score * 0.25 +
-        price_score
+        price_score +
+        velocity_score
     )
     return round(score, 2)
 
