@@ -86,9 +86,9 @@ jobs:
           # Schedule: 02:00 + 14:00 → scan+select+list, 08:00 + 20:00 → select+list
           if [ "${{ github.event_name }}" = "schedule" ]; then
             HOUR=$(date -u +%H)
-            if [ "$HOUR" = "02" ] || [ "$HOUR" = "14" ]; then
+            if [ "$HOUR" = "02" ]; then
               MODE="both"
-              LIMIT="10000"
+              LIMIT="4800"
             else
               MODE="select"
               LIMIT="0"
