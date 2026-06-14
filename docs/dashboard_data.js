@@ -1,99 +1,99 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-14T08:57:12.784718+00:00",
+  "generated_at": "2026-06-14T15:30:00.759984+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 1220,
+  "active_listings": 400,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-12T12:03:55.799916+00:00",
-      "checked": 1220,
+      "timestamp": "2026-06-14T12:57:00.733976+00:00",
+      "checked": 400,
       "lowered": 3,
-      "raised": 0,
-      "set_to_floor": 89,
+      "raised": 1,
+      "set_to_floor": 8,
       "skipped_floor": 0,
-      "skipped_few": 903,
-      "unchanged": 138,
-      "errors": 87,
+      "skipped_few": 15,
+      "unchanged": 282,
+      "errors": 91,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CAMD0003",
-        "title": "DJI O4 Air Unit für FPV-Drohne",
-        "old": 157.99,
-        "new": 147.99,
-        "diff": -10.0,
+        "sku": "ENAB0002",
+        "title": "Enabot ROLA PetPal Leckerlie Modul",
+        "old": 49.99,
+        "new": 47.99,
+        "diff": -2.0,
         "action": "lowered"
       },
       {
-        "sku": "CPUA0067",
-        "title": "AMD Ryzen 9 5950X BOX | 100-100000059WOF",
-        "old": 460.99,
-        "new": 438.99,
-        "diff": -22.0,
+        "sku": "NETT0201",
+        "title": "TP-LINK Tapo A100 - Powerbank",
+        "old": 36.99,
+        "new": 33.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "CPUI0204",
-        "title": "Intel Cpu Core i7-14700KF, box | BX8071514700",
-        "old": 514.99,
-        "new": 490.99,
-        "diff": -24.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 533.99,
-        "new": 508.95,
-        "diff": -25.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUI0235",
-        "title": "Intel Cpu Ultra 7 265KF, box | BX80768265KF",
-        "old": 369.99,
-        "new": 350.99,
-        "diff": -19.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 241.99,
-        "new": 227.99,
-        "diff": -14.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 232.99,
-        "new": 227.99,
+        "sku": "NETT0207",
+        "title": "TP-LINK Tapo T100 V1 - Bewegungssensor",
+        "old": 31.99,
+        "new": 26.99,
         "diff": -5.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 166.99,
-        "new": 155.99,
-        "diff": -11.0,
+        "sku": "NETT1030",
+        "title": "Teltonika TSW110 - Switch",
+        "old": 56.99,
+        "new": 55.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0258",
-        "title": "Seagate Exos 7E10 / ST6000NM019B / 6TB / 3,5\"",
-        "old": 682.99,
-        "new": 651.95,
-        "diff": -31.04,
+        "sku": "NETT1048",
+        "title": "Teltonika PR5MEC00 - DIN-Schienenmontagekit",
+        "old": 20.99,
+        "new": 12.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 230.99,
-        "new": 217.99,
-        "diff": -13.0,
+        "sku": "NETU0034",
+        "title": "Ubiquiti UniFi Switch USW Flex Mini - Switch ",
+        "old": 47.99,
+        "new": 46.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NETU0184",
+        "title": "Ubiquiti UniFi UNAS 2 - NAS-Server - RAM 4 GB",
+        "old": 283.99,
+        "new": 295.99,
+        "diff": 12.0,
+        "action": "raised"
+      },
+      {
+        "sku": "NOCO0008",
+        "title": "NOCO GENIUS1EU | 1A Battery Charger | Genius ",
+        "old": 51.99,
+        "new": 50.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NOCO0021",
+        "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case |",
+        "old": 38.99,
+        "new": 36.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "NOCO0022",
+        "title": "NOCO GBC015 | NOCO GB150 EVA Protection Case ",
+        "old": 49.99,
+        "new": 48.99,
+        "diff": -1.0,
         "action": "lowered"
       }
     ],
@@ -138,6 +138,18 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-12",
         "lowered": 3,
         "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-14",
+        "lowered": 2,
+        "raised": 7,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-14",
+        "lowered": 3,
+        "raised": 1,
         "floor": 0
       }
     ]
