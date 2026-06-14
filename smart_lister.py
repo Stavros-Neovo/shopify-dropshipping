@@ -528,6 +528,41 @@ def load_already_listed(enrichment_path: str = ENRICHMENT) -> set[str]:
     return eans
 
 
+def update_supplier_prices(catalog: dict, supplier_map_path: str = SUPPLIER_MAP) -> int:
+    """
+    Aktualisiert EK + Supplier in supplier_map wenn Catalog günstiger ist (z.B. BAB).
+    Läuft nach Catalog-Build, unabhängig vom Listing-Filter.
+    """
+    try:
+        sm = json.loads(Path(supplier_map_path).read_text(encoding="utf-8"))
+    except Exception:
+        return 0
+
+    ean_to_sku = {d.get("ean", "").strip(): sku for sku, d in sm.items() if d.get("ean")}
+    updated = 0
+
+    for ean, prod in catalog.items():
+        if ean not in ean_to_sku:
+            continue
+        sku = ean_to_sku[ean]
+        current_ek = sm[sku].get("ek", 9999)
+        if prod["ek"] < current_ek:
+            old = sm[sku].get("supplier", "?")
+            sm[sku]["ek"]             = prod["ek"]
+            sm[sku]["supplier"]       = prod["supplier"]
+            sm[sku]["supplier_email"] = prod["supplier_email"]
+            updated += 1
+            log.info(f"  Supplier-Update: {sku} → {prod['supplier']} "
+                     f"({current_ek:.2f}€ → {prod['ek']:.2f}€, war {old})")
+
+    if updated > 0 and supplier_map_path:
+        Path(supplier_map_path).write_text(
+            json.dumps(sm, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        log.info(f"Supplier-Preise aktualisiert: {updated} Artikel auf günstigeren Anbieter")
+    return updated
+
+
 # ---------------------------------------------------------------------------
 # Haupt-Logik
 # ---------------------------------------------------------------------------
@@ -563,6 +598,7 @@ def main():
     bab      = load_bab()
     kosatec  = load_kosatec()
     catalog  = merge_catalogs(bab, kosatec)
+    update_supplier_prices(catalog)  # Supplier-Map updaten wenn BAB günstiger
     artdata  = load_artikeldaten()
     enrich   = load_enrichment()
     listed   = load_already_listed()
