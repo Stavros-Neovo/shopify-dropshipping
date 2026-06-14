@@ -205,13 +205,15 @@ def merge_catalogs(bab: dict, kosatec: dict) -> dict[str, dict]:
     for ean, prod in kosatec.items():
         merged[ean] = prod.copy()
 
-    # BAB: überschreiben wenn günstiger
+    # BAB: bevorzugter Lieferant (bessere Konditionen)
+    # → BAB wird genommen wenn günstiger ODER bis zu 2€ teurer als Kosatec
+    BAB_PRIORITY = 2.00
     for ean, prod in bab.items():
         if ean not in merged:
             merged[ean] = prod.copy()
-        elif prod["ek"] < merged[ean]["ek"]:
+        elif prod["ek"] <= merged[ean]["ek"] + BAB_PRIORITY:
             merged[ean] = prod.copy()
-            log.debug(f"EAN {ean}: BAB günstiger ({prod['ek']:.2f}€ vs {merged[ean]['ek']:.2f}€)")
+            log.debug(f"EAN {ean}: BAB bevorzugt ({prod['ek']:.2f}€ vs {merged[ean]['ek']:.2f}€)")
 
     log.info(f"Merged: {len(merged)} einzigartige Artikel ({len(bab)} BAB + {len(kosatec)} Kosatec)")
     return merged
