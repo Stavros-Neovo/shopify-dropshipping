@@ -1,73 +1,60 @@
 """
 apply_manual_images.py
 ======================
-Liest manual_images.yaml und trägt die Bild-URLs in enrichment_index.csv ein.
+Liest manual_images.json (aus dem Browser-Tool exportiert) und setzt
+die eingetragenen Bild-URLs direkt auf das eBay Inventory Item.
 
 Aufruf:
-  cd ~/Documents/Dropshipping
   python3 apply_manual_images.py
 """
-import csv
-import yaml
+from __future__ import annotations
+import json, logging, sys, time
 from pathlib import Path
+import yaml
+from dotenv import load_dotenv
+from ebay_client import EbayClient
 
-ENRICHMENT_FILE = "enrichment_index.csv"
-MANUAL_FILE     = "manual_images.yaml"
+MANUAL_FILE    = "manual_images.json"
+IMAGE_FIX_FILE = "image_fix_needed.json"
+INVENTORY_PATH = "/sell/inventory/v1/inventory_item"
 
+log = logging.getLogger("apply_images")
+logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)-7s | %(message)s",
+                    handlers=[logging.StreamHandler(sys.stdout)])
 
-def main():
-    # Manuelle Bilder laden
-    data = yaml.safe_load(open(MANUAL_FILE, encoding="utf-8")) or {}
-    manual = {str(k): str(v).strip() for k, v in data.items() if v and str(v).strip()}
-    print(f"Manuelle Bild-URLs geladen: {len(manual)}")
+load_dotenv()
+cfg    = yaml.safe_load(open("config_shop2.yaml", encoding="utf-8"))
+client = EbayClient.from_env(cfg["ebay"])
 
-    if not manual:
-        print("Keine URLs eingetragen — bitte manual_images.yaml befüllen.")
-        return
+manual = json.loads(Path(MANUAL_FILE).read_text(encoding="utf-8"))
+log.info(f"{len(manual)} SKUs aus {MANUAL_FILE}")
 
-    # Enrichment CSV laden
-    p = Path(ENRICHMENT_FILE)
-    rows = []
-    fieldnames = []
-    with open(p, encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f)
-        fieldnames = list(reader.fieldnames or [])
-        rows = list(reader)
+fix = json.loads(Path(IMAGE_FIX_FILE).read_text()) if Path(IMAGE_FIX_FILE).exists() else {}
+fixed = []
 
-    # Index aufbauen
-    index = {r.get("ean", "").strip(): i for i, r in enumerate(rows) if r.get("ean", "").strip()}
+for sku, meta in manual.items():
+    url   = meta.get("image_url", "").strip()
+    title = meta.get("title", sku)
+    if not url:
+        continue
+    log.info(f"  {sku}  {title[:50]}")
+    try:
+        existing = client._request("GET", f"{INVENTORY_PATH}/{sku}")
+        if not existing:
+            log.warning(f"  Kein Inventory Item fuer {sku}")
+            continue
+        existing.setdefault("product", {})
+        existing["product"]["imageUrls"] = [url]
+        for f in ["sku", "locale", "packageWeightAndSize"]:
+            existing.pop(f, None)
+        client._request("PUT", f"{INVENTORY_PATH}/{sku}", json_body=existing)
+        log.info(f"  OK gesetzt")
+        fixed.append(sku)
+        fix.pop(sku, None)
+    except Exception as e:
+        log.error(f"  Fehler: {e}")
+    time.sleep(0.8)
 
-    updated = 0
-    added   = 0
-    skipped = 0
-
-    for ean, img_url in manual.items():
-        if ean in index:
-            rows[index[ean]]["images_all"] = img_url
-            rows[index[ean]]["source"] = "manual"
-            updated += 1
-            print(f"  ↑ Updated: {ean}")
-        else:
-            # Neue Zeile anlegen
-            new_row = {f: "" for f in fieldnames}
-            new_row["ean"] = ean
-            new_row["images_all"] = img_url
-            new_row["source"] = "manual"
-            rows.append(new_row)
-            added += 1
-            print(f"  + Added:   {ean}")
-
-    # CSV neu schreiben
-    with open(p, "w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
-        writer.writeheader()
-        for row in rows:
-            writer.writerow(row)
-
-    print(f"\nFertig: {updated} aktualisiert, {added} hinzugefügt, {skipped} übersprungen")
-    print("\nJetzt pushen:")
-    print("  git add enrichment_index.csv manual_images.yaml && git commit -m 'feat: manuelle bilder' && git push")
-
-
-if __name__ == "__main__":
-    main()
+if fixed:
+    Path(IMAGE_FIX_FILE).write_text(json.dumps(fix, ensure_ascii=False, indent=2))
+    log.info(f"\n{len(fixed)} SKUs gefixt | {len(fix)} verbleiben in image_fix_needed.json")

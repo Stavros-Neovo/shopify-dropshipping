@@ -67,7 +67,7 @@ MIN_COMPETITORS     = 2      # Mindestanzahl Mitbewerber
 MAX_DROP_PCT        = 0.15   # Max 15% Preissenkung pro Lauf
 COMPETITOR_MIN_RATIO = 0.70  # Konkurrent-Preis muss >= 70% des Floor-Preises sein
 DELAY               = 0.4    # Sekunden zwischen Browse-API-Aufrufen
-CHUNK_SIZE          = 9999   # Alle Produkte pro Run (17 Min < 30 Min Timeout)
+CHUNK_SIZE          = 400    # ~25 Min pro Run (sicher unter 60 Min Timeout)
 
 
 # ─── Preisformel (identisch mit sync.py) ─────────────────────────────────────
