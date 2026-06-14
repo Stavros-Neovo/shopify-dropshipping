@@ -97,27 +97,27 @@
   "NETT1014": {
     "ean": "4779051840540",
     "title": "Teltonika RUTM50 - Wireless Router",
-    "detected_at": "2026-06-12T14:59:53.394622+00:00"
+    "detected_at": "2026-06-14T13:23:29.004605+00:00"
   },
   "NETT1082": {
     "ean": "4779051841851",
     "title": "Teltonika TRB256 - Gateway",
-    "detected_at": "2026-06-12T15:00:47.395789+00:00"
+    "detected_at": "2026-06-14T13:24:36.060318+00:00"
   },
   "NETU0122": {
     "ean": "810084695210",
     "title": "UbiQuiti Gateway Pro UniFi UXG-MAX",
-    "detected_at": "2026-06-12T15:01:57.604946+00:00"
+    "detected_at": "2026-06-14T13:26:02.319231+00:00"
   },
   "NETU0143": {
     "ean": "0810010074386",
     "title": "UbiQuiti UISP Professional - UISP-S-PRO - Switch - managed",
-    "detected_at": "2026-06-12T15:02:11.328636+00:00"
+    "detected_at": "2026-06-14T13:26:15.219862+00:00"
   },
   "NETU0181": {
     "ean": "810177165118",
     "title": "Ubiquiti UniFi U7 Pro XG Wall - Accesspoint",
-    "detected_at": "2026-06-12T15:03:01.627014+00:00"
+    "detected_at": "2026-06-14T13:27:10.517810+00:00"
   },
   "NOCO0004": {
     "ean": "1210000618177",
@@ -127,22 +127,22 @@
   "NOCO0006": {
     "ean": "1210000615060",
     "title": "NOCO GB150 | Boost 12V 3000A Jump Starter | Boost Jump Starters",
-    "detected_at": "2026-06-12T15:03:38.047038+00:00"
+    "detected_at": "2026-06-14T13:27:47.074046+00:00"
   },
   "NOCO0011": {
     "ean": "1210000619273",
     "title": "NOCO GENIUS10EU | 10A Battery Charger | Genius Battery Chargers",
-    "detected_at": "2026-06-12T15:03:52.125572+00:00"
+    "detected_at": "2026-06-14T13:28:05.507248+00:00"
   },
   "NOCO0015": {
     "ean": "1210000620088",
     "title": "NOCO GBX75 | Boost X 12V 2500A Jump Starter | Boost Jump Starters",
-    "detected_at": "2026-06-12T15:04:02.572300+00:00"
+    "detected_at": "2026-06-14T13:28:21.617982+00:00"
   },
   "NOCO0017": {
     "ean": "1210000620095",
     "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boost Jump Starters",
-    "detected_at": "2026-06-12T15:04:08.621838+00:00"
+    "detected_at": "2026-06-14T13:28:41.756487+00:00"
   },
   "NOCO0018": {
     "ean": "1210000620057",
@@ -152,17 +152,17 @@
   "NOCO0019": {
     "ean": "1210000617309",
     "title": "NOCO XGC4 | Genius Boost | 56W XGC Power Adapter",
-    "detected_at": "2026-06-12T15:04:15.747000+00:00"
+    "detected_at": "2026-06-14T13:28:46.820251+00:00"
   },
   "PETK0015": {
     "ean": "6973293808629",
     "title": "Petkit Breezy2 Haustier Transporttasche Grün",
-    "detected_at": "2026-06-12T15:04:43.703743+00:00"
+    "detected_at": "2026-06-14T13:30:10.231076+00:00"
   },
   "PETK0018": {
     "ean": "6975069301389",
     "title": "Petkit AirSalon Max",
-    "detected_at": "2026-06-12T15:04:50.459708+00:00"
+    "detected_at": "2026-06-14T13:30:19.448255+00:00"
   },
   "PETK0062": {
     "ean": "6975069306551",
@@ -599,5 +599,400 @@
     "title": "EcoFlow Smart Plug 2",
     "detected_at": "2026-06-12T00:00:00+00:00",
     "note": "Falschbild (Set-Foto), manuell gemeldet"
+  },
+  "ENAB0001": {
+    "ean": "6972822120683",
+    "title": "Enabot ROLA PetPal Spiele Modul",
+    "detected_at": "2026-06-14T12:57:58.950798+00:00"
+  },
+  "NETT0192": {
+    "ean": "4897098685105",
+    "title": "TP-LINK Tapo C420S1 - Überwachungskamera",
+    "detected_at": "2026-06-14T13:22:51.547878+00:00"
+  },
+  "NETT0227": {
+    "ean": "4895252503517",
+    "title": "TP-LINK Omada EAP783 V1 - Accesspoint - Wi-Fi 7",
+    "detected_at": "2026-06-14T13:23:06.907096+00:00"
+  },
+  "NETT1004": {
+    "ean": "4779051840175",
+    "title": "Teltonika RUT956 - Wireless Router",
+    "detected_at": "2026-06-14T13:23:10.591150+00:00"
+  },
+  "NETT1008": {
+    "ean": "4779051841370",
+    "title": "Teltonika TSW212 - Switch",
+    "detected_at": "2026-06-14T13:23:14.895453+00:00"
+  },
+  "NETT1010": {
+    "ean": "4779051840229",
+    "title": "Teltonika RUT200 - Wireless Router",
+    "detected_at": "2026-06-14T13:23:17.966355+00:00"
+  },
+  "NETT1011": {
+    "ean": "4779051841332",
+    "title": "Teltonika RUT260 - Wireless Router",
+    "detected_at": "2026-06-14T13:23:21.282655+00:00"
+  },
+  "NETT1013": {
+    "ean": "4779051840830",
+    "title": "Teltonika RUT906 - Wireless Router",
+    "detected_at": "2026-06-14T13:23:25.178655+00:00"
+  },
+  "NETT1022": {
+    "ean": "4779027312385",
+    "title": "Teletonika TRB142 - Gateway",
+    "detected_at": "2026-06-14T13:23:32.474467+00:00"
+  },
+  "NETT1023": {
+    "ean": "4779051840137",
+    "title": "Teltonika TRB143 - Gateway",
+    "detected_at": "2026-06-14T13:23:36.057914+00:00"
+  },
+  "NETT1024": {
+    "ean": "4779027312415",
+    "title": "Teltonika TRB145 - Gateway",
+    "detected_at": "2026-06-14T13:23:38.856615+00:00"
+  },
+  "NETT1026": {
+    "ean": "4779051840236",
+    "title": "Teltonika TRB500 - Gateway",
+    "detected_at": "2026-06-14T13:23:41.927590+00:00"
+  },
+  "NETT1029": {
+    "ean": "4779051840113",
+    "title": "Teltonika TSW101 - Switch",
+    "detected_at": "2026-06-14T13:23:45.922523+00:00"
+  },
+  "NETT1035": {
+    "ean": "4779027312774",
+    "title": "Teltonika TRM240 - Modem",
+    "detected_at": "2026-06-14T13:23:53.676738+00:00"
+  },
+  "NETT1047": {
+    "ean": "4779051841394",
+    "title": "Teltonika PR1KC640 - Antenne",
+    "detected_at": "2026-06-14T13:23:56.673140+00:00"
+  },
+  "NETT1049": {
+    "ean": "4779051840328",
+    "title": "Teltonika PR1KCS28 - Antenne",
+    "detected_at": "2026-06-14T13:24:06.567644+00:00"
+  },
+  "NETT1054": {
+    "ean": "4779051841042",
+    "title": "Teltonika PR5MEC12 - Oberflächenbefestigungs-Kit",
+    "detected_at": "2026-06-14T13:24:10.165039+00:00"
+  },
+  "NETT1060": {
+    "ean": "4779051843268",
+    "title": "Teltonika DAP142 - Accesspoint",
+    "detected_at": "2026-06-14T13:24:13.538172+00:00"
+  },
+  "NETT1066": {
+    "ean": "4779051840472",
+    "title": "Teltonika RUTM09 - Router",
+    "detected_at": "2026-06-14T13:24:16.396203+00:00"
+  },
+  "NETT1071": {
+    "ean": "4779051840700",
+    "title": "Teltonika RUT140 - Wireless Router",
+    "detected_at": "2026-06-14T13:24:20.635898+00:00"
+  },
+  "NETT1072": {
+    "ean": "4779051840724",
+    "title": "Teltonika RUT142 - Wireless Router",
+    "detected_at": "2026-06-14T13:24:24.937191+00:00"
+  },
+  "NETT1075": {
+    "ean": "4779027312620",
+    "title": "Teltonika TRB141 - Gateway",
+    "detected_at": "2026-06-14T13:24:29.234520+00:00"
+  },
+  "NETT1078": {
+    "ean": "4779051841455",
+    "title": "Teltonika TRM500 - Wireless Router",
+    "detected_at": "2026-06-14T13:24:32.846319+00:00"
+  },
+  "NETT1083": {
+    "ean": "4779051841844",
+    "title": "Teltonika TRB246 - Gateway",
+    "detected_at": "2026-06-14T13:24:40.020006+00:00"
+  },
+  "NETT1094": {
+    "ean": "4779051840908",
+    "title": "Teltonika\tMobile SMA antenna",
+    "detected_at": "2026-06-14T13:24:43.367230+00:00"
+  },
+  "NETT1099": {
+    "ean": "4779051840618",
+    "title": "Teltonika Ethernet cable 1.5M",
+    "detected_at": "2026-06-14T13:24:47.668218+00:00"
+  },
+  "NETU0008": {
+    "ean": "0817882028547",
+    "title": "UbiQuiti UniFi USW-16-POE Switch",
+    "detected_at": "2026-06-14T13:24:50.742285+00:00"
+  },
+  "NETU0010": {
+    "ean": "0810010078278",
+    "title": "UbiQuiti WiFi 6 Mesh Access Point",
+    "detected_at": "2026-06-14T13:24:56.271281+00:00"
+  },
+  "NETU0013": {
+    "ean": "0810010076830",
+    "title": "UbiQuiti UniFi U6-PRO Wi-Fi 6 Access Point",
+    "detected_at": "2026-06-14T13:24:59.341721+00:00"
+  },
+  "NETU0016": {
+    "ean": "0810010072146",
+    "title": "UbiQuiti UniFi USW-48-POE Switch",
+    "detected_at": "2026-06-14T13:25:02.414355+00:00"
+  },
+  "NETU0024": {
+    "ean": "0810010077769",
+    "title": "UbiQuiti UniFi Dream Machine Special Edition",
+    "detected_at": "2026-06-14T13:25:08.867721+00:00"
+  },
+  "NETU0028": {
+    "ean": "0817882027373",
+    "title": "UbiQuiti UniFi Dream Machine Pro Access Point",
+    "detected_at": "2026-06-14T13:25:13.576598+00:00"
+  },
+  "NETU0035": {
+    "ean": "0810354023538",
+    "title": "UbiQuiti Networks POE-24-24W-G - Power Injector",
+    "detected_at": "2026-06-14T13:25:23.303058+00:00"
+  },
+  "NETU0036": {
+    "ean": "0810354023088",
+    "title": "UbiQuiti Networks POE-48-24W-G - Power Injector",
+    "detected_at": "2026-06-14T13:25:27.296037+00:00"
+  },
+  "NETU0067": {
+    "ean": "0810010071163",
+    "title": "UbiQuiti UniFi Switch Lite USW-Lite-16-POE - Switch",
+    "detected_at": "2026-06-14T13:25:31.420195+00:00"
+  },
+  "NETU0076": {
+    "ean": "0810084691090",
+    "title": "UbiQuiti WiFi U6-PLUS Access Point",
+    "detected_at": "2026-06-14T13:25:35.755958+00:00"
+  },
+  "NETU0079": {
+    "ean": "0810010074775",
+    "title": "UbiQuiti USW-ENTERPRISE-8-POE- Switch - L3 - managed - 8 x 10/100/1000/2.5G (PoE+)",
+    "detected_at": "2026-06-14T13:25:38.664847+00:00"
+  },
+  "NETU0084": {
+    "ean": "0810084690185",
+    "title": "UbiQuiti UniFi Protect UVC-G5-BULLET - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-14T13:25:42.080324+00:00"
+  },
+  "NETU0090": {
+    "ean": "0810010075574",
+    "title": "UbiQuiti UniFi Protect Pro - UNVR-PRO - netzwerkfähig",
+    "detected_at": "2026-06-14T13:25:46.037072+00:00"
+  },
+  "NETU0100": {
+    "ean": "0810084690246",
+    "title": "UbiQuiti UniFi Protect UVC-G5-PRO - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-14T13:25:49.108880+00:00"
+  },
+  "NETU0104": {
+    "ean": "0810084693650",
+    "title": "UbiQuiti UniFi U7-PRO - AccessPoint - WiFi 7 - Indoor",
+    "detected_at": "2026-06-14T13:25:52.181524+00:00"
+  },
+  "NETU0107": {
+    "ean": "0810084695203",
+    "title": "UbiQuiti UniFi Cloud Gateway Ultra UniFi - UCG-ULTRA",
+    "detected_at": "2026-06-14T13:25:54.946564+00:00"
+  },
+  "NETU0110": {
+    "ean": "0810084691656",
+    "title": "UbiQuiti UniFi Access Reader G2 Professional - UA-G2-PRO",
+    "detected_at": "2026-06-14T13:25:59.247048+00:00"
+  },
+  "NETU0129": {
+    "ean": "0810084695555",
+    "title": "UbiQuiti U7 Pro Max - Access Point",
+    "detected_at": "2026-06-14T13:26:05.392835+00:00"
+  },
+  "NETU0130": {
+    "ean": "0810084695548",
+    "title": "UbiQuiti UniFi U7 Pro Wall - Access Point",
+    "detected_at": "2026-06-14T13:26:08.463423+00:00"
+  },
+  "NETU0136": {
+    "ean": "0810084691670",
+    "title": "UbiQuiti UniFi G2 Starter Kit - Zugangskontrollgerät",
+    "detected_at": "2026-06-14T13:26:11.533705+00:00"
+  },
+  "NETU0147": {
+    "ean": "0810084690154",
+    "title": "Ubiquiti SFP+-Transceiver-Modul - UACC-CM-RJ45-MG",
+    "detected_at": "2026-06-14T13:26:18.293276+00:00"
+  },
+  "NETU0148": {
+    "ean": "0810084698747",
+    "title": "UbiQuiti U7-LITE - Access Point - WiFi 7 - Indoor",
+    "detected_at": "2026-06-14T13:26:21.893247+00:00"
+  },
+  "NETU0150": {
+    "ean": "0810177161288",
+    "title": "Ubiquiti UniFi Cloud Gateway Fiber - Gateway",
+    "detected_at": "2026-06-14T13:26:24.435923+00:00"
+  },
+  "NETU0151": {
+    "ean": "0810177161929",
+    "title": "UbiQuiti WiFi 7 Long-Range Access Point",
+    "detected_at": "2026-06-14T13:26:28.430745+00:00"
+  },
+  "NETU0152": {
+    "ean": "0810010079251",
+    "title": "Ubiquiti UniFi UNAS Pro - NAS-Server - Rack - einbaufähig",
+    "detected_at": "2026-06-14T13:26:30.941856+00:00"
+  },
+  "NETU0154": {
+    "ean": "0810010074300",
+    "title": "Ubiquiti UniFi Express 7 - Gateway - Wi-Fi 7, 10GbE, 2.5GbE",
+    "detected_at": "2026-06-14T13:26:34.122908+00:00"
+  },
+  "NETU0156": {
+    "ean": "0810084696057",
+    "title": "Ubiquiti UniFi Flex 2.5G - Switch - managed",
+    "detected_at": "2026-06-14T13:26:38.260182+00:00"
+  },
+  "NETU0157": {
+    "ean": "0810084696040",
+    "title": "Ubiquiti UniFi Flex 2.5G - Switch - 5-Port - managed",
+    "detected_at": "2026-06-14T13:26:42.563530+00:00"
+  },
+  "NETU0160": {
+    "ean": "0810084698730",
+    "title": "Ubiquiti UniFi U7 Pro Outdoor - Accesspoint - Wi-Fi 7",
+    "detected_at": "2026-06-14T13:26:45.942619+00:00"
+  },
+  "NETU0164": {
+    "ean": "0810354023545",
+    "title": "Ubiquiti Networks POE-24-30W - Power Injector",
+    "detected_at": "2026-06-14T13:26:50.053659+00:00"
+  },
+  "NETU0170": {
+    "ean": "0810084693582",
+    "title": "Ubiquiti UniFi Protect G5 PTZ - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-14T13:26:53.928739+00:00"
+  },
+  "NETU0171": {
+    "ean": "0810084691915",
+    "title": "Ubiquiti UniFi Touch - VoIP-Telefon",
+    "detected_at": "2026-06-14T13:26:57.111845+00:00"
+  },
+  "NETU0172": {
+    "ean": "0810084698341",
+    "title": "Ubiquiti UniFi U7 Pro XGS - Accesspoint - Wi-Fi 7",
+    "detected_at": "2026-06-14T13:27:00.072466+00:00"
+  },
+  "NETU0173": {
+    "ean": "0810084698815",
+    "title": "Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret",
+    "detected_at": "2026-06-14T13:27:03.143908+00:00"
+  },
+  "NETU0180": {
+    "ean": "0810084694664",
+    "title": "Ubiquiti E7 - Enterprise Access Point",
+    "detected_at": "2026-06-14T13:27:07.444750+00:00"
+  },
+  "NETU0183": {
+    "ean": "0810084694275",
+    "title": "Ubiquiti PowerAmp - Netzwerkverstärker - 2 x",
+    "detected_at": "2026-06-14T13:27:13.344589+00:00"
+  },
+  "NETU0186": {
+    "ean": "0810177163398",
+    "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-14T13:27:20.459957+00:00"
+  },
+  "NETU0187": {
+    "ean": "0810084698792",
+    "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-14T13:27:23.457993+00:00"
+  },
+  "NETU0188": {
+    "ean": "8101771637876",
+    "title": "Ubiquiti  UniFi G6 Pro Turret - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-14T13:27:27.455790+00:00"
+  },
+  "NETU0189": {
+    "ean": "0810084693698",
+    "title": "Ubiquiti UniFi Switch Ultra L2, Gigabit Ethernet",
+    "detected_at": "2026-06-14T13:27:31.100287+00:00"
+  },
+  "NOCO0002": {
+    "ean": "1210000615015",
+    "title": "NOCO GB20 | Boost 12V 500A Jump Starter | Boost Jump Starters",
+    "detected_at": "2026-06-14T13:27:35.764047+00:00"
+  },
+  "NOCO0003": {
+    "ean": "1210000615022",
+    "title": "NOCO GB40 | Boost 12V 1000A Jump Starter | Boost Jump Starters",
+    "detected_at": "2026-06-14T13:27:40.860088+00:00"
+  },
+  "NOCO0007": {
+    "ean": "1210000620064",
+    "title": "NOCO GBX45 | Boost X 12V 1250A Jump Starter | Boost Jump Starters",
+    "detected_at": "2026-06-14T13:27:52.604760+00:00"
+  },
+  "NOCO0010": {
+    "ean": "1210000619266",
+    "title": "NOCO GENIUS5EU | 5A Battery Charger | Genius Battery Chargers",
+    "detected_at": "2026-06-14T13:28:02.124301+00:00"
+  },
+  "NOCO0014": {
+    "ean": "1210000620071",
+    "title": "NOCO GBX55 | Boost X 12V 1750A Jump Starter | Boost Jump Starters",
+    "detected_at": "2026-06-14T13:28:14.841290+00:00"
+  },
+  "NOCO0016": {
+    "ean": "1210000624253",
+    "title": "NOCO AX65 | Boost Air 12V 2000A | Jump Starter and Air Compressor",
+    "detected_at": "2026-06-14T13:28:31.065898+00:00"
+  },
+  "NOCO0028": {
+    "ean": "1210000618146",
+    "title": "NOCO GENIUS2DEU | NOCO 2A Direct-Mount Battery Charger | Genius Battery Chargers",
+    "detected_at": "2026-06-14T13:29:29.679141+00:00"
+  },
+  "NUCA0015": {
+    "ean": "4711387949832",
+    "title": "ASUS NUC 15 Pro Slim Kit RNUC15CRKC500002 | 90AR00R2-M00060",
+    "detected_at": "2026-06-14T13:29:50.264430+00:00"
+  },
+  "PETK0011": {
+    "ean": "6975069302713",
+    "title": "Petkit Futterautomat YumShare Dual-Hopper mit Kamera",
+    "detected_at": "2026-06-14T13:30:02.243856+00:00"
+  },
+  "PETK0014": {
+    "ean": "6975069300863",
+    "title": "Petkit Breezy2 Haustier Transporttasche Cremeweiß",
+    "detected_at": "2026-06-14T13:30:06.852301+00:00"
+  },
+  "PETK0016": {
+    "ean": "6973293808506",
+    "title": "Petkit Breezy2 Haustier Transporttasche Rosa Blau",
+    "detected_at": "2026-06-14T13:30:13.444245+00:00"
+  },
+  "PETK0019": {
+    "ean": "6975069301778",
+    "title": "Petkit AirSalon Max Pro",
+    "detected_at": "2026-06-14T13:30:25.589460+00:00"
+  },
+  "PETK0020": {
+    "ean": "6975069301723",
+    "title": "Petkit Tierfell Staubsauger-Set",
+    "detected_at": "2026-06-14T13:30:30.506110+00:00"
   }
 }
