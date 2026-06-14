@@ -1,98 +1,98 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-14T15:30:00.759984+00:00",
+  "generated_at": "2026-06-14T20:49:24.389297+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 400,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-14T12:57:00.733976+00:00",
+      "timestamp": "2026-06-14T16:50:55.656732+00:00",
       "checked": 400,
       "lowered": 3,
-      "raised": 1,
-      "set_to_floor": 8,
+      "raised": 4,
+      "set_to_floor": 4,
       "skipped_floor": 0,
-      "skipped_few": 15,
-      "unchanged": 282,
-      "errors": 91,
+      "skipped_few": 64,
+      "unchanged": 258,
+      "errors": 67,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "ENAB0002",
-        "title": "Enabot ROLA PetPal Leckerlie Modul",
-        "old": 49.99,
-        "new": 47.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "NETT0201",
-        "title": "TP-LINK Tapo A100 - Powerbank",
-        "old": 36.99,
-        "new": 33.99,
-        "diff": -3.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "NETT0207",
-        "title": "TP-LINK Tapo T100 V1 - Bewegungssensor",
-        "old": 31.99,
-        "new": 26.99,
+        "sku": "PPE0070",
+        "title": "ECOFLOW Rigid Solar Panel Mounting Feet",
+        "old": 30.99,
+        "new": 25.99,
         "diff": -5.0,
         "action": "lowered"
       },
       {
-        "sku": "NETT1030",
-        "title": "Teltonika TSW110 - Switch",
-        "old": 56.99,
-        "new": 55.99,
+        "sku": "PPE0236",
+        "title": "ECOFLOW RAPID Mag 5K - Powerbank Black",
+        "old": 50.99,
+        "new": 49.99,
         "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "NETT1048",
-        "title": "Teltonika PR5MEC00 - DIN-Schienenmontagekit",
-        "old": 20.99,
-        "new": 12.99,
-        "diff": -8.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "NETU0034",
-        "title": "Ubiquiti UniFi Switch USW Flex Mini - Switch ",
-        "old": 47.99,
-        "new": 46.99,
-        "diff": -1.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "NETU0184",
-        "title": "Ubiquiti UniFi UNAS 2 - NAS-Server - RAM 4 GB",
-        "old": 283.99,
-        "new": 295.99,
-        "diff": 12.0,
+        "sku": "PPE0260",
+        "title": "ECOFLOW DELTA 3 Cable",
+        "old": 90.99,
+        "new": 92.99,
+        "diff": 2.0,
         "action": "raised"
       },
       {
-        "sku": "NOCO0008",
-        "title": "NOCO GENIUS1EU | 1A Battery Charger | Genius ",
-        "old": 51.99,
-        "new": 50.99,
+        "sku": "PPE0358",
+        "title": "EcoFlow Alternator Charger 600",
+        "old": 308.99,
+        "new": 322.99,
+        "diff": 14.0,
+        "action": "raised"
+      },
+      {
+        "sku": "PPSE0006",
+        "title": "ECOFLOW Micro Inverter to Power Station Conne",
+        "old": 42.99,
+        "new": 41.99,
         "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "NOCO0021",
-        "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case |",
-        "old": 38.99,
-        "new": 36.99,
-        "diff": -2.0,
+        "sku": "PPSE0089",
+        "title": "ECOFLOW STREAM AC Cable 5m",
+        "old": 41.99,
+        "new": 40.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "NOCO0022",
-        "title": "NOCO GBC015 | NOCO GB150 EVA Protection Case ",
-        "old": 49.99,
-        "new": 48.99,
+        "sku": "PPSE0098",
+        "title": "ECOFLOW Bracket - Pitched Roof",
+        "old": 192.99,
+        "new": 199.99,
+        "diff": 7.0,
+        "action": "raised"
+      },
+      {
+        "sku": "PPSE0122",
+        "title": "ECOFLOW 110W - Lightweight Portable Solar Pan",
+        "old": 223.99,
+        "new": 232.99,
+        "diff": 9.0,
+        "action": "raised"
+      },
+      {
+        "sku": "PVMS0318",
+        "title": "Mounting Systems Stockschraube M10x200 komple",
+        "old": 10.99,
+        "new": 9.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SHG0052",
+        "title": "Govee - Neon Rope Light 2 Bracket - 20 pcs- W",
+        "old": 13.99,
+        "new": 12.99,
         "diff": -1.0,
         "action": "lowered"
       }
@@ -150,6 +150,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-14",
         "lowered": 3,
         "raised": 1,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-14",
+        "lowered": 3,
+        "raised": 4,
         "floor": 0
       }
     ]
