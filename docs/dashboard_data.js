@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-13T20:50:19.747143+00:00",
+  "generated_at": "2026-06-14T08:57:12.784718+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 1220,
   "repricing": {
@@ -147,26 +147,20 @@ window.DASHBOARD_DATA = {
       "today_sales": 0,
       "today_revenue": 0.0,
       "today_profit": 0.0,
-      "week_sales": 4,
-      "week_revenue": 184.92,
-      "week_profit": 24.95,
+      "week_sales": 5,
+      "week_revenue": 404.9,
+      "week_profit": 44.18,
       "prev_week_sales": 2,
       "prev_week_revenue": 53.96,
       "prev_week_profit": 21.3,
-      "month_sales": 6,
-      "month_revenue": 238.88,
-      "month_profit": 46.25,
-      "total_sales_30d": 6,
-      "total_revenue_30d": 238.88,
-      "total_profit_30d": 46.25
+      "month_sales": 7,
+      "month_revenue": 458.86,
+      "month_profit": 65.48,
+      "total_sales_30d": 7,
+      "total_revenue_30d": 458.86,
+      "total_profit_30d": 65.48
     },
     "chart_7d": [
-      {
-        "date": "07.06",
-        "revenue": 53.96,
-        "profit": 21.3,
-        "sales": 2
-      },
       {
         "date": "08.06",
         "revenue": 64.96,
@@ -199,18 +193,18 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "13.06",
+        "revenue": 219.98,
+        "profit": 19.23,
+        "sales": 1
+      },
+      {
+        "date": "14.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
       }
     ],
     "chart_30d": [
-      {
-        "date": "15.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "16.05",
         "revenue": 0,
@@ -381,18 +375,18 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "13.06",
+        "revenue": 219.98,
+        "profit": 19.23,
+        "sales": 1
+      },
+      {
+        "date": "14.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
       }
     ],
     "chart_90d": [
-      {
-        "date": "16.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "17.03",
         "revenue": 0,
@@ -923,12 +917,38 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "13.06",
+        "revenue": 219.98,
+        "profit": 19.23,
+        "sales": 1
+      },
+      {
+        "date": "14.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
       }
     ],
     "top_products": [
+      {
+        "sku": "ANTB0005",
+        "title": "ANTHBOT Battery 5000mAh",
+        "sold": 1,
+        "revenue": 215.99,
+        "profit": 19.23,
+        "vk": 215.99,
+        "ek": 121.8,
+        "calc": {
+          "vk_brutto": 219.98,
+          "ebay_fee": 46.2,
+          "vat": 27.75,
+          "netto_vk": 146.03,
+          "ship": 5.0,
+          "ek": 121.8,
+          "profit_u": 19.23,
+          "qty": 1,
+          "profit_t": 19.23
+        }
+      },
       {
         "sku": "USBK1036",
         "title": "Kioxia TransMemory U301 128GB USB 3.0",
@@ -1052,6 +1072,12 @@ window.DASHBOARD_DATA = {
     ],
     "recent_sales": [
       {
+        "date": "13.06 22:19",
+        "title": "ANTHBOT Battery 5000mAh",
+        "revenue": 219.98,
+        "profit": 19.23
+      },
+      {
         "date": "12.06 06:07",
         "title": "Govee - Glide Wall Light (4+1)",
         "revenue": 63.98,
@@ -1093,7 +1119,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1103,7 +1129,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1113,7 +1139,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1123,7 +1149,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1133,7 +1159,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 12,
+        "days_left": 11,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1143,20 +1169,39 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 13,
+        "days_left": 12,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
         "urgent": false
+      },
+      {
+        "order_id": "01-14783-23263",
+        "date": "2026-06-13",
+        "deadline": "2026-06-27",
+        "days_left": 13,
+        "items": [
+          "ANTHBOT Battery 5000mAh"
+        ],
+        "urgent": false
       }
     ],
-    "tracking_missing": [],
+    "tracking_missing": [
+      {
+        "order_id": "01-14783-23263",
+        "date": "2026-06-13",
+        "items": [
+          "ANTHBOT Battery 5000mAh"
+        ],
+        "buyer": "thaimakx1"
+      }
+    ],
     "tax_reserves": {
-      "ust_month": 38.14,
-      "est_month": 13.88,
-      "gewst_month": 6.94,
-      "total_month": 58.95
+      "ust_month": 73.26,
+      "est_month": 19.64,
+      "gewst_month": 9.82,
+      "total_month": 102.73
     },
-    "expected_payout": 188.72
+    "expected_payout": 362.5
   }
 };
