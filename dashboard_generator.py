@@ -459,6 +459,24 @@ def main():
         "orders": orders_data,
     }
 
+    # Pending & Flagged Orders einlesen
+    pending_orders = {}
+    flagged_orders = {}
+    try:
+        p = Path("pending_orders.json")
+        if p.exists():
+            pending_orders = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    try:
+        f = Path("flagged_orders.json")
+        if f.exists():
+            flagged_orders = json.loads(f.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    dashboard["pending_orders"] = pending_orders
+    dashboard["flagged_orders"] = flagged_orders
+
     js = "window.DASHBOARD_DATA = " + json.dumps(dashboard, ensure_ascii=False, indent=2) + ";\n"
     Path(OUTPUT_FILE).write_text(js, encoding="utf-8")
 

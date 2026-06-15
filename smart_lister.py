@@ -589,6 +589,7 @@ def main():
     parser.add_argument("--limit",    type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
     parser.add_argument("--list",     action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
     parser.add_argument("--config",   default=CONFIG_FILE)
+    parser.add_argument("--bab-only", action="store_true", help="Nur BAB-Produkte")
     args = parser.parse_args()
 
     if not args.scan and not args.select and not args.list:
@@ -611,7 +612,11 @@ def main():
     log.info("=== Kataloge einlesen ===")
     bab      = load_bab()
     kosatec  = load_kosatec()
-    catalog  = merge_catalogs(bab, kosatec)
+    if args.bab_only:
+        catalog = merge_catalogs(bab, {})
+        log.info("BAB-ONLY: Kosatec ignoriert")
+    else:
+        catalog = merge_catalogs(bab, kosatec)
     update_supplier_prices(catalog)  # Supplier-Map updaten wenn BAB günstiger
     artdata  = load_artikeldaten()
     enrich   = load_enrichment()

@@ -295,6 +295,32 @@
     .animate-in:nth-child(4){animation-delay:.2s}
 
     .empty{padding:16px;color:var(--muted);font-size:12px;text-align:center}
+
+    /* ── Freigabe-Buttons ── */
+    .approve-btn{
+      font-size:12px;font-weight:700;padding:8px 14px;
+      border-radius:10px;border:1px solid #22c55e40;
+      background:#22c55e12;color:var(--green);cursor:pointer;
+      transition:all .2s;flex:1;
+    }
+    .approve-btn:hover{background:#22c55e30;border-color:var(--green)}
+    .approve-btn:disabled{opacity:.4;cursor:not-allowed}
+    .reject-btn{
+      font-size:12px;font-weight:700;padding:8px 14px;
+      border-radius:10px;border:1px solid #ef444440;
+      background:#ef444412;color:var(--red);cursor:pointer;
+      transition:all .2s;flex:1;
+    }
+    .reject-btn:hover{background:#ef444430;border-color:var(--red)}
+    .reject-btn:disabled{opacity:.4;cursor:not-allowed}
+    .pending-card{border-left:3px solid var(--yellow);transition:opacity .4s}
+    .pending-badge{
+      display:inline-flex;align-items:center;gap:5px;
+      background:#f59e0b18;border:1px solid #f59e0b30;
+      border-radius:20px;padding:3px 10px;
+      font-size:11px;font-weight:700;color:var(--yellow);
+      margin-left:8px;
+    }
     .loading{padding:80px 20px;text-align:center;color:var(--muted)}
     .spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 12px}
     @keyframes spin{to{transform:rotate(360deg)}}
@@ -450,6 +476,10 @@ function render(d) {
     'Stand: ' + gen.toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) + ' Uhr';
 
   const s  = d.orders.stats;
+  const pending = d.pending_orders || {};
+  const flagged = d.flagged_orders || {};
+  const pendingCount = Object.keys(pending).length;
+  const flaggedCount = Object.keys(flagged).length;
   const rp = d.repricing;
   const tx = d.orders.tax_reserves;
   const od = d.orders;
@@ -473,6 +503,8 @@ function render(d) {
 
   app.innerHTML = `
     ${trackAlert}
+
+    ${renderPendingOrders(pending, flagged)}
 
     <!-- Heute -->
     <div class="section-title">Heute</div>
@@ -737,6 +769,141 @@ function render(d) {
     // Chart
     buildChart(currentRange==='7d'?od.chart_7d:currentRange==='90d'?od.chart_90d:od.chart_30d);
   }, 50);
+}
+
+function timeSince(iso) {
+  try {
+    const mins = Math.floor((Date.now() - new Date(iso)) / 60000);
+    if (mins < 60) return 'vor ' + mins + ' Min';
+    return 'vor ' + Math.floor(mins/60) + 'h ' + (mins%60) + 'min';
+  } catch(e) { return ''; }
+}
+
+async function approveOrder(orderId, btn) {
+  btn.disabled = true; btn.textContent = '⏳ Sende...';
+  try {
+    const r = await fetch('http://localhost:8765/api/approve/' + orderId, {method:'POST'});
+    const data = await r.json();
+    if (data.ok) {
+      const card = document.getElementById('pend_' + orderId);
+      if (card) { card.style.opacity = '0.3'; setTimeout(() => card.remove(), 700); }
+    } else {
+      btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
+      alert('Fehler: ' + data.error);
+    }
+  } catch(e) {
+    btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
+    alert('Dashboard-Server nicht erreichbar.\nBitte Terminal öffnen und ausführen:\n\ncd ~/Documents/Dropshipping && python3 order_dashboard.py');
+  }
+}
+
+async function rejectOrder(orderId, btn) {
+  if (!confirm('Bestellung ' + orderId + ' ablehnen? Keine Mail wird gesendet.')) return;
+  btn.disabled = true;
+  try {
+    const r = await fetch('http://localhost:8765/api/reject/' + orderId, {method:'POST'});
+    const data = await r.json();
+    if (data.ok) {
+      const card = document.getElementById('pend_' + orderId);
+      if (card) { card.style.opacity = '0.3'; setTimeout(() => card.remove(), 700); }
+    } else { btn.disabled = false; }
+  } catch(e) {
+    btn.disabled = false;
+    alert('Server nicht erreichbar.\nBitte: python3 order_dashboard.py starten');
+  }
+}
+
+function timeSince(iso) {
+  try {
+    const mins = Math.floor((Date.now() - new Date(iso)) / 60000);
+    if (mins < 60) return 'vor ' + mins + ' Min';
+    return 'vor ' + Math.floor(mins/60) + 'h ' + (mins%60) + 'min';
+  } catch(e) { return ''; }
+}
+
+function renderPendingOrders(pending, flagged) {
+  const pKeys = Object.keys(pending);
+  const fKeys = Object.keys(flagged);
+  if (pKeys.length === 0 && fKeys.length === 0) return '';
+
+  let html = '<div class="section-title">Bestellungen freigeben';
+  if (pKeys.length > 0) html += ' <span class="pending-badge" style="background:#f59e0b18;border:1px solid #f59e0b30;color:var(--yellow)">&#x23F3; ' + pKeys.length + ' wartend</span>';
+  if (fKeys.length > 0) html += ' <span class="pending-badge" style="background:#ef444418;border:1px solid #ef444430;color:var(--red)">&#x26A0;&#xFE0F; ' + fKeys.length + ' Gefahrgut</span>';
+  html += '</div>';
+
+  pKeys.forEach(function(id) {
+    var o = pending[id];
+    var addr = (o.address || {});
+    html += '<div class="card pending-card" id="pend_' + id + '">';
+    html += '<div class="list-row">';
+    html += '<div class="row-icon icon-yellow">&#x1F4E6;</div>';
+    html += '<div class="row-content">';
+    html += '<div class="row-title">#' + id + '</div>';
+    html += '<div class="row-sub">' + (addr.name||'') + ' &middot; ' + (addr.zip||'') + ' ' + (addr.city||'') + ' &middot; ' + (addr.country||'') + '</div>';
+    html += '</div>';
+    html += '<div class="row-right">';
+    html += '<div class="row-sub">' + (o.creationDate||'').slice(0,10) + '</div>';
+    if (o.pending_since) html += '<div class="row-sub" style="color:var(--yellow)">' + timeSince(o.pending_since) + '</div>';
+    html += '</div></div>';
+    (o.lineItems || []).forEach(function(item) {
+      html += '<div style="padding:5px 14px 5px 58px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)">';
+      html += '<span style="font-family:monospace;color:var(--blue)">' + (item.sku||'') + '</span>';
+      html += ' &nbsp;&middot;&nbsp; ' + (item.quantity||1) + '&times;';
+      html += ' &nbsp;&middot;&nbsp; ' + (item.title||'');
+      html += '</div>';
+    });
+    html += '<div style="display:flex;gap:8px;padding:10px 14px">';
+    html += '<button class="approve-btn" onclick="approveOrder(\'' + id + '\', this)">&#x2705; Freigeben &rarr; BAB</button>';
+    html += '<button class="reject-btn"  onclick="rejectOrder(\'' + id + '\', this)">&#x274C; Ablehnen</button>';
+    html += '</div></div>';
+  });
+
+  if (fKeys.length > 0) {
+    html += '<div class="card" style="border-left:3px solid var(--red)">';
+    fKeys.forEach(function(id) {
+      var f = flagged[id];
+      html += '<div class="list-row">';
+      html += '<div class="row-icon icon-red">&#x26A0;&#xFE0F;</div>';
+      html += '<div class="row-content">';
+      html += '<div class="row-title">#' + id + '</div>';
+      html += '<div class="row-sub" style="color:var(--red)">' + (f.reason||'Gefahrgut') + '</div>';
+      html += '<div class="row-sub">' + (f.items||[]).map(function(i){return i.title||i.sku||'';}).join(', ') + '</div>';
+      html += '</div></div>';
+    });
+    html += '</div>';
+  }
+  return html;
+}
+
+async function approveOrder(orderId, btn) {
+  btn.disabled = true; btn.textContent = '⏳ Sende...';
+  try {
+    const r = await fetch('http://localhost:8765/api/approve/' + orderId, {method:'POST'});
+    const data = await r.json();
+    if (data.ok) {
+      const card = document.getElementById('pend_' + orderId);
+      if (card) { card.style.opacity = '0.3'; setTimeout(function(){card.remove();}, 700); }
+    } else {
+      btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
+      alert('Fehler: ' + data.error);
+    }
+  } catch(e) {
+    btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
+    alert('Server nicht erreichbar.\nBitte starten:\ncd ~/Documents/Dropshipping && python3 order_dashboard.py');
+  }
+}
+
+async function rejectOrder(orderId, btn) {
+  if (!confirm('Bestellung ' + orderId + ' ablehnen? Keine Mail wird gesendet.')) return;
+  btn.disabled = true;
+  try {
+    const r = await fetch('http://localhost:8765/api/reject/' + orderId, {method:'POST'});
+    const data = await r.json();
+    if (data.ok) {
+      const card = document.getElementById('pend_' + orderId);
+      if (card) { card.style.opacity = '0.3'; setTimeout(function(){card.remove();}, 700); }
+    } else { btn.disabled = false; }
+  } catch(e) { btn.disabled = false; alert('Server nicht erreichbar.'); }
 }
 
 function loadData() {
