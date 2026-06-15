@@ -229,6 +229,40 @@ def send_email(cfg: dict, subject: str, body: str, dry_run: bool = False):
 # ---------------------------------------------------------------------------
 # Verarbeitete Bestellungen tracken
 # ---------------------------------------------------------------------------
+def write_to_pending(order: dict, cfg_path: str, pending_file: str = "pending_orders.json"):
+    """Speichert Bestellung in pending_orders.json fuer Dashboard-Freigabe."""
+    from pathlib import Path as _P
+    p = _P(pending_file)
+    pending = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    order_id = order.get("orderId", "")
+    if order_id not in pending:
+        addr = {}
+        fulfillments = order.get("fulfillmentStartInstructions", [])
+        if fulfillments:
+            ship_to = fulfillments[0].get("shippingStep", {}).get("shipTo", {})
+            contact = ship_to.get("contactAddress", {})
+            addr = {
+                "name": ship_to.get("fullName", ""),
+                "city": contact.get("city", ""),
+                "zip": contact.get("postalCode", ""),
+                "country": contact.get("countryCode", ""),
+            }
+        pending[order_id] = {
+            "orderId": order_id,
+            "creationDate": order.get("creationDate", ""),
+            "pending_since": datetime.now(timezone.utc).isoformat(),
+            "shop_config": cfg_path,
+            "address": addr,
+            "lineItems": [
+                {"sku": i.get("sku", ""), "title": i.get("title", ""), "quantity": i.get("quantity", 1)}
+                for i in order.get("lineItems", [])
+            ],
+            "_raw": order,
+        }
+        p.write_text(json.dumps(pending, indent=2, ensure_ascii=False), encoding="utf-8")
+        log.info(f"Bestellung {order_id} in pending_orders.json gespeichert")
+
+
 def load_processed(path: str) -> set:
     p = Path(path)
     if p.exists():
@@ -436,16 +470,14 @@ def main():
                 processed.add(order_id)  # nicht nochmal flaggen
             continue
 
-        # ── Normal weiterleiten ──────────────────────────────────────────────
-        log.info(f"✅ Neue Bestellung: {order_id}")
-        subject, body = build_email(order, shop_name=shop_name)
-
-        try:
-            send_email(cfg, subject, body, dry_run=args.dry_run)
-            processed.add(order_id)
-            new_count += 1
-        except Exception as e:
-            log.error(f"Fehler beim Senden für Bestellung {order_id}: {e}")
+        # In pending_orders.json schreiben -- Dashboard entscheidet
+        log.info(f"Neue Bestellung: {order_id} -> wartet auf Dashboard-Freigabe")
+        if not args.dry_run:
+            write_to_pending(order, args.config)
+        else:
+            log.info(f"DRY-RUN: wuerde {order_id} in pending_orders.json schreiben")
+        processed.add(order_id)
+        new_count += 1
 
     save_processed(processed_path, processed)
 
