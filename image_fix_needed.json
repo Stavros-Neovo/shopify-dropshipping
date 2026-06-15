@@ -994,5 +994,25 @@
     "ean": "6975069301723",
     "title": "Petkit Tierfell Staubsauger-Set",
     "detected_at": "2026-06-14T13:30:30.506110+00:00"
+  },
+  "USBS1093": {
+    "ean": "0619659125905",
+    "title": "SanDisk USB Cruzer Blade 128GB USB 2.0",
+    "detected_at": "2026-06-15T11:18:48.711350+00:00"
+  },
+  "USBS1094": {
+    "ean": "0619659097318",
+    "title": "SanDisk USB Cruzer Blade 64GB USB 2.0",
+    "detected_at": "2026-06-15T11:18:52.590345+00:00"
+  },
+  "USBV0003": {
+    "ean": "0023942302278",
+    "title": "Verbatim Plectra Black 512GB USB-C Flash Drive 302",
+    "detected_at": "2026-06-15T11:19:07.067962+00:00"
+  },
+  "USBV0007": {
+    "ean": "0023942302315",
+    "title": "Verbatim Plectra White 512GB USB-C Flash Drive 30231",
+    "detected_at": "2026-06-15T11:19:20.495682+00:00"
   }
 }
