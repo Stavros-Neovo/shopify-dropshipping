@@ -36,6 +36,23 @@ from dotenv import load_dotenv
 
 from ebay_client import EbayClient
 
+# Sicherheitsnetz-Imports
+from datetime import timedelta
+
+# Gefahrgut-Keywords (Artikel werden NICHT automatisch weitergeleitet)
+DANGEROUS_KEYWORDS = [
+    "batterie", "battery", "akku", "akkus", "lithium", "lipo",
+    "li-ion", "lithium-ion", "accumulator", "accu", "powerbank",
+    "power bank", "ladegerät", "charger",
+]
+
+# Haltezeit in Minuten — Storno-Fenster abwarten
+ORDER_HOLD_MINUTES = 45
+
+# Datei für manuelle Prüfung
+FLAGGED_ORDERS_FILE = "flagged_orders.json"
+
+
 log = logging.getLogger("ebay_order_forwarder")
 
 FULFILLMENT_PATH = "/sell/fulfillment/v1/order"
@@ -226,6 +243,129 @@ def save_processed(path: str, processed: set):
 # ---------------------------------------------------------------------------
 # Haupt-Logik
 # ---------------------------------------------------------------------------
+def flag_for_manual_review(order_id: str, order: dict, reason: str):
+    """Schreibt Bestellung in flagged_orders.json für manuelle Prüfung."""
+    p = Path(FLAGGED_ORDERS_FILE)
+    flagged = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+    flagged[order_id] = {
+        "reason": reason,
+        "flagged_at": datetime.now(timezone.utc).isoformat(),
+        "items": [
+            {"sku": i.get("sku"), "title": i.get("title"), "qty": i.get("quantity")}
+            for i in order.get("lineItems", [])
+        ],
+        "cancel_state": order.get("cancelStatus", {}).get("cancelState", "NONE"),
+        "payment_status": [
+            p.get("paymentStatus") for p in
+            order.get("paymentSummary", {}).get("payments", [])
+        ],
+    }
+    p.write_text(json.dumps(flagged, indent=2, ensure_ascii=False), encoding="utf-8")
+    log.warning(f"⚠️  Bestellung {order_id} geflaggt: {reason} → {FLAGGED_ORDERS_FILE}")
+
+
+def send_alert_email(cfg: dict, order_id: str, reason: str, order: dict):
+    """Sendet Alert-Mail an den Shop-Besitzer (nicht an BAB)."""
+    supplier_cfg = cfg.get("supplier_email", {})
+    sender = os.environ.get("SMTP_USER", "no-reply@example.com")
+    from_name = supplier_cfg.get("from_name", "eBay Shop")
+    # Alert geht an den Absender selbst (Shop-Besitzer)
+    to = sender
+
+    items_text = "\n".join(
+        f"  - {i.get('quantity')}x {i.get('sku')} – {i.get('title')}"
+        for i in order.get("lineItems", [])
+    )
+
+    subject = f"⚠️ MANUELLE PRÜFUNG: Bestellung #{order_id} — {reason}"
+    body = f"""ACHTUNG: Diese Bestellung wurde NICHT automatisch weitergeleitet.
+
+Grund: {reason}
+
+Bestellung: {order_id}
+Datum: {order.get("creationDate", "")[:10]}
+
+Artikel:
+{items_text}
+
+Bitte manuell prüfen und in flagged_orders.json verarbeiten.
+"""
+
+    msg = EmailMessage()
+    msg["From"] = f"{from_name} <{sender}>"
+    msg["To"] = to
+    msg["Subject"] = subject
+    msg.set_content(body)
+
+    try:
+        host = os.environ["SMTP_HOST"]
+        port = int(os.environ["SMTP_PORT"])
+        user = os.environ["SMTP_USER"]
+        pw = os.environ["SMTP_PASSWORD"]
+        use_tls = os.environ.get("SMTP_USE_TLS", "true").lower() == "true"
+        if port == 465:
+            with smtplib.SMTP_SSL(host, port) as s:
+                s.login(user, pw); s.send_message(msg)
+        else:
+            with smtplib.SMTP(host, port) as s:
+                if use_tls: s.starttls()
+                s.login(user, pw); s.send_message(msg)
+        log.info(f"Alert-Mail gesendet: {subject}")
+    except Exception as e:
+        log.error(f"Alert-Mail fehlgeschlagen: {e}")
+
+
+def check_order_safety(order: dict, cfg: dict, dry_run: bool = False) -> tuple[bool, str]:
+    """
+    Prüft ob eine Bestellung sicher weitergeleitet werden kann.
+    Gibt (ok: bool, reason: str) zurück.
+    
+    Schichten:
+      1. Storno-Check    → sofort blockieren
+      2. Zahlungs-Check  → warten (retry)
+      3. Haltezeit 45min → warten (retry)
+      4. Gefahrgut-Flag  → manuelle Prüfung
+    """
+    order_id = order.get("orderId", "?")
+
+    # ── 1. Storno-Check ──────────────────────────────────────────────────────
+    cancel_state = order.get("cancelStatus", {}).get("cancelState", "NONE")
+    if cancel_state in ("CANCEL_REQUESTED", "CANCELLED"):
+        return False, f"STORNIERT ({cancel_state})"
+
+    # ── 2. Zahlungs-Check ────────────────────────────────────────────────────
+    payments = order.get("paymentSummary", {}).get("payments", [])
+    if payments:
+        paid = any(p.get("paymentStatus") == "PAID" for p in payments)
+        if not paid:
+            statuses = [p.get("paymentStatus") for p in payments]
+            return False, f"NICHT BEZAHLT ({', '.join(statuses)})"
+
+    # ── 3. Haltezeit: Storno-Fenster ─────────────────────────────────────────
+    creation_str = order.get("creationDate", "")
+    if creation_str:
+        try:
+            creation = datetime.fromisoformat(creation_str.replace("Z", "+00:00"))
+            age_minutes = (datetime.now(timezone.utc) - creation).total_seconds() / 60
+            if age_minutes < ORDER_HOLD_MINUTES:
+                return False, f"HALTEZEIT ({age_minutes:.0f}/{ORDER_HOLD_MINUTES} min)"
+        except Exception:
+            pass  # wenn Datum nicht parsbar → weitermachen
+
+    # ── 4. Gefahrgut-Filter ──────────────────────────────────────────────────
+    for item in order.get("lineItems", []):
+        title_lower = item.get("title", "").lower()
+        sku_lower = item.get("sku", "").lower()
+        hit = next(
+            (kw for kw in DANGEROUS_KEYWORDS if kw in title_lower or kw in sku_lower),
+            None,
+        )
+        if hit:
+            return False, f"GEFAHRGUT-VERDACHT ('{hit}' in '{item.get('title')}')"
+
+    return True, "OK"
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="config.yaml")
@@ -275,7 +415,29 @@ def main():
             log.info(f"Bestellung {order_id} bereits verarbeitet — übersprungen")
             continue
 
-        log.info(f"Neue Bestellung: {order_id}")
+        # ── Sicherheitsnetz ──────────────────────────────────────────────────
+        ok, reason = check_order_safety(order, cfg, dry_run=args.dry_run)
+
+        if not ok:
+            if reason.startswith("STORNIERT"):
+                log.warning(f"❌ Bestellung {order_id} STORNIERT — wird nicht weitergeleitet")
+                processed.add(order_id)  # dauerhaft überspringen
+            elif reason.startswith("NICHT BEZAHLT"):
+                log.warning(f"⏳ Bestellung {order_id} {reason} — nächster Run prüft erneut")
+                # NICHT als processed markieren → nächster Run prüft nochmal
+            elif reason.startswith("HALTEZEIT"):
+                log.info(f"⏳ Bestellung {order_id} {reason} — wird noch gehalten")
+                # NICHT als processed markieren → nächster Run prüft nochmal
+            elif reason.startswith("GEFAHRGUT"):
+                log.warning(f"⚠️  Bestellung {order_id} GEFAHRGUT — manuelle Prüfung!")
+                flag_for_manual_review(order_id, order, reason)
+                if not args.dry_run:
+                    send_alert_email(cfg, order_id, reason, order)
+                processed.add(order_id)  # nicht nochmal flaggen
+            continue
+
+        # ── Normal weiterleiten ──────────────────────────────────────────────
+        log.info(f"✅ Neue Bestellung: {order_id}")
         subject, body = build_email(order, shop_name=shop_name)
 
         try:

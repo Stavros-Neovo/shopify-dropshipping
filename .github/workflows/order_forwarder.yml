@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add processed_orders.json || true
+          git add processed_orders*.json || true
           git diff --staged --quiet || git commit -m "chore: bestellungen verarbeitet $(date -u '+%Y-%m-%d %H:%M')"
           git pull --rebase origin main || true
           git push || true
