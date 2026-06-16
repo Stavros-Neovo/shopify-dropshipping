@@ -2,9 +2,9 @@
 """
 purge_non_bab.py
 ================
-Holt ALLE aktiven eBay-Offers via Pagination.
-Löscht jeden Offer dessen SKU NICHT in der BAB-Liste ist.
-Damit werden alle verbleibenden Kosatec/unbekannten Listings entfernt.
+Löscht alle eBay-Listings die NICHT in der BAB-Lieferantenliste sind.
+Nutzt GET /inventory_item (statt /offer) um den 25707-Fehler bei
+Kosatec-SKUs mit Sonderzeichen zu umgehen.
 """
 from __future__ import annotations
 import json, logging, sys, time
@@ -23,97 +23,102 @@ cfg = yaml.safe_load(Path("config_shop2.yaml").read_text(encoding="utf-8"))
 from ebay_client import EbayClient
 client = EbayClient.from_env(cfg["ebay"])
 
-# BAB-SKUs aus aktueller supplier_map laden
+# BAB-SKUs aus supplier_map laden
 smap = json.loads(Path("supplier_map.json").read_text())
 bab_skus = {k for k, v in smap.items() if v.get("supplier") == "BAB"}
 log.info(f"BAB-SKUs (geschützt): {len(bab_skus)}")
 
+INV_PATH  = "/sell/inventory/v1/inventory_item"
 OFFER_PATH = "/sell/inventory/v1/offer"
-INV_PATH   = "/sell/inventory/v1/inventory_item"
-LIMIT      = 100
+LIMIT     = 25   # kleiner Batch → stabiler bei Sonderzeichen-SKUs
 
 stats = {"total": 0, "bab_kept": 0, "deleted": 0, "not_found": 0, "errors": 0}
-to_delete: list[dict] = []
+to_delete: list[str] = []
 
-# Schritt 1: Alle Offers einsammeln
-log.info("Scanne alle aktiven eBay-Offers ...")
+# Schritt 1: Alle Inventory Items einsammeln
+log.info("Scanne alle eBay Inventory Items ...")
 offset = 0
 while True:
     try:
-        r = client._request("GET", OFFER_PATH, params={"limit": LIMIT, "offset": offset, "marketplace_id": cfg["ebay"]["marketplace_id"]})
+        r = client._request("GET", INV_PATH, params={"limit": LIMIT, "offset": offset})
     except Exception as e:
         err = str(e)
-        if "25707" in err or "invalid" in err.lower():
-            # Einzelne SKU mit Sonderzeichen verursacht eBay-Fehler → nächsten Batch probieren
-            log.warning(f"Offset {offset}: SKU-Fehler übersprungen ({err[:80]})")
-            offset += LIMIT
-            if offset > 5000:
-                break
-            continue
-        log.error(f"Fehler bei offset {offset}: {e}")
+        log.warning(f"Offset {offset}: Fehler übersprungen → {err[:120]}")
+        offset += LIMIT
+        if offset > 20000:
+            break
+        time.sleep(1)
+        continue
+
+    items = r.get("inventoryItems", []) if isinstance(r, dict) else []
+    if not items:
         break
 
-    offers = r.get("offers", []) if isinstance(r, dict) else []
-    if not offers:
-        break
-
-    for offer in offers:
-        sku    = offer.get("sku", "")
-        status = offer.get("status", "")
+    for item in items:
+        sku = item.get("sku", "")
         stats["total"] += 1
-
         if sku in bab_skus:
             stats["bab_kept"] += 1
-            continue
-
-        if status == "PUBLISHED":
-            to_delete.append({"sku": sku, "offerId": offer.get("offerId", ""),
-                               "status": status})
+        else:
+            to_delete.append(sku)
 
     total_in_response = r.get("total", 0) if isinstance(r, dict) else 0
-    log.info(f"  Offset {offset}: {len(offers)} Offers | Gesamt bisher: {stats['total']} | Zu löschen: {len(to_delete)}")
+    if offset % 200 == 0:
+        log.info(f"  Offset {offset}/{total_in_response}: {stats['total']} gescannt | {len(to_delete)} zu löschen")
 
-    if offset + LIMIT >= total_in_response or len(offers) < LIMIT:
+    if offset + LIMIT >= total_in_response or len(items) < LIMIT:
         break
     offset += LIMIT
-    time.sleep(0.2)
+    time.sleep(0.3)
 
-log.info(f"\nScan abgeschlossen: {stats['total']} Offers total | {stats['bab_kept']} BAB behalten | {len(to_delete)} zu löschen")
+log.info(f"\nScan: {stats['total']} Items | {stats['bab_kept']} BAB | {len(to_delete)} zu löschen")
 
 if not to_delete:
     log.info("Nichts zu löschen — eBay ist sauber!")
     sys.exit(0)
 
-# Sicherheitscheck
-log.info(f"\nErste 10 zu löschende Offers:")
-for item in to_delete[:10]:
-    log.info(f"  SKU={item['sku']} | offerId={item['offerId']}")
+log.info(f"\nErste 20 zu löschende SKUs:")
+for sku in to_delete[:20]:
+    log.info(f"  {sku}")
 
-# Schritt 2: Löschen via DELETE /inventory_item/{sku}
-log.info(f"\nStarte Löschung von {len(to_delete)} Offers ...")
-for i, item in enumerate(to_delete, 1):
-    sku = item["sku"]
+# Schritt 2: Offers zurückziehen + Inventory Item löschen
+log.info(f"\nStarte Bereinigung von {len(to_delete)} Items ...")
+for i, sku in enumerate(to_delete, 1):
+    # Zuerst aktiven Offer zurückziehen (damit Listing offline geht)
+    try:
+        offers = client._request(
+            "GET", OFFER_PATH,
+            params={"sku": sku, "marketplace_id": cfg["ebay"]["marketplace_id"]}
+        )
+        for offer in (offers or {}).get("offers", []):
+            if offer.get("status") == "PUBLISHED":
+                client._request("POST", f"{OFFER_PATH}/{offer['offerId']}/withdraw")
+    except Exception:
+        pass  # kein Offer vorhanden oder schon offline
+
+    # Dann Inventory Item löschen
     try:
         client._request("DELETE", f"{INV_PATH}/{sku}")
         stats["deleted"] += 1
-        if i % 100 == 0:
-            log.info(f"[{i}/{len(to_delete)}] Gelöscht: {stats['deleted']} | Fehler: {stats['errors']}")
     except RuntimeError as e:
         err = str(e)
         if "404" in err or "25001" in err:
             stats["not_found"] += 1
         else:
             stats["errors"] += 1
-            if stats["errors"] <= 5:
+            if stats["errors"] <= 10:
                 log.warning(f"  ✗ {sku}: {err[:100]}")
-    time.sleep(0.15)
+    time.sleep(0.2)
+
+    if i % 50 == 0:
+        log.info(f"[{i}/{len(to_delete)}] Gelöscht: {stats['deleted']} | Fehler: {stats['errors']}")
 
 log.info(f"\n{'='*55}")
 log.info(f"ERGEBNIS purge_non_bab")
 log.info(f"{'='*55}")
-log.info(f"Gesamt gescannt:    {stats['total']}")
-log.info(f"BAB behalten:       {stats['bab_kept']}")
-log.info(f"Gelöscht:           {stats['deleted']}")
-log.info(f"Nicht gefunden:     {stats['not_found']}")
-log.info(f"Fehler:             {stats['errors']}")
-log.info(f"✅ Nur noch BAB-Artikel auf eBay aktiv")
+log.info(f"Gesamt gescannt:  {stats['total']}")
+log.info(f"BAB behalten:     {stats['bab_kept']}")
+log.info(f"Geloescht:        {stats['deleted']}")
+log.info(f"Nicht gefunden:   {stats['not_found']}")
+log.info(f"Fehler:           {stats['errors']}")
+log.info(f"Nur noch BAB-Artikel auf eBay aktiv")
