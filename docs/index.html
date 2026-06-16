@@ -922,48 +922,64 @@
 
   </div>
   <!-- ═══════════════════════════════════ REPRICER ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════════════ REPRICER ═══════════════════════════════════ -->
   <div class="section" id="section-repricer">
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">Repricer</div><div class="card-subtitle">Preise aller aktiven BAB-Listings aktualisieren</div></div><span class="badge badge-amber">⏳ Ausstehend</span></div>
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card green"><div class="kpi-label">Status</div><div class="kpi-value" id="rep-status-val" style="font-size:20px">–</div><div class="kpi-sub" id="rep-status-sub">Lade …</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Zyklus</div><div class="kpi-value" id="rep-cycle">–</div><div class="kpi-sub" id="rep-progress">–/–</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Letzter Run</div><div class="kpi-value" id="rep-age" style="font-size:20px">–</div><div class="kpi-sub" id="rep-age-sub">–</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Fehler</div><div class="kpi-value" id="rep-errors" style="color:var(--green)">–</div><div class="kpi-sub">eBay API Fehler</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header">
+        <div><div class="card-title">▶️ Repricer</div><div class="card-subtitle">Läuft stündlich automatisch · 1.256 BAB-Artikel · 3 Chunks à ~420</div></div>
+        <button class="btn btn-primary" style="padding:8px 18px" onclick="triggerWorkflow('reprice.yml','Repricer');document.getElementById('rep-trigger-log').style.display='block'">▶ Jetzt starten</button>
+      </div>
       <div class="card-body">
-        <div style="padding:14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;margin-bottom:16px;font-size:12px;color:#92400e">
-          ⚠️ <strong>Erst ausführen wenn 0 aktive Listings auf eBay!</strong> Repricer braucht eine saubere Basis.
-        </div>
-        <div style="font-size:13px;font-weight:600;margin-bottom:8px">Schritt 3 in der Pipeline — Terminal öffnen und ausführen:</div>
-        <div class="cmd-box">
-          <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 repricer.py')">Kopieren</button>
-          <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 repricer.py</span>
-        </div>
-        <div style="margin-top:16px">
-          <div style="font-size:12px;font-weight:700;margin-bottom:8px">Was der Repricer macht:</div>
-          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Preise aus BAB-Preisliste neu berechnen</div><div class="status-val">vk_brutto = ek × 1.25 × 1.19 / 0.79 − 3.99</div></div></div>
-          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Alle 1.268 supplier_map-Einträge durchgehen</div><div class="status-val">EK-Änderungen von BAB werden berücksichtigt</div></div></div>
-          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">eBay Offers via PATCH /offer/{id} aktualisieren</div><div class="status-val">Nur wenn Preis sich verändert hat (Schwellwert)</div></div></div>
-        </div>
+        <div id="rep-trigger-log" style="display:none;font-size:12px;font-family:monospace;padding:8px 12px;background:var(--card-bg);border-radius:6px;border:1px solid var(--border);margin-bottom:14px" id="trigger-log-rep"></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Preisformel</div><div class="status-val">VK = EK ÷ 0.74 &nbsp;|&nbsp; 13% eBay + 8% Kampagne + 5% Puffer</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">EK-Erhöhung erkannt → sofort VK erhöhen</div><div class="status-val">EK-Senkung → Preis bleibt (Gewinnoptimierung)</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Makita-Sperre aktiv</div><div class="status-val">12 gesperrte SKUs werden übersprungen</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Chunk-Rotation</div><div class="status-val">CHUNK_SIZE=600 · Offset wird über Zyklen rotiert · state in repricer_state.json</div></div><span class="badge badge-blue">Info</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Workflow-Status</div><div class="card-subtitle">Letzter GitHub Actions Run</div></div></div>
+      <div class="card-body">
+        <div id="rep-wf-status" style="font-size:13px;color:var(--text-sub)">Lade health_report.json …</div>
       </div>
     </div>
   </div>
 
   <!-- ═══════════════════════════════════ SMART LISTER ═══════════════════════════════════ -->
   <div class="section" id="section-lister">
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">Smart Lister</div><div class="card-subtitle">Alle 1.268 BAB-Artikel auf eBay listen</div></div><span class="badge badge-amber">⏳ Schritt 4</span></div>
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card green"><div class="kpi-label">Aktive Listings</div><div class="kpi-value">~948</div><div class="kpi-sub">eBay DE · Best_Neodeals</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">BAB-Artikel</div><div class="kpi-value">1.256</div><div class="kpi-sub">in supplier_map.json</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Bild-Fehler</div><div class="kpi-value">7</div><div class="kpi-sub">Error 25002 · werden automatisch gefixt</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Letzter Run</div><div class="kpi-value" id="lister-age" style="font-size:20px">–</div><div class="kpi-sub" id="lister-age-sub">–</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header">
+        <div><div class="card-title">🚀 Smart Lister</div><div class="card-subtitle">Läuft täglich · Listet alle BAB-Artikel die noch nicht live sind</div></div>
+        <button class="btn btn-primary" style="padding:8px 18px" onclick="triggerWorkflow('smart_lister.yml','Smart Lister')">▶ Jetzt starten</button>
+      </div>
       <div class="card-body">
-        <div style="padding:14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;margin-bottom:16px;font-size:12px;color:#92400e">
-          ⚠️ <strong>Reihenfolge einhalten:</strong> (1) Alle Listings deaktiviert? (2) Repricer gelaufen? → Dann erst Smart Lister starten.
-        </div>
-        <div style="font-size:13px;font-weight:600;margin-bottom:8px">Schritt 4 — Befehl für Terminal:</div>
-        <div class="cmd-box">
-          <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 smart_lister.py --list --bab-only')">Kopieren</button>
-          <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 smart_lister.py --list --bab-only</span>
-        </div>
-        <div style="margin-top:12px;font-size:12px;color:var(--text-muted);padding:10px;background:#f8fafc;border-radius:6px">
-          Erwartet: ~1.253 OK · 2 Drafts · ~15 Fehler (EAN, CPU-Aspekte, Timeout) · Dauer: ca. 45–60 Minuten
-        </div>
-        <div style="margin-top:20px">
-          <div style="font-size:12px;font-weight:700;margin-bottom:8px">Danach: Promoted Listings Kampagne (Schritt 5)</div>
-          <div style="font-size:12px;color:var(--text-muted)">eBay Seller Hub → Marketing → Promoted Listings Standard → 8% auf alle Angebote</div>
-        </div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">BAB-Preisliste laden (CSV via HTTP)</div><div class="status-val">EAN, Preis, Bestand aus BAB-Feed</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Artikel-Daten via IceCat / eBay API anreichern</div><div class="status-val">Titel, Beschreibung, Aspekte, Bilder</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">eBay Offer erstellen / aktualisieren</div><div class="status-val">Nur neue Artikel · bereits gelistete werden übersprungen</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Makita-Sperre + banned_skus.json</div><div class="status-val">12 gesperrte SKUs werden nie gelistet</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Promoted Listings Kampagne (8%)</div><div class="status-val">eBay Seller Hub → Marketing → Standard · manuell aktiviert</div></div><span class="badge badge-blue">Aktiv</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Workflow-Status</div><div class="card-subtitle">Letzter GitHub Actions Run</div></div></div>
+      <div class="card-body">
+        <div id="lister-wf-status" style="font-size:13px;color:var(--text-sub)">Lade health_report.json …</div>
       </div>
     </div>
   </div>
@@ -1534,6 +1550,10 @@ function renderHealthChecks(data) {
   const lbl = document.getElementById('health-last-updated');
   if (lbl) lbl.textContent = 'Stand: ' + new Date().toLocaleTimeString('de-DE');
 
+  // Repricer + Lister Tabs befüllen
+  updateRepricerTab(checks);
+  updateListerTab(checks);
+
   // Check cards
   const grid = document.getElementById('health-checks-grid');
   if (!grid) return;
@@ -1586,6 +1606,49 @@ async function loadHealthReport(manual = false) {
       const log = document.getElementById('trigger-log');
       if (log) { log.textContent = `⚠️ Konnte health_report.json nicht laden: ${e.message}`; log.style.color='var(--red)'; }
     }
+  }
+}
+
+function updateRepricerTab(checks) {
+  const r = checks['repricer_last_run'];
+  const e = checks['repricer_errors'];
+  const wf = checks['workflow_reprice'];
+  if (r) {
+    const v = r.value || {};
+    const age = v.age_hours ?? '–';
+    const ageStr = typeof age === 'number' ? (age < 1 ? `${Math.round(age*60)} min` : `${age.toFixed(1)} h`) : '–';
+    const col = r.status === 'ok' ? 'var(--green)' : r.status === 'warn' ? '#f59e0b' : 'var(--red)';
+    const icon = r.status === 'ok' ? '✅' : r.status === 'warn' ? '⚠️' : '❌';
+    document.getElementById('rep-status-val').textContent = icon;
+    document.getElementById('rep-status-val').style.color = col;
+    document.getElementById('rep-status-sub').textContent = r.status === 'ok' ? 'Alles OK' : r.detail;
+    document.getElementById('rep-cycle').textContent = `#${v.cycle ?? '–'}`;
+    document.getElementById('rep-progress').textContent = `${v.offset ?? 0} / ${v.total ?? 0} Artikel`;
+    document.getElementById('rep-age').textContent = ageStr;
+    document.getElementById('rep-age-sub').textContent = 'seit letztem State-Update';
+  }
+  if (e) {
+    const errEl = document.getElementById('rep-errors');
+    errEl.textContent = e.value?.errors ?? '–';
+    errEl.style.color = (e.value?.errors ?? 0) === 0 ? 'var(--green)' : 'var(--red)';
+  }
+  if (wf) {
+    const col = wf.status === 'ok' ? 'var(--green)' : wf.status === 'warn' ? '#f59e0b' : 'var(--red)';
+    document.getElementById('rep-wf-status').innerHTML =
+      `<span style="color:${col};font-weight:700">${wf.status==='ok'?'✅':'⚠️'} ${wf.detail}</span>`;
+  }
+}
+
+function updateListerTab(checks) {
+  const wf = checks['workflow_smart_lister'];
+  if (wf) {
+    const col = wf.status === 'ok' ? 'var(--green)' : '#f59e0b';
+    const age = wf.value?.age_hours;
+    const ageStr = typeof age === 'number' ? (age < 1 ? `${Math.round(age*60)} min` : `${age.toFixed(1)} h`) : '–';
+    document.getElementById('lister-age').textContent = ageStr;
+    document.getElementById('lister-age-sub').textContent = `vor ${ageStr} · ${wf.value?.conclusion ?? 'läuft'}`;
+    document.getElementById('lister-wf-status').innerHTML =
+      `<span style="color:${col};font-weight:700">${wf.status==='ok'?'✅':'⚠️'} ${wf.detail}</span>`;
   }
 }
 
