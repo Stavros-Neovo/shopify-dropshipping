@@ -93,11 +93,15 @@ except Exception as e:
 # 2. ORDER FORWARDER
 # =============================================================================
 print("\n=== ORDER FORWARDER ===")
-try:
-    proc = json.loads(Path("processed_orders_state_shop2.json").read_text())
-    check("orders_processed", "ok", f"{len(proc)} Bestellungen verarbeitet", {"count": len(proc)})
-except Exception as e:
-    check("orders_processed", "warn", f"processed_orders nicht lesbar: {e}")
+p_proc = Path("processed_orders_state_shop2.json")
+if p_proc.exists():
+    try:
+        proc = json.loads(p_proc.read_text())
+        check("orders_processed", "ok", f"{len(proc)} Bestellungen verarbeitet", {"count": len(proc)})
+    except Exception as e:
+        check("orders_processed", "warn", f"processed_orders nicht lesbar: {e}")
+else:
+    check("orders_processed", "ok", "processed_orders nicht auf Runner (lokal verwaltet)", {"count": 0})
 
 try:
     p = Path("pending_orders.json")
@@ -152,6 +156,10 @@ try:
           "ok" if max_age < 3 else "warn" if max_age < 12 else "error",
           f"{len(real_skus)} aktive SKUs | Ältester Eintrag: {max_age:.1f}h",
           {"active_skus": len(real_skus), "max_age_hours": round(max_age, 1)})
+except FileNotFoundError:
+    # state_shop2.json ist in .gitignore — auf GitHub-Runner nicht vorhanden
+    # Sync-Status wird stattdessen über workflow_hourly_sync geprüft
+    check("sync_state", "warn", "state_shop2.json nicht auf Runner — Sync-Status via Workflow-Check")
 except Exception as e:
     check("sync_state", "error", f"state_shop2.json nicht lesbar: {e}")
 
@@ -230,10 +238,16 @@ if GH_TOKEN:
                     if created:
                         dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
                         age_h = (NOW - dt).total_seconds() / 3600
-                    status = "ok" if conclusion == "success" else "warn" if conclusion in ("skipped", None) else "error"
+                    # None = noch in Arbeit (in_progress/queued) → ok wenn < 30min
+                    if conclusion is None:
+                        status = "ok" if age_h < 0.5 else "warn"
+                        label_conclusion = "läuft gerade" if age_h < 0.5 else "hängt?"
+                    else:
+                        status = "ok" if conclusion == "success" else "warn" if conclusion == "skipped" else "error"
+                        label_conclusion = conclusion
                     check(f"workflow_{wf_file.replace('.yml','')}",
                           status,
-                          f"{wf_label}: {conclusion} vor {age_h:.1f}h",
+                          f"{wf_label}: {label_conclusion} vor {age_h:.1f}h",
                           {"conclusion": conclusion, "age_hours": round(age_h,1), "run_id": run.get("id")})
                 else:
                     check(f"workflow_{wf_file.replace('.yml','')}", "warn", f"{wf_label}: Noch nie gelaufen")
