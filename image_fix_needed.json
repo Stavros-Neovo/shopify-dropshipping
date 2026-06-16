@@ -2090,5 +2090,100 @@
     "ean": "4582761160187",
     "title": "Kioxia SD Exceria Plus 128GB",
     "detected_at": "2026-06-16T15:12:28.083156+00:00"
+  },
+  "USBK1010": {
+    "ean": "4582563850804",
+    "title": "Kioxia microSD Exceria 32GB",
+    "detected_at": "2026-06-16T15:13:57.044069+00:00"
+  },
+  "USBK1022": {
+    "ean": "4582563850200",
+    "title": "Kioxia TransMemory U202 white 32GB USB 2.0",
+    "detected_at": "2026-06-16T15:13:58.684500+00:00"
+  },
+  "USBK1023": {
+    "ean": "4582563850217",
+    "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
+    "detected_at": "2026-06-16T15:14:00.431359+00:00"
+  },
+  "USBK1024": {
+    "ean": "4582563850224",
+    "title": "Kioxia TransMemory U202 white 128GB USB 2.0",
+    "detected_at": "2026-06-16T15:14:02.010756+00:00"
+  },
+  "USBK1035": {
+    "ean": "4582563850033",
+    "title": "Kioxia TransMemory U301 64GB USB 3.0",
+    "detected_at": "2026-06-16T15:14:03.629947+00:00"
+  },
+  "USBK1060": {
+    "ean": "4582563858435",
+    "title": "Kioxia microSD Exceria Plus 128GB",
+    "detected_at": "2026-06-16T15:14:08.639428+00:00"
+  },
+  "USBS0011": {
+    "ean": "0619659136703",
+    "title": "SanDisk Ultra Flair USB 3.0 64GB",
+    "detected_at": "2026-06-16T15:14:14.926428+00:00"
+  },
+  "USBS0071": {
+    "ean": "0619659184384",
+    "title": "SanDisk Ultra - Flash-Speicherkarte - 32 GB - Class 10",
+    "detected_at": "2026-06-16T15:14:17.521458+00:00"
+  },
+  "USBS0075": {
+    "ean": "0619659172831",
+    "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 64 GB",
+    "detected_at": "2026-06-16T15:14:20.060493+00:00"
+  },
+  "USBS0076": {
+    "ean": "0619659172855",
+    "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 128 GB",
+    "detected_at": "2026-06-16T15:14:22.970094+00:00"
+  },
+  "USBS0082": {
+    "ean": "0619659188566",
+    "title": "SanDisk Extreme Pro Flash-Speicherkarte  512 GB",
+    "detected_at": "2026-06-16T15:14:25.302486+00:00"
+  },
+  "USBS1019": {
+    "ean": "0619659069193",
+    "title": "SanDisk USB Cruzer Blade 32GB USB2.0",
+    "detected_at": "2026-06-16T15:14:27.113466+00:00"
+  },
+  "USBS1092": {
+    "ean": "0619659178581",
+    "title": "SanDisk Ultra Dual Drive Luxe USB 3.1 Gen 1 / USB-C 32GB",
+    "detected_at": "2026-06-16T15:14:29.285949+00:00"
+  },
+  "USBT0223": {
+    "ean": "4047999411222",
+    "title": "Toshiba SD Exceria R100 N203 256GB",
+    "detected_at": "2026-06-16T15:14:30.938340+00:00"
+  },
+  "USBV0005": {
+    "ean": "0023942302292",
+    "title": "Verbatim Plectra White 128GB USB-C Flash Drive 30229",
+    "detected_at": "2026-06-16T15:14:37.295041+00:00"
+  },
+  "USBV0008": {
+    "ean": "0023942491729",
+    "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 49172",
+    "detected_at": "2026-06-16T15:14:44.476792+00:00"
+  },
+  "USBV0016": {
+    "ean": "0023942490654",
+    "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 black 49065",
+    "detected_at": "2026-06-16T15:14:51.189459+00:00"
+  },
+  "USBV0018": {
+    "ean": "0023942302117",
+    "title": "Verbatim V200 Metal USB 3.2 64GB Aluminium",
+    "detected_at": "2026-06-16T15:14:54.385927+00:00"
+  },
+  "USBV0020": {
+    "ean": "0023942991045",
+    "title": "Verbatim Metal Executive 16GB USB 3.0 gold",
+    "detected_at": "2026-06-16T15:14:56.573190+00:00"
   }
 }
