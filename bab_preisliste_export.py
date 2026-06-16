@@ -72,12 +72,23 @@ def main():
         except ValueError:
             stock = 0
 
-        # VK-Vorschlag: EK / 0.74 (13% eBay + 8% Kampagne + 5% Puffer) gerundet auf .99
-        vk_raw = ek / 0.74 if ek > 0 else 0
-        vk = round(vk_raw - 0.01, 0) + 0.99 if vk_raw > 0 else 0
+        # Korrekte Formel (EK netto + 5€ Versand netto, 25% Marge, 21% eBay+Kampagne, 19% MwSt):
+        # VK_brutto = (EK_netto × 1.25 + 5.00) × 1.19 ÷ 0.79
+        MARGIN    = 0.25
+        SHIP_NET  = 5.00
+        VAT       = 1.19
+        TOTAL_FEE = 0.79   # 1 − 0.21 (13% eBay + 8% Kampagne)
 
-        # Gewinn bei VK × 0.79 - EK (nach eBay-Gebühren)
-        gewinn = round(vk * 0.79 - ek, 2) if vk > 0 else 0
+        if ek > 0:
+            vk_raw = (ek * (1 + MARGIN) + SHIP_NET) * VAT / TOTAL_FEE
+            import math as _math
+            floored = _math.floor(vk_raw)
+            vk = floored + 0.99 if (floored + 0.99) >= vk_raw else floored + 1.99
+        else:
+            vk = 0
+
+        # Netto-Gewinn: (VK × 0.79 / 1.19) − EK_netto − Versand_netto
+        gewinn = round((vk * TOTAL_FEE / VAT) - ek - SHIP_NET, 2) if vk > 0 else 0
 
         articles.append({
             "sku":      sku,
