@@ -54,11 +54,13 @@ EBAY_FEE        = 0.13
 CAMPAIGN_FEE    = 0.08   # 8% Promoted Listings Standard
 TOTAL_FEE       = EBAY_FEE + CAMPAIGN_FEE  # 21% gesamt
 VAT_FACTOR      = 1.19
-BUYER_SHIP      = 3.99
+BUYER_SHIP      = 0.00  # Kostenloser Versand → €0.06 Einstellgebühr entfällt
 SHIP_COST       = 5.0
 MARGIN_TARGET   = 0.25   # 25% Zielmarge
 
 TOP_SHOP_LIMIT  = 2300   # Freie Slots für neue Artikel
+MIN_VK          = 5.0    # VK unter €5 → nicht listen (Schrauben/Kleinstteile)
+MAX_VK          = 3000.0 # VK über €3000 → nicht listen (RTX 5090, Solar-Großanlagen)
 CACHE_TTL_DAYS  = 7      # Score nach 7 Tagen neu abfragen
 DAILY_API_LIMIT = 4800   # Sicherheitspuffer unter 5000
 
@@ -432,6 +434,11 @@ def select_top_products(catalog: dict, cache: dict, artikeldaten: dict,
             dbg["profit"] += 1
             continue
 
+        # VK-Grenzen: kein Kleinstteile-Listing, keine Artikel über €3000
+        if vk < MIN_VK or vk > MAX_VK:
+            dbg["profit"] += 1
+            continue
+
         # Marktpreis-Check: wenn Cache vorhanden und Konkurrenz günstiger → überspringen
         ebay_data = cache.get(ean, {})
         min_price = ebay_data.get("min_price", 0)
@@ -618,6 +625,32 @@ def main():
     else:
         catalog = merge_catalogs(bab, kosatec)
     update_supplier_prices(catalog)  # Supplier-Map updaten wenn BAB günstiger
+
+    # ── Gesperrte Artikel aus Katalog entfernen (Abmahnung / Markenrecht) ──
+    BANNED_FILE = Path("banned_skus.json")
+    banned_skus: dict = {}
+    if BANNED_FILE.exists():
+        try:
+            banned_skus = json.loads(BANNED_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    if banned_skus:
+        # Entferne gesperrte SKUs aus Katalog (Katalog ist EAN-basiert → EANs der banned SKUs entfernen)
+        with open("bab_preisliste.csv", encoding="utf-8-sig", errors="replace") as fh:
+            import csv as _csv
+            banned_eans = {
+                row.get("GTIN", "").strip()
+                for row in _csv.DictReader(fh, delimiter=";")
+                if row.get("ItemNo", "").strip() in banned_skus
+            }
+        before = len(catalog)
+        catalog = {ean: v for ean, v in catalog.items() if ean not in banned_eans}
+        removed = before - len(catalog)
+        if removed:
+            log.warning(f"⛔ {removed} gesperrte Artikel aus Katalog entfernt (banned_skus.json)")
+        for sku, info in banned_skus.items():
+            log.info(f"  GESPERRT: {sku} — {info.get('reason','?')[:70]}")
+
     artdata  = load_artikeldaten()
     enrich   = load_enrichment()
     listed   = load_already_listed()
@@ -658,10 +691,10 @@ def main():
         # SICHERHEIT: Nur wenn VOLLSTAENDIGER Katalog geladen ist.
         # Bei --bab-only wuerden sonst alle Kosatec-Artikel faelschlich deaktiviert!
         smap_existing = load_supplier_map()
-        if getattr(args, 'bab_only', False):
-            log.info("BAB-ONLY Modus: Deaktivierungs-Check uebersprungen (kein vollstaendiger Katalog)")
-        elif smap_existing and (client_id and client_secret):
+        if smap_existing and (client_id and client_secret):
             log.info("Pruefe supplier_map auf nicht mehr verfuegbare Artikel...")
+            if getattr(args, 'bab_only', False):
+                log.info("BAB-ONLY Modus: Pruefe nur BAB-Artikel (Kosatec wird uebersprungen)")
             from ebay_client import EbayClient
             try:
                 ebay_cfg = cfg.get("ebay", {})
@@ -669,8 +702,12 @@ def main():
                 offlined = 0
                 for sku, entry in list(smap_existing.items()):
                     ean = entry.get("ean", "")
+                    supplier = entry.get("supplier", "")
+                    # BAB-ONLY: Kosatec-Artikel nicht anfassen (nicht im bab-only Katalog)
+                    if getattr(args, 'bab_only', False) and supplier != "BAB":
+                        continue
                     if ean not in catalog:
-                        log.warning(f"  OFFLINE: SKU {sku} EAN {ean} nicht mehr verfuegbar")
+                        log.warning(f"  OFFLINE: SKU {sku} (EAN {ean}, {supplier}) nicht mehr verfuegbar")
                         if not args.dry_run:
                             try:
                                 # Nur withdrawOffer — set_inventory(0) lehnt eBay ab (Fehler 25004)
@@ -687,7 +724,7 @@ def main():
                     save_supplier_map(smap_existing)
                     log.info(f"  {offlined} Artikel deaktiviert + aus supplier_map entfernt")
                 else:
-                    log.info("  Alle gelisteten Artikel noch verfuegbar")
+                    log.info("  Alle relevanten Artikel noch verfuegbar")
             except Exception as e:
                 log.warning(f"  Deaktivierungs-Check uebersprungen: {e}")
 
@@ -755,8 +792,12 @@ def main():
             log.error("supplier_map.json leer — zuerst --select ausführen")
         else:
             # Supplier-Map in selected-Format konvertieren
+            # --bab-only: nur BAB-Artikel listen (nicht Kosatec)
             to_list = []
             for sku, entry in smap.items():
+                supplier = entry.get("supplier", "")
+                if getattr(args, 'bab_only', False) and supplier != "BAB":
+                    continue
                 ean = entry.get("ean", "")
                 prod = catalog.get(ean, {})
                 art  = artdata.get(ean, {})
@@ -767,7 +808,7 @@ def main():
                     "sku":      sku,
                     "ean":      ean,
                     "name":     title,
-                    "supplier": entry.get("supplier", ""),
+                    "supplier": supplier,
                     "vk":       entry.get("vk", 0.0),
                     "image":    image,
                 })
@@ -804,6 +845,7 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
 
     stats = {"ok": 0, "skip": 0, "error": 0}
     total = len(selected)
+    error_log: list[dict] = []
 
     for i, prod in enumerate(selected, 1):
         sku  = prod["sku"]
@@ -841,11 +883,19 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
                 log.warning(f"  ⚠ Kein listingId (Draft?): SKU {sku}")
                 stats["skip"] += 1
         except Exception as e:
-            log.error(f"  ✗ Fehler SKU {sku}: {e}")
+            err_msg = str(e)
+            log.error(f"  ✗ Fehler SKU {sku}: {err_msg}")
             stats["error"] += 1
+            error_log.append({"sku": sku, "ean": ean, "name": name[:60], "vk": vk, "error": err_msg[:300]})
 
         # Kurze Pause um Rate-Limits zu vermeiden
         time.sleep(0.3)
+
+    # Fehler-Report speichern
+    if error_log:
+        err_path = Path("listing_errors.json")
+        err_path.write_text(json.dumps(error_log, indent=2, ensure_ascii=False), encoding="utf-8")
+        log.info(f"Fehler-Report: {err_path} ({len(error_log)} Einträge)")
 
     log.info(f"=== Listing abgeschlossen: {stats['ok']} OK | {stats['skip']} Drafts | {stats['error']} Fehler ===")
     return stats

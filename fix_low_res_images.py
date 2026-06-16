@@ -225,6 +225,19 @@ def main():
         log.info("image_fix_needed.json ist leer — nichts zu tun.")
         return
 
+    # Gesperrte SKUs (Abmahnung / Markenrecht) niemals anfassen
+    banned_file = Path("banned_skus.json")
+    if banned_file.exists():
+        try:
+            banned_skus: dict = json.loads(banned_file.read_text(encoding="utf-8"))
+            before = len(image_fix)
+            image_fix = {k: v for k, v in image_fix.items() if k not in banned_skus}
+            removed = before - len(image_fix)
+            if removed:
+                log.warning(f"⛔ {removed} gesperrte SKUs aus image_fix entfernt (banned_skus.json)")
+        except Exception:
+            pass
+
     if args.sku:
         if args.sku not in image_fix:
             # SKU nicht in Liste → trotzdem versuchen (manueller Aufruf)

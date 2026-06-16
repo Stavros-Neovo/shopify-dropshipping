@@ -46,10 +46,17 @@ jobs:
           fi
 
       - name: Commit and push
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/dashboard_data.js
-          git diff --staged --quiet || git commit -m "chore: update dashboard data [skip ci]"
-          git pull --rebase origin main || true
-          git push
+          # dashboard.html → docs/index.html (GitHub Pages)
+          cp dashboard.html docs/index.html
+          git add docs/dashboard_data.js docs/index.html
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "chore: update dashboard data [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1

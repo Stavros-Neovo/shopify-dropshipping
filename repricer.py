@@ -63,11 +63,12 @@ IDENTITY_PATH  = "/commerce/identity/v1/user/"
 UNDERCUT_EUR        = 1.01   # €1,01 unter Mitbewerber
 MIN_MARGIN_PCT      = 0.20   # Mindestmarge 20% auf EK (absoluter Boden)
 TARGET_MARGIN_PCT   = 0.25   # Zielpreis 25% auf EK (Normalpreis)
-MIN_COMPETITORS     = 2      # Mindestanzahl Mitbewerber
+MIN_COMPETITORS     = 2      # Mindestanzahl Mitbewerber für Preissenkung
 MAX_DROP_PCT        = 0.15   # Max 15% Preissenkung pro Lauf
+MAX_RAISE_PCT       = 0.08   # Max 8% Preiserhöhung pro Lauf (sanfte Erholung)
 COMPETITOR_MIN_RATIO = 0.70  # Konkurrent-Preis muss >= 70% des Floor-Preises sein
 DELAY               = 0.4    # Sekunden zwischen Browse-API-Aufrufen
-CHUNK_SIZE          = 400    # ~25 Min pro Run (sicher unter 60 Min Timeout)
+CHUNK_SIZE          = 600    # erhöht von 400 → schnellere Katalog-Abdeckung
 
 
 # ─── Preisformel (identisch mit sync.py) ─────────────────────────────────────
@@ -358,12 +359,25 @@ def reprice_product(
     )
     result["competitor_count"] = len(comp_prices)
 
-    if not comp_prices:
-        result["action"] = "skipped"
-        result["reason"] = "no_competitors_found"
-        return result
-
+    # ── Keine / zu wenig Konkurrenten → Preis Richtung Normal erhöhen ───────
+    # Wenn kein Wettbewerb da ist, gibt es keinen Grund auf Floor-Preis zu bleiben.
+    # Max 8% pro Lauf damit der Preis nicht zu abrupt springt.
     if len(comp_prices) < MIN_COMPETITORS:
+        if current_price < normal_price - 0.50:
+            ceiling  = min(current_price * (1 + MAX_RAISE_PCT), normal_price)
+            new_price = psychological_round(ceiling)
+            new_price = max(new_price, floor_price)
+            if new_price > current_price + 0.02:
+                result["action"]    = "raised"
+                result["reason"]    = "no_competitors_raise_toward_normal"
+                result["new_price"] = new_price
+                log.info(
+                    f"  ↑ {sku}: {current_price:.2f}€ → {new_price:.2f}€ "
+                    f"(0 Mitbewerber, Erholung Richtung {normal_price:.2f}€)"
+                )
+                if not dry_run:
+                    update_offer_price(client, offer_id, sku, new_price)
+                return result
         result["action"] = "skipped"
         result["reason"] = f"too_few_competitors_{len(comp_prices)}"
         return result
@@ -494,14 +508,15 @@ def save_report(path: str, summary: dict, changes: list):
     # Letzte 30 Einträge im Verlauf behalten
     history = report.get("history", [])
     history.append({
-        "timestamp":    summary["timestamp"],
-        "checked":      summary["checked"],
-        "lowered":      summary["lowered"],
-        "raised":       summary["raised"],
-        "skipped_floor":summary["skipped_floor"],
-        "skipped_few":  summary["skipped_few"],
-        "unchanged":    summary["unchanged"],
-        "errors":       summary["errors"],
+        "timestamp":     summary["timestamp"],
+        "checked":       summary["checked"],
+        "lowered":       summary["lowered"],
+        "raised":        summary["raised"],
+        "skipped_floor": summary["skipped_floor"],
+        "skipped_few":   summary["skipped_few"],
+        "skipped_image": summary.get("skipped_image", 0),
+        "unchanged":     summary["unchanged"],
+        "errors":        summary["errors"],
     })
     if len(history) > 30:
         history = history[-30:]
@@ -582,18 +597,36 @@ def main():
         "set_to_floor": 0,   # Mitbewerber günstiger als Floor → auf Floor gesetzt
         "skipped_floor":0,   # bereits am Floor, kein Spielraum mehr
         "skipped_few":  0,
+        "skipped_image":0,   # Bild-Fehler 25002 → werden in image_fix_needed.json gemerkt
         "unchanged":    0,
         "errors":       0,
         "dry_run":      args.dry_run,
     }
     all_changes = []
 
-    # Bild-Problemliste laden (SKUs mit eBay Error 25002)
-    IMAGE_FIX_FILE = "image_fix_needed.json"
+    # Bild-Problemliste laden (SKUs mit eBay Error 25002) — werden übersprungen
+    IMAGE_FIX_FILE      = "image_fix_needed.json"
+    VERLUSTBRINGER_FILE = "verlustbringer.json"
+    BANNED_FILE         = "banned_skus.json"
     try:
         image_fix = json.loads(Path(IMAGE_FIX_FILE).read_text(encoding="utf-8")) if Path(IMAGE_FIX_FILE).exists() else {}
     except Exception:
         image_fix = {}
+
+    try:
+        verlustbringer = json.loads(Path(VERLUSTBRINGER_FILE).read_text(encoding="utf-8")) if Path(VERLUSTBRINGER_FILE).exists() else {}
+    except Exception:
+        verlustbringer = {}
+
+    try:
+        banned_skus = json.loads(Path(BANNED_FILE).read_text(encoding="utf-8")) if Path(BANNED_FILE).exists() else {}
+    except Exception:
+        banned_skus = {}
+
+    if banned_skus:
+        log.info(f"⛔ {len(banned_skus)} gesperrte SKUs geladen (banned_skus.json) — werden übersprungen")
+
+    stats["skipped_image"] = 0
 
     for n, (ean, feed_data) in enumerate(chunk_products, 1):
         sku   = feed_data["sku"]
@@ -602,12 +635,30 @@ def main():
         log.info(f"[{offset+n}/{total}] {sku}  {title[:50]}")
         stats["checked"] += 1
 
+        # Gesperrte Artikel (Abmahnung / Markenrecht) niemals reprisen
+        if sku in banned_skus:
+            log.warning(f"  ⛔ {sku}: GESPERRT — {banned_skus[sku].get('reason','?')[:60]}")
+            stats["unchanged"] += 1
+            continue
+
+        # Fix: Bekannte Bild-Fehler sofort überspringen statt immer wieder zu fehlern
+        if sku in image_fix:
+            log.debug(f"  ⏭ {sku}: bekannter Bild-Fehler (25002) → übersprungen")
+            stats["skipped_image"] += 1
+            continue
+
         # Offer von eBay abrufen (Preis + offerId)
         offer = get_offer_data(client, sku)
         if not offer or offer["currentPrice"] <= 0:
             log.debug(f"  Kein aktives Offer für SKU {sku} → überspringen")
             stats["unchanged"] += 1
             time.sleep(0.2)
+            continue
+
+        # Nur PUBLISHED Offers reprisen — deaktivierte (UNPUBLISHED) überspringen
+        if offer.get("status", "PUBLISHED") == "UNPUBLISHED":
+            log.debug(f"  {sku}: Offer UNPUBLISHED → übersprungen")
+            stats["unchanged"] += 1
             continue
 
         try:
@@ -620,23 +671,47 @@ def main():
             )
         except Exception as e:
             err_str = str(e)
-            log.error(f"  FEHLER {sku}: {e}")
-            stats["errors"] += 1
-            # 25002 = Bild-Auflösung zu gering → für Fixer merken
-            if "25002" in err_str and not args.dry_run:
-                image_fix[sku] = {
-                    "ean":   ean,
-                    "title": title,
-                    "detected_at": datetime.now(timezone.utc).isoformat(),
-                }
+            # 25002 = Bild-Auflösung zu gering → kein echter Fehler, nur merken + überspringen
+            if "25002" in err_str:
+                log.debug(f"  ⏭ {sku}: Bild zu klein (25002) → image_fix_needed.json")
+                if not args.dry_run:
+                    image_fix[sku] = {
+                        "ean":   ean,
+                        "title": title,
+                        "detected_at": datetime.now(timezone.utc).isoformat(),
+                    }
+                stats["skipped_image"] = stats.get("skipped_image", 0) + 1
+                # KEIN stats["errors"] increment — das ist kein Fehler, nur bekannte Einschränkung
+            else:
+                log.error(f"  FEHLER {sku}: {e}")
+                stats["errors"] += 1
             continue
 
         action = result["action"]
         reason = result["reason"]
 
+        # Verlustbringer tracken: Mitbewerber dauerhaft günstiger als unser Floor
+        if result.get("lowest_competitor") and result.get("floor_price"):
+            comp_lowest  = result["lowest_competitor"]
+            floor_p      = result["floor_price"]
+            if comp_lowest < floor_p * 0.90:  # Mitbewerber >10% unter unserem Floor
+                existing = verlustbringer.get(sku, {"count": 0})
+                existing["count"]      = existing.get("count", 0) + 1
+                existing["ean"]        = ean
+                existing["title"]      = title[:60]
+                existing["ek"]         = round(ek, 2)
+                existing["floor"]      = floor_p
+                existing["competitor"] = round(comp_lowest, 2)
+                existing["last_seen"]  = datetime.now(timezone.utc).isoformat()
+                verlustbringer[sku]    = existing
+                log.info(
+                    f"  ⚠️  VERLUSTBRINGER {sku}: Mitbewerber {comp_lowest:.2f}€ "
+                    f"< Floor {floor_p:.2f}€ (#{existing['count']}x)"
+                )
+
         if action == "lowered":
             if reason == "floor_protection_set_to_floor":
-                stats["set_to_floor"] += 1
+                stats["set_to_floor"] = stats.get("set_to_floor", 0) + 1
             else:
                 stats["lowered"] += 1
             all_changes.append(result)
@@ -660,6 +735,14 @@ def main():
         )
         log.info(f"  Bilder zu fixen: {len(image_fix)} SKUs → {IMAGE_FIX_FILE}")
 
+    # ── Verlustbringer speichern ──────────────────────────────────────────
+    if not args.dry_run and verlustbringer:
+        Path(VERLUSTBRINGER_FILE).write_text(
+            json.dumps(verlustbringer, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        dauerhafte = sum(1 for v in verlustbringer.values() if v.get("count", 0) >= 3)
+        log.info(f"  Verlustbringer: {len(verlustbringer)} erkannt, {dauerhafte} mit ≥3 Treffern → {VERLUSTBRINGER_FILE}")
+
     # ── Checkpoint speichern ──────────────────────────────────────────────
     if not args.dry_run:
         if cycle_complete:
@@ -676,12 +759,16 @@ def main():
     log.info(f"  Zyklus:                     {cycle} ({'komplett' if cycle_complete else f'Offset → {next_offset}'})")
     log.info(f"  Geprüft:                    {stats['checked']}")
     log.info(f"  Preis gesenkt:              {stats['lowered']}")
-    log.info(f"  Auf Floor gesetzt:          {stats['set_to_floor']}")
+    log.info(f"  Auf Floor gesetzt:          {stats.get('set_to_floor', 0)}")
     log.info(f"  Preis erhöht:               {stats['raised']}")
     log.info(f"  Bereits am Floor (kein Sp): {stats['skipped_floor']}")
     log.info(f"  Zu wenig Konkurrenz:        {stats['skipped_few']}")
+    log.info(f"  Bild-Fehler übersprungen:   {stats.get('skipped_image', 0)}")
     log.info(f"  Unverändert:                {stats['unchanged']}")
     log.info(f"  Fehler:                     {stats['errors']}")
+    if verlustbringer:
+        dauerhafte = sum(1 for v in verlustbringer.values() if v.get("count", 0) >= 3)
+        log.info(f"  Verlustbringer (≥3x):       {dauerhafte}")
     if args.dry_run:
         log.info("  [DRY-RUN — keine echten Änderungen, kein Checkpoint gespeichert]")
 

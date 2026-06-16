@@ -14,46 +14,6 @@
     "title": "Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m, 1300 W, 220-240 V",
     "detected_at": "2026-06-12T14:55:44.870851+00:00"
   },
-  "HHWM0019": {
-    "ean": "0088381891424",
-    "title": "Makita DHK180Z - Meißelhammer, 18V",
-    "detected_at": "2026-06-12T14:55:54.394454+00:00"
-  },
-  "HHWM0023": {
-    "ean": "0088381661768",
-    "title": "Makita DHR241Z - Bohrhammer - 3 Modi - 18V",
-    "detected_at": "2026-06-12T14:55:58.331650+00:00"
-  },
-  "HHWM0024": {
-    "ean": "0088381464123",
-    "title": "Makita BL1860B - LXT Batterie, 18V, Li-Ion, 6 Ah",
-    "detected_at": "2026-06-12T14:56:01.767632+00:00"
-  },
-  "HHWM0028": {
-    "ean": "0197050364623",
-    "title": "Makita E-25096 - Bit-Set mit Ratschenschraubendreher - 44-teilig",
-    "detected_at": "2026-06-12T14:56:08.952760+00:00"
-  },
-  "HHWM0029": {
-    "ean": "0088381775601",
-    "title": "Makita DHP489Z - Schlagbohrschrauber - 18V",
-    "detected_at": "2026-06-12T14:56:11.905988+00:00"
-  },
-  "HHWM0030": {
-    "ean": "0088381430128",
-    "title": "Makita MAKPAC 2 - Box für Elektrowerkzeuge",
-    "detected_at": "2026-06-12T14:56:15.591175+00:00"
-  },
-  "HHWM0031": {
-    "ean": "0197050011855",
-    "title": "Makita DJV186Z - Stichsäge - 18V",
-    "detected_at": "2026-06-12T14:56:18.201445+00:00"
-  },
-  "HHWM0038": {
-    "ean": "0088381723831",
-    "title": "Makita DTW700Z - Schlagschrauber, 18 V",
-    "detected_at": "2026-06-12T14:56:24.263634+00:00"
-  },
   "HHWM4007": {
     "ean": "4006508228034",
     "title": "Melitta CI Touch - Silber",
@@ -1014,5 +974,31 @@
     "ean": "0023942302315",
     "title": "Verbatim Plectra White 512GB USB-C Flash Drive 30231",
     "detected_at": "2026-06-15T11:19:20.495682+00:00"
+  },
+  "SUPL0594": {
+    "reason": "image_resolution",
+    "source": "listing_error"
+  },
+  "SUPA0242": {
+    "reason": "image_resolution",
+    "source": "listing_error"
+  },
+  "SUPC2007": {
+    "reason": "image_resolution",
+    "source": "listing_error"
+  },
+  "PPE0165": {
+    "reason": "image_resolution",
+    "source": "listing_error"
+  },
+  "HDXT0230": {
+    "ean": "4260557511282",
+    "title": "Toshiba Canvio Advance 4TB red",
+    "detected_at": "2026-06-16T11:16:46.383377+00:00"
+  },
+  "HDXT0240": {
+    "ean": "4260557513286",
+    "title": "Toshiba Canvio Flex 4TB silver",
+    "detected_at": "2026-06-16T11:16:58.230576+00:00"
   }
 }

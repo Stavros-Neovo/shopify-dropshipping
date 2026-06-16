@@ -51,6 +51,10 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git add processed_orders*.json || true
-          git diff --staged --quiet || git commit -m "chore: bestellungen verarbeitet $(date -u '+%Y-%m-%d %H:%M')"
-          git pull --rebase origin main || true
-          git push || true
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "chore: bestellungen verarbeitet $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          echo "⚠️ Push fehlgeschlagen — processed_orders.json nicht gespeichert!" && exit 1

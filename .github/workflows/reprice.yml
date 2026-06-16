@@ -63,7 +63,16 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add repricer_report.json repricer_state.json || true
-          git diff --staged --quiet || git commit -m "chore: repricer $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
-          git pull --rebase origin main || true
-          git push || true
+          # image_fix_needed.json MUSS mitgepusht werden sonst gehen neue Fehler verloren
+          git add repricer_report.json repricer_state.json image_fix_needed.json || true
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen"
+            exit 0
+          fi
+          git commit -m "chore: repricer $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && echo "Push OK ($attempt)" && exit 0
+            echo "Retry $attempt..."
+            sleep $((attempt * 3))
+          done
+          echo "Push fehlgeschlagen nach 3 Versuchen" && exit 1

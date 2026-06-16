@@ -1,937 +1,1129 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  <meta name="theme-color" content="#0a0c14"/>
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-  <meta name="apple-mobile-web-app-title" content="Neodeals"/>
-  <title>Best_Neodeals eBay Shop</title>
-  <link rel="manifest" href="manifest.json"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg:#0a0c14; --surface:#12151f; --surface2:#1a1e2e;
-      --border:#1e2235; --text:#e8eaf0; --muted:#5a6280;
-      --green:#22c55e; --red:#ef4444; --yellow:#f59e0b;
-      --blue:#3b82f6; --purple:#8b5cf6; --teal:#14b8a6;
-      --green-glow: 0 0 20px #22c55e30;
-      --blue-glow:  0 0 20px #3b82f630;
-    }
-    body{
-      background:var(--bg);
-      color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      font-size:14px;
-      min-height:100dvh;
-      padding-bottom:40px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best_Neodeals — Control Center</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --sidebar: #0f172a;
+    --sidebar-hover: #1e293b;
+    --accent: #3b82f6;
+    --accent-dark: #2563eb;
+    --green: #10b981;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); display: flex; min-height: 100vh; }
 
-    /* ── Header ── */
-    header{
-      background:linear-gradient(180deg,#12151f 0%,#0a0c14 100%);
-      border-bottom:1px solid var(--border);
-      padding:14px 16px;
-      position:sticky;top:0;z-index:100;
-      display:flex;align-items:center;justify-content:space-between;
-      backdrop-filter:blur(12px);
-    }
-    .shop-name{
-      font-size:16px;font-weight:800;
-      background:linear-gradient(135deg,#fff 0%,#7eb3ff 100%);
-      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-    }
-    .shop-sub{font-size:11px;color:var(--muted);margin-top:2px}
-    .live-badge{
-      display:flex;align-items:center;gap:6px;
-      background:#22c55e15;border:1px solid #22c55e30;
-      border-radius:20px;padding:4px 10px;
-    }
-    .live-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
-    .live-text{font-size:10px;font-weight:600;color:var(--green)}
-    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 #22c55e50}50%{box-shadow:0 0 0 4px #22c55e00}}
+  .sidebar { width: 240px; min-width: 240px; background: var(--sidebar); display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+  .sidebar-logo { padding: 24px 20px 20px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .sidebar-logo .brand { font-size: 16px; font-weight: 700; color: #fff; }
+  .sidebar-logo .sub { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+  .sidebar-logo .badge-top-shop { display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px; }
+  .nav { padding: 12px 0; flex: 1; }
+  .nav-section { padding: 10px 20px 4px; font-size: 10px; font-weight: 600; color: #475569; letter-spacing: 1px; text-transform: uppercase; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 20px; font-size: 13px; color: #94a3b8; cursor: pointer; transition: all 0.15s; border-left: 2px solid transparent; user-select: none; }
+  .nav-item:hover { background: var(--sidebar-hover); color: #fff; }
+  .nav-item.active { background: rgba(59,130,246,0.15); color: #60a5fa; border-left-color: #3b82f6; }
+  .nav-item .icon { font-size: 15px; width: 18px; text-align: center; }
+  .nav-item .nbadge { margin-left: auto; background: var(--red); color: #fff; font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 10px; }
+  .nav-item .nbadge.amber { background: var(--amber); }
+  .nav-item .nbadge.green { background: var(--green); }
+  .sidebar-footer { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 11px; color: #475569; }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; margin-right: 6px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
-    /* ── Layout ── */
-    main{max-width:480px;margin:0 auto;padding:14px}
-    .section-title{
-      font-size:11px;font-weight:700;color:var(--muted);
-      text-transform:uppercase;letter-spacing:.08em;
-      margin:22px 0 10px;
-      display:flex;align-items:center;gap:8px;
-    }
-    .section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+  .main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+  .topbar { background: #fff; border-bottom: 1px solid var(--border); padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+  .topbar-left h1 { font-size: 17px; font-weight: 700; }
+  .topbar-left .subtitle { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+  .topbar-right { display: flex; align-items: center; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; font-size: 12px; font-weight: 600; border-radius: 7px; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-outline { background: #fff; color: var(--text); border: 1px solid var(--border); }
+  .btn-outline:hover { background: var(--bg); }
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-green:hover { background: #059669; }
+  .btn-red { background: var(--red); color: #fff; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); display: inline-block; animation: pulse 2s infinite; }
 
-    /* ── Karten ── */
-    .card{
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:16px;overflow:hidden;
-      margin-bottom:10px;
-      transition:transform .2s,box-shadow .2s;
-    }
-    .card:hover{transform:translateY(-1px);box-shadow:0 4px 24px #00000040}
+  /* SECTIONS */
+  .section { display: none; padding: 24px 28px; overflow-y: auto; flex: 1; }
+  .section.active { display: block; }
 
-    /* ── Heute-Karten (Hero) ── */
-    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .hero-card{
-      border-radius:16px;padding:14px;
-      border:1px solid var(--border);
-      position:relative;overflow:hidden;
-      background:var(--surface);
-      transition:transform .2s,box-shadow .2s;
-    }
-    .hero-card:hover{transform:translateY(-2px)}
-    .hero-card::before{
-      content:'';position:absolute;top:-30px;right:-30px;
-      width:80px;height:80px;border-radius:50%;
-      opacity:.12;
-    }
-    .hero-card.blue::before{background:var(--blue)}
-    .hero-card.green::before{background:var(--green)}
-    .hero-card.purple::before{background:var(--purple)}
-    .hero-card.teal::before{background:var(--teal)}
-    .hero-label{font-size:11px;color:var(--muted);font-weight:500;margin-bottom:6px}
-    .hero-value{font-size:26px;font-weight:800;line-height:1}
-    .hero-sub{font-size:11px;color:var(--muted);margin-top:5px}
-    .hero-card.blue  .hero-value{color:var(--blue)}
-    .hero-card.green .hero-value{
-      color:var(--green);
-      text-shadow:var(--green-glow);
-    }
-    .hero-card.purple .hero-value{color:var(--purple)}
-    .hero-card.teal   .hero-value{color:var(--teal)}
-    .hero-wide{grid-column:span 2}
+  /* KPI */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .kpi-card { background: var(--card); border-radius: var(--radius); padding: 20px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+  .kpi-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+  .kpi-card.blue::before { background: var(--accent); }
+  .kpi-card.green::before { background: var(--green); }
+  .kpi-card.amber::before { background: var(--amber); }
+  .kpi-card.red::before { background: var(--red); }
+  .kpi-label { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .kpi-value { font-size: 28px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+  .kpi-sub { font-size: 11px; color: var(--text-muted); margin-top: 6px; }
+  .kpi-change { font-size: 11px; font-weight: 600; margin-top: 4px; }
+  .kpi-change.up { color: var(--green); }
+  .kpi-change.neutral { color: var(--amber); }
+  .kpi-icon { position: absolute; right: 16px; top: 16px; font-size: 24px; opacity: 0.12; }
 
-    /* ── Wochenvergleich ── */
-    .compare-row{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:11px 16px;border-bottom:1px solid var(--border);
-      transition:background .15s;
-    }
-    .compare-row:last-child{border-bottom:none}
-    .compare-row:hover{background:var(--surface2)}
-    .compare-label{font-size:12px;color:var(--muted)}
-    .compare-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
-    .compare-this{font-size:14px;font-weight:700}
-    .compare-delta{font-size:11px;padding:1px 7px;border-radius:10px;font-weight:600}
-    .delta-up{background:#22c55e18;color:var(--green)}
-    .delta-down{background:#ef444418;color:var(--red)}
-    .delta-flat{background:#6b728018;color:var(--muted)}
+  /* CARDS */
+  .card { background: var(--card); border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 20px; }
+  .card-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .card-title { font-size: 13px; font-weight: 700; }
+  .card-subtitle { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+  .card-body { padding: 20px; }
+  .card-body.no-pad { padding: 0; }
 
-    /* ── Fortschrittsbalken für Monat ── */
-    .month-progress{padding:14px 16px}
-    .mp-row{margin-bottom:12px}
-    .mp-row:last-child{margin-bottom:0}
-    .mp-header{display:flex;justify-content:space-between;margin-bottom:6px;font-size:12px}
-    .mp-label{color:var(--muted)}
-    .mp-value{font-weight:700}
-    .mp-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
-    .mp-fill{height:100%;border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
-    .mp-fill.blue{background:linear-gradient(90deg,#3b82f6,#60a5fa)}
-    .mp-fill.green{background:linear-gradient(90deg,#22c55e,#4ade80)}
-    .mp-fill.purple{background:linear-gradient(90deg,#8b5cf6,#a78bfa)}
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { padding: 10px 16px; text-align: left; font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; background: #f8fafc; border-bottom: 1px solid var(--border); }
+  td { padding: 11px 16px; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
 
-    /* ── Steuer-Karten ── */
-    .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .tax-card{
-      background:var(--surface);border:1px solid var(--border);
-      border-radius:16px;padding:14px;
-      transition:transform .2s;
-    }
-    .tax-card:hover{transform:translateY(-1px)}
-    .tax-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
-    .tax-value{font-size:20px;font-weight:800;color:var(--yellow)}
-    .tax-note{font-size:10px;color:var(--muted);margin-top:4px}
-    .tax-card.total{background:linear-gradient(135deg,#ef444412,#f59e0b08);border-color:#ef444425}
-    .tax-card.total .tax-value{font-size:24px;color:var(--red)}
+  /* BADGES */
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; }
+  .badge-green { background: #dcfce7; color: #16a34a; }
+  .badge-amber { background: #fef3c7; color: #d97706; }
+  .badge-red { background: #fee2e2; color: #dc2626; }
+  .badge-blue { background: #dbeafe; color: #2563eb; }
+  .badge-gray { background: #f1f5f9; color: #64748b; }
+  .badge-purple { background: #f3e8ff; color: #9333ea; }
 
-    /* ── Auszahlung ── */
-    .payout-card{
-      background:linear-gradient(135deg,#14b8a615,#3b82f610);
-      border:1px solid #14b8a625;
-      border-radius:16px;padding:16px;
-      display:flex;justify-content:space-between;align-items:center;
-      transition:transform .2s;
-    }
-    .payout-card:hover{transform:translateY(-1px)}
-    .payout-amount{font-size:28px;font-weight:800;color:var(--teal);text-shadow:0 0 20px #14b8a640}
-    .payout-label{font-size:11px;color:var(--muted);margin-bottom:4px}
-    .payout-note{font-size:10px;color:var(--muted)}
+  /* GRID */
+  .grid-2 { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+  .grid-2-1 { display: grid; grid-template-columns: 3fr 2fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
-    /* ── Chart ── */
-    .chart-toggle{display:flex;gap:6px;padding:12px 14px 0}
-    .chart-btn{
-      font-size:11px;font-weight:600;padding:5px 12px;
-      border-radius:8px;border:1px solid var(--border);
-      background:transparent;color:var(--muted);cursor:pointer;
-      transition:all .15s;
-    }
-    .chart-btn:hover{border-color:var(--blue);color:var(--blue)}
-    .chart-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:var(--blue-glow)}
-    .chart-container{padding:12px;height:160px;position:relative}
+  /* STATUS */
+  .status-item { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: #fafafa; margin-bottom: 8px; }
+  .status-dot-sm { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: var(--green); }
+  .dot-amber { background: var(--amber); }
+  .dot-red { background: var(--red); animation: pulse 1.5s infinite; }
+  .dot-blue { background: var(--accent); }
+  .status-label { font-size: 12px; font-weight: 600; flex: 1; }
+  .status-val { font-size: 11px; color: var(--text-muted); }
 
-    /* ── Repricing Stats ── */
-    .reprice-stats{
-      display:grid;grid-template-columns:repeat(4,1fr);
-      padding:14px 0;border-bottom:1px solid var(--border);
-    }
-    .reprice-stat{text-align:center;padding:0 8px}
-    .rs-val{font-size:24px;font-weight:800}
-    .rs-lbl{font-size:10px;color:var(--muted);margin-top:2px}
-    .reprice-head{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:12px 16px 0;
-    }
-    .reprice-time{font-size:12px;color:var(--muted)}
+  /* INVENTORY BARS */
+  .inv-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .inv-bar-label { font-size: 11px; color: var(--text-muted); width: 70px; flex-shrink: 0; }
+  .inv-bar-track { flex: 1; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden; }
+  .inv-bar-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .inv-bar-count { font-size: 11px; font-weight: 700; width: 32px; text-align: right; flex-shrink: 0; }
 
-    /* ── List rows ── */
-    .list-row{
-      display:flex;align-items:center;gap:10px;
-      padding:11px 14px;border-bottom:1px solid var(--border);
-      transition:background .15s;
-    }
-    .list-row:last-child{border-bottom:none}
-    .list-row:hover{background:var(--surface2)}
-    .row-icon{
-      width:34px;height:34px;border-radius:10px;
-      display:flex;align-items:center;justify-content:center;
-      font-size:15px;flex-shrink:0;
-    }
-    .icon-green{background:#22c55e18;color:var(--green)}
-    .icon-blue{background:#3b82f618;color:var(--blue)}
-    .icon-red{background:#ef444418;color:var(--red)}
-    .icon-yellow{background:#f59e0b18;color:var(--yellow)}
-    .icon-purple{background:#8b5cf618;color:var(--purple)}
-    .icon-teal{background:#14b8a618;color:var(--teal)}
-    .row-content{flex:1;min-width:0}
-    .row-title{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .row-sub{font-size:11px;color:var(--muted);margin-top:2px}
-    .row-right{text-align:right;flex-shrink:0}
-    .row-value{font-size:13px;font-weight:700}
+  /* PIPELINE */
+  .pipeline { display: flex; align-items: center; margin: 16px 0; }
+  .pipeline-step { flex: 1; text-align: center; position: relative; }
+  .pipeline-step::after { content: '→'; position: absolute; right: -8px; top: 50%; transform: translateY(-50%); color: var(--text-light); font-size: 14px; }
+  .pipeline-step:last-child::after { display: none; }
+  .pipeline-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-size: 14px; }
+  .pipeline-circle.done { background: #dcfce7; color: var(--green); }
+  .pipeline-circle.active { background: #dbeafe; color: var(--accent); animation: pulse 2s infinite; }
+  .pipeline-circle.pending { background: #f1f5f9; color: var(--text-muted); }
+  .pipeline-label { font-size: 10px; font-weight: 600; color: var(--text-muted); }
+  .pipeline-count { font-size: 11px; font-weight: 700; margin-top: 2px; }
 
-    /* ── Gewinn-Dropdown ── */
-    .product-row{cursor:pointer}
-    .pb-wrap{
-      max-height:0;overflow:hidden;
-      transition:max-height .35s cubic-bezier(.4,0,.2,1);
-    }
-    .pb-wrap.open{max-height:300px}
-    .profit-breakdown{
-      background:linear-gradient(180deg,var(--surface2),var(--surface));
-      border-top:1px solid var(--border);
-      padding:12px 14px;font-size:12px;
-    }
-    .pb-row{display:flex;justify-content:space-between;padding:3px 0;color:var(--muted)}
-    .pb-row.total{
-      color:var(--text);font-weight:700;
-      border-top:1px solid var(--border);margin-top:8px;padding-top:8px;
-    }
-    .pb-row.total .pb-val{color:var(--green)}
-    .pb-neg{color:var(--red)} .pb-pos{color:var(--green)}
-    .expand-btn{
-      font-size:11px;color:var(--muted);
-      transition:transform .3s;display:inline-block;
-    }
-    .expand-btn.open{transform:rotate(180deg)}
+  /* PROFIT TICKER */
+  .profit-ticker { background: linear-gradient(135deg, #0f172a, #1e3a5f); border-radius: var(--radius); padding: 16px 20px; color: #fff; margin-bottom: 24px; display: flex; align-items: center; gap: 24px; }
+  .ticker-item { text-align: center; flex: 1; }
+  .ticker-val { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
+  .ticker-label { font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+  .ticker-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.1); }
 
-    /* ── Badges ── */
-    .badge{font-size:10px;padding:3px 8px;border-radius:10px;font-weight:700}
-    .badge-green{background:#22c55e18;color:var(--green);border:1px solid #22c55e25}
-    .badge-yellow{background:#f59e0b18;color:var(--yellow);border:1px solid #f59e0b25}
-    .badge-red{background:#ef444418;color:var(--red);border:1px solid #ef444425}
+  /* ACTION ITEMS */
+  .action-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 8px; }
+  .action-item.critical { border-color: #fca5a5; background: #fff5f5; }
+  .action-item.warning { border-color: #fcd34d; background: #fffbeb; }
+  .action-item.info { border-color: #93c5fd; background: #eff6ff; }
+  .action-item.done { opacity: 0.5; }
+  .action-text { font-size: 12px; font-weight: 600; }
+  .action-desc { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 
-    /* ── Deadline ── */
-    .deadline-urgent .row-title,.deadline-urgent .row-value{color:var(--red)}
-    .deadline-warn .row-title,.deadline-warn .row-value{color:var(--yellow)}
+  /* PRICE CALCULATOR */
+  .calc-box { background: #f8fafc; border-radius: 8px; border: 1px solid var(--border); padding: 20px; }
+  .calc-row { display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed var(--border); font-size: 13px; }
+  .calc-row:last-child { border-bottom: none; font-weight: 700; font-size: 15px; }
+  .calc-label { color: var(--text-muted); }
+  .calc-val { font-weight: 600; }
+  .calc-val.negative { color: var(--red); }
+  .calc-val.positive { color: var(--green); }
+  input[type=range] { width: 100%; accent-color: var(--accent); }
+  input[type=number] { border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px; width: 100px; }
 
-    /* ── Bezahlt-Button ── */
-    .pay-btn{
-      font-size:11px;font-weight:700;padding:5px 10px;
-      border-radius:10px;border:1px solid #22c55e40;
-      background:#22c55e12;color:var(--green);cursor:pointer;
-      transition:all .2s;white-space:nowrap;
-    }
-    .pay-btn:hover{background:#22c55e30;border-color:var(--green)}
-    .pay-btn.paid{
-      background:#6b728018;border-color:var(--border);
-      color:var(--muted);cursor:default;
-    }
-    .row-paid{opacity:.45}
-    .row-paid .row-title{text-decoration:line-through}
-    .invoice-badge{
-      font-size:10px;color:var(--muted);
-      background:var(--surface2);border:1px solid var(--border);
-      border-radius:6px;padding:2px 6px;margin-top:3px;
-      display:inline-block;font-family:monospace;
-    }
+  /* COMMAND BOX */
+  .cmd-box { background: #0f172a; border-radius: 8px; padding: 16px 20px; font-family: monospace; font-size: 13px; color: #94a3b8; margin: 12px 0; position: relative; }
+  .cmd-box .cmd-prompt { color: #3b82f6; }
+  .cmd-box .cmd-text { color: #e2e8f0; }
+  .cmd-copy { position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,0.1); border: none; color: #94a3b8; padding: 4px 8px; border-radius: 4px; font-size: 10px; cursor: pointer; }
+  .cmd-copy:hover { background: rgba(255,255,255,0.2); color: #fff; }
 
-    /* ── Summary ── */
-    .summary-row{
-      display:flex;justify-content:space-between;
-      padding:12px 16px;font-size:13px;font-weight:700;
-      border-top:1px solid var(--border);
-      background:linear-gradient(90deg,#22c55e08,transparent);
-    }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
 
-    /* ── Alert ── */
-    .alert-banner{
-      background:linear-gradient(135deg,#ef444412,#f59e0b08);
-      border:1px solid #ef444430;border-radius:16px;
-      padding:12px 14px;display:flex;gap:10px;
-      animation:slideIn .3s ease;margin-bottom:10px;
-    }
-    .alert-title{font-weight:700;color:var(--red);margin-bottom:3px;font-size:13px}
-    .alert-text{font-size:12px;color:var(--muted)}
-
-    /* ── Animationen ── */
-    @keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-    .animate-in{animation:fadeUp .4s ease forwards}
-    .animate-in:nth-child(1){animation-delay:.05s}
-    .animate-in:nth-child(2){animation-delay:.1s}
-    .animate-in:nth-child(3){animation-delay:.15s}
-    .animate-in:nth-child(4){animation-delay:.2s}
-
-    .empty{padding:16px;color:var(--muted);font-size:12px;text-align:center}
-
-    /* ── Freigabe-Buttons ── */
-    .approve-btn{
-      font-size:12px;font-weight:700;padding:8px 14px;
-      border-radius:10px;border:1px solid #22c55e40;
-      background:#22c55e12;color:var(--green);cursor:pointer;
-      transition:all .2s;flex:1;
-    }
-    .approve-btn:hover{background:#22c55e30;border-color:var(--green)}
-    .approve-btn:disabled{opacity:.4;cursor:not-allowed}
-    .reject-btn{
-      font-size:12px;font-weight:700;padding:8px 14px;
-      border-radius:10px;border:1px solid #ef444440;
-      background:#ef444412;color:var(--red);cursor:pointer;
-      transition:all .2s;flex:1;
-    }
-    .reject-btn:hover{background:#ef444430;border-color:var(--red)}
-    .reject-btn:disabled{opacity:.4;cursor:not-allowed}
-    .pending-card{border-left:3px solid var(--yellow);transition:opacity .4s}
-    .pending-badge{
-      display:inline-flex;align-items:center;gap:5px;
-      background:#f59e0b18;border:1px solid #f59e0b30;
-      border-radius:20px;padding:3px 10px;
-      font-size:11px;font-weight:700;color:var(--yellow);
-      margin-left:8px;
-    }
-    .loading{padding:80px 20px;text-align:center;color:var(--muted)}
-    .spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 12px}
-    @keyframes spin{to{transform:rotate(360deg)}}
-  </style>
+  /* TABS */
+  .tab-bar { display: flex; gap: 4px; border-bottom: 2px solid var(--border); margin-bottom: 20px; }
+  .tab { padding: 8px 16px; font-size: 12px; font-weight: 600; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+</style>
 </head>
 <body>
 
-<header>
-  <div>
-    <div class="shop-name">Best_Neodeals eBay Shop</div>
-    <div class="shop-sub" id="lastUpdate">Lädt…</div>
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <div class="brand">🛒 Best_Neodeals</div>
+    <div class="sub">eBay Dropshipping · BAB Distribution</div>
+    <div class="badge-top-shop">⭐ Top-Shop</div>
   </div>
-  <div class="live-badge">
-    <div class="live-dot"></div>
-    <span class="live-text">LIVE</span>
+  <div class="nav">
+    <div class="nav-section">Übersicht</div>
+    <div class="nav-item active" onclick="showSection('dashboard', this)"><span class="icon">📊</span> Dashboard</div>
+    <div class="nav-section">Geschäft</div>
+    <div class="nav-item" onclick="showSection('orders', this)"><span class="icon">📦</span> Bestellungen <span class="nbadge">2</span></div>
+    <div class="nav-item" onclick="showSection('listings', this)"><span class="icon">🏷️</span> Listings</div>
+    <div class="nav-item" onclick="showSection('preise', this)"><span class="icon">💰</span> Preismanager</div>
+    <div class="nav-section">System</div>
+    <div class="nav-item" onclick="showSection('suppliermap', this)"><span class="icon">⚙️</span> Supplier Map</div>
+    <div class="nav-item" onclick="showSection('fehler', this)"><span class="icon">🔧</span> Fehlerbehebung <span class="nbadge amber">15</span></div>
+    <div class="nav-section">Finanzen</div>
+    <div class="nav-item" onclick="showSection('gewinn', this)"><span class="icon">💹</span> Gewinn & Steuern</div>
+    <div class="nav-item" onclick="showSection('retouren', this)"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
+    <div class="nav-section">Tools</div>
+    <div class="nav-item" onclick="showSection('repricer', this)"><span class="icon">▶️</span> Repricer</div>
+    <div class="nav-item" onclick="showSection('lister', this)"><span class="icon">🚀</span> Smart Lister</div>
+    <div class="nav-item" onclick="showSection('forwarder', this)"><span class="icon">📧</span> Order Forwarder</div>
   </div>
-</header>
+  <div class="sidebar-footer">
+    <span class="live-dot"></span>Zuletzt: 16.06.2026, 12:46
+  </div>
+</nav>
 
-<main id="app">
-  <div class="loading">
-    <div class="spinner"></div>
-    Dashboard wird geladen…
+<!-- MAIN -->
+<div class="main">
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <h1 id="page-title">Betriebsübersicht</h1>
+      <div class="subtitle" id="page-subtitle">June 2026 · eBay DE · Best_Neodeals</div>
+    </div>
+    <div class="topbar-right">
+      <span class="status-dot"></span>
+      <span style="font-size:12px;color:var(--text-muted)">System aktiv</span>
+      <button class="btn btn-outline">⟳ Aktualisieren</button>
+      <button class="btn btn-primary" onclick="showSection('lister', document.querySelector('[onclick*=lister]'))">🚀 Smart Lister</button>
+    </div>
   </div>
-</main>
 
-<script src="dashboard_data.js"></script>
+  <!-- ═══════════════════════════════════ DASHBOARD ═══════════════════════════════════ -->
+  <div class="section active" id="section-dashboard">
+    <div class="profit-ticker">
+      <div class="ticker-item"><div class="ticker-val" style="color:#34d399">€458,86</div><div class="ticker-label">Umsatz Juni (fertig)</div></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><div class="ticker-val" style="color:#fbbf24">€309,96</div><div class="ticker-label">Offen (2 Bestellungen)</div></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><div class="ticker-val" style="color:#60a5fa">€768,82</div><div class="ticker-label">Gesamtumsatz Juni</div></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><div class="ticker-val" style="color:#a78bfa">€341.771</div><div class="ticker-label">Katalogwert (1.268 Art.)</div></div>
+      <div class="ticker-divider"></div>
+      <div class="ticker-item"><div class="ticker-val" style="color:#f472b6">50.000</div><div class="ticker-label">Top-Shop Listing-Limit</div></div>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card blue"><div class="kpi-icon">📦</div><div class="kpi-label">BAB Artikel</div><div class="kpi-value">1.268</div><div class="kpi-sub">in supplier_map · alle auf Lager</div><div class="kpi-change up">↑ +426 Ghost-Listings gefixt</div></div>
+      <div class="kpi-card amber"><div class="kpi-icon">🏷️</div><div class="kpi-label">Aktive Listings</div><div class="kpi-value" style="color:var(--amber)">0</div><div class="kpi-sub">Notfall-Deaktivierung läuft</div><div class="kpi-change neutral">⚡ Ziel: 1.268 nach Re-Listing</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">📬</div><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">2</div><div class="kpi-sub">PETK0049 · NETU0187</div><div class="kpi-change neutral">📧 Emails versandt an BAB</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">💶</div><div class="kpi-label">Ø Gewinn / Artikel</div><div class="kpi-value">€25,79</div><div class="kpi-sub">nach eBay-Gebühren (21%) + MwSt.</div><div class="kpi-change up">9,6% Netto-Marge</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Listing-Pipeline</div><div class="card-subtitle">Aktueller Fortschritt</div></div><span class="badge badge-amber">⚡ In Bearbeitung</span></div>
+      <div class="card-body">
+        <div class="pipeline">
+          <div class="pipeline-step"><div class="pipeline-circle done">✓</div><div class="pipeline-label">Kosatec</div><div class="pipeline-count" style="color:var(--green)">2.292 gelöscht</div></div>
+          <div class="pipeline-step"><div class="pipeline-circle done">✓</div><div class="pipeline-label">Ghost-Fix</div><div class="pipeline-count" style="color:var(--green)">426 gefixt</div></div>
+          <div class="pipeline-step"><div class="pipeline-circle active">⟳</div><div class="pipeline-label">Notfall-Deakt.</div><div class="pipeline-count" style="color:var(--accent)">läuft...</div></div>
+          <div class="pipeline-step"><div class="pipeline-circle pending">4</div><div class="pipeline-label">Repricer</div><div class="pipeline-count">ausstehend</div></div>
+          <div class="pipeline-step"><div class="pipeline-circle pending">5</div><div class="pipeline-label">Smart Lister</div><div class="pipeline-count">1.268 warten</div></div>
+          <div class="pipeline-step"><div class="pipeline-circle pending">6</div><div class="pipeline-label">Promoted 8%</div><div class="pipeline-count">Kampagne</div></div>
+        </div>
+        <div style="font-size:11px;color:#92400e;padding:10px 14px;background:#fffbeb;border-radius:7px;border:1px solid #fcd34d">
+          ⚠️ <strong>Jetzt:</strong> eBay Seller Hub → Aktive Angebote → Alle auswählen → Beenden (sofortige Wirkung parallel zum Skript)
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2-1">
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header"><div><div class="card-title">Umsatz Juni 2026</div><div class="card-subtitle">9 Bestellungen · Ø €85,42</div></div></div>
+        <div class="card-body"><canvas id="revenueChart" height="190"></canvas></div>
+      </div>
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header"><div class="card-title">Umsatz nach Kategorie</div></div>
+        <div class="card-body"><canvas id="categoryChart" height="190"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ BESTELLUNGEN ═══════════════════════════════════ -->
+  <div class="section" id="section-orders">
+    <div class="kpi-grid">
+      <div class="kpi-card amber"><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">2</div><div class="kpi-sub">Warten auf BAB-Tracking</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Abgeschlossene (Juni)</div><div class="kpi-value" style="color:var(--green)">7</div><div class="kpi-sub">€458,86 Umsatz</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Ø Bestellwert</div><div class="kpi-value">€85,42</div><div class="kpi-sub">alle 9 Bestellungen</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Höchste Bestellung</div><div class="kpi-value">€279,98</div><div class="kpi-sub">NETU0187 · mr.mxa</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">⏳ Offene Bestellungen — Handlungsbedarf</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
+            <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung 1 · 16.06.2026</div>
+            <div style="font-size:16px;font-weight:800;margin-bottom:4px">PETK0049</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Bestell-Nr. 05-14786-31141 · lostprince77</div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">VK: €29,98</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">EK: €8,30 · Lieferant: BAB Distribution · Lager: 2 Stück</div>
+            <div style="font-size:11px;color:var(--text-muted)">📧 Email an SSchulze@bab-distribution.de versandt</div>
+            <div style="margin-top:12px;padding:8px;background:#fef3c7;border-radius:6px;font-size:11px;color:#92400e">
+              ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
+            </div>
+          </div>
+          <div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
+            <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung 2 · 15.06.2026</div>
+            <div style="font-size:16px;font-weight:800;margin-bottom:4px">NETU0187</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Bestell-Nr. 08-14779-12258 · mr.mxa</div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">VK: €279,98</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">EK: ~€157 · Lieferant: BAB Distribution</div>
+            <div style="font-size:11px;color:var(--text-muted)">📧 Email an SSchulze@bab-distribution.de versandt</div>
+            <div style="margin-top:12px;padding:8px;background:#fef3c7;border-radius:6px;font-size:11px;color:#92400e">
+              ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Alle Bestellungen — Juni 2026</div></div></div>
+      <div class="card-body no-pad">
+        <table>
+          <thead><tr><th>Datum</th><th>Bestell-Nr.</th><th>Käufer</th><th>SKU</th><th>VK-Preis</th><th>EK (est.)</th><th>Gewinn (netto)</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>16.06.</td><td style="font-family:monospace;font-size:11px">05-14786-31141</td><td><strong>lostprince77</strong></td><td><span class="badge badge-amber">PETK0049</span></td><td><strong>€29,98</strong></td><td style="color:var(--text-muted)">€8,30</td><td style="color:var(--green)">~€2,78</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
+            <tr><td>15.06.</td><td style="font-family:monospace;font-size:11px">08-14779-12258</td><td><strong>mr.mxa</strong></td><td><span class="badge badge-amber">NETU0187</span></td><td><strong>€279,98</strong></td><td style="color:var(--text-muted)">~€157</td><td style="color:var(--green)">~€26,50</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
+            <tr><td>13.06.</td><td style="font-family:monospace;font-size:11px">01-14783-23263</td><td>thaimakx1</td><td><span class="badge badge-gray">ANTB0005</span></td><td><strong>€219,98</strong></td><td style="color:var(--text-muted)">~€122</td><td style="color:var(--green)">~€21,10</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>12.06.</td><td style="font-family:monospace;font-size:11px">08-14763-57410</td><td>printgekko</td><td><span class="badge badge-gray">SHG0003</span></td><td><strong>€63,98</strong></td><td style="color:var(--text-muted)">~€35</td><td style="color:var(--green)">~€6,10</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>11.06.</td><td style="font-family:monospace;font-size:11px">20-14740-74871</td><td>jokez</td><td><span class="badge badge-gray">PPSE0102</span></td><td><strong>€55,98</strong></td><td style="color:var(--text-muted)">~€29</td><td style="color:var(--green)">~€5,40</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>08.06.</td><td style="font-family:monospace;font-size:11px">18-14731-45799</td><td>bb-maid</td><td><span class="badge badge-gray">USBK1023</span></td><td><strong>€25,98</strong></td><td style="color:var(--text-muted)">~€12</td><td style="color:var(--green)">~€2,50</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>08.06.</td><td style="font-family:monospace;font-size:11px">23-14722-05332</td><td>d.breustedt58</td><td><span class="badge badge-gray">HHWB5012</span></td><td><strong>€38,98</strong></td><td style="color:var(--text-muted)">€15,23</td><td style="color:var(--green)">~€3,75</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>07.06.</td><td style="font-family:monospace;font-size:11px">18-14726-98065</td><td>cheoxyne</td><td><span class="badge badge-gray">USBK1036</span></td><td><strong>€29,98</strong></td><td style="color:var(--text-muted)">~€15</td><td style="color:var(--green)">~€2,88</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>07.06.</td><td style="font-family:monospace;font-size:11px">22-14719-39725</td><td>colddog71kay</td><td><span class="badge badge-gray">SUPD1027</span></td><td><strong>€23,98</strong></td><td style="color:var(--text-muted)">~€11</td><td style="color:var(--green)">~€2,30</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ LISTINGS ═══════════════════════════════════ -->
+  <div class="section" id="section-listings">
+    <div class="kpi-grid">
+      <div class="kpi-card blue"><div class="kpi-label">Listbare BAB-Artikel</div><div class="kpi-value">1.268</div><div class="kpi-sub">in supplier_map</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Letzter Lauf: OK</div><div class="kpi-value" style="color:var(--green)">483</div><div class="kpi-sub">+ 2 Drafts</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Letzter Lauf: Fehler</div><div class="kpi-value" style="color:var(--red)">15</div><div class="kpi-sub">EAN fehlt, Aspekte, Timeout</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Bild-Korrekturen</div><div class="kpi-value">207</div><div class="kpi-sub">in image_fix_needed.json</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Katalog-Verteilung nach Preisklasse</div><div class="card-subtitle">1.268 BAB Artikel · Ø VK €269,54 · Gesamtwert €341.771,32</div></div></div>
+      <div class="card-body">
+        <div class="inv-bar-row"><div class="inv-bar-label">unter €10</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:7.7%;background:#ef4444"></div></div><div class="inv-bar-count">98</div></div>
+        <div class="inv-bar-row"><div class="inv-bar-label">€10 – 25</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:14.0%;background:#f97316"></div></div><div class="inv-bar-count">178</div></div>
+        <div class="inv-bar-row"><div class="inv-bar-label">€25 – 50</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:7.7%;background:#f59e0b"></div></div><div class="inv-bar-count">98</div></div>
+        <div class="inv-bar-row"><div class="inv-bar-label">€50 – 100</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:15.2%;background:#eab308"></div></div><div class="inv-bar-count">193</div></div>
+        <div class="inv-bar-row"><div class="inv-bar-label">€100 – 200</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:16.6%;background:#84cc16"></div></div><div class="inv-bar-count">210</div></div>
+        <div class="inv-bar-row"><div class="inv-bar-label">€200 – 500</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:22.9%;background:#22c55e"></div></div><div class="inv-bar-count">290</div></div>
+        <div class="inv-bar-row"><div class="inv-bar-label">über €500</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:15.9%;background:#10b981"></div></div><div class="inv-bar-count">201</div></div>
+        <div style="margin-top:12px;padding:10px 14px;background:#f0fdf4;border-radius:7px;border:1px solid #bbf7d0">
+          <span style="font-size:11px;color:#15803d;font-weight:600">💡 Katalogwert €341.771 · Top-Shop Limit €426.675 · Spielraum: <strong>€84.904</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">System-Status</div></div></div>
+      <div class="card-body">
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">🗑️</span><div style="flex:1"><div class="status-label">Kosatec-Bereinigung</div><div class="status-val">2.292 gelöscht · 9.281 nicht gefunden · 15.06.2026</div></div><span class="badge badge-green">✓ Erledigt</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">👻</span><div style="flex:1"><div class="status-label">Ghost-Listings Fix</div><div class="status-val">24 deaktiviert · 426 in supplier_map eingetragen</div></div><span class="badge badge-green">✓ Erledigt</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-red"></div><span style="font-size:16px">⚡</span><div style="flex:1"><div class="status-label">Notfall-Deaktivierung</div><div class="status-val">12.865 SKUs · emergency_deactivate_all.py</div></div><span class="badge badge-red">Läuft</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-amber"></div><span style="font-size:16px">🖼️</span><div style="flex:1"><div class="status-label">Bild-Abmahnung</div><div class="status-val">HHWM0023 · HHWM0028 · Listing 377239847869 manuell prüfen</div></div><span class="badge badge-amber">Prüfen</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ PREISMANAGER ═══════════════════════════════════ -->
+  <div class="section" id="section-preise">
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Preisformel</div><div class="card-subtitle">Aktuelle Kalkulation für alle BAB-Artikel</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+          <div>
+            <div style="font-size:12px;font-weight:600;margin-bottom:8px">Einkaufspreis (EK) testen</div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+              <span style="font-size:13px;color:var(--text-muted)">EK:</span>
+              <input type="number" id="ek-input" value="100" min="1" max="3000" style="width:90px">
+              <span style="font-size:12px;color:var(--text-muted)">€</span>
+            </div>
+            <div class="calc-box">
+              <div class="calc-row"><span class="calc-label">Einkaufspreis (EK)</span><span class="calc-val" id="c-ek">100,00 €</span></div>
+              <div class="calc-row"><span class="calc-label">VK netto (EK×1,25 + 5)</span><span class="calc-val" id="c-vknetto">130,00 €</span></div>
+              <div class="calc-row"><span class="calc-label">VK brutto (÷0,79 ×1,19 − 3,99)</span><span class="calc-val" id="c-vkbrutto">191,84 €</span></div>
+              <div class="calc-row"><span class="calc-label">eBay-Gebühren (21%)</span><span class="calc-val negative" id="c-fee">− 40,29 €</span></div>
+              <div class="calc-row"><span class="calc-label">MwSt. ans Finanzamt</span><span class="calc-val negative" id="c-vat">− 30,68 €</span></div>
+              <div class="calc-row"><span class="calc-label">Reingewinn</span><span class="calc-val positive" id="c-profit">+ 20,87 €</span></div>
+              <div class="calc-row"><span class="calc-label">Netto-Marge</span><span class="calc-val positive" id="c-margin">10,9%</span></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:600;margin-bottom:8px">Formel im Code</div>
+            <div class="cmd-box" style="font-size:12px">
+              <div style="color:#64748b;margin-bottom:8px"># smart_lister.py / fix_ghost_listings.py</div>
+              <div><span class="cmd-prompt">VAT</span>       = <span style="color:#34d399">1.19</span></div>
+              <div><span class="cmd-prompt">TOTAL_FEE</span> = <span style="color:#34d399">0.21</span>  <span style="color:#475569"># eBay + Promoted</span></div>
+              <div><span class="cmd-prompt">SHIP</span>      = <span style="color:#34d399">5.00</span>  <span style="color:#475569"># Versandpauschale</span></div>
+              <div style="margin-top:8px">vk_netto = ek * <span style="color:#fbbf24">1.25</span> + SHIP</div>
+              <div>vk_brutto = vk_netto * VAT / (1 - TOTAL_FEE) - <span style="color:#fbbf24">3.99</span></div>
+            </div>
+            <div style="margin-top:16px;padding:12px;background:#f0fdf4;border-radius:8px;border:1px solid #bbf7d0">
+              <div style="font-size:11px;color:#15803d;font-weight:700;margin-bottom:6px">Gebührenstruktur</div>
+              <div style="font-size:11px;color:#166534">• eBay-Provision: 13% vom VK</div>
+              <div style="font-size:11px;color:#166534">• Promoted Listings: 8% vom VK</div>
+              <div style="font-size:11px;color:#166534">• Gesamt: 21% vom VK brutto</div>
+              <div style="font-size:11px;color:#166534">• MwSt.: 19% (Top-Shop = Kleinunternehmer?)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Katalog-Statistik</div></div></div>
+      <div class="card-body"><canvas id="priceDistChart" height="160"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ SUPPLIER MAP ═══════════════════════════════════ -->
+  <div class="section" id="section-suppliermap">
+    <div class="kpi-grid">
+      <div class="kpi-card blue"><div class="kpi-label">Einträge gesamt</div><div class="kpi-value">1.268</div><div class="kpi-sub">supplier_map.json</div></div>
+      <div class="kpi-card green"><div class="kpi-label">BAB Einträge</div><div class="kpi-value">1.268</div><div class="kpi-sub">100% BAB Distribution</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">state.json Einträge</div><div class="kpi-value">1.186</div><div class="kpi-sub">sync.py Tracking</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Backup-Einträge</div><div class="kpi-value">12.415</div><div class="kpi-sub">3 Backups (inkl. Kosatec)</div></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Datenstruktur — supplier_map.json</div></div></div>
+      <div class="card-body">
+        <div class="cmd-box">
+          <div style="color:#64748b;margin-bottom:8px"># Beispiel-Eintrag</div>
+          <div style="color:#e2e8f0">{</div>
+          <div style="margin-left:16px"><span style="color:#fbbf24">"PETK0049"</span>: {</div>
+          <div style="margin-left:32px"><span style="color:#60a5fa">"ean"</span>:      <span style="color:#34d399">"4712847080017"</span>,</div>
+          <div style="margin-left:32px"><span style="color:#60a5fa">"supplier"</span>: <span style="color:#34d399">"BAB"</span>,</div>
+          <div style="margin-left:32px"><span style="color:#60a5fa">"ek"</span>:       <span style="color:#34d399">8.30</span>,</div>
+          <div style="margin-left:32px"><span style="color:#60a5fa">"vk"</span>:       <span style="color:#34d399">25.99</span>,</div>
+          <div style="margin-left:32px"><span style="color:#60a5fa">"title"</span>:    <span style="color:#34d399">"Petkit PURA MAX ..."</span>,</div>
+          <div style="margin-left:32px"><span style="color:#60a5fa">"listed_at"</span>: <span style="color:#34d399">"2026-06-15T..."</span></div>
+          <div style="margin-left:16px">}</div>
+          <div>}</div>
+        </div>
+        <div style="margin-top:12px;padding:12px;background:#eff6ff;border-radius:8px;border:1px solid #93c5fd">
+          <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:4px">⚙️ Bekanntes Problem: Zwei parallele Tracking-Systeme</div>
+          <div style="font-size:11px;color:#1e40af">sync.py schreibt in state.json · smart_lister.py schreibt in supplier_map.json → kann wieder Ghost-Listings erzeugen. <strong>Lösung: sync.py muss bei neuen Einträgen supplier_map.json aktualisieren.</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ FEHLERBEHEBUNG ═══════════════════════════════════ -->
+  <div class="section" id="section-fehler">
+    <div class="kpi-grid">
+      <div class="kpi-card red"><div class="kpi-label">Listing-Fehler</div><div class="kpi-value" style="color:var(--red)">15</div><div class="kpi-sub">letzter smart_lister Lauf</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">EAN fehlt</div><div class="kpi-value">7</div><div class="kpi-sub">SUPV0067-71, NETT1035, NETU0084</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Aspekte fehlen</div><div class="kpi-value">3</div><div class="kpi-sub">Prozessormodell CPU-Artikel</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Sonstige</div><div class="kpi-value">5</div><div class="kpi-sub">Wertlimit, Timeout, Kategorie...</div></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Alle 15 Fehler — Analyse & Lösung</div></div></div>
+      <div class="card-body no-pad">
+        <table>
+          <thead><tr><th>SKU</th><th>VK</th><th>Error-ID</th><th>Fehlertyp</th><th>Ursache</th><th>Lösung</th></tr></thead>
+          <tbody>
+            <tr><td><code>SSDL0040</code></td><td>€221,99</td><td>25002</td><td><span class="badge badge-red">Wertlimit</span></td><td>€426.675 Monatslimit überschritten</td><td>Nach Deaktivierung erneut listen</td></tr>
+            <tr><td><code>SUPV0067</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>SUPV0068</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>SUPV0069</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>SUPV0070</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>SUPV0071</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>NETT1035</code></td><td>€112,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>NETU0084</code></td><td>€195,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>CPUA0065</code></td><td>€223,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
+            <tr><td><code>CPUI0232</code></td><td>€284,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
+            <tr><td><code>CPUI0233</code></td><td>€262,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
+            <tr><td><code>SUPL0439</code></td><td>€99,99</td><td>25002</td><td><span class="badge badge-blue">Offer exists</span></td><td>offerId 182673512011 bereits vorhanden</td><td>Offer aktualisieren statt neu erstellen</td></tr>
+            <tr><td><code>NOCO0002</code></td><td>€121,99</td><td>25002</td><td><span class="badge badge-red">Falsche Kat.</span></td><td>Automobil-Kategorie nicht geeignet</td><td>Kategorie manuell anpassen</td></tr>
+            <tr><td><code>NETT0163</code></td><td>€179,99</td><td>25604</td><td><span class="badge badge-gray">Availability</span></td><td>Bestand nicht abrufbar</td><td>Bestand in supplier_map prüfen</td></tr>
+            <tr><td><code>ANTB0005</code></td><td>€232,99</td><td>–</td><td><span class="badge badge-gray">Timeout</span></td><td>eBay API nach 5 Versuchen</td><td>Einzeln erneut listen</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ GEWINN & STEUERN ═══════════════════════════════════ -->
+  <div class="section" id="section-gewinn">
+
+    <!-- ECHTDATEN TOGGLE BANNER -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;margin-bottom:12px">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#15803d">📡 eBay API Echtdaten verfügbar</div>
+        <div id="g-fee-toggle-label" style="font-size:11px;color:#166534">Echte API-Gebühr: €94,14 (12,2%) — Promoted Listings noch inaktiv</div>
+      </div>
+      <button onclick="G.useRealFees=!G.useRealFees;calcGewinn()" style="padding:6px 14px;border-radius:6px;border:1px solid #16a34a;background:#16a34a;color:#fff;font-size:11px;font-weight:700;cursor:pointer">
+        Kalkulation ↔ Echte Zahlen
+      </button>
+    </div>
+    <!-- VERGLEICHS-PANEL -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px">
+      <div style="padding:12px;background:#fff5f5;border:1px solid #fca5a5;border-radius:8px">
+        <div style="font-size:10px;font-weight:700;color:#dc2626;margin-bottom:6px">KALKULATION (21% eBay)</div>
+        <div style="font-size:11px;color:#6b7280">eBay-Gebühr</div>
+        <div style="font-size:16px;font-weight:800;color:#dc2626">€161,45</div>
+        <div style="font-size:11px;color:#6b7280;margin-top:4px">Rohgewinn</div>
+        <div style="font-size:16px;font-weight:800;color:#dc2626">~€64</div>
+      </div>
+      <div style="padding:12px;background:#f0fdf4;border:2px solid #16a34a;border-radius:8px">
+        <div style="font-size:10px;font-weight:700;color:#15803d;margin-bottom:6px">✅ ECHT LAUT API (12,2%)</div>
+        <div style="font-size:11px;color:#6b7280">eBay-Gebühr</div>
+        <div style="font-size:16px;font-weight:800;color:#15803d">€94,14</div>
+        <div style="font-size:11px;color:#6b7280;margin-top:4px">Netto-Gewinn</div>
+        <div style="font-size:18px;font-weight:900;color:#15803d">€181,94</div>
+      </div>
+      <div style="padding:12px;background:#dbeafe;border:1px solid #93c5fd;border-radius:8px">
+        <div style="font-size:10px;font-weight:700;color:#1d4ed8;margin-bottom:6px">DIFFERENZ</div>
+        <div style="font-size:11px;color:#6b7280">mehr als geplant</div>
+        <div style="font-size:16px;font-weight:800;color:#1d4ed8">+€67,31 Gebühr</div>
+        <div style="font-size:11px;color:#6b7280;margin-top:4px">mehr Netto-Gewinn</div>
+        <div style="font-size:16px;font-weight:800;color:#1d4ed8">+€117,94</div>
+      </div>
+    </div>
+    <div style="padding:10px 14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:7px;margin-bottom:16px;font-size:11px;color:#92400e">
+      ⚠️ <strong>Warum 12,2% statt 21%?</strong> Die 8% Promoted Listings Kampagne ist noch <strong>nicht aktiv</strong>. Sobald du die Kampagne startest, steigt die eBay-Gebühr auf ~20%. Die Kalkulation bleibt damit konservativ — du hast aktuell mehr Spielraum.
+    </div>
+
+    <!-- KPI ROW -->
+    <div class="kpi-grid">
+      <div class="kpi-card blue"><div class="kpi-icon">📈</div><div class="kpi-label">Umsatz Juni (netto)</div><div class="kpi-value" id="g-umsatz-netto">€645</div><div class="kpi-sub">768,82 ÷ 1,19 = ohne MwSt.</div></div>
+      <div class="kpi-card amber"><div class="kpi-icon">🧾</div><div class="kpi-label">USt. Zahllast</div><div class="kpi-value" id="g-ust-zahllast" style="color:var(--red)">€46</div><div class="kpi-sub">Ausgangsteuer − Vorsteuer</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">💶</div><div class="kpi-label">Gewinn vor Steuern</div><div class="kpi-value" id="g-ebt">€106</div><div class="kpi-sub">nach eBay-Gebühren + EK</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">🏦</div><div class="kpi-label">Netto-Gewinn</div><div class="kpi-value" id="g-netto" style="color:var(--green)">€64</div><div class="kpi-sub">nach allen Steuern und Abgaben</div></div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:20px">
+
+      <!-- GEWINN-WASSERFALL -->
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header"><div><div class="card-title">Gewinn-Wasserfall — Juni 2026</div><div class="card-subtitle">Von Umsatz zum Netto-Gewinn</div></div></div>
+        <div class="card-body">
+          <div id="wasserfall">
+            <!-- Dynamisch via JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- STEUER-EINSTELLUNGEN -->
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header"><div class="card-title">⚙️ Steuersätze anpassen</div></div>
+        <div class="card-body">
+          <div style="margin-bottom:14px">
+            <div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px">Einkommensteuer-Satz</div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" id="s-est" min="0" max="45" value="30" style="flex:1">
+              <span id="s-est-val" style="font-size:13px;font-weight:700;width:36px">30%</span>
+            </div>
+          </div>
+          <div style="margin-bottom:14px">
+            <div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px">Gewerbesteuer-Satz (Hebesatz ~400%)</div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" id="s-gst" min="0" max="20" value="10" style="flex:1">
+              <span id="s-gst-val" style="font-size:13px;font-weight:700;width:36px">10%</span>
+            </div>
+          </div>
+          <div style="margin-bottom:14px">
+            <div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px">Solidaritätszuschlag</div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" id="s-soli" min="0" max="5.5" step="0.1" value="0" style="flex:1">
+              <span id="s-soli-val" style="font-size:13px;font-weight:700;width:36px">0%</span>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:10px;background:#f0fdf4;border-radius:7px">
+            <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:4px">Steuer-Gesamtbelastung</div>
+            <div style="font-size:22px;font-weight:800;color:#15803d" id="s-total-pct">40%</div>
+            <div style="font-size:10px;color:#166534">ESt + GewSt + Soli</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RÜCKLAGEN-TABELLE -->
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Rücklagen — Was musst du zurücklegen?</div><div class="card-subtitle">Pro Monat · Basierend auf Juni 2026</div></div></div>
+      <div class="card-body no-pad">
+        <table>
+          <thead><tr><th>Abgabe / Rücklage</th><th>Basis</th><th>Satz</th><th>Betrag</th><th>Fälligkeit</th><th>Info</th></tr></thead>
+          <tbody id="ruecklagen-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- JAHRESPROJEKTION -->
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">📅 Jahresprojektion (hochgerechnet)</div><div class="card-subtitle">Basierend auf Juni 2026 × 12 — wenn alle 1.268 Artikel gelistet sind</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px">
+          <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">Jahresumsatz (brutto)</div>
+            <div style="font-size:22px;font-weight:800;margin-top:6px" id="j-umsatz">€9.226</div>
+          </div>
+          <div style="text-align:center;padding:16px;background:#f8fafc;border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">Gewinn vor Steuern</div>
+            <div style="font-size:22px;font-weight:800;margin-top:6px;color:var(--accent)" id="j-ebt">€1.272</div>
+          </div>
+          <div style="text-align:center;padding:16px;background:#fff5f5;border-radius:8px;border:1px solid #fca5a5">
+            <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">Steuern gesamt</div>
+            <div style="font-size:22px;font-weight:800;margin-top:6px;color:var(--red)" id="j-steuern">€509</div>
+          </div>
+          <div style="text-align:center;padding:16px;background:#f0fdf4;border-radius:8px;border:1px solid #bbf7d0">
+            <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px">Netto übrig</div>
+            <div style="font-size:22px;font-weight:800;margin-top:6px;color:var(--green)" id="j-netto">€764</div>
+          </div>
+        </div>
+        <div style="padding:12px 14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;font-size:11px;color:#92400e">
+          💡 <strong>Wichtig:</strong> Ab <strong>€22.000 Jahresumsatz</strong> entfällt Kleinunternehmerregelung → USt-Pflicht. Bei aktuell ~€9.200/Jahr noch unter Grenze — <strong>aber prüfe ob du bereits USt-pflichtig bist!</strong> Wenn noch nicht, entfällt die Zahllast-Zeile.
+        </div>
+      </div>
+    </div>
+
+    <!-- KONTENÜBERSICHT -->
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">🏦 Empfehlung: Konten-Setup</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+          <div style="padding:14px;border-radius:8px;background:#f0fdf4;border:1px solid #86efac">
+            <div style="font-size:11px;font-weight:700;color:#15803d;margin-bottom:8px">✅ Betriebskonto</div>
+            <div style="font-size:12px;color:#166534">Alle eBay-Einnahmen landen hier. Alle BAB-Zahlungen laufen von hier ab.</div>
+          </div>
+          <div style="padding:14px;border-radius:8px;background:#fef3c7;border:1px solid #fcd34d">
+            <div style="font-size:11px;font-weight:700;color:#d97706;margin-bottom:8px">🧾 USt.-Rücklagen-Konto</div>
+            <div style="font-size:12px;color:#92400e">Jede Woche <span id="rec-ust-pct">~6%</span> des Umsatzes (brutto) parken für die monatliche/quartalsweise USt-Voranmeldung.</div>
+          </div>
+          <div style="padding:14px;border-radius:8px;background:#eff6ff;border:1px solid #93c5fd">
+            <div style="font-size:11px;font-weight:700;color:#1d4ed8;margin-bottom:8px">💰 ESt./GewSt.-Rücklage</div>
+            <div style="font-size:12px;color:#1e40af">Ca. <span id="rec-est-pct">40%</span> des monatlichen Gewinns (vor ESt.) auf die Seite legen für Jahres-Einkommensteuer.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ═══════════════════════════════════ RETOUREN ═══════════════════════════════════ -->
+  <div class="section" id="section-retouren">
+
+    <!-- ECHTDATEN BANNER -->
+    <div style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;margin-bottom:20px">
+      <span style="font-size:16px">✅</span>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#15803d">Echtdaten aus eBay Fulfillment API — Stand: 16.06.2026</div>
+        <div style="font-size:11px;color:#166534">9 Bestellungen abgerufen · paymentSummary.refunds geprüft · cancelStatus geprüft</div>
+      </div>
+    </div>
+
+    <!-- KPI ROW -->
+    <div class="kpi-grid" style="margin-bottom:20px">
+      <div class="kpi-card green">
+        <div class="kpi-icon">↩️</div>
+        <div class="kpi-label">Retouren (Juni)</div>
+        <div class="kpi-value" style="color:var(--green)">0</div>
+        <div class="kpi-sub">von 9 Bestellungen</div>
+        <div class="kpi-change up">0% Retourenquote</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-icon">❌</div>
+        <div class="kpi-label">Stornos (Juni)</div>
+        <div class="kpi-value" style="color:var(--green)">0</div>
+        <div class="kpi-sub">keine Stornierungen</div>
+        <div class="kpi-change up">Alle Käufer bezahlt</div>
+      </div>
+      <div class="kpi-card green">
+        <div class="kpi-icon">💸</div>
+        <div class="kpi-label">Erstattungen gesamt</div>
+        <div class="kpi-value" style="color:var(--green)">€0,00</div>
+        <div class="kpi-sub">kein Geld zurückgezahlt</div>
+        <div class="kpi-change up">Kein Verlust durch Retouren</div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-label">Branchen-Benchmark</div>
+        <div class="kpi-value">5–8%</div>
+        <div class="kpi-sub">typische Retourenquote eBay DE</div>
+        <div class="kpi-change up">Du: 0% — deutlich besser</div>
+      </div>
+    </div>
+
+    <!-- RETOUREN-LISTE (leer) -->
+    <div class="card" style="margin-bottom:20px">
+      <div class="card-header">
+        <div><div class="card-title">Retouren-Übersicht — alle Bestellungen</div>
+        <div class="card-subtitle">Quelle: paymentSummary.refunds aus eBay Fulfillment API</div></div>
+        <span class="badge badge-green">✓ 0 Retouren</span>
+      </div>
+      <div class="card-body no-pad">
+        <table>
+          <thead><tr><th>Datum</th><th>Bestell-Nr.</th><th>Käufer</th><th>SKU</th><th>VK</th><th>eBay-Gebühr (echt)</th><th>Auszahlung</th><th>Erstattung</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>16.06.</td><td style="font-family:monospace;font-size:11px">05-14786-31141</td><td>lostprince77</td><td><code>PETK0049</code></td><td>€29,98</td><td style="color:var(--red)">€4,47 (14,9%)</td><td style="color:var(--green)">€25,51</td><td style="color:var(--green)">—</td><td><span class="badge badge-amber">Offen</span></td></tr>
+            <tr><td>15.06.</td><td style="font-family:monospace;font-size:11px">08-14779-12258</td><td>mr.mxa</td><td><code>NETU0187</code></td><td>€279,98</td><td style="color:var(--red)">€29,58 (10,6%)</td><td style="color:var(--green)">€250,40</td><td style="color:var(--green)">—</td><td><span class="badge badge-amber">Offen</span></td></tr>
+            <tr><td>13.06.</td><td style="font-family:monospace;font-size:11px">01-14783-23263</td><td>thaimakx1</td><td><code>ANTB0005</code></td><td>€219,98</td><td style="color:var(--red)">€27,43 (12,5%)</td><td style="color:var(--green)">€192,55</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>12.06.</td><td style="font-family:monospace;font-size:11px">08-14763-57410</td><td>printgekko</td><td><code>SHG0003</code></td><td>€63,98</td><td style="color:var(--red)">€8,92 (13,9%)</td><td style="color:var(--green)">€55,06</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>11.06.</td><td style="font-family:monospace;font-size:11px">20-14740-74871</td><td>jokez</td><td><code>PPSE0102</code></td><td>€55,98</td><td style="color:var(--red)">€8,54 (15,3%)</td><td style="color:var(--green)">€47,44</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>08.06.</td><td style="font-family:monospace;font-size:11px">18-14731-45799</td><td>bb-maid</td><td><code>USBK1023</code></td><td>€25,98</td><td style="color:var(--red)">€2,55 (9,8%)</td><td style="color:var(--green)">€23,43</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>08.06.</td><td style="font-family:monospace;font-size:11px">23-14722-05332</td><td>d.breustedt58</td><td><code>HHWB5012</code></td><td>€38,98</td><td style="color:var(--red)">€6,11 (15,7%)</td><td style="color:var(--green)">€32,87</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>07.06.</td><td style="font-family:monospace;font-size:11px">18-14726-98065</td><td>cheoxyne</td><td><code>USBK1036</code></td><td>€29,98</td><td style="color:var(--red)">€2,86 (9,5%)</td><td style="color:var(--green)">€27,12</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr><td>07.06.</td><td style="font-family:monospace;font-size:11px">22-14719-39725</td><td>colddog71kay</td><td><code>SUPD1027</code></td><td>€23,98</td><td style="color:var(--red)">€3,68 (15,3%)</td><td style="color:var(--green)">€20,30</td><td style="color:var(--green)">—</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
+            <tr style="font-weight:700;background:#f0fdf4">
+              <td colspan="4"><strong>SUMME</strong></td>
+              <td><strong>€768,82</strong></td>
+              <td style="color:var(--red)"><strong>€94,14 (12,2%)</strong></td>
+              <td style="color:var(--green)"><strong>€674,68</strong></td>
+              <td style="color:var(--green)"><strong>€0,00</strong></td>
+              <td><span class="badge badge-green">Alle sauber</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- WICHTIGE ENTDECKUNG + RETOUR-KALKULATOR -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header"><div><div class="card-title">🔍 Wichtige Entdeckung: Echte eBay-Gebühr</div></div></div>
+        <div class="card-body">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#fff5f5;border-radius:7px;border:1px solid #fca5a5">
+              <span style="font-size:12px;color:var(--text-muted)">Kalkulierte Gebühr (21%)</span>
+              <span style="font-size:13px;font-weight:700;color:var(--red)">€161,45</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#f0fdf4;border-radius:7px;border:1px solid #86efac">
+              <span style="font-size:12px;color:var(--text-muted)">Echte Gebühr laut eBay API (12,2%)</span>
+              <span style="font-size:13px;font-weight:700;color:var(--green)">€94,14</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:12px 14px;background:#dbeafe;border-radius:7px;border:1px solid #93c5fd">
+              <span style="font-size:13px;font-weight:700;color:#1d4ed8">Differenz (mehr Gewinn)</span>
+              <span style="font-size:15px;font-weight:800;color:#1d4ed8">+€67,31</span>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding:10px;background:#fffbeb;border:1px solid #fcd34d;border-radius:7px;font-size:11px;color:#92400e">
+            ⚠️ Die 8% Promoted Listings sind noch <strong>nicht aktiv</strong>. Nach Aktivierung steigt die Gebühr auf ~20%. Die Preisformel ist korrekt kalkuliert — du hast aktuell einfach mehr Spielraum.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:0">
+        <div class="card-header"><div><div class="card-title">💸 Retouren-Kalkulator</div><div class="card-subtitle">Was kostet eine Retoure wirklich?</div></div></div>
+        <div class="card-body">
+          <div style="margin-bottom:12px">
+            <div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px">Artikelpreis (VK)</div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" id="ret-vk" min="10" max="500" value="100" style="flex:1">
+              <span id="ret-vk-val" style="font-size:13px;font-weight:700;width:50px">€100</span>
+            </div>
+          </div>
+          <div id="ret-calc" style="display:flex;flex-direction:column;gap:6px;font-size:12px">
+            <!-- filled by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RISIKO-ÜBERSICHT -->
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">📋 Was passiert bei einer Retoure?</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+          <div style="padding:14px;background:#f8fafc;border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px">1. KÄUFER MELDET</div>
+            <div style="font-size:11px;color:var(--text)">Käufer öffnet Retourenantrag auf eBay (14–30 Tage nach Erhalt)</div>
+          </div>
+          <div style="padding:14px;background:#f8fafc;border-radius:8px;border:1px solid var(--border)">
+            <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px">2. RETOURE ANNEHMEN</div>
+            <div style="font-size:11px;color:var(--text)">Innerhalb 3 Tagen reagieren. Retoure akzeptieren → Retourenlabel erstellen</div>
+          </div>
+          <div style="padding:14px;background:#fef3c7;border-radius:8px;border:1px solid #fcd34d">
+            <div style="font-size:11px;font-weight:700;color:#d97706;margin-bottom:6px">3. WARE PRÜFEN</div>
+            <div style="font-size:11px;color:#92400e">Artikel von BAB zurückschicken? Oder neu verkaufen? Schadensbewertung</div>
+          </div>
+          <div style="padding:14px;background:#fee2e2;border-radius:8px;border:1px solid #fca5a5">
+            <div style="font-size:11px;font-weight:700;color:#dc2626;margin-bottom:6px">4. ERSTATTUNG</div>
+            <div style="font-size:11px;color:#dc2626">eBay erstattet dem Käufer. eBay-Gebühren werden teils zurückgebucht (nicht immer)</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px 14px;background:#f0fdf4;border-radius:7px;font-size:11px;color:#15803d">
+          💡 <strong>Tipp Dropshipping:</strong> Bei defekter Ware sofort BAB kontaktieren (SSchulze@bab-distribution.de) — BAB übernimmt in den meisten Fällen die Rücknahme oder schickt Ersatz. Dein Verlustrisiko ist damit minimal.
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ═══════════════════════════════════ REPRICER ═══════════════════════════════════ -->
+  <div class="section" id="section-repricer">
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Repricer</div><div class="card-subtitle">Preise aller aktiven BAB-Listings aktualisieren</div></div><span class="badge badge-amber">⏳ Ausstehend</span></div>
+      <div class="card-body">
+        <div style="padding:14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;margin-bottom:16px;font-size:12px;color:#92400e">
+          ⚠️ <strong>Erst ausführen wenn 0 aktive Listings auf eBay!</strong> Repricer braucht eine saubere Basis.
+        </div>
+        <div style="font-size:13px;font-weight:600;margin-bottom:8px">Schritt 3 in der Pipeline — Terminal öffnen und ausführen:</div>
+        <div class="cmd-box">
+          <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 repricer.py')">Kopieren</button>
+          <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 repricer.py</span>
+        </div>
+        <div style="margin-top:16px">
+          <div style="font-size:12px;font-weight:700;margin-bottom:8px">Was der Repricer macht:</div>
+          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Preise aus BAB-Preisliste neu berechnen</div><div class="status-val">vk_brutto = ek × 1.25 × 1.19 / 0.79 − 3.99</div></div></div>
+          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Alle 1.268 supplier_map-Einträge durchgehen</div><div class="status-val">EK-Änderungen von BAB werden berücksichtigt</div></div></div>
+          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">eBay Offers via PATCH /offer/{id} aktualisieren</div><div class="status-val">Nur wenn Preis sich verändert hat (Schwellwert)</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ SMART LISTER ═══════════════════════════════════ -->
+  <div class="section" id="section-lister">
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Smart Lister</div><div class="card-subtitle">Alle 1.268 BAB-Artikel auf eBay listen</div></div><span class="badge badge-amber">⏳ Schritt 4</span></div>
+      <div class="card-body">
+        <div style="padding:14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;margin-bottom:16px;font-size:12px;color:#92400e">
+          ⚠️ <strong>Reihenfolge einhalten:</strong> (1) Alle Listings deaktiviert? (2) Repricer gelaufen? → Dann erst Smart Lister starten.
+        </div>
+        <div style="font-size:13px;font-weight:600;margin-bottom:8px">Schritt 4 — Befehl für Terminal:</div>
+        <div class="cmd-box">
+          <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 smart_lister.py --list --bab-only')">Kopieren</button>
+          <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 smart_lister.py --list --bab-only</span>
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:var(--text-muted);padding:10px;background:#f8fafc;border-radius:6px">
+          Erwartet: ~1.253 OK · 2 Drafts · ~15 Fehler (EAN, CPU-Aspekte, Timeout) · Dauer: ca. 45–60 Minuten
+        </div>
+        <div style="margin-top:20px">
+          <div style="font-size:12px;font-weight:700;margin-bottom:8px">Danach: Promoted Listings Kampagne (Schritt 5)</div>
+          <div style="font-size:12px;color:var(--text-muted)">eBay Seller Hub → Marketing → Promoted Listings Standard → 8% auf alle Angebote</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ ORDER FORWARDER ═══════════════════════════════════ -->
+  <div class="section" id="section-forwarder">
+    <div class="kpi-grid">
+      <div class="kpi-card green"><div class="kpi-label">Auto-Send</div><div class="kpi-value" style="color:var(--green)">AN</div><div class="kpi-sub">auto_send: true</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Weitergeleitete Bestellungen</div><div class="kpi-value">2</div><div class="kpi-sub">PETK0049 · NETU0187</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">BAB-Kontakt</div><div class="kpi-value" style="font-size:13px;letter-spacing:0">SSchulze</div><div class="kpi-sub">SSchulze@bab-distribution.de</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Absender</div><div class="kpi-value" style="font-size:13px;letter-spacing:0">stavrocoucou</div><div class="kpi-sub">stavrocoucou@gmail.com</div></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Order Forwarder Pipeline</div><div class="card-subtitle">Automatische Weiterleitung neuer eBay-Bestellungen an BAB</div></div></div>
+      <div class="card-body">
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">📥</span><div style="flex:1"><div class="status-label">eBay Fulfillment API</div><div class="status-val">GET /sell/fulfillment/v1/order · Status NOT_STARTED = neue Bestellung</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">🔍</span><div style="flex:1"><div class="status-label">SKU → EAN → BAB-Artikel abgleichen</div><div class="status-val">supplier_map.json lookup</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">📧</span><div style="flex:1"><div class="status-label">Email-Bestellung an BAB</div><div class="status-val">SSchulze@bab-distribution.de · Format: Bestellnr., Artikel, Menge, Lieferadresse</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div style="margin-top:12px">
+          <div style="font-size:13px;font-weight:600;margin-bottom:8px">Manuell ausführen:</div>
+          <div class="cmd-box">
+            <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 order_forwarder.py')">Kopieren</button>
+            <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 order_forwarder.py</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
 <script>
-// ─── Zahl-Counter Animation ───────────────────────────────────────────────────
-function countUp(el, target, duration=900, prefix='', suffix='') {
-  const start = performance.now();
-  const isFloat = target % 1 !== 0;
-  function tick(now) {
-    const p = Math.min((now - start) / duration, 1);
-    const ease = 1 - Math.pow(1 - p, 3);
-    const val = isFloat ? (target * ease).toFixed(2) : Math.round(target * ease);
-    el.textContent = prefix + Number(val).toLocaleString('de-DE', {
-      minimumFractionDigits: isFloat ? 2 : 0,
-      maximumFractionDigits: isFloat ? 2 : 0,
-    }) + suffix;
-    if (p < 1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
+// ——— NAV ROUTING ———
+const titles = {
+  dashboard: ['Betriebsübersicht', 'June 2026 · eBay DE · Best_Neodeals'],
+  orders: ['Bestellungen', '9 Bestellungen · 2 offen · €768,82 Gesamtumsatz'],
+  listings: ['Listings', '1.268 BAB-Artikel · Katalogwert €341.771'],
+  preise: ['Preismanager', 'Kalkulation · Formel · Katalog-Analyse'],
+  suppliermap: ['Supplier Map', '1.268 Einträge · supplier_map.json'],
+  fehler: ['Fehlerbehebung', '15 Listing-Fehler · EAN, CPU-Aspekte, Timeout'],
+  repricer: ['Repricer', 'Preise aktualisieren · Schritt 3'],
+  lister: ['Smart Lister', '1.268 BAB-Artikel neu listen · Schritt 4'],
+  forwarder: ['Order Forwarder', 'Automatische Bestellweiterleitung an BAB'],
+  gewinn: ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
+  retouren: ['Retouren & Stornos', 'Echtdaten aus eBay API · Auswirkung auf Gewinn'],
+};
+
+function showSection(id, el) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('section-' + id).classList.add('active');
+  if (el) el.classList.add('active');
+  const t = titles[id] || ['', ''];
+  document.getElementById('page-title').textContent = t[0];
+  document.getElementById('page-subtitle').textContent = t[1];
+  // Animate bars when switching to listings
+  if (id === 'listings') animateBars();
+  if (id === 'preise') { animateBars(); initPriceChart(); }
+  if (id === 'gewinn') calcGewinn();
+  if (id === 'retouren') calcRetoure();
 }
 
-function fmt(n,d=2){return Number(n).toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d})}
-function eur(n){return fmt(n)+' €'}
-function deltaHTML(cur, prev) {
-  if (!prev) return '';
-  const pct = (cur - prev) / prev * 100;
-  if (Math.abs(pct) < 0.5) return `<span class="compare-delta delta-flat">→ 0%</span>`;
-  return pct > 0
-    ? `<span class="compare-delta delta-up">↑ ${fmt(Math.abs(pct),1)} %</span>`
-    : `<span class="compare-delta delta-down">↓ ${fmt(Math.abs(pct),1)} %</span>`;
+// ——— ANIMATE INV BARS ———
+function animateBars() {
+  document.querySelectorAll('.inv-bar-fill').forEach(el => {
+    const w = el.style.width; el.style.width = '0';
+    setTimeout(() => { el.style.width = w; }, 100);
+  });
+}
+animateBars();
+
+// ——— GEWINN & STEUERN ———
+const G = {
+  vkBrutto:    768.82,   // alle 9 Bestellungen
+  ekNetto:     404.53,   // EK netto (BAB-Rechnungen)
+  ebayFeeReal: 94.14,    // echte eBay-Gebühr aus Fulfillment API (12,2%)
+  ebayFeeEst:  768.82 * 0.21,  // geschätzt 21% (inkl. geplante Promoted Listings)
+  useRealFees: true,     // toggle: echte vs. kalkulierte Gebühren
+};
+
+function calcGewinn() {
+  const estRate  = parseFloat(document.getElementById('s-est').value)  / 100;
+  const gstRate  = parseFloat(document.getElementById('s-gst').value)  / 100;
+  const soliRate = parseFloat(document.getElementById('s-soli').value) / 100;
+
+  document.getElementById('s-est-val').textContent  = Math.round(estRate*100)  + '%';
+  document.getElementById('s-gst-val').textContent  = Math.round(gstRate*100)  + '%';
+  document.getElementById('s-soli-val').textContent = (soliRate*100).toFixed(1) + '%';
+  document.getElementById('s-total-pct').textContent = Math.round((estRate+gstRate+soliRate)*100) + '%';
+  document.getElementById('rec-est-pct').textContent = '~' + Math.round((estRate+gstRate+soliRate)*100) + '%';
+
+  const useReal  = G.useRealFees;
+  const vkBrutto = G.vkBrutto;
+  const vkNetto  = vkBrutto / 1.19;
+  const mwstAusgang = vkBrutto - vkNetto;           // MwSt. auf Verkäufe
+
+  const ebayBrutto = useReal ? G.ebayFeeReal : G.ebayFeeEst;
+  const ebayNetto  = ebayBrutto / 1.19;             // eBay-Gebühren netto
+  const vorstEbay  = ebayBrutto - ebayNetto;        // Vorsteuer auf eBay-Geb.
+  const ebayPct    = (ebayBrutto / vkBrutto * 100).toFixed(1);
+
+  const ekNetto    = G.ekNetto;
+  const vorstEk    = ekNetto * 0.19;                // Vorsteuer auf EK von BAB
+
+  const ustZahllast = mwstAusgang - vorstEbay - vorstEk;   // ans Finanzamt
+
+  const rohgewinn = vkNetto - ebayNetto - ekNetto;  // Gewinn vor ESt, nach allen Kosten
+
+  // Update toggle-label if present
+  const toggleEl = document.getElementById('g-fee-toggle-label');
+  if (toggleEl) toggleEl.textContent = useReal
+    ? `Echte API-Gebühr: €${G.ebayFeeReal} (${ebayPct}%) — Promoted Listings noch inaktiv`
+    : `Kalkulation: €${G.ebayFeeEst.toFixed(2)} (21%) — inkl. 8% Promoted Listings`;
+  const est   = Math.max(0, rohgewinn) * estRate;
+  const gst   = Math.max(0, rohgewinn) * gstRate;
+  const soli  = est * soliRate;
+  const nettoGewinn = rohgewinn - est - gst - soli;
+
+  // KPI aktualisieren
+  const fmt = v => '€' + Math.round(v);
+  document.getElementById('g-umsatz-netto').textContent = fmt(vkNetto);
+  document.getElementById('g-ust-zahllast').textContent = fmt(ustZahllast);
+  document.getElementById('g-ebt').textContent = fmt(rohgewinn);
+  document.getElementById('g-netto').textContent = fmt(nettoGewinn);
+  document.getElementById('rec-ust-pct').textContent = '~' + (ustZahllast/vkBrutto*100).toFixed(1) + '%';
+
+  // Jahresprojektion (×12)
+  document.getElementById('j-umsatz').textContent = '€' + Math.round(vkBrutto*12).toLocaleString('de-DE');
+  document.getElementById('j-ebt').textContent    = '€' + Math.round(rohgewinn*12).toLocaleString('de-DE');
+  document.getElementById('j-steuern').textContent= '€' + Math.round((est+gst+soli)*12).toLocaleString('de-DE');
+  document.getElementById('j-netto').textContent  = '€' + Math.round(nettoGewinn*12).toLocaleString('de-DE');
+
+  // Wasserfall rendern
+  const wf = [
+    { label: 'Umsatz brutto (inkl. MwSt.)',          val: vkBrutto,  type: 'in',   note: 'eBay-Auszahlung' },
+    { label: '− Wareneinsatz (EK an BAB)',            val: -ekNetto,  type: 'out',  note: 'Netto-Einkauf' },
+    { label: `− eBay Gebühren (${ebayPct}%, ${useReal?'ECHT':'Kalk.'})`, val: -ebayNetto,type: 'out',  note: useReal?'Aus Fulfillment API':'13% Provision + 8% Promoted' },
+    { label: '= Rohgewinn (vor Steuern)',             val: rohgewinn, type: 'sum',  note: '' },
+    { label: '− USt. Zahllast (ans Finanzamt)',       val: -ustZahllast, type: 'tax', note: 'Ausgangsteuer − Vorsteuer' },
+    { label: '− Einkommensteuer (' + Math.round(estRate*100) + '%)',   val: -est,   type: 'tax', note: 'Rücklage bilden!' },
+    { label: '− Gewerbesteuer (' + Math.round(gstRate*100) + '%)',     val: -gst,   type: 'tax', note: '* Freibetrag €24.500/Jahr' },
+    { label: '− Solidaritätszuschlag (' + (soliRate*100).toFixed(1) + '%)', val: -soli, type: 'tax', note: 'auf Einkommensteuer' },
+    { label: '= Netto-Gewinn (dein)',                val: nettoGewinn, type: 'final', note: '🎉 Was bleibt wirklich übrig' },
+  ];
+  document.getElementById('wasserfall').innerHTML = wf.map(row => {
+    const colors = { in:'#16a34a', out:'#dc2626', sum:'#2563eb', tax:'#d97706', final: nettoGewinn>=0?'#16a34a':'#dc2626' };
+    const bgs    = { in:'#f0fdf4', out:'#fff5f5', sum:'#eff6ff', tax:'#fffbeb', final: nettoGewinn>=0?'#dcfce7':'#fee2e2' };
+    const isSum  = row.type === 'sum' || row.type === 'final';
+    const pct    = Math.abs(row.val) / vkBrutto * 100;
+    return `<div style="display:flex;align-items:center;gap:12px;padding:${isSum?'10':'7'}px 12px;background:${bgs[row.type]||'#f8fafc'};border-radius:6px;margin-bottom:4px;border:1px solid ${isSum?colors[row.type]+'44':'var(--border)'}">
+      <div style="flex:1;font-size:${isSum?'13':'12'}px;font-weight:${isSum?'700':'500'}">${row.label}</div>
+      ${row.note ? `<div style="font-size:10px;color:var(--text-muted)">${row.note}</div>` : ''}
+      <div style="font-size:${isSum?'14':'13'}px;font-weight:700;color:${colors[row.type]||'#333'};width:75px;text-align:right">${row.val>=0?'':'−'}€${Math.abs(row.val).toFixed(2)}</div>
+      <div style="width:60px"><div style="height:4px;background:${colors[row.type]};border-radius:2px;width:${Math.min(100,pct)}%"></div></div>
+    </div>`;
+  }).join('');
+
+  // Rücklagen-Tabelle
+  const rl = [
+    { name: '🧾 Umsatzsteuer (Ausgangsteuer)', basis: 'Umsatz netto ×19%', satz: '19%', betrag: mwstAusgang, faell: 'Monatl. / Quartalsweise', info: 'USt.-Voranmeldung im ELSTER' },
+    { name: '↩️ Vorsteuer EK (BAB)', basis: 'EK netto ×19%', satz: '−19%', betrag: -vorstEk, faell: 'Verrechnung mit Ausgangsteuer', info: 'Nur wenn USt-pflichtig' },
+    { name: '↩️ Vorsteuer eBay-Gebühren', basis: 'eBay-Geb. ×19%', satz: '−19%', betrag: -vorstEbay, faell: 'Verrechnung', info: 'eBay Rechnung archivieren!' },
+    { name: '💳 USt. Zahllast (netto)', basis: 'Ausgangsteuer − Vorsteuer', satz: '–', betrag: ustZahllast, faell: 'Monatl./Quartalsweise', info: '⚠️ Rücklegen!' },
+    { name: '📊 Einkommensteuer', basis: 'Rohgewinn ×' + Math.round(estRate*100) + '%', satz: Math.round(estRate*100)+'%', betrag: est, faell: 'Jahressteuererklärung / Vorauszahlung', info: 'Vorauszahlungen quartalsweise' },
+    { name: '🏭 Gewerbesteuer', basis: 'Rohgewinn ×' + Math.round(gstRate*100) + '%', satz: Math.round(gstRate*100)+'%', betrag: gst, faell: 'Vierteljährlich (Feb/Mai/Aug/Nov)', info: '*Freibetrag €24.500/Jahr' },
+    { name: '🔸 Solidaritätszuschlag', basis: 'ESt ×' + (soliRate*100).toFixed(1)+'%', satz: (soliRate*100).toFixed(1)+'%', betrag: soli, faell: 'Mit Einkommensteuer', info: 'Entfällt für die meisten' },
+    { name: '📦 Gesamt zurücklegen', basis: '–', satz: '–', betrag: ustZahllast+est+gst+soli, faell: 'Laufend auf Rücklagenkonto', info: '🏦 Separates Konto empfohlen' },
+  ];
+  document.getElementById('ruecklagen-table').innerHTML = rl.map((r, i) => {
+    const isTotal = i === rl.length - 1;
+    const isNeg = r.betrag < 0;
+    return `<tr style="${isTotal?'font-weight:700;background:#f0fdf4':''}">
+      <td>${r.name}</td>
+      <td style="font-size:11px;color:var(--text-muted)">${r.basis}</td>
+      <td><span class="badge badge-gray">${r.satz}</span></td>
+      <td style="color:${isTotal?'#15803d':isNeg?'#16a34a':'#dc2626'};font-weight:600">${isNeg?'+ ':''}€${Math.abs(r.betrag).toFixed(2)}</td>
+      <td style="font-size:11px;color:var(--text-muted)">${r.faell}</td>
+      <td style="font-size:11px;color:var(--text-muted)">${r.info}</td>
+    </tr>`;
+  }).join('');
 }
 
-// ─── Chart ───────────────────────────────────────────────────────────────────
-let chartInst = null, currentRange = '30d', _data = null;
+['s-est','s-gst','s-soli'].forEach(id => {
+  document.getElementById(id).addEventListener('input', calcGewinn);
+});
+calcGewinn();
 
-function buildChart(data) {
-  const ctx = document.getElementById('revenueChart');
+// ——— RETOUREN KALKULATOR ———
+function calcRetoure() {
+  const slider = document.getElementById('ret-vk');
+  if (!slider) return;
+  const vk = parseFloat(slider.value) || 100;
+  document.getElementById('ret-vk-val').textContent = '€' + vk;
+  const fee = vk * 0.122;
+  const ek = vk / 1.25 * 0.9; // approx EK
+  const lost = fee + ek * 0.05; // fee not refunded + restocking
+  const fmt = v => '€' + v.toFixed(2).replace('.', ',');
+  document.getElementById('ret-calc').innerHTML = `
+    <div style="display:flex;justify-content:space-between;padding:8px 12px;background:#fff5f5;border-radius:6px;border:1px solid #fca5a5">
+      <span style="color:#6b7280">Kaufpreis (VK)</span><span style="font-weight:700">${fmt(vk)}</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:8px 12px;background:#f8fafc;border-radius:6px">
+      <span style="color:#6b7280">eBay-Gebühr (nicht erstattbar)</span><span style="font-weight:700;color:#dc2626">− ${fmt(fee)}</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:8px 12px;background:#f8fafc;border-radius:6px">
+      <span style="color:#6b7280">Rücksendekosten (ca.)</span><span style="font-weight:700;color:#dc2626">− €5,99</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:10px 12px;background:#fee2e2;border-radius:6px;border:1px solid #fca5a5">
+      <span style="font-weight:700;color:#dc2626">Verlust durch Retoure</span>
+      <span style="font-weight:800;color:#dc2626">− ${fmt(fee + 5.99)}</span>
+    </div>
+    <div style="font-size:10px;color:#9ca3af;margin-top:4px">
+      * VK wird vollständig erstattet. eBay-Gebühr teils einbehalten. BAB übernimmt oft Rücknahme.
+    </div>
+  `;
+}
+const retSlider = document.getElementById('ret-vk');
+if (retSlider) {
+  retSlider.addEventListener('input', calcRetoure);
+  calcRetoure();
+}
+
+// ——— PRICE CALCULATOR ———
+function calcPrice() {
+  const ek = parseFloat(document.getElementById('ek-input').value) || 100;
+  const vk_netto = ek * 1.25 + 5;
+  const vk_brutto = (vk_netto * 1.19 / 0.79) - 3.99;
+  const fee = vk_brutto * 0.21;
+  const vat = (vk_brutto / 1.19) * 0.19;
+  const profit = vk_brutto - fee - vat - ek;
+  const margin = (profit / vk_brutto * 100);
+  const fmt = v => v.toFixed(2).replace('.', ',') + ' €';
+  document.getElementById('c-ek').textContent = fmt(ek);
+  document.getElementById('c-vknetto').textContent = fmt(vk_netto);
+  document.getElementById('c-vkbrutto').textContent = fmt(vk_brutto);
+  document.getElementById('c-fee').textContent = '− ' + fmt(fee);
+  document.getElementById('c-vat').textContent = '− ' + fmt(vat);
+  document.getElementById('c-profit').textContent = (profit > 0 ? '+ ' : '') + fmt(profit);
+  document.getElementById('c-margin').textContent = margin.toFixed(1) + '%';
+}
+document.addEventListener('input', e => { if (e.target.id === 'ek-input') calcPrice(); });
+calcPrice();
+
+// ——— CHARTS ———
+let priceDist = null;
+function initPriceChart() {
+  const ctx = document.getElementById('priceDistChart');
   if (!ctx) return;
-  if (typeof Chart === 'undefined') {
-    ctx.parentElement.innerHTML = '<div class="empty">Chart.js nicht geladen</div>';
-    return;
-  }
-  if (chartInst) { chartInst.destroy(); chartInst = null; }
-  chartInst = new Chart(ctx, {
-    type:'bar',
-    data:{
-      labels: data.map(d=>d.date),
-      datasets:[
-        {label:'Umsatz',  data:data.map(d=>d.revenue), backgroundColor:'#3b82f620', borderColor:'#3b82f6', borderWidth:1.5, borderRadius:4},
-        {label:'Gewinn',  data:data.map(d=>d.profit),  backgroundColor:'#22c55e28', borderColor:'#22c55e', borderWidth:1.5, borderRadius:4},
-      ]
+  if (priceDist) return;
+  priceDist = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['< €10', '€10–25', '€25–50', '€50–100', '€100–200', '€200–500', '> €500'],
+      datasets: [{ label: 'Anzahl Artikel', data: [98, 178, 98, 193, 210, 290, 201], backgroundColor: ['#ef4444','#f97316','#f59e0b','#eab308','#84cc16','#22c55e','#10b981'], borderRadius: 5, borderSkipped: false }]
     },
-    options:{
-      responsive:true, maintainAspectRatio:false,
-      animation:{duration:600},
-      plugins:{legend:{display:false},tooltip:{
-        backgroundColor:'#12151f',borderColor:'#1e2235',borderWidth:1,
-        callbacks:{label:c=>c.dataset.label+': '+fmt(c.raw)+' €'}
-      }},
-      scales:{
-        x:{grid:{color:'#1e2235'},ticks:{color:'#5a6280',font:{size:9},
-           maxTicksLimit:data.length<=7?7:data.length<=30?10:12}},
-        y:{grid:{color:'#1e2235'},ticks:{color:'#5a6280',font:{size:9},
-           callback:v=>v>=1000?(v/1000).toFixed(1)+'k':v}}
-      }
-    }
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { display: false }, ticks: { font: { size: 10 } } }, y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 } } } } }
   });
 }
 
-function switchChart(range) {
-  currentRange = range;
-  if (!_data) return;
-  document.querySelectorAll('.chart-btn').forEach(b=>{
-    b.classList.toggle('active', b.dataset.range===range);
-  });
-  const map = {'7d':_data.orders.chart_7d,'30d':_data.orders.chart_30d,'90d':_data.orders.chart_90d};
-  buildChart(map[range] || []);
-}
+// Revenue chart
+const ctx1 = document.getElementById('revenueChart').getContext('2d');
+new Chart(ctx1, {
+  type: 'bar',
+  data: {
+    labels: ['7.Jun', '8.Jun', '9.Jun', '10.Jun', '11.Jun', '12.Jun', '13.Jun', '14.Jun', '15.Jun', '16.Jun'],
+    datasets: [
+      { label: 'Abgeschlossen', data: [53.96, 64.96, 0, 0, 55.98, 63.98, 219.98, 0, 0, 0], backgroundColor: '#10b981', borderRadius: 5, borderSkipped: false },
+      { label: 'Offen', data: [0, 0, 0, 0, 0, 0, 0, 0, 279.98, 29.98], backgroundColor: '#f59e0b', borderRadius: 5, borderSkipped: false }
+    ]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 }, boxWidth: 12, padding: 12 } }, tooltip: { callbacks: { label: c => c.dataset.label + ': €' + c.parsed.y.toFixed(2) } } }, scales: { x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } }, y: { stacked: true, grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 }, callback: v => '€' + v } } } }
+});
 
-// ─── Bezahlt-Status ─────────────────────────────────────────────────────────
-function getPaidSet() {
-  try { return new Set(JSON.parse(localStorage.getItem('bab_paid') || '[]')); }
-  catch { return new Set(); }
-}
-function isPaid(orderId) { return getPaidSet().has(orderId); }
-function togglePaid(orderId) {
-  const paid = getPaidSet();
-  paid.add(orderId);
-  localStorage.setItem('bab_paid', JSON.stringify([...paid]));
-  // Row sofort updaten
-  const row = document.getElementById('row_'+orderId);
-  if (row) {
-    row.classList.add('row-paid');
-    row.querySelector('.row-icon').textContent = '✓';
-    row.querySelector('.row-icon').className = 'row-icon icon-teal';
-    const btn = row.querySelector('.pay-btn');
-    if (btn) { btn.textContent = '✓ Bezahlt'; btn.classList.add('paid'); btn.disabled = true; }
-  }
-}
-
-// ─── Gewinn-Dropdown ─────────────────────────────────────────────────────────
-function toggleBreakdown(sku) {
-  const wrap = document.getElementById('pb_'+sku);
-  const btn  = document.getElementById('ic_'+sku);
-  if (!wrap) return;
-  wrap.classList.toggle('open');
-  btn.classList.toggle('open');
-}
-
-function breakdownHTML(p) {
-  const c = p.calc;
-  if (!c) return '<div class="empty">Keine Detaildaten</div>';
-  return `
-    <div class="pb-row"><span>Verkaufspreis</span><span>${eur(c.vk_brutto)}</span></div>
-    <div class="pb-row"><span>− eBay Gebühren (13 %)</span><span class="pb-neg">−${eur(c.ebay_fee)}</span></div>
-    <div class="pb-row"><span>− MwSt.-Anteil (19 %)</span><span class="pb-neg">−${eur(c.vat)}</span></div>
-    <div class="pb-row"><span>− Versand / Handling</span><span class="pb-neg">−${eur(c.ship)}</span></div>
-    <div class="pb-row"><span>− Einkaufspreis</span><span class="pb-neg">−${eur(c.ek)}</span></div>
-    <div class="pb-row total"><span>Gewinn / Stück</span><span class="pb-val pb-pos">${eur(c.profit_u)}</span></div>
-    ${p.sold>1?`<div class="pb-row total"><span>× ${p.sold} Stück</span><span class="pb-val pb-pos">${eur(p.profit)}</span></div>`:''}
-  `;
-}
-
-// ─── Render ──────────────────────────────────────────────────────────────────
-function render(d) {
-  _data = d;
-  const app = document.getElementById('app');
-  const gen = new Date(d.generated_at);
-  document.getElementById('lastUpdate').textContent =
-    'Stand: ' + gen.toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) + ' Uhr';
-
-  const s  = d.orders.stats;
-  const pending = d.pending_orders || {};
-  const flagged = d.flagged_orders || {};
-  const pendingCount = Object.keys(pending).length;
-  const flaggedCount = Object.keys(flagged).length;
-  const rp = d.repricing;
-  const tx = d.orders.tax_reserves;
-  const od = d.orders;
-
-  // Zielwert für Fortschrittsbalken (Monat → 30-Tage-Wert als Basis)
-  const revGoal  = s.total_revenue_30d || 1;
-  const profGoal = s.total_profit_30d  || 1;
-  const ordGoal  = s.total_sales_30d   || 1;
-  const revPct   = Math.min(s.month_revenue / revGoal * 100, 100);
-  const profPct  = Math.min(s.month_profit  / profGoal * 100, 100);
-  const ordPct   = Math.min(s.month_sales   / ordGoal * 100, 100);
-
-  const trackAlert = od.tracking_missing?.length > 0 ? `
-    <div class="alert-banner">
-      <div style="font-size:20px">🚨</div>
-      <div>
-        <div class="alert-title">${od.tracking_missing.length} Bestellung${od.tracking_missing.length>1?'en':''} ohne Tracking</div>
-        <div class="alert-text">${od.tracking_missing.map(t=>t.items[0]+' · '+t.date).join(' &nbsp;|&nbsp; ')}</div>
-      </div>
-    </div>` : '';
-
-  app.innerHTML = `
-    ${trackAlert}
-
-    ${renderPendingOrders(pending, flagged)}
-
-    <!-- Heute -->
-    <div class="section-title">Heute</div>
-    <div class="hero-grid">
-      <div class="hero-card blue animate-in">
-        <div class="hero-label">Bestellungen</div>
-        <div class="hero-value" id="c_today_sales">0</div>
-        <div class="hero-sub">${s.week_sales} diese Woche</div>
-      </div>
-      <div class="hero-card teal animate-in">
-        <div class="hero-label">Umsatz</div>
-        <div class="hero-value" id="c_today_rev">0</div>
-        <div class="hero-sub">${eur(s.week_revenue)} Woche</div>
-      </div>
-      <div class="hero-card green hero-wide animate-in">
-        <div class="hero-label">Gewinn heute</div>
-        <div class="hero-value" id="c_today_prof">0</div>
-        <div class="hero-sub">${eur(s.week_profit)} diese Woche &nbsp;·&nbsp; ${eur(s.month_profit)} diesen Monat</div>
-      </div>
-    </div>
-
-    <!-- Wochenvergleich -->
-    <div class="section-title">Woche vs. Vorwoche</div>
-    <div class="card">
-      <div class="compare-row">
-        <span class="compare-label">Bestellungen</span>
-        <div class="compare-right">
-          <span class="compare-this blue">${s.week_sales}</span>
-          ${deltaHTML(s.week_sales, s.prev_week_sales)}
-        </div>
-      </div>
-      <div class="compare-row">
-        <span class="compare-label">Umsatz</span>
-        <div class="compare-right">
-          <span class="compare-this">${eur(s.week_revenue)}</span>
-          ${deltaHTML(s.week_revenue, s.prev_week_revenue)}
-        </div>
-      </div>
-      <div class="compare-row">
-        <span class="compare-label">Gewinn</span>
-        <div class="compare-right">
-          <span class="compare-this" style="color:var(--green)">${eur(s.week_profit)}</span>
-          ${deltaHTML(s.week_profit, s.prev_week_profit)}
-        </div>
-      </div>
-    </div>
-
-    <!-- Dieser Monat -->
-    <div class="section-title">Dieser Monat</div>
-    <div class="card">
-      <div class="month-progress">
-        <div class="mp-row">
-          <div class="mp-header">
-            <span class="mp-label">Bestellungen</span>
-            <span class="mp-value blue" id="c_month_sales">0</span>
-          </div>
-          <div class="mp-bar"><div class="mp-fill blue" id="bar_orders" style="width:0%"></div></div>
-        </div>
-        <div class="mp-row">
-          <div class="mp-header">
-            <span class="mp-label">Umsatz</span>
-            <span class="mp-value" id="c_month_rev">0</span>
-          </div>
-          <div class="mp-bar"><div class="mp-fill blue" id="bar_rev" style="width:0%"></div></div>
-        </div>
-        <div class="mp-row">
-          <div class="mp-header">
-            <span class="mp-label">Gewinn</span>
-            <span class="mp-value" id="c_month_prof">0</span>
-          </div>
-          <div class="mp-bar"><div class="mp-fill green" id="bar_prof" style="width:0%"></div></div>
-        </div>
-        <div class="mp-row" style="margin-bottom:0">
-          <div class="mp-header">
-            <span class="mp-label">Aktive Listings</span>
-            <span class="mp-value purple" id="c_listings">0</span>
-          </div>
-          <div class="mp-bar"><div class="mp-fill purple" style="width:${Math.min(d.active_listings/1500*100,100).toFixed(1)}%"></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chart -->
-    <div class="section-title">Umsatz & Gewinn</div>
-    <div class="card">
-      <div class="chart-toggle">
-        <button class="chart-btn ${currentRange==='7d'?'active':''}"  data-range="7d"  onclick="switchChart('7d')">7 Tage</button>
-        <button class="chart-btn ${currentRange==='30d'?'active':''}" data-range="30d" onclick="switchChart('30d')">30 Tage</button>
-        <button class="chart-btn ${currentRange==='90d'?'active':''}" data-range="90d" onclick="switchChart('90d')">90 Tage</button>
-      </div>
-      <div class="chart-container"><canvas id="revenueChart"></canvas></div>
-    </div>
-
-    <!-- Auszahlung -->
-    <div class="section-title">Erwartete eBay-Auszahlung</div>
-    <div class="payout-card">
-      <div>
-        <div class="payout-label">Geschätzte Auszahlung</div>
-        <div class="payout-amount" id="c_payout">0</div>
-        <div class="payout-note">Umsatz 30d × 87 % (nach eBay-Gebühren)</div>
-      </div>
-      <div style="font-size:36px">💳</div>
-    </div>
-
-    <!-- Steuer -->
-    <div class="section-title">Steuer-Rücklagen (Monat)</div>
-    <div class="tax-grid">
-      <div class="tax-card">
-        <div class="tax-label">Umsatzsteuer</div>
-        <div class="tax-value" id="c_ust">0</div>
-        <div class="tax-note">19/119 vom Umsatz</div>
-      </div>
-      <div class="tax-card">
-        <div class="tax-label">Einkommensteuer</div>
-        <div class="tax-value" id="c_est">0</div>
-        <div class="tax-note">30 % vom Gewinn</div>
-      </div>
-      <div class="tax-card">
-        <div class="tax-label">Gewerbesteuer</div>
-        <div class="tax-value" id="c_gwst">0</div>
-        <div class="tax-note">15 % vom Gewinn</div>
-      </div>
-      <div class="tax-card total">
-        <div class="tax-label">Gesamt zurücklegen</div>
-        <div class="tax-value" id="c_tax_total">0</div>
-        <div class="tax-note">USt (vom Umsatz) + ESt + GewSt</div>
-      </div>
-    </div>
-
-    <!-- Repricing -->
-    <div class="section-title">Repricing</div>
-    <div class="card">
-      <div class="reprice-head">
-        <span class="reprice-time">
-          ${rp.last_run.timestamp
-            ? new Date(rp.last_run.timestamp).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})
-            : 'Kein Run'}
-        </span>
-        ${rp.last_run.dry_run ? '<span class="badge badge-yellow">DRY-RUN</span>' : '<span class="badge badge-green">LIVE</span>'}
-      </div>
-      <div class="reprice-stats">
-        <div class="reprice-stat"><div class="rs-val" style="color:var(--green)">${rp.last_run.lowered??0}</div><div class="rs-lbl">Gesenkt</div></div>
-        <div class="reprice-stat"><div class="rs-val" style="color:var(--blue)">${rp.last_run.raised??0}</div><div class="rs-lbl">Erhöht</div></div>
-        <div class="reprice-stat"><div class="rs-val" style="color:var(--yellow)">${rp.last_run.skipped_floor??0}</div><div class="rs-lbl">Floor</div></div>
-        <div class="reprice-stat"><div class="rs-val" style="color:var(--red)">${rp.last_run.errors??0}</div><div class="rs-lbl">Fehler</div></div>
-      </div>
-      ${rp.recent_changes.length===0
-        ? '<div class="empty">Keine Preisänderungen</div>'
-        : rp.recent_changes.map(c=>`
-        <div class="list-row">
-          <div class="row-icon ${c.action==='lowered'?'icon-green':'icon-blue'}">${c.action==='lowered'?'↓':'↑'}</div>
-          <div class="row-content">
-            <div class="row-title">${c.title}</div>
-            <div class="row-sub">${eur(c.old)} → <strong>${eur(c.new)}</strong></div>
-          </div>
-          <div class="row-right">
-            <div class="row-value ${c.diff<=0?'green':'red'}">${c.diff>0?'+':''}${eur(c.diff)}</div>
-          </div>
-        </div>`).join('')}
-    </div>
-
-    <!-- BAB -->
-    <div class="section-title">BAB Zahlungsfristen</div>
-    <div class="card">
-      ${od.bab_deadlines.length===0
-        ? '<div class="empty">✓ Keine offenen Fristen</div>'
-        : od.bab_deadlines.map(b=>{
-            const paid = isPaid(b.order_id);
-            return `
-        <div class="list-row ${paid?'row-paid':b.urgent?'deadline-urgent':b.days_left<=5?'deadline-warn':''}" id="row_${b.order_id}">
-          <div class="row-icon ${paid?'icon-teal':b.urgent?'icon-red':b.days_left<=5?'icon-yellow':'icon-blue'}">${paid?'✓':b.urgent?'🔥':b.days_left<=5?'⚠️':'📅'}</div>
-          <div class="row-content">
-            <div class="row-title">${b.items[0]}${b.items.length>1?' +'+(b.items.length-1)+' weitere':''}</div>
-            <div class="row-sub">Fällig ${new Date(b.deadline+'T00:00:00').toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})} · ${b.days_left}d</div>
-            <span class="invoice-badge">📄 ${b.order_id}${b.amount_ek?' · '+eur(b.amount_ek):''}</span>
-          </div>
-          <div class="row-right" style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
-            <div class="row-value ${paid?'':b.urgent?'red':b.days_left<=5?'yellow':''}">${eur(b.amount_ek||0)}</div>
-            <button class="pay-btn ${paid?'paid':''}" onclick="togglePaid('${b.order_id}')" ${paid?'disabled':''}>
-              ${paid?'✓ Bezahlt':'Bezahlt'}
-            </button>
-          </div>
-        </div>`}).join('')}
-    </div>
-
-    <!-- Best Seller -->
-    <div class="section-title">Best Seller — 30 Tage</div>
-    <div class="card">
-      ${od.top_products.length===0
-        ? '<div class="empty">Keine Daten</div>'
-        : od.top_products.map((p,i)=>`
-        <div>
-          <div class="list-row product-row" onclick="toggleBreakdown('${p.sku}')">
-            <div class="row-icon icon-purple" style="font-size:12px;font-weight:800">#${i+1}</div>
-            <div class="row-content">
-              <div class="row-title">${p.title}</div>
-              <div class="row-sub">${p.sold}× &nbsp;·&nbsp; ${eur(p.revenue)} Umsatz</div>
-            </div>
-            <div class="row-right">
-              <div class="row-value" style="color:var(--green)">+${eur(p.profit)}</div>
-              <div style="font-size:11px;color:var(--muted);margin-top:2px">
-                <span id="ic_${p.sku}" class="expand-btn">▾</span>
-              </div>
-            </div>
-          </div>
-          <div id="pb_${p.sku}" class="pb-wrap">
-            <div class="profit-breakdown">${breakdownHTML(p)}</div>
-          </div>
-        </div>`).join('')}
-      <div class="summary-row">
-        <span>Gewinn gesamt (30d)</span>
-        <span style="color:var(--green)" id="c_total_profit">0</span>
-      </div>
-    </div>
-
-    <!-- Letzte Verkäufe -->
-    <div class="section-title">Letzte Verkäufe</div>
-    <div class="card">
-      ${od.recent_sales.length===0
-        ? '<div class="empty">Keine Verkäufe</div>'
-        : od.recent_sales.map(sale=>`
-        <div class="list-row">
-          <div class="row-icon icon-teal">🛒</div>
-          <div class="row-content">
-            <div class="row-title">${sale.title}</div>
-            <div class="row-sub">${sale.date}</div>
-          </div>
-          <div class="row-right">
-            <div class="row-value">${eur(sale.revenue)}</div>
-            <div class="row-sub" style="color:var(--green)">+${eur(sale.profit)}</div>
-          </div>
-        </div>`).join('')}
-    </div>
-  `;
-
-  // ── Count-up Animationen ──
-  setTimeout(() => {
-    countUp(document.getElementById('c_today_sales'), s.today_sales, 600);
-    countUp(document.getElementById('c_today_rev'),   s.today_revenue, 800, '', ' €');
-    countUp(document.getElementById('c_today_prof'),  s.today_profit,  800, '', ' €');
-    countUp(document.getElementById('c_month_sales'), s.month_sales, 700);
-    countUp(document.getElementById('c_month_rev'),   s.month_revenue, 900, '', ' €');
-    countUp(document.getElementById('c_month_prof'),  s.month_profit,  900, '', ' €');
-    countUp(document.getElementById('c_listings'),    d.active_listings, 800);
-    countUp(document.getElementById('c_payout'),      od.expected_payout, 1000, '', ' €');
-    countUp(document.getElementById('c_ust'),         tx.ust_month,  700, '', ' €');
-    countUp(document.getElementById('c_est'),         tx.est_month,  750, '', ' €');
-    countUp(document.getElementById('c_gwst'),        tx.gewst_month, 800, '', ' €');
-    countUp(document.getElementById('c_tax_total'),   tx.total_month, 900, '', ' €');
-    countUp(document.getElementById('c_total_profit'),s.total_profit_30d, 1000, '+', ' €');
-
-    // Balken animieren
-    setTimeout(()=>{
-      const b = document.getElementById('bar_orders');
-      const r = document.getElementById('bar_rev');
-      const p = document.getElementById('bar_prof');
-      if(b) b.style.width = ordPct.toFixed(1)+'%';
-      if(r) r.style.width = revPct.toFixed(1)+'%';
-      if(p) p.style.width = profPct.toFixed(1)+'%';
-    }, 200);
-
-    // Chart
-    buildChart(currentRange==='7d'?od.chart_7d:currentRange==='90d'?od.chart_90d:od.chart_30d);
-  }, 50);
-}
-
-function timeSince(iso) {
-  try {
-    const mins = Math.floor((Date.now() - new Date(iso)) / 60000);
-    if (mins < 60) return 'vor ' + mins + ' Min';
-    return 'vor ' + Math.floor(mins/60) + 'h ' + (mins%60) + 'min';
-  } catch(e) { return ''; }
-}
-
-async function approveOrder(orderId, btn) {
-  btn.disabled = true; btn.textContent = '⏳ Sende...';
-  try {
-    const r = await fetch('http://localhost:8765/api/approve/' + orderId, {method:'POST'});
-    const data = await r.json();
-    if (data.ok) {
-      const card = document.getElementById('pend_' + orderId);
-      if (card) { card.style.opacity = '0.3'; setTimeout(() => card.remove(), 700); }
-    } else {
-      btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
-      alert('Fehler: ' + data.error);
-    }
-  } catch(e) {
-    btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
-    alert('Dashboard-Server nicht erreichbar.\nBitte Terminal öffnen und ausführen:\n\ncd ~/Documents/Dropshipping && python3 order_dashboard.py');
-  }
-}
-
-async function rejectOrder(orderId, btn) {
-  if (!confirm('Bestellung ' + orderId + ' ablehnen? Keine Mail wird gesendet.')) return;
-  btn.disabled = true;
-  try {
-    const r = await fetch('http://localhost:8765/api/reject/' + orderId, {method:'POST'});
-    const data = await r.json();
-    if (data.ok) {
-      const card = document.getElementById('pend_' + orderId);
-      if (card) { card.style.opacity = '0.3'; setTimeout(() => card.remove(), 700); }
-    } else { btn.disabled = false; }
-  } catch(e) {
-    btn.disabled = false;
-    alert('Server nicht erreichbar.\nBitte: python3 order_dashboard.py starten');
-  }
-}
-
-function timeSince(iso) {
-  try {
-    const mins = Math.floor((Date.now() - new Date(iso)) / 60000);
-    if (mins < 60) return 'vor ' + mins + ' Min';
-    return 'vor ' + Math.floor(mins/60) + 'h ' + (mins%60) + 'min';
-  } catch(e) { return ''; }
-}
-
-function renderPendingOrders(pending, flagged) {
-  const pKeys = Object.keys(pending);
-  const fKeys = Object.keys(flagged);
-  if (pKeys.length === 0 && fKeys.length === 0) return '';
-
-  let html = '<div class="section-title">Bestellungen freigeben';
-  if (pKeys.length > 0) html += ' <span class="pending-badge" style="background:#f59e0b18;border:1px solid #f59e0b30;color:var(--yellow)">&#x23F3; ' + pKeys.length + ' wartend</span>';
-  if (fKeys.length > 0) html += ' <span class="pending-badge" style="background:#ef444418;border:1px solid #ef444430;color:var(--red)">&#x26A0;&#xFE0F; ' + fKeys.length + ' Gefahrgut</span>';
-  html += '</div>';
-
-  pKeys.forEach(function(id) {
-    var o = pending[id];
-    var addr = (o.address || {});
-    html += '<div class="card pending-card" id="pend_' + id + '">';
-    html += '<div class="list-row">';
-    html += '<div class="row-icon icon-yellow">&#x1F4E6;</div>';
-    html += '<div class="row-content">';
-    html += '<div class="row-title">#' + id + '</div>';
-    html += '<div class="row-sub">' + (addr.name||'') + ' &middot; ' + (addr.zip||'') + ' ' + (addr.city||'') + ' &middot; ' + (addr.country||'') + '</div>';
-    html += '</div>';
-    html += '<div class="row-right">';
-    html += '<div class="row-sub">' + (o.creationDate||'').slice(0,10) + '</div>';
-    if (o.pending_since) html += '<div class="row-sub" style="color:var(--yellow)">' + timeSince(o.pending_since) + '</div>';
-    html += '</div></div>';
-    (o.lineItems || []).forEach(function(item) {
-      html += '<div style="padding:5px 14px 5px 58px;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)">';
-      html += '<span style="font-family:monospace;color:var(--blue)">' + (item.sku||'') + '</span>';
-      html += ' &nbsp;&middot;&nbsp; ' + (item.quantity||1) + '&times;';
-      html += ' &nbsp;&middot;&nbsp; ' + (item.title||'');
-      html += '</div>';
-    });
-    html += '<div style="display:flex;gap:8px;padding:10px 14px">';
-    html += '<button class="approve-btn" onclick="approveOrder(\'' + id + '\', this)">&#x2705; Freigeben &rarr; BAB</button>';
-    html += '<button class="reject-btn"  onclick="rejectOrder(\'' + id + '\', this)">&#x274C; Ablehnen</button>';
-    html += '</div></div>';
-  });
-
-  if (fKeys.length > 0) {
-    html += '<div class="card" style="border-left:3px solid var(--red)">';
-    fKeys.forEach(function(id) {
-      var f = flagged[id];
-      html += '<div class="list-row">';
-      html += '<div class="row-icon icon-red">&#x26A0;&#xFE0F;</div>';
-      html += '<div class="row-content">';
-      html += '<div class="row-title">#' + id + '</div>';
-      html += '<div class="row-sub" style="color:var(--red)">' + (f.reason||'Gefahrgut') + '</div>';
-      html += '<div class="row-sub">' + (f.items||[]).map(function(i){return i.title||i.sku||'';}).join(', ') + '</div>';
-      html += '</div></div>';
-    });
-    html += '</div>';
-  }
-  return html;
-}
-
-async function approveOrder(orderId, btn) {
-  btn.disabled = true; btn.textContent = '⏳ Sende...';
-  try {
-    const r = await fetch('http://localhost:8765/api/approve/' + orderId, {method:'POST'});
-    const data = await r.json();
-    if (data.ok) {
-      const card = document.getElementById('pend_' + orderId);
-      if (card) { card.style.opacity = '0.3'; setTimeout(function(){card.remove();}, 700); }
-    } else {
-      btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
-      alert('Fehler: ' + data.error);
-    }
-  } catch(e) {
-    btn.disabled = false; btn.textContent = '✅ Freigeben → BAB';
-    alert('Server nicht erreichbar.\nBitte starten:\ncd ~/Documents/Dropshipping && python3 order_dashboard.py');
-  }
-}
-
-async function rejectOrder(orderId, btn) {
-  if (!confirm('Bestellung ' + orderId + ' ablehnen? Keine Mail wird gesendet.')) return;
-  btn.disabled = true;
-  try {
-    const r = await fetch('http://localhost:8765/api/reject/' + orderId, {method:'POST'});
-    const data = await r.json();
-    if (data.ok) {
-      const card = document.getElementById('pend_' + orderId);
-      if (card) { card.style.opacity = '0.3'; setTimeout(function(){card.remove();}, 700); }
-    } else { btn.disabled = false; }
-  } catch(e) { btn.disabled = false; alert('Server nicht erreichbar.'); }
-}
-
-function loadData() {
-  if (window.DASHBOARD_DATA) {
-    render(window.DASHBOARD_DATA);
-  } else {
-    document.getElementById('app').innerHTML = `
-      <div class="loading">
-        <div style="font-size:40px;margin-bottom:12px">⚠️</div>
-        <div style="color:var(--text);margin-bottom:6px">Daten nicht gefunden</div>
-        <div style="font-size:11px">dashboard_data.js fehlt –<br>bitte <code>python dashboard_generator.py --mock</code> ausführen</div>
-      </div>`;
-  }
-}
-
-loadData();
-
-// Auto-Refresh: dashboard_data.js alle 5 Minuten neu laden
-function autoRefresh() {
-  const script = document.createElement('script');
-  script.src = 'dashboard_data.js?v=' + Date.now();
-  script.onload = () => {
-    if (window.DASHBOARD_DATA) render(window.DASHBOARD_DATA);
-    document.head.removeChild(script);
-  };
-  document.head.appendChild(script);
-}
-setInterval(autoRefresh, 5 * 60 * 1000);
+// Category chart
+const ctx2 = document.getElementById('categoryChart').getContext('2d');
+new Chart(ctx2, {
+  type: 'doughnut',
+  data: {
+    labels: ['Netzwerk/IT', 'Audio/AV', 'Kabel/USB', 'Drucker', 'Sonstiges'],
+    datasets: [{ data: [279.98, 219.98, 119.92, 63.98, 85.94], backgroundColor: ['#3b82f6','#10b981','#f59e0b','#8b5cf6','#94a3b8'], borderWidth: 2, borderColor: '#fff' }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, cutout: '65%', plugins: { legend: { position: 'bottom', labels: { font: { size: 10 }, boxWidth: 10, padding: 8 } } } }
+});
 </script>
 </body>
 </html>
