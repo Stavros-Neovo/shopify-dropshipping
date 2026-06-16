@@ -310,6 +310,7 @@
     <div class="nav-item" onclick="showSection('fehler', this)"><span class="icon">🔧</span> Fehlerbehebung <span class="nbadge amber">15</span></div>
     <div class="nav-section">Finanzen</div>
     <div class="nav-item" onclick="showSection('gewinn', this)"><span class="icon">💹</span> Gewinn & Steuern</div>
+    <div class="nav-item" onclick="showSection('rechnungen', this)"><span class="icon">💸</span> BAB Rechnungen <span class="nbadge amber" id="nav-rech-badge">–</span></div>
     <div class="nav-item" onclick="showSection('retouren', this)"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
     <div class="nav-section">Tools</div>
     <div class="nav-item" onclick="showSection('repricer', this)"><span class="icon">▶️</span> Repricer</div>
@@ -1073,6 +1074,61 @@
 
   </div><!-- /section-health -->
 
+  <!-- ═══════════════════════════════════ BAB RECHNUNGEN ═══════════════════════════════════ -->
+  <div class="section" id="section-rechnungen">
+
+    <!-- KPI Zeile -->
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card red"><div class="kpi-label">💸 Offen</div><div class="kpi-value" id="rech-offen-count" style="color:var(--red)">–</div><div class="kpi-sub" id="rech-offen-sum">–</div></div>
+      <div class="kpi-card green"><div class="kpi-label">✅ Bezahlt</div><div class="kpi-value" id="rech-paid-count" style="color:var(--green)">–</div><div class="kpi-sub" id="rech-paid-sum">–</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">📦 Gesamt</div><div class="kpi-value" id="rech-total-count">–</div><div class="kpi-sub" id="rech-total-sum">–</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">🏦 BAB Konto</div><div class="kpi-value" style="font-size:13px;letter-spacing:0">Überweisung</div><div class="kpi-sub">Auf Rechnung · Zahlungsziel 14 Tage</div></div>
+    </div>
+
+    <!-- Neue Rechnung hinzufügen -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header"><div><div class="card-title">Rechnung eintragen</div><div class="card-subtitle">Neue BAB-Rechnung manuell erfassen</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:10px;align-items:end;flex-wrap:wrap">
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">eBay Bestell-Nr.</label>
+            <input id="rech-order-id" type="text" placeholder="18-14766-10957" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace">
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">SKU</label>
+            <input id="rech-sku" type="text" placeholder="HHWM0023" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace">
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">EK-Betrag (€)</label>
+            <input id="rech-betrag" type="number" step="0.01" placeholder="107.08" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px">
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">Rechnungsdatum</label>
+            <input id="rech-datum" type="date" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px">
+          </div>
+          <button class="btn btn-primary" style="padding:8px 16px;white-space:nowrap" onclick="rechAddEntry()">+ Hinzufügen</button>
+        </div>
+        <div id="rech-add-msg" style="font-size:12px;margin-top:8px;min-height:16px"></div>
+      </div>
+    </div>
+
+    <!-- Rechnungsliste -->
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">Rechnungsübersicht</div><div class="card-subtitle">Alle BAB-Rechnungen · gespeichert im Browser</div></div>
+        <button class="btn" style="padding:6px 12px;font-size:12px;background:var(--card-bg);border:1px solid var(--border)" onclick="rechExportCSV()">📥 CSV Export</button>
+      </div>
+      <div class="card-body no-pad">
+        <table id="rech-table">
+          <thead><tr><th>Datum</th><th>Bestell-Nr.</th><th>SKU</th><th>EK (€)</th><th>Fälligkeit</th><th>Status</th><th>Aktion</th></tr></thead>
+          <tbody id="rech-tbody"></tbody>
+        </table>
+        <div id="rech-empty" style="padding:32px;text-align:center;color:var(--text-sub);font-size:13px;display:none">Noch keine Rechnungen eingetragen</div>
+      </div>
+    </div>
+
+  </div><!-- /section-rechnungen -->
+
 </div><!-- /main -->
 
 <!-- ═══ MOBILE NAV OVERLAY (Hamburger Drawer) ═══ -->
@@ -1095,6 +1151,7 @@
       <div class="nav-item" onclick="mobileNav('fehler')"><span class="icon">🔧</span> Fehlerbehebung <span class="nbadge amber">15</span></div>
       <div class="nav-section">Finanzen</div>
       <div class="nav-item" onclick="mobileNav('gewinn')"><span class="icon">💹</span> Gewinn & Steuern</div>
+      <div class="nav-item" onclick="mobileNav('rechnungen')"><span class="icon">💸</span> BAB Rechnungen</div>
       <div class="nav-item" onclick="mobileNav('retouren')"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
       <div class="nav-section">Tools</div>
       <div class="nav-item" onclick="mobileNav('repricer')"><span class="icon">▶️</span> Repricer</div>
@@ -1128,7 +1185,8 @@ const titles = {
   lister: ['Smart Lister', '1.268 BAB-Artikel neu listen · Schritt 4'],
   forwarder: ['Order Forwarder', 'Automatische Bestellweiterleitung an BAB'],
   health:    ['System Health', 'Deep-Check aller Komponenten · 4× täglich · 15min Auto-Refresh'],
-  gewinn: ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
+  gewinn:     ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
+  rechnungen: ['BAB Rechnungen', 'Offene Rechnungen an BAB Distribution bezahlen'],
   retouren: ['Retouren & Stornos', 'Echtdaten aus eBay API · Auswirkung auf Gewinn'],
 };
 
@@ -1651,6 +1709,150 @@ function updateListerTab(checks) {
       `<span style="color:${col};font-weight:700">${wf.status==='ok'?'✅':'⚠️'} ${wf.detail}</span>`;
   }
 }
+
+// ═══════════════════════════════════════════════════════════
+// BAB RECHNUNGEN
+// ═══════════════════════════════════════════════════════════
+const RECH_KEY = 'neodeals_bab_rechnungen';
+
+function rechLoad() {
+  try { return JSON.parse(localStorage.getItem(RECH_KEY) || '[]'); }
+  catch { return []; }
+}
+function rechSave(data) { localStorage.setItem(RECH_KEY, JSON.stringify(data)); }
+
+function rechRender() {
+  const data = rechLoad();
+  const tbody = document.getElementById('rech-tbody');
+  const empty = document.getElementById('rech-empty');
+  if (!tbody) return;
+
+  tbody.innerHTML = '';
+  if (data.length === 0) {
+    empty.style.display = 'block';
+    document.getElementById('rech-table').style.display = 'none';
+  } else {
+    empty.style.display = 'none';
+    document.getElementById('rech-table').style.display = '';
+  }
+
+  let offenCount = 0, offenSum = 0, paidCount = 0, paidSum = 0;
+
+  data.sort((a,b) => new Date(b.datum) - new Date(a.datum)).forEach((r, i) => {
+    const faellig = new Date(r.datum);
+    faellig.setDate(faellig.getDate() + 14);
+    const faelligStr = faellig.toLocaleDateString('de-DE');
+    const isOverdue = !r.paid && faellig < new Date();
+    const paid = r.paid;
+
+    if (paid) { paidCount++; paidSum += r.betrag; }
+    else { offenCount++; offenSum += r.betrag; }
+
+    const tr = document.createElement('tr');
+    tr.style.opacity = paid ? '0.6' : '1';
+    tr.innerHTML = `
+      <td>${new Date(r.datum).toLocaleDateString('de-DE')}</td>
+      <td style="font-family:monospace;font-size:11px">${r.orderId || '–'}</td>
+      <td><span class="badge badge-gray">${r.sku || '–'}</span></td>
+      <td style="font-weight:700;color:${paid?'var(--text-sub)':'var(--red)'}">€${r.betrag.toFixed(2)}</td>
+      <td style="color:${isOverdue?'var(--red)':paid?'var(--text-sub)':'var(--text-main)'}">
+        ${paid ? '–' : faelligStr + (isOverdue ? ' ⚠️' : '')}
+      </td>
+      <td>${paid
+        ? '<span class="badge badge-green">✅ Bezahlt</span>'
+        : (isOverdue
+            ? '<span class="badge badge-red">❌ Überfällig</span>'
+            : '<span class="badge badge-amber">⏳ Offen</span>')}</td>
+      <td style="display:flex;gap:6px">
+        ${!paid ? `<button class="btn btn-primary" style="font-size:11px;padding:4px 10px" onclick="rechMarkPaid(${i})">✅ Bezahlt</button>` : ''}
+        <button class="btn" style="font-size:11px;padding:4px 8px;background:var(--card-bg);border:1px solid var(--border)" onclick="rechDelete(${i})">🗑</button>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+
+  // KPIs
+  document.getElementById('rech-offen-count').textContent = offenCount;
+  document.getElementById('rech-offen-sum').textContent = `€${offenSum.toFixed(2)} ausstehend`;
+  document.getElementById('rech-paid-count').textContent = paidCount;
+  document.getElementById('rech-paid-sum').textContent = `€${paidSum.toFixed(2)} bezahlt`;
+  document.getElementById('rech-total-count').textContent = data.length;
+  document.getElementById('rech-total-sum').textContent = `€${(offenSum+paidSum).toFixed(2)} gesamt`;
+
+  // Nav Badge
+  const badge = document.getElementById('nav-rech-badge');
+  if (badge) {
+    badge.textContent = offenCount > 0 ? `${offenCount} offen` : '✓';
+    badge.className = 'nbadge ' + (offenCount > 0 ? 'amber' : 'green');
+  }
+}
+
+function rechAddEntry() {
+  const orderId = document.getElementById('rech-order-id').value.trim();
+  const sku     = document.getElementById('rech-sku').value.trim();
+  const betrag  = parseFloat(document.getElementById('rech-betrag').value);
+  const datum   = document.getElementById('rech-datum').value;
+  const msg     = document.getElementById('rech-add-msg');
+
+  if (!betrag || !datum) {
+    msg.textContent = '⚠️ EK-Betrag und Datum sind Pflichtfelder.';
+    msg.style.color = 'var(--red)';
+    return;
+  }
+
+  const data = rechLoad();
+  data.push({ orderId, sku, betrag, datum, paid: false, paidAt: null });
+  rechSave(data);
+  rechRender();
+
+  // Felder leeren
+  ['rech-order-id','rech-sku','rech-betrag','rech-datum'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  msg.textContent = '✅ Rechnung eingetragen.';
+  msg.style.color = 'var(--green)';
+  setTimeout(() => { msg.textContent = ''; }, 3000);
+}
+
+function rechMarkPaid(idx) {
+  const data = rechLoad();
+  const sorted = [...data].sort((a,b) => new Date(b.datum) - new Date(a.datum));
+  const entry = sorted[idx];
+  const realIdx = data.findIndex(d => d.orderId === entry.orderId && d.datum === entry.datum && d.betrag === entry.betrag);
+  if (realIdx >= 0) {
+    data[realIdx].paid = true;
+    data[realIdx].paidAt = new Date().toISOString();
+    rechSave(data);
+    rechRender();
+  }
+}
+
+function rechDelete(idx) {
+  if (!confirm('Eintrag wirklich löschen?')) return;
+  const data = rechLoad();
+  const sorted = [...data].sort((a,b) => new Date(b.datum) - new Date(a.datum));
+  const entry = sorted[idx];
+  const realIdx = data.findIndex(d => d.orderId === entry.orderId && d.datum === entry.datum && d.betrag === entry.betrag);
+  if (realIdx >= 0) { data.splice(realIdx, 1); rechSave(data); rechRender(); }
+}
+
+function rechExportCSV() {
+  const data = rechLoad();
+  if (!data.length) return;
+  const rows = [['Datum','Bestell-Nr.','SKU','EK (EUR)','Fälligkeit','Status','Bezahlt am']];
+  data.sort((a,b) => new Date(b.datum)-new Date(a.datum)).forEach(r => {
+    const faellig = new Date(r.datum); faellig.setDate(faellig.getDate()+14);
+    rows.push([r.datum, r.orderId||'', r.sku||'', r.betrag.toFixed(2),
+      faellig.toISOString().split('T')[0], r.paid?'Bezahlt':'Offen', r.paidAt||'']);
+  });
+  const csv = rows.map(r => r.join(';')).join('\n');
+  const a = document.createElement('a');
+  a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+  a.download = `bab_rechnungen_${new Date().toISOString().split('T')[0]}.csv`;
+  a.click();
+}
+
+// Initial render
+document.addEventListener('DOMContentLoaded', rechRender);
 
 // Initial load + 15min auto-refresh
 loadHealthReport();
