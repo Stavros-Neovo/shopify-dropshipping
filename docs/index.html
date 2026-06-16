@@ -315,6 +315,7 @@
     <div class="nav-item" onclick="showSection('repricer', this)"><span class="icon">▶️</span> Repricer</div>
     <div class="nav-item" onclick="showSection('lister', this)"><span class="icon">🚀</span> Smart Lister</div>
     <div class="nav-item" onclick="showSection('forwarder', this)"><span class="icon">📧</span> Order Forwarder</div>
+    <div class="nav-item" onclick="showSection('health', this)" id="nav-health"><span class="icon">🩺</span> System Health <span class="nbadge green" id="nav-health-badge">–</span></div>
   </div>
   <div class="sidebar-footer">
     <span class="live-dot"></span>Zuletzt: 16.06.2026, 12:46
@@ -980,6 +981,69 @@
     </div>
   </div>
 
+  <!-- ═══ SYSTEM HEALTH ═══ -->
+  <div class="section" id="section-health">
+
+    <!-- PAT + Trigger Row -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header">
+        <div>
+          <div class="card-title">GitHub Workflow Trigger</div>
+          <div class="card-subtitle">Workflows manuell starten · PAT wird nur im Speicher gehalten, nie gespeichert</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span id="health-last-updated" style="font-size:11px;color:var(--text-sub)">Noch nicht geladen</span>
+          <button class="btn btn-primary" style="padding:6px 14px;font-size:12px" onclick="loadHealthReport(true)">↺ Jetzt</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <!-- PAT input -->
+        <div style="display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap">
+          <label style="font-size:13px;font-weight:600;white-space:nowrap">GitHub PAT:</label>
+          <input id="gh-pat-input" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+            style="flex:1;min-width:220px;padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace"
+            oninput="ghPAT=this.value;updatePatStatus()" />
+          <span id="pat-status" style="font-size:12px;color:var(--text-sub)">Nicht gesetzt</span>
+        </div>
+        <!-- Trigger buttons -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px">
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 12px" onclick="triggerWorkflow('hourly_sync.yml','Hourly Sync')">▶ Hourly Sync</button>
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 12px" onclick="triggerWorkflow('order_forwarder.yml','Order Forwarder')">▶ Order Forwarder</button>
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 12px" onclick="triggerWorkflow('reprice.yml','Repricer')">▶ Repricer</button>
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 12px" onclick="triggerWorkflow('smart_lister.yml','Smart Lister')">▶ Smart Lister</button>
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 12px" onclick="triggerWorkflow('purge_non_bab.yml','Purge Non-BAB')">▶ Purge Non-BAB</button>
+          <button class="btn btn-primary" style="font-size:12px;padding:8px 12px" onclick="triggerWorkflow('health_check.yml','Health Check')">▶ Health Check</button>
+        </div>
+        <div id="trigger-log" style="margin-top:10px;font-size:12px;font-family:monospace;color:var(--text-sub);min-height:18px"></div>
+      </div>
+    </div>
+
+    <!-- Overall Status Banner -->
+    <div id="health-banner" style="padding:14px 18px;border-radius:10px;font-weight:700;font-size:15px;margin-bottom:16px;display:flex;align-items:center;gap:10px;background:var(--card-bg);border:1px solid var(--border)">
+      <span id="health-banner-icon">⏳</span>
+      <span id="health-banner-text">Lade Health Report …</span>
+    </div>
+
+    <!-- Summary KPIs -->
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card green"><div class="kpi-label">✅ OK</div><div class="kpi-value" id="hc-ok" style="color:var(--green)">–</div><div class="kpi-sub">Checks bestanden</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">⚠️ Warnungen</div><div class="kpi-value" id="hc-warn" style="color:#f59e0b">–</div><div class="kpi-sub">Prüfen</div></div>
+      <div class="kpi-card red"><div class="kpi-label">❌ Fehler</div><div class="kpi-value" id="hc-err" style="color:var(--red)">–</div><div class="kpi-sub">Sofort beheben</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">🕐 Letzter Check</div><div class="kpi-value" id="hc-age" style="font-size:22px">–</div><div class="kpi-sub" id="hc-ts">–</div></div>
+    </div>
+
+    <!-- Check Results Grid -->
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Alle System-Checks</div><div class="card-subtitle">Automatisch generiert von system_health_check.py</div></div></div>
+      <div class="card-body">
+        <div id="health-checks-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px">
+          <div style="color:var(--text-sub);font-size:13px;padding:20px 0">Lädt …</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /section-health -->
+
 </div><!-- /main -->
 
 <!-- ═══ MOBILE NAV OVERLAY (Hamburger Drawer) ═══ -->
@@ -1007,6 +1071,7 @@
       <div class="nav-item" onclick="mobileNav('repricer')"><span class="icon">▶️</span> Repricer</div>
       <div class="nav-item" onclick="mobileNav('lister')"><span class="icon">🚀</span> Smart Lister</div>
       <div class="nav-item" onclick="mobileNav('forwarder')"><span class="icon">📧</span> Order Forwarder</div>
+      <div class="nav-item" onclick="mobileNav('health')"><span class="icon">🩺</span> System Health</div>
     </div>
     <div class="sidebar-footer"><span class="live-dot"></span>16.06.2026, 12:46</div>
   </div>
@@ -1033,6 +1098,7 @@ const titles = {
   repricer: ['Repricer', 'Preise aktualisieren · Schritt 3'],
   lister: ['Smart Lister', '1.268 BAB-Artikel neu listen · Schritt 4'],
   forwarder: ['Order Forwarder', 'Automatische Bestellweiterleitung an BAB'],
+  health:    ['System Health', 'Deep-Check aller Komponenten · 4× täglich · 15min Auto-Refresh'],
   gewinn: ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
   retouren: ['Retouren & Stornos', 'Echtdaten aus eBay API · Auswirkung auf Gewinn'],
 };
@@ -1315,6 +1381,186 @@ window.showSection = function(id, el) {
   const moreBtn = document.getElementById('mb-more');
   if (moreBtn) moreBtn.classList.toggle('active', !BOTTOM_NAV_IDS.includes(id));
 };
+
+// ═══════════════════════════════════════════════════════════
+// SYSTEM HEALTH  ─ Auto-Refresh + Workflow Trigger
+// ═══════════════════════════════════════════════════════════
+
+// GitHub PAT (stored in memory only, never persisted)
+let ghPAT = '';
+const REPO_OWNER = 'Stavros-Neovo';
+const REPO_NAME  = 'shopify-dropshipping';
+
+function updatePatStatus() {
+  const el = document.getElementById('pat-status');
+  if (!el) return;
+  el.textContent = ghPAT.length > 10 ? '✅ Gesetzt' : 'Nicht gesetzt';
+  el.style.color  = ghPAT.length > 10 ? 'var(--green)' : 'var(--text-sub)';
+}
+
+async function triggerWorkflow(workflowFile, label) {
+  const log = document.getElementById('trigger-log');
+  if (!ghPAT) {
+    log.textContent = '⚠️ Bitte zuerst GitHub PAT eingeben.';
+    return;
+  }
+  log.textContent = `⏳ Starte ${label} …`;
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/actions/workflows/${workflowFile}/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${ghPAT}`,
+          'Accept': 'application/vnd.github+json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+    if (res.status === 204) {
+      log.textContent = `✅ ${label} gestartet! GitHub Actions läuft … (prüfe Actions-Tab)`;
+      log.style.color = 'var(--green)';
+    } else {
+      const txt = await res.text();
+      log.textContent = `❌ Fehler ${res.status}: ${txt.slice(0,120)}`;
+      log.style.color = 'var(--red)';
+    }
+  } catch (e) {
+    log.textContent = `❌ Netzwerkfehler: ${e.message}`;
+    log.style.color = 'var(--red)';
+  }
+}
+
+const CHECK_LABELS = {
+  repricer_last_run:            '⚙️ Repricer – letzter Run',
+  repricer_errors:              '⚙️ Repricer – Fehler',
+  orders_processed:             '📦 Bestellungen verarbeitet',
+  orders_pending:               '📦 Bestellungen pending',
+  orders_flagged:               '📦 Bestellungen flagged',
+  sync_state:                   '🔄 Sync State',
+  banned_skus_count:            '🚫 Makita-Sperre (Anzahl)',
+  banned_in_supplier_map:       '🚫 Makita in supplier_map',
+  supplier_map_bab:             '📋 Supplier Map – BAB',
+  supplier_map_non_bab:         '📋 Supplier Map – Non-BAB',
+  workflow_hourly_sync:         '▶ Workflow: Hourly Sync',
+  workflow_order_forwarder:     '▶ Workflow: Order Forwarder',
+  workflow_reprice:             '▶ Workflow: Repricer',
+  workflow_smart_lister:        '▶ Workflow: Smart Lister',
+  workflow_hourly_matrixify_csv:'▶ Workflow: Matrixify CSV',
+  smtp:                         '📧 SMTP-Verbindung',
+  github_api:                   '🐙 GitHub API',
+};
+
+const STATUS_COLOR = { ok: 'var(--green)', warn: '#f59e0b', error: 'var(--red)' };
+const STATUS_ICON  = { ok: '✅', warn: '⚠️', error: '❌' };
+const STATUS_BG    = { ok: 'rgba(16,185,129,.08)', warn: 'rgba(245,158,11,.08)', error: 'rgba(239,68,68,.08)' };
+
+function renderHealthChecks(data) {
+  const checks = data.checks || {};
+  const summary = data.summary || {};
+  const overall = data.overall || 'ok';
+  const generatedAt = data.generated_at || '';
+
+  // Banner
+  const banner = document.getElementById('health-banner');
+  if (banner) {
+    const bannerColors = { ok:'rgba(16,185,129,.15)', warn:'rgba(245,158,11,.15)', error:'rgba(239,68,68,.15)' };
+    banner.style.background = bannerColors[overall] || 'var(--card-bg)';
+    banner.style.border = `1px solid ${STATUS_COLOR[overall]}`;
+    document.getElementById('health-banner-icon').textContent = STATUS_ICON[overall] || '❓';
+    document.getElementById('health-banner-text').textContent = overall === 'ok'
+      ? 'Alle Systeme laufen einwandfrei'
+      : overall === 'warn'
+      ? 'Warnungen vorhanden — System funktioniert, aber Prüfung empfohlen'
+      : '🚨 FEHLER ERKANNT — Sofortige Aktion erforderlich!';
+  }
+
+  // KPIs
+  document.getElementById('hc-ok').textContent   = summary.ok   ?? '–';
+  document.getElementById('hc-warn').textContent = summary.warn ?? '–';
+  document.getElementById('hc-err').textContent  = summary.error ?? '–';
+
+  if (generatedAt) {
+    const d = new Date(generatedAt);
+    const ageMin = Math.round((Date.now() - d.getTime()) / 60000);
+    document.getElementById('hc-age').textContent = ageMin < 60
+      ? `${ageMin} min`
+      : `${(ageMin/60).toFixed(1)} h`;
+    document.getElementById('hc-ts').textContent = d.toLocaleString('de-DE', {timeZone:'Europe/Berlin'});
+  }
+
+  // Nav badge
+  const badge = document.getElementById('nav-health-badge');
+  if (badge) {
+    badge.textContent = summary.error > 0 ? summary.error + ' Fehler'
+                      : summary.warn  > 0 ? summary.warn + ' Warn'
+                      : 'OK';
+    badge.className = 'nbadge ' + (summary.error > 0 ? 'red' : summary.warn > 0 ? 'amber' : 'green');
+  }
+
+  // Last updated label
+  const lbl = document.getElementById('health-last-updated');
+  if (lbl) lbl.textContent = 'Stand: ' + new Date().toLocaleTimeString('de-DE');
+
+  // Check cards
+  const grid = document.getElementById('health-checks-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  const entries = Object.entries(checks);
+  if (entries.length === 0) {
+    grid.innerHTML = '<div style="color:var(--text-sub);font-size:13px">Keine Checks vorhanden.</div>';
+    return;
+  }
+
+  entries.forEach(([key, c]) => {
+    const label = CHECK_LABELS[key] || key;
+    const col   = STATUS_COLOR[c.status] || 'var(--text-sub)';
+    const icon  = STATUS_ICON[c.status]  || '❓';
+    const bg    = STATUS_BG[c.status]    || '';
+
+    const card = document.createElement('div');
+    card.style.cssText = `background:${bg};border:1px solid ${col}33;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px`;
+    card.innerHTML = `
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:16px">${icon}</span>
+        <span style="font-size:13px;font-weight:700;color:var(--text-main);flex:1">${label}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-sub);line-height:1.4">${c.detail || ''}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+async function loadHealthReport(manual = false) {
+  try {
+    const url = `https://stavros-neovo.github.io/shopify-dropshipping/health_report.json?t=${Date.now()}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    renderHealthChecks(data);
+  } catch (e) {
+    const banner = document.getElementById('health-banner');
+    if (banner) {
+      banner.style.background = 'rgba(239,68,68,.1)';
+      banner.style.border = '1px solid var(--red)';
+      document.getElementById('health-banner-icon').textContent = '❌';
+      document.getElementById('health-banner-text').textContent =
+        `Health Report nicht ladbar: ${e.message} — GitHub Pages noch nicht aktiv oder health_check.yml noch nicht gelaufen`;
+    }
+    const lbl = document.getElementById('health-last-updated');
+    if (lbl) lbl.textContent = 'Fehler beim Laden';
+    if (manual) {
+      const log = document.getElementById('trigger-log');
+      if (log) { log.textContent = `⚠️ Konnte health_report.json nicht laden: ${e.message}`; log.style.color='var(--red)'; }
+    }
+  }
+}
+
+// Initial load + 15min auto-refresh
+loadHealthReport();
+setInterval(() => loadHealthReport(), 15 * 60 * 1000);
 </script>
 </body>
 </html>
