@@ -2210,5 +2210,325 @@
     "ean": "0023942301936",
     "title": "Compucessory Tintenpatrone",
     "detected_at": "2026-06-16T00:00:00+00:00"
+  },
+  "CPUA0126": {
+    "ean": "0730143315272",
+    "title": "AMD Ryzen 9 9950X BOX | 100-100001277WOF",
+    "detected_at": "2026-06-16T21:40:01.280877+00:00"
+  },
+  "CPUA0139": {
+    "ean": "0730143318280",
+    "title": "AMD Ryzen 7 9850X3D BOX | 100-100001973WOF",
+    "detected_at": "2026-06-16T21:40:04.390165+00:00"
+  },
+  "CPUI0201": {
+    "ean": "5032037278447",
+    "title": "Intel Cpu Core i5-14600K, box | BX8071514600K",
+    "detected_at": "2026-06-16T21:40:06.773511+00:00"
+  },
+  "CPUI0203": {
+    "ean": "5032037278485",
+    "title": "Intel Cpu Core i7-14700K, box | BX8071514700K",
+    "detected_at": "2026-06-16T21:40:09.249212+00:00"
+  },
+  "CPUI0205": {
+    "ean": "5032037278522",
+    "title": "Intel Cpu Core i9-14900K, box | BX8071514900K",
+    "detected_at": "2026-06-16T21:40:16.986151+00:00"
+  },
+  "CPUI0215": {
+    "ean": "5032037279239",
+    "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+    "detected_at": "2026-06-16T21:40:19.247569+00:00"
+  },
+  "CPUI0222": {
+    "ean": "5032037279130",
+    "title": "Intel Cpu Core i5-14400, box | BX8071514400",
+    "detected_at": "2026-06-16T21:40:23.628893+00:00"
+  },
+  "CPUI0233": {
+    "ean": "5032037282109",
+    "title": "Intel Cpu Ultra 5 245KF, box | BX80768245KF",
+    "detected_at": "2026-06-16T21:40:26.081123+00:00"
+  },
+  "ENAB0012": {
+    "ean": "6972822121178",
+    "title": "Enabot EBO Air2 Plus White",
+    "detected_at": "2026-06-16T21:40:41.395266+00:00"
+  },
+  "HDIS0270": {
+    "ean": "8719706432290",
+    "title": "Seagate IronWolf Pro ST16000NT001 / 16TB",
+    "detected_at": "2026-06-16T21:41:19.164099+00:00"
+  },
+  "HDIS0283": {
+    "ean": "8719706028226",
+    "title": "Seagate ST1000VX013 SkyHawk Surveillance 1TB",
+    "detected_at": "2026-06-16T21:41:46.623071+00:00"
+  },
+  "HDIS0299": {
+    "ean": "8719706022088",
+    "title": "Seagate Exos 7E10 / ST4000NM025B / 4TB / 3,5\"",
+    "detected_at": "2026-06-16T21:42:04.631314+00:00"
+  },
+  "HDIS0313": {
+    "ean": "8719706022064",
+    "title": "Seagate Exos 7E10 / ST2000NM018B / 2TB / 3,5\"",
+    "detected_at": "2026-06-16T21:42:13.709972+00:00"
+  },
+  "HDIS0315": {
+    "ean": "8719706022125",
+    "title": "Seagate Exos 7E10 / ST6000NM020B / 6TB / 3,5\"",
+    "detected_at": "2026-06-16T21:42:16.405064+00:00"
+  },
+  "HDIT0229": {
+    "ean": "4260557512722",
+    "title": "Toshiba S300 Pro Surveillance 3,5\" 10TB Green",
+    "detected_at": "2026-06-16T21:42:43.508477+00:00"
+  },
+  "HDIT0237": {
+    "ean": "4260557513156",
+    "title": "Toshiba MG10ADA10TE / 10TB / 3.5\"",
+    "detected_at": "2026-06-16T21:42:47.537228+00:00"
+  },
+  "HDIW0162": {
+    "ean": "0718037877662",
+    "title": "Western Digital WD161KFGX / 16 TB/ Red Pro",
+    "detected_at": "2026-06-16T21:42:58.998950+00:00"
+  },
+  "HDIW0206": {
+    "ean": "0718037899794",
+    "title": "Western Digital WD40EFPX / 4TB / red plus",
+    "detected_at": "2026-06-16T21:43:01.465685+00:00"
+  },
+  "HDIW0207": {
+    "ean": "0718037899800",
+    "title": "Western Digital WD60EFPX / 6TB / red plus",
+    "detected_at": "2026-06-16T21:43:04.204316+00:00"
+  },
+  "HDIW0212": {
+    "ean": "0718037898339",
+    "title": "Western Digital WD64PURZ / 6 TB",
+    "detected_at": "2026-06-16T21:43:07.482585+00:00"
+  },
+  "HDIW0214": {
+    "ean": "0718037899770",
+    "title": "Western Digital WD20EFPX / 2 TB / red plus",
+    "detected_at": "2026-06-16T21:43:09.863815+00:00"
+  },
+  "HDIW0218": {
+    "ean": "0718037889245",
+    "title": "Western Digital WD85PURZ / 8 TB",
+    "detected_at": "2026-06-16T21:43:12.179864+00:00"
+  },
+  "HDIW0219": {
+    "ean": "0718037902821",
+    "title": "Western Digital WD6005FFBX / 6 TB / Red Pro",
+    "detected_at": "2026-06-16T21:43:14.538348+00:00"
+  },
+  "HDIW0221": {
+    "ean": "0718037902838",
+    "title": "Western Digital WD8005FFBX / 8 TB / Red Pro",
+    "detected_at": "2026-06-16T21:43:16.983371+00:00"
+  },
+  "HDIW0223": {
+    "ean": "0718037901282",
+    "title": "Western Digital WD122KFBX / 12 TB/ Red Pro",
+    "detected_at": "2026-06-16T21:43:19.706598+00:00"
+  },
+  "HDIW0224": {
+    "ean": "0718037901275",
+    "title": "Western Digital WD102PURP /10 TB",
+    "detected_at": "2026-06-16T21:43:22.675750+00:00"
+  },
+  "HDIW0230": {
+    "ean": "0718037906201",
+    "title": "Western Digital WD100EFGX  / 10TB / red plus",
+    "detected_at": "2026-06-16T21:43:30.553881+00:00"
+  },
+  "HDIW0244": {
+    "ean": "0718037901442",
+    "title": "Western Digital WD122KRYZ / 12 TB / GOLD",
+    "detected_at": "2026-06-16T21:43:33.276917+00:00"
+  },
+  "HDXT0224": {
+    "ean": "4260557511268",
+    "title": "Toshiba Canvio Advance 1TB red",
+    "detected_at": "2026-06-16T21:43:41.186559+00:00"
+  },
+  "HDXT0234": {
+    "ean": "4260557511237",
+    "title": "Toshiba Canvio Advance 1TB green",
+    "detected_at": "2026-06-16T21:43:48.676859+00:00"
+  },
+  "HDXT0239": {
+    "ean": "4260557512364",
+    "title": "Toshiba Can. Basics 4TB black 2,5\" USB3.2",
+    "detected_at": "2026-06-16T21:43:55.401138+00:00"
+  },
+  "HDXT0242": {
+    "ean": "4260557513279",
+    "title": "Toshiba Canvio Flex 2TB silver",
+    "detected_at": "2026-06-16T21:43:58.165106+00:00"
+  },
+  "HDXT0244": {
+    "ean": "4260557513262",
+    "title": "Toshiba Canvio Flex 1TB silver",
+    "detected_at": "2026-06-16T21:44:01.245546+00:00"
+  },
+  "HHWB0034": {
+    "ean": "4211125591199",
+    "title": "Beurer HT 80 - Haartrockner/Haarstyler",
+    "detected_at": "2026-06-16T21:44:24.209504+00:00"
+  },
+  "HHWB0035": {
+    "ean": "4211125104047",
+    "title": "Beurer Warmluftbürste rotierend HT 85 ICONIC Pro",
+    "detected_at": "2026-06-16T21:44:26.852457+00:00"
+  },
+  "HHWB4001": {
+    "ean": "3030050179880",
+    "title": "BaByliss Hydro-Fusion Hydro Fusion Smooth & Shape Heißluftbürste",
+    "detected_at": "2026-06-16T21:45:21.302380+00:00"
+  },
+  "HHWB5009": {
+    "ean": "6970229250545",
+    "title": "Beurer Tageslichtlampe TL 35",
+    "detected_at": "2026-06-16T21:45:39.103188+00:00"
+  },
+  "HHWB5014": {
+    "ean": "4211125572112",
+    "title": "Beurer MP41 - Elektrisches Maniküre-/Pediküregerät",
+    "detected_at": "2026-06-16T21:45:50.083832+00:00"
+  },
+  "HHWB5030": {
+    "ean": "4211125375003",
+    "title": "Beurer UB 100 - Wärmeunterbett",
+    "detected_at": "2026-06-16T21:46:01.805440+00:00"
+  },
+  "HHWB5031": {
+    "ean": "4211125370008",
+    "title": "Beurer UB 90 - Wärmeunterbett",
+    "detected_at": "2026-06-16T21:46:04.112393+00:00"
+  },
+  "NASS0085": {
+    "ean": "4711174725991",
+    "title": "Synology DiskStation DS425+ - NAS-Server",
+    "detected_at": "2026-06-16T21:49:41.310220+00:00"
+  },
+  "NETT1002": {
+    "ean": "4779051840151",
+    "title": "Teltonika RUT241 - Wireless Router",
+    "detected_at": "2026-06-16T21:52:01.824209+00:00"
+  },
+  "NETT1003": {
+    "ean": "4779051840168",
+    "title": "Teltonika RUT951 - Wireless Router",
+    "detected_at": "2026-06-16T21:52:04.637720+00:00"
+  },
+  "NETT1048": {
+    "ean": "4779051840915",
+    "title": "Teltonika PR5MEC00 - DIN-Schienenmontagekit",
+    "detected_at": "2026-06-16T21:52:12.732153+00:00"
+  },
+  "NETT1056": {
+    "ean": "4779051843671",
+    "title": "Teltonika TSW200 - Switch",
+    "detected_at": "2026-06-16T21:52:15.906738+00:00"
+  },
+  "NETT1067": {
+    "ean": "4779051840489",
+    "title": "Teltonika RUTM10 - Wireless Router 3-Port-Switch",
+    "detected_at": "2026-06-16T21:52:19.014713+00:00"
+  },
+  "NETT1080": {
+    "ean": "4779051841431",
+    "title": "Teltonika TSW030 - Switch",
+    "detected_at": "2026-06-16T21:52:25.716394+00:00"
+  },
+  "NETT1081": {
+    "ean": "4779051841448",
+    "title": "Teltonika TSW040 - Switch",
+    "detected_at": "2026-06-16T21:52:28.121806+00:00"
+  },
+  "NOCO0021": {
+    "ean": "1210000617286",
+    "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case | Boost Accessories",
+    "detected_at": "2026-06-16T21:52:53.635005+00:00"
+  },
+  "NOCO0024": {
+    "ean": "1210000621047",
+    "title": "NOCO GBC101 | NOCO GBX45 EVA Protection Case | Boost Accessories",
+    "detected_at": "2026-06-16T21:52:56.499085+00:00"
+  },
+  "PETK0047": {
+    "ean": "6975069307107",
+    "title": "Petkit Trinkbrunnen Eversweet Max 2 -100",
+    "detected_at": "2026-06-16T21:53:53.504374+00:00"
+  },
+  "PETK0051": {
+    "ean": "6973293802276",
+    "title": "Petkit Fresh Element SOLO New - Grey",
+    "detected_at": "2026-06-16T21:54:00.616343+00:00"
+  },
+  "PPE0044": {
+    "ean": "4897082668091",
+    "title": "ECOFLOW Infinity Cable",
+    "detected_at": "2026-06-16T21:54:41.856777+00:00"
+  },
+  "PPE0164": {
+    "ean": "4895251625005",
+    "title": "ECOFLOW Delta Pro 3/Delta Pro Extra Battery Cable",
+    "detected_at": "2026-06-16T21:54:51.794344+00:00"
+  },
+  "PPE0222": {
+    "ean": "4895251641289",
+    "title": "ECOFLOW RAPID Pro 20K - Powerbank",
+    "detected_at": "2026-06-16T21:54:54.638354+00:00"
+  },
+  "PPE0228": {
+    "ean": "4895251653831",
+    "title": "ECOFLOW RAPID 25K no build-in cable - Powerbank Black",
+    "detected_at": "2026-06-16T21:54:56.364581+00:00"
+  },
+  "PPE0234": {
+    "ean": "4895251647793",
+    "title": "ECOFLOW RAPID Mag 5K - Powerbank White",
+    "detected_at": "2026-06-16T21:55:03.827096+00:00"
+  },
+  "PPSE0048": {
+    "ean": "4897082669432",
+    "title": "ECOFLOW LFP Battery Power Cable 1,5m",
+    "detected_at": "2026-06-16T21:55:32.206843+00:00"
+  },
+  "PPSE0056": {
+    "ean": "4895251604550",
+    "title": "ECOFLOW Solar adjustable Tilt Mount Bracket",
+    "detected_at": "2026-06-16T21:55:34.430063+00:00"
+  },
+  "RAM4G0011": {
+    "ean": "4719692006417",
+    "title": "G.Skill Ripjaws V - DDR4 - 16 GB 2x8 GB",
+    "detected_at": "2026-06-16T21:56:33.486867+00:00"
+  },
+  "RAM4G0014": {
+    "ean": "4719692015198",
+    "title": "G.Skill TridentZ RGB Series - DDR4 - 16 GB",
+    "detected_at": "2026-06-16T21:56:36.071538+00:00"
+  },
+  "RAM4G0052": {
+    "ean": "4713294223081",
+    "title": "G.Skill DDR4 32GB PC 3600 CL18 KIT (2x16GB) 32GTZR Tri/RGB",
+    "detected_at": "2026-06-16T21:56:51.844970+00:00"
+  },
+  "RAM4G0053": {
+    "ean": "4713294226648",
+    "title": "G.Skill Ripjaws V - DDR4 - 16 GB",
+    "detected_at": "2026-06-16T21:56:54.401051+00:00"
+  },
+  "RAM4G0056": {
+    "ean": "4719692007681",
+    "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+    "detected_at": "2026-06-16T21:56:56.577720+00:00"
   }
 }
