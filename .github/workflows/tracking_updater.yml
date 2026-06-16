@@ -1,0 +1,72 @@
+name: Tracking Updater
+
+on:
+  schedule:
+    - cron: "15 * * * *"   # Jede Stunde :15 (nach dem Order Forwarder bei :00)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run? (true/false)"
+        required: false
+        default: "false"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: ebay-tracking
+  cancel-in-progress: false
+
+jobs:
+  tracking-update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Tracking aus BAB-Mails → eBay posten
+        env:
+          # IMAP (Gmail: imap.gmail.com:993)
+          IMAP_HOST:        "imap.gmail.com"
+          IMAP_PORT:        "993"
+          IMAP_USER:        ${{ secrets.SMTP_USER }}
+          IMAP_PASSWORD:    ${{ secrets.SMTP_PASSWORD }}
+          # SMTP (für Fehlerbenachrichtigungen)
+          SMTP_HOST:        ${{ secrets.SMTP_HOST }}
+          SMTP_PORT:        ${{ secrets.SMTP_PORT }}
+          SMTP_USER:        ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD:    ${{ secrets.SMTP_PASSWORD }}
+          # eBay API
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python ebay_tracking_updater.py --config config_shop2.yaml --dry-run
+          else
+            python ebay_tracking_updater.py --config config_shop2.yaml
+          fi
+
+      - name: State committen (tracked_shipments)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tracked_shipments_*.json || true
+          if git diff --staged --quiet; then echo "Keine neuen Sendungen"; exit 0; fi
+          git commit -m "chore: tracking update $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1
