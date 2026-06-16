@@ -1000,5 +1000,340 @@
     "ean": "4260557513286",
     "title": "Toshiba Canvio Flex 4TB silver",
     "detected_at": "2026-06-16T11:16:58.230576+00:00"
+  },
+  "CPUA0125": {
+    "ean": "0730143315296",
+    "title": "AMD Ryzen 9 9900X BOX | 100-100000662WOF",
+    "detected_at": "2026-06-16T14:01:33.023873+00:00"
+  },
+  "CPUA0135": {
+    "ean": "0730143315579",
+    "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
+    "detected_at": "2026-06-16T14:01:36.010681+00:00"
+  },
+  "CPUI0206": {
+    "ean": "5032037278546",
+    "title": "Intel Cpu Core i9-14900KF, box | BX8071514900KF",
+    "detected_at": "2026-06-16T14:01:40.353437+00:00"
+  },
+  "CPUI0232": {
+    "ean": "5032037282086",
+    "title": "Intel Cpu Ultra 5 245K, box | BX80768245K",
+    "detected_at": "2026-06-16T14:01:44.845080+00:00"
+  },
+  "CPUI0241": {
+    "ean": "5032037282390",
+    "title": "Intel Cpu Ultra 9 285, box | BX80768285",
+    "detected_at": "2026-06-16T14:01:51.868142+00:00"
+  },
+  "CPUI0253": {
+    "ean": "5032037284837",
+    "title": "Intel Cpu Ultra 7 270K, box | BX80768270K",
+    "detected_at": "2026-06-16T14:01:57.638698+00:00"
+  },
+  "ENAB0010": {
+    "ean": "6972822121079",
+    "title": "Enabot EBO Air2 Blue",
+    "detected_at": "2026-06-16T14:02:02.995041+00:00"
+  },
+  "HDIS0241": {
+    "ean": "0763649150474",
+    "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+    "detected_at": "2026-06-16T14:02:25.201663+00:00"
+  },
+  "HDIS0293": {
+    "ean": "8719706022163",
+    "title": "Seagate Exos 7E10  ST8000NM018B / 8TB",
+    "detected_at": "2026-06-16T14:02:53.595997+00:00"
+  },
+  "HDIS0314": {
+    "ean": "8719706027298",
+    "title": "Seagate Exos 7E10 / ST4000NM027B / 4TB / 3,5\"",
+    "detected_at": "2026-06-16T14:03:11.366320+00:00"
+  },
+  "HDIS0322": {
+    "ean": "8719706436830",
+    "title": "Seagate IronWolf Pro ST32000NT000 / 32TB",
+    "detected_at": "2026-06-16T14:03:25.390396+00:00"
+  },
+  "HDIT0238": {
+    "ean": "4260557513149",
+    "title": "Toshiba MG10ADA800E / 8TB / 3.5\"",
+    "detected_at": "2026-06-16T14:03:35.589740+00:00"
+  },
+  "HDIW0165": {
+    "ean": "0718037877501",
+    "title": "Western Digital WD20EZBX / 2TB",
+    "detected_at": "2026-06-16T14:03:48.521645+00:00"
+  },
+  "HDIW0216": {
+    "ean": "0718037899817",
+    "title": "Western Digital WD80EFPX / 8TB / red plus",
+    "detected_at": "2026-06-16T14:03:53.675828+00:00"
+  },
+  "HDIW0220": {
+    "ean": "0718037902814",
+    "title": "Western Digital WD4005FFBX / 4 TB / Red Pro",
+    "detected_at": "2026-06-16T14:03:56.367646+00:00"
+  },
+  "HDIW0232": {
+    "ean": "0718037905754",
+    "title": "Western Digital WD40EFZZ / 4TB / red plus",
+    "detected_at": "2026-06-16T14:04:01.650676+00:00"
+  },
+  "HDIW0233": {
+    "ean": "0718037905730",
+    "title": "Western Digital WD34PURZ / 3 TB",
+    "detected_at": "2026-06-16T14:04:03.815523+00:00"
+  },
+  "HDXT0223": {
+    "ean": "4260557511299",
+    "title": "Toshiba Canvio Advance 1TB white",
+    "detected_at": "2026-06-16T14:04:11.862032+00:00"
+  },
+  "HDXT0225": {
+    "ean": "4260557511213",
+    "title": "Toshiba Canvio Advance 2TB black",
+    "detected_at": "2026-06-16T14:04:14.940500+00:00"
+  },
+  "HDXT0226": {
+    "ean": "4260557511305",
+    "title": "Toshiba Canvio Advance 2TB white",
+    "detected_at": "2026-06-16T14:04:17.395709+00:00"
+  },
+  "HDXT0229": {
+    "ean": "4260557511312",
+    "title": "Toshiba Canvio Advance 4TB white",
+    "detected_at": "2026-06-16T14:04:20.976739+00:00"
+  },
+  "HDXT0235": {
+    "ean": "4260557511244",
+    "title": "Toshiba Canvio Advance 2TB green",
+    "detected_at": "2026-06-16T14:04:27.087252+00:00"
+  },
+  "HDXT0238": {
+    "ean": "4260557512357",
+    "title": "Toshiba Can. Basics 2TB black 2,5\" USB3.2",
+    "detected_at": "2026-06-16T14:04:34.073239+00:00"
+  },
+  "HHWB5006": {
+    "ean": "4211125100834",
+    "title": "Beurer HC 100 Haartrockner Violett",
+    "detected_at": "2026-06-16T14:06:00.259138+00:00"
+  },
+  "HHWB5011": {
+    "ean": "4211125608101",
+    "title": "Beurer TL 80 - Energielicht",
+    "detected_at": "2026-06-16T14:06:08.758406+00:00"
+  },
+  "HHWB5022": {
+    "ean": "4211125100674",
+    "title": "Beurer LB 300 Plus - Luftbefeuchter - Black",
+    "detected_at": "2026-06-16T14:06:12.785709+00:00"
+  },
+  "HHWG1032": {
+    "ean": "5060829516477",
+    "title": "Ghd Mini Paddle Brush - schwarz",
+    "detected_at": "2026-06-16T14:06:46.299231+00:00"
+  },
+  "HHWM5000": {
+    "ean": "6977728947303",
+    "title": "MOVA Z60 Ultra Roller Complete",
+    "detected_at": "2026-06-16T14:07:44.037348+00:00"
+  },
+  "HHWR0018": {
+    "ean": "5038061139082",
+    "title": "Remington Haarschneider HC5020",
+    "detected_at": "2026-06-16T14:07:50.584458+00:00"
+  },
+  "LEGO0041": {
+    "ean": "5702017584478",
+    "title": "LEGO Star Wars Captain Rex Y-Wing Microfighter",
+    "detected_at": "2026-06-16T14:08:16.605921+00:00"
+  },
+  "LEGO0047": {
+    "ean": "5702017584317",
+    "title": "LEGO Star Wars Clone Trooper & Battle Droid Battle Pack 75372",
+    "detected_at": "2026-06-16T14:08:27.624501+00:00"
+  },
+  "LEGO0062": {
+    "ean": "5702017471549",
+    "title": "LEGO Botanical Lotusblumen",
+    "detected_at": "2026-06-16T14:08:30.169853+00:00"
+  },
+  "NASS0084": {
+    "ean": "4711174726004",
+    "title": "Synology DiskStation DS925+ - NAS-Server",
+    "detected_at": "2026-06-16T14:09:19.959059+00:00"
+  },
+  "PETK0003": {
+    "ean": "6973293808896",
+    "title": "Petkit Trinkbrunnen Eversweet Solo 2",
+    "detected_at": "2026-06-16T14:11:36.466538+00:00"
+  },
+  "PETK0021": {
+    "ean": "6973293809190",
+    "title": "Petkit 2 in 1 Trimmer Pro",
+    "detected_at": "2026-06-16T14:11:46.810421+00:00"
+  },
+  "PETK0028": {
+    "ean": "6975069305028",
+    "title": "Petkit Katzenklo Pura Max 2 Premium",
+    "detected_at": "2026-06-16T14:11:56.817147+00:00"
+  },
+  "PETK0035": {
+    "ean": "6973293800258",
+    "title": "Petkit Katzenklo Pura X Lufterfrischer Nachfüller 4x50 ml",
+    "detected_at": "2026-06-16T14:12:03.810640+00:00"
+  },
+  "PETK0038": {
+    "ean": "6975069305240",
+    "title": "Petkit Katzenklo Purobot Ultra Lufterfrischer N60 3 Stk (P9224)",
+    "detected_at": "2026-06-16T14:12:06.373532+00:00"
+  },
+  "PETK0046": {
+    "ean": "6975069307305",
+    "title": "Petkit Trinkbrunnen Eversweet Max - UVC Pump",
+    "detected_at": "2026-06-16T14:12:22.768615+00:00"
+  },
+  "PETK0048": {
+    "ean": "6975069307091",
+    "title": "Petkit Trinkbrunnen Eversweet Max 2 - 100 - UVC Pump",
+    "detected_at": "2026-06-16T14:12:25.117223+00:00"
+  },
+  "PETK0061": {
+    "ean": "6975069306803",
+    "title": "Petkit Urine Monitor Cat Litter  - 4bags",
+    "detected_at": "2026-06-16T14:12:32.761343+00:00"
+  },
+  "PPE0021": {
+    "ean": "4895251603072",
+    "title": "ECOFLOW XT60i Cable 2.5m",
+    "detected_at": "2026-06-16T14:12:54.251030+00:00"
+  },
+  "PPE0030": {
+    "ean": "4895251600293",
+    "title": "ECOFLOW Portable Power Station Grounding Adapter",
+    "detected_at": "2026-06-16T14:12:56.027195+00:00"
+  },
+  "PPE0223": {
+    "ean": "4895251653671",
+    "title": "ECOFLOW RAPID 25K Build-in cable - Powerbank Green",
+    "detected_at": "2026-06-16T14:13:06.925585+00:00"
+  },
+  "PPE0227": {
+    "ean": "4895251653848",
+    "title": "ECOFLOW RAPID 25K no build-in cable - Powerbank Silver",
+    "detected_at": "2026-06-16T14:13:09.156400+00:00"
+  },
+  "PPSE0010": {
+    "ean": "4895251607773",
+    "title": "ECOFLOW AC Cable - DE-Wieland - Charging cable",
+    "detected_at": "2026-06-16T14:13:27.935403+00:00"
+  },
+  "PPSE0013": {
+    "ean": "4897082668619",
+    "title": "ECOFLOW 100W - Solar Panel",
+    "detected_at": "2026-06-16T14:13:31.235673+00:00"
+  },
+  "RAM4G0000": {
+    "ean": "4713294236753",
+    "title": "G.Skill DDR5 32GB PC 6000 CL28 G.Skill KIT (2x16GB) TR5NS NEO RGB",
+    "detected_at": "2026-06-16T14:14:23.926860+00:00"
+  },
+  "RAM4G0001": {
+    "ean": "4719692013439",
+    "title": "G.Skill AEGIS - DDR4 - 8 GB - DIMM 288-PIN",
+    "detected_at": "2026-06-16T14:14:25.709228+00:00"
+  },
+  "RAM4G0002": {
+    "ean": "4719692013446",
+    "title": "G.Skill AEGIS - DDR4 - 16 GB 2x8 GB",
+    "detected_at": "2026-06-16T14:14:27.701116+00:00"
+  },
+  "RAM4G0004": {
+    "ean": "4719692013460",
+    "title": "G.Skill AEGIS - DDR4 - 32 GB 2x16 GB",
+    "detected_at": "2026-06-16T14:14:33.940645+00:00"
+  },
+  "RAM4G0015": {
+    "ean": "4719692015396",
+    "title": "G.Skill TridentZ RGB Series - DDR4 - 32 GB",
+    "detected_at": "2026-06-16T14:14:40.121948+00:00"
+  },
+  "RAM4G0016": {
+    "ean": "4719692015457",
+    "title": "G.Skill TridentZ RGB Series - DDR4 - 16 GB",
+    "detected_at": "2026-06-16T14:14:42.143082+00:00"
+  },
+  "RAM4G0030": {
+    "ean": "4713294220998",
+    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC2666",
+    "detected_at": "2026-06-16T14:14:45.293224+00:00"
+  },
+  "RAM4G0031": {
+    "ean": "4719692007018",
+    "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
+    "detected_at": "2026-06-16T14:14:47.418961+00:00"
+  },
+  "RAM4G0032": {
+    "ean": "4719692019950",
+    "title": "G.Skill Value Series DDR4 8 GB DIMM 288-PIN",
+    "detected_at": "2026-06-16T14:14:49.283569+00:00"
+  },
+  "RAM4G0033": {
+    "ean": "4713294224378",
+    "title": "G.Skill AEGIS - DDR4 - 8 GB - PC3200",
+    "detected_at": "2026-06-16T14:14:50.901470+00:00"
+  },
+  "RAM4G0034": {
+    "ean": "4713294224385",
+    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC3200",
+    "detected_at": "2026-06-16T14:14:52.974325+00:00"
+  },
+  "RAM4G0036": {
+    "ean": "4713294224415",
+    "title": "G.Skill AEGIS - DDR4 - 32 GB - PC3200",
+    "detected_at": "2026-06-16T14:14:58.995406+00:00"
+  },
+  "RAM4G0037": {
+    "ean": "4713294223623",
+    "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
+    "detected_at": "2026-06-16T14:15:00.659436+00:00"
+  },
+  "RAM4G0039": {
+    "ean": "4713294223449",
+    "title": "G.Skill TridentZ Neo Series - DDR4 - 16 GB",
+    "detected_at": "2026-06-16T14:15:02.383158+00:00"
+  },
+  "RAM4G0051": {
+    "ean": "4713294224149",
+    "title": "G.Skill DDR4 32GB PC 4000 CL18 KIT (2x16GB) 32GVK Ripjaws",
+    "detected_at": "2026-06-16T14:15:07.908531+00:00"
+  },
+  "RAM4G0055": {
+    "ean": "4713294226631",
+    "title": "G.Skill Ripjaws - DDR4 - 16 GB 2x8 GB",
+    "detected_at": "2026-06-16T14:15:10.517388+00:00"
+  },
+  "RAM4G0057": {
+    "ean": "4713294226655",
+    "title": "G.Skill DDR4 32GB PC 6000 CL22 KIT (2x16GB) 32GRS Ripjaws",
+    "detected_at": "2026-06-16T14:15:15.474216+00:00"
+  },
+  "RAM4G0059": {
+    "ean": "4719692017727",
+    "title": "G.Skill AEGIS - DDR4 - 8 GB 2400 CL17",
+    "detected_at": "2026-06-16T14:15:18.423159+00:00"
+  },
+  "RAM4G0060": {
+    "ean": "4719692019967",
+    "title": "G.Skill Value Series DDR4 16 GB  2x8GB 2666 CL19",
+    "detected_at": "2026-06-16T14:15:20.313200+00:00"
+  },
+  "RAM4G0063": {
+    "ean": "4719692007667",
+    "title": "G.Skill SO-DIMM Ripjaws - DDR4 - 16 GB 2x8 GB 2400 CL16",
+    "detected_at": "2026-06-16T14:15:26.783045+00:00"
   }
 }
