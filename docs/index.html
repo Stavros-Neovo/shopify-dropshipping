@@ -585,7 +585,7 @@
   <div class="section" id="section-fehler">
     <div class="kpi-grid">
       <div class="kpi-card red"><div class="kpi-label">Listing-Fehler</div><div class="kpi-value" style="color:var(--red)">15</div><div class="kpi-sub">letzter smart_lister Lauf</div></div>
-      <div class="kpi-card amber"><div class="kpi-label">EAN fehlt</div><div class="kpi-value">7</div><div class="kpi-sub">SUPV0067-71, NETT1035, NETU0084</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Bild: Auflösung zu gering</div><div class="kpi-value">7</div><div class="kpi-sub">SUPV0067-71, NETT1035, NETU0084</div></div>
       <div class="kpi-card amber"><div class="kpi-label">Aspekte fehlen</div><div class="kpi-value">3</div><div class="kpi-sub">Prozessormodell CPU-Artikel</div></div>
       <div class="kpi-card blue"><div class="kpi-label">Sonstige</div><div class="kpi-value">5</div><div class="kpi-sub">Wertlimit, Timeout, Kategorie...</div></div>
     </div>
@@ -596,13 +596,13 @@
           <thead><tr><th>SKU</th><th>VK</th><th>Error-ID</th><th>Fehlertyp</th><th>Ursache</th><th>Lösung</th></tr></thead>
           <tbody>
             <tr><td><code>SSDL0040</code></td><td>€221,99</td><td>25002</td><td><span class="badge badge-red">Wertlimit</span></td><td>€426.675 Monatslimit überschritten</td><td>Nach Deaktivierung erneut listen</td></tr>
-            <tr><td><code>SUPV0067</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0068</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0069</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0070</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0071</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>NETT1035</code></td><td>€112,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>NETU0084</code></td><td>€195,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>SUPV0067</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering + EAN war 12-stellig (gefixt → 0023942301875)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0068</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering (Error 25002)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0069</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering + EAN war 12-stellig (gefixt → 0023942301912)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0070</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering (Error 25002)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0071</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering (Error 25002)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>NETT1035</code></td><td>€112,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Teltonika TRM240 — Bild-Auflösung zu gering</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>NETU0084</code></td><td>€195,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>UbiQuiti UniFi G5 — Bild-Auflösung zu gering</td><td>fix_low_res_images läuft automatisch</td></tr>
             <tr><td><code>CPUA0065</code></td><td>€223,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
             <tr><td><code>CPUI0232</code></td><td>€284,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
             <tr><td><code>CPUI0233</code></td><td>€262,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>

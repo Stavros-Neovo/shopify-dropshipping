@@ -2185,5 +2185,30 @@
     "ean": "0023942991045",
     "title": "Verbatim Metal Executive 16GB USB 3.0 gold",
     "detected_at": "2026-06-16T15:14:56.573190+00:00"
+  },
+  "SUPV0067": {
+    "ean": "0023942301875",
+    "title": "Compucessory Tintenpatrone",
+    "detected_at": "2026-06-16T00:00:00+00:00"
+  },
+  "SUPV0068": {
+    "ean": "0023942301882",
+    "title": "Compucessory Tintenpatrone",
+    "detected_at": "2026-06-16T00:00:00+00:00"
+  },
+  "SUPV0069": {
+    "ean": "0023942301912",
+    "title": "Compucessory Tintenpatrone",
+    "detected_at": "2026-06-16T00:00:00+00:00"
+  },
+  "SUPV0070": {
+    "ean": "0023942301929",
+    "title": "Compucessory Tintenpatrone",
+    "detected_at": "2026-06-16T00:00:00+00:00"
+  },
+  "SUPV0071": {
+    "ean": "0023942301936",
+    "title": "Compucessory Tintenpatrone",
+    "detected_at": "2026-06-16T00:00:00+00:00"
   }
 }
