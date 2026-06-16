@@ -470,12 +470,22 @@ def main():
                 processed.add(order_id)  # nicht nochmal flaggen
             continue
 
-        # In pending_orders.json schreiben -- Dashboard entscheidet
-        log.info(f"Neue Bestellung: {order_id} -> wartet auf Dashboard-Freigabe")
-        if not args.dry_run:
-            write_to_pending(order, args.config)
+        # Email senden oder in pending schreiben (je nach auto_send)
+        auto_send = bool(cfg.get("supplier_email", {}).get("auto_send", False))
+        subject, body = build_email(order, shop_name)
+
+        if auto_send and not args.dry_run:
+            try:
+                send_email(cfg, subject, body, dry_run=False)
+                log.info(f"✅ Bestellmail gesendet: {order_id}")
+            except Exception as e:
+                log.error(f"❌ Mail-Fehler für {order_id}: {e} — in pending gespeichert")
+                write_to_pending(order, args.config)
         else:
-            log.info(f"DRY-RUN: wuerde {order_id} in pending_orders.json schreiben")
+            log.info(f"Neue Bestellung: {order_id} -> pending (auto_send={auto_send}, dry_run={args.dry_run})")
+            if not args.dry_run:
+                write_to_pending(order, args.config)
+
         processed.add(order_id)
         new_count += 1
 
