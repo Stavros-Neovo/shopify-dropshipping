@@ -394,16 +394,16 @@
   <!-- ═══════════════════════════════════ BESTELLUNGEN ═══════════════════════════════════ -->
   <div class="section" id="section-orders">
     <div class="kpi-grid">
-      <div class="kpi-card amber"><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">2</div><div class="kpi-sub">Warten auf BAB-Tracking</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">3</div><div class="kpi-sub">Warten auf BAB-Tracking</div></div>
       <div class="kpi-card green"><div class="kpi-label">Abgeschlossene (Juni)</div><div class="kpi-value" style="color:var(--green)">7</div><div class="kpi-sub">€458,86 Umsatz</div></div>
-      <div class="kpi-card blue"><div class="kpi-label">Ø Bestellwert</div><div class="kpi-value">€85,42</div><div class="kpi-sub">alle 9 Bestellungen</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Ø Bestellwert</div><div class="kpi-value">€96,33</div><div class="kpi-sub">alle 10 Bestellungen</div></div>
       <div class="kpi-card blue"><div class="kpi-label">Höchste Bestellung</div><div class="kpi-value">€279,98</div><div class="kpi-sub">NETU0187 · mr.mxa</div></div>
     </div>
 
     <div class="card">
       <div class="card-header"><div><div class="card-title">⏳ Offene Bestellungen — Handlungsbedarf</div></div></div>
       <div class="card-body">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
           <div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
             <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung 1 · 16.06.2026</div>
             <div style="font-size:16px;font-weight:800;margin-bottom:4px">PETK0049</div>
@@ -426,6 +426,17 @@
               ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
             </div>
           </div>
+          <div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
+            <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung 3 · 16.06.2026</div>
+            <div style="font-size:16px;font-weight:800;margin-bottom:4px">HHWM0023</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Bestell-Nr. 18-14766-10957 · cengiz önel</div>
+            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">VK: €152,99</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">EK: €107,08 · Makita Bohrhammer schnurlos · Gewinn: ~€13,78</div>
+            <div style="font-size:11px;color:var(--text-muted)">📧 Email an SSchulze@bab-distribution.de versandt</div>
+            <div style="margin-top:12px;padding:8px;background:#fef3c7;border-radius:6px;font-size:11px;color:#92400e">
+              ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -436,6 +447,7 @@
         <table>
           <thead><tr><th>Datum</th><th>Bestell-Nr.</th><th>Käufer</th><th>SKU</th><th>VK-Preis</th><th>EK (est.)</th><th>Gewinn (netto)</th><th>Status</th></tr></thead>
           <tbody>
+            <tr><td>16.06.</td><td style="font-family:monospace;font-size:11px">18-14766-10957</td><td><strong>cengiz önel</strong></td><td><span class="badge badge-amber">HHWM0023</span></td><td><strong>€152,99</strong></td><td style="color:var(--text-muted)">€107,08</td><td style="color:var(--green)">~€13,78</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
             <tr><td>16.06.</td><td style="font-family:monospace;font-size:11px">05-14786-31141</td><td><strong>lostprince77</strong></td><td><span class="badge badge-amber">PETK0049</span></td><td><strong>€29,98</strong></td><td style="color:var(--text-muted)">€8,30</td><td style="color:var(--green)">~€2,78</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
             <tr><td>15.06.</td><td style="font-family:monospace;font-size:11px">08-14779-12258</td><td><strong>mr.mxa</strong></td><td><span class="badge badge-amber">NETU0187</span></td><td><strong>€279,98</strong></td><td style="color:var(--text-muted)">~€157</td><td style="color:var(--green)">~€26,50</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
             <tr><td>13.06.</td><td style="font-family:monospace;font-size:11px">01-14783-23263</td><td>thaimakx1</td><td><span class="badge badge-gray">ANTB0005</span></td><td><strong>€219,98</strong></td><td style="color:var(--text-muted)">~€122</td><td style="color:var(--green)">~€21,10</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
@@ -1002,7 +1014,7 @@
           <label style="font-size:13px;font-weight:600;white-space:nowrap">GitHub PAT:</label>
           <input id="gh-pat-input" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
             style="flex:1;min-width:220px;padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace"
-            oninput="ghPAT=this.value;updatePatStatus()" />
+            />
           <span id="pat-status" style="font-size:12px;color:var(--text-sub)">Nicht gesetzt</span>
         </div>
         <!-- Trigger buttons -->
@@ -1387,17 +1399,34 @@ window.showSection = function(id, el) {
 // SYSTEM HEALTH  ─ Auto-Refresh + Workflow Trigger
 // ═══════════════════════════════════════════════════════════
 
-// GitHub PAT (stored in memory only, never persisted)
-let ghPAT = '';
+// GitHub PAT — wird in localStorage gespeichert (bleibt nach Reload erhalten)
+const PAT_STORAGE_KEY = 'neodeals_gh_pat';
+let ghPAT = localStorage.getItem(PAT_STORAGE_KEY) || '';
 const REPO_OWNER = 'Stavros-Neovo';
 const REPO_NAME  = 'shopify-dropshipping';
 
 function updatePatStatus() {
   const el = document.getElementById('pat-status');
+  const inp = document.getElementById('gh-pat-input');
+  if (inp && ghPAT) inp.value = ghPAT;  // Feld befüllen
   if (!el) return;
-  el.textContent = ghPAT.length > 10 ? '✅ Gesetzt' : 'Nicht gesetzt';
+  el.textContent = ghPAT.length > 10 ? '✅ Gespeichert' : 'Nicht gesetzt';
   el.style.color  = ghPAT.length > 10 ? 'var(--green)' : 'var(--text-sub)';
 }
+
+// PAT beim Tippen sofort in localStorage sichern
+document.addEventListener('DOMContentLoaded', () => {
+  const inp = document.getElementById('gh-pat-input');
+  if (inp) {
+    if (ghPAT) inp.value = ghPAT;
+    inp.addEventListener('input', () => {
+      ghPAT = inp.value;
+      if (ghPAT.length > 10) localStorage.setItem(PAT_STORAGE_KEY, ghPAT);
+      updatePatStatus();
+    });
+  }
+  updatePatStatus();
+});
 
 async function triggerWorkflow(workflowFile, label) {
   const log = document.getElementById('trigger-log');
