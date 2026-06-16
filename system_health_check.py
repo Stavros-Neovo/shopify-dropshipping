@@ -72,8 +72,10 @@ try:
         updated = datetime.fromisoformat(updated_str.replace("Z", "+00:00"))
         age_h = (NOW - updated).total_seconds() / 3600
 
+    # Repricer läuft in 3 Chunks à ~1h → Zyklus-Reset setzt offset=0.
+    # State-Alter kann bis zu ~4h betragen wenn gerade Zyklus-Reset. Schwelle: warn > 6h, error > 12h
     check("repricer_last_run",
-          "ok" if age_h < 3 else "warn" if age_h < 6 else "error",
+          "ok" if age_h < 6 else "warn" if age_h < 12 else "error",
           f"Letzter Run vor {age_h:.1f}h | Zyklus {cycle} | {offset}/{total}",
           {"age_hours": round(age_h, 1), "cycle": cycle, "offset": offset, "total": total})
 
@@ -238,10 +240,10 @@ if GH_TOKEN:
                     if created:
                         dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
                         age_h = (NOW - dt).total_seconds() / 3600
-                    # None = noch in Arbeit (in_progress/queued) → ok wenn < 30min
+                    # None = noch in Arbeit (in_progress/queued) → ok wenn < 2h (Smart Lister dauert ~90min)
                     if conclusion is None:
-                        status = "ok" if age_h < 0.5 else "warn"
-                        label_conclusion = "läuft gerade" if age_h < 0.5 else "hängt?"
+                        status = "ok" if age_h < 2 else "warn"
+                        label_conclusion = "läuft gerade" if age_h < 2 else "hängt? (>2h ohne Ergebnis)"
                     else:
                         status = "ok" if conclusion == "success" else "warn" if conclusion == "skipped" else "error"
                         label_conclusion = conclusion
