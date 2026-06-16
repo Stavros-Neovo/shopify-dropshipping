@@ -61,7 +61,7 @@ FULFILLMENT_PATH = "/sell/fulfillment/v1/order"
 # ---------------------------------------------------------------------------
 # eBay Bestellungen holen
 # ---------------------------------------------------------------------------
-def fetch_new_orders(client: EbayClient, since_hours: int = 2) -> List[Dict]:
+def fetch_new_orders(client: EbayClient, since_hours: int = 24) -> List[Dict]:
     """
     Holt eBay-Bestellungen der letzten N Stunden mit Status AWAITING_SHIPMENT.
     Gibt eine Liste von Order-Dicts zurück.
@@ -83,7 +83,7 @@ def fetch_new_orders(client: EbayClient, since_hours: int = 2) -> List[Dict]:
                 params={
                     "limit": limit,
                     "offset": offset,
-                    "orderIds": "",  # alle Orders holen, lokal filtern
+                    "filter": f"creationdate:[{since}..]",
                 },
             )
         except RuntimeError as e:
