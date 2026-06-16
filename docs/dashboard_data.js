@@ -1,109 +1,48 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-15T11:12:39.529286+00:00",
+  "generated_at": "2026-06-16T18:20:53.023918+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 400,
+  "active_listings": 47,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-14T21:56:45.469889+00:00",
-      "checked": 400,
-      "lowered": 47,
-      "raised": 7,
-      "set_to_floor": 73,
+      "timestamp": "2026-06-16T15:13:54.648445+00:00",
+      "checked": 47,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 3,
       "skipped_floor": 0,
-      "skipped_few": 17,
-      "unchanged": 63,
-      "errors": 193,
+      "skipped_few": 1,
+      "skipped_image": 24,
+      "unchanged": 19,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPD1027",
-        "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabe",
-        "old": 19.99,
-        "new": 11.99,
-        "diff": -8.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2003",
-        "title": "Equip Adapter - HDMI - DVI - 3m - Black",
-        "old": 19.99,
-        "new": 17.99,
+        "sku": "USBV0002",
+        "title": "Verbatim Plectra Black 256GB USB-C Flash Driv",
+        "old": 53.99,
+        "new": 51.99,
         "diff": -2.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2008",
-        "title": "Equip Adapter - Display Port Male - HDMI - 5m",
-        "old": 29.99,
-        "new": 25.99,
-        "diff": -4.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2009",
-        "title": "Equip USB 3.2 Cable - USB-A - USB-C - 1m - Bl",
-        "old": 17.99,
-        "new": 15.99,
+        "sku": "USBV0006",
+        "title": "Verbatim Plectra White 256GB USB-C Flash Driv",
+        "old": 52.99,
+        "new": 50.99,
         "diff": -2.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPE2010",
-        "title": "Equip USB 3.2 Cable - USB-A - USB-C - 0,25m -",
-        "old": 17.99,
-        "new": 15.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2019",
-        "title": "Equip USB 3.0 Extension Cable - USB-A - 3m - ",
-        "old": 17.99,
+        "sku": "USBV0013",
+        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
+        "old": 10.99,
         "new": 9.99,
-        "diff": -8.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2020",
-        "title": "Equip USB 2.0 Cable- USB-A - Mini-USB - 1,8m ",
-        "old": 15.99,
-        "new": 5.99,
-        "diff": -10.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2022",
-        "title": "Equip USB 2.0 Cable - USB-A - Micro-USB - 1m ",
-        "old": 14.99,
-        "new": 5.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2023",
-        "title": "Equip USB 2.0 Extansion Cable - USB (M) - USB",
-        "old": 14.99,
-        "new": 12.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPE2024",
-        "title": "Equip USB 2.0 Extansion Cable - USB (M) - USB",
-        "old": 15.99,
-        "new": 13.99,
-        "diff": -2.0,
+        "diff": -1.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-10",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-10",
         "lowered": 0,
@@ -163,1004 +102,1219 @@ window.DASHBOARD_DATA = {
         "lowered": 47,
         "raised": 7,
         "floor": 0
+      },
+      {
+        "date": "2026-06-15",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-16",
+        "lowered": 2,
+        "raised": 51,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-16",
+        "lowered": 40,
+        "raised": 86,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-16",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
   "orders": {
     "stats": {
-      "today_sales": 4,
-      "today_revenue": 612.5,
-      "today_profit": 142.3,
-      "week_sales": 23,
-      "week_revenue": 3420.0,
-      "week_profit": 784.0,
-      "prev_week_sales": 19,
-      "prev_week_revenue": 2890.0,
-      "prev_week_profit": 640.0,
-      "month_sales": 87,
-      "month_revenue": 14320.0,
-      "month_profit": 3240.8,
-      "total_sales_30d": 87,
-      "total_revenue_30d": 14320.0,
-      "total_profit_30d": 3240.8
+      "today_sales": 2,
+      "today_revenue": 182.97,
+      "today_profit": -1.27,
+      "week_sales": 3,
+      "week_revenue": 462.95,
+      "week_profit": 22.3,
+      "prev_week_sales": 5,
+      "prev_week_revenue": 404.9,
+      "prev_week_profit": 44.18,
+      "month_sales": 10,
+      "month_revenue": 921.81,
+      "month_profit": 87.78,
+      "total_sales_30d": 10,
+      "total_revenue_30d": 921.81,
+      "total_profit_30d": 87.78
     },
     "chart_7d": [
       {
-        "date": "09.06",
-        "revenue": 468.47,
-        "profit": 105.68,
-        "sales": 3
-      },
-      {
         "date": "10.06",
-        "revenue": 481.41,
-        "profit": 123.7,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "11.06",
-        "revenue": 404.96,
-        "profit": 62.73,
+        "revenue": 55.98,
+        "profit": 6.28,
         "sales": 1
       },
       {
         "date": "12.06",
-        "revenue": 462.87,
-        "profit": 106.58,
+        "revenue": 63.98,
+        "profit": 6.69,
         "sales": 1
       },
       {
         "date": "13.06",
-        "revenue": 498.58,
-        "profit": 139.09,
+        "revenue": 219.98,
+        "profit": 19.23,
         "sales": 1
       },
       {
         "date": "14.06",
-        "revenue": 362.35,
-        "profit": 95.11,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "15.06",
-        "revenue": 425.78,
-        "profit": 105.08,
-        "sales": 5
+        "revenue": 279.98,
+        "profit": 23.57,
+        "sales": 1
+      },
+      {
+        "date": "16.06",
+        "revenue": 182.97,
+        "profit": -1.27,
+        "sales": 2
       }
     ],
     "chart_30d": [
       {
-        "date": "17.05",
-        "revenue": 451.56,
-        "profit": 159.64,
-        "sales": 2
-      },
-      {
         "date": "18.05",
-        "revenue": 456.64,
-        "profit": 88.4,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "19.05",
-        "revenue": 509.37,
-        "profit": 151.45,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "20.05",
-        "revenue": 510.13,
-        "profit": 116.21,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "21.05",
-        "revenue": 364.61,
-        "profit": 82.49,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "22.05",
-        "revenue": 440.02,
-        "profit": 113.26,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "23.05",
-        "revenue": 538.64,
-        "profit": 119.9,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "24.05",
-        "revenue": 362.99,
-        "profit": 76.3,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "25.05",
-        "revenue": 490.78,
-        "profit": 118.88,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "26.05",
-        "revenue": 489.15,
-        "profit": 130.47,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "27.05",
-        "revenue": 578.65,
-        "profit": 70.42,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "28.05",
-        "revenue": 460.12,
-        "profit": 144.98,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "29.05",
-        "revenue": 519.1,
-        "profit": 129.98,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "30.05",
-        "revenue": 459.99,
-        "profit": 168.39,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "31.05",
-        "revenue": 582.34,
-        "profit": 125.39,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "01.06",
-        "revenue": 473.75,
-        "profit": 95.19,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "02.06",
-        "revenue": 457.21,
-        "profit": 166.51,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "03.06",
-        "revenue": 366.16,
-        "profit": 96.7,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "04.06",
-        "revenue": 482.68,
-        "profit": 116.33,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "05.06",
-        "revenue": 455.92,
-        "profit": 115.38,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "06.06",
-        "revenue": 529.6,
-        "profit": 94.76,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "07.06",
-        "revenue": 313.72,
-        "profit": 110.25,
-        "sales": 6
+        "revenue": 53.96,
+        "profit": 21.3,
+        "sales": 2
       },
       {
         "date": "08.06",
-        "revenue": 419.33,
-        "profit": 115.01,
+        "revenue": 64.96,
+        "profit": 11.98,
         "sales": 2
       },
       {
         "date": "09.06",
-        "revenue": 476.87,
-        "profit": 78.9,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "10.06",
-        "revenue": 332.7,
-        "profit": 82.94,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "11.06",
-        "revenue": 301.83,
-        "profit": 175.61,
-        "sales": 2
+        "revenue": 55.98,
+        "profit": 6.28,
+        "sales": 1
       },
       {
         "date": "12.06",
-        "revenue": 445.13,
-        "profit": 109.35,
+        "revenue": 63.98,
+        "profit": 6.69,
         "sales": 1
       },
       {
         "date": "13.06",
-        "revenue": 509.62,
-        "profit": 98.97,
-        "sales": 2
-      },
-      {
-        "date": "14.06",
-        "revenue": 501.9,
-        "profit": 84.73,
+        "revenue": 219.98,
+        "profit": 19.23,
         "sales": 1
       },
       {
+        "date": "14.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
         "date": "15.06",
-        "revenue": 399.32,
-        "profit": 132.29,
-        "sales": 4
+        "revenue": 279.98,
+        "profit": 23.57,
+        "sales": 1
+      },
+      {
+        "date": "16.06",
+        "revenue": 182.97,
+        "profit": -1.27,
+        "sales": 2
       }
     ],
     "chart_90d": [
       {
-        "date": "18.03",
-        "revenue": 270.59,
-        "profit": 97.89,
-        "sales": 1
-      },
-      {
         "date": "19.03",
-        "revenue": 463.26,
-        "profit": 98.83,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "20.03",
-        "revenue": 480.75,
-        "profit": 67.23,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "21.03",
-        "revenue": 545.31,
-        "profit": 127.22,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "22.03",
-        "revenue": 608.0,
-        "profit": 110.82,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "23.03",
-        "revenue": 472.08,
-        "profit": 139.36,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "24.03",
-        "revenue": 442.1,
-        "profit": 109.43,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "25.03",
-        "revenue": 445.78,
-        "profit": 144.04,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "26.03",
-        "revenue": 504.43,
-        "profit": 132.96,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "27.03",
-        "revenue": 345.3,
-        "profit": 99.37,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "28.03",
-        "revenue": 574.27,
-        "profit": 93.44,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "29.03",
-        "revenue": 662.67,
-        "profit": 117.02,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "30.03",
-        "revenue": 483.93,
-        "profit": 128.52,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "31.03",
-        "revenue": 511.99,
-        "profit": 106.54,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "01.04",
-        "revenue": 569.08,
-        "profit": 46.79,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "02.04",
-        "revenue": 484.17,
-        "profit": 96.96,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "03.04",
-        "revenue": 525.41,
-        "profit": 105.08,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "04.04",
-        "revenue": 538.37,
-        "profit": 91.16,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "05.04",
-        "revenue": 601.06,
-        "profit": 91.88,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "06.04",
-        "revenue": 500.89,
-        "profit": 130.6,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "07.04",
-        "revenue": 429.46,
-        "profit": 88.3,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "08.04",
-        "revenue": 422.4,
-        "profit": 115.66,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "09.04",
-        "revenue": 423.98,
-        "profit": 138.33,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "10.04",
-        "revenue": 471.83,
-        "profit": 108.42,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "11.04",
-        "revenue": 440.8,
-        "profit": 96.77,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "12.04",
-        "revenue": 499.5,
-        "profit": 102.6,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "13.04",
-        "revenue": 463.59,
-        "profit": 138.36,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "14.04",
-        "revenue": 606.23,
-        "profit": 153.25,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "15.04",
-        "revenue": 427.02,
-        "profit": 101.4,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "16.04",
-        "revenue": 498.38,
-        "profit": 94.8,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "17.04",
-        "revenue": 439.5,
-        "profit": 90.34,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "18.04",
-        "revenue": 353.48,
-        "profit": 118.31,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "19.04",
-        "revenue": 414.26,
-        "profit": 80.39,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "20.04",
-        "revenue": 420.38,
-        "profit": 123.07,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "21.04",
-        "revenue": 480.44,
-        "profit": 126.24,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "22.04",
-        "revenue": 512.42,
-        "profit": 122.28,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "23.04",
-        "revenue": 480.22,
-        "profit": 166.65,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "24.04",
-        "revenue": 536.15,
-        "profit": 64.02,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "25.04",
-        "revenue": 769.17,
-        "profit": 139.73,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "26.04",
-        "revenue": 659.28,
-        "profit": 98.95,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "27.04",
-        "revenue": 526.3,
-        "profit": 134.93,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "28.04",
-        "revenue": 593.86,
-        "profit": 69.46,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "29.04",
-        "revenue": 311.6,
-        "profit": 160.06,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "30.04",
-        "revenue": 605.61,
-        "profit": 90.47,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "01.05",
-        "revenue": 302.13,
-        "profit": 139.2,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "02.05",
-        "revenue": 431.42,
-        "profit": 85.44,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "03.05",
-        "revenue": 419.08,
-        "profit": 172.99,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "04.05",
-        "revenue": 477.46,
-        "profit": 101.17,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "05.05",
-        "revenue": 579.22,
-        "profit": 121.64,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "06.05",
-        "revenue": 566.1,
-        "profit": 95.07,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "07.05",
-        "revenue": 511.71,
-        "profit": 107.51,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "08.05",
-        "revenue": 507.28,
-        "profit": 113.91,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "09.05",
-        "revenue": 323.13,
-        "profit": 143.87,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "10.05",
-        "revenue": 482.56,
-        "profit": 143.58,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "11.05",
-        "revenue": 581.9,
-        "profit": 128.03,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "12.05",
-        "revenue": 295.02,
-        "profit": 101.67,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "13.05",
-        "revenue": 446.42,
-        "profit": 90.99,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "14.05",
-        "revenue": 385.29,
-        "profit": 132.72,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "15.05",
-        "revenue": 302.59,
-        "profit": 125.27,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "16.05",
-        "revenue": 591.27,
-        "profit": 112.04,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "17.05",
-        "revenue": 511.2,
-        "profit": 109.76,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "18.05",
-        "revenue": 437.38,
-        "profit": 109.51,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "19.05",
-        "revenue": 600.53,
-        "profit": 75.01,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "20.05",
-        "revenue": 461.27,
-        "profit": 136.2,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "21.05",
-        "revenue": 448.33,
-        "profit": 77.07,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "22.05",
-        "revenue": 363.18,
-        "profit": 103.29,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "23.05",
-        "revenue": 443.96,
-        "profit": 145.13,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "24.05",
-        "revenue": 464.75,
-        "profit": 162.28,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "25.05",
-        "revenue": 419.74,
-        "profit": 103.46,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "26.05",
-        "revenue": 497.95,
-        "profit": 132.21,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "27.05",
-        "revenue": 438.35,
-        "profit": 95.38,
-        "sales": 4
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "28.05",
-        "revenue": 478.77,
-        "profit": 164.63,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "29.05",
-        "revenue": 550.24,
-        "profit": 124.38,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "30.05",
-        "revenue": 549.32,
-        "profit": 116.16,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "31.05",
-        "revenue": 439.39,
-        "profit": 95.21,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "01.06",
-        "revenue": 363.14,
-        "profit": 123.97,
-        "sales": 5
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "02.06",
-        "revenue": 511.58,
-        "profit": 110.6,
-        "sales": 6
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "03.06",
-        "revenue": 562.72,
-        "profit": 92.18,
-        "sales": 3
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "04.06",
-        "revenue": 440.66,
-        "profit": 102.99,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "05.06",
-        "revenue": 553.58,
-        "profit": 116.19,
-        "sales": 1
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "06.06",
-        "revenue": 524.23,
-        "profit": 99.81,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "07.06",
-        "revenue": 442.74,
-        "profit": 89.75,
-        "sales": 5
+        "revenue": 53.96,
+        "profit": 21.3,
+        "sales": 2
       },
       {
         "date": "08.06",
-        "revenue": 540.99,
-        "profit": 93.01,
-        "sales": 5
+        "revenue": 64.96,
+        "profit": 11.98,
+        "sales": 2
       },
       {
         "date": "09.06",
-        "revenue": 479.4,
-        "profit": 52.99,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "10.06",
-        "revenue": 624.25,
-        "profit": 58.61,
-        "sales": 2
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       },
       {
         "date": "11.06",
-        "revenue": 493.17,
-        "profit": 106.2,
-        "sales": 6
-      },
-      {
-        "date": "12.06",
-        "revenue": 604.28,
-        "profit": 90.05,
-        "sales": 4
-      },
-      {
-        "date": "13.06",
-        "revenue": 531.52,
-        "profit": 62.72,
-        "sales": 2
-      },
-      {
-        "date": "14.06",
-        "revenue": 465.16,
-        "profit": 153.75,
+        "revenue": 55.98,
+        "profit": 6.28,
         "sales": 1
       },
       {
+        "date": "12.06",
+        "revenue": 63.98,
+        "profit": 6.69,
+        "sales": 1
+      },
+      {
+        "date": "13.06",
+        "revenue": 219.98,
+        "profit": 19.23,
+        "sales": 1
+      },
+      {
+        "date": "14.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
         "date": "15.06",
-        "revenue": 463.37,
-        "profit": 114.73,
-        "sales": 4
+        "revenue": 279.98,
+        "profit": 23.57,
+        "sales": 1
+      },
+      {
+        "date": "16.06",
+        "revenue": 182.97,
+        "profit": -1.27,
+        "sales": 2
       }
     ],
     "top_products": [
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "sold": 8,
-        "revenue": 1863.92,
-        "profit": 432.0,
-        "vk": 232.99,
-        "ek": 131.95,
+        "sku": "NETU0187",
+        "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
+        "sold": 1,
+        "revenue": 275.99,
+        "profit": 23.57,
+        "vk": 275.99,
+        "ek": 157.3,
         "calc": {
-          "vk_brutto": 232.99,
-          "ebay_fee": 30.29,
-          "vat": 34.05,
-          "netto_vk": 168.65,
+          "vk_brutto": 279.98,
+          "ebay_fee": 58.8,
+          "vat": 35.31,
+          "netto_vk": 185.87,
           "ship": 5.0,
-          "ek": 131.95,
-          "profit_u": 31.7,
+          "ek": 157.3,
+          "profit_u": 23.57,
           "qty": 1,
-          "profit_t": 31.7
+          "profit_t": 23.57
         }
       },
       {
-        "sku": "SAN0042",
-        "title": "SanDisk Extreme SSD 1TB",
-        "sold": 14,
-        "revenue": 1260.0,
-        "profit": 280.0,
-        "vk": 90.0,
-        "ek": 48.0,
+        "sku": "ANTB0005",
+        "title": "ANTHBOT Battery 5000mAh",
+        "sold": 1,
+        "revenue": 215.99,
+        "profit": 19.23,
+        "vk": 215.99,
+        "ek": 121.8,
         "calc": {
-          "vk_brutto": 90.0,
-          "ebay_fee": 11.7,
-          "vat": 13.16,
-          "netto_vk": 65.14,
+          "vk_brutto": 219.98,
+          "ebay_fee": 46.2,
+          "vat": 27.75,
+          "netto_vk": 146.03,
           "ship": 5.0,
-          "ek": 48.0,
-          "profit_u": 12.14,
+          "ek": 121.8,
+          "profit_u": 19.23,
           "qty": 1,
-          "profit_t": 12.14
+          "profit_t": 19.23
         }
       },
       {
-        "sku": "LOG0099",
-        "title": "Logitech MX Keys Mini DE",
-        "sold": 11,
-        "revenue": 990.0,
-        "profit": 198.0,
-        "vk": 90.0,
-        "ek": 52.0,
+        "sku": "USBK1036",
+        "title": "Kioxia TransMemory U301 128GB USB 3.0",
+        "sold": 1,
+        "revenue": 25.99,
+        "profit": 14.9,
+        "vk": 25.99,
+        "ek": 0,
         "calc": {
-          "vk_brutto": 90.0,
-          "ebay_fee": 11.7,
-          "vat": 13.16,
-          "netto_vk": 65.14,
+          "vk_brutto": 29.98,
+          "ebay_fee": 6.3,
+          "vat": 3.78,
+          "netto_vk": 19.9,
           "ship": 5.0,
-          "ek": 52.0,
-          "profit_u": 8.14,
+          "ek": 0,
+          "profit_u": 14.9,
           "qty": 1,
-          "profit_t": 8.14
+          "profit_t": 14.9
         }
       },
       {
-        "sku": "TP0023",
-        "title": "TP-Link 8-Port Gigabit Switch",
-        "sold": 19,
-        "revenue": 760.0,
-        "profit": 152.0,
-        "vk": 40.0,
-        "ek": 22.0,
+        "sku": "SHG0003",
+        "title": "Govee - Glide Wall Light (4+1)",
+        "sold": 1,
+        "revenue": 59.99,
+        "profit": 6.69,
+        "vk": 59.99,
+        "ek": 30.78,
         "calc": {
-          "vk_brutto": 40.0,
-          "ebay_fee": 5.2,
-          "vat": 5.85,
-          "netto_vk": 28.95,
+          "vk_brutto": 63.98,
+          "ebay_fee": 13.44,
+          "vat": 8.07,
+          "netto_vk": 42.47,
           "ship": 5.0,
-          "ek": 22.0,
-          "profit_u": 1.95,
+          "ek": 30.78,
+          "profit_u": 6.69,
           "qty": 1,
-          "profit_t": 1.95
+          "profit_t": 6.69
         }
       },
       {
-        "sku": "KIN0031",
-        "title": "Kingston A400 SSD 960GB",
-        "sold": 12,
-        "revenue": 720.0,
-        "profit": 120.0,
-        "vk": 60.0,
-        "ek": 38.0,
+        "sku": "PETK0049",
+        "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
+        "sold": 1,
+        "revenue": 25.99,
+        "profit": 6.6,
+        "vk": 25.99,
+        "ek": 8.3,
         "calc": {
-          "vk_brutto": 60.0,
-          "ebay_fee": 7.8,
-          "vat": 8.77,
-          "netto_vk": 43.43,
+          "vk_brutto": 29.98,
+          "ebay_fee": 6.3,
+          "vat": 3.78,
+          "netto_vk": 19.9,
           "ship": 5.0,
-          "ek": 38.0,
-          "profit_u": 0.43,
+          "ek": 8.3,
+          "profit_u": 6.6,
           "qty": 1,
-          "profit_t": 0.43
+          "profit_t": 6.6
+        }
+      },
+      {
+        "sku": "SUPD1027",
+        "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
+        "sold": 1,
+        "revenue": 19.99,
+        "profit": 6.4,
+        "vk": 19.99,
+        "ek": 4.52,
+        "calc": {
+          "vk_brutto": 23.98,
+          "ebay_fee": 5.04,
+          "vat": 3.02,
+          "netto_vk": 15.92,
+          "ship": 5.0,
+          "ek": 4.52,
+          "profit_u": 6.4,
+          "qty": 1,
+          "profit_t": 6.4
+        }
+      },
+      {
+        "sku": "USBK1023",
+        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
+        "sold": 1,
+        "revenue": 21.99,
+        "profit": 6.34,
+        "vk": 21.99,
+        "ek": 5.9,
+        "calc": {
+          "vk_brutto": 25.98,
+          "ebay_fee": 5.46,
+          "vat": 3.28,
+          "netto_vk": 17.24,
+          "ship": 5.0,
+          "ek": 5.9,
+          "profit_u": 6.34,
+          "qty": 1,
+          "profit_t": 6.34
+        }
+      },
+      {
+        "sku": "PPSE0102",
+        "title": "ECOFLOW Smart Plug 2",
+        "sold": 1,
+        "revenue": 51.99,
+        "profit": 6.28,
+        "vk": 51.99,
+        "ek": 25.88,
+        "calc": {
+          "vk_brutto": 55.98,
+          "ebay_fee": 11.76,
+          "vat": 7.06,
+          "netto_vk": 37.16,
+          "ship": 5.0,
+          "ek": 25.88,
+          "profit_u": 6.28,
+          "qty": 1,
+          "profit_t": 6.28
+        }
+      },
+      {
+        "sku": "HHWB5012",
+        "title": "Beurer IL 11 Infrarotlampe",
+        "sold": 1,
+        "revenue": 34.99,
+        "profit": 5.64,
+        "vk": 34.99,
+        "ek": 15.23,
+        "calc": {
+          "vk_brutto": 38.98,
+          "ebay_fee": 8.19,
+          "vat": 4.92,
+          "netto_vk": 25.87,
+          "ship": 5.0,
+          "ek": 15.23,
+          "profit_u": 5.64,
+          "qty": 1,
+          "profit_t": 5.64
+        }
+      },
+      {
+        "sku": "HHWM0023",
+        "title": "Makita Bohrhammer - schnurlos - 3 Modi",
+        "sold": 1,
+        "revenue": 152.99,
+        "profit": -7.87,
+        "vk": 152.99,
+        "ek": 107.08,
+        "calc": {
+          "vk_brutto": 156.98,
+          "ebay_fee": 32.97,
+          "vat": 19.8,
+          "netto_vk": 104.21,
+          "ship": 5.0,
+          "ek": 107.08,
+          "profit_u": -7.87,
+          "qty": 1,
+          "profit_t": -7.87
         }
       }
     ],
     "recent_sales": [
       {
-        "date": "10.06 14:32",
-        "title": "Logitech M330 Silent Maus",
-        "revenue": 32.99,
-        "profit": 8.2
+        "date": "16.06 17:06",
+        "title": "Makita Bohrhammer - schnurlos - 3 Modi",
+        "revenue": 152.99,
+        "profit": -7.87
       },
       {
-        "date": "10.06 13:15",
-        "title": "SanDisk Ultra USB-Stick 128GB",
-        "revenue": 18.99,
-        "profit": 4.1
+        "date": "16.06 07:16",
+        "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pc",
+        "revenue": 29.98,
+        "profit": 6.6
       },
       {
-        "date": "10.06 11:44",
-        "title": "TP-Link Netzwerk Switch 5-Port",
-        "revenue": 28.99,
-        "profit": 6.8
+        "date": "15.06 22:07",
+        "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
+        "revenue": 279.98,
+        "profit": 23.57
       },
       {
-        "date": "10.06 09:02",
-        "title": "Kingston DDR4 3200MHz 16GB",
-        "revenue": 54.99,
-        "profit": 12.4
+        "date": "13.06 22:19",
+        "title": "ANTHBOT Battery 5000mAh",
+        "revenue": 219.98,
+        "profit": 19.23
       },
       {
-        "date": "09.06 21:18",
-        "title": "Ubiquiti UAP-AC-PRO",
-        "revenue": 148.99,
-        "profit": 38.5
+        "date": "12.06 06:07",
+        "title": "Govee - Glide Wall Light (4+1)",
+        "revenue": 63.98,
+        "profit": 6.69
+      },
+      {
+        "date": "11.06 12:07",
+        "title": "ECOFLOW Smart Plug 2",
+        "revenue": 55.98,
+        "profit": 6.28
+      },
+      {
+        "date": "08.06 16:00",
+        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
+        "revenue": 25.98,
+        "profit": 6.34
+      },
+      {
+        "date": "08.06 09:44",
+        "title": "Beurer IL 11 Infrarotlampe",
+        "revenue": 38.98,
+        "profit": 5.64
+      },
+      {
+        "date": "07.06 17:46",
+        "title": "Kioxia TransMemory U301 128GB USB 3.0",
+        "revenue": 29.98,
+        "profit": 14.9
+      },
+      {
+        "date": "07.06 12:17",
+        "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebu",
+        "revenue": 23.98,
+        "profit": 6.4
       }
     ],
     "bab_deadlines": [
       {
-        "order_id": "28-12345",
-        "date": "2026-05-28",
-        "deadline": "2026-06-11",
-        "days_left": 1,
-        "items": [
-          "Enabot EBO Air2"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "28-12289",
-        "date": "2026-05-30",
-        "deadline": "2026-06-13",
-        "days_left": 3,
-        "items": [
-          "SanDisk SSD 1TB",
-          "USB-Stick 64GB"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "28-12201",
-        "date": "2026-06-01",
-        "deadline": "2026-06-15",
+        "order_id": "18-14726-98065",
+        "date": "2026-06-07",
+        "deadline": "2026-06-21",
         "days_left": 5,
         "items": [
-          "TP-Link Switch"
+          "Kioxia TransMemory U301 128GB USB 3.0"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "22-14719-39725",
+        "date": "2026-06-07",
+        "deadline": "2026-06-21",
+        "days_left": 5,
+        "items": [
+          "Dell MS116 - Maus - optisch - 2 Tasten -"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "18-14731-45799",
+        "date": "2026-06-08",
+        "deadline": "2026-06-22",
+        "days_left": 6,
+        "items": [
+          "Kioxia TransMemory U202 white 64GB USB 2"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "23-14722-05332",
+        "date": "2026-06-08",
+        "deadline": "2026-06-22",
+        "days_left": 6,
+        "items": [
+          "Beurer IL 11 Infrarotlampe"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "20-14740-74871",
+        "date": "2026-06-11",
+        "deadline": "2026-06-25",
+        "days_left": 9,
+        "items": [
+          "ECOFLOW Smart Plug 2"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "08-14763-57410",
+        "date": "2026-06-12",
+        "deadline": "2026-06-26",
+        "days_left": 10,
+        "items": [
+          "Govee - Glide Wall Light (4+1)"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "01-14783-23263",
+        "date": "2026-06-13",
+        "deadline": "2026-06-27",
+        "days_left": 11,
+        "items": [
+          "ANTHBOT Battery 5000mAh"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "08-14779-12258",
+        "date": "2026-06-15",
+        "deadline": "2026-06-29",
+        "days_left": 13,
+        "items": [
+          "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "18-14766-10957",
+        "date": "2026-06-16",
+        "deadline": "2026-06-30",
+        "days_left": 14,
+        "items": [
+          "Makita Bohrhammer - schnurlos - 3 Modi"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "05-14786-31141",
+        "date": "2026-06-16",
+        "deadline": "2026-06-30",
+        "days_left": 14,
+        "items": [
+          "Petkit Schaumstofffilter für Wireless Pu"
         ],
         "urgent": false
       }
     ],
     "tracking_missing": [
       {
-        "order_id": "28-12388",
-        "date": "2026-06-09",
+        "order_id": "18-14766-10957",
+        "date": "2026-06-16",
         "items": [
-          "Logitech MX Keys Mini"
+          "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
-        "buyer": "buyer_xy1"
+        "buyer": "cengitaga5"
       },
       {
-        "order_id": "28-12401",
-        "date": "2026-06-10",
+        "order_id": "05-14786-31141",
+        "date": "2026-06-16",
         "items": [
-          "SanDisk Extreme SSD"
+          "Petkit Schaumstofffilter für Wireless Pu"
         ],
-        "buyer": "buyer_ab2"
+        "buyer": "lostprince77"
+      },
+      {
+        "order_id": "08-14779-12258",
+        "date": "2026-06-15",
+        "items": [
+          "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
+        ],
+        "buyer": "mr.mxa"
       }
     ],
     "tax_reserves": {
-      "ust_month": 2164.15,
-      "est_month": 972.24,
-      "gewst_month": 486.12,
-      "total_month": 3622.51
+      "ust_month": 147.18,
+      "est_month": 26.33,
+      "gewst_month": 13.17,
+      "total_month": 186.68
     },
-    "expected_payout": 12458.4
+    "expected_payout": 728.23
   },
   "pending_orders": {},
-  "flagged_orders": {
-    "01-14783-23263": {
-      "reason": "GEFAHRGUT-VERDACHT ('battery' in 'ANTHBOT Battery 5000mAh')",
-      "flagged_at": "2026-06-15T08:08:47.011097+00:00",
-      "items": [
-        {
-          "sku": "ANTB0005",
-          "title": "ANTHBOT Battery 5000mAh",
-          "qty": 1
-        }
-      ],
-      "cancel_state": "IN_PROGRESS",
-      "payment_status": [
-        "PAID"
-      ]
-    }
-  }
+  "flagged_orders": {}
 };
