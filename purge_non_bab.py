@@ -40,7 +40,7 @@ log.info("Scanne alle aktiven eBay-Offers ...")
 offset = 0
 while True:
     try:
-        r = client._request("GET", OFFER_PATH, params={"limit": LIMIT, "offset": offset})
+        r = client._request("GET", OFFER_PATH, params={"limit": LIMIT, "offset": offset, "marketplace_id": cfg["ebay"]["marketplace_id"]})
     except Exception as e:
         err = str(e)
         if "25707" in err or "invalid" in err.lower():
