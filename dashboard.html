@@ -311,6 +311,7 @@
     <div class="nav-section">Finanzen</div>
     <div class="nav-item" onclick="showSection('gewinn', this)"><span class="icon">💹</span> Gewinn & Steuern</div>
     <div class="nav-item" onclick="showSection('rechnungen', this)"><span class="icon">💸</span> BAB Rechnungen <span class="nbadge amber" id="nav-rech-badge">–</span></div>
+    <div class="nav-item" onclick="showSection('preisliste', this)"><span class="icon">📦</span> BAB Preisliste <span class="nbadge gray" id="nav-plist-badge">–</span></div>
     <div class="nav-item" onclick="showSection('retouren', this)"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
     <div class="nav-section">Tools</div>
     <div class="nav-item" onclick="showSection('repricer', this)"><span class="icon">▶️</span> Repricer</div>
@@ -1129,6 +1130,65 @@
 
   </div><!-- /section-rechnungen -->
 
+  <!-- ═══════════════════════════════ BAB PREISLISTE ══════════════════════════════ -->
+  <div class="section" id="section-preisliste">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+      <div>
+        <div id="plist-status" style="font-size:12px;color:var(--text-sub)">Lade Preisliste…</div>
+      </div>
+      <button class="btn btn-primary" style="padding:8px 16px" onclick="loadPreisliste(true)">🔄 Aktualisieren</button>
+    </div>
+
+    <!-- KPI -->
+    <div class="kpi-row" style="margin-bottom:20px">
+      <div class="kpi-card"><div class="kpi-label">📦 Artikel</div><div class="kpi-value" id="plist-count">–</div><div class="kpi-sub">BAB Sortiment</div></div>
+      <div class="kpi-card green"><div class="kpi-label">✅ Lagernd</div><div class="kpi-value" id="plist-instock">–</div><div class="kpi-sub">Sofort verfügbar</div></div>
+      <div class="kpi-card"><div class="kpi-label">💰 Ø EK</div><div class="kpi-value" id="plist-avgek">–</div><div class="kpi-sub">Durchschnitt EK</div></div>
+      <div class="kpi-card green"><div class="kpi-label">📈 Ø Marge</div><div class="kpi-value" id="plist-avgmarge">–</div><div class="kpi-sub">nach eBay-Gebühren</div></div>
+    </div>
+
+    <!-- Suchleiste -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center">
+      <input id="plist-search" type="text" placeholder="🔍  SKU, Artikelname, EAN, Hersteller …"
+        style="flex:1;min-width:240px;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:14px"
+        oninput="plistFilter()">
+      <select id="plist-stock-filter" onchange="plistFilter()"
+        style="padding:10px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:13px">
+        <option value="all">Alle</option>
+        <option value="instock">✅ Lagernd</option>
+        <option value="outofstock">❌ Nicht lagernd</option>
+      </select>
+      <select id="plist-sort" onchange="plistFilter()"
+        style="padding:10px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:13px">
+        <option value="sku">SKU ↑</option>
+        <option value="ek_asc">EK ↑</option>
+        <option value="ek_desc">EK ↓</option>
+        <option value="gewinn_desc">Gewinn ↓</option>
+      </select>
+      <span id="plist-result-count" style="font-size:12px;color:var(--text-sub);white-space:nowrap"></span>
+    </div>
+
+    <!-- Tabelle -->
+    <div style="overflow-x:auto">
+      <table id="plist-table" style="width:100%;border-collapse:collapse;font-size:13px;display:none">
+        <thead>
+          <tr style="background:var(--card-bg);position:sticky;top:0;z-index:2">
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">SKU</th>
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">Beschreibung</th>
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">EAN</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">Lager</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">EK (BAB)</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">VK (netto)</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">Gewinn</th>
+          </tr>
+        </thead>
+        <tbody id="plist-tbody"></tbody>
+      </table>
+      <div id="plist-empty" style="padding:40px;text-align:center;color:var(--text-sub);font-size:13px;display:none">Keine Artikel gefunden</div>
+      <div id="plist-loading" style="padding:40px;text-align:center;color:var(--text-sub);font-size:13px">⏳ Preisliste wird geladen…</div>
+    </div>
+  </div><!-- /section-preisliste -->
+
 </div><!-- /main -->
 
 <!-- ═══ MOBILE NAV OVERLAY (Hamburger Drawer) ═══ -->
@@ -1152,6 +1212,7 @@
       <div class="nav-section">Finanzen</div>
       <div class="nav-item" onclick="mobileNav('gewinn')"><span class="icon">💹</span> Gewinn & Steuern</div>
       <div class="nav-item" onclick="mobileNav('rechnungen')"><span class="icon">💸</span> BAB Rechnungen</div>
+      <div class="nav-item" onclick="mobileNav('preisliste')"><span class="icon">📦</span> BAB Preisliste</div>
       <div class="nav-item" onclick="mobileNav('retouren')"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
       <div class="nav-section">Tools</div>
       <div class="nav-item" onclick="mobileNav('repricer')"><span class="icon">▶️</span> Repricer</div>
@@ -1187,6 +1248,7 @@ const titles = {
   health:    ['System Health', 'Deep-Check aller Komponenten · 4× täglich · 15min Auto-Refresh'],
   gewinn:     ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
   rechnungen: ['BAB Rechnungen', 'Offene Rechnungen an BAB Distribution bezahlen'],
+  preisliste: ['BAB Preisliste', '1.351 Artikel · EK · VK · Marge · stündlich aktualisiert'],
   retouren: ['Retouren & Stornos', 'Echtdaten aus eBay API · Auswirkung auf Gewinn'],
 };
 
@@ -1203,6 +1265,7 @@ function showSection(id, el) {
   if (id === 'preise') { animateBars(); initPriceChart(); }
   if (id === 'gewinn') calcGewinn();
   if (id === 'retouren') calcRetoure();
+  if (id === 'preisliste' && plistData.length === 0) loadPreisliste();
 }
 
 // ——— ANIMATE INV BARS ———
@@ -1853,6 +1916,123 @@ function rechExportCSV() {
 
 // Initial render
 document.addEventListener('DOMContentLoaded', rechRender);
+
+// ═══════════════════════════════════════════════════════════
+// BAB PREISLISTE
+// ═══════════════════════════════════════════════════════════
+const PLIST_URL = 'https://stavros-neovo.github.io/shopify-dropshipping/bab_preisliste.json';
+let plistData = [];     // alle Artikel
+let plistFiltered = []; // nach Filter
+
+async function loadPreisliste(manual = false) {
+  const loading = document.getElementById('plist-loading');
+  const status  = document.getElementById('plist-status');
+  if (loading) loading.style.display = 'block';
+  document.getElementById('plist-table') && (document.getElementById('plist-table').style.display = 'none');
+  document.getElementById('plist-empty') && (document.getElementById('plist-empty').style.display = 'none');
+
+  try {
+    const r = await fetch(PLIST_URL + '?t=' + Date.now());
+    const d = await r.json();
+    plistData = d.articles || [];
+
+    const gen = new Date(d.generated_at);
+    if (status) status.textContent = `Letzte Aktualisierung: ${gen.toLocaleString('de-DE')} · ${plistData.length} Artikel`;
+
+    // KPIs
+    const instock = plistData.filter(a => a.stock > 0).length;
+    const avgEk = plistData.length ? plistData.reduce((s,a) => s + a.ek, 0) / plistData.length : 0;
+    const avgGew = plistData.filter(a=>a.vk>0).reduce((s,a) => s + a.gewinn, 0) / (plistData.filter(a=>a.vk>0).length || 1);
+
+    document.getElementById('plist-count').textContent   = plistData.length.toLocaleString('de-DE');
+    document.getElementById('plist-instock').textContent = instock.toLocaleString('de-DE');
+    document.getElementById('plist-avgek').textContent   = '€' + avgEk.toFixed(2);
+    document.getElementById('plist-avgmarge').textContent = '€' + avgGew.toFixed(2);
+
+    // Nav-Badge: Anzahl Artikel
+    const badge = document.getElementById('nav-plist-badge');
+    if (badge) { badge.textContent = plistData.length; badge.className = 'nbadge green'; }
+
+    plistFilter();
+  } catch(e) {
+    if (status) status.textContent = '❌ Preisliste nicht erreichbar (noch nicht generiert?)';
+    if (loading) loading.style.display = 'none';
+  }
+}
+
+function plistFilter() {
+  const q     = (document.getElementById('plist-search')?.value || '').toLowerCase().trim();
+  const stock = document.getElementById('plist-stock-filter')?.value || 'all';
+  const sort  = document.getElementById('plist-sort')?.value || 'sku';
+
+  plistFiltered = plistData.filter(a => {
+    if (stock === 'instock'    && a.stock <= 0) return false;
+    if (stock === 'outofstock' && a.stock >  0) return false;
+    if (!q) return true;
+    return (
+      a.sku.toLowerCase().includes(q) ||
+      a.title.toLowerCase().includes(q) ||
+      a.ean.includes(q) ||
+      a.mfr.toLowerCase().includes(q) ||
+      a.ref_no.toLowerCase().includes(q)
+    );
+  });
+
+  // Sortieren
+  plistFiltered.sort((a, b) => {
+    if (sort === 'sku')         return a.sku.localeCompare(b.sku);
+    if (sort === 'ek_asc')      return a.ek - b.ek;
+    if (sort === 'ek_desc')     return b.ek - a.ek;
+    if (sort === 'gewinn_desc') return b.gewinn - a.gewinn;
+    return 0;
+  });
+
+  plistRender();
+}
+
+function plistRender() {
+  const tbody   = document.getElementById('plist-tbody');
+  const table   = document.getElementById('plist-table');
+  const empty   = document.getElementById('plist-empty');
+  const loading = document.getElementById('plist-loading');
+  const counter = document.getElementById('plist-result-count');
+  if (!tbody) return;
+
+  if (loading) loading.style.display = 'none';
+
+  if (counter) counter.textContent = `${plistFiltered.length} von ${plistData.length} Artikeln`;
+
+  if (plistFiltered.length === 0) {
+    if (table) table.style.display = 'none';
+    if (empty) empty.style.display = 'block';
+    return;
+  }
+  if (empty) empty.style.display = 'none';
+  if (table) table.style.display = '';
+
+  // Maximal 500 Zeilen rendern (Performance)
+  const toRender = plistFiltered.slice(0, 500);
+  tbody.innerHTML = toRender.map(a => {
+    const stockBadge = a.stock > 0
+      ? `<span style="color:var(--green);font-weight:600">${a.stock}</span>`
+      : `<span style="color:var(--red)">0</span>`;
+    const gewinnColor = a.gewinn > 20 ? 'var(--green)' : a.gewinn > 5 ? 'var(--text-main)' : 'var(--red)';
+    return `<tr style="border-bottom:1px solid var(--border);transition:background 0.1s" onmouseover="this.style.background='var(--card-bg)'" onmouseout="this.style.background=''">
+      <td style="padding:9px 12px;font-family:monospace;font-size:12px;white-space:nowrap"><strong>${a.sku}</strong></td>
+      <td style="padding:9px 12px;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${a.title}">${a.title || '<span style="color:var(--text-sub)">–</span>'}</td>
+      <td style="padding:9px 12px;font-family:monospace;font-size:11px;color:var(--text-sub)">${a.ean || '–'}</td>
+      <td style="padding:9px 12px;text-align:right">${stockBadge}</td>
+      <td style="padding:9px 12px;text-align:right;font-weight:700">€${a.ek.toFixed(2)}</td>
+      <td style="padding:9px 12px;text-align:right;color:var(--text-sub)">€${a.vk.toFixed(2)}</td>
+      <td style="padding:9px 12px;text-align:right;font-weight:700;color:${gewinnColor}">€${a.gewinn.toFixed(2)}</td>
+    </tr>`;
+  }).join('');
+
+  if (plistFiltered.length > 500) {
+    const more = plistFiltered.length - 500;
+    tbody.innerHTML += `<tr><td colspan="7" style="padding:12px;text-align:center;color:var(--text-sub);font-size:12px">… und ${more} weitere Artikel (Suche verfeinern)</td></tr>`;
+  }
+}
 
 // Initial load + 15min auto-refresh
 loadHealthReport();
