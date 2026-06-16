@@ -1,0 +1,160 @@
+{
+  "generated_at": "2026-06-16T19:09:41.547044+00:00",
+  "overall": "error",
+  "checks": {
+    "repricer_last_run": {
+      "status": "warn",
+      "detail": "Letzter Run vor 3.9h | Zyklus 3 | 0/1247",
+      "value": {
+        "age_hours": 3.9,
+        "cycle": 3,
+        "offset": 0,
+        "total": 1247
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "repricer_errors": {
+      "status": "ok",
+      "detail": "0 Fehler bei 0 geprüften Artikeln",
+      "value": {
+        "errors": 0,
+        "checked": 0
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "orders_processed": {
+      "status": "warn",
+      "detail": "processed_orders nicht lesbar: [Errno 2] No such file or directory: 'processed_orders_state_shop2.json'",
+      "value": null,
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "orders_pending": {
+      "status": "ok",
+      "detail": "Keine pending_orders.json — alles verarbeitet",
+      "value": {
+        "count": 0
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "orders_flagged": {
+      "status": "ok",
+      "detail": "Keine flagged_orders — alles sauber",
+      "value": {
+        "count": 0
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "sync_state": {
+      "status": "error",
+      "detail": "state_shop2.json nicht lesbar: [Errno 2] No such file or directory: 'state_shop2.json'",
+      "value": null,
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "banned_skus_count": {
+      "status": "ok",
+      "detail": "12 gesperrte SKUs in banned_skus.json",
+      "value": {
+        "count": 12
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "banned_in_supplier_map": {
+      "status": "ok",
+      "detail": "0 gesperrte SKUs noch in supplier_map: []",
+      "value": {
+        "count": 0,
+        "skus": []
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "supplier_map_bab": {
+      "status": "ok",
+      "detail": "1256 BAB-Artikel in supplier_map",
+      "value": {
+        "bab_count": 1256,
+        "non_bab_count": 0
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "supplier_map_non_bab": {
+      "status": "ok",
+      "detail": "Nur BAB-Einträge in supplier_map",
+      "value": {
+        "count": 0
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "workflow_hourly_sync": {
+      "status": "warn",
+      "detail": "Hourly Sync: None vor 0.1h",
+      "value": {
+        "conclusion": null,
+        "age_hours": 0.1,
+        "run_id": 27641031765
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "workflow_order_forwarder": {
+      "status": "ok",
+      "detail": "Order Forwarder: success vor 0.7h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.7,
+        "run_id": 27639146081
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "workflow_reprice": {
+      "status": "ok",
+      "detail": "Repricer: success vor 0.8h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.8,
+        "run_id": 27638811102
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "workflow_smart_lister": {
+      "status": "warn",
+      "detail": "Smart Lister: None vor 0.5h",
+      "value": {
+        "conclusion": null,
+        "age_hours": 0.5,
+        "run_id": 27639902910
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "workflow_tracking_updater": {
+      "status": "ok",
+      "detail": "Tracking Updater: success vor 0.1h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.1,
+        "run_id": 27641263392
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "workflow_hourly_matrixify_csv": {
+      "status": "ok",
+      "detail": "Matrixify CSV: success vor 0.8h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.8,
+        "run_id": 27638750336
+      },
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    },
+    "smtp": {
+      "status": "ok",
+      "detail": "SMTP-Verbindung OK (smtp.gmail.com:587)",
+      "value": null,
+      "ts": "2026-06-16T19:09:41.547044+00:00"
+    }
+  },
+  "summary": {
+    "total": 17,
+    "ok": 12,
+    "warn": 4,
+    "error": 1
+  }
+}
