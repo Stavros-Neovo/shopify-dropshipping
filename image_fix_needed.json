@@ -1335,5 +1335,760 @@
     "ean": "4719692007667",
     "title": "G.Skill SO-DIMM Ripjaws - DDR4 - 16 GB 2x8 GB 2400 CL16",
     "detected_at": "2026-06-16T14:15:26.783045+00:00"
+  },
+  "RAM4L0006": {
+    "ean": "0843367123773",
+    "title": "Lexar DDR4-3200 SO-DIMM 16GB",
+    "detected_at": "2026-06-16T14:49:48.604413+00:00"
+  },
+  "RAM5C1008": {
+    "ean": "0840006684442",
+    "title": "Corsair Vengeance - DDR5 - Kit - 32 GB: 2 x 16 GB (CMK32GX5M2B6000C38)",
+    "detected_at": "2026-06-16T14:50:03.277314+00:00"
+  },
+  "RAM5C1016": {
+    "ean": "0840006666073",
+    "title": "Corsair Vengeance RGB - DDR5 - Kit - 32 GB: 2 x 16 GB (CMH32GX5M2B6400C36)",
+    "detected_at": "2026-06-16T14:50:08.678095+00:00"
+  },
+  "RAM5C1019": {
+    "ean": "0840006667193",
+    "title": "Corsair Vengeance RGB - DDR5 - Kit - 48 GB: 2 x 24 GB (CMH48GX5M2B6400C36)",
+    "detected_at": "2026-06-16T14:50:14.620138+00:00"
+  },
+  "RAM5G0004": {
+    "ean": "4713294233547",
+    "title": "G.Skill Trident Z5 - DDR5 - 64 GB 2x 32GB Kit",
+    "detected_at": "2026-06-16T14:50:19.573003+00:00"
+  },
+  "RAM5G0008": {
+    "ean": "4713294231369",
+    "title": "G.Skill DDR5 32GB PC 6400 CL32 KIT (2x16GB) 32-TZ5RK",
+    "detected_at": "2026-06-16T14:50:22.430182+00:00"
+  },
+  "RAM5G0009": {
+    "ean": "4713294232656",
+    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
+    "detected_at": "2026-06-16T14:50:36.675759+00:00"
+  },
+  "RAM5G0013": {
+    "ean": "4713294232649",
+    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-TZ5NR AMD EX",
+    "detected_at": "2026-06-16T14:50:58.496348+00:00"
+  },
+  "RAM5G0021": {
+    "ean": "4713294237934",
+    "title": "G.Skill DDR5 64GB PC 6000 CL28 (2x32GB) 64-GX2-FX5 FLARE AMD",
+    "detected_at": "2026-06-16T14:51:19.455377+00:00"
+  },
+  "RAM5G0023": {
+    "ean": "4713294232069",
+    "title": "G.Skill Trident Z5 6800 CL34 - DDR5 - 64 GB 2x32 GB",
+    "detected_at": "2026-06-16T14:51:21.682127+00:00"
+  },
+  "RAM5G0024": {
+    "ean": "4713294233868",
+    "title": "G.Skill Ripjaws S5 6000 CL36 - DDR5 - 64 GB KIT (2x32GB)",
+    "detected_at": "2026-06-16T14:51:23.413599+00:00"
+  },
+  "RAM5G0027": {
+    "ean": "4713294231345",
+    "title": "G.Skill Trident Z5 6400 CL32 - DDR5 - 32 GB 2x16 GB",
+    "detected_at": "2026-06-16T14:51:27.063833+00:00"
+  },
+  "RAM5G0028": {
+    "ean": "4713294237590",
+    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
+    "detected_at": "2026-06-16T14:51:41.470135+00:00"
+  },
+  "REFT0010": {
+    "ean": "4262504943337",
+    "title": "tecXL Lenovo ThinkPad T14 Gen2 (14\")",
+    "detected_at": "2026-06-16T14:52:34.872544+00:00"
+  },
+  "REFT0012": {
+    "ean": "4262431593452",
+    "title": "tecXL Lenovo ThinkCentre M80q MP",
+    "detected_at": "2026-06-16T14:52:36.699689+00:00"
+  },
+  "REFT1001": {
+    "ean": "5711603083851",
+    "title": "T1A Dell Latitude 5320 (13.3\")",
+    "detected_at": "2026-06-16T14:52:40.787115+00:00"
+  },
+  "REFT1010": {
+    "ean": "5711603085060",
+    "title": "T1A Dell Latitude 5320 (13.3\")",
+    "detected_at": "2026-06-16T14:52:44.151295+00:00"
+  },
+  "REFT1014": {
+    "ean": "5711603097995",
+    "title": "T1A Lenovo ThinkPad T14 Gen 2 (14\")",
+    "detected_at": "2026-06-16T14:52:47.970289+00:00"
+  },
+  "REFU0009": {
+    "ean": "5713552042200",
+    "title": "Upcycle IT Lenovo ThinkCentre M90q Tiny",
+    "detected_at": "2026-06-16T14:52:49.788355+00:00"
+  },
+  "SDXS0015": {
+    "ean": "0619659182557",
+    "title": "SanDisk SDSSDE61-1T00-G25 Extreme Portable 1TB SSD",
+    "detected_at": "2026-06-16T14:52:52.018808+00:00"
+  },
+  "SDXS0028": {
+    "ean": "0619659204877",
+    "title": "SanDisk Portable SDSSDE30-1T00-G26 1TB SSD Gen 2",
+    "detected_at": "2026-06-16T14:52:58.060599+00:00"
+  },
+  "SOFM0092": {
+    "ean": "4255809918346",
+    "title": "Microsoft 365 Single - Abonnement-Lizenz (1 Jahr) - Digital Key",
+    "detected_at": "2026-06-16T14:54:55.205863+00:00"
+  },
+  "SSDC0078": {
+    "ean": "0649528944771",
+    "title": "Crucial P310 Gen4 2280 2TB NVMe PCIe M.2 SSD mit heatsink",
+    "detected_at": "2026-06-16T14:55:03.867220+00:00"
+  },
+  "SSDK1003": {
+    "ean": "4582563851863",
+    "title": "HDSSD 2,5\" 960GB Kioxia Exceria SATA 6Gbit/s",
+    "detected_at": "2026-06-16T14:55:09.244795+00:00"
+  },
+  "SSDK1023": {
+    "ean": "4582563859975",
+    "title": "SSD M.2 (2280) Kioxia Exceria Plus G4 NVMe 1TB",
+    "detected_at": "2026-06-16T14:55:11.503016+00:00"
+  },
+  "SSDK1029": {
+    "ean": "4582761161108",
+    "title": "SSD M.2 (2280) Kioxia Exceria Basic NVMe 1TB",
+    "detected_at": "2026-06-16T14:55:14.185128+00:00"
+  },
+  "SSDK1030": {
+    "ean": "4582761161115",
+    "title": "SSD M.2 (2280) Kioxia Exceria Basic NVMe 2TB",
+    "detected_at": "2026-06-16T14:55:15.769581+00:00"
+  },
+  "SSDK1033": {
+    "ean": "4582761161504",
+    "title": "SSD Kioxia Exceria G3 1TB (PCIe5.0/NVMe)",
+    "detected_at": "2026-06-16T14:55:17.829557+00:00"
+  },
+  "SSDK1034": {
+    "ean": "4582761161511",
+    "title": "SSD Kioxia Exceria G3 2TB (PCIe5.0/NVMe)",
+    "detected_at": "2026-06-16T14:55:19.023994+00:00"
+  },
+  "SSDK1036": {
+    "ean": "4582761160293",
+    "title": "SSD Kioxia Exceria Pro G2 2TB (PCIe5.0/NVMe)",
+    "detected_at": "2026-06-16T14:55:21.024659+00:00"
+  },
+  "SSDL0010": {
+    "ean": "0843367123148",
+    "title": "SSD M.2 Lexar NM620 256GB NVME PCIe Gen. 3",
+    "detected_at": "2026-06-16T14:55:22.996900+00:00"
+  },
+  "SSDL0011": {
+    "ean": "0843367123155",
+    "title": "SSD M.2 Lexar NM620 512GB NVME PCIe Gen. 3",
+    "detected_at": "2026-06-16T14:55:24.697869+00:00"
+  },
+  "SSDL0012": {
+    "ean": "0843367123162",
+    "title": "SSD M.2 Lexar NM620 1TB NVME PCIe Gen. 3",
+    "detected_at": "2026-06-16T14:55:26.309944+00:00"
+  },
+  "SSDL0022": {
+    "ean": "0843367123179",
+    "title": "Lexar 2TB High Speed NM620 PCIe Gen3 with 4",
+    "detected_at": "2026-06-16T14:55:28.248272+00:00"
+  },
+  "SSDL0024": {
+    "ean": "0843367129706",
+    "title": "SSD M.2 Lexar 1TB NM710 PCIe Gen4x4 NVMe",
+    "detected_at": "2026-06-16T14:55:30.545655+00:00"
+  },
+  "SSDL0031": {
+    "ean": "0843367130283",
+    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NM790 NVMe",
+    "detected_at": "2026-06-16T14:55:32.283699+00:00"
+  },
+  "SSDL0032": {
+    "ean": "0843367130290",
+    "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NM790 NVMe",
+    "detected_at": "2026-06-16T14:55:34.211529+00:00"
+  },
+  "SSDL0040": {
+    "ean": "0843367132218",
+    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NQ790 NVMe",
+    "detected_at": "2026-06-16T14:55:37.078435+00:00"
+  },
+  "SSDL0041": {
+    "ean": "0843367132225",
+    "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NQ790 NVMe",
+    "detected_at": "2026-06-16T14:55:39.456777+00:00"
+  },
+  "SSDL0042": {
+    "ean": "0843367132232",
+    "title": "SSD M.2 Lexar 4TB PCIe Gen 4X4 NQ790 NVMe",
+    "detected_at": "2026-06-16T14:55:41.472173+00:00"
+  },
+  "SSDL0044": {
+    "ean": "0843367136780",
+    "title": "SSD M.2 Lexar 1TB PCIe Gen 5 NM1090 Pro NVMe",
+    "detected_at": "2026-06-16T14:55:43.240956+00:00"
+  },
+  "SSDL0048": {
+    "ean": "0843367136858",
+    "title": "SSD M.2 Lexar 2TB PCIe Gen 5 NM990 NVMe",
+    "detected_at": "2026-06-16T14:55:48.182584+00:00"
+  },
+  "SSDW0069": {
+    "ean": "0718037884653",
+    "title": "HDSSD 2.5\" 1 TB WD Blue™ SA510 PC 3D SSD 7mm",
+    "detected_at": "2026-06-16T14:56:26.872575+00:00"
+  },
+  "SSDW0070": {
+    "ean": "0718037884639",
+    "title": "HDSSD 2.5\" 500 GB WD Blue™ SA510 3D PC SSD 7mm",
+    "detected_at": "2026-06-16T14:56:29.259219+00:00"
+  },
+  "SSDW0071": {
+    "ean": "0718037891392",
+    "title": "HDSSD M.2 1 TB WD Black™ SN850X NVMe",
+    "detected_at": "2026-06-16T14:56:30.869380+00:00"
+  },
+  "SSDW0075": {
+    "ean": "0718037891378",
+    "title": "HDSSD M.2 4 TB WD Black™ SN850X NVMe",
+    "detected_at": "2026-06-16T14:56:33.188276+00:00"
+  },
+  "SSDW0083": {
+    "ean": "0718037894850",
+    "title": "HDSSD M.2 500 GB WD Blue™ SN5000 NVMe",
+    "detected_at": "2026-06-16T14:56:34.719978+00:00"
+  },
+  "SSDW0084": {
+    "ean": "0718037894843",
+    "title": "HDSSD M.2 1TB WD Blue™ SN5000 NVMe",
+    "detected_at": "2026-06-16T14:56:37.611435+00:00"
+  },
+  "SSDW0085": {
+    "ean": "0718037893228",
+    "title": "HDSSD M.2 2TB WD Blue™ SN5000 NVMe",
+    "detected_at": "2026-06-16T14:56:39.376455+00:00"
+  },
+  "SSDW0088": {
+    "ean": "0718037903613",
+    "title": "HDSSD 2,5\" 2TB WD Red SA500 NAS SSD",
+    "detected_at": "2026-06-16T14:56:41.904299+00:00"
+  },
+  "SSDW0092": {
+    "ean": "0718037893211",
+    "title": "HDSSD M.2 2TB WD Black™ SN7100 NVMe",
+    "detected_at": "2026-06-16T14:56:50.680513+00:00"
+  },
+  "SSDW0095": {
+    "ean": "0619659220860",
+    "title": "HDSSD M.2 2TB WD Black™ SN8100 NVMe PCI5.0",
+    "detected_at": "2026-06-16T14:56:52.833290+00:00"
+  },
+  "SSDW0100": {
+    "ean": "0718037906263",
+    "title": "HDSSD M.2 2TB WD Blue™ SN5100 NVMe",
+    "detected_at": "2026-06-16T14:56:59.189504+00:00"
+  },
+  "SSDW0101": {
+    "ean": "0718037906287",
+    "title": "HDSSD M.2 500GB WD Blue™ SN5100 NVMe",
+    "detected_at": "2026-06-16T14:57:01.077120+00:00"
+  },
+  "SSDW0102": {
+    "ean": "0718037907154",
+    "title": "HDSSD M.2 1TB WD Green™ SN3000 NVMe",
+    "detected_at": "2026-06-16T14:57:02.938211+00:00"
+  },
+  "SUPA1046": {
+    "ean": "0840414681804",
+    "title": "Amazon Echo Dot Max - Sphärisch - Weiß",
+    "detected_at": "2026-06-16T14:57:10.736805+00:00"
+  },
+  "SUPB1045": {
+    "ean": "0017817846141",
+    "title": "Bose QuietComfort Ultra weiß",
+    "detected_at": "2026-06-16T14:57:12.701787+00:00"
+  },
+  "SUPB1046": {
+    "ean": "0017817847681",
+    "title": "Bose QuietComfort Ultra Earbuds black",
+    "detected_at": "2026-06-16T14:57:14.248381+00:00"
+  },
+  "SUPB1047": {
+    "ean": "0017817847643",
+    "title": "Bose QuietComfort Ultra Earbuds white",
+    "detected_at": "2026-06-16T14:57:16.486655+00:00"
+  },
+  "SUPB1054": {
+    "ean": "0017817846912",
+    "title": "Bose Ultra Open Earbuds | White",
+    "detected_at": "2026-06-16T14:57:18.509237+00:00"
+  },
+  "SUPB1060": {
+    "ean": "0017817859585",
+    "title": "Bose QuietComfort Ultra 2.Gen black",
+    "detected_at": "2026-06-16T14:57:22.076763+00:00"
+  },
+  "SUPB1065": {
+    "ean": "0017817852470",
+    "title": "Bose SoundLink Flex 2nd - Black",
+    "detected_at": "2026-06-16T14:57:25.202859+00:00"
+  },
+  "SUPB1066": {
+    "ean": "0017817768429",
+    "title": "Bose SoundLink Micro - Lautsprecher - tragbar",
+    "detected_at": "2026-06-16T14:57:26.739664+00:00"
+  },
+  "SUPC0088": {
+    "ean": "7340086912839",
+    "title": "CHERRY Xtrfy M42 - Maus - optisch - kabellos - Schwarz",
+    "detected_at": "2026-06-16T14:57:33.197599+00:00"
+  },
+  "SUPD1020": {
+    "ean": "5704174219279",
+    "title": "Dell USB-C AC Adapter E5 - Kit - Netzteil - 65 Watt",
+    "detected_at": "2026-06-16T14:57:47.971318+00:00"
+  },
+  "SUPD1021": {
+    "ean": "5999056126534",
+    "title": "Dell USB-C AC Adapter E5 - Kit - Netzteil - 65 Watt",
+    "detected_at": "2026-06-16T14:57:50.121184+00:00"
+  },
+  "SUPD1025": {
+    "ean": "5397184961766",
+    "title": "Dell Pro Smart Dock SD25 - Dockingstation - USB-C - HDMI, 2 x DP, USB-C - 1GbE, 2.5GbE - 180 Watt",
+    "detected_at": "2026-06-16T14:57:52.037633+00:00"
+  },
+  "SUPE2033": {
+    "ean": "4015867198711",
+    "title": "Equip USB 2.0 Cable - USB-C (M) - USB-C (M) - 1m - Black",
+    "detected_at": "2026-06-16T14:58:41.882752+00:00"
+  },
+  "SUPE2042": {
+    "ean": "4015867153123",
+    "title": "Equip Adapter - DisplayPort (M) - DVI-V (W) - Black",
+    "detected_at": "2026-06-16T14:58:45.643116+00:00"
+  },
+  "SUPE2044": {
+    "ean": "4015867157305",
+    "title": "Equip Adapter - Mini DisplayPort (M) - HDMI (W) - Black",
+    "detected_at": "2026-06-16T14:58:47.718915+00:00"
+  },
+  "SUPE2045": {
+    "ean": "4015867157503",
+    "title": "Equip Adapter - DisplayPort (M) - HD-15 VGA (W) - Black",
+    "detected_at": "2026-06-16T14:58:49.814336+00:00"
+  },
+  "SUPE2049": {
+    "ean": "4015867203736",
+    "title": "Equip Adapter - DisplayPort (M) - USB-C (M) - 1,8m - Black",
+    "detected_at": "2026-06-16T14:58:52.659208+00:00"
+  },
+  "SUPE2054": {
+    "ean": "4015867225189",
+    "title": "Equip Audiokabel - 2 RCA (M) - 2 RCA (M) - 2,5m - Black",
+    "detected_at": "2026-06-16T14:58:55.476909+00:00"
+  },
+  "SUPG4006": {
+    "ean": "6947273705093",
+    "title": "Grandstream WP816 - schnurloses VoIP-Telefon - mit Bluetooth-Schnittstelle - IEEE 802.11a/b/g/n/ac/a",
+    "detected_at": "2026-06-16T15:02:31.864914+00:00"
+  },
+  "SUPG4007": {
+    "ean": "6947273705147",
+    "title": "Grandstream WP826 - schnurloses VoIP-Telefon - mit Bluetooth-Schnittstelle - IEEE 802.11a/b/g/n/ac/a",
+    "detected_at": "2026-06-16T15:02:33.546790+00:00"
+  },
+  "SUPG4011": {
+    "ean": "6947273704874",
+    "title": "Grandstream GWN7665 - Accesspoint - Wi-Fi 6 - Wi-Fi 6E",
+    "detected_at": "2026-06-16T15:02:36.011623+00:00"
+  },
+  "SUPH3013": {
+    "ean": "5704174522720",
+    "title": "HONEYWELL Genesis XP 7680g - Barcode-Scanner",
+    "detected_at": "2026-06-16T15:02:53.883940+00:00"
+  },
+  "SUPJ0168": {
+    "ean": "5706991023213",
+    "title": "JABRA Evolve2 85 UC Stereo - Headset - Bluetooth - kabellos, kabelgebunden - 3,5 mm Stecker",
+    "detected_at": "2026-06-16T15:03:12.069678+00:00"
+  },
+  "SUPJ0173": {
+    "ean": "5706991024364",
+    "title": "JABRA Evolve2 75 - Headset",
+    "detected_at": "2026-06-16T15:03:22.014516+00:00"
+  },
+  "SUPJ0180": {
+    "ean": "5706991023299",
+    "title": "JABRA Evolve2 85 MS Duo Headset",
+    "detected_at": "2026-06-16T15:03:24.509715+00:00"
+  },
+  "SUPJ0183": {
+    "ean": "5706991034530",
+    "title": "JABRA Evolve2 40 SE - Mono Headset",
+    "detected_at": "2026-06-16T15:03:26.519320+00:00"
+  },
+  "SUPJ0184": {
+    "ean": "5706991027501",
+    "title": "JABRA Evolve2 55 - Mono Headset",
+    "detected_at": "2026-06-16T15:03:29.044582+00:00"
+  },
+  "SUPJ1004": {
+    "ean": "5706991014839",
+    "title": "JABRA SPEAK 510 MS",
+    "detected_at": "2026-06-16T15:03:32.956822+00:00"
+  },
+  "SUPJ1049": {
+    "ean": "5706991024425",
+    "title": "JABRA Evolve2 75 - Headset",
+    "detected_at": "2026-06-16T15:03:35.023565+00:00"
+  },
+  "SUPJ1054": {
+    "ean": "5706991029109",
+    "title": "JABRA Evolve2 65 Flex UC Stereo Headset",
+    "detected_at": "2026-06-16T15:03:37.576950+00:00"
+  },
+  "SUPJ1056": {
+    "ean": "5706991022865",
+    "title": "JABRA Evolve2 65 MS Stereo Headset",
+    "detected_at": "2026-06-16T15:03:39.802799+00:00"
+  },
+  "SUPJ1061": {
+    "ean": "5706991027518",
+    "title": "JABRA Evolve2 55 MS Mono Headset",
+    "detected_at": "2026-06-16T15:03:42.176975+00:00"
+  },
+  "SUPJ1069": {
+    "ean": "5706991023190",
+    "title": "JABRA Evolve2 85 UC Stereo",
+    "detected_at": "2026-06-16T15:03:44.700209+00:00"
+  },
+  "SUPJ1079": {
+    "ean": "5706991026146",
+    "title": "JABRA Engage 40 Stereo - Headset - On-Ear - kabelgebunden",
+    "detected_at": "2026-06-16T15:03:50.654604+00:00"
+  },
+  "SUPJ1082": {
+    "ean": "5706991019957",
+    "title": "JABRA Evolve 30 II UC Mono - Headset - On-Ear",
+    "detected_at": "2026-06-16T15:03:52.784200+00:00"
+  },
+  "SUPJ1085": {
+    "ean": "5706991031522",
+    "title": "JABRA Evolve 65 TE Stereo - Headset - On-Ear",
+    "detected_at": "2026-06-16T15:03:54.750032+00:00"
+  },
+  "SUPL0006": {
+    "ean": "5099206041271",
+    "title": "Logitech Mouse B100 Optical Corded Black OEM",
+    "detected_at": "2026-06-16T15:03:56.612958+00:00"
+  },
+  "SUPL0057": {
+    "ean": "5099206008441",
+    "title": "Logitech Headset 960 Wired",
+    "detected_at": "2026-06-16T15:03:59.026417+00:00"
+  },
+  "SUPL0059": {
+    "ean": "5099206073173",
+    "title": "Logitech Desktop MK330 Wireless Black",
+    "detected_at": "2026-06-16T15:04:01.668477+00:00"
+  },
+  "SUPL0060": {
+    "ean": "5099206070011",
+    "title": "Logitech Presenter Spotlight Wireless Grey",
+    "detected_at": "2026-06-16T15:04:03.305276+00:00"
+  },
+  "SUPL0094": {
+    "ean": "5099206063846",
+    "title": "Logitech Desktop MK235 Wireless Black",
+    "detected_at": "2026-06-16T15:04:05.176574+00:00"
+  },
+  "SUPL0125": {
+    "ean": "5099206081901",
+    "title": "Logitech Mouse MX Vertical Wireless Grey",
+    "detected_at": "2026-06-16T15:04:08.469541+00:00"
+  },
+  "SUPL0127": {
+    "ean": "5099206065062",
+    "title": "Logitech Mouse B170 Optical Wireless Black",
+    "detected_at": "2026-06-16T15:04:10.665842+00:00"
+  },
+  "SUPL0183": {
+    "ean": "5099206033139",
+    "title": "Logitech Keyboard K270 Wireless Black/White",
+    "detected_at": "2026-06-16T15:04:12.729811+00:00"
+  },
+  "SUPL0187": {
+    "ean": "5099206066823",
+    "title": "Logitech Desktop MK850 Performance Wireless Black",
+    "detected_at": "2026-06-16T15:04:14.696452+00:00"
+  },
+  "SUPL0192": {
+    "ean": "5099206038844",
+    "title": "Logitech Headset H340 Wired",
+    "detected_at": "2026-06-16T15:04:16.918189+00:00"
+  },
+  "SUPL0233": {
+    "ean": "5099206066199",
+    "title": "Logitech Mouse M220 Silent Wireless Black",
+    "detected_at": "2026-06-16T15:04:19.283028+00:00"
+  },
+  "SUPL0264": {
+    "ean": "5099206059030",
+    "title": "Logitech ConferenceCam Video conference kit Connect",
+    "detected_at": "2026-06-16T15:04:21.297199+00:00"
+  },
+  "SUPL0266": {
+    "ean": "5099206085855",
+    "title": "Logitech Keyboard ERGO K860 Wireless Black",
+    "detected_at": "2026-06-16T15:04:23.015653+00:00"
+  },
+  "SUPL0279": {
+    "ean": "5099206066687",
+    "title": "Logitech Mouse M330 SILENT PLUS Wireless Blue",
+    "detected_at": "2026-06-16T15:04:25.706969+00:00"
+  },
+  "SUPL0285": {
+    "ean": "0097855119551",
+    "title": "Logitech ConferenceCam GROUP Expansion Microphones",
+    "detected_at": "2026-06-16T15:04:29.085998+00:00"
+  },
+  "SUPL0293": {
+    "ean": "5099206080270",
+    "title": "Logitech Gaming Mouse G502 HERO Corded Black",
+    "detected_at": "2026-06-16T15:04:33.675150+00:00"
+  },
+  "SUPL0299": {
+    "ean": "5099206059429",
+    "title": "Logitech Keyboard K400 Plus Touch Wireless Black - US Layout",
+    "detected_at": "2026-06-16T15:04:36.266625+00:00"
+  },
+  "SUPL0326": {
+    "ean": "5099206079526",
+    "title": "Logitech ConferenceCam Rally Plus Video conference kit",
+    "detected_at": "2026-06-16T15:04:40.091746+00:00"
+  },
+  "SUPL0328": {
+    "ean": "0097855143143",
+    "title": "Logitech ConferenceCam Rally Mic Pod Hub microphone Interface adapter",
+    "detected_at": "2026-06-16T15:04:41.898825+00:00"
+  },
+  "SUPL0329": {
+    "ean": "0097855131171",
+    "title": "Logitech ConferenceCam MeetUp Expansion Microphone",
+    "detected_at": "2026-06-16T15:04:43.998588+00:00"
+  },
+  "SUPL0344": {
+    "ean": "5099206092372",
+    "title": "Logitech Desktop MK295 Silent Wireless Combo Black",
+    "detected_at": "2026-06-16T15:04:46.710949+00:00"
+  },
+  "SUPL0395": {
+    "ean": "5099206088252",
+    "title": "Logitech Slim Folio Keyboard black",
+    "detected_at": "2026-06-16T15:04:48.389951+00:00"
+  },
+  "SUPL0402": {
+    "ean": "0097855162045",
+    "title": "Logitech HD Pro Webcam C920e",
+    "detected_at": "2026-06-16T15:04:50.556264+00:00"
+  },
+  "SUPL0438": {
+    "ean": "0097855166067",
+    "title": "Logitech Rally Table and Ceiling Mount for Rally Mic Pod",
+    "detected_at": "2026-06-16T15:04:52.444661+00:00"
+  },
+  "SUPL0439": {
+    "ean": "0097855153197",
+    "title": "Logitech Rally Mic Pod Mount",
+    "detected_at": "2026-06-16T15:04:56.278604+00:00"
+  },
+  "SUPL0446": {
+    "ean": "5099206104914",
+    "title": "Logitech Brio 500 Webcam Black",
+    "detected_at": "2026-06-16T15:05:02.286016+00:00"
+  },
+  "SUPL0458": {
+    "ean": "5099206090828",
+    "title": "Logitech Presenter Wireless R500s Black",
+    "detected_at": "2026-06-16T15:05:08.823646+00:00"
+  },
+  "SUPL0459": {
+    "ean": "5099206099784",
+    "title": "Logitech Lift Vertical Ergonomic Mouse",
+    "detected_at": "2026-06-16T15:05:10.907390+00:00"
+  },
+  "SUPL0480": {
+    "ean": "5099206097223",
+    "title": "Logitech Mouse Signature M650 Graphite",
+    "detected_at": "2026-06-16T15:05:13.351572+00:00"
+  },
+  "SUPL0492": {
+    "ean": "5099206097278",
+    "title": "Logitech Mouse Signature M650 L for Business Graphit",
+    "detected_at": "2026-06-16T15:05:17.160013+00:00"
+  },
+  "SUPL0501": {
+    "ean": "5099206090347",
+    "title": "Logitech Zone Wired MS-Teams Headseat",
+    "detected_at": "2026-06-16T15:05:21.997156+00:00"
+  },
+  "SUPL0507": {
+    "ean": "5099206093089",
+    "title": "Logitech Rally Bar Mini - Webcam",
+    "detected_at": "2026-06-16T15:05:27.820502+00:00"
+  },
+  "SUPL0509": {
+    "ean": "5099206099876",
+    "title": "Logitech Lift Vertical Ergonomic Mouse",
+    "detected_at": "2026-06-16T15:05:30.428900+00:00"
+  },
+  "SUPL0538": {
+    "ean": "5099206105324",
+    "title": "Logitech Signature MK650 Off-White",
+    "detected_at": "2026-06-16T15:05:32.243778+00:00"
+  },
+  "SUPL0574": {
+    "ean": "5099206107427",
+    "title": "Logitech Slim Folio Keyboard black",
+    "detected_at": "2026-06-16T15:05:34.867985+00:00"
+  },
+  "SUPL0575": {
+    "ean": "5099206121942",
+    "title": "Logitech Combo Touch Keyboard for iPad Air 11",
+    "detected_at": "2026-06-16T15:05:39.222491+00:00"
+  },
+  "SUPL0583": {
+    "ean": "5099206113053",
+    "title": "Logitech Combo Slim Wireless MK370 Keyboard Graphite",
+    "detected_at": "2026-06-16T15:05:42.555821+00:00"
+  },
+  "SUPL0589": {
+    "ean": "0097855181596",
+    "title": "Logitech ConferenceCam Sight 4k graphite",
+    "detected_at": "2026-06-16T15:05:46.140805+00:00"
+  },
+  "SUPL0598": {
+    "ean": "5099206122017",
+    "title": "Logitech Ultimate Ears WONDERBOOM Play Active Black",
+    "detected_at": "2026-06-16T15:05:48.707918+00:00"
+  },
+  "SUPL0603": {
+    "ean": "5099206106710",
+    "title": "Logitech Combo Touch Keyboard for iPad 10.9",
+    "detected_at": "2026-06-16T15:05:51.057916+00:00"
+  },
+  "SUPL0604": {
+    "ean": "5099206066878",
+    "title": "Logitech Desktop MK850 Performance - Tastatur-und-Maus-Set - US-Layout",
+    "detected_at": "2026-06-16T15:05:56.104031+00:00"
+  },
+  "SUPN4000": {
+    "ean": "5711157014110",
+    "title": "Needit PARK LITE (elektrische Parkscheibe) Blau",
+    "detected_at": "2026-06-16T15:06:39.406207+00:00"
+  },
+  "SUPN4001": {
+    "ean": "5711157014127",
+    "title": "Needit PARK LITE (elektrische Parkscheibe) Schwarz",
+    "detected_at": "2026-06-16T15:06:40.935258+00:00"
+  },
+  "SUPN4002": {
+    "ean": "5711157030141",
+    "title": "Needit Park Mini (elektrische Parkscheibe) Blau",
+    "detected_at": "2026-06-16T15:06:43.354774+00:00"
+  },
+  "SUPN4003": {
+    "ean": "5711157030110",
+    "title": "Needit Park Mini (elektrische Parkscheibe) Schwarz",
+    "detected_at": "2026-06-16T15:06:45.207402+00:00"
+  },
+  "SUPN4006": {
+    "ean": "5711157080412",
+    "title": "Needit PARK LITE One (elektrische Parkscheibe) Schwarz",
+    "detected_at": "2026-06-16T15:06:46.797857+00:00"
+  },
+  "SUPN4009": {
+    "ean": "5711157001578",
+    "title": "Needit PARK Micro (elektrische Parkscheibe) Schwarz/Blau",
+    "detected_at": "2026-06-16T15:06:50.566117+00:00"
+  },
+  "SUPN4012": {
+    "ean": "5711157057100",
+    "title": "Needit ParkOne (elektrische Parkscheibe) Schwarz",
+    "detected_at": "2026-06-16T15:06:53.250216+00:00"
+  },
+  "SUPN4013": {
+    "ean": "5711157057346",
+    "title": "Needit ParkOne (elektrische Parkscheibe) Blau",
+    "detected_at": "2026-06-16T15:06:55.804369+00:00"
+  },
+  "SUPR1009": {
+    "ean": "8886419333265",
+    "title": "Razer DeathAdder Essential - Gaming Maus - black",
+    "detected_at": "2026-06-16T15:06:58.531881+00:00"
+  },
+  "SUPR1017": {
+    "ean": "8886419379850",
+    "title": "Razer Barracuda X - Wireless Headset - black",
+    "detected_at": "2026-06-16T15:07:01.713822+00:00"
+  },
+  "SUPR1018": {
+    "ean": "8886419378082",
+    "title": "Razer Kraken X Lite - Headset - black",
+    "detected_at": "2026-06-16T15:07:03.862526+00:00"
+  },
+  "SUPR1049": {
+    "ean": "8887910060766",
+    "title": "Razer Kraken V4 X - Headset - ohrumschließend",
+    "detected_at": "2026-06-16T15:07:23.702655+00:00"
+  },
+  "SUPS0288": {
+    "ean": "5013493465145",
+    "title": "Sony ZV-1 II - Exmor RS CMOS",
+    "detected_at": "2026-06-16T15:08:57.798866+00:00"
+  },
+  "SUPS0291": {
+    "ean": "4548736158283",
+    "title": "Sony HT-AN7 - Nackenlautsprecher",
+    "detected_at": "2026-06-16T15:09:04.979565+00:00"
+  },
+  "SUPS0296": {
+    "ean": "4548736156432",
+    "title": "Sony WH-ULT900N - Kopfhörer - Schwarz",
+    "detected_at": "2026-06-16T15:09:11.182320+00:00"
+  },
+  "SUPS0328": {
+    "ean": "4548736134294",
+    "title": "Sony WH-1000XM5L True Wireless Headset | Night Blue",
+    "detected_at": "2026-06-16T15:09:29.175334+00:00"
+  },
+  "SUPY0038": {
+    "ean": "6938818308497",
+    "title": "Yealink DECT Telefon W79P (Basis W70B und W59R)",
+    "detected_at": "2026-06-16T15:12:00.789970+00:00"
+  },
+  "SUPY1003": {
+    "ean": "5060408465301",
+    "title": "YUBICO USB-Sicherheitsschlüssel - NFC - Schwarz",
+    "detected_at": "2026-06-16T15:12:18.704430+00:00"
+  },
+  "USBK0042": {
+    "ean": "4582761160187",
+    "title": "Kioxia SD Exceria Plus 128GB",
+    "detected_at": "2026-06-16T15:12:28.083156+00:00"
   }
 }
