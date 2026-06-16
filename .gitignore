@@ -19,8 +19,9 @@ state_shop2.json
 icecat_cache.json
 processed_orders_state.json
 processed_orders_state_shop2.json
-tracked_shipments_state.json
-tracked_shipments_state_shop2.json
+# tracked_shipments werden bewusst committed (State für Duplikat-Vermeidung)
+# tracked_shipments_state.json
+# tracked_shipments_state_shop2.json
 image_report.csv
 
 # Temporäre/lokale Dateien

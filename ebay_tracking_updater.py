@@ -84,8 +84,9 @@ BAB_SENDERS = [
 ]
 
 
-def fetch_bab_emails(supplier_email: str) -> list[tuple[bytes, email.message.Message]]:
-    """Holt ungelesene Mails von BAB (alle bekannten Absender)."""
+def fetch_bab_emails(supplier_email: str, days: int = 7) -> list[tuple[bytes, email.message.Message]]:
+    """Holt BAB-Mails der letzten N Tage (gelesen + ungelesen).
+    Duplikate werden später über tracked_shipments gefiltert."""
     host = os.environ.get("IMAP_HOST") or os.environ.get("SMTP_HOST", "")
     port = int(os.environ.get("IMAP_PORT", 993))
     user = os.environ.get("IMAP_USER") or os.environ.get("SMTP_USER", "")
@@ -94,6 +95,10 @@ def fetch_bab_emails(supplier_email: str) -> list[tuple[bytes, email.message.Mes
     if not all([host, user, pw]):
         log.error("IMAP-Zugangsdaten fehlen (IMAP_HOST/IMAP_USER/IMAP_PASSWORD)")
         return []
+
+    # Datum für SINCE-Filter (letzten N Tage)
+    from datetime import timedelta
+    since_date = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%d-%b-%Y")
 
     # Alle BAB-Absender abfragen (inkl. aus config)
     senders = list({supplier_email.lower()} | {s.lower() for s in BAB_SENDERS})
@@ -106,10 +111,11 @@ def fetch_bab_emails(supplier_email: str) -> list[tuple[bytes, email.message.Mes
         M.select("INBOX")
 
         for sender in senders:
-            search = f'(FROM "{sender}" UNSEEN)'
+            # SINCE statt UNSEEN — findet auch bereits gelesene Mails
+            search = f'(FROM "{sender}" SINCE "{since_date}")'
             _, data = M.search(None, search)
             ids = data[0].split()
-            log.info(f"IMAP: {len(ids)} ungelesene Mails von {sender}")
+            log.info(f"IMAP: {len(ids)} Mails (letzte {days}d) von {sender}")
             for msg_id in ids:
                 if msg_id in seen_ids:
                     continue
@@ -219,6 +225,37 @@ def extract_order_and_tracking(subject: str, body: str) -> tuple[Optional[str], 
     return order_id, tracking
 
 
+def extract_skus_from_text(text: str) -> list[str]:
+    """Extrahiert mögliche BAB-SKUs (z.B. PETK0049, NETU0187) aus Mail-Text."""
+    return re.findall(r"\b([A-Z]{3,5}[0-9]{3,6})\b", text)
+
+
+def fetch_awaiting_orders(client: EbayClient) -> list[dict]:
+    """Holt alle eBay-Bestellungen mit Status AWAITING_SHIPMENT."""
+    try:
+        since = (datetime.now(timezone.utc) - __import__("datetime").timedelta(days=30)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+        r = client._request(
+            "GET",
+            "/sell/fulfillment/v1/order",
+            params={"filter": f"orderfulfillmentstatus:{{NOT_STARTED|IN_PROGRESS}},creationdate:[{since}..]", "limit": 50},
+        )
+        return r.get("orders", []) if isinstance(r, dict) else []
+    except Exception as e:
+        log.warning(f"Bestellungen abrufen fehlgeschlagen: {e}")
+        return []
+
+
+def match_order_by_sku(orders: list[dict], skus_in_mail: list[str]) -> Optional[str]:
+    """Versucht eine eBay-Bestellung anhand von SKUs in der Mail zu finden."""
+    for order in orders:
+        for item in order.get("lineItems", []):
+            sku = item.get("sku", "")
+            if sku and any(sku.upper() == s.upper() for s in skus_in_mail):
+                log.info(f"Order via SKU-Match gefunden: {order['orderId']} (SKU: {sku})")
+                return order["orderId"]
+    return None
+
+
 # ---------------------------------------------------------------------------
 # eBay: Versand melden
 # ---------------------------------------------------------------------------
@@ -320,31 +357,49 @@ def main():
 
     # Mails lesen
     mails = fetch_bab_emails(supplier_email)
+    log.info(f"{len(mails)} BAB-Mails der letzten 7 Tage gefunden")
     updated = 0
+
+    # Offene eBay-Bestellungen vorab laden (für SKU-Fallback)
+    awaiting_orders: list[dict] = []
 
     for msg_id, msg in mails:
         subject = msg.get("Subject", "")
         body = extract_text(msg)
 
+        log.info(f"Mail: '{subject[:100]}'")
+        log.debug(f"Body (erste 300 Zeichen):\n{body[:300]}")
+
         order_id, tracking = extract_order_and_tracking(subject, body)
 
         if not tracking:
             log.warning(f"Keine Tracking-Nummer in Mail: '{subject[:80]}'")
-            mark_as_read(msg_id, supplier_email)
-            continue
-
-        if not order_id:
-            log.warning(f"Keine eBay-Bestellnummer in Mail: '{subject[:80]}' | Tracking: {tracking}")
-            # Trotzdem als gelesen markieren
-            mark_as_read(msg_id, supplier_email)
+            log.warning(f"  Mail-Inhalt (erste 400 Zeichen): {body[:400]}")
             continue
 
         if tracking in tracked:
             log.info(f"Tracking {tracking} bereits verarbeitet — übersprungen")
-            mark_as_read(msg_id, supplier_email)
             continue
 
-        log.info(f"Mail verarbeite: Order {order_id} | Tracking {tracking}")
+        # Order-ID nicht direkt in Mail — Fallback: SKU-Match gegen offene Bestellungen
+        if not order_id:
+            log.warning(f"Keine eBay-Bestellnummer in Mail | Tracking: {tracking} — versuche SKU-Match …")
+            skus = extract_skus_from_text(f"{subject}\n{body}")
+            log.info(f"  Gefundene SKU-Kandidaten: {skus}")
+            if skus:
+                if not awaiting_orders:
+                    awaiting_orders = fetch_awaiting_orders(client)
+                    log.info(f"  Offene Bestellungen: {len(awaiting_orders)}")
+                order_id = match_order_by_sku(awaiting_orders, skus)
+
+        if not order_id:
+            log.error(
+                f"KEIN MATCH für Tracking {tracking} — Mail manuell prüfen: '{subject[:80]}'\n"
+                f"  Tipp: eBay-Bestellnummer im Format 18-XXXXX-XXXXX nicht in Mail gefunden."
+            )
+            continue
+
+        log.info(f"✓ Verarbeite: Order {order_id} | Tracking {tracking}")
         mark_shipped_on_ebay(client, order_id, tracking, dry_run=args.dry_run)
 
         tracked.add(tracking)
