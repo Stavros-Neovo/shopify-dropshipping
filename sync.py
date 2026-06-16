@@ -237,6 +237,33 @@ def main():
     state_path = Path(cfg["runtime"]["state_file"])
     state = json.loads(state_path.read_text()) if state_path.exists() else {}
 
+    # Gesperrte SKUs laden (Makita/Markita-Sperre)
+    banned_skus: set[str] = set()
+    banned_path = Path("banned_skus.json")
+    if banned_path.exists():
+        try:
+            banned_skus = set(json.loads(banned_path.read_text()))
+            log.info(f"Gesperrte SKUs geladen: {len(banned_skus)}")
+        except Exception as e:
+            log.warning(f"banned_skus.json konnte nicht geladen werden: {e}")
+
+    # Gesperrte Listings sofort deaktivieren (falls noch im State)
+    if banned_skus and ebay_enabled and ebay and not dry_run:
+        active_banned = [sku for sku in banned_skus if sku in state and not state[sku].get("banned_offlined")]
+        if active_banned:
+            log.warning(f"⛔ {len(active_banned)} gesperrte SKUs noch aktiv — werden sofort offline genommen")
+            for sku in active_banned:
+                try:
+                    offers = ebay.get_offers_for_sku(sku)
+                    for offer in offers:
+                        if offer.get("status") == "PUBLISHED":
+                            ebay.set_inventory(sku, 0)
+                            ebay.withdraw_offer(offer["offerId"])
+                            log.warning(f"  ⛔ GESPERRT + OFFLINE: {sku}")
+                    state[sku]["banned_offlined"] = datetime.now().isoformat()
+                except Exception as e:
+                    log.error(f"  Fehler beim Deaktivieren von {sku}: {e}")
+
     limit = int(cfg["runtime"].get("max_products_per_run", 0))
     processed = 0
     seen_skus: set[str] = set()  # alle SKUs die in diesem Lauf gesehen wurden
@@ -271,6 +298,13 @@ def main():
 
     for product in batch:
         stats["total"] += 1
+        sku = product.get("sku", "")
+
+        # Gesperrte SKUs überspringen
+        if sku in banned_skus:
+            log.info(f"⛔ Übersprungen (gesperrt): {sku}")
+            stats["filtered"] = stats.get("filtered", 0) + 1
+            continue
 
         # Shopify-Preis berechnen
         try:
