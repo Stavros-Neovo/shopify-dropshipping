@@ -2530,5 +2530,335 @@
     "ean": "4719692007681",
     "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
     "detected_at": "2026-06-16T21:56:56.577720+00:00"
+  },
+  "RAM4L0017": {
+    "ean": "0843367123766",
+    "title": "Lexar DDR4-3200 SO-DIMM 8GB",
+    "detected_at": "2026-06-17T00:05:48.885043+00:00"
+  },
+  "RAM5C0021": {
+    "ean": "0649528906564",
+    "title": "Crucial DDR5 - 64GB 4800 SO-DIMM KIT 2x32GB (CT2K32G48C40S5)",
+    "detected_at": "2026-06-17T00:05:54.705390+00:00"
+  },
+  "RAM5C0022": {
+    "ean": "0649528937803",
+    "title": "Crucial Pro DDR5-5600 Kit 32GB 2x16GB UDIMM CL46 (16Gbit)",
+    "detected_at": "2026-06-17T00:05:56.731208+00:00"
+  },
+  "RAM5C1013": {
+    "ean": "0840006667216",
+    "title": "Corsair Vengeance - DDR5 - Kit - 48 GB: 2 x 24 GB (CMK48GX5M2B6400C36)",
+    "detected_at": "2026-06-17T00:06:04.783789+00:00"
+  },
+  "RAM5G0000": {
+    "ean": "4713294231949",
+    "title": "G.Skill DDR5 64GB PC 6000 CL30 G.Skill KIT (2x32GB) 64-TZ5RK RGB",
+    "detected_at": "2026-06-17T00:06:07.466042+00:00"
+  },
+  "RAM5G0006": {
+    "ean": "4713294231833",
+    "title": "G.Skill DDR5 32GB PC 6000 CL32  KIT (2x16GB) 32-RS5K",
+    "detected_at": "2026-06-17T00:06:09.689603+00:00"
+  },
+  "RAM5G0007": {
+    "ean": "4713294230720",
+    "title": "G.Skill DDR5 32GB PC 6000 CL36  KIT (2x16GB) 32-TZ5RK",
+    "detected_at": "2026-06-17T00:06:12.204231+00:00"
+  },
+  "RAM5G0010": {
+    "ean": "4713294232687",
+    "title": "G.Skill DDR5 32GB PC 6000 CL36 (2x16GB) 32-GX2-FX5 FLARE AMD",
+    "detected_at": "2026-06-17T00:06:13.963751+00:00"
+  },
+  "RAM5G0011": {
+    "ean": "4713294230539",
+    "title": "G.Skill DDR5 32GB PC 6000 CL30 (2x16GB) 32-GX2-FX5 FLARE AMD",
+    "detected_at": "2026-06-17T00:06:16.406574+00:00"
+  },
+  "RAM5G0018": {
+    "ean": "4713294234575",
+    "title": "G.Skill DDR5 32GB PC 6400 CL32 G.Skill (2x16GB) 32-GX2-TZ5NR AMD",
+    "detected_at": "2026-06-17T00:06:22.435554+00:00"
+  },
+  "RAM5G0020": {
+    "ean": "4713294237637",
+    "title": "G.Skill DDR5 64GB PC 6000 CL36 (2x32GB) 64-GX2-FX5 FLARE AMD",
+    "detected_at": "2026-06-17T00:06:28.464851+00:00"
+  },
+  "RAM5G0025": {
+    "ean": "4713294237644",
+    "title": "G.Skill DDR5 32GB PC 6000 CL36 (2x32GB) 32-GX2-FX5 FLARE",
+    "detected_at": "2026-06-17T00:06:30.852385+00:00"
+  },
+  "SDXS0000": {
+    "ean": "0619659184674",
+    "title": "SanDisk SDSSDE61-2T00-G25 Extreme Portable 2TB SSD",
+    "detected_at": "2026-06-17T00:07:33.330713+00:00"
+  },
+  "SDXS0019": {
+    "ean": "0619659184704",
+    "title": "SanDisk SDSSDE61-4T00-G25 Extreme Portable 4TB SSD",
+    "detected_at": "2026-06-17T00:07:35.996104+00:00"
+  },
+  "SDXS0023": {
+    "ean": "0619659184735",
+    "title": "SanDisk Extreme Pro Portable SSD 4TB SDSSDE81-4T00-G25",
+    "detected_at": "2026-06-17T00:07:38.917562+00:00"
+  },
+  "SHG0003": {
+    "ean": "6974316994152",
+    "title": "Govee - Glide Wall Light (4+1)",
+    "detected_at": "2026-06-17T00:08:24.370731+00:00"
+  },
+  "SHG0044": {
+    "ean": "6974316999997",
+    "title": "Govee - Govee Gaming Wall light*",
+    "detected_at": "2026-06-17T00:09:29.765766+00:00"
+  },
+  "SSDK1002": {
+    "ean": "4582563851856",
+    "title": "HDSSD 2,5\" 480GB Kioxia Exceria SATA 6Gbit/s",
+    "detected_at": "2026-06-17T00:11:08.803810+00:00"
+  },
+  "SSDK1016": {
+    "ean": "4582563857872",
+    "title": "SSD M.2 (2280) Kioxia Exceria Plus G3 NVMe 1TB",
+    "detected_at": "2026-06-17T00:11:10.945629+00:00"
+  },
+  "SSDK1024": {
+    "ean": "4582563859982",
+    "title": "SSD M.2 (2280) Kioxia Exceria Plus G4 NVMe 2TB",
+    "detected_at": "2026-06-17T00:11:13.418550+00:00"
+  },
+  "SSDK1028": {
+    "ean": "4582563859630",
+    "title": "SSD Kioxia Exceria Plus G2 Portable 2TB USB 3.2",
+    "detected_at": "2026-06-17T00:11:15.750359+00:00"
+  },
+  "SSDK1035": {
+    "ean": "4582761160286",
+    "title": "SSD Kioxia Exceria Pro G2 1TB (PCIe5.0/NVMe)",
+    "detected_at": "2026-06-17T00:11:18.169912+00:00"
+  },
+  "SSDL0045": {
+    "ean": "0843367136797",
+    "title": "SSD M.2 Lexar 2TB PCIe Gen 5 NM1090 Pro NVMe",
+    "detected_at": "2026-06-17T00:11:20.568976+00:00"
+  },
+  "SSDL0046": {
+    "ean": "0843367136803",
+    "title": "SSD M.2 Lexar 4TB PCIe Gen 5 NM1090 Pro NVMe",
+    "detected_at": "2026-06-17T00:11:22.667662+00:00"
+  },
+  "SSDL0047": {
+    "ean": "0843367136841",
+    "title": "SSD M.2 Lexar 1TB PCIe Gen 5 NM990 NVMe",
+    "detected_at": "2026-06-17T00:11:24.836559+00:00"
+  },
+  "SSDW0089": {
+    "ean": "0718037884660",
+    "title": "HDSSD 2.5\" 2 TB WD Blue™ SA510 PC 3D SSD 7mm",
+    "detected_at": "2026-06-17T00:12:10.415911+00:00"
+  },
+  "SSDW0094": {
+    "ean": "0619659220884",
+    "title": "HDSSD M.2 1TB WD Black™ SN8100 NVMe PCI5.0",
+    "detected_at": "2026-06-17T00:12:16.258441+00:00"
+  },
+  "SUPB1058": {
+    "ean": "0017817861076",
+    "title": "Bose QuietComfort Ultra Earbuds (2. Gen.) White",
+    "detected_at": "2026-06-17T00:12:29.081820+00:00"
+  },
+  "SUPB1061": {
+    "ean": "0017817859561",
+    "title": "Bose QuietComfort Ultra 2.Gen white",
+    "detected_at": "2026-06-17T00:12:32.645422+00:00"
+  },
+  "SUPE2021": {
+    "ean": "4015867173411",
+    "title": "Equip USB 2.0 Cable - USB-A - Micro-USB - 1m - Black",
+    "detected_at": "2026-06-17T00:13:44.364628+00:00"
+  },
+  "SUPE2032": {
+    "ean": "4015867198698",
+    "title": "Equip USB 2.0 Cable - USB-C (M) - USB-A (M) - 1m - Black",
+    "detected_at": "2026-06-17T00:14:05.677746+00:00"
+  },
+  "SUPE2046": {
+    "ean": "4015867178065",
+    "title": "Equip Adapter - DisplayPort (M) - HDMI (W) - Black",
+    "detected_at": "2026-06-17T00:14:17.212423+00:00"
+  },
+  "SUPE2053": {
+    "ean": "4015867225172",
+    "title": "Equip Audiokabel - 2 RCA (W) - mini-phone 3.5mm (M) - 2,5m - Black",
+    "detected_at": "2026-06-17T00:14:19.243949+00:00"
+  },
+  "SUPG4001": {
+    "ean": "6947273702672",
+    "title": "Grandstream WP820 - schnurloses VoIP-Telefon - mit Bluetooth-Schnittstelle",
+    "detected_at": "2026-06-17T00:17:58.816137+00:00"
+  },
+  "SUPL0027": {
+    "ean": "5099206027282",
+    "title": "Logitech Mouse M185 Wireless Swift Grey",
+    "detected_at": "2026-06-17T00:18:39.172757+00:00"
+  },
+  "SUPL0312": {
+    "ean": "5099206086449",
+    "title": "Logitech Desktop MK470 Slim Wireless Combo Black",
+    "detected_at": "2026-06-17T00:18:44.669183+00:00"
+  },
+  "SUPL0464": {
+    "ean": "5099206103016",
+    "title": "Logitech Keyboard Master Series MX Mechanical",
+    "detected_at": "2026-06-17T00:18:47.832990+00:00"
+  },
+  "SUPL0490": {
+    "ean": "5099206104419",
+    "title": "Logitech MX Keys Combo for Business - Keyboard and Mouse Set - Graphite",
+    "detected_at": "2026-06-17T00:18:49.984840+00:00"
+  },
+  "SUPL0546": {
+    "ean": "5099206112490",
+    "title": "Logitech Mouse MX Anywhere 3S Wireless Graphite",
+    "detected_at": "2026-06-17T00:18:52.623993+00:00"
+  },
+  "SUPL0605": {
+    "ean": "5099206123069",
+    "title": "Logitech Bluetooth Combo Touch iPad Pro 13\" M4",
+    "detected_at": "2026-06-17T00:18:56.633446+00:00"
+  },
+  "SUPL0606": {
+    "ean": "5099206133082",
+    "title": "Logitech Mouse MX Master 4 Graphite",
+    "detected_at": "2026-06-17T00:18:58.637342+00:00"
+  },
+  "SUPL0607": {
+    "ean": "5099206133099",
+    "title": "Logitech Mouse MX Master 4 Pale Grey",
+    "detected_at": "2026-06-17T00:19:00.390981+00:00"
+  },
+  "SUPL0608": {
+    "ean": "5099206133112",
+    "title": "Logitech Mouse MX Master 4 Space Black",
+    "detected_at": "2026-06-17T00:19:02.699455+00:00"
+  },
+  "SUPL2028": {
+    "ean": "0195892121305",
+    "title": "Lenovo ThinkPad Smart Dock 7500 Gen 2 - Dockingstation",
+    "detected_at": "2026-06-17T00:19:20.246442+00:00"
+  },
+  "SUPL2029": {
+    "ean": "0195892112907",
+    "title": "Lenovo ThinkPad Smart Dock 7500 - Dockingstation",
+    "detected_at": "2026-06-17T00:19:22.176004+00:00"
+  },
+  "SUPM3006": {
+    "ean": "7109806196986",
+    "title": "Mitel 632dt Handset",
+    "detected_at": "2026-06-17T00:19:31.572762+00:00"
+  },
+  "SUPN4007": {
+    "ean": "5711157080382",
+    "title": "Needit PARK LITE One (elektrische Parkscheibe) Blau",
+    "detected_at": "2026-06-17T00:19:33.771782+00:00"
+  },
+  "SUPR0004": {
+    "ean": "8886419332565",
+    "title": "Razer Mamba Elite USB - Gaming-Maus",
+    "detected_at": "2026-06-17T00:19:44.982732+00:00"
+  },
+  "SUPR1014": {
+    "ean": "8886419334095",
+    "title": "Razer Cobra - Maus - Black",
+    "detected_at": "2026-06-17T00:19:54.644041+00:00"
+  },
+  "SUPR1027": {
+    "ean": "8886419333326",
+    "title": "Razer DeathAdder Essential - Gaming Maus - white",
+    "detected_at": "2026-06-17T00:20:02.695523+00:00"
+  },
+  "SUPR1044": {
+    "ean": "8886419334552",
+    "title": "Razer DeathAdder V3 HyperSpeed - Maus - ergonomisch - 5 Tasten - kabellos, kabelgebunden",
+    "detected_at": "2026-06-17T00:20:19.055145+00:00"
+  },
+  "SUPR1047": {
+    "ean": "8886419379645",
+    "title": "Razer Leviathan V2 X - Soundbar - Schwarz",
+    "detected_at": "2026-06-17T00:20:21.143506+00:00"
+  },
+  "SUPR1052": {
+    "ean": "8886419351450",
+    "title": "Razer Wolverine V3 - Tournament Edition - Game Pad",
+    "detected_at": "2026-06-17T00:20:26.806189+00:00"
+  },
+  "SUPR1053": {
+    "ean": "8886419334347",
+    "title": "Razer Viper V3 Pro SE schwarz",
+    "detected_at": "2026-06-17T00:20:29.509064+00:00"
+  },
+  "SUPR1054": {
+    "ean": "8886419334576",
+    "title": "Razer Basilisk V3 35K - Maus - Schwarz",
+    "detected_at": "2026-06-17T00:20:31.762425+00:00"
+  },
+  "SUPR1059": {
+    "ean": "8887910061091",
+    "title": "Razer Kraken Kitty V3 X - Headset - Quartz",
+    "detected_at": "2026-06-17T00:20:34.043211+00:00"
+  },
+  "SUPS0260": {
+    "ean": "8801643979393",
+    "title": "Samsung Fast Charging Wall Charger EP-TA800 - Netzteil - USB-C 25W - schwarz",
+    "detected_at": "2026-06-17T00:21:02.557688+00:00"
+  },
+  "SUPS0283": {
+    "ean": "4548736142428",
+    "title": "Sony WH-CH720N - True Wireless Headset - Black",
+    "detected_at": "2026-06-17T00:21:31.907218+00:00"
+  },
+  "SUPS0297": {
+    "ean": "4548736158337",
+    "title": "Sony WH-ULT900N - Kopfhörer - Off White",
+    "detected_at": "2026-06-17T00:21:37.461838+00:00"
+  },
+  "SUPS1024": {
+    "ean": "8720862502635",
+    "title": "Sonos Ace Bluetooth-Kopfhörer - Weiß",
+    "detected_at": "2026-06-17T00:22:16.028573+00:00"
+  },
+  "SUPS7004": {
+    "ean": "3800235262214",
+    "title": "Shelly - Hutschiene - \"3EM\" - Stromzähler - max. 3x 120A -Inkl. 3 Klemmen - Messfunktion - WLAN",
+    "detected_at": "2026-06-17T00:22:23.120954+00:00"
+  },
+  "SUPS7023": {
+    "ean": "3800235261798",
+    "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
+    "detected_at": "2026-06-17T00:22:26.520780+00:00"
+  },
+  "SUPV0028": {
+    "ean": "0023942321477",
+    "title": "Verbatim Share My Screen USB-C Wireless Displ. Ad. 4K/Hub 32147",
+    "detected_at": "2026-06-17T00:23:07.926013+00:00"
+  },
+  "SUPV0034": {
+    "ean": "0023942495918",
+    "title": "Verbatim PMT-14 Portable Touchscreen Monitor",
+    "detected_at": "2026-06-17T00:23:16.422495+00:00"
+  },
+  "SUPY0003": {
+    "ean": "6938818306202",
+    "title": "Yealink DECT Multi-Cell Manager W90DM",
+    "detected_at": "2026-06-17T00:24:12.133043+00:00"
+  },
+  "SUPY0022": {
+    "ean": "6938818303188",
+    "title": "Yealink IP Telefon SIP-T53W",
+    "detected_at": "2026-06-17T00:24:24.384853+00:00"
   }
 }
