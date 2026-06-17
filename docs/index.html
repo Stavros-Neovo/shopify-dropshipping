@@ -336,6 +336,15 @@
       </div>
     </div>
     <div class="topbar-right">
+      <!-- Schnellsuche EAN / SKU -->
+      <div style="position:relative">
+        <input id="qs-input" type="text" placeholder="🔍 EAN oder SKU …"
+          style="padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:13px;width:220px;outline:none"
+          oninput="qsSearch()" onkeydown="if(event.key==='Escape'){document.getElementById('qs-result').style.display='none'}">
+        <div id="qs-result"
+          style="display:none;position:absolute;right:0;top:42px;min-width:340px;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,0.4);z-index:999;padding:12px 16px;font-size:13px">
+        </div>
+      </div>
       <span class="status-dot"></span>
       <span style="font-size:12px;color:var(--text-muted)">System aktiv</span>
       <button class="btn btn-outline">⟳ Aktualisieren</button>
@@ -1916,6 +1925,60 @@ function rechExportCSV() {
 
 // Initial render
 document.addEventListener('DOMContentLoaded', rechRender);
+
+// ═══════════════════════════════════════════════════════════
+// SCHNELLSUCHE (EAN / SKU) — Topbar
+// ═══════════════════════════════════════════════════════════
+function qsSearch() {
+  const q   = (document.getElementById('qs-input')?.value || '').trim();
+  const box = document.getElementById('qs-result');
+  if (!box) return;
+  if (q.length < 3) { box.style.display = 'none'; return; }
+
+  const ql = q.toLowerCase();
+  // Suche in plistData (BAB Preisliste — geladen wenn Tab besucht wurde)
+  let hits = plistData.filter(a =>
+    a.ean === q || a.sku.toLowerCase() === ql ||
+    a.sku.toLowerCase().includes(ql) || a.ean.includes(q) ||
+    a.title.toLowerCase().includes(ql)
+  ).slice(0, 8);
+
+  if (hits.length === 0) {
+    box.innerHTML = '<div style="color:var(--text-sub);padding:4px 0">Nicht gefunden. <a href="#" onclick="event.preventDefault();showSection(\'preisliste\',document.querySelector(\'[onclick*=preisliste]\'));document.getElementById(\'plist-search\').value=document.getElementById(\'qs-input\').value;plistFilter()" style="color:var(--accent)">→ Preisliste durchsuchen</a></div>';
+    box.style.display = 'block';
+    return;
+  }
+
+  box.innerHTML = hits.map(a => {
+    const stockColor = a.stock > 0 ? 'var(--green)' : 'var(--red)';
+    const stockTxt   = a.stock > 0 ? `✅ ${a.stock} lagernd` : '❌ nicht lagernd';
+    const gewColor   = a.gewinn > 10 ? 'var(--green)' : a.gewinn > 0 ? 'var(--text-main)' : 'var(--red)';
+    return `<div style="padding:10px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <strong style="font-family:monospace;font-size:12px">${a.sku}</strong>
+        <span style="font-size:11px;color:${stockColor}">${stockTxt}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-sub);margin:3px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.title || '–'}</div>
+      <div style="display:flex;gap:16px;font-size:13px;margin-top:4px">
+        <span>EK <strong>€${a.ek.toFixed(2)}</strong> netto</span>
+        <span style="color:var(--text-sub)">+5€ Versand = <strong>€${(a.ek+5).toFixed(2)}</strong></span>
+        <span>VK <strong>€${a.vk.toFixed(2)}</strong></span>
+        <span style="color:${gewColor}">Gew. <strong>€${a.gewinn.toFixed(2)}</strong></span>
+      </div>
+      ${a.ean ? `<div style="font-size:11px;color:var(--text-sub);margin-top:2px">EAN: ${a.ean}</div>` : ''}
+    </div>`;
+  }).join('') + (plistData.length === 0
+    ? '<div style="color:var(--text-sub);font-size:12px;margin-top:6px">💡 Preisliste noch nicht geladen — einmal den Tab 📦 BAB Preisliste öffnen.</div>'
+    : '');
+
+  box.style.display = 'block';
+}
+
+// Klick außerhalb schließt Dropdown
+document.addEventListener('click', e => {
+  if (!e.target.closest('#qs-input') && !e.target.closest('#qs-result'))
+    document.getElementById('qs-result') && (document.getElementById('qs-result').style.display = 'none');
+});
 
 // ═══════════════════════════════════════════════════════════
 // BAB PREISLISTE
