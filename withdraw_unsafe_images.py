@@ -2,10 +2,11 @@
 """
 withdraw_unsafe_images.py
 =========================
-Deaktiviert eBay-Listings mit unsicheren Bildern (Retailer-Sites statt Hersteller-CDN).
-Läuft als GitHub Action (kein Timeout-Problem).
+Deaktiviert eBay-Listings mit Bildern von unzuverlässigen Retailer-Sites.
+Nur PUBLISHED Offers werden withdrawn (UNPUBLISHED werden übersprungen).
 
-Aufruf: python withdraw_unsafe_images.py --config config_shop2.yaml
+Aufruf lokal:  python withdraw_unsafe_images.py --config config_shop2.yaml
+GitHub Action: secrets EBAY_CLIENT_ID, EBAY_CLIENT_SECRET, EBAY_REFRESH_TOKEN_2
 """
 from __future__ import annotations
 import argparse, json, os, sys, time
@@ -17,117 +18,123 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent))
 from ebay_client import EbayClient
 
-# Domains, die KEINE zuverlässigen Produktbilder liefern
+INVENTORY_PATH = "/sell/inventory/v1/inventory_item"
+
+# Domains von Shopping-Sites / US-Retailern — keine zuverlässigen Produktbilder
 UNSAFE_DOMAINS = {
-    'pisces.bbystatic.com',
-    'www.ebuyer.com',
-    'www.irvsluggage.com',
-    'i5.walmartimages.com',
-    'c1.neweggimages.com',
-    'down-id.img.susercontent.com',
-    'm.media-amazon.com',
-    'cdn.idealo.com',
+    'pisces.bbystatic.com',          # Best Buy USA
+    'www.ebuyer.com',                # UK Retailer
+    'www.irvsluggage.com',           # Kofferladen
+    'i5.walmartimages.com',          # Walmart
+    'c1.neweggimages.com',           # Newegg
+    'down-id.img.susercontent.com',  # Shopee Indonesia
+    'm.media-amazon.com',            # Amazon (falsche Variante möglich)
+    'cdn.idealo.com',                # Idealo Thumbnails
     'www.alternate.de',
     'www.onedirect.de',
     'media.cdn.kaufland.de',
-    'media.cdn.bauhaus',
-    'pisces.bbystatic.com',
-    'www.shopprice.com.au',
 }
-
-def load_ddg_eans(path: str = "enrichment_index.csv") -> set[str]:
-    """Liest EANs, deren Bilder aus DDG-Quellen stammen."""
-    import csv, io
-    DDG_SOURCES = {'ddg_images', 'ddg_fixed', 'ddg_fixed2'}
-    eans = set()
-    with open(path, newline='', encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            if row.get('source','') in DDG_SOURCES:
-                e = row.get('ean','').strip()
-                if e:
-                    eans.add(e)
-    return eans
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config', default='config_shop2.yaml')
-    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--dry-run', action='store_true', help='Nur anzeigen, nicht deaktivieren')
     args = parser.parse_args()
 
-    cfg = yaml.safe_load(open(args.config))
+    cfg = yaml.safe_load(open(args.config, encoding='utf-8'))
+
+    # Credentials: GitHub Actions setzt EBAY_CLIENT_ID + EBAY_CLIENT_SECRET direkt
+    # (gemappt von Secrets EBAY_CLIENT_ID_2 / EBAY_CLIENT_SECRET_2 im Workflow)
+    if not os.environ.get('EBAY_CLIENT_ID'):
+        raise ValueError("EBAY_CLIENT_ID nicht gesetzt. Im Workflow als Secret EBAY_CLIENT_ID_2 → env EBAY_CLIENT_ID mappen.")
+    if not os.environ.get('EBAY_CLIENT_SECRET'):
+        raise ValueError("EBAY_CLIENT_SECRET nicht gesetzt.")
+    token_var = cfg['ebay'].get('refresh_token_env_var', 'EBAY_REFRESH_TOKEN_2')
+    if not os.environ.get(token_var):
+        raise ValueError(f"{token_var} nicht gesetzt.")
+
     client = EbayClient.from_env(cfg['ebay'])
 
-    # Alle eBay Inventory Items holen
-    print("Lade alle eBay Inventory Items …")
-    INVENTORY_PATH = "/sell/inventory/v1/inventory_item"
+    # 1) Alle Inventory Items holen
+    print("Lade eBay Inventory Items …", flush=True)
     all_items = []
     offset = 0
     while True:
         resp = client._request("GET", INVENTORY_PATH, params={"limit": 100, "offset": offset})
         if not resp:
             break
-        items = resp.get("inventoryItems", [])
-        all_items.extend(items)
+        batch = resp.get("inventoryItems", [])
+        all_items.extend(batch)
         total = resp.get("total", 0)
-        print(f"  {len(all_items)}/{total}", end='\r')
-        if len(all_items) >= total or not items:
+        print(f"  {len(all_items)}/{total}", end='\r', flush=True)
+        if len(all_items) >= total or not batch:
             break
         offset += 100
-    print(f"\n{len(all_items)} Items geladen.")
+    print(f"\n{len(all_items)} Items geladen.", flush=True)
 
-    # DDG-EANs laden
-    enrichment_path = Path(args.config).parent / "enrichment_index.csv"
-    ddg_eans = load_ddg_eans(str(enrichment_path))
-    print(f"{len(ddg_eans)} DDG-EANs bekannt.")
-
-    # Finde Items mit unsicheren Bildern
-    to_withdraw = []
+    # 2) Items mit unsicheren Bildern identifizieren
+    unsafe_skus = []
     for item in all_items:
-        sku = item.get('sku', '')
-        product = item.get('product', {})
-        image_urls = product.get('imageUrls', [])
-        ean_list = product.get('ean', [])
-        ean = ean_list[0] if ean_list else ''
-
-        if not image_urls:
+        imgs = item.get('product', {}).get('imageUrls', [])
+        if not imgs:
             continue
+        domains = {urlparse(img).netloc for img in imgs}
+        if domains & UNSAFE_DOMAINS:
+            unsafe_skus.append({
+                'sku': item['sku'],
+                'domain': (domains & UNSAFE_DOMAINS).pop(),
+                'title': item.get('product', {}).get('title', '')[:60],
+            })
 
-        domains = {urlparse(img).netloc for img in image_urls}
-        has_unsafe = bool(domains & UNSAFE_DOMAINS)
+    print(f"{len(unsafe_skus)} Items mit unsicheren Bildern gefunden.", flush=True)
 
-        if has_unsafe:
-            to_withdraw.append({'sku': sku, 'ean': ean, 'title': product.get('title','')[:60], 'images': image_urls})
-
-    print(f"\n{len(to_withdraw)} Listings mit unsicheren Bildern gefunden.")
     if args.dry_run:
-        for x in to_withdraw:
-            print(f"  [DRY] {x['sku']} | {x['images'][0][:70]}")
+        for x in unsafe_skus:
+            print(f"  [DRY] {x['sku']} | {x['domain']} | {x['title']}")
         return
 
-    # Offers holen und deaktivieren
-    withdrawn = []; errors = []
-    for item in to_withdraw:
+    # 3) Offers holen und nur PUBLISHED withdrawn
+    withdrawn = []
+    skipped = []
+    errors = []
+
+    for item in unsafe_skus:
         sku = item['sku']
         try:
             offer = client.get_offer_for_sku(sku)
             if not offer:
-                print(f"  {sku}: kein Offer")
+                skipped.append(sku + ' (kein Offer)')
                 continue
+            status = offer.get('status', '')
             offer_id = offer.get('offerId', '')
-            if not offer_id:
+            if status != 'PUBLISHED':
+                skipped.append(f"{sku} ({status})")
                 continue
             client.withdraw_offer(offer_id)
-            withdrawn.append({'sku': sku, 'offer_id': offer_id})
-            print(f"  ✓ {sku} deaktiviert")
+            withdrawn.append({'sku': sku, 'offer_id': offer_id, 'domain': item['domain']})
+            print(f"  ✅ {sku} deaktiviert ({item['domain']})", flush=True)
         except Exception as e:
             errors.append({'sku': sku, 'error': str(e)})
-            print(f"  ✗ {sku}: {e}")
-        time.sleep(0.5)
+            print(f"  ❌ {sku}: {e}", flush=True)
+        time.sleep(0.4)
 
-    result = {'withdrawn': len(withdrawn), 'errors': len(errors), 'details': withdrawn, 'error_details': errors}
-    Path('withdraw_result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
-    print(f"\n✅ Deaktiviert: {len(withdrawn)} | ❌ Fehler: {len(errors)}")
+    print(f"\n=== Ergebnis ===", flush=True)
+    print(f"Deaktiviert: {len(withdrawn)}", flush=True)
+    print(f"Übersprungen (bereits inaktiv): {len(skipped)}", flush=True)
+    print(f"Fehler: {len(errors)}", flush=True)
+
+    result = {
+        'withdrawn': len(withdrawn),
+        'skipped': len(skipped),
+        'errors': len(errors),
+        'withdrawn_details': withdrawn,
+        'error_details': errors,
+    }
+    Path('withdraw_result.json').write_text(
+        json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8'
+    )
+    print("Ergebnis → withdraw_result.json", flush=True)
 
 
 if __name__ == '__main__':
