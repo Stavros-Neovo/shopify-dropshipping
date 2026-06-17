@@ -516,7 +516,7 @@
     "ean": "6938818321816",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 64.05,
+    "ek": 61.92,
     "vk": 128.99,
     "listed_at": "2026-06-17T14:39:28.064725+00:00",
     "updated_at": "2026-06-17T14:39:28.064725+00:00"
@@ -1184,15 +1184,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 395.85,
     "vk": 752.99,
-    "listed_at": "2026-06-17T14:39:28.064725+00:00",
-    "updated_at": "2026-06-17T14:39:28.064725+00:00"
-  },
-  "HHWX0145": {
-    "ean": "6978515250514",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 441.53,
-    "vk": 838.99,
     "listed_at": "2026-06-17T14:39:28.064725+00:00",
     "updated_at": "2026-06-17T14:39:28.064725+00:00"
   },
