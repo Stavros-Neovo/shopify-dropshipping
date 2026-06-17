@@ -2875,5 +2875,415 @@
     "ean": "0619659172510",
     "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 32 GB",
     "detected_at": "2026-06-17T10:49:05.529356+00:00"
+  },
+  "ANTB0005": {
+    "ean": "8885022190166",
+    "title": "ANTHBOT Battery 5000mAh",
+    "detected_at": "2026-06-17T14:09:45.600648+00:00"
+  },
+  "CPUI0216": {
+    "ean": "5059902133663",
+    "title": "Intel Cpu Core 7-14700, tray | CM8071504820817",
+    "detected_at": "2026-06-17T14:10:02.836914+00:00"
+  },
+  "CPUI0235": {
+    "ean": "5032037281980",
+    "title": "Intel Cpu Ultra 7 265KF, box | BX80768265KF",
+    "detected_at": "2026-06-17T14:10:04.613921+00:00"
+  },
+  "ENAB0002": {
+    "ean": "6972822120706",
+    "title": "Enabot ROLA PetPal Leckerlie Modul",
+    "detected_at": "2026-06-17T14:10:14.107550+00:00"
+  },
+  "ENAB0009": {
+    "ean": "6972822120935",
+    "title": "Enabot EBO Air2 White",
+    "detected_at": "2026-06-17T14:10:17.138315+00:00"
+  },
+  "ENAB0011": {
+    "ean": "6972822121000",
+    "title": "Enabot EBO Air2 Pink",
+    "detected_at": "2026-06-17T14:10:20.941248+00:00"
+  },
+  "ENAB0013": {
+    "ean": "6972822121246",
+    "title": "Enabot EBO Air2 Plus Grey",
+    "detected_at": "2026-06-17T14:10:29.617805+00:00"
+  },
+  "ENAB0014": {
+    "ean": "6972822121314",
+    "title": "Enabot EBO Air2 Plus Pink",
+    "detected_at": "2026-06-17T14:10:31.768753+00:00"
+  },
+  "GARE0003": {
+    "ean": "4895251600545",
+    "title": "ECOFLOW Camping Light",
+    "detected_at": "2026-06-17T14:10:36.757814+00:00"
+  },
+  "HDIS0281": {
+    "ean": "7636490078323",
+    "title": "Seagate IronWolf ST2000VN003 / 2TB",
+    "detected_at": "2026-06-17T14:11:32.254194+00:00"
+  },
+  "HDIS0282": {
+    "ean": "8719706027670",
+    "title": "Seagate IronWolf ST6000VN006/ 6TB",
+    "detected_at": "2026-06-17T14:11:35.226268+00:00"
+  },
+  "HDIS0301": {
+    "ean": "8719706022422",
+    "title": "Seagate Exos 7E10 / ST6000NM001B / 6TB / 3,5\"",
+    "detected_at": "2026-06-17T14:12:09.429368+00:00"
+  },
+  "HDIS0306": {
+    "ean": "0763649175347",
+    "title": "Seagate Exos X24 ST12000NM002H / 12TB",
+    "detected_at": "2026-06-17T14:12:14.758475+00:00"
+  },
+  "HDIS0311": {
+    "ean": "8719706021166",
+    "title": "Seagate Exos 7E10 / ST2000NM000B / 2TB / 3,5\"",
+    "detected_at": "2026-06-17T14:12:20.806914+00:00"
+  },
+  "HDIS0317": {
+    "ean": "8719706019774",
+    "title": "Seagate Exos 7E10 / ST4000NM001B / 4TB / SAS/ 3,5\"",
+    "detected_at": "2026-06-17T14:12:27.664671+00:00"
+  },
+  "HDIS0318": {
+    "ean": "8719706022415",
+    "title": "Seagate Exos 7E10 / ST6000NM000B / 6TB / 3,5\"",
+    "detected_at": "2026-06-17T14:12:33.065078+00:00"
+  },
+  "HDIT0232": {
+    "ean": "4260557512739",
+    "title": "Toshiba S300 Pro Surveillance 3,5\" 8TB Green",
+    "detected_at": "2026-06-17T14:12:41.505671+00:00"
+  },
+  "HDIW0213": {
+    "ean": "0718037896687",
+    "title": "Western Digital WD11PURZ / 1 TB",
+    "detected_at": "2026-06-17T14:12:53.883780+00:00"
+  },
+  "HDIW0222": {
+    "ean": "0718037877310",
+    "title": "Western Digital WD103KFBX / 10 TB/ Red Pro",
+    "detected_at": "2026-06-17T14:12:56.591579+00:00"
+  },
+  "HDIW0245": {
+    "ean": "718037905761",
+    "title": "Western Digital WD40EZZX / 4TB",
+    "detected_at": "2026-06-17T14:13:01.276989+00:00"
+  },
+  "HDXT0237": {
+    "ean": "4260557512340",
+    "title": "Toshiba Can. Basics 1TB black 2,5\" USB3.2",
+    "detected_at": "2026-06-17T14:13:13.176530+00:00"
+  },
+  "HHWB0037": {
+    "ean": "8006540957196",
+    "title": "Braun Oral-B Junior Pro Grogu/Starwars",
+    "detected_at": "2026-06-17T14:13:50.562849+00:00"
+  },
+  "HHWB1048": {
+    "ean": "4210201445234",
+    "title": "Braun Oral-B iO Series 6 White",
+    "detected_at": "2026-06-17T14:13:56.215286+00:00"
+  },
+  "HHWB1127": {
+    "ean": "8006540860793",
+    "title": "Braun Oral-B Pro Tiefenreinigung Aufsteckbürsten - 6 Stk - Weiß",
+    "detected_at": "2026-06-17T14:14:20.460811+00:00"
+  },
+  "HHWB1128": {
+    "ean": "4210201447238",
+    "title": "Braun All-in-One Style Kit 7 MGK7410 - Trimmer",
+    "detected_at": "2026-06-17T14:14:23.010571+00:00"
+  },
+  "HHWB4008": {
+    "ean": "3030050192995",
+    "title": "Babyliss Black Onyx Glätteisen",
+    "detected_at": "2026-06-17T14:14:44.670964+00:00"
+  },
+  "HHWB4012": {
+    "ean": "3030050193022",
+    "title": "Babyliss Inspired Glätteisen",
+    "detected_at": "2026-06-17T14:14:49.368488+00:00"
+  },
+  "HHWB4016": {
+    "ean": "3030050190915",
+    "title": "Babyliss Air Volume",
+    "detected_at": "2026-06-17T14:14:53.204982+00:00"
+  },
+  "HHWB5025": {
+    "ean": "4211125648145",
+    "title": "Beurer MG 10 - Massageball - schnurlos",
+    "detected_at": "2026-06-17T14:15:10.605439+00:00"
+  },
+  "HHWB5029": {
+    "ean": "4211125601423",
+    "title": "Beurer Inhalator IH 57 weiss/grau",
+    "detected_at": "2026-06-17T14:15:13.088448+00:00"
+  },
+  "HHWE0017": {
+    "ean": "6970135036530",
+    "title": "Ecovacs Deebot mini blue",
+    "detected_at": "2026-06-17T14:15:18.017110+00:00"
+  },
+  "HHWE1011": {
+    "ean": "4895251631143",
+    "title": "ECOFLOW WAVE Series Car Vent Seal (Magnetic Version)",
+    "detected_at": "2026-06-17T14:15:33.653046+00:00"
+  },
+  "HHWE1012": {
+    "ean": "4895251643023",
+    "title": "ECOFLOW Shower Kit",
+    "detected_at": "2026-06-17T14:15:35.879343+00:00"
+  },
+  "HHWE1013": {
+    "ean": "4895251643016",
+    "title": "ECOFLOW WAVE Series Stabilizing Strap Kit",
+    "detected_at": "2026-06-17T14:15:38.837124+00:00"
+  },
+  "HHWG1042": {
+    "ean": "5060356734269",
+    "title": "Ghd Perfect Ending - Final Fix Haarspray",
+    "detected_at": "2026-06-17T14:15:43.210832+00:00"
+  },
+  "HHWG1043": {
+    "ean": "5060356734306",
+    "title": "Ghd Shiny Ever After - Hitzeschutz Spray",
+    "detected_at": "2026-06-17T14:15:46.599893+00:00"
+  },
+  "HHWG1046": {
+    "ean": "5060356734290",
+    "title": "Ghd Dramatic Ending - Haarserum",
+    "detected_at": "2026-06-17T14:15:49.955740+00:00"
+  },
+  "HHWG1072": {
+    "ean": "5056668006842",
+    "title": "Ghd Duet Style Geschenkset",
+    "detected_at": "2026-06-17T14:15:53.775317+00:00"
+  },
+  "HHWG1079": {
+    "ean": "5056668002868",
+    "title": "Ghd Chronos Curve Grand Tong - Lockenstab",
+    "detected_at": "2026-06-17T14:15:55.705962+00:00"
+  },
+  "HHWK2046": {
+    "ean": "4054278991726",
+    "title": "Kärcher VC 3 - Staubsauger - Zylinder-Vakuum - Beutellos",
+    "detected_at": "2026-06-17T14:16:04.441642+00:00"
+  },
+  "HHWK2067": {
+    "ean": "4054278990279",
+    "title": "Kärcher SC 2 UPRIGHT - Dampfmopp",
+    "detected_at": "2026-06-17T14:16:07.220635+00:00"
+  },
+  "HHWK2071": {
+    "ean": "4054278952031",
+    "title": "Kärcher Schmutzwasser-Tauchpumpe SP 22.000 750W",
+    "detected_at": "2026-06-17T14:16:09.524484+00:00"
+  },
+  "HHWK2080": {
+    "ean": "4066529180155",
+    "title": "Kärcher VCH 4 UVClean",
+    "detected_at": "2026-06-17T14:16:13.188744+00:00"
+  },
+  "HHWK2085": {
+    "ean": "4066529086884",
+    "title": "Kärcher PCL 6",
+    "detected_at": "2026-06-17T14:16:20.444382+00:00"
+  },
+  "HHWK2087": {
+    "ean": "4054278825779",
+    "title": "Kärcher Adapter Anti-Twist",
+    "detected_at": "2026-06-17T14:16:22.638225+00:00"
+  },
+  "HHWK2092": {
+    "ean": "4066529027870",
+    "title": "Kärcher WD 4 V-20/5/22 - Staubsauger - Kanister",
+    "detected_at": "2026-06-17T14:16:27.778697+00:00"
+  },
+  "HHWK2093": {
+    "ean": "4066529027887",
+    "title": "Kärcher WD 4 S V-20/5/22 - Staubsauger - Kanister",
+    "detected_at": "2026-06-17T14:16:29.920350+00:00"
+  },
+  "HHWK2094": {
+    "ean": "4066529027894",
+    "title": "Kärcher WD 4 P V-20/5/22 - Staubsauger - Kanister",
+    "detected_at": "2026-06-17T14:16:32.153515+00:00"
+  },
+  "HHWP0101": {
+    "ean": "8720389015809",
+    "title": "Philips 7000 series DST7050/70 - Dampfbügeleisen - Grün",
+    "detected_at": "2026-06-17T14:16:42.289122+00:00"
+  },
+  "HHWW032": {
+    "ean": "4211129226776",
+    "title": "WMF KÜCHENminis Smoothie-to-go, Deep Black",
+    "detected_at": "2026-06-17T14:16:47.825072+00:00"
+  },
+  "HHWX0140": {
+    "ean": "6976233677163",
+    "title": "Dreame X40 Master Robotersauger Schwarz",
+    "detected_at": "2026-06-17T14:16:52.991509+00:00"
+  },
+  "HHWX0145": {
+    "ean": "6978515250514",
+    "title": "Dreame H15 Mix Handstaubsauger",
+    "detected_at": "2026-06-17T14:16:54.828087+00:00"
+  },
+  "MBAI0044": {
+    "ean": "4711387730775",
+    "title": "ProArt X870E-CREATOR WIFI | 90MB1IG0-M0EAY0",
+    "detected_at": "2026-06-17T14:17:12.142815+00:00"
+  },
+  "MBAI0046": {
+    "ean": "4711387797273",
+    "title": "ASUS PRIME B840-PLUS WIFI | 90MB1IZ0-M0EAY0",
+    "detected_at": "2026-06-17T14:17:14.068099+00:00"
+  },
+  "MBAI0047": {
+    "ean": "4711387797143",
+    "title": "ASUS PRIME B840M-A WIFI | 90MB1J20-M0EAY0",
+    "detected_at": "2026-06-17T14:17:16.288067+00:00"
+  },
+  "MBAI0048": {
+    "ean": "4711387931509",
+    "title": "PRIME B850-PLUS WIFI | 90MB1L80-M0EAY0",
+    "detected_at": "2026-06-17T14:17:18.093889+00:00"
+  },
+  "MOHP0024": {
+    "ean": "0198122902057",
+    "title": "HP 524pm - Series 5 Pro - LED-Monitor - 61 cm (24\") (9E0G9UT#ABB)",
+    "detected_at": "2026-06-17T14:17:20.359686+00:00"
+  },
+  "MOL0000": {
+    "ean": "0198156725684",
+    "title": "Lenovo ThinkVision T24D-40 - LED-Monitor - 61 cm (23,8\") (64B9GAT1EU)",
+    "detected_at": "2026-06-17T14:17:22.496776+00:00"
+  },
+  "NETA0011": {
+    "ean": "4023125030963",
+    "title": "FRITZ!BOX 5690 FIBER - WiFi 7",
+    "detected_at": "2026-06-17T14:17:23.941025+00:00"
+  },
+  "NETT0147": {
+    "ean": "4897098687765",
+    "title": "TP-LINK EAP620HD - AccessPoint",
+    "detected_at": "2026-06-17T14:17:53.064495+00:00"
+  },
+  "NETT0149": {
+    "ean": "8885021370170",
+    "title": "TP-LINK Festa F65 - Access Point",
+    "detected_at": "2026-06-17T14:17:54.915644+00:00"
+  },
+  "NETT0150": {
+    "ean": "8885021370156",
+    "title": "TP-LINK Festa F65-WALL - Access Point",
+    "detected_at": "2026-06-17T14:17:56.523576+00:00"
+  },
+  "NETT0151": {
+    "ean": "8885021370163",
+    "title": "TP-LINK Festa F65-Outdoor - Access Point",
+    "detected_at": "2026-06-17T14:17:58.474881+00:00"
+  },
+  "NETT0152": {
+    "ean": "8885021370194",
+    "title": "TP-LINK Festa F61 - Access Point",
+    "detected_at": "2026-06-17T14:18:00.533259+00:00"
+  },
+  "NETT0153": {
+    "ean": "8885021370187",
+    "title": "TP-LINK Festa F61-Outdoor - Access Point",
+    "detected_at": "2026-06-17T14:18:02.565880+00:00"
+  },
+  "NETT0155": {
+    "ean": "8885021370231",
+    "title": "TP-LINK Festa F52 - Access Point",
+    "detected_at": "2026-06-17T14:18:04.451807+00:00"
+  },
+  "NETT0156": {
+    "ean": "8885021370217",
+    "title": "TP-LINK Festa F52-Wall - Access Point",
+    "detected_at": "2026-06-17T14:18:06.638453+00:00"
+  },
+  "NETT0157": {
+    "ean": "8885021370224",
+    "title": "TP-LINK Festa F52-Outdoor - Access Point",
+    "detected_at": "2026-06-17T14:18:08.758778+00:00"
+  },
+  "NETT0160": {
+    "ean": "8885020621501",
+    "title": "TP-LINK Festa FS328GP - Switch",
+    "detected_at": "2026-06-17T14:18:11.128170+00:00"
+  },
+  "NETT0161": {
+    "ean": "8885020624014",
+    "title": "TP-LINK Festa FS328G - Switch",
+    "detected_at": "2026-06-17T14:18:12.710984+00:00"
+  },
+  "NETT0162": {
+    "ean": "8885020621488",
+    "title": "TP-LINK Festa FS318GP - Switch",
+    "detected_at": "2026-06-17T14:18:14.227458+00:00"
+  },
+  "NETT0163": {
+    "ean": "8885020623994",
+    "title": "TP-LINK Festa FS318G - Switch",
+    "detected_at": "2026-06-17T14:18:16.027200+00:00"
+  },
+  "NETT0165": {
+    "ean": "8885020621440",
+    "title": "TP-LINK Festa FS308GP - Switch",
+    "detected_at": "2026-06-17T14:18:17.966685+00:00"
+  },
+  "NETT0166": {
+    "ean": "8885020622379",
+    "title": "TP-LINK Festa FS308G - Switch",
+    "detected_at": "2026-06-17T14:18:20.000255+00:00"
+  },
+  "NETT0167": {
+    "ean": "8885020622416",
+    "title": "TP-LINK Festa FR365 - Router",
+    "detected_at": "2026-06-17T14:18:22.209778+00:00"
+  },
+  "NETT0168": {
+    "ean": "8885020621525",
+    "title": "TP-LINK Festa FR205 - Router",
+    "detected_at": "2026-06-17T14:18:24.103721+00:00"
+  },
+  "NETT0201": {
+    "ean": "4897098685143",
+    "title": "TP-LINK Tapo A100 - Powerbank",
+    "detected_at": "2026-06-17T14:18:26.916882+00:00"
+  },
+  "PETK0045": {
+    "ean": "6975069306278",
+    "title": "Petkit Purobot Max Pro 2",
+    "detected_at": "2026-06-17T14:19:36.018871+00:00"
+  },
+  "PETK0067": {
+    "ean": "6975069307244",
+    "title": "Petkit Purobot Crystal duo",
+    "detected_at": "2026-06-17T14:19:46.982557+00:00"
+  },
+  "PPSE0041": {
+    "ean": "4897082669210",
+    "title": "ECOFLOW Distribution Panel",
+    "detected_at": "2026-06-17T14:20:48.107733+00:00"
+  },
+  "PVMS0318": {
+    "ean": "4043377226815",
+    "title": "Mounting Systems Stockschraube M10x200 komplett-auf Holz",
+    "detected_at": "2026-06-17T14:21:13.383280+00:00"
+  },
+  "RAM4C0110": {
+    "ean": "0649528937735",
+    "title": "Crucial DDR4 16GB 3200 CL22 TRAY (CP16G4DFRA32AT)",
+    "detected_at": "2026-06-17T14:21:20.727255+00:00"
   }
 }
