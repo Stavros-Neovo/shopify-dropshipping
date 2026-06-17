@@ -1,54 +1,104 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-16T18:20:53.023918+00:00",
+  "generated_at": "2026-06-17T00:04:42.072837+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 47,
+  "active_listings": 600,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-16T15:13:54.648445+00:00",
-      "checked": 47,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 3,
+      "timestamp": "2026-06-16T21:39:50.372712+00:00",
+      "checked": 600,
+      "lowered": 4,
+      "raised": 51,
+      "set_to_floor": 117,
       "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 24,
-      "unchanged": 19,
+      "skipped_few": 51,
+      "skipped_image": 284,
+      "unchanged": 93,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "USBV0002",
-        "title": "Verbatim Plectra Black 256GB USB-C Flash Driv",
-        "old": 53.99,
-        "new": 51.99,
-        "diff": -2.0,
+        "sku": "CPUA0067",
+        "title": "AMD Ryzen 9 5950X BOX | 100-100000059WOF",
+        "old": 507.99,
+        "new": 483.99,
+        "diff": -24.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0006",
-        "title": "Verbatim Plectra White 256GB USB-C Flash Driv",
-        "old": 52.99,
-        "new": 50.99,
-        "diff": -2.0,
+        "sku": "CPUI0204",
+        "title": "Intel Cpu Core i7-14700KF, box | BX8071514700",
+        "old": 566.99,
+        "new": 540.95,
+        "diff": -26.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 10.99,
-        "new": 9.99,
-        "diff": -1.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 265.99,
+        "new": 251.99,
+        "diff": -14.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 256.99,
+        "new": 242.99,
+        "diff": -14.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 183.99,
+        "new": 171.99,
+        "diff": -12.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 519.99,
+        "new": 495.99,
+        "diff": -24.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0246",
+        "title": "Seagate IronWolf ST10000VN000 / 10TB",
+        "old": 623.99,
+        "new": 595.95,
+        "diff": -28.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 316.99,
+        "new": 300.99,
+        "diff": -16.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0258",
+        "title": "Seagate Exos 7E10 / ST6000NM019B / 6TB / 3,5\"",
+        "old": 751.99,
+        "new": 717.95,
+        "diff": -34.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0269",
+        "title": "Seagate IronWolf Pro ST20000NT001 / 20TB",
+        "old": 1333.99,
+        "new": 1319.95,
+        "diff": -14.04,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-10",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-10",
         "lowered": 43,
@@ -126,34 +176,34 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-16",
+        "lowered": 4,
+        "raised": 51,
+        "floor": 0
       }
     ]
   },
   "orders": {
     "stats": {
-      "today_sales": 2,
-      "today_revenue": 182.97,
-      "today_profit": -1.27,
+      "today_sales": 0,
+      "today_revenue": 0.0,
+      "today_profit": 0.0,
       "week_sales": 3,
       "week_revenue": 462.95,
-      "week_profit": 22.3,
+      "week_profit": 26.12,
       "prev_week_sales": 5,
       "prev_week_revenue": 404.9,
       "prev_week_profit": 44.18,
       "month_sales": 10,
       "month_revenue": 921.81,
-      "month_profit": 87.78,
+      "month_profit": 91.6,
       "total_sales_30d": 10,
       "total_revenue_30d": 921.81,
-      "total_profit_30d": 87.78
+      "total_profit_30d": 91.6
     },
     "chart_7d": [
-      {
-        "date": "10.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "11.06",
         "revenue": 55.98,
@@ -181,23 +231,23 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.57,
+        "profit": 23.84,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": -1.27,
+        "profit": 2.28,
         "sales": 2
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "18.05",
+        "date": "17.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "19.05",
         "revenue": 0,
@@ -363,23 +413,23 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.57,
+        "profit": 23.84,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": -1.27,
+        "profit": 2.28,
         "sales": 2
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "19.03",
+        "date": "17.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "20.03",
         "revenue": 0,
@@ -905,14 +955,20 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.57,
+        "profit": 23.84,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": -1.27,
+        "profit": 2.28,
         "sales": 2
+      },
+      {
+        "date": "17.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -921,19 +977,19 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 23.57,
+        "profit": 23.84,
         "vk": 275.99,
-        "ek": 157.3,
+        "ek": 157.03,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 58.8,
           "vat": 35.31,
           "netto_vk": 185.87,
           "ship": 5.0,
-          "ek": 157.3,
-          "profit_u": 23.57,
+          "ek": 157.03,
+          "profit_u": 23.84,
           "qty": 1,
-          "profit_t": 23.57
+          "profit_t": 23.84
         }
       },
       {
@@ -1101,19 +1157,19 @@ window.DASHBOARD_DATA = {
         "title": "Makita Bohrhammer - schnurlos - 3 Modi",
         "sold": 1,
         "revenue": 152.99,
-        "profit": -7.87,
+        "profit": -4.32,
         "vk": 152.99,
-        "ek": 107.08,
+        "ek": 103.53,
         "calc": {
           "vk_brutto": 156.98,
           "ebay_fee": 32.97,
           "vat": 19.8,
           "netto_vk": 104.21,
           "ship": 5.0,
-          "ek": 107.08,
-          "profit_u": -7.87,
+          "ek": 103.53,
+          "profit_u": -4.32,
           "qty": 1,
-          "profit_t": -7.87
+          "profit_t": -4.32
         }
       }
     ],
@@ -1122,7 +1178,7 @@ window.DASHBOARD_DATA = {
         "date": "16.06 17:06",
         "title": "Makita Bohrhammer - schnurlos - 3 Modi",
         "revenue": 152.99,
-        "profit": -7.87
+        "profit": -4.32
       },
       {
         "date": "16.06 07:16",
@@ -1134,7 +1190,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 23.57
+        "profit": 23.84
       },
       {
         "date": "13.06 22:19",
@@ -1184,7 +1240,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1194,7 +1250,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1204,7 +1260,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1214,7 +1270,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1224,7 +1280,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1234,7 +1290,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1244,7 +1300,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1254,7 +1310,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 13,
+        "days_left": 12,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1264,7 +1320,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1274,7 +1330,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1289,29 +1345,13 @@ window.DASHBOARD_DATA = {
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
         "buyer": "cengitaga5"
-      },
-      {
-        "order_id": "05-14786-31141",
-        "date": "2026-06-16",
-        "items": [
-          "Petkit Schaumstofffilter für Wireless Pu"
-        ],
-        "buyer": "lostprince77"
-      },
-      {
-        "order_id": "08-14779-12258",
-        "date": "2026-06-15",
-        "items": [
-          "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
-        ],
-        "buyer": "mr.mxa"
       }
     ],
     "tax_reserves": {
       "ust_month": 147.18,
-      "est_month": 26.33,
-      "gewst_month": 13.17,
-      "total_month": 186.68
+      "est_month": 27.48,
+      "gewst_month": 13.74,
+      "total_month": 188.4
     },
     "expected_payout": 728.23
   },
