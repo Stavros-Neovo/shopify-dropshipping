@@ -1,0 +1,37 @@
+name: Unsafe Images — Listings deaktivieren
+
+on:
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  withdraw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Listings mit unsicheren Bildern deaktivieren
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID_2 }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET_2 }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: python withdraw_unsafe_images.py --config config_shop2.yaml
+
+      - name: Ergebnis hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: withdraw-result
+          path: withdraw_result.json
