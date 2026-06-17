@@ -2860,5 +2860,20 @@
     "ean": "6938818303188",
     "title": "Yealink IP Telefon SIP-T53W",
     "detected_at": "2026-06-17T00:24:24.384853+00:00"
+  },
+  "USBS0019": {
+    "ean": "0619659177171",
+    "title": "SanDisk Ultra Dual Drive Go USB 3.1 /USB-C 64GB",
+    "detected_at": "2026-06-17T10:48:46.513065+00:00"
+  },
+  "USBS0073": {
+    "ean": "0619659163082",
+    "title": "SanDisk Ultra Flair USB-Flash-Laufwerk 128 GB",
+    "detected_at": "2026-06-17T10:48:57.328834+00:00"
+  },
+  "USBS0074": {
+    "ean": "0619659172510",
+    "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 32 GB",
+    "detected_at": "2026-06-17T10:49:05.529356+00:00"
   }
 }
