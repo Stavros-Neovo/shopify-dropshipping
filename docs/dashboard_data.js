@@ -1,110 +1,104 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-17T14:26:33.053252+00:00",
+  "generated_at": "2026-06-17T22:17:03.107858+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-17T14:09:43.609672+00:00",
+      "timestamp": "2026-06-17T21:32:48.602297+00:00",
       "checked": 600,
       "lowered": 1,
-      "raised": 49,
-      "set_to_floor": 35,
+      "raised": 24,
+      "set_to_floor": 31,
       "skipped_floor": 0,
-      "skipped_few": 40,
-      "skipped_image": 363,
-      "unchanged": 111,
-      "errors": 1,
+      "skipped_few": 20,
+      "skipped_image": 429,
+      "unchanged": 95,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 166.99,
-        "new": 171.99,
-        "diff": 5.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 716.99,
+        "new": 753.95,
+        "diff": 36.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 470.99,
-        "new": 493.99,
-        "diff": 23.0,
+        "sku": "RAM5K0005",
+        "title": "Kingston FURY BEAST - DDR5-KIT-32GB-2x16 (KF5",
+        "old": 570.99,
+        "new": 599.95,
+        "diff": 28.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 286.99,
-        "new": 299.99,
-        "diff": 13.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 648.99,
+        "new": 681.95,
+        "diff": 32.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0269",
-        "title": "Seagate IronWolf Pro ST20000NT001 / 20TB",
-        "old": 1333.99,
-        "new": 1316.95,
-        "diff": -17.04,
+        "sku": "RAM5K0045",
+        "title": "Kingston FURY BEAST - DDR5 - 64GB KIT 2x32 (K",
+        "old": 1353.99,
+        "new": 1296.95,
+        "diff": -57.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0271",
-        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
-        "old": 350.99,
-        "new": 367.99,
-        "diff": 17.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 93.99,
+        "new": 95.99,
+        "diff": 2.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0273",
-        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
-        "old": 1881.99,
-        "new": 1802.95,
-        "diff": -79.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0277",
-        "title": "Seagate Exos M ST30000NM004K / 30 TB",
-        "old": 2069.99,
-        "new": 2163.95,
-        "diff": 93.96,
+        "sku": "SDXS1020",
+        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
+        "old": 416.99,
+        "new": 436.99,
+        "diff": 20.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0279",
-        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
-        "old": 1410.99,
-        "new": 1350.95,
-        "diff": -60.04,
+        "sku": "SHG0017",
+        "title": "Govee - Gaming Smart Light Bars",
+        "old": 68.99,
+        "new": 62.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0286",
-        "title": "Seagate IronWolf Pro ST28000NT000 / 28TB",
-        "old": 1607.99,
-        "new": 1529.95,
-        "diff": -78.04,
+        "sku": "SHG0019",
+        "title": "Govee - Neon Gaming Table Light - 2m",
+        "old": 53.99,
+        "new": 47.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0294",
-        "title": "Seagate Exos X24 ST24000NM007H / 24TB",
-        "old": 2265.99,
-        "new": 2170.95,
-        "diff": -95.04,
+        "sku": "SHG0024",
+        "title": "Govee -Glide Hexa Light Panels Expansion Pack",
+        "old": 44.99,
+        "new": 39.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SHP0012",
+        "title": "Philips Hue Bloom gen4 EU/UK black",
+        "old": 102.99,
+        "new": 94.99,
+        "diff": -8.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-11",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-12",
         "lowered": 3,
@@ -181,6 +175,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-17",
         "lowered": 1,
         "raised": 49,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 1,
+        "raised": 24,
         "floor": 0
       }
     ]
