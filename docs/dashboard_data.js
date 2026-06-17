@@ -1,122 +1,104 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-17T00:04:42.072837+00:00",
+  "generated_at": "2026-06-17T14:26:33.053252+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-16T21:39:50.372712+00:00",
+      "timestamp": "2026-06-17T14:09:43.609672+00:00",
       "checked": 600,
-      "lowered": 4,
-      "raised": 51,
-      "set_to_floor": 117,
+      "lowered": 1,
+      "raised": 49,
+      "set_to_floor": 35,
       "skipped_floor": 0,
-      "skipped_few": 51,
-      "skipped_image": 284,
-      "unchanged": 93,
-      "errors": 0,
+      "skipped_few": 40,
+      "skipped_image": 363,
+      "unchanged": 111,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUA0067",
-        "title": "AMD Ryzen 9 5950X BOX | 100-100000059WOF",
-        "old": 507.99,
-        "new": 483.99,
-        "diff": -24.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "CPUI0204",
-        "title": "Intel Cpu Core i7-14700KF, box | BX8071514700",
-        "old": 566.99,
-        "new": 540.95,
-        "diff": -26.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 265.99,
-        "new": 251.99,
-        "diff": -14.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 256.99,
-        "new": 242.99,
-        "diff": -14.0,
-        "action": "lowered"
-      },
-      {
         "sku": "HDIS0139",
         "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 183.99,
+        "old": 166.99,
         "new": 171.99,
-        "diff": -12.0,
-        "action": "lowered"
+        "diff": 5.0,
+        "action": "raised"
       },
       {
         "sku": "HDIS0198",
         "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 519.99,
-        "new": 495.99,
-        "diff": -24.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0246",
-        "title": "Seagate IronWolf ST10000VN000 / 10TB",
-        "old": 623.99,
-        "new": 595.95,
-        "diff": -28.04,
-        "action": "lowered"
+        "old": 470.99,
+        "new": 493.99,
+        "diff": 23.0,
+        "action": "raised"
       },
       {
         "sku": "HDIS0247",
         "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 316.99,
-        "new": 300.99,
-        "diff": -16.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0258",
-        "title": "Seagate Exos 7E10 / ST6000NM019B / 6TB / 3,5\"",
-        "old": 751.99,
-        "new": 717.95,
-        "diff": -34.04,
-        "action": "lowered"
+        "old": 286.99,
+        "new": 299.99,
+        "diff": 13.0,
+        "action": "raised"
       },
       {
         "sku": "HDIS0269",
         "title": "Seagate IronWolf Pro ST20000NT001 / 20TB",
         "old": 1333.99,
-        "new": 1319.95,
-        "diff": -14.04,
+        "new": 1316.95,
+        "diff": -17.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0271",
+        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
+        "old": 350.99,
+        "new": 367.99,
+        "diff": 17.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1881.99,
+        "new": 1802.95,
+        "diff": -79.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0277",
+        "title": "Seagate Exos M ST30000NM004K / 30 TB",
+        "old": 2069.99,
+        "new": 2163.95,
+        "diff": 93.96,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0279",
+        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
+        "old": 1410.99,
+        "new": 1350.95,
+        "diff": -60.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0286",
+        "title": "Seagate IronWolf Pro ST28000NT000 / 28TB",
+        "old": 1607.99,
+        "new": 1529.95,
+        "diff": -78.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0294",
+        "title": "Seagate Exos X24 ST24000NM007H / 24TB",
+        "old": 2265.99,
+        "new": 2170.95,
+        "diff": -95.04,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-10",
-        "lowered": 43,
-        "raised": 0,
-        "floor": 820
-      },
-      {
-        "date": "2026-06-10",
-        "lowered": 31,
-        "raised": 0,
-        "floor": 808
-      },
-      {
-        "date": "2026-06-11",
-        "lowered": 8,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-11",
         "lowered": 0,
@@ -182,6 +164,24 @@ window.DASHBOARD_DATA = {
         "lowered": 4,
         "raised": 51,
         "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 39,
+        "raised": 53,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 1,
+        "raised": 49,
+        "floor": 0
       }
     ]
   },
@@ -192,16 +192,16 @@ window.DASHBOARD_DATA = {
       "today_profit": 0.0,
       "week_sales": 3,
       "week_revenue": 462.95,
-      "week_profit": 26.12,
+      "week_profit": 26.53,
       "prev_week_sales": 5,
       "prev_week_revenue": 404.9,
       "prev_week_profit": 44.18,
       "month_sales": 10,
       "month_revenue": 921.81,
-      "month_profit": 91.6,
+      "month_profit": 92.01,
       "total_sales_30d": 10,
       "total_revenue_30d": 921.81,
-      "total_profit_30d": 91.6
+      "total_profit_30d": 92.01
     },
     "chart_7d": [
       {
@@ -231,7 +231,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.84,
+        "profit": 24.25,
         "sales": 1
       },
       {
@@ -413,7 +413,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.84,
+        "profit": 24.25,
         "sales": 1
       },
       {
@@ -955,7 +955,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.84,
+        "profit": 24.25,
         "sales": 1
       },
       {
@@ -977,19 +977,19 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 23.84,
+        "profit": 24.25,
         "vk": 275.99,
-        "ek": 157.03,
+        "ek": 156.62,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 58.8,
           "vat": 35.31,
           "netto_vk": 185.87,
           "ship": 5.0,
-          "ek": 157.03,
-          "profit_u": 23.84,
+          "ek": 156.62,
+          "profit_u": 24.25,
           "qty": 1,
-          "profit_t": 23.84
+          "profit_t": 24.25
         }
       },
       {
@@ -1190,7 +1190,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 23.84
+        "profit": 24.25
       },
       {
         "date": "13.06 22:19",
@@ -1337,21 +1337,12 @@ window.DASHBOARD_DATA = {
         "urgent": false
       }
     ],
-    "tracking_missing": [
-      {
-        "order_id": "18-14766-10957",
-        "date": "2026-06-16",
-        "items": [
-          "Makita Bohrhammer - schnurlos - 3 Modi"
-        ],
-        "buyer": "cengitaga5"
-      }
-    ],
+    "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 147.18,
-      "est_month": 27.48,
-      "gewst_month": 13.74,
-      "total_month": 188.4
+      "est_month": 27.6,
+      "gewst_month": 13.8,
+      "total_month": 188.58
     },
     "expected_payout": 728.23
   },
