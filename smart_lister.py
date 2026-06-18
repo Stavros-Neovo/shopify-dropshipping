@@ -595,6 +595,7 @@ def main():
     parser.add_argument("--top",      type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
     parser.add_argument("--limit",    type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
     parser.add_argument("--list",     action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
+    parser.add_argument("--max-new",  type=int, default=0, help="Max NEU-Listings pro Run (0=unbegrenzt). Bestehende Offers werden immer aktualisiert (kostenlos). Neue kosten 0,06€/Stk — z.B. --max-new 15")
     parser.add_argument("--config",   default=CONFIG_FILE)
     parser.add_argument("--bab-only", action="store_true", help="Nur BAB-Produkte")
     args = parser.parse_args()
@@ -816,7 +817,9 @@ def main():
             if len(to_list) > args.top:
                 to_list = to_list[:args.top]
             log.info(f"Artikel zum Listen: {len(to_list)}")
-            list_products(to_list, cfg, dry_run=args.dry_run)
+            if args.max_new > 0:
+                log.info(f"  max-new Limit: {args.max_new} neue Listings (~{args.max_new * 0.06:.2f}€ max Gebühren)")
+            list_products(to_list, cfg, dry_run=args.dry_run, max_new=args.max_new)
 
     log.info("=== Fertig ===")
 
@@ -824,11 +827,15 @@ def main():
 # ---------------------------------------------------------------------------
 # --list: Ausgewählte Artikel auf eBay listen
 # ---------------------------------------------------------------------------
-def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dict:
+def list_products(selected: list[dict], cfg: dict, dry_run: bool = False,
+                  max_new: int = 0) -> dict:
     """
-    Listet alle Artikel aus selected[] auf eBay via Inventory API.
-    Nutzt ebay_client.upsert_product() (Inventory + Offer + Publish).
-    Gibt {"ok": N, "skip": N, "error": N} zurück.
+    Listet Artikel aus selected[] auf eBay via Inventory API.
+
+    GEBÜHREN-KONTROLLE (max_new):
+      - Offer existiert bereits (PUBLISHED/UNPUBLISHED) → nur aktualisieren, KEINE Gebühr
+      - Neues Offer (noch nie gelistet) → 0,06€ Einstellgebühr pro Stück
+      - max_new > 0: begrenzt neue Listings pro Run (bestehende werden immer aktualisiert)
     """
     from ebay_client import EbayClient
 
@@ -843,9 +850,10 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
         log.error(f"eBay Client Fehler: {e}")
         return {"ok": 0, "skip": 0, "error": 0}
 
-    stats = {"ok": 0, "skip": 0, "error": 0}
+    stats = {"ok": 0, "skip": 0, "error": 0, "new_listings": 0, "updates": 0}
     total = len(selected)
     error_log: list[dict] = []
+    new_count = 0  # Zähler für wirklich NEU angelegte Offers
 
     for i, prod in enumerate(selected, 1):
         sku  = prod["sku"]
@@ -853,23 +861,41 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
         name = prod["name"]
         vk   = prod["vk"]
 
+        # Gebühren-Check: Offer schon vorhanden?
+        is_new_listing = True
+        try:
+            existing_offer = client.get_offer_for_sku(sku)
+            if existing_offer:
+                is_new_listing = False  # Offer existiert → Update, keine Gebühr
+        except Exception:
+            pass  # Fehler beim Check → annehmen es ist neu
+
+        # max-new Limit prüfen: neue Listings stoppen wenn Limit erreicht
+        if is_new_listing and max_new > 0 and new_count >= max_new:
+            log.info(f"  ⏸ SKU {sku}: max-new Limit ({max_new}) erreicht — übersprungen")
+            stats["skip"] += 1
+            continue
+
         # Produkt-Dict für ebay_client aufbauen
         product = {
             "sku":         sku,
             "ean":         ean,
             "title":       name,
-            "description": name,  # Basis-Beschreibung — später Anthropic API
-            "category":    "",    # ebay_client bestimmt per Taxonomy-API
-            "stock":       1,     # Dropshipping: immer 1 verfügbar
+            "description": name,
+            "category":    "",
+            "stock":       1,
             "image_url":   prod.get("image", ""),
             "image_urls":  [prod["image"]] if prod.get("image") else [],
             "condition":   "NEW",
         }
 
-        log.info(f"[{i}/{total}] Liste: SKU {sku} | {name[:50]} | VK {vk:.2f}€")
+        fee_hint = "NEU +0,06€" if is_new_listing else "Update kostenlos"
+        log.info(f"[{i}/{total}] SKU {sku} | {name[:45]} | VK {vk:.2f}€ [{fee_hint}]")
 
         if dry_run:
-            log.warning(f"  DRY-RUN — würde listen: {sku}")
+            log.warning(f"  DRY-RUN — würde {'listen (NEU)' if is_new_listing else 'updaten'}: {sku}")
+            if is_new_listing:
+                new_count += 1
             stats["ok"] += 1
             continue
 
@@ -877,7 +903,12 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
             result = client.upsert_product(product, vk)
             listing_id = result.get("listing_id", "")
             if listing_id:
-                log.info(f"  ✓ Gelistet: listingId {listing_id}")
+                log.info(f"  ✓ {'Gelistet (NEU)' if is_new_listing else 'Aktualisiert'}: listingId {listing_id}")
+                if is_new_listing:
+                    new_count += 1
+                    stats["new_listings"] += 1
+                else:
+                    stats["updates"] += 1
                 stats["ok"] += 1
             else:
                 log.warning(f"  ⚠ Kein listingId (Draft?): SKU {sku}")
@@ -888,7 +919,6 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
             stats["error"] += 1
             error_log.append({"sku": sku, "ean": ean, "name": name[:60], "vk": vk, "error": err_msg[:300]})
 
-        # Kurze Pause um Rate-Limits zu vermeiden
         time.sleep(0.3)
 
     # Fehler-Report speichern
@@ -897,7 +927,10 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
         err_path.write_text(json.dumps(error_log, indent=2, ensure_ascii=False), encoding="utf-8")
         log.info(f"Fehler-Report: {err_path} ({len(error_log)} Einträge)")
 
-    log.info(f"=== Listing abgeschlossen: {stats['ok']} OK | {stats['skip']} Drafts | {stats['error']} Fehler ===")
+    gebuehr = stats.get('new_listings', 0) * 0.06
+    log.info(f"=== Listing abgeschlossen: {stats['ok']} OK "
+             f"({stats.get('new_listings',0)} neu ~{gebuehr:.2f}€, {stats.get('updates',0)} Updates kostenlos) "
+             f"| {stats['skip']} übersprungen | {stats['error']} Fehler ===")
     return stats
 
 
