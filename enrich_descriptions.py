@@ -1,23 +1,18 @@
 """
-enrich_descriptions.py — Produktbeschreibungen via Icecat + Claude API
-=======================================================================
-Liest enrichment_index.csv, findet Einträge ohne long_summary,
-fragt Icecat Open Catalog per EAN ab und verbessert die Beschreibung
-optional mit Claude claude-haiku-4-5 (Anthropic API).
-
-Ergebnis: enrichment_index.csv mit gefüllten long_summary / specs_html.
-Danach: smart_lister --list überträgt die Beschreibungen an eBay.
+enrich_descriptions.py — Produktbeschreibungen + Bilder via Icecat
+===================================================================
+Workflow:
+  1. BAB Preisliste CSV → alle EANs mit Lagerbestand > 0
+  2. supplier_map.json → alle gelisteten EANs (mit vk-Preis)
+  3. enrichment_index.csv → fehlende Beschreibungen + Bilder via Icecat
+  4. Optional: Claude Haiku verbessert Beschreibungen
 
 Aufruf:
-  python enrich_descriptions.py              # Alle ohne Beschreibung
-  python enrich_descriptions.py --all        # Alle (auch vorhandene verbessern)
-  python enrich_descriptions.py --dry-run    # Nur anzeigen, nicht speichern
-  python enrich_descriptions.py --limit 50   # Nur 50 Artikel pro Run
-
-Benötigte Secrets (GitHub Actions / .env):
-  ICECAT_USER     — Icecat Open Catalog Username (kostenlos: icecat.us)
-  ICECAT_PASS     — Icecat Passwort
-  ANTHROPIC_API_KEY — optional, für KI-Verbesserung (claude-haiku-4-5)
+  python enrich_descriptions.py              # Fehlende Beschreibungen
+  python enrich_descriptions.py --all        # Alle neu laden
+  python enrich_descriptions.py --dry-run    # Nur anzeigen
+  python enrich_descriptions.py --limit 50   # Max 50 Artikel
+  python enrich_descriptions.py --images-only # Nur Bilder ergänzen
 """
 from __future__ import annotations
 
@@ -37,69 +32,118 @@ from dotenv import load_dotenv
 log = logging.getLogger("enrich_desc")
 
 ENRICHMENT   = "enrichment_index.csv"
+BAB_CSV      = "bab_preisliste.csv"
 SUPPLIER_MAP = "supplier_map.json"
 
 ICECAT_API   = "https://live.icecat.biz/api"
+ICECAT_USER  = "neovogen"
+ICECAT_TOKEN = "a923fe60-04bd-4f83-ae2e-a1e1a8427c98"
+
 CLAUDE_API   = "https://api.anthropic.com/v1/messages"
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
+
+
+# ---------------------------------------------------------------------------
+# EANs ermitteln
+# ---------------------------------------------------------------------------
+
+def get_listed_eans() -> set[str]:
+    """
+    Alle EANs die aktiv gelistet sind = in supplier_map MIT vk-Preis.
+    """
+    try:
+        sm = json.loads(Path(SUPPLIER_MAP).read_text(encoding="utf-8"))
+        return {v.get("ean", "") for v in sm.values()
+                if v.get("ean") and v.get("vk")}
+    except Exception as e:
+        log.warning(f"supplier_map.json Fehler: {e}")
+        return set()
+
+
+def get_bab_eans() -> set[str]:
+    """
+    EANs aus der BAB Preisliste mit Stock > 0.
+    """
+    try:
+        eans = set()
+        with open(BAB_CSV, encoding="utf-8-sig", newline="") as f:
+            reader = csv.DictReader(f, delimiter=";")
+            for row in reader:
+                gtin = (row.get("GTIN") or "").strip()
+                stock = (row.get("Stock") or "0").strip()
+                try:
+                    stock_int = int(stock)
+                except ValueError:
+                    stock_int = 0
+                if gtin and stock_int > 0:
+                    eans.add(gtin)
+        return eans
+    except Exception as e:
+        log.warning(f"BAB CSV Fehler: {e}")
+        return set()
+
 
 # ---------------------------------------------------------------------------
 # Icecat
 # ---------------------------------------------------------------------------
 
-def fetch_icecat(ean: str, user: str, password: str, lang: str = "de") -> dict | None:
+def fetch_icecat(ean: str, lang: str = "de") -> dict | None:
     """
-    Fragt Icecat live.icecat.biz per EAN (GTIN) ab.
-    Auth: UserName + Token (ICECAT_PASS = Token-Wert).
-    Gibt dict mit {long_summary, short_summary, specs_html, marketing_text, brand, title} oder None zurück.
+    Fragt live.icecat.biz per EAN (GTIN) ab.
+    Gibt dict mit Beschreibungen, Specs und Bildern zurück.
     """
     try:
         resp = requests.get(
             ICECAT_API,
             params={
-                "UserName": user,
-                "Token":    password,
+                "UserName": ICECAT_USER,
+                "Token":    ICECAT_TOKEN,
                 "Language": lang,
                 "GTIN":     ean,
             },
-            timeout=15,
+            timeout=20,
         )
-        if resp.status_code == 401:
-            log.error("Icecat: Ungültige Zugangsdaten (401)")
-            return None
-        if resp.status_code == 404:
-            log.debug(f"Icecat: EAN {ean} nicht gefunden (404)")
-            return None
         if not resp.ok:
-            log.warning(f"Icecat: HTTP {resp.status_code} für EAN {ean}")
+            log.debug(f"Icecat HTTP {resp.status_code} für EAN {ean}")
             return None
 
         data = resp.json()
-        # live.icecat.biz gibt {"msg": "OK", "data": {...}} zurück
         if data.get("msg") != "OK" or not data.get("data"):
             return None
 
         product = data["data"]
-        gi  = product.get("GeneralInfo", {})
-        img = product.get("Image", {})
+        gi  = product.get("GeneralInfo", {}) or {}
+        img = product.get("Image", {}) or {}
 
         # Beschreibungen
-        desc_block = gi.get("Description", {}) or {}
-        long_desc  = (desc_block.get("LongDesc",  "") or "").strip()
-        short_desc = (desc_block.get("ShortDesc", "") or "").strip()
-        marketing  = (gi.get("SummaryDescription", {}) or {}).get("LongSummaryDescription", "").strip()
+        desc   = gi.get("Description", {}) or {}
+        long_d = (desc.get("LongDesc", "") or "").strip()
+        short_d = (desc.get("ShortDesc", "") or "").strip()
+        summ   = gi.get("SummaryDescription", {}) or {}
+        marketing = (summ.get("LongSummaryDescription", "") or "").strip()
 
-        # Specs als HTML-Tabelle
+        # Specs
         specs_html = _build_specs_html(product.get("FeaturesGroups", []))
 
-        brand = (gi.get("Brand", "") or gi.get("BrandInfo", {}).get("BrandName", "") or "")
-        title = gi.get("Title", "") or gi.get("ProductName", "")
+        # Bilder
+        image_main = (img.get("HighPic") or img.get("Pic") or "").strip()
+        images_all_raw = product.get("Gallery", []) or []
+        images_all = "|".join(
+            g.get("Pic", "") for g in images_all_raw if g.get("Pic")
+        )
+        if image_main and not images_all:
+            images_all = image_main
+
+        brand = (gi.get("Brand") or gi.get("BrandInfo", {}).get("BrandName") or "").strip()
+        title = (gi.get("Title") or gi.get("ProductName") or "").strip()
 
         return {
-            "long_summary":   long_desc,
-            "short_summary":  short_desc,
+            "long_summary":   long_d,
+            "short_summary":  short_d,
             "marketing_text": marketing,
             "specs_html":     specs_html,
+            "image_main":     image_main,
+            "images_all":     images_all,
             "brand":          brand,
             "title":          title,
         }
@@ -110,132 +154,92 @@ def fetch_icecat(ean: str, user: str, password: str, lang: str = "de") -> dict |
 
 
 def _build_specs_html(features_groups: list) -> str:
-    """Konvertiert Icecat FeaturesGroups in eine HTML-Tabelle."""
     if not features_groups:
         return ""
-
     rows = []
     for group in features_groups:
-        group_name = group.get("FeatureGroup", {}).get("Name", {})
-        if isinstance(group_name, dict):
-            group_name = group_name.get("Value", "")
-
         for feat in group.get("Features", []):
             name  = feat.get("Feature", {}).get("Name", {})
             value = feat.get("LocalValue", feat.get("Value", ""))
             unit  = feat.get("Feature", {}).get("Measure", {}).get("Signs", {})
-
-            if isinstance(name,  dict): name  = name.get("Value",  "")
+            if isinstance(name,  dict): name  = name.get("Value", "")
             if isinstance(value, list): value = ", ".join(str(v) for v in value)
             if isinstance(unit,  dict): unit  = unit.get("_", "")
-
             if name and value:
-                display_value = f"{value} {unit}".strip() if unit else str(value)
-                rows.append(f"<tr><td><strong>{name}</strong></td><td>{display_value}</td></tr>")
-
+                display = f"{value} {unit}".strip() if unit else str(value)
+                rows.append(f"<tr><td><strong>{name}</strong></td><td>{display}</td></tr>")
     if not rows:
         return ""
-
-    return (
-        "<table style='border-collapse:collapse;width:100%'>"
-        + "".join(rows)
-        + "</table>"
-    )
+    return "<table style='border-collapse:collapse;width:100%'>" + "".join(rows) + "</table>"
 
 
 # ---------------------------------------------------------------------------
-# Claude API — Beschreibung verbessern
+# Claude API
 # ---------------------------------------------------------------------------
 
 def improve_with_claude(title: str, long_desc: str, specs_html: str, api_key: str) -> str:
-    """
-    Verbessert eine Produktbeschreibung mit claude-haiku-4-5.
-    Gibt verbesserten deutschen HTML-Text zurück.
-    """
     specs_text = re.sub(r"<[^>]+>", " ", specs_html)[:800] if specs_html else ""
-
-    prompt = f"""Du bist ein eBay-Texter. Schreibe eine deutsche Produktbeschreibung für eBay.
+    prompt = f"""Du bist ein eBay-Texter. Schreibe eine professionelle deutsche Produktbeschreibung für eBay.
 
 Produkt: {title}
 Hersteller-Beschreibung: {long_desc[:600]}
 Technische Daten: {specs_text}
 
-Schreibe 2-3 Absätze (HTML <p>-Tags), die:
-- Die wichtigsten Vorteile und Anwendungsfälle nennen
-- Auf Deutsch formuliert sind
-- Kaufmotivierend sind (keine Superlative)
-- KEIN Preis, KEINE Lieferzeit, KEINE Garantieversprechen
+Schreibe 2-3 Absätze (HTML <p>-Tags):
+- Wichtigste Vorteile und Anwendungsfälle
+- Auf Deutsch, kaufmotivierend (keine Superlative)
+- KEIN Preis, KEINE Lieferzeit, KEINE Garantieversprechen, KEINE Links
 
-Antworte NUR mit dem HTML (nur <p>-Tags, kein <html>/<body>/<div>)."""
+Antworte NUR mit dem HTML (nur <p>-Tags)."""
 
     try:
         resp = requests.post(
             CLAUDE_API,
-            headers={
-                "x-api-key":         api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type":      "application/json",
-            },
-            json={
-                "model":      CLAUDE_MODEL,
-                "max_tokens": 600,
-                "messages":   [{"role": "user", "content": prompt}],
-            },
+            headers={"x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+            json={"model": CLAUDE_MODEL, "max_tokens": 600, "messages": [{"role": "user", "content": prompt}]},
             timeout=30,
         )
-        if not resp.ok:
-            log.warning(f"Claude API Fehler: {resp.status_code} — {resp.text[:200]}")
-            return long_desc
-
-        result = resp.json()
-        improved = result.get("content", [{}])[0].get("text", "").strip()
-        return improved if improved else long_desc
-
+        if resp.ok:
+            result = resp.json().get("content", [{}])[0].get("text", "").strip()
+            return result if result else long_desc
     except Exception as e:
-        log.warning(f"Claude API Fehler: {e}")
-        return long_desc
+        log.warning(f"Claude Fehler: {e}")
+    return long_desc
 
 
 # ---------------------------------------------------------------------------
-# Hauptlogik
+# enrichment_index I/O
 # ---------------------------------------------------------------------------
 
-def load_enrichment_index(path: str = ENRICHMENT) -> tuple[list[str], list[dict]]:
-    """Gibt (fieldnames, rows) zurück."""
-    rows = []
-    fieldnames = []
+def load_enrichment(path: str = ENRICHMENT) -> tuple[list[str], list[dict]]:
     if not Path(path).exists():
-        return fieldnames, rows
+        return [], []
     with open(path, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
-        fieldnames = reader.fieldnames or []
+        fieldnames = list(reader.fieldnames or [])
         rows = list(reader)
-    return list(fieldnames), rows
+    return fieldnames, rows
 
 
-def save_enrichment_index(fieldnames: list[str], rows: list[dict], path: str = ENRICHMENT):
+def save_enrichment(fieldnames: list[str], rows: list[dict], path: str = ENRICHMENT):
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
 
 
-def get_supplier_map_eans() -> set[str]:
-    """EANs aus supplier_map.json — nur für diese Artikel lohnt sich die Arbeit."""
-    try:
-        sm = json.loads(Path(SUPPLIER_MAP).read_text(encoding="utf-8"))
-        return {v.get("ean", "") for v in sm.values() if v.get("ean")}
-    except Exception:
-        return set()
-
+# ---------------------------------------------------------------------------
+# Hauptlogik
+# ---------------------------------------------------------------------------
 
 def main():
     load_dotenv()
-    parser = argparse.ArgumentParser(description="Icecat + Claude Produktbeschreibungen")
-    parser.add_argument("--all",     action="store_true", help="Auch vorhandene Beschreibungen erneuern")
-    parser.add_argument("--dry-run", action="store_true", help="Nichts speichern, nur anzeigen")
-    parser.add_argument("--limit",   type=int, default=200, help="Max Artikel pro Run (Standard: 200)")
-    parser.add_argument("--lang",    default="DE", help="Icecat Sprache (Standard: DE)")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--all",         action="store_true", help="Auch vorhandene Einträge neu laden")
+    parser.add_argument("--dry-run",     action="store_true")
+    parser.add_argument("--limit",       type=int, default=200)
+    parser.add_argument("--lang",        default="de")
+    parser.add_argument("--images-only", action="store_true", help="Nur Bilder ergänzen")
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -244,105 +248,110 @@ def main():
         handlers=[logging.StreamHandler(sys.stdout)],
     )
 
-    icecat_user = os.getenv("ICECAT_USER", "neovogen")
-    # Token für live.icecat.biz (identisch mit enrich_from_icecat.py)
-    icecat_pass = (
-        os.getenv("ICECAT_PASS", "")
-        or os.getenv("ICECAT_TOKEN", "")
-        or "a923fe60-04bd-4f83-ae2e-a1e1a8427c98"
-    )
     anthropic_key = os.getenv("ANTHROPIC_API_KEY", "")
-
-    use_claude = bool(anthropic_key)
+    use_claude = bool(anthropic_key) and not args.images_only
     if use_claude:
-        log.info(f"Claude KI-Verbesserung: aktiviert (Modell: {CLAUDE_MODEL})")
-    else:
-        log.info("Claude KI-Verbesserung: deaktiviert (kein ANTHROPIC_API_KEY)")
+        log.info(f"Claude KI: aktiviert ({CLAUDE_MODEL})")
 
-    # Daten laden
-    fieldnames, rows = load_enrichment_index()
+    # EANs aus BAB + supplier_map
+    bab_eans    = get_bab_eans()
+    listed_eans = get_listed_eans()
+    target_eans = listed_eans  # Alle mit aktivem Listing
+    if bab_eans:
+        # Priorisiere EANs die AUCH im BAB-Feed mit Stock sind
+        priority = listed_eans & bab_eans
+        rest     = listed_eans - bab_eans
+        target_eans_ordered = list(priority) + list(rest)
+    else:
+        target_eans_ordered = list(listed_eans)
+
+    log.info(f"Gelistete EANs (supplier_map): {len(listed_eans)}")
+    log.info(f"BAB EANs mit Stock > 0:        {len(bab_eans)}")
+    log.info(f"Prio-EANs (beide):             {len(listed_eans & bab_eans) if bab_eans else 'n/a'}")
+
+    # enrichment_index laden
+    fieldnames, rows = load_enrichment()
     if not rows:
         log.error(f"{ENRICHMENT} nicht gefunden")
         sys.exit(1)
 
-    # Nur Artikel aus supplier_map bearbeiten (aktive Listings)
-    active_eans = get_supplier_map_eans()
-    log.info(f"Aktive EANs (supplier_map): {len(active_eans)}")
+    ean_to_idx = {r.get("ean", ""): i for i, r in enumerate(rows)}
 
-    # Zu bearbeitende Zeilen bestimmen
+    # Zu bearbeitende EANs bestimmen
     to_process = []
-    for row in rows:
-        ean = row.get("ean", "").strip()
-        if not ean or ean not in active_eans:
+    for ean in target_eans_ordered:
+        if ean not in ean_to_idx:
+            # EAN noch nicht in enrichment_index → überspringen (kein Titel bekannt)
             continue
-        has_desc = bool(row.get("long_summary", "").strip())
-        if has_desc and not args.all:
-            continue
-        to_process.append(row)
+        idx = ean_to_idx[ean]
+        row = rows[idx]
+        has_desc  = bool(row.get("long_summary", "").strip())
+        has_image = bool(row.get("image_main", "").strip())
+
+        if args.all:
+            to_process.append(ean)
+        elif args.images_only:
+            if not has_image:
+                to_process.append(ean)
+        else:
+            if not has_desc or not has_image:
+                to_process.append(ean)
 
     to_process = to_process[:args.limit]
     log.info(f"Zu bearbeiten: {len(to_process)} Artikel (Limit: {args.limit})")
 
     if not to_process:
-        log.info("Alle aktiven Artikel haben bereits Beschreibungen ✓")
+        log.info("✓ Alle gelisteten Artikel haben Beschreibungen und Bilder")
         sys.exit(0)
 
-    # EAN → row-Index Mapping
-    ean_to_idx = {r.get("ean", ""): i for i, r in enumerate(rows)}
+    updated = improved = not_found = 0
 
-    updated = 0
-    improved = 0
-    not_found = 0
-
-    for i, row in enumerate(to_process, 1):
-        ean   = row.get("ean", "").strip()
-        title = row.get("title_seo") or row.get("title_full") or ean
-
+    for i, ean in enumerate(to_process, 1):
+        idx   = ean_to_idx[ean]
+        row   = rows[idx]
+        title = (row.get("title_seo") or row.get("title_full") or ean)
         log.info(f"[{i}/{len(to_process)}] EAN {ean} | {title[:50]}")
 
-        icecat_data = fetch_icecat(ean, icecat_user, icecat_pass, lang=args.lang)
-
-        if not icecat_data:
+        data = fetch_icecat(ean, lang=args.lang)
+        if not data:
             log.warning(f"  Icecat: nicht gefunden")
             not_found += 1
             time.sleep(0.3)
             continue
 
-        long_desc  = icecat_data.get("long_summary",   "")
-        short_desc = icecat_data.get("short_summary",  "")
-        marketing  = icecat_data.get("marketing_text", "")
-        specs_html = icecat_data.get("specs_html",     "")
-        brand      = icecat_data.get("brand",          "")
+        long_d  = data.get("long_summary", "")
+        short_d = data.get("short_summary", "")
+        marketing = data.get("marketing_text", "")
+        specs   = data.get("specs_html", "")
+        img_main = data.get("image_main", "")
+        imgs_all = data.get("images_all", "")
+        brand   = data.get("brand", "")
 
-        log.info(f"  Icecat: {len(long_desc)} Zeichen Beschreibung, {len(specs_html)} Zeichen Specs")
+        log.info(f"  Icecat: desc={len(long_d)}Z, specs={len(specs)}Z, img={'✓' if img_main else '✗'}")
 
-        # Claude-Verbesserung
-        if use_claude and long_desc:
-            log.info(f"  Claude: Beschreibung verbessern...")
-            long_desc = improve_with_claude(title, long_desc, specs_html, anthropic_key)
+        if use_claude and long_d:
+            log.info(f"  Claude: verbessern...")
+            long_d = improve_with_claude(title, long_d, specs, anthropic_key)
             improved += 1
-            time.sleep(0.5)  # Rate-limit
+            time.sleep(0.5)
 
         if args.dry_run:
-            log.warning(f"  DRY-RUN — würde schreiben: {len(long_desc)} Zeichen Beschreibung")
+            log.warning(f"  DRY-RUN")
             continue
 
-        # Zeile aktualisieren
-        idx = ean_to_idx.get(ean)
-        if idx is not None:
-            if long_desc:  rows[idx]["long_summary"]   = long_desc
-            if short_desc: rows[idx]["short_summary"]  = short_desc
-            if marketing:  rows[idx]["marketing_text"] = marketing
-            if specs_html: rows[idx]["specs_html"]     = specs_html
-            if brand and not rows[idx].get("brand"): rows[idx]["brand"] = brand
-            updated += 1
+        if long_d:  row["long_summary"]   = long_d
+        if short_d: row["short_summary"]  = short_d
+        if marketing: row["marketing_text"] = marketing
+        if specs:   row["specs_html"]     = specs
+        if img_main: row["image_main"]    = img_main
+        if imgs_all: row["images_all"]    = imgs_all
+        if brand and not row.get("brand"): row["brand"] = brand
+        updated += 1
 
         time.sleep(0.3)
 
-    # Speichern
     if not args.dry_run and updated > 0:
-        save_enrichment_index(fieldnames, rows)
-        log.info(f"enrichment_index.csv gespeichert: {updated} Artikel aktualisiert")
+        save_enrichment(fieldnames, rows)
 
     log.info(
         f"=== Fertig: {updated} aktualisiert | "
