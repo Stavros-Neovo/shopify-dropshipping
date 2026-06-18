@@ -3,7 +3,7 @@
     "ean": "5099206073173",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.53,
+    "ek": 22.43,
     "vk": 49.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -25,20 +25,6 @@
     "image_url": "https://media.ipcstore.net/img/l/131715.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/131715.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPL0463": {
-    "ean": "5099206097254",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 21.82,
-    "vk": 48.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/135973.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/135973.jpg"
     ],
     "image_verified": true
   },
@@ -133,7 +119,7 @@
     "ean": "5099206105324",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.77,
+    "ek": 38.67,
     "vk": 80.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -228,7 +214,7 @@
     "ean": "5706991034530",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 63.44,
+    "ek": 62.93,
     "vk": 126.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -251,7 +237,7 @@
     "ean": "5706991031522",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 99.98,
+    "ek": 99.27,
     "vk": 195.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -266,7 +252,7 @@
     "ean": "0197498152394",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 96.53,
+    "ek": 95.92,
     "vk": 189.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -365,7 +351,7 @@
     "ean": "5099206066878",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 78.76,
+    "ek": 78.46,
     "vk": 155.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -387,22 +373,11 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/87315939_3237923707.jpg"
   },
-  "SUPJ0128": {
-    "ean": "5706991029154",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 172.55,
-    "vk": 332.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/deb1658bc81968b34737e976b8ef2b13.jpg"
-  },
   "SUPJ1049": {
     "ean": "5706991024425",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 174.58,
+    "ek": 173.67,
     "vk": 336.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -486,17 +461,6 @@
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/ea4deb4742a7488794bbbd7089b69816.jpg"
-  },
-  "SUPS0287": {
-    "ean": "8806092673885",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 20.3,
-    "vk": 45.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg"
   },
   "NETT0081": {
     "ean": "6935364010065",
@@ -688,7 +652,7 @@
     "ean": "5099206092372",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.38,
+    "ek": 22.33,
     "vk": 49.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -748,7 +712,7 @@
     "ean": "5099206113053",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 21.92,
+    "ek": 21.62,
     "vk": 48.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -889,7 +853,7 @@
     "ean": "5099206122017",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.06,
+    "ek": 37.45,
     "vk": 79.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -900,25 +864,11 @@
       "https://media.ipcstore.net/img/l/21241980.jpg"
     ]
   },
-  "SUPR1041": {
-    "ean": "8886419333418",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21296563.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21296563.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPL0599": {
     "ean": "5099206127128",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.01,
+    "ek": 47.81,
     "vk": 97.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1229,20 +1179,6 @@
     ],
     "image_verified": true
   },
-  "SUPL0602": {
-    "ean": "5099206123113",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 132.97,
-    "vk": 257.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/137885.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/137885.jpg"
-    ],
-    "image_verified": true
-  },
   "ANTB0008": {
     "ean": "8885022190173",
     "supplier": "BAB",
@@ -1272,7 +1208,7 @@
     "ean": "8006540774724",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 31.47,
+    "ek": 30.45,
     "vk": 66.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1286,7 +1222,7 @@
     "ean": "8006540957196",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 31.47,
+    "ek": 29.44,
     "vk": 66.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1314,7 +1250,7 @@
     "ean": "4210201434832",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 34.0,
+    "ek": 32.99,
     "vk": 71.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1353,17 +1289,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://www.babyliss.com/dw/image/v2/BDGM_PRD/on/demandware.static/-/Sites-master-fr/default/dw0bb6f761/images/BaByliss-ML/Dryers/D374DE/BaByliss%20Website/BAB_D374DE%20Cordkeeper%20(10).jpg?sw=800&sh=900&sm=fit&strip=false"
-  },
-  "HHWB5029": {
-    "ean": "4211125601423",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.06,
-    "vk": 79.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://cdn.shop-apotheke.com/images/D16/739/782/D16739782-p15.jpg"
   },
   "HHWB5031": {
     "ean": "4211125370008",
@@ -1979,7 +1904,7 @@
     "ean": "4719692006844",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.96,
+    "ek": 44.46,
     "vk": 92.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2056,20 +1981,6 @@
     "image_url": "https://www.alternate.de/p/600x600/1/6/Lenovo_ThinkPad_USB_C_Dockingstation_40AS_General_berholt@@100160961.jpg",
     "images": [
       "https://www.alternate.de/p/600x600/1/6/Lenovo_ThinkPad_USB_C_Dockingstation_40AS_General_berholt@@100160961.jpg"
-    ],
-    "image_verified": true
-  },
-  "SHG0064": {
-    "ean": "6974316995890",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.92,
-    "vk": 99.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/eba0478e43f01883cc40426b8f14a3d88909b861.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/eba0478e43f01883cc40426b8f14a3d88909b861.jpg"
     ],
     "image_verified": true
   },
@@ -2339,30 +2250,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://m.media-amazon.com/images/I/51cXYwtp04L._AC_SL1500_.jpg"
   },
-  "SUPD2002": {
-    "ean": "5059902033499",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.71,
-    "vk": 97.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21250249.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21250249.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPL0046": {
-    "ean": "5099206061309",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 41.31,
-    "vk": 85.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPL0095": {
     "ean": "5099206077379",
     "supplier": "BAB",
@@ -2377,25 +2264,11 @@
     ],
     "image_verified": true
   },
-  "SUPL0123": {
-    "ean": "5099206065086",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.84,
-    "vk": 63.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/919111.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/919111.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPL0125": {
     "ean": "5099206081901",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.08,
+    "ek": 44.66,
     "vk": 94.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2410,7 +2283,7 @@
     "ean": "5099206066823",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.97,
+    "ek": 48.62,
     "vk": 99.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2425,7 +2298,7 @@
     "ean": "5099206053304",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 31.97,
+    "ek": 31.77,
     "vk": 67.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2439,7 +2312,7 @@
     "ean": "5099206080270",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 27.61,
+    "ek": 27.2,
     "vk": 59.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2454,7 +2327,7 @@
     "ean": "5099206077461",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.25,
+    "ek": 29.64,
     "vk": 64.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2468,7 +2341,7 @@
     "ean": "0097855162045",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.1,
+    "ek": 42.63,
     "vk": 90.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2527,7 +2400,7 @@
     "ean": "5099206112490",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.79,
+    "ek": 46.59,
     "vk": 95.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2541,27 +2414,13 @@
     "ean": "8886419332565",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.72,
+    "ek": 46.69,
     "vk": 99.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_url": "https://media.ipcstore.net/img/l/129513.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/129513.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPR1002": {
-    "ean": "8886419333487",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.44,
-    "vk": 62.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/131893.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/131893.jpg"
     ],
     "image_verified": true
   },
@@ -2593,7 +2452,7 @@
     "ean": "8886419379362",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
+    "ek": 34.0,
     "vk": 74.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2604,7 +2463,7 @@
     "ean": "8887910060421",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.45,
+    "ek": 29.44,
     "vk": 64.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2626,18 +2485,6 @@
       "https://media.ipcstore.net/img/l/137936.jpg"
     ]
   },
-  "SUPR1061": {
-    "ean": "8887910061138",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.66,
-    "vk": 95.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Razer Kraken Kitty V3 X - Headset - Weiß",
-    "image_verified": false,
-    "image_unverified_ddg": "https://media.ldlc.com/r1600/ld/products/00/06/28/07/LD0006280749.jpg"
-  },
   "SUPS0283": {
     "ean": "4548736142428",
     "supplier": "BAB",
@@ -2656,7 +2503,7 @@
     "ean": "8806095312187",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 25.88,
+    "ek": 25.38,
     "vk": 56.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2755,16 +2602,6 @@
     ],
     "image_verified": true
   },
-  "SUPV0067": {
-    "ean": "0023942301875",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.16,
-    "vk": 79.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPV0068": {
     "ean": "0023942301882",
     "supplier": "BAB",
@@ -2779,16 +2616,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/e57e363fd0b2c36bb74b7237865de98ad8986c53.jpg"
     ]
-  },
-  "SUPV0069": {
-    "ean": "0023942301912",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.63,
-    "vk": 87.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "SUPV0070": {
     "ean": "0023942301929",
@@ -3027,17 +2854,6 @@
       "https://images.icecat.biz/img/gallery/28350880_3579424424.jpg"
     ],
     "image_verified": true
-  },
-  "HHWB4002": {
-    "ean": "3030050165371",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 56.84,
-    "vk": 114.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://media.cdn.kaufland.de/product-images/1024x1024/fd210fb5efb817e381b6a28a261e1d87.jpg"
   },
   "HHWB4003": {
     "ean": "3030050165388",
@@ -3860,7 +3676,7 @@
     "ean": "5706991014839",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 65.77,
+    "ek": 64.45,
     "vk": 131.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3890,7 +3706,7 @@
     "ean": "5099206085855",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 67.5,
+    "ek": 67.29,
     "vk": 134.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3935,7 +3751,7 @@
     "ean": "5099206107427",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 56.84,
+    "ek": 55.52,
     "vk": 114.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3950,7 +3766,7 @@
     "ean": "5099206106710",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 74.2,
+    "ek": 73.18,
     "vk": 147.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3987,7 +3803,7 @@
     "ean": "8886419379850",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 61.62,
+    "ek": 60.02,
     "vk": 123.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4030,7 +3846,7 @@
     "ean": "8886419334347",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 73.07,
+    "ek": 69.73,
     "vk": 145.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4083,7 +3899,7 @@
     "ean": "6938818321816",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 64.05,
+    "ek": 61.92,
     "vk": 128.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4706,21 +4522,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://us.ecoflow.com/cdn/shop/files/ecoflow-ecoflow-rapid-pro-x-power-bank-27-650mah-300w-rapid-pro-x-rapid-pro-x-power-bank-rapid-pro-desktop-charger-320w-5-ports-gan-1183190519_530x530.png?v=1755850563"
   },
-  "PPSE0013": {
-    "ean": "4897082668619",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 93.58,
-    "vk": 183.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW 100W - Solar Panel",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/644275.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/644275.jpg"
-    ]
-  },
   "PPSE0048": {
     "ean": "4897082669432",
     "supplier": "BAB",
@@ -4975,7 +4776,7 @@
     "ean": "0017817852470",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 100.49,
+    "ek": 98.46,
     "vk": 196.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5039,7 +4840,7 @@
     "ean": "5099206103016",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 98.66,
+    "ek": 98.35,
     "vk": 193.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5049,25 +4850,11 @@
     ],
     "image_verified": true
   },
-  "SUPL0597": {
-    "ean": "5099206133143",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 90.84,
-    "vk": 178.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21308138.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21308138.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPL0606": {
     "ean": "5099206133082",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 94.09,
+    "ek": 91.86,
     "vk": 184.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5081,7 +4868,7 @@
     "ean": "5099206133099",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 94.09,
+    "ek": 93.89,
     "vk": 184.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5095,7 +4882,7 @@
     "ean": "5099206133112",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 94.09,
+    "ek": 92.57,
     "vk": 184.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5103,21 +4890,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/21176359.jpg"
     ],
-    "image_verified": true
-  },
-  "SUPM3002": {
-    "ean": "7109806196993",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.53,
-    "vk": 202.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/d/e/dect612dtwcharger.jpg",
-    "images": [
-      "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/d/e/dect612dtwcharger.jpg"
-    ],
-    "title": "Mitel 612dt Set",
     "image_verified": true
   },
   "SUPM3007": {
@@ -5139,7 +4911,7 @@
     "ean": "8886419333937",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.5,
+    "ek": 77.14,
     "vk": 160.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5173,7 +4945,7 @@
     "ean": "8887910060889",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 79.68,
+    "ek": 78.16,
     "vk": 157.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5246,7 +5018,7 @@
     "ean": "6938818319608",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.53,
+    "ek": 103.23,
     "vk": 202.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5279,20 +5051,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://anthbot.com/cdn/shop/files/Back-view-of-battery-connector-for-anthbot-genie.jpg?v=1760518310&width=800"
   },
-  "CPUA0065": {
-    "ean": "0730143312042",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 116.91,
-    "vk": 227.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/116861.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/116861.jpg"
-    ],
-    "image_verified": true
-  },
   "CPUI0232": {
     "ean": "5032037282086",
     "supplier": "BAB",
@@ -5312,7 +5070,7 @@
     "ean": "5032037282109",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 137.5,
+    "ek": 135.01,
     "vk": 266.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5395,7 +5153,7 @@
     "ean": "0718037896199",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 126.62,
+    "ek": 124.27,
     "vk": 245.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5522,31 +5280,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/28350876_1618403442.jpg"
   },
-  "HDXW0204": {
-    "ean": "0718037868448",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 122.82,
-    "vk": 238.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://img.ktc.ua/img/base/1/5/278325.jpg"
-  },
-  "HDXW0236": {
-    "ean": "0718037903873",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 154.28,
-    "vk": 298.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/350237.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/350237.jpg"
-    ],
-    "image_verified": true
-  },
   "HHWB1051": {
     "ean": "4210201408567",
     "supplier": "BAB",
@@ -5584,17 +5317,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://amplience.ghdhair.com/i/ghd/705_PDP_GalleryImage_GrandTong_1_Global?$ProductImageGallery$&fmt=auto"
   },
-  "HHWK2081": {
-    "ean": "4066529001580",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 123.83,
-    "vk": 240.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://s1.kaercher-media.com/mam/10815300/mainproduct/92624ba8-d580-48ce-afb5-55a84e6cc0f8/d0.jpg"
-  },
   "HHWK2094": {
     "ean": "4066529027894",
     "supplier": "BAB",
@@ -5605,17 +5327,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://s1.kaercher-media.com/mam/16282700/mainproduct/220976/d0.jpg"
-  },
-  "HHWK2095": {
-    "ean": "4054278661872",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
-    "vk": 217.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://media.technikdirekt.de/thumbnail/5a/a2/8c/1752291950/696810_00_1920x1920.jpg?ts=1752291951"
   },
   "HHWK2096": {
     "ean": "4054278975375",
@@ -5669,7 +5380,7 @@
     "ean": "4711387797143",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 106.5,
+    "ek": 99.0,
     "vk": 208.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5769,20 +5480,6 @@
       "https://cdn.ecomm.ui.com/products/7b8f8da5-d684-4170-be1f-71b53af8d7f9/fdce5345-80e9-4edd-bf5b-93cf9141649e.png"
     ],
     "title": "UbiQuiti WiFi 6 Mesh Access Point",
-    "image_verified": true
-  },
-  "NETU0012": {
-    "ean": "0810354023514",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 116.2,
-    "vk": 226.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/241428.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/241428.jpg"
-    ],
     "image_verified": true
   },
   "NETU0013": {
@@ -5973,7 +5670,7 @@
     "ean": "0649528937735",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 106.88,
+    "ek": 101.5,
     "vk": 208.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6115,7 +5812,7 @@
     "ean": "0619659182557",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 143.5,
+    "ek": 139.5,
     "vk": 277.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6130,7 +5827,7 @@
     "ean": "0619659204877",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 116.0,
+    "ek": 113.01,
     "vk": 225.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6155,21 +5852,6 @@
     ],
     "image_verified": true
   },
-  "SSDC0076": {
-    "ean": "0649528942081",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 116.73,
-    "vk": 227.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "HDSSD M.2 (2280) 1TB Crucial P310 Plus NVMe Box",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/140454.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/140454.jpg"
-    ]
-  },
   "SSDK0018": {
     "ean": "0740617277357",
     "supplier": "BAB",
@@ -6180,20 +5862,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/36750821_7004061640.jpg"
-  },
-  "SSDK0040": {
-    "ean": "740617344790",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 114.0,
-    "vk": 222.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/ecce82f95f33dda4124a312e3820371c4a3a1d8e.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/ecce82f95f33dda4124a312e3820371c4a3a1d8e.jpg"
-    ],
-    "image_verified": true
   },
   "SSDK1003": {
     "ean": "4582563851863",
@@ -6359,7 +6027,7 @@
     "ean": "8806090545931",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 107.9,
+    "ek": 102.9,
     "vk": 210.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6583,7 +6251,7 @@
     "ean": "5706991022865",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.18,
+    "ek": 146.16,
     "vk": 284.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6610,7 +6278,7 @@
     "ean": "0097855131171",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 124.85,
+    "ek": 124.34,
     "vk": 242.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6654,7 +6322,7 @@
     "ean": "5099206123069",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 151.24,
+    "ek": 150.73,
     "vk": 292.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6697,20 +6365,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/3c974e0f85675d44fdbe900307ea5cd0ae540cc2.jpg"
   },
-  "SUPM3003": {
-    "ean": "7109806196979",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.41,
-    "vk": 251.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21169792.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21169792.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPM3004": {
     "ean": "7109806197006",
     "supplier": "BAB",
@@ -6745,7 +6399,7 @@
     "ean": "5707119056502",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.95,
+    "ek": 126.88,
     "vk": 255.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6757,7 +6411,7 @@
     "ean": "5707119041331",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 152.25,
+    "ek": 147.18,
     "vk": 294.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6849,7 +6503,7 @@
     "ean": "0730143312745",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 265.5,
+    "ek": 262.51,
     "vk": 507.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6860,7 +6514,7 @@
     "ean": "0730143315296",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 265.91,
+    "ek": 264.9,
     "vk": 508.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6875,7 +6529,7 @@
     "ean": "0730143315272",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 389.51,
+    "ek": 388.0,
     "vk": 740.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6885,25 +6539,11 @@
     ],
     "image_verified": true
   },
-  "CPUA0130": {
-    "ean": "0730143315289",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 335.0,
-    "vk": 638.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/138753.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/138753.jpg"
-    ],
-    "image_verified": true
-  },
   "CPUA0135": {
     "ean": "0730143315579",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 409.5,
+    "ek": 406.0,
     "vk": 778.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6918,7 +6558,7 @@
     "ean": "0730143315555",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 487.01,
+    "ek": 485.01,
     "vk": 924.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6932,27 +6572,13 @@
     "ean": "0730143318280",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 362.51,
+    "ek": 359.01,
     "vk": 690.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_url": "https://media.ipcstore.net/img/l/143293.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/143293.jpg"
-    ],
-    "image_verified": true
-  },
-  "CPUI0173": {
-    "ean": "5032037258623",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 349.51,
-    "vk": 665.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/478440.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/478440.jpg"
     ],
     "image_verified": true
   },
@@ -6999,7 +6625,7 @@
     "ean": "5032037278522",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 392.5,
+    "ek": 388.91,
     "vk": 746.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7013,7 +6639,7 @@
     "ean": "5032037278546",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 365.0,
+    "ek": 359.91,
     "vk": 694.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7038,7 +6664,7 @@
     "ean": "5059902133663",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 320.01,
+    "ek": 265.01,
     "vk": 610.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7049,7 +6675,7 @@
     "ean": "5032037279130",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 188.51,
+    "ek": 175.01,
     "vk": 362.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7063,7 +6689,7 @@
     "ean": "5032037281980",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 212.0,
+    "ek": 203.0,
     "vk": 406.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7074,7 +6700,7 @@
     "ean": "5032037282390",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 499.0,
+    "ek": 495.01,
     "vk": 947.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7213,7 +6839,7 @@
     "ean": "8719706432290",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 593.78,
+    "ek": 573.48,
     "vk": 1125.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7269,20 +6895,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/003f89184a663b310088671ab59d9f4ff192f945.jpg"
   },
-  "HDIS0289": {
-    "ean": "8719706432337",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 302.47,
-    "vk": 577.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg"
-    ],
-    "image_verified": true
-  },
   "HDIS0293": {
     "ean": "8719706022163",
     "supplier": "BAB",
@@ -7320,20 +6932,6 @@
     ],
     "image_verified": true
   },
-  "HDIS0297": {
-    "ean": "0763649139103",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 490.03,
-    "vk": 930.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/93311835_3973053807.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93311835_3973053807.jpg"
-    ],
-    "image_verified": true
-  },
   "HDIS0298": {
     "ean": "8719706431460",
     "supplier": "BAB",
@@ -7366,17 +6964,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://www.idcmayoristas.com/wp-content/uploads/2024/10/seagate-exos-7e10-st6000nm001b-hard-drive-st6000nm001b-lal-2.png"
-  },
-  "HDIS0312": {
-    "ean": "8719706021173",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 175.01,
-    "vk": 337.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/54ad91adbbc1f0765b156e7cd3a07abd.jpg"
   },
   "HDIS0314": {
     "ean": "8719706027298",
@@ -7471,28 +7058,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://cdn.dsmcdn.com/ty1591/prod/QC/20241022/01/bee58a59-184f-3c61-9e95-1b8e4d4d3f3d/1_org_zoom.jpg"
   },
-  "HDIT0210": {
-    "ean": "4260557512487",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 683.13,
-    "vk": 1293.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://cdn.shopify.com/s/files/1/2158/1497/products/MG07ACA14TE_1_x850.jpg?v=1571338245"
-  },
-  "HDIT0218": {
-    "ean": "4260557512777",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 324.83,
-    "vk": 619.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://media.karousell.com/media/photos/products/2023/8/5/toshiba_nas_n300_hard_disk_dri_1691233148_2d9bf2d6_progressive.jpg"
-  },
   "HDIT0220": {
     "ean": "4260557512920",
     "supplier": "BAB",
@@ -7503,31 +7068,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://down-id.img.susercontent.com/file/be45c6739e5ee93791bbfecf302fee6a"
-  },
-  "HDIT0227": {
-    "ean": "4260557512951",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 225.36,
-    "vk": 431.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images-na.ssl-images-amazon.com/images/I/716toVF4ROL._SL1500_.jpg"
-  },
-  "HDIT0228": {
-    "ean": "4260557512944",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 281.7,
-    "vk": 537.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287501.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287501.jpg"
-    ],
-    "image_verified": true
   },
   "HDIT0229": {
     "ean": "4260557512722",
@@ -7568,43 +7108,6 @@
     ],
     "image_verified": true
   },
-  "HDIT0238": {
-    "ean": "4260557513149",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 324.83,
-    "vk": 619.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Toshiba MG10ADA800E / 8TB / 3.5\"",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/140141.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/140141.jpg"
-    ]
-  },
-  "HDIT0244": {
-    "ean": "4260557513484",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 536.99,
-    "vk": 1018.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://assets.umart.com.au/newsite/images/202509/source_img/Storage-Devices-Toshiba-Enterprise-HDD-20TB-MG11ACA20TE-1.jpg"
-  },
-  "HDIT0246": {
-    "ean": "4260557513491",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 613.58,
-    "vk": 1162.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://cdn11.bigcommerce.com/s-v57yvx1djr/products/8460/images/32716/MG11ACA24TE__36426.1754617987.500.750__31891.1758077181.500.750.jpg?c=2"
-  },
   "HDIT0247": {
     "ean": "4260557513613",
     "supplier": "BAB",
@@ -7631,7 +7134,7 @@
     "ean": "0718037877662",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 572.42,
+    "ek": 559.13,
     "vk": 1085.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7652,20 +7155,6 @@
     "image_url": "https://media.ipcstore.net/img/l/128484.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/128484.jpg"
-    ],
-    "image_verified": true
-  },
-  "HDIW0207": {
-    "ean": "0718037899800",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 251.52,
-    "vk": 481.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/129052.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129052.jpg"
     ],
     "image_verified": true
   },
@@ -7973,18 +7462,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://s1.kaercher-media.com/mam/16440200/mainproduct/e1371046-0077-4295-b42f-70c262c2ab9b/d0.jpg"
   },
-  "HHWK2097": {
-    "ean": "4054278975399",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 187.78,
-    "vk": 361.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Kärcher VC 6, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",
-    "image_verified": false,
-    "image_unverified_ddg": "https://media.cdn.kaufland.de/product-images/original/1ec97e04850810d4077ede40a771235f.jpg"
-  },
   "HHWM4005": {
     "ean": "4006508217847",
     "supplier": "BAB",
@@ -8083,17 +7560,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/70e28940b07b0e21030861601b9bad6a11e64c18.jpg"
   },
-  "HHWX0145": {
-    "ean": "6978515250514",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 441.53,
-    "vk": 838.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/c154d92cb6ebd60a5cb5ff96e77fd64e92c61180.jpg"
-  },
   "HHWX0148": {
     "ean": "6936905905512",
     "supplier": "BAB",
@@ -8144,37 +7610,12 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/1c9add38cbf33969ef5903c460004e9fd5baf8b5.jpg"
   },
-  "NASS0084": {
-    "ean": "4711174726004",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 522.73,
-    "vk": 991.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Synology DiskStation DS925+ - NAS-Server",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/141795.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/141795.jpg"
-    ]
-  },
   "NASS0085": {
     "ean": "4711174725991",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 445.59,
     "vk": 846.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "NASS0086": {
-    "ean": "4711174726387",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 293.34,
-    "vk": 559.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
@@ -8189,20 +7630,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/efd89e2d8da424a4e288ba8287186cdeba094c67.jpg"
-  },
-  "NETT0158": {
-    "ean": "8885020622393",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 279.13,
-    "vk": 533.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/65eb6be13fcf88c3ee70f51ade60dcc2a11bd558.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/65eb6be13fcf88c3ee70f51ade60dcc2a11bd558.jpg"
-    ],
-    "image_verified": true
   },
   "NETT0162": {
     "ean": "8885020621488",
@@ -8407,21 +7834,6 @@
     "title": "UbiQuiti Gateway Pro UniFi UXG-MAX",
     "image_verified": true
   },
-  "NETU0129": {
-    "ean": "0810084695555",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 224.48,
-    "vk": 430.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "UbiQuiti U7 Pro Max - Access Point",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/137109.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/137109.jpg"
-    ]
-  },
   "NETU0130": {
     "ean": "0810084695548",
     "supplier": "BAB",
@@ -8466,35 +7878,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/21241706.jpg"
     ]
-  },
-  "NETU0154": {
-    "ean": "0810010074300",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 160.22,
-    "vk": 309.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/d3220754-f4a9-4ecc-a0bd-64e1520ef471/5985679e-1cac-4885-ad85-82e2d5c94f89.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/d3220754-f4a9-4ecc-a0bd-64e1520ef471/5985679e-1cac-4885-ad85-82e2d5c94f89.png"
-    ],
-    "title": "Ubiquiti UniFi Express 7 - Gateway - Wi-Fi 7, 10GbE, 2.5GbE",
-    "image_verified": true
-  },
-  "NETU0155": {
-    "ean": "0810177160632",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 163.74,
-    "vk": 315.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/141162.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/141162.jpg"
-    ],
-    "image_verified": true
   },
   "NETU0160": {
     "ean": "0810084698730",
@@ -8619,21 +8002,6 @@
       "https://no.co/media/catalog/product/g/b/gb150.png"
     ],
     "title": "NOCO GB150 | Boost 12V 3000A Jump Starter | Boost Jump Starters",
-    "image_verified": true
-  },
-  "NOCO0015": {
-    "ean": "1210000620088",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 166.46,
-    "vk": 320.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://no.co/media/catalog/product/g/b/gbx75.png",
-    "images": [
-      "https://no.co/media/catalog/product/g/b/gbx75.png"
-    ],
-    "title": "NOCO GBX75 | Boost X 12V 2500A Jump Starter | Boost Jump Starters",
     "image_verified": true
   },
   "NOCO0016": {
@@ -8940,17 +8308,6 @@
     "title": "ECOFLOW Single Axis Solar Tracker",
     "image_verified": true
   },
-  "PPSE0113": {
-    "ean": "4895251636902",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 235.48,
-    "vk": 450.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://es.ecoflow.com/cdn/shop/files/panel-solar-rigido-ecoflow-de-450w-2-unidades-58549733589339_1500x.png?v=1731561253"
-  },
   "PPSS2003": {
     "ean": "4260741339395",
     "supplier": "BAB",
@@ -9000,7 +8357,7 @@
     "ean": "649528937780",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 185.75,
+    "ek": 182.7,
     "vk": 357.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9215,7 +8572,7 @@
     "ean": "0649528906564",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 486.19,
+    "ek": 485.17,
     "vk": 922.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9269,7 +8626,7 @@
     "ean": "0840006667216",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 465.0,
+    "ek": 449.01,
     "vk": 883.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9283,7 +8640,7 @@
     "ean": "0840006666073",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 395.01,
+    "ek": 389.01,
     "vk": 751.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9407,20 +8764,6 @@
     "image_url": "https://media.ipcstore.net/img/l/129941.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/129941.jpg"
-    ],
-    "image_verified": true
-  },
-  "RAM5G0011": {
-    "ean": "4713294230539",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 370.48,
-    "vk": 705.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21310729.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21310729.jpg"
     ],
     "image_verified": true
   },
@@ -9598,7 +8941,7 @@
     "ean": "0740617350180",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 375.0,
+    "ek": 359.01,
     "vk": 713.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9609,7 +8952,7 @@
     "ean": "0740617350173",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 725.0,
+    "ek": 715.01,
     "vk": 1372.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9675,20 +9018,6 @@
       "https://www.alternate.de/p/o/5/4/HP_EliteBook_850_G7_General_berholt__Notebook@@100193545.jpg"
     ],
     "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-    "image_verified": true
-  },
-  "REFT0005": {
-    "ean": "4260771516346",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 274.05,
-    "vk": 523.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21177176.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21177176.jpg"
-    ],
     "image_verified": true
   },
   "REFT0007": {
@@ -9873,20 +9202,6 @@
     "title": "T1A Lenovo ThinkPad X1 Carbon Gen 8 (14\")",
     "image_verified": true
   },
-  "REFT1008": {
-    "ean": "5711603074439",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 329.88,
-    "vk": 628.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/bad41ca00e3b2738feef6e52883f5404dcc910d5.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/bad41ca00e3b2738feef6e52883f5404dcc910d5.jpg"
-    ],
-    "image_verified": true
-  },
   "REFT1010": {
     "ean": "5711603085060",
     "supplier": "BAB",
@@ -9983,20 +9298,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://hinta.fi/product_images/19/5545319_62962390_1_YZVy.jpg"
   },
-  "SDXS0023": {
-    "ean": "0619659184735",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 443.5,
-    "vk": 842.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/120742.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/120742.jpg"
-    ],
-    "image_verified": true
-  },
   "SDXS0033": {
     "ean": "8806094905403",
     "supplier": "BAB",
@@ -10032,16 +9333,6 @@
       "https://images.icecat.biz/img/gallery/79127685_3226112622.jpg"
     ],
     "image_verified": true
-  },
-  "SDXS1022": {
-    "ean": "8806090351679",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 158.5,
-    "vk": 305.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "SDXV0009": {
     "ean": "0023942320319",
@@ -10086,7 +9377,7 @@
     "ean": "4582761161115",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 203.38,
+    "ek": 190.43,
     "vk": 390.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10260,7 +9551,7 @@
     "ean": "8806090545917",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 249.9,
+    "ek": 242.9,
     "vk": 478.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10271,7 +9562,7 @@
     "ean": "8806094215021",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 184.9,
+    "ek": 178.5,
     "vk": 355.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10282,7 +9573,7 @@
     "ean": "8806094215038",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 280.9,
+    "ek": 277.9,
     "vk": 536.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10384,7 +9675,7 @@
     "ean": "0718037891392",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 166.52,
+    "ek": 155.65,
     "vk": 321.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10514,7 +9805,7 @@
     "ean": "0017817859585",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 289.28,
+    "ek": 284.2,
     "vk": 552.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10529,7 +9820,7 @@
     "ean": "0017817859561",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 291.31,
+    "ek": 284.2,
     "vk": 556.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10538,17 +9829,6 @@
       "https://media.ipcstore.net/img/l/21319458.jpg"
     ],
     "image_verified": true
-  },
-  "SUPD1028": {
-    "ean": "5397184961827",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 299.43,
-    "vk": 571.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/1efbf3145b53ec49ec460d477a7cee1570a10719.jpg"
   },
   "SUPH0049": {
     "ean": "0198415314925",
@@ -10579,7 +9859,7 @@
     "ean": "5706991024302",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.27,
+    "ek": 166.87,
     "vk": 322.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10588,17 +9868,6 @@
       "https://images.icecat.biz/img/gallery/93797034_1810455412.jpg"
     ],
     "image_verified": true
-  },
-  "SUPJ0124": {
-    "ean": "5706991024340",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 166.97,
-    "vk": 321.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/93797034_1810455412.jpg"
   },
   "SUPJ0161": {
     "ean": "5706991031256",
@@ -10625,25 +9894,11 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/0ddeb466db3f15669f9e3fa441a28de9ab1c51bb.jpg"
   },
-  "SUPJ0171": {
-    "ean": "5706991030778",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 198.84,
-    "vk": 381.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/e97beb80a4862664be4ba1cfea4ca373c020faf1.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e97beb80a4862664be4ba1cfea4ca373c020faf1.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPJ0173": {
     "ean": "5706991024364",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 197.42,
+    "ek": 194.68,
     "vk": 379.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10655,7 +9910,7 @@
     "ean": "5706991030976",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 219.24,
+    "ek": 218.12,
     "vk": 420.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10666,7 +9921,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 274.66,
+    "ek": 274.49,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10813,21 +10068,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sony-WH-1000XM5-Black-7_1000x.jpg?v=1663742444"
   },
-  "SUPS0288": {
-    "ean": "5013493465145",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 588.7,
-    "vk": 1116.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Sony ZV-1 II - Exmor RS CMOS",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/267314.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/267314.jpg"
-    ]
-  },
   "SUPS0328": {
     "ean": "4548736134294",
     "supplier": "BAB",
@@ -10916,7 +10156,7 @@
     "ean": "0023942324034",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 182.7,
+    "ek": 181.69,
     "vk": 351.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10934,25 +10174,16 @@
     "image_verified": false,
     "image_unverified_ddg": "https://cdn.idealo.com/folder/Product/201896/7/201896734/s1_produktbild_max/zebra-zd421d-zd4a042-d0ee00ez.jpg"
   },
-  "CAMD0003": {
-    "ean": "6941565997395",
-    "supplier": "BAB",
-    "ek": 88.31,
-    "vk": 173.99,
-    "title": "DJI O4 Air Unit für FPV-Drohne",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "CPUA0098": {
     "ean": "730143314428",
     "supplier": "BAB",
-    "ek": 167.51,
+    "ek": 166.5,
     "vk": 322.99,
     "title": "AMD Ryzen 7 7700X BOX | 100-100000591WOF",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "ENAB0004": {
     "ean": "6972822120867",
@@ -11016,7 +10247,7 @@
   "HHWB1130": {
     "ean": "4022167001016",
     "supplier": "BAB",
-    "ek": 17.76,
+    "ek": 16.75,
     "vk": 40.99,
     "title": "Braun BNA100 - Nasensauger - schnurlos",
     "listed_at": "2026-06-14T20:49:22",
@@ -11025,7 +10256,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/71658696_9066971040.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1131": {
     "ean": "8700216194761",
@@ -11070,12 +10302,13 @@
   "HHWB1138": {
     "ean": "8700216777131",
     "supplier": "BAB",
-    "ek": 42.63,
+    "ek": 40.09,
     "vk": 87.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 10 St.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB5012": {
     "ean": "4211125614034",
@@ -11338,54 +10571,26 @@
   "MBAI0031": {
     "ean": "4711387095119",
     "supplier": "BAB",
-    "ek": 105.0,
+    "ek": 95.91,
     "vk": 205.99,
     "title": "TUF GAMING B760-PLUS WIFI | 90MB1ER0-M1EAY0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/2d9a1b4029b097a7977990a934dd7d0fc02ff685.jpg"
+    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/2d9a1b4029b097a7977990a934dd7d0fc02ff685.jpg",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "MBAI0046": {
     "ean": "4711387797273",
     "supplier": "BAB",
-    "ek": 112.5,
+    "ek": 109.51,
     "vk": 219.99,
     "title": "ASUS PRIME B840-PLUS WIFI | 90MB1IZ0-M0EAY0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/38db650685efe2e7082c03a181eccb0eae9f02aa.jpg"
-  },
-  "NAVS0001": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 274.05,
-    "vk": 523.99,
-    "title": "STMicro EVB-LIV4F GNSS/GPS Development Tool TESEO-LIV4F",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "NAVU0001": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 233.45,
-    "vk": 447.99,
-    "title": "Unicore UM980 USB Dongle",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "NAVU1001": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 253.75,
-    "vk": 485.99,
-    "title": "U-BLOX NEO-F9P-15B USB Dongle",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
+    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/38db650685efe2e7082c03a181eccb0eae9f02aa.jpg",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NETT0002": {
     "ean": "6935364020064",
@@ -11430,17 +10635,6 @@
     "source": "ghost_fix",
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/79344191_6567765453.jpg"
-  },
-  "NETT0079": {
-    "ean": "6935364053413",
-    "supplier": "BAB",
-    "ek": 12.69,
-    "vk": 31.99,
-    "title": "TP-LINK Archer T3U Plus - Netzwerkadapter - USB 3.0",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/77809733_9351423879.jpg"
   },
   "NETT0085": {
     "ean": "6935364030773",
@@ -11589,20 +10783,6 @@
     "image_url": "https://static.wixstatic.com/media/814ec4_e2b7d59c7e714a98919eb61c03e06bff~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-80-en.jpg",
     "images": [
       "https://static.wixstatic.com/media/814ec4_e2b7d59c7e714a98919eb61c03e06bff~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-80-en.jpg"
-    ],
-    "image_verified": true
-  },
-  "NETT1029": {
-    "ean": "4779051840113",
-    "supplier": "BAB",
-    "ek": 43.65,
-    "vk": 89.99,
-    "title": "Teltonika TSW101 - Switch",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://static.wixstatic.com/media/814ec4_9acc0c27647a4af58f2e1e1fcf64be17~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-87.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_9acc0c27647a4af58f2e1e1fcf64be17~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-87.jpg"
     ],
     "image_verified": true
   },
@@ -11944,17 +11124,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://petkitgermany.com/cdn/shop/files/412876.webp?v=1733312659&width=550"
   },
-  "PETK0031": {
-    "ean": "6975069303352",
-    "supplier": "BAB",
-    "ek": 6.9,
-    "vk": 20.99,
-    "title": "Petkit Katzenklo Pura Max Abtrennung weiß",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_unverified_ddg": "http://shop-petkit.de/cdn/shop/files/petkit-katzenklo-pura-max-2-premium-1png-2564738.png?crop=center&height=1200&v=1755077632&width=1200"
-  },
   "PETK0033": {
     "ean": "6975069304281",
     "supplier": "BAB",
@@ -12124,20 +11293,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6f855a6b-46a4-40aa-b15b-f90920f8af15.__CR0,0,2928,1200_PT0_SX1464_V1___.png"
   },
-  "PPE0021": {
-    "ean": "4895251603072",
-    "supplier": "BAB",
-    "ek": 18.17,
-    "vk": 41.99,
-    "title": "ECOFLOW XT60i Cable 2.5m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/644293.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/644293.jpg"
-    ]
-  },
   "PPE0070": {
     "ean": "4895251600033",
     "supplier": "BAB",
@@ -12169,16 +11324,6 @@
     "ek": 49.02,
     "vk": 99.99,
     "title": "ECOFLOW DELTA 3 Cable",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PPH0009": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 406.0,
-    "vk": 772.99,
-    "title": "Huawei SmartCharger Wallbox - SCharger-7KS-S0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
@@ -12257,206 +11402,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "PPSH0004": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 497.35,
-    "vk": 944.99,
-    "title": "Huawei Inverter - 4kW - SUN2000-4KTL-M1",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PPSH0024": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 406.0,
-    "vk": 772.99,
-    "title": "Huawei Inverter - 3kW - SUN2000-3KTL-M1",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVGC0003": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 182.7,
-    "vk": 351.99,
-    "title": "Tecget 6 String DC-Übespannungsschutz Typ 2 ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0003": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 8.88,
-    "vk": 24.99,
-    "title": "Mounting Systems Schiene 4/35- 1,20m Alu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0004": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 14.72,
-    "vk": 35.99,
-    "title": "Mounting Systems Schiene 4/35- 1,20m Alu schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0009": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 22.33,
-    "vk": 49.99,
-    "title": "Mounting Systems Schiene 4/35, 2,40m Alu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0013": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 20.81,
-    "vk": 46.99,
-    "title": "Mounting Systems GS 4/35 CS, 3,60m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0016": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 25.88,
-    "vk": 56.99,
-    "title": "Mounting Systems Schiene 4/35, 4,40",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0026": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 16.75,
-    "vk": 39.99,
-    "title": "Mounting Systems GS 5/41 CS, 3,60m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0029": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 19.29,
-    "vk": 43.99,
-    "title": "Mounting Systems Schiene 5/41, 4,40m Alu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0055": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.02,
-    "vk": 9.99,
-    "title": "Mounting Systems Endkappe lang f. GS 5/41 schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0062": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.66,
-    "vk": 8.99,
-    "title": "Mounting Systems Schiene 1/15 mit EPDM, 0,10m, ohne Schr.",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0070": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.79,
-    "vk": 12.99,
-    "title": "Mounting Systems Schiene 4/32 inkl. EPDM, 0,395m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0072": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.61,
-    "vk": 8.99,
-    "title": "Mounting Systems Dünnblechschraube 5,5x25mm ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0102": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.03,
-    "vk": 11.99,
-    "title": "Mounting Systems Verbinder innen f. Schiene 5/41 ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0107": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.02,
-    "vk": 9.99,
-    "title": "Mounting Systems Verbinder CCS-Schiene vormontiert",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0109": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.52,
-    "vk": 10.99,
-    "title": "Mounting Systems KS Verb.48x31, vm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0206": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.76,
-    "vk": 8.99,
-    "title": "Mounting Systems Mittelklemme 30-40mm & EC Alu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0209": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.78,
-    "vk": 10.99,
-    "title": "Mounting Systems Mittelklemme 30-40mm & EC sw",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0212": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.22,
-    "vk": 9.99,
-    "title": "Mounting Systems Endklemme 30-40mm Alu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PVMS0318": {
     "ean": "4043377226815",
     "supplier": "BAB",
@@ -12467,26 +11412,6 @@
     "source": "ghost_fix",
     "image_verified": false,
     "image_unverified_ddg": "https://e4mobility.de/media/f7/b8/c3/1669640831/DSC00099.webp"
-  },
-  "PVMS0320": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 4.06,
-    "vk": 15.99,
-    "title": "Mounting Systems Stockschraube M12x300 komplett-auf Holz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0335": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.25,
-    "vk": 8.99,
-    "title": "Mounting Systems Holzschraube 6x80 Dachhaken",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
   },
   "PVMS0340": {
     "ean": "4056835238978",
@@ -12499,416 +11424,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://www.emax-haustechnik.de/shop/images/products/main/MS14634.jpg"
   },
-  "PVMS0341": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.57,
-    "vk": 10.99,
-    "title": "Mounting Systems Winkel Stockschraube M10",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0342": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.59,
-    "vk": 12.99,
-    "title": "Mounting Systems Winkel Stockschraube M12",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0343": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.03,
-    "vk": 11.99,
-    "title": "Mounting Systems Winkel Biber/Schiefer/Falzklemme M8",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0345": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 5.02,
-    "vk": 16.99,
-    "title": "Mounting Systems Fixanker Beton M10x110mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0426": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 5.99,
-    "vk": 18.99,
-    "title": "Mounting Systems Querverstrebung Dreiecke pur",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0501": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.18,
-    "vk": 11.99,
-    "title": "Mounting Systems Vorderer Stütze 10°,15°, 60mm, bg",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0506": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.79,
-    "vk": 12.99,
-    "title": "Mounting Systems Hintere Stütze, 10°, 60mm, bg",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0520": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 10.4,
-    "vk": 27.99,
-    "title": "Mounting Systems Bodenschiene 66x10,7mm- 2,393m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0528": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.27,
-    "vk": 8.99,
-    "title": "Mounting Systems Hammerkopf M8x20 für Ballastwinkel",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0529": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.27,
-    "vk": 8.99,
-    "title": "Mounting Systems Mutter M8 für Ballastwinkel",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0531": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.37,
-    "vk": 10.99,
-    "title": "Mounting Systems Bautenschutzmatte Alu 370x150mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0534": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.54,
-    "vk": 12.99,
-    "title": "Bodenschiene 66x10,7mm-0,151m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0604": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 28.42,
-    "vk": 61.99,
-    "title": "Mounting Systems Fixierungsschiene",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0605": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 16.75,
-    "vk": 39.99,
-    "title": "Mounting Systems hinterer Windabweiser, L=1861mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0614": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 9.39,
-    "vk": 25.99,
-    "title": "Mounting Systems Seitenabweiser EW XL- 2277mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0620": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 9.39,
-    "vk": 25.99,
-    "title": "Mounting Systems 15° Grundschiene Süd- 1265mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0622": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 17.26,
-    "vk": 40.99,
-    "title": "Mounting Systems Grundschiene EW XL- 2287mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0623": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.76,
-    "vk": 8.99,
-    "title": "Mounting Systems Adapter Windabweiser 40mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0624": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.73,
-    "vk": 10.99,
-    "title": "Mounting Systems Schienenabdeckung EW- 430mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0626": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.54,
-    "vk": 12.99,
-    "title": "Mounting Systems 15° Schienenabdeckung Süd- 710mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0628": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.22,
-    "vk": 7.99,
-    "title": "Mounting Systems Inbusschraube M6x35/24",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0629": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.09,
-    "vk": 7.99,
-    "title": "Mounting Systems Inbusschraube M6x16",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0630": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.02,
-    "vk": 7.99,
-    "title": "Mounting Systems Unterlegscheibe M6",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0631": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.15,
-    "vk": 7.99,
-    "title": "Mounting Systems Schraube f. Metall 5,5x13",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0632": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.32,
-    "vk": 10.99,
-    "title": "Mounting Systems Kugelsperrbolzen 6x50mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0633": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 3.5,
-    "vk": 14.99,
-    "title": "Mounting Systems Gummiunterlage- 250mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0635": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 12.43,
-    "vk": 30.99,
-    "title": "Mounting Systems Verb. Profil 15° S- L=1,293m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0637": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 2.33,
-    "vk": 11.99,
-    "title": "Mounting Systems Verbindungsschiene, L=250mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0638": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 7.61,
-    "vk": 21.99,
-    "title": "Mounting Systems Verbindungsschiene OW, L=800mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0639": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 5.58,
-    "vk": 18.99,
-    "title": "Mounting Systems Verbindungsschiene Süd",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0640": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 15.23,
-    "vk": 36.99,
-    "title": "Mounting Systems Stütze Flachdach 10°/15°",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0642": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 18.78,
-    "vk": 42.99,
-    "title": "Mounting Systems Verbindungsschiene S 15°- L=1080mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0643": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 6.6,
-    "vk": 19.99,
-    "title": "Mounting Systems Schienenabdeckung S 15°- L=480mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0719": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 8.12,
-    "vk": 22.99,
-    "title": "Mounting Systems Solarfix Bolt M10x150",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0826": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 26.39,
-    "vk": 57.99,
-    "title": "Mounting Systems Solarfix 12mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0827": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 13.2,
-    "vk": 32.99,
-    "title": "Mounting Systems Solarfix Bitumen Rosette- x WB 19.12",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVMS0828": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 52.27,
-    "vk": 105.99,
-    "title": "Mounting Systems Abstandslehre M5- x WB 17.12",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSA0003": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 201.99,
-    "vk": 387.99,
-    "title": "AIKO Neostar 3S+ G3-A-MCE54DB 470W",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSEN003": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 3.32,
-    "vk": 13.99,
-    "title": "SOL-50 Horizontalendkappe Alu schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSEN005": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 43.53,
-    "vk": 89.99,
-    "title": "SOL-50 XL-Vertikalprofil 4m pressblank",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSEN008": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 10.93,
-    "vk": 28.99,
-    "title": "SOL-50 VarioDuo-Tragarm vormontiert",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PVSEN010": {
     "ean": "4061245025452",
     "supplier": "BAB",
@@ -12920,106 +11435,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://www.sen.de/media/bf/41/1a/1672660416/10720.jpg"
   },
-  "PVSEN013": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.14,
-    "vk": 9.99,
-    "title": "SOL-50 XL-Vertikalverbinder 2x100mm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSEN017": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.23,
-    "vk": 9.99,
-    "title": "SOL-50 Vertikalendkappe Kunststoff schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSEN019": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 47.06,
-    "vk": 96.99,
-    "title": "SOL-50 XXL-Vertikalprofil 4m pressblank",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSG0073": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 35.53,
-    "vk": 74.99,
-    "title": "Sungrow SMR032 - Leermodul",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSJ0008": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 192.85,
-    "vk": 370.99,
-    "title": "Jolywood Solarpanel JW-HD96N-R2-460W Transparent Black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSJ0010": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 152.25,
-    "vk": 294.99,
-    "title": "Jolywood Solarpanel JW-HD108N-R2-505W Transparent Black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVSS0001": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 252.74,
-    "vk": 483.99,
-    "title": "Sunpro Solarmodul BC Full Black 475W",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVST0003": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.51,
-    "vk": 8.99,
-    "title": "Trina Solar TS4 Buchse (female) 4,0 - 6,0 mm²",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVST0009": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 81.2,
-    "vk": 160.99,
-    "title": "Trina Solar Vertex S+ TSM-445NEG9R.28 445 WP",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVST1000": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 28.93,
-    "vk": 62.99,
-    "title": "Tigo PV Optimierer - TS4-A-0 | 700W",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PVST9004": {
     "ean": "4013614376870",
     "supplier": "BAB",
@@ -13030,26 +11445,6 @@
     "source": "ghost_fix",
     "image_verified": false,
     "image_unverified_ddg": "https://www.avxperten.dk/images/product/236028/original/7f2d5396-f8b8-4d5e-8ea9-bfe756b66493.webp"
-  },
-  "PVST9006": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 0.51,
-    "vk": 8.99,
-    "title": "MC4 MALE KBT4/10II-UR",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PVST9007": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 1.67,
-    "vk": 10.99,
-    "title": "MC4 FEMALE KBT4/10II-UR",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
   },
   "RAM4L0017": {
     "ean": "0843367123766",
@@ -13064,46 +11459,6 @@
       "https://media.ipcstore.net/img/l/139599.jpg"
     ],
     "image_verified": true
-  },
-  "RAM4L0039": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 179.53,
-    "vk": 345.99,
-    "title": "Lexar SO-DIMM 16GB, DDR5-5600, CL46-45-45-90",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "REFH0002": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 41.62,
-    "vk": 85.99,
-    "title": "HP USB-C/A Universal Dock G2 - Refurbished",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "REFL0004": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 78.16,
-    "vk": 154.99,
-    "title": "Lenovo ThinkPad Thunderbolt 3 Workstation Dock 40AN - Refurbished",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "REFL0005": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 71.05,
-    "vk": 141.99,
-    "title": "Lenovo ThinkPad USB-C Dock 40AY - Refurbished",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
   },
   "REFR2002": {
     "ean": "4250563451436",
@@ -13242,16 +11597,6 @@
     ],
     "image_verified": true
   },
-  "SOFM0091": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 77.14,
-    "vk": 152.99,
-    "title": "Microsoft 365 Family - Abonnement-Lizenz (1 Jahr) - Digital Key",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "SOFN0001": {
     "ean": "5397231022495",
     "supplier": "BAB",
@@ -13266,7 +11611,7 @@
   "SSDC0078": {
     "ean": "0649528944771",
     "supplier": "BAB",
-    "ek": 219.24,
+    "ek": 190.72,
     "vk": 420.99,
     "title": "Crucial P310 Gen4 2280 2TB NVMe PCIe M.2 SSD mit heatsink",
     "listed_at": "2026-06-14T20:49:22",
@@ -13275,7 +11620,8 @@
     "image_url": "https://media.ipcstore.net/img/l/140468.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/140468.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SSDK1017": {
     "ean": "4582563857889",
@@ -13318,12 +11664,13 @@
   "SUPB1062": {
     "ean": "0017817859516",
     "supplier": "BAB",
-    "ek": 289.28,
+    "ek": 284.2,
     "vk": 552.99,
     "title": "Bose QuietComfort Ultra 2.Gen Wüstengold",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPC0008": {
     "ean": "8595610601256",
@@ -14137,17 +12484,6 @@
     "image_verified": false,
     "image_unverified_ddg": "https://images.icecat.biz/img/gallery/79840282_1107290264.jpg"
   },
-  "SUPE2122": {
-    "ean": "4015867209653",
-    "supplier": "BAB",
-    "ek": 1.71,
-    "vk": 10.99,
-    "title": "Equip Slim Patch Cable - CAT6A F/FTP - 0,5 m - Black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/79840282_1107290264.jpg"
-  },
   "SUPE2123": {
     "ean": "4015867209660",
     "supplier": "BAB",
@@ -14391,40 +12727,43 @@
   "SUPJ0184": {
     "ean": "5706991027501",
     "supplier": "BAB",
-    "ek": 101.5,
+    "ek": 100.49,
     "vk": 198.99,
     "title": "JABRA Evolve2 55 - Mono Headset",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/107505048_0253144136.jpg"
+    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/107505048_0253144136.jpg",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPJ1079": {
     "ean": "5706991026146",
     "supplier": "BAB",
-    "ek": 94.4,
+    "ek": 92.37,
     "vk": 185.99,
     "title": "JABRA Engage 40 Stereo - Headset - On-Ear - kabelgebunden",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/100879025_0326246357.jpg"
+    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/100879025_0326246357.jpg",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPJ1082": {
     "ean": "5706991019957",
     "supplier": "BAB",
-    "ek": 35.61,
+    "ek": 33.8,
     "vk": 74.99,
     "title": "JABRA Evolve 30 II UC Mono - Headset - On-Ear",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/32851347_7054373508.jpg"
+    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/32851347_7054373508.jpg",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0006": {
     "ean": "5099206041271",
     "supplier": "BAB",
-    "ek": 2.94,
+    "ek": 2.89,
     "vk": 13.99,
     "title": "Logitech Mouse B100 Optical Corded Black OEM",
     "listed_at": "2026-06-14T20:49:22",
@@ -14433,12 +12772,13 @@
     "image_url": "https://media.ipcstore.net/img/l/465424.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/465424.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0027": {
     "ean": "5099206027282",
     "supplier": "BAB",
-    "ek": 6.09,
+    "ek": 5.84,
     "vk": 19.99,
     "title": "Logitech Mouse M185 Wireless Swift Grey",
     "listed_at": "2026-06-14T20:49:22",
@@ -14447,12 +12787,13 @@
     "images": [
       "https://media.ipcstore.net/img/l/789543.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0057": {
     "ean": "5099206008441",
     "supplier": "BAB",
-    "ek": 11.47,
+    "ek": 11.42,
     "vk": 29.99,
     "title": "Logitech Headset 960 Wired",
     "listed_at": "2026-06-14T20:49:22",
@@ -14461,7 +12802,8 @@
     "image_url": "https://media.ipcstore.net/img/l/504177.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/504177.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0094": {
     "ean": "5099206063846",
@@ -14480,7 +12822,7 @@
   "SUPL0127": {
     "ean": "5099206065062",
     "supplier": "BAB",
-    "ek": 5.68,
+    "ek": 5.63,
     "vk": 18.99,
     "title": "Logitech Mouse B170 Optical Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -14489,12 +12831,13 @@
     "image_url": "https://media.ipcstore.net/img/l/170171.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/170171.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0183": {
     "ean": "5099206033139",
     "supplier": "BAB",
-    "ek": 20.71,
+    "ek": 20.6,
     "vk": 46.99,
     "title": "Logitech Keyboard K270 Wireless Black/White",
     "listed_at": "2026-06-14T20:49:22",
@@ -14503,12 +12846,13 @@
     "image_url": "https://media.ipcstore.net/img/l/640390.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/640390.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0192": {
     "ean": "5099206038844",
     "supplier": "BAB",
-    "ek": 13.7,
+    "ek": 13.39,
     "vk": 33.99,
     "title": "Logitech Headset H340 Wired",
     "listed_at": "2026-06-14T20:49:22",
@@ -14517,12 +12861,13 @@
     "image_url": "https://media.ipcstore.net/img/l/534186.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/534186.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0233": {
     "ean": "5099206066199",
     "supplier": "BAB",
-    "ek": 8.93,
+    "ek": 8.91,
     "vk": 24.99,
     "title": "Logitech Mouse M220 Silent Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -14531,7 +12876,8 @@
     "image_url": "https://media.ipcstore.net/img/l/691497.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/691497.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0279": {
     "ean": "5099206066687",
@@ -14550,7 +12896,7 @@
   "SUPL0312": {
     "ean": "5099206086449",
     "supplier": "BAB",
-    "ek": 29.64,
+    "ek": 29.23,
     "vk": 63.99,
     "title": "Logitech Desktop MK470 Slim Wireless Combo Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -14559,12 +12905,13 @@
     "images": [
       "https://media.ipcstore.net/img/l/119821.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0395": {
     "ean": "5099206088252",
     "supplier": "BAB",
-    "ek": 58.06,
+    "ek": 57.96,
     "vk": 116.99,
     "title": "Logitech Slim Folio Keyboard black ",
     "listed_at": "2026-06-14T20:49:22",
@@ -14573,7 +12920,8 @@
     "image_url": "https://media.ipcstore.net/img/l/114867.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/114867.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0438": {
     "ean": "0097855166067",
@@ -14592,7 +12940,7 @@
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
-    "ek": 28.22,
+    "ek": 28.01,
     "vk": 60.99,
     "title": "Logitech Signature K650 Keyboard Black ",
     "listed_at": "2026-06-14T20:49:22",
@@ -14601,7 +12949,8 @@
     "images": [
       "https://media.ipcstore.net/img/l/1455.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0600": {
     "ean": "5099206127098",
@@ -14616,12 +12965,13 @@
   "SUPL0601": {
     "ean": "5099206127104",
     "supplier": "BAB",
-    "ek": 48.01,
+    "ek": 47.81,
     "vk": 97.99,
     "title": "Logitech Ultimate Ears MINIROLL Revive Grey",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL1002": {
     "ean": "5710957010476",
@@ -14818,7 +13168,7 @@
   "SUPR1027": {
     "ean": "8886419333326",
     "supplier": "BAB",
-    "ek": 16.29,
+    "ek": 15.45,
     "vk": 38.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - white",
     "listed_at": "2026-06-14T20:49:22",
@@ -14827,7 +13177,8 @@
     "images": [
       "https://media.ipcstore.net/img/l/131683.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPR1044": {
     "ean": "8886419334552",
@@ -14862,17 +13213,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "SUPS0235": {
-    "ean": "8806090270123",
-    "supplier": "BAB",
-    "ek": 8.42,
-    "vk": 23.99,
-    "title": "Samsung EO-IC100 - Ohrhörer mit Mikrofon kabelgebunden - USB-C - schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/76980268_9231647426.jpg"
   },
   "SUPS0253": {
     "ean": "8806094912128",
@@ -15019,17 +13359,6 @@
     ],
     "image_verified": true
   },
-  "SUPS0285": {
-    "ean": "8806094257557",
-    "supplier": "BAB",
-    "ek": 6.19,
-    "vk": 19.99,
-    "title": "Samsung EP-DX310 - USB-Kabel - 24 pin USB-C (M) - weiß",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/95914035_4999882961.jpg"
-  },
   "SUPS0286": {
     "ean": "8806095510002",
     "supplier": "BAB",
@@ -15083,13 +13412,14 @@
   "SUPS0366": {
     "ean": "8806097740599",
     "supplier": "BAB",
-    "ek": 14.01,
+    "ek": 13.7,
     "vk": 33.99,
     "title": "Samsung USB-C 45W Travel Charger  EP-T4511NWE , White",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/bbd3cd6a42f275515498ce40b560c453a5e2ace6.jpg"
+    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/bbd3cd6a42f275515498ce40b560c453a5e2ace6.jpg",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0371": {
     "ean": "8806095312170",
@@ -15137,30 +13467,6 @@
     "image_url": "https://media.ipcstore.net/img/l/263798.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/263798.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPT2001": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 162.4,
-    "vk": 313.99,
-    "title": "Telit Cinterion SE868SY-D Eval Kit",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "SUPV0005": {
-    "ean": "0023942435334",
-    "supplier": "BAB",
-    "ek": 11.88,
-    "vk": 29.99,
-    "title": "Verbatim 1x50 Verbatim DVD-R 4,7GB 16x Speed, photo printable 43533",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/449165_9236706787.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/449165_9236706787.jpg"
     ],
     "image_verified": true
   },
@@ -15620,20 +13926,6 @@
       "https://media.ipcstore.net/img/l/345689.jpg"
     ]
   },
-  "USBT0223": {
-    "ean": "4047999411222",
-    "supplier": "BAB",
-    "ek": 16.24,
-    "vk": 38.99,
-    "title": "Toshiba SD Exceria R100 N203 256GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/21307105.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21307105.jpg"
-    ]
-  },
   "USBV0000": {
     "ean": "023942302254",
     "supplier": "BAB",
@@ -15741,38 +14033,23 @@
     ],
     "image_verified": true
   },
-  "USBV0022": {
-    "ean": "0023942991069",
-    "supplier": "BAB",
-    "ek": 9.03,
-    "vk": 24.99,
-    "title": "Verbatim Metal Executive 64GB USB 3.0 gold",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_unverified_ddg": "https://images.icecat.biz/img/gallery/30389245_4532139143.jpg"
-  },
-  "W0082": {
-    "ean": "",
-    "supplier": "BAB",
-    "ek": 25.38,
-    "vk": 55.99,
-    "title": "ECOFLOW Residential Ecosystem Broschüren-Paket (1 Karton)",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PPSE0092": {
     "ean": "4895251642804",
     "title": "ECOFLOW Bracket - Semi-enclosed Balcony",
     "image_verified": false,
-    "image_unverified_ddg": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-bracket-semi-enclosed-balcony-1175100881_530x530.png?v=1750840263"
+    "image_unverified_ddg": "https://eu.ecoflow.com/cdn/shop/files/ecoflow-bracket-semi-enclosed-balcony-1175100881_530x530.png?v=1750840263",
+    "ek": 83.74,
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NETU0180": {
     "ean": "0810084694664",
     "title": "Ubiquiti E7 - Enterprise Access Point",
     "image_verified": false,
-    "image_unverified_ddg": "https://media.ipcstore.net/img/l/286320.jpg"
+    "image_unverified_ddg": "https://media.ipcstore.net/img/l/286320.jpg",
+    "ek": 436.45,
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NOCO0003": {
     "image_url": "https://media.ipcstore.net/img/l/21324033.jpg",
@@ -15781,7 +14058,10 @@
     ],
     "ean": "1210000615022",
     "title": "NOCO GB40 | Boost 12V 1000A Jump Starter | Boost Jump Starters",
-    "image_verified": true
+    "image_verified": true,
+    "ek": 76.32,
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NOCO0007": {
     "image_url": "https://no.co/media/catalog/product/g/b/gbx45.png",
@@ -15790,7 +14070,10 @@
     ],
     "ean": "1210000620064",
     "title": "NOCO GBX45 | Boost X 12V 1250A Jump Starter | Boost Jump Starters",
-    "image_verified": true
+    "image_verified": true,
+    "ek": 99.32,
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NOCO0014": {
     "image_url": "https://no.co/media/catalog/product/g/b/gbx55.png",
@@ -15799,6 +14082,9 @@
     ],
     "ean": "1210000620071",
     "title": "NOCO GBX55 | Boost X 12V 1750A Jump Starter | Boost Jump Starters",
-    "image_verified": true
+    "image_verified": true,
+    "ek": 119.26,
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
