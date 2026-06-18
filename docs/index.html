@@ -2491,7 +2491,7 @@ function ordersRender() {
 
   // Nav-Badge
   const badge = document.querySelector('.nav-item [onclick*="orders"] .nbadge') ||
-                document.querySelector('[onclick*="showSection('orders'"] .nbadge');
+                
   document.querySelectorAll('.nav-item').forEach(el => {
     if (el.getAttribute('onclick')?.includes("'orders'")) {
       const b = el.querySelector('.nbadge');
@@ -2624,7 +2624,7 @@ function ordersSave() {
 }
 
 // Beim Öffnen des Tabs laden
-const _origShowSection = typeof showSection !== 'undefined' ? showSection : null;
+
 
 // ═══════════════════════════════════════════════════
 // KOSTEN & BREAK-EVEN
