@@ -1,0 +1,44 @@
+name: Bild-Updates anwenden + eBay reaktivieren
+
+on:
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencies
+        run: pip install requests pyyaml
+
+      - name: Bilder anwenden + eBay reaktivieren
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID_2 }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET_2 }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: python apply_image_updates.py --config config_shop2.yaml
+
+      - name: Änderungen committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add supplier_map.json enrichment_index.csv docs/image_review_items.json || true
+          git diff --staged --quiet || git commit -m "bild-pflege: Verifizierte Herstellerbilder gesetzt [skip ci]"
+          git pull --rebase origin main && git push || true
+
+      - name: Ergebnis hochladen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apply-image-result
+          path: apply_image_result.json
