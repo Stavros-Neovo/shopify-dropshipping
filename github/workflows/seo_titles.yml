@@ -1,0 +1,81 @@
+name: SEO Titel optimieren
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "generate = Titel erzeugen | apply = zu eBay pushen"
+        required: true
+        default: "generate"
+        type: choice
+        options:
+          - generate
+          - apply
+      dry_run:
+        description: "Dry-run? (true = nur simulieren)"
+        required: false
+        default: "true"
+      limit:
+        description: "Max. Produkte (0 = Chunk aus Checkpoint)"
+        required: false
+        default: "0"
+      reset:
+        description: "Checkpoint zurücksetzen? (true = von vorne)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ebay-seo   # Hintergrund — blockiert nie Sync oder Repricing
+  cancel-in-progress: false
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Titel generieren (title_optimizer.py)
+        if: ${{ github.event.inputs.mode == 'generate' }}
+        run: |
+          ARGS=""
+          LIMIT="${{ github.event.inputs.limit }}"
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ] && ARGS="$ARGS --limit $LIMIT"
+          python title_optimizer.py $ARGS
+
+      - name: Titel zu eBay pushen (apply_seo_titles.py)
+        if: ${{ github.event.inputs.mode == 'apply' }}
+        env:
+          CSV_HTTP_USER:        ${{ secrets.CSV_HTTP_USER }}
+          CSV_HTTP_PASSWORD:    ${{ secrets.CSV_HTTP_PASSWORD }}
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          ARGS=""
+          LIMIT="${{ github.event.inputs.limit }}"
+          [ "${{ github.event.inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ "${{ github.event.inputs.reset }}"   = "true" ] && ARGS="$ARGS --reset"
+          [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ] && ARGS="$ARGS --limit $LIMIT"
+          python apply_seo_titles.py $ARGS
+
+      - name: Commit (enrichment_index.csv + title_review.csv)
+        if: always()
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add enrichment_index.csv title_review.csv apply_report.csv seo_state.json || true
+          git diff --staged --quiet || git commit -m "chore: SEO titles $(date -u '+%Y-%m-%d %H:%M')"
+          git pull --no-rebase origin main || true
+          git push || true
