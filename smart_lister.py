@@ -666,18 +666,19 @@ def deactivate_zero_stock(catalog: dict, cfg: dict, args, dry_run: bool = False)
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser(description="Smart Lister — Wettbewerbs-basierter Artikel-Auswähler")
-    parser.add_argument("--scan",     action="store_true", help="eBay Score-Cache aktualisieren")
-    parser.add_argument("--select",   action="store_true", help="Top-Artikel auswählen + supplier_map schreiben")
-    parser.add_argument("--dry-run",  action="store_true", help="Nichts schreiben, nur anzeigen")
-    parser.add_argument("--top",      type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
-    parser.add_argument("--limit",    type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
-    parser.add_argument("--list",     action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
-    parser.add_argument("--max-new",  type=int, default=0, help="Max NEU-Listings pro Run (0=unbegrenzt). Bestehende Offers werden immer aktualisiert (kostenlos). Neue kosten 0,06€/Stk — z.B. --max-new 15")
-    parser.add_argument("--config",   default=CONFIG_FILE)
-    parser.add_argument("--bab-only", action="store_true", help="Nur BAB-Produkte")
+    parser.add_argument("--scan",       action="store_true", help="eBay Score-Cache aktualisieren")
+    parser.add_argument("--select",     action="store_true", help="Top-Artikel auswählen + supplier_map schreiben")
+    parser.add_argument("--dry-run",    action="store_true", help="Nichts schreiben, nur anzeigen")
+    parser.add_argument("--top",        type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
+    parser.add_argument("--limit",      type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
+    parser.add_argument("--list",       action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
+    parser.add_argument("--max-new",    type=int, default=0, help="Max NEU-Listings pro Run (0=unbegrenzt). Bestehende Offers werden immer aktualisiert (kostenlos). Neue kosten 0,06€/Stk — z.B. --max-new 15")
+    parser.add_argument("--deactivate", action="store_true", help="Nur Stock=0 Deaktivierung ausführen (kein Scan/Select/List, keine Browse API Calls)")
+    parser.add_argument("--config",     default=CONFIG_FILE)
+    parser.add_argument("--bab-only",   action="store_true", help="Nur BAB-Produkte")
     args = parser.parse_args()
 
-    if not args.scan and not args.select and not args.list:
+    if not args.scan and not args.select and not args.list and not args.deactivate:
         parser.print_help()
         sys.exit(0)
 
@@ -745,6 +746,11 @@ def main():
     # werden sofort von eBay genommen. So spart man Fehlkäufe + schlechte Bewertungen.
     if client_id and client_secret:
         deactivate_zero_stock(catalog, cfg, args, dry_run=args.dry_run)
+
+    # --deactivate-only: nach Deaktivierung sofort beenden (kein Scan/Select/List)
+    if args.deactivate and not args.scan and not args.select and not args.list:
+        log.info("=== --deactivate: fertig ===")
+        sys.exit(0)
 
     # Score-Cache aktualisieren
     cache = load_score_cache()
