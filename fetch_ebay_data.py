@@ -45,7 +45,7 @@ def get_access_token() -> str:
         EBAY_AUTH_URL,
         auth=(client_id, client_secret),
         data={"grant_type": "refresh_token", "refresh_token": refresh_token,
-              "scope": "https://api.ebay.com/oauth/api_scope/sell.fulfillment https://api.ebay.com/oauth/api_scope/sell.returns.buyer"},
+              "scope": "https://api.ebay.com/oauth/api_scope/sell.inventory https://api.ebay.com/oauth/api_scope/sell.account https://api.ebay.com/oauth/api_scope/sell.fulfillment"},
         headers={"Content-Type": "application/x-www-form-urlencoded"},
         timeout=15,
     )
