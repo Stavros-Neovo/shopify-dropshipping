@@ -585,6 +585,95 @@ def update_supplier_prices(catalog: dict, supplier_map_path: str = SUPPLIER_MAP)
 
 
 # ---------------------------------------------------------------------------
+# eBay Produktbeschreibung aus enrichment_index aufbauen
+# ---------------------------------------------------------------------------
+def build_ebay_description(enr: dict, art: dict, title: str) -> str:
+    """
+    Baut eine HTML-Produktbeschreibung für eBay aus vorhandenen Daten.
+
+    Quellen (Priorität hoch → niedrig):
+      enrichment_index: long_summary, short_summary, marketing_text, specs_html
+      artikeldaten:     long_summary, short_summary, specs (raw text)
+
+    Gibt immer valides HTML zurück (Fallback: Titel).
+    eBay-Limit: 500.000 Zeichen (hier auf 6000 begrenzt für Lesbarkeit).
+    """
+    # Texte holen (enrichment bevorzugt, artikeldaten als Fallback)
+    long_desc   = (enr.get("long_summary")   or art.get("long_summary")   or "").strip()
+    short_desc  = (enr.get("short_summary")  or art.get("short_summary")  or "").strip()
+    marketing   = (enr.get("marketing_text") or art.get("marketing_text") or "").strip()
+    specs_html  = (enr.get("specs_html")     or "").strip()
+    specs_raw   = (art.get("specs")          or "").strip()
+    brand       = (enr.get("brand")          or art.get("hersteller")     or "").strip()
+
+    # Haupttext: am besten long_desc, sonst short_desc, sonst marketing
+    main_text = long_desc or short_desc or marketing
+
+    if not main_text and not specs_html and not specs_raw:
+        # Kein Inhalt → minimale Fallback-Beschreibung
+        return (
+            f'<p style="font-family:Arial,sans-serif;font-size:14px;color:#333;">'
+            f'{title}</p>'
+        )
+
+    parts = []
+
+    # Haupt-Beschreibungstext
+    if main_text:
+        # Bereits HTML? → direkt nutzen; sonst in <p> wrappen
+        if main_text.strip().startswith("<"):
+            parts.append(f'<div class="desc-main">{main_text}</div>')
+        else:
+            # Absätze erhalten (doppelte Zeilenumbrüche → <p>)
+            paragraphs = [p.strip() for p in main_text.split("\n\n") if p.strip()]
+            if len(paragraphs) > 1:
+                html_paras = "".join(f"<p>{p}</p>" for p in paragraphs)
+            else:
+                html_paras = f"<p>{main_text}</p>"
+            parts.append(f'<div class="desc-main">{html_paras}</div>')
+
+    # Marketing-Text (falls vorhanden und verschieden von main_text)
+    if marketing and marketing != main_text:
+        parts.append(
+            f'<p style="font-style:italic;color:#555;">{marketing[:400]}</p>'
+        )
+
+    # Technische Specs
+    if specs_html:
+        parts.append(
+            f'<h3 class="specs-title">Technische Daten</h3>'
+            f'<div class="specs-table">{specs_html}</div>'
+        )
+    elif specs_raw:
+        # Roher Specs-Text: zeilenweise als Liste
+        lines = [l.strip() for l in specs_raw.split("\n") if l.strip()]
+        if lines:
+            items = "".join(f"<li>{l}</li>" for l in lines[:30])
+            parts.append(
+                f'<h3 class="specs-title">Technische Daten</h3>'
+                f'<ul class="specs-list">{items}</ul>'
+            )
+
+    body = "\n".join(parts)
+
+    html = f"""<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333;max-width:900px;line-height:1.6">
+<style>
+  .desc-main p{{margin:0 0 10px 0}}
+  .specs-title{{font-size:16px;color:#0064d2;border-bottom:2px solid #0064d2;padding-bottom:4px;margin:16px 0 8px 0}}
+  .specs-table table{{border-collapse:collapse;width:100%}}
+  .specs-table td,.specs-table th{{border:1px solid #ddd;padding:6px 10px;font-size:13px}}
+  .specs-table tr:nth-child(even){{background:#f9f9f9}}
+  .specs-list{{padding-left:20px;margin:4px 0}}
+  .specs-list li{{margin-bottom:3px;font-size:13px}}
+</style>
+{body}
+</div>"""
+
+    # eBay-Limit (6000 Zeichen für gute Lesbarkeit)
+    return html[:6000]
+
+
+# ---------------------------------------------------------------------------
 # Stock=0 Deaktivierung — läuft immer beim Katalog-Load
 # ---------------------------------------------------------------------------
 def deactivate_zero_stock(catalog: dict, cfg: dict, args, dry_run: bool = False):
@@ -853,13 +942,15 @@ def main():
                 enr  = enrich.get(ean, {})
                 image = enr.get("image_main") or art.get("image") or ""
                 title = enr.get("title_seo") or art.get("title") or prod.get("name", sku)
+                desc  = build_ebay_description(enr, art, title)
                 to_list.append({
-                    "sku":      sku,
-                    "ean":      ean,
-                    "name":     title,
-                    "supplier": supplier,
-                    "vk":       entry.get("vk", 0.0),
-                    "image":    image,
+                    "sku":         sku,
+                    "ean":         ean,
+                    "name":        title,
+                    "supplier":    supplier,
+                    "vk":          entry.get("vk", 0.0),
+                    "image":       image,
+                    "description": desc,
                 })
             # Auf top_n beschränken wenn --select + --list zusammen läuft
             if len(to_list) > args.top:
@@ -929,7 +1020,7 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False,
             "sku":         sku,
             "ean":         ean,
             "title":       name,
-            "description": name,
+            "description": prod.get("description") or name,
             "category":    "",
             "stock":       1,
             "image_url":   prod.get("image", ""),
