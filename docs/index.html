@@ -2501,8 +2501,10 @@ function ordersRender() {
   const search = (document.getElementById('orders-search')?.value || '').toLowerCase();
   const filter = document.getElementById('orders-filter')?.value || 'all';
 
-  const open = orders.filter(o => o.status === 'open');
-  const done = orders.filter(o => o.status === 'done');
+  // Alle Bestellungen anzeigen — eBay markiert alles als "done", wir zeigen alles
+  const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 30);
+  const open = orders.filter(o => new Date(o.date) >= cutoff);
+  const done = orders.filter(o => new Date(o.date) < cutoff);
   const totalVk = orders.reduce((s, o) => s + o.vk, 0);
   const totalProfit = orders.reduce((s, o) => s + calcProfit(o.vk, o.ek), 0);
   const avgVk = orders.length ? totalVk / orders.length : 0;
