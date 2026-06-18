@@ -4145,5 +4145,15 @@
     "ean": "6938818319608",
     "title": "Yealink WH64 Mono - Headset - On-Ear",
     "detected_at": "2026-06-17T21:44:16.763493+00:00"
+  },
+  "USBK1048": {
+    "ean": "4582563857087",
+    "title": "Kioxia Exceria G2 SD Card 128GB",
+    "detected_at": "2026-06-18T12:04:08.042738+00:00"
+  },
+  "USBV0006": {
+    "ean": "0023942302308",
+    "title": "Verbatim Plectra White 256GB USB-C Flash Drive 30230",
+    "detected_at": "2026-06-18T12:04:23.831509+00:00"
   }
 }
