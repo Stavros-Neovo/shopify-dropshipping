@@ -39,7 +39,7 @@ log = logging.getLogger("enrich_desc")
 ENRICHMENT   = "enrichment_index.csv"
 SUPPLIER_MAP = "supplier_map.json"
 
-ICECAT_API   = "https://icecat.us/api/products"
+ICECAT_API   = "https://live.icecat.biz/api"
 CLAUDE_API   = "https://api.anthropic.com/v1/messages"
 CLAUDE_MODEL = "claude-haiku-4-5-20251001"
 
@@ -47,9 +47,10 @@ CLAUDE_MODEL = "claude-haiku-4-5-20251001"
 # Icecat
 # ---------------------------------------------------------------------------
 
-def fetch_icecat(ean: str, user: str, password: str, lang: str = "DE") -> dict | None:
+def fetch_icecat(ean: str, user: str, password: str, lang: str = "de") -> dict | None:
     """
-    Fragt Icecat Open Catalog per EAN ab.
+    Fragt Icecat live.icecat.biz per EAN (GTIN) ab.
+    Auth: UserName + Token (ICECAT_PASS = Token-Wert).
     Gibt dict mit {long_summary, short_summary, specs_html, marketing_text, brand, title} oder None zurück.
     """
     try:
@@ -57,11 +58,9 @@ def fetch_icecat(ean: str, user: str, password: str, lang: str = "DE") -> dict |
             ICECAT_API,
             params={
                 "UserName": user,
-                "Password": password,
-                "Content":  "Full",
+                "Token":    password,
+                "Language": lang,
                 "GTIN":     ean,
-                "lang":     lang,
-                "output":   "json",
             },
             timeout=15,
         )
@@ -76,36 +75,25 @@ def fetch_icecat(ean: str, user: str, password: str, lang: str = "DE") -> dict |
             return None
 
         data = resp.json()
-        # Icecat gibt {"data": {...}} oder direkt das Produkt
-        product = data.get("data") or data
-
-        if not product or product.get("Code") == -1:
+        # live.icecat.biz gibt {"msg": "OK", "data": {...}} zurück
+        if data.get("msg") != "OK" or not data.get("data"):
             return None
 
-        # Beschreibungen extrahieren
-        long_desc  = ""
-        short_desc = ""
-        marketing  = ""
+        product = data["data"]
+        gi  = product.get("GeneralInfo", {})
+        img = product.get("Image", {})
 
-        for desc in product.get("ProductDescription", []):
-            if desc.get("langid") == "9":  # DE
-                long_desc  = desc.get("LongDesc",    "").strip()
-                short_desc = desc.get("ShortDesc",   "").strip()
-                marketing  = desc.get("ShortSummary","").strip()
-                break
-        # Fallback Englisch
-        if not long_desc:
-            for desc in product.get("ProductDescription", []):
-                long_desc  = desc.get("LongDesc",    "").strip()
-                short_desc = desc.get("ShortDesc",   "").strip()
-                if long_desc:
-                    break
+        # Beschreibungen
+        desc_block = gi.get("Description", {}) or {}
+        long_desc  = (desc_block.get("LongDesc",  "") or "").strip()
+        short_desc = (desc_block.get("ShortDesc", "") or "").strip()
+        marketing  = (gi.get("SummaryDescription", {}) or {}).get("LongSummaryDescription", "").strip()
 
         # Specs als HTML-Tabelle
         specs_html = _build_specs_html(product.get("FeaturesGroups", []))
 
-        brand = (product.get("Supplier") or {}).get("name", "")
-        title = product.get("Title", "")
+        brand = (gi.get("Brand", "") or gi.get("BrandInfo", {}).get("BrandName", "") or "")
+        title = gi.get("Title", "") or gi.get("ProductName", "")
 
         return {
             "long_summary":   long_desc,
@@ -257,11 +245,12 @@ def main():
     )
 
     icecat_user = os.getenv("ICECAT_USER", "")
-    icecat_pass = os.getenv("ICECAT_PASS", "")
+    # ICECAT_PASS enthält den API-Token (live.icecat.biz Token-Auth)
+    icecat_pass = os.getenv("ICECAT_PASS", "") or os.getenv("ICECAT_TOKEN", "")
     anthropic_key = os.getenv("ANTHROPIC_API_KEY", "")
 
     if not icecat_user or not icecat_pass:
-        log.error("ICECAT_USER / ICECAT_PASS fehlen — Registrierung: https://icecat.us/de/register.html")
+        log.error("ICECAT_USER / ICECAT_PASS (Token) fehlen")
         sys.exit(1)
 
     use_claude = bool(anthropic_key)
