@@ -103,11 +103,15 @@ def normalize_order(raw: dict) -> dict:
 
     created = raw.get("creationDate", "")[:10]
 
-    status_raw = raw.get("orderFulfillmentStatus", "")
-    if status_raw in ("FULFILLED", "FULLY_SHIPPED"):
-        status = "done"
+    # Offen = letzte 30 Tage; älter = done
+    from datetime import datetime, timezone, timedelta
+    order_date = datetime.fromisoformat(created) if created else datetime.now(timezone.utc).date()
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=30)).date()
+    if hasattr(order_date, 'date'):
+        order_date = order_date
     else:
-        status = "open"
+        order_date = datetime.fromisoformat(str(order_date))
+    status = "open" if str(created) >= str(cutoff) else "done"
 
     return {
         "id":     raw.get("orderId", ""),
