@@ -244,14 +244,14 @@ def main():
         handlers=[logging.StreamHandler(sys.stdout)],
     )
 
-    icecat_user = os.getenv("ICECAT_USER", "")
-    # ICECAT_PASS enthält den API-Token (live.icecat.biz Token-Auth)
-    icecat_pass = os.getenv("ICECAT_PASS", "") or os.getenv("ICECAT_TOKEN", "")
+    icecat_user = os.getenv("ICECAT_USER", "neovogen")
+    # Token für live.icecat.biz (identisch mit enrich_from_icecat.py)
+    icecat_pass = (
+        os.getenv("ICECAT_PASS", "")
+        or os.getenv("ICECAT_TOKEN", "")
+        or "a923fe60-04bd-4f83-ae2e-a1e1a8427c98"
+    )
     anthropic_key = os.getenv("ANTHROPIC_API_KEY", "")
-
-    if not icecat_user or not icecat_pass:
-        log.error("ICECAT_USER / ICECAT_PASS (Token) fehlen")
-        sys.exit(1)
 
     use_claude = bool(anthropic_key)
     if use_claude:
