@@ -105818,5 +105818,33 @@
     "min_price": 44.8,
     "max_price": 70.16,
     "queried_at": "2026-06-18T13:54:40.175283+00:00"
+  },
+  "8719706022149": {
+    "watch_count": 0,
+    "competitor_count": 1,
+    "min_price": 734.86,
+    "max_price": 734.86,
+    "queried_at": "2026-06-18T21:35:41.441150+00:00"
+  },
+  "0763649175279": {
+    "watch_count": 0,
+    "competitor_count": 2,
+    "min_price": 420.0,
+    "max_price": 1164.99,
+    "queried_at": "2026-06-18T21:35:41.949081+00:00"
+  },
+  "8719706028608": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-18T21:35:42.421205+00:00"
+  },
+  "8719706020459": {
+    "watch_count": 0,
+    "competitor_count": 1,
+    "min_price": 1322.62,
+    "max_price": 1322.62,
+    "queried_at": "2026-06-18T21:35:42.932466+00:00"
   }
 }
