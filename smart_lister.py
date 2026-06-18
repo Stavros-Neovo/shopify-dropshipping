@@ -585,6 +585,83 @@ def update_supplier_prices(catalog: dict, supplier_map_path: str = SUPPLIER_MAP)
 
 
 # ---------------------------------------------------------------------------
+# Stock=0 Deaktivierung — läuft immer beim Katalog-Load
+# ---------------------------------------------------------------------------
+def deactivate_zero_stock(catalog: dict, cfg: dict, args, dry_run: bool = False):
+    """
+    Vergleicht supplier_map mit aktuellem Katalog.
+    Artikel die nicht mehr im Katalog sind (Stock=0 oder ausgelistet vom Lieferant)
+    werden sofort von eBay zurückgezogen + aus supplier_map entfernt.
+
+    SICHERHEIT (BAB-ONLY Modus):
+      Bei --bab-only ist catalog nur BAB-Artikel. Kosatec-Artikel würden
+      fälschlich fehlen → nur BAB-Supplier-Einträge prüfen.
+    """
+    smap = load_supplier_map()
+    if not smap:
+        return
+
+    bab_only = getattr(args, 'bab_only', False)
+    log.info("=== Stock=0 Deaktivierung ===")
+    if bab_only:
+        log.info("  BAB-ONLY Modus: prüfe nur BAB-Artikel")
+
+    from ebay_client import EbayClient
+    try:
+        ebay_cfg = cfg.get("ebay", {})
+        client = EbayClient.from_env(ebay_cfg)
+    except Exception as e:
+        log.warning(f"  eBay Client nicht verfügbar — Deaktivierung übersprungen: {e}")
+        return
+
+    offlined = 0
+    checked = 0
+    for sku, entry in list(smap.items()):
+        ean      = entry.get("ean", "")
+        supplier = entry.get("supplier", "")
+
+        # BAB-ONLY: Kosatec-Artikel nicht anfassen (nicht im Katalog geladen)
+        if bab_only and supplier != "BAB":
+            continue
+
+        checked += 1
+        if ean in catalog:
+            continue  # Noch verfügbar → nichts tun
+
+        log.warning(f"  OFFLINE: SKU {sku} (EAN {ean}, {supplier}) — Stock=0 oder nicht mehr gelistet")
+        if dry_run:
+            log.warning(f"  DRY-RUN — würde deaktivieren: {sku}")
+            offlined += 1
+            continue
+
+        try:
+            offer = client.get_offer_for_sku(sku)
+            if offer:
+                offer_id = offer.get("offerId", "")
+                offer_status = offer.get("status", "")
+                if offer_status == "PUBLISHED":
+                    client.withdraw_offer(offer_id)
+                    log.info(f"    ✓ Offer {offer_id} zurückgezogen (war PUBLISHED)")
+                else:
+                    log.info(f"    ✓ Offer {offer_id} bereits {offer_status} — kein Withdraw nötig")
+            else:
+                log.info(f"    Kein aktives Offer für SKU {sku} auf eBay")
+            del smap[sku]
+            offlined += 1
+        except Exception as e:
+            log.error(f"    Fehler beim Deaktivieren SKU {sku}: {e}")
+
+    if offlined and not dry_run:
+        save_supplier_map(smap)
+
+    log.info(
+        f"  {checked} Artikel geprüft | "
+        f"{offlined} deaktiviert{'(dry-run)' if dry_run else ''} | "
+        f"{checked - offlined} noch verfügbar"
+    )
+
+
+# ---------------------------------------------------------------------------
 # Haupt-Logik
 # ---------------------------------------------------------------------------
 def main():
@@ -663,6 +740,12 @@ def main():
         f"Bereits bekannt: {len(listed)}"
     )
 
+    # ── Stock=0 Deaktivierung: läuft IMMER (unabhängig von --scan/--select/--list) ──
+    # Artikel die nicht mehr im Katalog sind (Stock=0 oder ausgelistet vom Lieferant)
+    # werden sofort von eBay genommen. So spart man Fehlkäufe + schlechte Bewertungen.
+    if client_id and client_secret:
+        deactivate_zero_stock(catalog, cfg, args, dry_run=args.dry_run)
+
     # Score-Cache aktualisieren
     cache = load_score_cache()
 
@@ -687,47 +770,6 @@ def main():
     # Top-Artikel auswählen
     if args.select:
         log.info("=== Top-Artikel auswählen ===")
-
-        # --- Nicht mehr verfügbare Artikel deaktivieren ---
-        # SICHERHEIT: Nur wenn VOLLSTAENDIGER Katalog geladen ist.
-        # Bei --bab-only wuerden sonst alle Kosatec-Artikel faelschlich deaktiviert!
-        smap_existing = load_supplier_map()
-        if smap_existing and (client_id and client_secret):
-            log.info("Pruefe supplier_map auf nicht mehr verfuegbare Artikel...")
-            if getattr(args, 'bab_only', False):
-                log.info("BAB-ONLY Modus: Pruefe nur BAB-Artikel (Kosatec wird uebersprungen)")
-            from ebay_client import EbayClient
-            try:
-                ebay_cfg = cfg.get("ebay", {})
-                ebay_client_inst = EbayClient.from_env(ebay_cfg)
-                offlined = 0
-                for sku, entry in list(smap_existing.items()):
-                    ean = entry.get("ean", "")
-                    supplier = entry.get("supplier", "")
-                    # BAB-ONLY: Kosatec-Artikel nicht anfassen (nicht im bab-only Katalog)
-                    if getattr(args, 'bab_only', False) and supplier != "BAB":
-                        continue
-                    if ean not in catalog:
-                        log.warning(f"  OFFLINE: SKU {sku} (EAN {ean}, {supplier}) nicht mehr verfuegbar")
-                        if not args.dry_run:
-                            try:
-                                # Nur withdrawOffer — set_inventory(0) lehnt eBay ab (Fehler 25004)
-                                offer = ebay_client_inst.get_offer_for_sku(sku)
-                                if offer:
-                                    ebay_client_inst.withdraw_offer(offer["offerId"])
-                                    del smap_existing[sku]
-                                    offlined += 1
-                                else:
-                                    log.warning(f"  Kein Offer fuer SKU {sku} gefunden")
-                            except Exception as e:
-                                log.error(f"  Fehler beim Deaktivieren SKU {sku}: {e}")
-                if offlined:
-                    save_supplier_map(smap_existing)
-                    log.info(f"  {offlined} Artikel deaktiviert + aus supplier_map entfernt")
-                else:
-                    log.info("  Alle relevanten Artikel noch verfuegbar")
-            except Exception as e:
-                log.warning(f"  Deaktivierungs-Check uebersprungen: {e}")
 
         selected = select_top_products(catalog, cache, artdata, enrich, listed, top_n=args.top)
 
