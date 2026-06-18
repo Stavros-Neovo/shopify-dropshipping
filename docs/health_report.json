@@ -1,0 +1,162 @@
+{
+  "generated_at": "2026-06-18T12:33:34.258997+00:00",
+  "overall": "warn",
+  "checks": {
+    "repricer_last_run": {
+      "status": "ok",
+      "detail": "Letzter Run vor 0.5h | Zyklus 5 | 0/1245",
+      "value": {
+        "age_hours": 0.5,
+        "cycle": 5,
+        "offset": 0,
+        "total": 1245
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "repricer_errors": {
+      "status": "ok",
+      "detail": "0 Fehler bei 0 geprüften Artikeln",
+      "value": {
+        "errors": 0,
+        "checked": 0
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "orders_processed": {
+      "status": "ok",
+      "detail": "processed_orders nicht auf Runner (lokal verwaltet)",
+      "value": {
+        "count": 0
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "orders_pending": {
+      "status": "ok",
+      "detail": "Keine pending_orders.json — alles verarbeitet",
+      "value": {
+        "count": 0
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "orders_flagged": {
+      "status": "ok",
+      "detail": "Keine flagged_orders — alles sauber",
+      "value": {
+        "count": 0
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "sync_state": {
+      "status": "warn",
+      "detail": "state_shop2.json nicht auf Runner — Sync-Status via Workflow-Check",
+      "value": null,
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "banned_skus_count": {
+      "status": "ok",
+      "detail": "12 gesperrte SKUs in banned_skus.json",
+      "value": {
+        "count": 12
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "banned_in_supplier_map": {
+      "status": "ok",
+      "detail": "0 gesperrte SKUs noch in supplier_map: []",
+      "value": {
+        "count": 0,
+        "skus": []
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "supplier_map_bab": {
+      "status": "ok",
+      "detail": "1256 BAB-Artikel in supplier_map",
+      "value": {
+        "bab_count": 1256,
+        "non_bab_count": 5
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "supplier_map_non_bab": {
+      "status": "warn",
+      "detail": "5 Nicht-BAB-Einträge in supplier_map",
+      "value": {
+        "count": 5
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "workflow_hourly_sync": {
+      "status": "ok",
+      "detail": "Hourly Sync: success vor 0.5h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.5,
+        "run_id": 27757952633
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "workflow_order_forwarder": {
+      "status": "ok",
+      "detail": "Order Forwarder: success vor 0.6h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.6,
+        "run_id": 27757788543
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "workflow_reprice": {
+      "status": "ok",
+      "detail": "Repricer: success vor 0.5h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.5,
+        "run_id": 27758115967
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "workflow_smart_lister": {
+      "status": "ok",
+      "detail": "Smart Lister: success vor 15.0h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 15.0,
+        "run_id": 27721043168
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "workflow_tracking_updater": {
+      "status": "ok",
+      "detail": "Tracking Updater: success vor 0.5h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.5,
+        "run_id": 27757963694
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "workflow_hourly_matrixify_csv": {
+      "status": "ok",
+      "detail": "Matrixify CSV: success vor 0.6h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.6,
+        "run_id": 27757922448
+      },
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    },
+    "smtp": {
+      "status": "ok",
+      "detail": "SMTP-Verbindung OK (smtp.gmail.com:587)",
+      "value": null,
+      "ts": "2026-06-18T12:33:34.258997+00:00"
+    }
+  },
+  "summary": {
+    "total": 17,
+    "ok": 15,
+    "warn": 2,
+    "error": 0
+  }
+}

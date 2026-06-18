@@ -1,84 +1,64 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-16T18:20:53.023918+00:00",
+  "generated_at": "2026-06-18T12:14:08.759548+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 47,
+  "active_listings": 45,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-16T15:13:54.648445+00:00",
-      "checked": 47,
+      "timestamp": "2026-06-18T12:04:03.912939+00:00",
+      "checked": 45,
       "lowered": 0,
       "raised": 0,
-      "set_to_floor": 3,
+      "set_to_floor": 5,
       "skipped_floor": 0,
       "skipped_few": 1,
-      "skipped_image": 24,
-      "unchanged": 19,
+      "skipped_image": 27,
+      "unchanged": 12,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "USBV0002",
-        "title": "Verbatim Plectra Black 256GB USB-C Flash Driv",
-        "old": 53.99,
-        "new": 51.99,
-        "diff": -2.0,
+        "sku": "USBV0000",
+        "title": "Verbatim Plectra Black 128GB USB-C Flash Driv",
+        "old": 34.99,
+        "new": 31.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0006",
-        "title": "Verbatim Plectra White 256GB USB-C Flash Driv",
+        "sku": "USBV0002",
+        "title": "Verbatim Plectra Black 256GB USB-C Flash Driv",
         "old": 52.99,
-        "new": 50.99,
-        "diff": -2.0,
+        "new": 51.99,
+        "diff": -1.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 50.99,
+        "new": 49.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
         "sku": "USBV0013",
         "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 10.99,
+        "old": 18.99,
         "new": 9.99,
-        "diff": -1.0,
+        "diff": -9.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "USBV0021",
+        "title": "Verbatim Metal Executive 32GB USB 3.0 gold",
+        "old": 25.99,
+        "new": 19.99,
+        "diff": -6.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-10",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-10",
-        "lowered": 43,
-        "raised": 0,
-        "floor": 820
-      },
-      {
-        "date": "2026-06-10",
-        "lowered": 31,
-        "raised": 0,
-        "floor": 808
-      },
-      {
-        "date": "2026-06-11",
-        "lowered": 8,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-11",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-12",
-        "lowered": 3,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-14",
         "lowered": 2,
@@ -126,40 +106,64 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-16",
+        "lowered": 4,
+        "raised": 51,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 39,
+        "raised": 53,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 1,
+        "raised": 49,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-17",
+        "lowered": 1,
+        "raised": 24,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-18",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
   "orders": {
     "stats": {
-      "today_sales": 2,
-      "today_revenue": 182.97,
-      "today_profit": -1.27,
-      "week_sales": 3,
-      "week_revenue": 462.95,
-      "week_profit": 22.3,
+      "today_sales": 1,
+      "today_revenue": 51.99,
+      "today_profit": 6.07,
+      "week_sales": 4,
+      "week_revenue": 514.94,
+      "week_profit": 31.24,
       "prev_week_sales": 5,
       "prev_week_revenue": 404.9,
       "prev_week_profit": 44.18,
-      "month_sales": 10,
-      "month_revenue": 921.81,
-      "month_profit": 87.78,
-      "total_sales_30d": 10,
-      "total_revenue_30d": 921.81,
-      "total_profit_30d": 87.78
+      "month_sales": 11,
+      "month_revenue": 973.8,
+      "month_profit": 96.72,
+      "total_sales_30d": 11,
+      "total_revenue_30d": 973.8,
+      "total_profit_30d": 96.72
     },
     "chart_7d": [
-      {
-        "date": "10.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "11.06",
-        "revenue": 55.98,
-        "profit": 6.28,
-        "sales": 1
-      },
       {
         "date": "12.06",
         "revenue": 63.98,
@@ -181,29 +185,29 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.57,
+        "profit": 22.89,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": -1.27,
+        "profit": 2.28,
         "sales": 2
+      },
+      {
+        "date": "17.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "18.06",
+        "revenue": 51.99,
+        "profit": 6.07,
+        "sales": 1
       }
     ],
     "chart_30d": [
-      {
-        "date": "18.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "19.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "20.05",
         "revenue": 0,
@@ -363,29 +367,29 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.57,
+        "profit": 22.89,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": -1.27,
+        "profit": 2.28,
         "sales": 2
+      },
+      {
+        "date": "17.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "18.06",
+        "revenue": 51.99,
+        "profit": 6.07,
+        "sales": 1
       }
     ],
     "chart_90d": [
-      {
-        "date": "19.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "20.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "21.03",
         "revenue": 0,
@@ -905,14 +909,26 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 23.57,
+        "profit": 22.89,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": -1.27,
+        "profit": 2.28,
         "sales": 2
+      },
+      {
+        "date": "17.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "18.06",
+        "revenue": 51.99,
+        "profit": 6.07,
+        "sales": 1
       }
     ],
     "top_products": [
@@ -921,19 +937,19 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 23.57,
+        "profit": 22.89,
         "vk": 275.99,
-        "ek": 157.3,
+        "ek": 157.98,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 58.8,
           "vat": 35.31,
           "netto_vk": 185.87,
           "ship": 5.0,
-          "ek": 157.3,
-          "profit_u": 23.57,
+          "ek": 157.98,
+          "profit_u": 22.89,
           "qty": 1,
-          "profit_t": 23.57
+          "profit_t": 22.89
         }
       },
       {
@@ -1077,6 +1093,26 @@ window.DASHBOARD_DATA = {
         }
       },
       {
+        "sku": "PPSE0017",
+        "title": "yyyECOFLOW Smart Plug",
+        "sold": 1,
+        "revenue": 51.99,
+        "profit": 6.07,
+        "vk": 51.99,
+        "ek": 26.09,
+        "calc": {
+          "vk_brutto": 55.98,
+          "ebay_fee": 11.76,
+          "vat": 7.06,
+          "netto_vk": 37.16,
+          "ship": 5.0,
+          "ek": 26.09,
+          "profit_u": 6.07,
+          "qty": 1,
+          "profit_t": 6.07
+        }
+      },
+      {
         "sku": "HHWB5012",
         "title": "Beurer IL 11 Infrarotlampe",
         "sold": 1,
@@ -1095,34 +1131,20 @@ window.DASHBOARD_DATA = {
           "qty": 1,
           "profit_t": 5.64
         }
-      },
-      {
-        "sku": "HHWM0023",
-        "title": "Makita Bohrhammer - schnurlos - 3 Modi",
-        "sold": 1,
-        "revenue": 152.99,
-        "profit": -7.87,
-        "vk": 152.99,
-        "ek": 107.08,
-        "calc": {
-          "vk_brutto": 156.98,
-          "ebay_fee": 32.97,
-          "vat": 19.8,
-          "netto_vk": 104.21,
-          "ship": 5.0,
-          "ek": 107.08,
-          "profit_u": -7.87,
-          "qty": 1,
-          "profit_t": -7.87
-        }
       }
     ],
     "recent_sales": [
       {
+        "date": "18.06 10:33",
+        "title": "yyyECOFLOW Smart Plug",
+        "revenue": 51.99,
+        "profit": 6.07
+      },
+      {
         "date": "16.06 17:06",
         "title": "Makita Bohrhammer - schnurlos - 3 Modi",
         "revenue": 152.99,
-        "profit": -7.87
+        "profit": -4.32
       },
       {
         "date": "16.06 07:16",
@@ -1134,7 +1156,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 23.57
+        "profit": 22.89
       },
       {
         "date": "13.06 22:19",
@@ -1184,27 +1206,27 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 5,
+        "days_left": 3,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 5,
+        "days_left": 3,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 6,
+        "days_left": 4,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1214,7 +1236,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 6,
+        "days_left": 4,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1224,7 +1246,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 9,
+        "days_left": 7,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1234,7 +1256,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 10,
+        "days_left": 8,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1244,7 +1266,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 11,
+        "days_left": 9,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1254,7 +1276,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 13,
+        "days_left": 11,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1264,7 +1286,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 14,
+        "days_left": 12,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1274,46 +1296,40 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 14,
+        "days_left": 12,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
+        ],
+        "urgent": false
+      },
+      {
+        "order_id": "23-14765-26114",
+        "date": "2026-06-18",
+        "deadline": "2026-07-02",
+        "days_left": 14,
+        "items": [
+          "yyyECOFLOW Smart Plug"
         ],
         "urgent": false
       }
     ],
     "tracking_missing": [
       {
-        "order_id": "18-14766-10957",
-        "date": "2026-06-16",
+        "order_id": "23-14765-26114",
+        "date": "2026-06-18",
         "items": [
-          "Makita Bohrhammer - schnurlos - 3 Modi"
+          "yyyECOFLOW Smart Plug"
         ],
-        "buyer": "cengitaga5"
-      },
-      {
-        "order_id": "05-14786-31141",
-        "date": "2026-06-16",
-        "items": [
-          "Petkit Schaumstofffilter für Wireless Pu"
-        ],
-        "buyer": "lostprince77"
-      },
-      {
-        "order_id": "08-14779-12258",
-        "date": "2026-06-15",
-        "items": [
-          "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
-        ],
-        "buyer": "mr.mxa"
+        "buyer": "from.the.f.to.the.h"
       }
     ],
     "tax_reserves": {
-      "ust_month": 147.18,
-      "est_month": 26.33,
-      "gewst_month": 13.17,
-      "total_month": 186.68
+      "ust_month": 155.48,
+      "est_month": 29.02,
+      "gewst_month": 14.51,
+      "total_month": 199.0
     },
-    "expected_payout": 728.23
+    "expected_payout": 769.3
   },
   "pending_orders": {},
   "flagged_orders": {}

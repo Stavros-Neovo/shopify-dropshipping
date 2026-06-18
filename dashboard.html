@@ -310,7 +310,11 @@
     <div class="nav-item" onclick="showSection('fehler', this)"><span class="icon">🔧</span> Fehlerbehebung <span class="nbadge amber">15</span></div>
     <div class="nav-section">Finanzen</div>
     <div class="nav-item" onclick="showSection('gewinn', this)"><span class="icon">💹</span> Gewinn & Steuern</div>
+    <div class="nav-item" onclick="showSection('kosten', this)"><span class="icon">🧾</span> Kosten & Break-even</div>
+    <div class="nav-item" onclick="showSection('rechnungen', this)"><span class="icon">💸</span> BAB Rechnungen <span class="nbadge amber" id="nav-rech-badge">–</span></div>
+    <div class="nav-item" onclick="showSection('preisliste', this)"><span class="icon">📦</span> BAB Preisliste <span class="nbadge gray" id="nav-plist-badge">–</span></div>
     <div class="nav-item" onclick="showSection('retouren', this)"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
+    <div class="nav-item" onclick="showSection('bildpflege', this)"><span class="icon">🖼️</span> Bild-Pflege <span class="nbadge red" id="nav-bild-badge">49</span></div>
     <div class="nav-section">Tools</div>
     <div class="nav-item" onclick="showSection('repricer', this)"><span class="icon">▶️</span> Repricer</div>
     <div class="nav-item" onclick="showSection('lister', this)"><span class="icon">🚀</span> Smart Lister</div>
@@ -334,6 +338,15 @@
       </div>
     </div>
     <div class="topbar-right">
+      <!-- Schnellsuche EAN / SKU -->
+      <div style="position:relative">
+        <input id="qs-input" type="text" placeholder="🔍 EAN oder SKU …"
+          style="padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:13px;width:220px;outline:none"
+          oninput="qsSearch()" onkeydown="if(event.key==='Escape'){document.getElementById('qs-result').style.display='none'}">
+        <div id="qs-result"
+          style="display:none;position:absolute;right:0;top:42px;min-width:340px;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,0.4);z-index:999;padding:12px 16px;font-size:13px">
+        </div>
+      </div>
       <span class="status-dot"></span>
       <span style="font-size:12px;color:var(--text-muted)">System aktiv</span>
       <button class="btn btn-outline">⟳ Aktualisieren</button>
@@ -392,60 +405,111 @@
   </div>
 
   <!-- ═══════════════════════════════════ BESTELLUNGEN ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════════════ ORDERS ═══════════════════════════════════ -->
   <div class="section" id="section-orders">
-    <div class="kpi-grid">
-      <div class="kpi-card amber"><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">2</div><div class="kpi-sub">Warten auf BAB-Tracking</div></div>
-      <div class="kpi-card green"><div class="kpi-label">Abgeschlossene (Juni)</div><div class="kpi-value" style="color:var(--green)">7</div><div class="kpi-sub">€458,86 Umsatz</div></div>
-      <div class="kpi-card blue"><div class="kpi-label">Ø Bestellwert</div><div class="kpi-value">€85,42</div><div class="kpi-sub">alle 9 Bestellungen</div></div>
-      <div class="kpi-card blue"><div class="kpi-label">Höchste Bestellung</div><div class="kpi-value">€279,98</div><div class="kpi-sub">NETU0187 · mr.mxa</div></div>
-    </div>
 
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">⏳ Offene Bestellungen — Handlungsbedarf</div></div></div>
-      <div class="card-body">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
-            <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung 1 · 16.06.2026</div>
-            <div style="font-size:16px;font-weight:800;margin-bottom:4px">PETK0049</div>
-            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Bestell-Nr. 05-14786-31141 · lostprince77</div>
-            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">VK: €29,98</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">EK: €8,30 · Lieferant: BAB Distribution · Lager: 2 Stück</div>
-            <div style="font-size:11px;color:var(--text-muted)">📧 Email an SSchulze@bab-distribution.de versandt</div>
-            <div style="margin-top:12px;padding:8px;background:#fef3c7;border-radius:6px;font-size:11px;color:#92400e">
-              ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
+    <!-- Modal: Neue Bestellung -->
+    <div id="order-modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:999;align-items:center;justify-content:center;">
+      <div style="background:#fff;border-radius:14px;padding:28px;width:480px;max-width:95vw;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3)">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+          <div style="font-size:16px;font-weight:800">📦 Neue Bestellung</div>
+          <button onclick="ordersCloseModal()" style="background:none;border:none;font-size:20px;cursor:pointer;color:#94a3b8">✕</button>
+        </div>
+        <div style="display:grid;gap:12px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">DATUM</label>
+              <input type="date" id="om-datum" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px">
+            </div>
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">BESTELL-NR. (eBay)</label>
+              <input type="text" id="om-nr" placeholder="08-12345-67890" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px;font-family:monospace">
             </div>
           </div>
-          <div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
-            <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung 2 · 15.06.2026</div>
-            <div style="font-size:16px;font-weight:800;margin-bottom:4px">NETU0187</div>
-            <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">Bestell-Nr. 08-14779-12258 · mr.mxa</div>
-            <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">VK: €279,98</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">EK: ~€157 · Lieferant: BAB Distribution</div>
-            <div style="font-size:11px;color:var(--text-muted)">📧 Email an SSchulze@bab-distribution.de versandt</div>
-            <div style="margin-top:12px;padding:8px;background:#fef3c7;border-radius:6px;font-size:11px;color:#92400e">
-              ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">KÄUFER</label>
+              <input type="text" id="om-buyer" placeholder="ebay-username" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px">
+            </div>
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">SKU</label>
+              <input type="text" id="om-sku" placeholder="PETK0049" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px;font-family:monospace" oninput="ordersModalCalc()">
             </div>
           </div>
+          <div>
+            <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">ARTIKEL-BEZEICHNUNG</label>
+            <input type="text" id="om-name" placeholder="z.B. Petkit PURA X Selbstreinigende Katzentoilette" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">VK-PREIS (€)</label>
+              <input type="number" id="om-vk" placeholder="29.98" step="0.01" min="0" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px" oninput="ordersModalCalc()">
+            </div>
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">EK-PREIS (€)</label>
+              <input type="number" id="om-ek" placeholder="8.30" step="0.01" min="0" style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px" oninput="ordersModalCalc()">
+            </div>
+            <div>
+              <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">GEWINN (netto)</label>
+              <div id="om-profit-display" style="padding:8px 12px;font-size:14px;font-weight:800;color:#10b981;background:#f0fdf4;border-radius:8px;border:1px solid #bbf7d0">—</div>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:600;color:#64748b;display:block;margin-bottom:4px">NOTIZ</label>
+            <input type="text" id="om-note" placeholder="z.B. Tracking ausstehend, Email an BAB versandt..." style="width:100%;border:1px solid #e2e8f0;border-radius:8px;padding:8px 12px;font-size:13px">
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:20px">
+          <button onclick="ordersSave()" style="flex:1;background:#3b82f6;color:#fff;border:none;border-radius:8px;padding:11px;font-size:13px;font-weight:700;cursor:pointer">💾 Bestellung speichern</button>
+          <button onclick="ordersCloseModal()" style="background:#f1f5f9;color:#64748b;border:none;border-radius:8px;padding:11px 16px;font-size:13px;font-weight:600;cursor:pointer">Abbrechen</button>
         </div>
       </div>
     </div>
 
+    <!-- KPIs (dynamisch) -->
+    <div class="kpi-grid" id="orders-kpi"></div>
+
+    <!-- Offene Bestellungen -->
     <div class="card">
-      <div class="card-header"><div><div class="card-title">Alle Bestellungen — Juni 2026</div></div></div>
+      <div class="card-header">
+        <div>
+          <div class="card-title">⏳ Offene Bestellungen — Handlungsbedarf</div>
+          <div class="card-subtitle" id="orders-open-subtitle"></div>
+        </div>
+        <button class="btn btn-primary" onclick="ordersOpenModal()">+ Neue Bestellung</button>
+      </div>
+      <div class="card-body">
+        <div id="orders-open-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px"></div>
+        <div id="orders-open-empty" style="display:none;text-align:center;padding:32px;color:#94a3b8;font-size:13px">
+          ✅ Keine offenen Bestellungen
+        </div>
+      </div>
+    </div>
+
+    <!-- Alle Bestellungen Tabelle -->
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title" id="orders-table-title">Alle Bestellungen</div></div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input type="text" id="orders-search" placeholder="Suchen..." oninput="ordersRender()"
+            style="border:1px solid #e2e8f0;border-radius:7px;padding:6px 12px;font-size:12px;width:160px">
+          <select id="orders-filter" onchange="ordersRender()"
+            style="border:1px solid #e2e8f0;border-radius:7px;padding:6px 10px;font-size:12px;background:#fff">
+            <option value="all">Alle</option>
+            <option value="open">Offen</option>
+            <option value="done">Erledigt</option>
+          </select>
+        </div>
+      </div>
       <div class="card-body no-pad">
         <table>
-          <thead><tr><th>Datum</th><th>Bestell-Nr.</th><th>Käufer</th><th>SKU</th><th>VK-Preis</th><th>EK (est.)</th><th>Gewinn (netto)</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>16.06.</td><td style="font-family:monospace;font-size:11px">05-14786-31141</td><td><strong>lostprince77</strong></td><td><span class="badge badge-amber">PETK0049</span></td><td><strong>€29,98</strong></td><td style="color:var(--text-muted)">€8,30</td><td style="color:var(--green)">~€2,78</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
-            <tr><td>15.06.</td><td style="font-family:monospace;font-size:11px">08-14779-12258</td><td><strong>mr.mxa</strong></td><td><span class="badge badge-amber">NETU0187</span></td><td><strong>€279,98</strong></td><td style="color:var(--text-muted)">~€157</td><td style="color:var(--green)">~€26,50</td><td><span class="badge badge-amber">⏳ Offen</span></td></tr>
-            <tr><td>13.06.</td><td style="font-family:monospace;font-size:11px">01-14783-23263</td><td>thaimakx1</td><td><span class="badge badge-gray">ANTB0005</span></td><td><strong>€219,98</strong></td><td style="color:var(--text-muted)">~€122</td><td style="color:var(--green)">~€21,10</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-            <tr><td>12.06.</td><td style="font-family:monospace;font-size:11px">08-14763-57410</td><td>printgekko</td><td><span class="badge badge-gray">SHG0003</span></td><td><strong>€63,98</strong></td><td style="color:var(--text-muted)">~€35</td><td style="color:var(--green)">~€6,10</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-            <tr><td>11.06.</td><td style="font-family:monospace;font-size:11px">20-14740-74871</td><td>jokez</td><td><span class="badge badge-gray">PPSE0102</span></td><td><strong>€55,98</strong></td><td style="color:var(--text-muted)">~€29</td><td style="color:var(--green)">~€5,40</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-            <tr><td>08.06.</td><td style="font-family:monospace;font-size:11px">18-14731-45799</td><td>bb-maid</td><td><span class="badge badge-gray">USBK1023</span></td><td><strong>€25,98</strong></td><td style="color:var(--text-muted)">~€12</td><td style="color:var(--green)">~€2,50</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-            <tr><td>08.06.</td><td style="font-family:monospace;font-size:11px">23-14722-05332</td><td>d.breustedt58</td><td><span class="badge badge-gray">HHWB5012</span></td><td><strong>€38,98</strong></td><td style="color:var(--text-muted)">€15,23</td><td style="color:var(--green)">~€3,75</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-            <tr><td>07.06.</td><td style="font-family:monospace;font-size:11px">18-14726-98065</td><td>cheoxyne</td><td><span class="badge badge-gray">USBK1036</span></td><td><strong>€29,98</strong></td><td style="color:var(--text-muted)">~€15</td><td style="color:var(--green)">~€2,88</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-            <tr><td>07.06.</td><td style="font-family:monospace;font-size:11px">22-14719-39725</td><td>colddog71kay</td><td><span class="badge badge-gray">SUPD1027</span></td><td><strong>€23,98</strong></td><td style="color:var(--text-muted)">~€11</td><td style="color:var(--green)">~€2,30</td><td><span class="badge badge-green">✓ Fertig</span></td></tr>
-          </tbody>
+          <thead>
+            <tr>
+              <th>Datum</th><th>Bestell-Nr.</th><th>Käufer</th><th>SKU</th>
+              <th>VK</th><th>EK</th><th>Gewinn</th><th>Status</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody"></tbody>
         </table>
       </div>
     </div>
@@ -573,7 +637,7 @@
   <div class="section" id="section-fehler">
     <div class="kpi-grid">
       <div class="kpi-card red"><div class="kpi-label">Listing-Fehler</div><div class="kpi-value" style="color:var(--red)">15</div><div class="kpi-sub">letzter smart_lister Lauf</div></div>
-      <div class="kpi-card amber"><div class="kpi-label">EAN fehlt</div><div class="kpi-value">7</div><div class="kpi-sub">SUPV0067-71, NETT1035, NETU0084</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Bild: Auflösung zu gering</div><div class="kpi-value">7</div><div class="kpi-sub">SUPV0067-71, NETT1035, NETU0084</div></div>
       <div class="kpi-card amber"><div class="kpi-label">Aspekte fehlen</div><div class="kpi-value">3</div><div class="kpi-sub">Prozessormodell CPU-Artikel</div></div>
       <div class="kpi-card blue"><div class="kpi-label">Sonstige</div><div class="kpi-value">5</div><div class="kpi-sub">Wertlimit, Timeout, Kategorie...</div></div>
     </div>
@@ -584,13 +648,13 @@
           <thead><tr><th>SKU</th><th>VK</th><th>Error-ID</th><th>Fehlertyp</th><th>Ursache</th><th>Lösung</th></tr></thead>
           <tbody>
             <tr><td><code>SSDL0040</code></td><td>€221,99</td><td>25002</td><td><span class="badge badge-red">Wertlimit</span></td><td>€426.675 Monatslimit überschritten</td><td>Nach Deaktivierung erneut listen</td></tr>
-            <tr><td><code>SUPV0067</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0068</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0069</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0070</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>SUPV0071</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>NETT1035</code></td><td>€112,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
-            <tr><td><code>NETU0084</code></td><td>€195,99</td><td>25002</td><td><span class="badge badge-amber">EAN fehlt</span></td><td>Kein EAN in BAB-Preisliste</td><td>EAN manuell nachtragen</td></tr>
+            <tr><td><code>SUPV0067</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering + EAN war 12-stellig (gefixt → 0023942301875)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0068</code></td><td>€75,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering (Error 25002)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0069</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering + EAN war 12-stellig (gefixt → 0023942301912)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0070</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering (Error 25002)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>SUPV0071</code></td><td>€83,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Bild-Auflösung zu gering (Error 25002)</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>NETT1035</code></td><td>€112,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>Teltonika TRM240 — Bild-Auflösung zu gering</td><td>fix_low_res_images läuft automatisch</td></tr>
+            <tr><td><code>NETU0084</code></td><td>€195,99</td><td>25002</td><td><span class="badge badge-amber">Bild: zu klein</span></td><td>UbiQuiti UniFi G5 — Bild-Auflösung zu gering</td><td>fix_low_res_images läuft automatisch</td></tr>
             <tr><td><code>CPUA0065</code></td><td>€223,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
             <tr><td><code>CPUI0232</code></td><td>€284,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
             <tr><td><code>CPUI0233</code></td><td>€262,99</td><td>25002</td><td><span class="badge badge-purple">Prozessormodell</span></td><td>ebay_client._fill_aspect schlägt fehl</td><td>Aspect-Handler für CPU verbessern</td></tr>
@@ -910,48 +974,64 @@
 
   </div>
   <!-- ═══════════════════════════════════ REPRICER ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════════════ REPRICER ═══════════════════════════════════ -->
   <div class="section" id="section-repricer">
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">Repricer</div><div class="card-subtitle">Preise aller aktiven BAB-Listings aktualisieren</div></div><span class="badge badge-amber">⏳ Ausstehend</span></div>
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card green"><div class="kpi-label">Status</div><div class="kpi-value" id="rep-status-val" style="font-size:20px">–</div><div class="kpi-sub" id="rep-status-sub">Lade …</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Zyklus</div><div class="kpi-value" id="rep-cycle">–</div><div class="kpi-sub" id="rep-progress">–/–</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Letzter Run</div><div class="kpi-value" id="rep-age" style="font-size:20px">–</div><div class="kpi-sub" id="rep-age-sub">–</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Fehler</div><div class="kpi-value" id="rep-errors" style="color:var(--green)">–</div><div class="kpi-sub">eBay API Fehler</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header">
+        <div><div class="card-title">▶️ Repricer</div><div class="card-subtitle">Läuft stündlich automatisch · 1.256 BAB-Artikel · 3 Chunks à ~420</div></div>
+        <button class="btn btn-primary" style="padding:8px 18px" onclick="triggerWorkflow('reprice.yml','Repricer');document.getElementById('rep-trigger-log').style.display='block'">▶ Jetzt starten</button>
+      </div>
       <div class="card-body">
-        <div style="padding:14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;margin-bottom:16px;font-size:12px;color:#92400e">
-          ⚠️ <strong>Erst ausführen wenn 0 aktive Listings auf eBay!</strong> Repricer braucht eine saubere Basis.
-        </div>
-        <div style="font-size:13px;font-weight:600;margin-bottom:8px">Schritt 3 in der Pipeline — Terminal öffnen und ausführen:</div>
-        <div class="cmd-box">
-          <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 repricer.py')">Kopieren</button>
-          <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 repricer.py</span>
-        </div>
-        <div style="margin-top:16px">
-          <div style="font-size:12px;font-weight:700;margin-bottom:8px">Was der Repricer macht:</div>
-          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Preise aus BAB-Preisliste neu berechnen</div><div class="status-val">vk_brutto = ek × 1.25 × 1.19 / 0.79 − 3.99</div></div></div>
-          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Alle 1.268 supplier_map-Einträge durchgehen</div><div class="status-val">EK-Änderungen von BAB werden berücksichtigt</div></div></div>
-          <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">eBay Offers via PATCH /offer/{id} aktualisieren</div><div class="status-val">Nur wenn Preis sich verändert hat (Schwellwert)</div></div></div>
-        </div>
+        <div id="rep-trigger-log" style="display:none;font-size:12px;font-family:monospace;padding:8px 12px;background:var(--card-bg);border-radius:6px;border:1px solid var(--border);margin-bottom:14px" id="trigger-log-rep"></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Preisformel</div><div class="status-val">VK = EK ÷ 0.74 &nbsp;|&nbsp; 13% eBay + 8% Kampagne + 5% Puffer</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">EK-Erhöhung erkannt → sofort VK erhöhen</div><div class="status-val">EK-Senkung → Preis bleibt (Gewinnoptimierung)</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Makita-Sperre aktiv</div><div class="status-val">12 gesperrte SKUs werden übersprungen</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Chunk-Rotation</div><div class="status-val">CHUNK_SIZE=600 · Offset wird über Zyklen rotiert · state in repricer_state.json</div></div><span class="badge badge-blue">Info</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Workflow-Status</div><div class="card-subtitle">Letzter GitHub Actions Run</div></div></div>
+      <div class="card-body">
+        <div id="rep-wf-status" style="font-size:13px;color:var(--text-sub)">Lade health_report.json …</div>
       </div>
     </div>
   </div>
 
   <!-- ═══════════════════════════════════ SMART LISTER ═══════════════════════════════════ -->
   <div class="section" id="section-lister">
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">Smart Lister</div><div class="card-subtitle">Alle 1.268 BAB-Artikel auf eBay listen</div></div><span class="badge badge-amber">⏳ Schritt 4</span></div>
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card green"><div class="kpi-label">Aktive Listings</div><div class="kpi-value">~948</div><div class="kpi-sub">eBay DE · Best_Neodeals</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">BAB-Artikel</div><div class="kpi-value">1.256</div><div class="kpi-sub">in supplier_map.json</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Bild-Fehler</div><div class="kpi-value">7</div><div class="kpi-sub">Error 25002 · werden automatisch gefixt</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Letzter Run</div><div class="kpi-value" id="lister-age" style="font-size:20px">–</div><div class="kpi-sub" id="lister-age-sub">–</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header">
+        <div><div class="card-title">🚀 Smart Lister</div><div class="card-subtitle">Läuft täglich · Listet alle BAB-Artikel die noch nicht live sind</div></div>
+        <button class="btn btn-primary" style="padding:8px 18px" onclick="triggerWorkflow('smart_lister.yml','Smart Lister')">▶ Jetzt starten</button>
+      </div>
       <div class="card-body">
-        <div style="padding:14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;margin-bottom:16px;font-size:12px;color:#92400e">
-          ⚠️ <strong>Reihenfolge einhalten:</strong> (1) Alle Listings deaktiviert? (2) Repricer gelaufen? → Dann erst Smart Lister starten.
-        </div>
-        <div style="font-size:13px;font-weight:600;margin-bottom:8px">Schritt 4 — Befehl für Terminal:</div>
-        <div class="cmd-box">
-          <button class="cmd-copy" onclick="navigator.clipboard.writeText('cd ~/Documents/Dropshipping && python3 smart_lister.py --list --bab-only')">Kopieren</button>
-          <span class="cmd-prompt">$ </span><span class="cmd-text">cd ~/Documents/Dropshipping && python3 smart_lister.py --list --bab-only</span>
-        </div>
-        <div style="margin-top:12px;font-size:12px;color:var(--text-muted);padding:10px;background:#f8fafc;border-radius:6px">
-          Erwartet: ~1.253 OK · 2 Drafts · ~15 Fehler (EAN, CPU-Aspekte, Timeout) · Dauer: ca. 45–60 Minuten
-        </div>
-        <div style="margin-top:20px">
-          <div style="font-size:12px;font-weight:700;margin-bottom:8px">Danach: Promoted Listings Kampagne (Schritt 5)</div>
-          <div style="font-size:12px;color:var(--text-muted)">eBay Seller Hub → Marketing → Promoted Listings Standard → 8% auf alle Angebote</div>
-        </div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">BAB-Preisliste laden (CSV via HTTP)</div><div class="status-val">EAN, Preis, Bestand aus BAB-Feed</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Artikel-Daten via IceCat / eBay API anreichern</div><div class="status-val">Titel, Beschreibung, Aspekte, Bilder</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">eBay Offer erstellen / aktualisieren</div><div class="status-val">Nur neue Artikel · bereits gelistete werden übersprungen</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Makita-Sperre + banned_skus.json</div><div class="status-val">12 gesperrte SKUs werden nie gelistet</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Promoted Listings Kampagne (8%)</div><div class="status-val">eBay Seller Hub → Marketing → Standard · manuell aktiviert</div></div><span class="badge badge-blue">Aktiv</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><div><div class="card-title">Workflow-Status</div><div class="card-subtitle">Letzter GitHub Actions Run</div></div></div>
+      <div class="card-body">
+        <div id="lister-wf-status" style="font-size:13px;color:var(--text-sub)">Lade health_report.json …</div>
       </div>
     </div>
   </div>
@@ -1002,7 +1082,7 @@
           <label style="font-size:13px;font-weight:600;white-space:nowrap">GitHub PAT:</label>
           <input id="gh-pat-input" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
             style="flex:1;min-width:220px;padding:6px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace"
-            oninput="ghPAT=this.value;updatePatStatus()" />
+            />
           <span id="pat-status" style="font-size:12px;color:var(--text-sub)">Nicht gesetzt</span>
         </div>
         <!-- Trigger buttons -->
@@ -1045,6 +1125,204 @@
 
   </div><!-- /section-health -->
 
+  <!-- ═══════════════════════════════════ BAB RECHNUNGEN ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════════════ KOSTEN ═══════════════════════════════════ -->
+  <div class="section" id="section-kosten">
+    <div class="kpi-grid" id="kosten-kpi"></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+      <!-- Fixkosten Editor -->
+      <div class="card">
+        <div class="card-header">
+          <div><div class="card-title">🧾 Monatliche Fixkosten</div><div class="card-subtitle">Klicken zum Bearbeiten</div></div>
+          <button class="btn btn-primary" onclick="kostenSave()">💾 Speichern</button>
+        </div>
+        <div class="card-body">
+          <div id="kosten-rows"></div>
+          <button onclick="kostenAddRow()" style="margin-top:10px;background:none;border:1px dashed #cbd5e1;border-radius:7px;padding:8px 16px;font-size:12px;cursor:pointer;color:#64748b;width:100%">+ Kostenpunkt hinzufügen</button>
+        </div>
+      </div>
+
+      <!-- Break-even Kalkulator -->
+      <div class="card">
+        <div class="card-header"><div class="card-title">⚖️ Break-even Analyse</div></div>
+        <div class="card-body">
+          <div class="calc-box" style="margin-bottom:16px">
+            <div class="calc-row"><span class="calc-label">Fixkosten/Monat</span><span class="calc-val" id="be-fixkosten">—</span></div>
+            <div class="calc-row"><span class="calc-label">Ø Gewinn/Verkauf</span><span class="calc-val"><input type="number" id="be-avg-profit" value="8.50" step="0.5" style="width:80px" oninput="kostenCalc()"> €</span></div>
+            <div class="calc-row"><span class="calc-label">Retouren-Quote</span><span class="calc-val"><input type="number" id="be-retour" value="3" step="0.5" style="width:60px" oninput="kostenCalc()"> %</span></div>
+            <div class="calc-row" style="border-top:2px solid var(--border);margin-top:8px;padding-top:8px"><span class="calc-label">Verkäufe für Break-even</span><span class="calc-val positive" id="be-sales">—</span></div>
+            <div class="calc-row"><span class="calc-label">= Täglich</span><span class="calc-val positive" id="be-daily">—</span></div>
+            <div class="calc-row"><span class="calc-label">Umsatz Break-even</span><span class="calc-val positive" id="be-umsatz">—</span></div>
+          </div>
+
+          <div style="background:#eff6ff;border-radius:8px;padding:14px;border:1px solid #bfdbfe">
+            <div style="font-size:11px;font-weight:700;color:#1e40af;margin-bottom:8px">💡 TIPP: Kosten senken</div>
+            <div style="font-size:12px;color:#1e3a8a;line-height:1.6">
+              • eBay Kampagne: 8% → 5% = <strong id="kampagne-ersparnis">—</strong>/Monat gespart<br>
+              • Smart Lister max-new 20 → 10 = max 0,60€/Tag<br>
+              • Sortiment 1261 → 400 Artikel = weniger Pflegeaufwand<br>
+              • Fokus: Artikel mit Score &gt; 50 und Gewinn &gt; 8€
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kostenentwicklung -->
+    <div class="card">
+      <div class="card-header"><div class="card-title">📊 Kostenstruktur</div></div>
+      <div class="card-body">
+        <canvas id="kosten-chart" height="120"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section" id="section-rechnungen">
+
+    <!-- KPI Zeile -->
+    <div class="kpi-grid" style="margin-bottom:16px">
+      <div class="kpi-card red"><div class="kpi-label">💸 Offen</div><div class="kpi-value" id="rech-offen-count" style="color:var(--red)">–</div><div class="kpi-sub" id="rech-offen-sum">–</div></div>
+      <div class="kpi-card green"><div class="kpi-label">✅ Bezahlt</div><div class="kpi-value" id="rech-paid-count" style="color:var(--green)">–</div><div class="kpi-sub" id="rech-paid-sum">–</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">📦 Gesamt</div><div class="kpi-value" id="rech-total-count">–</div><div class="kpi-sub" id="rech-total-sum">–</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">🏦 BAB Konto</div><div class="kpi-value" style="font-size:13px;letter-spacing:0">Überweisung</div><div class="kpi-sub">Auf Rechnung · Zahlungsziel 14 Tage</div></div>
+    </div>
+
+    <!-- Neue Rechnung hinzufügen -->
+    <div class="card" style="margin-bottom:16px">
+      <div class="card-header"><div><div class="card-title">Rechnung eintragen</div><div class="card-subtitle">Neue BAB-Rechnung manuell erfassen</div></div></div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:10px;align-items:end;flex-wrap:wrap">
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">eBay Bestell-Nr.</label>
+            <input id="rech-order-id" type="text" placeholder="18-14766-10957" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace">
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">SKU</label>
+            <input id="rech-sku" type="text" placeholder="HHWM0023" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px;font-family:monospace">
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">EK-Betrag (€)</label>
+            <input id="rech-betrag" type="number" step="0.01" placeholder="107.08" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px">
+          </div>
+          <div>
+            <label style="font-size:11px;font-weight:700;display:block;margin-bottom:4px">Rechnungsdatum</label>
+            <input id="rech-datum" type="date" style="width:100%;padding:7px 10px;border:1px solid var(--border);border-radius:6px;background:var(--card-bg);color:var(--text-main);font-size:13px">
+          </div>
+          <button class="btn btn-primary" style="padding:8px 16px;white-space:nowrap" onclick="rechAddEntry()">+ Hinzufügen</button>
+        </div>
+        <div id="rech-add-msg" style="font-size:12px;margin-top:8px;min-height:16px"></div>
+      </div>
+    </div>
+
+    <!-- Rechnungsliste -->
+    <div class="card">
+      <div class="card-header">
+        <div><div class="card-title">Rechnungsübersicht</div><div class="card-subtitle">Alle BAB-Rechnungen · gespeichert im Browser</div></div>
+        <button class="btn" style="padding:6px 12px;font-size:12px;background:var(--card-bg);border:1px solid var(--border)" onclick="rechExportCSV()">📥 CSV Export</button>
+      </div>
+      <div class="card-body no-pad">
+        <table id="rech-table">
+          <thead><tr><th>Datum</th><th>Bestell-Nr.</th><th>SKU</th><th>EK (€)</th><th>Fälligkeit</th><th>Status</th><th>Aktion</th></tr></thead>
+          <tbody id="rech-tbody"></tbody>
+        </table>
+        <div id="rech-empty" style="padding:32px;text-align:center;color:var(--text-sub);font-size:13px;display:none">Noch keine Rechnungen eingetragen</div>
+      </div>
+    </div>
+
+  </div><!-- /section-rechnungen -->
+
+  <!-- ═══════════════════════════════ BAB PREISLISTE ══════════════════════════════ -->
+  <div class="section" id="section-preisliste">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+      <div>
+        <div id="plist-status" style="font-size:12px;color:var(--text-sub)">Lade Preisliste…</div>
+      </div>
+      <button class="btn btn-primary" style="padding:8px 16px" onclick="loadPreisliste(true)">🔄 Aktualisieren</button>
+    </div>
+
+    <!-- KPI -->
+    <div class="kpi-row" style="margin-bottom:20px">
+      <div class="kpi-card"><div class="kpi-label">📦 Artikel</div><div class="kpi-value" id="plist-count">–</div><div class="kpi-sub">BAB Sortiment</div></div>
+      <div class="kpi-card green"><div class="kpi-label">✅ Lagernd</div><div class="kpi-value" id="plist-instock">–</div><div class="kpi-sub">Sofort verfügbar</div></div>
+      <div class="kpi-card"><div class="kpi-label">💰 Ø EK</div><div class="kpi-value" id="plist-avgek">–</div><div class="kpi-sub">Durchschnitt EK</div></div>
+      <div class="kpi-card green"><div class="kpi-label">📈 Ø Marge</div><div class="kpi-value" id="plist-avgmarge">–</div><div class="kpi-sub">nach eBay-Gebühren</div></div>
+    </div>
+
+    <!-- Suchleiste -->
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center">
+      <input id="plist-search" type="text" placeholder="🔍  SKU, Artikelname, EAN, Hersteller …"
+        style="flex:1;min-width:240px;padding:10px 14px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:14px"
+        oninput="plistFilter()">
+      <select id="plist-stock-filter" onchange="plistFilter()"
+        style="padding:10px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:13px">
+        <option value="all">Alle</option>
+        <option value="instock">✅ Lagernd</option>
+        <option value="outofstock">❌ Nicht lagernd</option>
+      </select>
+      <select id="plist-sort" onchange="plistFilter()"
+        style="padding:10px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card-bg);color:var(--text-main);font-size:13px">
+        <option value="sku">SKU ↑</option>
+        <option value="ek_asc">EK ↑</option>
+        <option value="ek_desc">EK ↓</option>
+        <option value="gewinn_desc">Gewinn ↓</option>
+      </select>
+      <span id="plist-result-count" style="font-size:12px;color:var(--text-sub);white-space:nowrap"></span>
+    </div>
+
+    <!-- Tabelle -->
+    <div style="overflow-x:auto">
+      <table id="plist-table" style="width:100%;border-collapse:collapse;font-size:13px;display:none">
+        <thead>
+          <tr style="background:var(--card-bg);position:sticky;top:0;z-index:2">
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">SKU</th>
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">Beschreibung</th>
+            <th style="padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">EAN</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">Lager</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">EK (BAB)</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">VK (netto)</th>
+            <th style="padding:10px 12px;text-align:right;border-bottom:1px solid var(--border);color:var(--text-sub);font-weight:600">Gewinn</th>
+          </tr>
+        </thead>
+        <tbody id="plist-tbody"></tbody>
+      </table>
+      <div id="plist-empty" style="padding:40px;text-align:center;color:var(--text-sub);font-size:13px;display:none">Keine Artikel gefunden</div>
+      <div id="plist-loading" style="padding:40px;text-align:center;color:var(--text-sub);font-size:13px">⏳ Preisliste wird geladen…</div>
+    </div>
+  </div><!-- /section-preisliste -->
+
+  <!-- ═══════════════════════════════════════════════════════ BILD-PFLEGE -->
+  <div class="section" id="section-bildpflege">
+    <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="kpi-card red"><span class="kpi-icon">🚫</span><div class="kpi-label">Deaktiviert</div><div class="kpi-value" id="bp-count-deakt">49</div><div class="kpi-sub">kein verifiziertes Bild</div></div>
+      <div class="kpi-card green"><span class="kpi-icon">✅</span><div class="kpi-label">Erledigt</div><div class="kpi-value" id="bp-count-done">0</div><div class="kpi-sub">Bild gesetzt + reaktiviert</div></div>
+      <div class="kpi-card amber"><span class="kpi-icon">⏳</span><div class="kpi-label">Offen</div><div class="kpi-value" id="bp-count-open">49</div><div class="kpi-sub">URL noch einzutragen</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;padding:16px 20px;background:#fef3c7;border:1px solid #f59e0b;border-radius:10px;font-size:13px;">
+      <strong>⚖️ Rechtliche Grundlage:</strong> Nur offizielle Herstellerbilder verwenden (Hersteller-CDN, Pressematerial, Icecat-Datenbank).
+      <strong>Nicht erlaubt:</strong> Amazon, BestBuy, Idealo, Kaufland, alternate.de — das sind Konkurrenten-Fotos (Urheberrechtsverletzung / Abmahnrisiko!).<br>
+      <strong>Empfehlung:</strong> Direkt auf der Hersteller-Website das Produktbild rechtsklicken → "Bildadresse kopieren" → hier eintragen.
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <input type="text" id="bp-search" placeholder="🔍 SKU oder Titel suchen…" oninput="bpFilter()"
+          style="flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:7px;font-size:13px">
+        <select id="bp-filter" onchange="bpFilter()" style="padding:8px 10px;border:1px solid var(--border);border-radius:7px;font-size:13px">
+          <option value="all">Alle</option>
+          <option value="open">Offen</option>
+          <option value="done">Erledigt</option>
+        </select>
+        <button class="btn btn-outline" onclick="bpLoad()" style="white-space:nowrap">🔄 Neu laden</button>
+      </div>
+      <div id="bp-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:0;border-top:1px solid var(--border)">
+        <div style="padding:40px;text-align:center;color:var(--text-muted);font-size:13px" id="bp-loading">⏳ Wird geladen…</div>
+      </div>
+    </div>
+  </div><!-- /section-bildpflege -->
+
 </div><!-- /main -->
 
 <!-- ═══ MOBILE NAV OVERLAY (Hamburger Drawer) ═══ -->
@@ -1067,6 +1345,9 @@
       <div class="nav-item" onclick="mobileNav('fehler')"><span class="icon">🔧</span> Fehlerbehebung <span class="nbadge amber">15</span></div>
       <div class="nav-section">Finanzen</div>
       <div class="nav-item" onclick="mobileNav('gewinn')"><span class="icon">💹</span> Gewinn & Steuern</div>
+      <div class="nav-item" onclick="mobileNav('kosten')"><span class="icon">🧾</span> Kosten & Break-even</div>
+      <div class="nav-item" onclick="mobileNav('rechnungen')"><span class="icon">💸</span> BAB Rechnungen</div>
+      <div class="nav-item" onclick="mobileNav('preisliste')"><span class="icon">📦</span> BAB Preisliste</div>
       <div class="nav-item" onclick="mobileNav('retouren')"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
       <div class="nav-section">Tools</div>
       <div class="nav-item" onclick="mobileNav('repricer')"><span class="icon">▶️</span> Repricer</div>
@@ -1100,7 +1381,9 @@ const titles = {
   lister: ['Smart Lister', '1.268 BAB-Artikel neu listen · Schritt 4'],
   forwarder: ['Order Forwarder', 'Automatische Bestellweiterleitung an BAB'],
   health:    ['System Health', 'Deep-Check aller Komponenten · 4× täglich · 15min Auto-Refresh'],
-  gewinn: ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
+  gewinn:     ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
+  rechnungen: ['BAB Rechnungen', 'Offene Rechnungen an BAB Distribution bezahlen'],
+  preisliste: ['BAB Preisliste', '1.351 Artikel · EK · VK · Marge · stündlich aktualisiert'],
   retouren: ['Retouren & Stornos', 'Echtdaten aus eBay API · Auswirkung auf Gewinn'],
 };
 
@@ -1117,6 +1400,10 @@ function showSection(id, el) {
   if (id === 'preise') { animateBars(); initPriceChart(); }
   if (id === 'gewinn') calcGewinn();
   if (id === 'retouren') calcRetoure();
+  if (id === 'preisliste' && plistData.length === 0) loadPreisliste();
+  if (id === 'bildpflege' && bpItems.length === 0) bpLoad();
+  if (id === 'orders') ordersRender();
+  if (id === 'kosten') kostenInit();
 }
 
 // ——— ANIMATE INV BARS ———
@@ -1387,17 +1674,34 @@ window.showSection = function(id, el) {
 // SYSTEM HEALTH  ─ Auto-Refresh + Workflow Trigger
 // ═══════════════════════════════════════════════════════════
 
-// GitHub PAT (stored in memory only, never persisted)
-let ghPAT = '';
+// GitHub PAT — wird in localStorage gespeichert (bleibt nach Reload erhalten)
+const PAT_STORAGE_KEY = 'neodeals_gh_pat';
+let ghPAT = localStorage.getItem(PAT_STORAGE_KEY) || '';
 const REPO_OWNER = 'Stavros-Neovo';
 const REPO_NAME  = 'shopify-dropshipping';
 
 function updatePatStatus() {
   const el = document.getElementById('pat-status');
+  const inp = document.getElementById('gh-pat-input');
+  if (inp && ghPAT) inp.value = ghPAT;  // Feld befüllen
   if (!el) return;
-  el.textContent = ghPAT.length > 10 ? '✅ Gesetzt' : 'Nicht gesetzt';
+  el.textContent = ghPAT.length > 10 ? '✅ Gespeichert' : 'Nicht gesetzt';
   el.style.color  = ghPAT.length > 10 ? 'var(--green)' : 'var(--text-sub)';
 }
+
+// PAT beim Tippen sofort in localStorage sichern
+document.addEventListener('DOMContentLoaded', () => {
+  const inp = document.getElementById('gh-pat-input');
+  if (inp) {
+    if (ghPAT) inp.value = ghPAT;
+    inp.addEventListener('input', () => {
+      ghPAT = inp.value;
+      if (ghPAT.length > 10) localStorage.setItem(PAT_STORAGE_KEY, ghPAT);
+      updatePatStatus();
+    });
+  }
+  updatePatStatus();
+});
 
 async function triggerWorkflow(workflowFile, label) {
   const log = document.getElementById('trigger-log');
@@ -1505,6 +1809,10 @@ function renderHealthChecks(data) {
   const lbl = document.getElementById('health-last-updated');
   if (lbl) lbl.textContent = 'Stand: ' + new Date().toLocaleTimeString('de-DE');
 
+  // Repricer + Lister Tabs befüllen
+  updateRepricerTab(checks);
+  updateListerTab(checks);
+
   // Check cards
   const grid = document.getElementById('health-checks-grid');
   if (!grid) return;
@@ -1560,9 +1868,915 @@ async function loadHealthReport(manual = false) {
   }
 }
 
+function updateRepricerTab(checks) {
+  const r = checks['repricer_last_run'];
+  const e = checks['repricer_errors'];
+  const wf = checks['workflow_reprice'];
+  if (r) {
+    const v = r.value || {};
+    const age = v.age_hours ?? '–';
+    const ageStr = typeof age === 'number' ? (age < 1 ? `${Math.round(age*60)} min` : `${age.toFixed(1)} h`) : '–';
+    const col = r.status === 'ok' ? 'var(--green)' : r.status === 'warn' ? '#f59e0b' : 'var(--red)';
+    const icon = r.status === 'ok' ? '✅' : r.status === 'warn' ? '⚠️' : '❌';
+    document.getElementById('rep-status-val').textContent = icon;
+    document.getElementById('rep-status-val').style.color = col;
+    document.getElementById('rep-status-sub').textContent = r.status === 'ok' ? 'Alles OK' : r.detail;
+    document.getElementById('rep-cycle').textContent = `#${v.cycle ?? '–'}`;
+    document.getElementById('rep-progress').textContent = `${v.offset ?? 0} / ${v.total ?? 0} Artikel`;
+    document.getElementById('rep-age').textContent = ageStr;
+    document.getElementById('rep-age-sub').textContent = 'seit letztem State-Update';
+  }
+  if (e) {
+    const errEl = document.getElementById('rep-errors');
+    errEl.textContent = e.value?.errors ?? '–';
+    errEl.style.color = (e.value?.errors ?? 0) === 0 ? 'var(--green)' : 'var(--red)';
+  }
+  if (wf) {
+    const col = wf.status === 'ok' ? 'var(--green)' : wf.status === 'warn' ? '#f59e0b' : 'var(--red)';
+    document.getElementById('rep-wf-status').innerHTML =
+      `<span style="color:${col};font-weight:700">${wf.status==='ok'?'✅':'⚠️'} ${wf.detail}</span>`;
+  }
+}
+
+function updateListerTab(checks) {
+  const wf = checks['workflow_smart_lister'];
+  if (wf) {
+    const col = wf.status === 'ok' ? 'var(--green)' : '#f59e0b';
+    const age = wf.value?.age_hours;
+    const ageStr = typeof age === 'number' ? (age < 1 ? `${Math.round(age*60)} min` : `${age.toFixed(1)} h`) : '–';
+    document.getElementById('lister-age').textContent = ageStr;
+    document.getElementById('lister-age-sub').textContent = `vor ${ageStr} · ${wf.value?.conclusion ?? 'läuft'}`;
+    document.getElementById('lister-wf-status').innerHTML =
+      `<span style="color:${col};font-weight:700">${wf.status==='ok'?'✅':'⚠️'} ${wf.detail}</span>`;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// BAB RECHNUNGEN
+// ═══════════════════════════════════════════════════════════
+const RECH_KEY = 'neodeals_bab_rechnungen';
+
+function rechLoad() {
+  try { return JSON.parse(localStorage.getItem(RECH_KEY) || '[]'); }
+  catch { return []; }
+}
+function rechSave(data) { localStorage.setItem(RECH_KEY, JSON.stringify(data)); }
+
+function rechRender() {
+  const data = rechLoad();
+  const tbody = document.getElementById('rech-tbody');
+  const empty = document.getElementById('rech-empty');
+  if (!tbody) return;
+
+  tbody.innerHTML = '';
+  if (data.length === 0) {
+    empty.style.display = 'block';
+    document.getElementById('rech-table').style.display = 'none';
+  } else {
+    empty.style.display = 'none';
+    document.getElementById('rech-table').style.display = '';
+  }
+
+  let offenCount = 0, offenSum = 0, paidCount = 0, paidSum = 0;
+
+  data.sort((a,b) => new Date(b.datum) - new Date(a.datum)).forEach((r, i) => {
+    const faellig = new Date(r.datum);
+    faellig.setDate(faellig.getDate() + 14);
+    const faelligStr = faellig.toLocaleDateString('de-DE');
+    const isOverdue = !r.paid && faellig < new Date();
+    const paid = r.paid;
+
+    if (paid) { paidCount++; paidSum += r.betrag; }
+    else { offenCount++; offenSum += r.betrag; }
+
+    const tr = document.createElement('tr');
+    tr.style.opacity = paid ? '0.6' : '1';
+    tr.innerHTML = `
+      <td>${new Date(r.datum).toLocaleDateString('de-DE')}</td>
+      <td style="font-family:monospace;font-size:11px">${r.orderId || '–'}</td>
+      <td><span class="badge badge-gray">${r.sku || '–'}</span></td>
+      <td style="font-weight:700;color:${paid?'var(--text-sub)':'var(--red)'}">€${r.betrag.toFixed(2)}</td>
+      <td style="color:${isOverdue?'var(--red)':paid?'var(--text-sub)':'var(--text-main)'}">
+        ${paid ? '–' : faelligStr + (isOverdue ? ' ⚠️' : '')}
+      </td>
+      <td>${paid
+        ? '<span class="badge badge-green">✅ Bezahlt</span>'
+        : (isOverdue
+            ? '<span class="badge badge-red">❌ Überfällig</span>'
+            : '<span class="badge badge-amber">⏳ Offen</span>')}</td>
+      <td style="display:flex;gap:6px">
+        ${!paid ? `<button class="btn btn-primary" style="font-size:11px;padding:4px 10px" onclick="rechMarkPaid(${i})">✅ Bezahlt</button>` : ''}
+        <button class="btn" style="font-size:11px;padding:4px 8px;background:var(--card-bg);border:1px solid var(--border)" onclick="rechDelete(${i})">🗑</button>
+      </td>`;
+    tbody.appendChild(tr);
+  });
+
+  // KPIs
+  document.getElementById('rech-offen-count').textContent = offenCount;
+  document.getElementById('rech-offen-sum').textContent = `€${offenSum.toFixed(2)} ausstehend`;
+  document.getElementById('rech-paid-count').textContent = paidCount;
+  document.getElementById('rech-paid-sum').textContent = `€${paidSum.toFixed(2)} bezahlt`;
+  document.getElementById('rech-total-count').textContent = data.length;
+  document.getElementById('rech-total-sum').textContent = `€${(offenSum+paidSum).toFixed(2)} gesamt`;
+
+  // Nav Badge
+  const badge = document.getElementById('nav-rech-badge');
+  if (badge) {
+    badge.textContent = offenCount > 0 ? `${offenCount} offen` : '✓';
+    badge.className = 'nbadge ' + (offenCount > 0 ? 'amber' : 'green');
+  }
+}
+
+function rechAddEntry() {
+  const orderId = document.getElementById('rech-order-id').value.trim();
+  const sku     = document.getElementById('rech-sku').value.trim();
+  const betrag  = parseFloat(document.getElementById('rech-betrag').value);
+  const datum   = document.getElementById('rech-datum').value;
+  const msg     = document.getElementById('rech-add-msg');
+
+  if (!betrag || !datum) {
+    msg.textContent = '⚠️ EK-Betrag und Datum sind Pflichtfelder.';
+    msg.style.color = 'var(--red)';
+    return;
+  }
+
+  const data = rechLoad();
+  data.push({ orderId, sku, betrag, datum, paid: false, paidAt: null });
+  rechSave(data);
+  rechRender();
+
+  // Felder leeren
+  ['rech-order-id','rech-sku','rech-betrag','rech-datum'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  msg.textContent = '✅ Rechnung eingetragen.';
+  msg.style.color = 'var(--green)';
+  setTimeout(() => { msg.textContent = ''; }, 3000);
+}
+
+function rechMarkPaid(idx) {
+  const data = rechLoad();
+  const sorted = [...data].sort((a,b) => new Date(b.datum) - new Date(a.datum));
+  const entry = sorted[idx];
+  const realIdx = data.findIndex(d => d.orderId === entry.orderId && d.datum === entry.datum && d.betrag === entry.betrag);
+  if (realIdx >= 0) {
+    data[realIdx].paid = true;
+    data[realIdx].paidAt = new Date().toISOString();
+    rechSave(data);
+    rechRender();
+  }
+}
+
+function rechDelete(idx) {
+  if (!confirm('Eintrag wirklich löschen?')) return;
+  const data = rechLoad();
+  const sorted = [...data].sort((a,b) => new Date(b.datum) - new Date(a.datum));
+  const entry = sorted[idx];
+  const realIdx = data.findIndex(d => d.orderId === entry.orderId && d.datum === entry.datum && d.betrag === entry.betrag);
+  if (realIdx >= 0) { data.splice(realIdx, 1); rechSave(data); rechRender(); }
+}
+
+function rechExportCSV() {
+  const data = rechLoad();
+  if (!data.length) return;
+  const rows = [['Datum','Bestell-Nr.','SKU','EK (EUR)','Fälligkeit','Status','Bezahlt am']];
+  data.sort((a,b) => new Date(b.datum)-new Date(a.datum)).forEach(r => {
+    const faellig = new Date(r.datum); faellig.setDate(faellig.getDate()+14);
+    rows.push([r.datum, r.orderId||'', r.sku||'', r.betrag.toFixed(2),
+      faellig.toISOString().split('T')[0], r.paid?'Bezahlt':'Offen', r.paidAt||'']);
+  });
+  const csv = rows.map(r => r.join(';')).join('\n');
+  const a = document.createElement('a');
+  a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+  a.download = `bab_rechnungen_${new Date().toISOString().split('T')[0]}.csv`;
+  a.click();
+}
+
+// Initial render
+document.addEventListener('DOMContentLoaded', rechRender);
+
+// ═══════════════════════════════════════════════════════════
+// SCHNELLSUCHE (EAN / SKU) — Topbar
+// ═══════════════════════════════════════════════════════════
+function qsSearch() {
+  const q   = (document.getElementById('qs-input')?.value || '').trim();
+  const box = document.getElementById('qs-result');
+  if (!box) return;
+  if (q.length < 3) { box.style.display = 'none'; return; }
+
+  const ql = q.toLowerCase();
+  // Suche in plistData (BAB Preisliste — geladen wenn Tab besucht wurde)
+  let hits = plistData.filter(a =>
+    a.ean === q || a.sku.toLowerCase() === ql ||
+    a.sku.toLowerCase().includes(ql) || a.ean.includes(q) ||
+    a.title.toLowerCase().includes(ql)
+  ).slice(0, 8);
+
+  if (hits.length === 0) {
+    box.innerHTML = '<div style="color:var(--text-sub);padding:4px 0">Nicht gefunden. <a href="#" onclick="event.preventDefault();showSection(\'preisliste\',document.querySelector(\'[onclick*=preisliste]\'));document.getElementById(\'plist-search\').value=document.getElementById(\'qs-input\').value;plistFilter()" style="color:var(--accent)">→ Preisliste durchsuchen</a></div>';
+    box.style.display = 'block';
+    return;
+  }
+
+  box.innerHTML = hits.map(a => {
+    const stockColor = a.stock > 0 ? 'var(--green)' : 'var(--red)';
+    const stockTxt   = a.stock > 0 ? `✅ ${a.stock} lagernd` : '❌ nicht lagernd';
+    const gewColor   = a.gewinn > 10 ? 'var(--green)' : a.gewinn > 0 ? 'var(--text-main)' : 'var(--red)';
+    return `<div style="padding:10px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <strong style="font-family:monospace;font-size:12px">${a.sku}</strong>
+        <span style="font-size:11px;color:${stockColor}">${stockTxt}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-sub);margin:3px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.title || '–'}</div>
+      <div style="display:flex;gap:16px;font-size:13px;margin-top:4px">
+        <span>EK <strong>€${a.ek.toFixed(2)}</strong> netto</span>
+        <span style="color:var(--text-sub)">+5€ Versand = <strong>€${(a.ek+5).toFixed(2)}</strong></span>
+        <span>VK <strong>€${a.vk.toFixed(2)}</strong></span>
+        <span style="color:${gewColor}">Gew. <strong>€${a.gewinn.toFixed(2)}</strong></span>
+      </div>
+      ${a.ean ? `<div style="font-size:11px;color:var(--text-sub);margin-top:2px">EAN: ${a.ean}</div>` : ''}
+    </div>`;
+  }).join('') + (plistData.length === 0
+    ? '<div style="color:var(--text-sub);font-size:12px;margin-top:6px">💡 Preisliste noch nicht geladen — einmal den Tab 📦 BAB Preisliste öffnen.</div>'
+    : '');
+
+  box.style.display = 'block';
+}
+
+// Klick außerhalb schließt Dropdown
+document.addEventListener('click', e => {
+  if (!e.target.closest('#qs-input') && !e.target.closest('#qs-result'))
+    document.getElementById('qs-result') && (document.getElementById('qs-result').style.display = 'none');
+});
+
+// ═══════════════════════════════════════════════════════════
+// BAB PREISLISTE
+// ═══════════════════════════════════════════════════════════
+const PLIST_URL = 'https://stavros-neovo.github.io/shopify-dropshipping/bab_preisliste.json';
+let plistData = [];     // alle Artikel
+let plistFiltered = []; // nach Filter
+
+async function loadPreisliste(manual = false) {
+  const loading = document.getElementById('plist-loading');
+  const status  = document.getElementById('plist-status');
+  if (loading) loading.style.display = 'block';
+  document.getElementById('plist-table') && (document.getElementById('plist-table').style.display = 'none');
+  document.getElementById('plist-empty') && (document.getElementById('plist-empty').style.display = 'none');
+
+  try {
+    const r = await fetch(PLIST_URL + '?t=' + Date.now());
+    const d = await r.json();
+    plistData = d.articles || [];
+
+    const gen = new Date(d.generated_at);
+    if (status) status.textContent = `Letzte Aktualisierung: ${gen.toLocaleString('de-DE')} · ${plistData.length} Artikel`;
+
+    // KPIs
+    const instock = plistData.filter(a => a.stock > 0).length;
+    const avgEk = plistData.length ? plistData.reduce((s,a) => s + a.ek, 0) / plistData.length : 0;
+    const avgGew = plistData.filter(a=>a.vk>0).reduce((s,a) => s + a.gewinn, 0) / (plistData.filter(a=>a.vk>0).length || 1);
+
+    document.getElementById('plist-count').textContent   = plistData.length.toLocaleString('de-DE');
+    document.getElementById('plist-instock').textContent = instock.toLocaleString('de-DE');
+    document.getElementById('plist-avgek').textContent   = '€' + avgEk.toFixed(2);
+    document.getElementById('plist-avgmarge').textContent = '€' + avgGew.toFixed(2);
+
+    // Nav-Badge: Anzahl Artikel
+    const badge = document.getElementById('nav-plist-badge');
+    if (badge) { badge.textContent = plistData.length; badge.className = 'nbadge green'; }
+
+    plistFilter();
+  } catch(e) {
+    if (status) status.textContent = '❌ Preisliste nicht erreichbar (noch nicht generiert?)';
+    if (loading) loading.style.display = 'none';
+  }
+}
+
+function plistFilter() {
+  const q     = (document.getElementById('plist-search')?.value || '').toLowerCase().trim();
+  const stock = document.getElementById('plist-stock-filter')?.value || 'all';
+  const sort  = document.getElementById('plist-sort')?.value || 'sku';
+
+  plistFiltered = plistData.filter(a => {
+    if (stock === 'instock'    && a.stock <= 0) return false;
+    if (stock === 'outofstock' && a.stock >  0) return false;
+    if (!q) return true;
+    return (
+      a.sku.toLowerCase().includes(q) ||
+      a.title.toLowerCase().includes(q) ||
+      a.ean.includes(q) ||
+      a.mfr.toLowerCase().includes(q) ||
+      a.ref_no.toLowerCase().includes(q)
+    );
+  });
+
+  // Sortieren
+  plistFiltered.sort((a, b) => {
+    if (sort === 'sku')         return a.sku.localeCompare(b.sku);
+    if (sort === 'ek_asc')      return a.ek - b.ek;
+    if (sort === 'ek_desc')     return b.ek - a.ek;
+    if (sort === 'gewinn_desc') return b.gewinn - a.gewinn;
+    return 0;
+  });
+
+  plistRender();
+}
+
+function plistRender() {
+  const tbody   = document.getElementById('plist-tbody');
+  const table   = document.getElementById('plist-table');
+  const empty   = document.getElementById('plist-empty');
+  const loading = document.getElementById('plist-loading');
+  const counter = document.getElementById('plist-result-count');
+  if (!tbody) return;
+
+  if (loading) loading.style.display = 'none';
+
+  if (counter) counter.textContent = `${plistFiltered.length} von ${plistData.length} Artikeln`;
+
+  if (plistFiltered.length === 0) {
+    if (table) table.style.display = 'none';
+    if (empty) empty.style.display = 'block';
+    return;
+  }
+  if (empty) empty.style.display = 'none';
+  if (table) table.style.display = '';
+
+  // Maximal 500 Zeilen rendern (Performance)
+  const toRender = plistFiltered.slice(0, 500);
+  tbody.innerHTML = toRender.map(a => {
+    const stockBadge = a.stock > 0
+      ? `<span style="color:var(--green);font-weight:600">${a.stock}</span>`
+      : `<span style="color:var(--red)">0</span>`;
+    const gewinnColor = a.gewinn > 20 ? 'var(--green)' : a.gewinn > 5 ? 'var(--text-main)' : 'var(--red)';
+    return `<tr style="border-bottom:1px solid var(--border);transition:background 0.1s" onmouseover="this.style.background='var(--card-bg)'" onmouseout="this.style.background=''">
+      <td style="padding:9px 12px;font-family:monospace;font-size:12px;white-space:nowrap"><strong>${a.sku}</strong></td>
+      <td style="padding:9px 12px;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${a.title}">${a.title || '<span style="color:var(--text-sub)">–</span>'}</td>
+      <td style="padding:9px 12px;font-family:monospace;font-size:11px;color:var(--text-sub)">${a.ean || '–'}</td>
+      <td style="padding:9px 12px;text-align:right">${stockBadge}</td>
+      <td style="padding:9px 12px;text-align:right;font-weight:700">€${a.ek.toFixed(2)}</td>
+      <td style="padding:9px 12px;text-align:right;color:var(--text-sub)">€${a.vk.toFixed(2)}</td>
+      <td style="padding:9px 12px;text-align:right;font-weight:700;color:${gewinnColor}">€${a.gewinn.toFixed(2)}</td>
+    </tr>`;
+  }).join('');
+
+  if (plistFiltered.length > 500) {
+    const more = plistFiltered.length - 500;
+    tbody.innerHTML += `<tr><td colspan="7" style="padding:12px;text-align:center;color:var(--text-sub);font-size:12px">… und ${more} weitere Artikel (Suche verfeinern)</td></tr>`;
+  }
+}
+
 // Initial load + 15min auto-refresh
 loadHealthReport();
 setInterval(() => loadHealthReport(), 15 * 60 * 1000);
+
+// ═══════════════════════════════════════════════════════════════ BILD-PFLEGE
+const BP_URL = 'https://stavros-neovo.github.io/shopify-dropshipping/image_review_items.json';
+const BP_STORAGE_KEY = 'neodeals_bildpflege_images';
+let bpItems = [];
+let bpLocal = {}; // SKU → { url, done }
+
+function bpLoadLocal() {
+  try { bpLocal = JSON.parse(localStorage.getItem(BP_STORAGE_KEY) || '{}'); } catch(e) { bpLocal = {}; }
+}
+function bpSaveLocal() {
+  localStorage.setItem(BP_STORAGE_KEY, JSON.stringify(bpLocal));
+}
+
+async function bpLoad() {
+  bpLoadLocal();
+  document.getElementById('bp-loading').style.display = 'block';
+  document.getElementById('bp-loading').textContent = '⏳ Wird geladen…';
+  try {
+    const r = await fetch(BP_URL + '?t=' + Date.now());
+    bpItems = await r.json();
+    bpFilter();
+  } catch(e) {
+    document.getElementById('bp-loading').textContent = '❌ Fehler beim Laden: ' + e.message;
+  }
+}
+
+function bpFilter() {
+  bpLoadLocal();
+  const q = (document.getElementById('bp-search')?.value || '').toLowerCase();
+  const filter = document.getElementById('bp-filter')?.value || 'all';
+  let visible = bpItems.filter(item => {
+    const matchQ = !q || item.sku.toLowerCase().includes(q) || (item.title||'').toLowerCase().includes(q) || (item.ean||'').includes(q);
+    const isDone = !!(bpLocal[item.sku]?.url);
+    const matchF = filter === 'all' || (filter === 'done' && isDone) || (filter === 'open' && !isDone);
+    return matchQ && matchF;
+  });
+  bpRender(visible);
+}
+
+function bpRender(items) {
+  const grid = document.getElementById('bp-grid');
+  const loading = document.getElementById('bp-loading');
+  if (loading) loading.style.display = 'none';
+
+  const done = bpItems.filter(i => bpLocal[i.sku]?.url).length;
+  const open = bpItems.length - done;
+  document.getElementById('bp-count-deakt').textContent = bpItems.length;
+  document.getElementById('bp-count-done').textContent  = done;
+  document.getElementById('bp-count-open').textContent  = open;
+  document.getElementById('nav-bild-badge').textContent = open || '✓';
+  document.getElementById('nav-bild-badge').className = 'nbadge ' + (open > 0 ? 'red' : 'green');
+
+  grid.innerHTML = items.map(item => {
+    const saved = bpLocal[item.sku] || {};
+    const isDone = !!saved.url;
+    const previewUrl = saved.url || item.suggested_url || '';
+    return `<div style="border-bottom:1px solid var(--border);border-right:1px solid var(--border);padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:${isDone?'#f0fdf4':'#fff'}">
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:11px;font-weight:700;background:${isDone?'var(--green)':'var(--red)'};color:#fff;padding:2px 7px;border-radius:20px">${isDone?'✓ OK':'OFFEN'}</span>
+        <span style="font-size:12px;font-weight:700;color:var(--text)">${item.sku}</span>
+        <span style="font-size:11px;color:var(--text-muted);margin-left:auto">${item.ean||'?'}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text);line-height:1.4">${item.title||'<em style="color:var(--text-muted)">Kein Titel</em>'}</div>
+      <div style="display:flex;gap:8px;align-items:flex-start">
+        ${previewUrl ? `<img src="${previewUrl}" alt="" style="width:64px;height:64px;object-fit:contain;border:1px solid var(--border);border-radius:6px;background:#f8fafc;flex-shrink:0" onerror="this.style.opacity='0.2'">` : `<div style="width:64px;height:64px;border:2px dashed var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📷</div>`}
+        <div style="flex:1;min-width:0">
+          <input type="text" id="bp-url-${item.sku}" value="${previewUrl}"
+            placeholder="https://hersteller.com/produkt.jpg"
+            style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:11px;margin-bottom:6px"
+            oninput="bpPreview('${item.sku}')">
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-primary" style="font-size:11px;padding:5px 10px" onclick="bpSave('${item.sku}')">💾 Speichern</button>
+            <button class="btn btn-outline" style="font-size:11px;padding:5px 10px" onclick="bpOpenSearch('${item.sku}','${(item.title||item.ean||'').replace(/'/g,'')}')">🔍 Suchen</button>
+            ${isDone ? `<button class="btn btn-green" style="font-size:11px;padding:5px 10px" onclick="bpPublish('${item.sku}')">📤 Reaktivieren</button>` : ''}
+          </div>
+        </div>
+      </div>
+      ${saved.published ? `<div style="font-size:11px;color:var(--green)">✅ eBay reaktiviert ${saved.published}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  if (items.length === 0) {
+    grid.innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted);font-size:13px">Keine Einträge</div>';
+  }
+}
+
+function bpPreview(sku) {
+  const url = document.getElementById('bp-url-'+sku)?.value;
+  // Bild im Card live ersetzen
+  const card = document.getElementById('bp-url-'+sku)?.closest('div[style]');
+  const img = card?.querySelector('img');
+  if (img && url) img.src = url;
+}
+
+function bpSave(sku) {
+  bpLoadLocal();
+  const url = document.getElementById('bp-url-'+sku)?.value?.trim();
+  if (!url) { alert('Bitte eine Bild-URL eingeben.'); return; }
+  if (!url.startsWith('http')) { alert('URL muss mit http/https beginnen.'); return; }
+  bpLocal[sku] = { ...bpLocal[sku], url, saved_at: new Date().toISOString() };
+  bpSaveLocal();
+  bpFilter();
+
+  // Trigger GitHub Action via API um eBay + supplier_map zu updaten
+  bpTriggerUpdate(sku, url);
+}
+
+function bpOpenSearch(sku, title) {
+  const q = encodeURIComponent(title + ' produktbild site:hersteller OR pressematerial -amazon -ebay -kaufland');
+  window.open(`https://www.google.com/search?q=${q}&tbm=isch`, '_blank');
+}
+
+async function bpTriggerUpdate(sku, imageUrl) {
+  const pat = localStorage.getItem('neodeals_gh_pat');
+  if (!pat) {
+    alert('Kein GitHub PAT gespeichert. Bitte im Dashboard unter Einstellungen hinterlegen.\n\nBild lokal gespeichert — Reaktivierung bitte manuell über "Reaktivieren"-Button.');
+    return;
+  }
+
+  // Erstelle image_updates.json im Repo mit diesem SKU
+  const items = Object.entries(bpLocal)
+    .filter(([,v]) => v.url && !v.published)
+    .map(([s, v]) => ({ sku: s, image_url: v.url }));
+
+  if (items.length === 0) return;
+
+  // GitHub API: Datei schreiben + Workflow dispatchen
+  const REPO = 'Stavros-Neovo/shopify-dropshipping';
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify({ updated_at: new Date().toISOString(), items }, null, 2))));
+
+  // Aktuelle SHA holen
+  let sha = '';
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/image_updates.json`,
+      { headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github+json' }});
+    if (r.ok) sha = (await r.json()).sha;
+  } catch(e) {}
+
+  await fetch(`https://api.github.com/repos/${REPO}/contents/image_updates.json`, {
+    method: 'PUT',
+    headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `bild-pflege: ${sku} Bild gesetzt`, content, ...(sha?{sha}:{}) })
+  });
+
+  // Workflow triggern
+  const wf = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/apply_image_updates.yml/dispatches`, {
+    method: 'POST',
+    headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ref: 'main' })
+  });
+
+  if (wf.ok || wf.status === 204) {
+    bpLocal[sku].triggered = new Date().toISOString();
+    bpSaveLocal();
+    alert(`✅ GitHub Action gestartet — ${sku} wird in ~2 Min auf eBay reaktiviert.`);
+  } else {
+    alert('Bild gespeichert. GitHub Action konnte nicht gestartet werden (PAT prüfen).');
+  }
+}
+
+async function bpPublish(sku) {
+  const saved = bpLocal[sku];
+  if (!saved?.url) { alert('Kein Bild für ' + sku); return; }
+  await bpTriggerUpdate(sku, saved.url);
+}
+
+// ═══════════════════════════════════════════════════
+// ORDERS — dynamisches Bestellungs-Management
+// ═══════════════════════════════════════════════════
+const ORDERS_KEY = 'neodeals_orders';
+
+// Seed-Daten (bisherige Bestellungen) — nur beim ersten Laden
+const ORDERS_SEED = [
+  { id:'ord_001', date:'2026-06-16', nr:'18-14766-10957', buyer:'cengiz önel',    sku:'HHWM0023', name:'Makita Bohrhammer schnurlos',          vk:152.99, ek:107.08, note:'Email an BAB versandt', status:'open' },
+  { id:'ord_002', date:'2026-06-16', nr:'05-14786-31141', buyer:'lostprince77',   sku:'PETK0049', name:'Petkit Selbstreinigende Katzentoilette', vk:29.98,  ek:8.30,   note:'Email an BAB versandt', status:'open' },
+  { id:'ord_003', date:'2026-06-15', nr:'08-14779-12258', buyer:'mr.mxa',         sku:'NETU0187', name:'Ubiquiti UniFi Dream Machine Pro',       vk:279.98, ek:157.00, note:'Email an BAB versandt', status:'open' },
+  { id:'ord_004', date:'2026-06-13', nr:'01-14783-23263', buyer:'thaimakx1',      sku:'ANTB0005', name:'',                                       vk:219.98, ek:122.00, note:'', status:'done' },
+  { id:'ord_005', date:'2026-06-12', nr:'08-14763-57410', buyer:'printgekko',     sku:'SHG0003',  name:'',                                       vk:63.98,  ek:35.00,  note:'', status:'done' },
+  { id:'ord_006', date:'2026-06-11', nr:'20-14740-74871', buyer:'jokez',          sku:'PPSE0102', name:'',                                       vk:55.98,  ek:29.00,  note:'', status:'done' },
+  { id:'ord_007', date:'2026-06-08', nr:'18-14731-45799', buyer:'bb-maid',        sku:'USBK1023', name:'',                                       vk:25.98,  ek:12.00,  note:'', status:'done' },
+  { id:'ord_008', date:'2026-06-08', nr:'23-14722-05332', buyer:'d.breustedt58',  sku:'HHWB5012', name:'',                                       vk:38.98,  ek:15.23,  note:'', status:'done' },
+  { id:'ord_009', date:'2026-06-07', nr:'18-14726-98065', buyer:'cheoxyne',       sku:'USBK1036', name:'',                                       vk:29.98,  ek:15.00,  note:'', status:'done' },
+  { id:'ord_010', date:'2026-06-07', nr:'22-14719-39725', buyer:'colddog71kay',   sku:'SUPD1027', name:'',                                       vk:29.98,  ek:11.00,  note:'', status:'done' },
+];
+
+function ordersLoad() {
+  let stored = localStorage.getItem(ORDERS_KEY);
+  if (!stored) {
+    localStorage.setItem(ORDERS_KEY, JSON.stringify(ORDERS_SEED));
+    return ORDERS_SEED.slice();
+  }
+  return JSON.parse(stored);
+}
+
+function ordersSaveAll(orders) {
+  localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
+}
+
+// Gewinn berechnen (selbe Formel wie smart_lister.py)
+function calcProfit(vk, ek) {
+  const TOTAL_FEE = 0.21;
+  const VAT = 1.19;
+  const SHIP = 5.0;
+  const fee = vk * TOTAL_FEE;
+  const vat = (vk - fee) * (1 - 1 / VAT);
+  const netto = vk - fee - vat;
+  return Math.round((netto - SHIP - ek) * 100) / 100;
+}
+
+function ordersRender() {
+  const orders = ordersLoad();
+  const search = (document.getElementById('orders-search')?.value || '').toLowerCase();
+  const filter = document.getElementById('orders-filter')?.value || 'all';
+
+  const open = orders.filter(o => o.status === 'open');
+  const done = orders.filter(o => o.status === 'done');
+  const totalVk = orders.reduce((s, o) => s + o.vk, 0);
+  const totalProfit = orders.reduce((s, o) => s + calcProfit(o.vk, o.ek), 0);
+  const avgVk = orders.length ? totalVk / orders.length : 0;
+  const highestOrder = orders.length ? orders.reduce((a, b) => a.vk > b.vk ? a : b) : null;
+
+  // KPIs
+  document.getElementById('orders-kpi').innerHTML = `
+    <div class="kpi-card amber"><div class="kpi-icon">⏳</div><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">${open.length}</div><div class="kpi-sub">Warten auf BAB-Tracking</div></div>
+    <div class="kpi-card green"><div class="kpi-icon">✅</div><div class="kpi-label">Abgeschlossene</div><div class="kpi-value" style="color:var(--green)">${done.length}</div><div class="kpi-sub">€${done.reduce((s,o)=>s+o.vk,0).toFixed(2).replace('.',',')} Umsatz</div></div>
+    <div class="kpi-card blue"><div class="kpi-icon">📊</div><div class="kpi-label">Ø Bestellwert</div><div class="kpi-value">€${avgVk.toFixed(2).replace('.',',')}</div><div class="kpi-sub">alle ${orders.length} Bestellungen</div></div>
+    <div class="kpi-card green"><div class="kpi-icon">💰</div><div class="kpi-label">Gesamtgewinn (netto)</div><div class="kpi-value" style="color:var(--green)">€${totalProfit.toFixed(2).replace('.',',')}</div><div class="kpi-sub">nach eBay-Gebühren + MwSt</div></div>
+  `;
+
+  // Offene Bestellungen Grid
+  const grid = document.getElementById('orders-open-grid');
+  const empty = document.getElementById('orders-open-empty');
+  if (open.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+  } else {
+    empty.style.display = 'none';
+    grid.style.gridTemplateColumns = open.length === 1 ? '1fr 2fr' : open.length === 2 ? '1fr 1fr' : 'repeat(3,1fr)';
+    grid.innerHTML = open.map((o, i) => {
+      const profit = calcProfit(o.vk, o.ek);
+      const d = new Date(o.date);
+      const dateStr = d.toLocaleDateString('de-DE', {day:'2-digit',month:'2-digit',year:'numeric'});
+      return `<div style="border:2px solid #fcd34d;border-radius:10px;padding:16px;background:#fffbeb">
+        <div style="font-size:11px;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px">Bestellung ${i+1} · ${dateStr}</div>
+        <div style="font-size:16px;font-weight:800;margin-bottom:4px">${o.sku}</div>
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px">${o.nr ? 'Nr. ' + o.nr + ' · ' : ''}${o.buyer}</div>
+        ${o.name ? `<div style="font-size:12px;color:#334155;margin-bottom:8px">${o.name}</div>` : ''}
+        <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px">VK: €${o.vk.toFixed(2).replace('.',',')} · Gewinn: <span style="color:var(--green)">€${profit.toFixed(2).replace('.',',')}</span></div>
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:12px">EK: €${o.ek.toFixed(2).replace('.',',')}</div>
+        ${o.note ? `<div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">📝 ${o.note}</div>` : ''}
+        <div style="margin-top:8px;padding:8px;background:#fef3c7;border-radius:6px;font-size:11px;color:#92400e">
+          ⏳ Warte auf Tracking-Nummer von BAB → in eBay eintragen
+        </div>
+        <button onclick="ordersMark('${o.id}','done')" style="margin-top:10px;width:100%;background:#10b981;color:#fff;border:none;border-radius:7px;padding:8px;font-size:12px;font-weight:700;cursor:pointer">✓ Als erledigt markieren</button>
+      </div>`;
+    }).join('');
+  }
+
+  // Nav-Badge
+  const badge = document.querySelector('.nav-item [onclick*="orders"] .nbadge') ||
+                document.querySelector('[onclick*="showSection('orders'"] .nbadge');
+  document.querySelectorAll('.nav-item').forEach(el => {
+    if (el.getAttribute('onclick')?.includes("'orders'")) {
+      const b = el.querySelector('.nbadge');
+      if (b) b.textContent = open.length;
+    }
+  });
+
+  // Tabelle filtern
+  let filtered = orders.filter(o => {
+    if (filter === 'open' && o.status !== 'open') return false;
+    if (filter === 'done' && o.status !== 'done') return false;
+    if (search) {
+      const hay = [o.nr,o.buyer,o.sku,o.name,o.note].join(' ').toLowerCase();
+      if (!hay.includes(search)) return false;
+    }
+    return true;
+  });
+
+  const now = new Date();
+  const monthLabel = now.toLocaleDateString('de-DE', {month:'long', year:'numeric'});
+  document.getElementById('orders-table-title').textContent = `Alle Bestellungen — ${monthLabel} (${filtered.length})`;
+
+  const tbody = document.getElementById('orders-tbody');
+  if (!filtered.length) {
+    tbody.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:24px;color:#94a3b8">Keine Bestellungen gefunden</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(o => {
+    const profit = calcProfit(o.vk, o.ek);
+    const d = new Date(o.date);
+    const dateStr = d.toLocaleDateString('de-DE', {day:'2-digit',month:'2-digit'}) + '.';
+    const isDone = o.status === 'done';
+    return `<tr>
+      <td>${dateStr}</td>
+      <td style="font-family:monospace;font-size:11px">${o.nr || '—'}</td>
+      <td><strong>${o.buyer}</strong></td>
+      <td><span class="badge ${isDone ? 'badge-gray' : 'badge-amber'}">${o.sku}</span></td>
+      <td><strong>€${o.vk.toFixed(2).replace('.',',')}</strong></td>
+      <td style="color:var(--text-muted)">€${o.ek.toFixed(2).replace('.',',')}</td>
+      <td style="color:var(--green);font-weight:700">€${profit.toFixed(2).replace('.',',')}</td>
+      <td>${isDone
+        ? '<span class="badge badge-green">✓ Fertig</span>'
+        : '<span class="badge badge-amber">⏳ Offen</span>'}</td>
+      <td>
+        ${isDone
+          ? `<button onclick="ordersMark('${o.id}','open')" style="background:none;border:1px solid #e2e8f0;border-radius:5px;padding:3px 8px;font-size:10px;cursor:pointer;color:#64748b">↩ Offen</button>`
+          : `<button onclick="ordersMark('${o.id}','done')" style="background:none;border:1px solid #10b981;border-radius:5px;padding:3px 8px;font-size:10px;cursor:pointer;color:#10b981">✓ Erledigt</button>`}
+        <button onclick="ordersDelete('${o.id}')" style="background:none;border:none;color:#ef4444;font-size:12px;cursor:pointer;margin-left:4px" title="Löschen">🗑</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+function ordersMark(id, status) {
+  const orders = ordersLoad();
+  const o = orders.find(x => x.id === id);
+  if (o) { o.status = status; ordersSaveAll(orders); ordersRender(); }
+}
+
+function ordersDelete(id) {
+  if (!confirm('Bestellung wirklich löschen?')) return;
+  const orders = ordersLoad().filter(x => x.id !== id);
+  ordersSaveAll(orders);
+  ordersRender();
+}
+
+function ordersOpenModal() {
+  const overlay = document.getElementById('order-modal-overlay');
+  overlay.style.display = 'flex';
+  // Datum auf heute setzen
+  document.getElementById('om-datum').value = new Date().toISOString().split('T')[0];
+  document.getElementById('om-nr').value = '';
+  document.getElementById('om-buyer').value = '';
+  document.getElementById('om-sku').value = '';
+  document.getElementById('om-name').value = '';
+  document.getElementById('om-vk').value = '';
+  document.getElementById('om-ek').value = '';
+  document.getElementById('om-note').value = '';
+  document.getElementById('om-profit-display').textContent = '—';
+}
+
+function ordersCloseModal() {
+  document.getElementById('order-modal-overlay').style.display = 'none';
+}
+
+function ordersModalCalc() {
+  const vk = parseFloat(document.getElementById('om-vk').value) || 0;
+  const ek = parseFloat(document.getElementById('om-ek').value) || 0;
+  const el = document.getElementById('om-profit-display');
+  if (vk > 0 && ek > 0) {
+    const profit = calcProfit(vk, ek);
+    el.textContent = '€' + profit.toFixed(2).replace('.', ',');
+    el.style.color = profit >= 0 ? '#10b981' : '#ef4444';
+    el.style.background = profit >= 0 ? '#f0fdf4' : '#fef2f2';
+    el.style.borderColor = profit >= 0 ? '#bbf7d0' : '#fecaca';
+  } else {
+    el.textContent = '—';
+    el.style.color = '#10b981';
+    el.style.background = '#f0fdf4';
+    el.style.borderColor = '#bbf7d0';
+  }
+}
+
+function ordersSave() {
+  const date  = document.getElementById('om-datum').value;
+  const nr    = document.getElementById('om-nr').value.trim();
+  const buyer = document.getElementById('om-buyer').value.trim();
+  const sku   = document.getElementById('om-sku').value.trim().toUpperCase();
+  const name  = document.getElementById('om-name').value.trim();
+  const vk    = parseFloat(document.getElementById('om-vk').value) || 0;
+  const ek    = parseFloat(document.getElementById('om-ek').value) || 0;
+  const note  = document.getElementById('om-note').value.trim();
+
+  if (!date || !buyer || !sku || vk <= 0) {
+    alert('Bitte Datum, Käufer, SKU und VK-Preis eingeben.');
+    return;
+  }
+
+  const orders = ordersLoad();
+  const newOrder = {
+    id:     'ord_' + Date.now(),
+    date, nr, buyer, sku, name, vk, ek, note,
+    status: 'open',
+  };
+  orders.unshift(newOrder); // Neueste zuerst
+  ordersSaveAll(orders);
+  ordersCloseModal();
+  ordersRender();
+}
+
+// Beim Öffnen des Tabs laden
+const _origShowSection = typeof showSection !== 'undefined' ? showSection : null;
+
+// ═══════════════════════════════════════════════════
+// KOSTEN & BREAK-EVEN
+// ═══════════════════════════════════════════════════
+const KOSTEN_KEY = 'neodeals_kosten';
+const KOSTEN_DEFAULT = [
+  { id:'k1', name:'eBay Top-Shop Abo',           amount: 59.95, category:'eBay' },
+  { id:'k2', name:'eBay Einstellgebühren (Ø)',    amount: 18.00, category:'eBay' },
+  { id:'k3', name:'eBay Kampagnen (8% Ø-Umsatz)',amount: 80.00, category:'eBay' },
+  { id:'k4', name:'Anthropic API (Beschreibungen)',amount: 5.00, category:'Tools' },
+  { id:'k5', name:'GitHub Actions (kostenlos)',   amount: 0.00,  category:'Tools' },
+  { id:'k6', name:'Domain / Hosting',            amount: 0.00,  category:'Tools' },
+  { id:'k7', name:'Retouren-Rückversand (Ø)',    amount: 15.00, category:'Logistik' },
+  { id:'k8', name:'Sonstiges',                   amount: 10.00, category:'Sonstiges' },
+];
+
+function kostenLoad() {
+  const s = localStorage.getItem(KOSTEN_KEY);
+  return s ? JSON.parse(s) : KOSTEN_DEFAULT.map(k => ({...k}));
+}
+
+function kostenSaveAll(data) {
+  localStorage.setItem(KOSTEN_KEY, JSON.stringify(data));
+}
+
+function kostenInit() {
+  kostenRender();
+  kostenCalc();
+}
+
+function kostenRender() {
+  const items = kostenLoad();
+  const total = items.reduce((s, k) => s + (parseFloat(k.amount) || 0), 0);
+
+  // KPIs
+  const avgProfit = parseFloat(document.getElementById('be-avg-profit')?.value || 8.5);
+  const retour    = parseFloat(document.getElementById('be-retour')?.value || 3) / 100;
+  const netProfit = avgProfit * (1 - retour);
+  const salesNeeded = netProfit > 0 ? Math.ceil(total / netProfit) : '∞';
+  const dailySales  = netProfit > 0 ? Math.ceil(total / netProfit / 30) : '∞';
+
+  document.getElementById('kosten-kpi').innerHTML = `
+    <div class="kpi-card red"><div class="kpi-icon">🧾</div><div class="kpi-label">Fixkosten/Monat</div><div class="kpi-value" style="color:var(--red)">€${total.toFixed(2).replace('.',',')}</div><div class="kpi-sub">${items.length} Kostenpunkte</div></div>
+    <div class="kpi-card amber"><div class="kpi-icon">⚖️</div><div class="kpi-label">Break-even Verkäufe</div><div class="kpi-value" style="color:var(--amber)">${salesNeeded}</div><div class="kpi-sub">pro Monat nötig</div></div>
+    <div class="kpi-card blue"><div class="kpi-icon">📅</div><div class="kpi-label">= Täglich</div><div class="kpi-value">${dailySales}</div><div class="kpi-sub">Verkäufe für Break-even</div></div>
+    <div class="kpi-card green"><div class="kpi-icon">💰</div><div class="kpi-label">Kosten/Verkauf</div><div class="kpi-value" style="color:var(--green)">€${salesNeeded > 0 && salesNeeded !== '∞' ? (total / salesNeeded).toFixed(2).replace('.',',') : '—'}</div><div class="kpi-sub">Fixkosten-Anteil</div></div>
+  `;
+
+  // Rows
+  const categories = [...new Set(items.map(k => k.category))];
+  let html = '';
+  for (const cat of categories) {
+    const catItems = items.filter(k => k.category === cat);
+    const catTotal = catItems.reduce((s,k) => s + (parseFloat(k.amount)||0), 0);
+    html += `<div style="font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;margin:12px 0 6px;padding-bottom:4px;border-bottom:1px solid #f1f5f9">${cat} — €${catTotal.toFixed(2).replace('.',',')}/Monat</div>`;
+    for (const item of catItems) {
+      html += `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px" data-id="${item.id}">
+        <input type="text" value="${item.name}" onchange="kostenUpdateName('${item.id}',this.value)"
+          style="flex:1;border:1px solid #e2e8f0;border-radius:6px;padding:6px 10px;font-size:12px">
+        <span style="color:#64748b;font-size:12px">€</span>
+        <input type="number" value="${item.amount}" step="0.01" min="0" onchange="kostenUpdateAmount('${item.id}',this.value)"
+          style="width:80px;border:1px solid #e2e8f0;border-radius:6px;padding:6px 8px;font-size:12px">
+        <button onclick="kostenDelete('${item.id}')" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:14px" title="Löschen">✕</button>
+      </div>`;
+    }
+  }
+  html += `<div style="display:flex;justify-content:space-between;align-items:center;padding-top:10px;margin-top:4px;border-top:2px solid var(--border);font-weight:800">
+    <span>Gesamt</span><span style="color:var(--red)">€${total.toFixed(2).replace('.',',')} / Monat</span>
+  </div>`;
+  document.getElementById('kosten-rows').innerHTML = html;
+
+  // Chart
+  kostenChart(categories, items);
+}
+
+function kostenCalc() {
+  const items = kostenLoad();
+  const total = items.reduce((s,k) => s + (parseFloat(k.amount)||0), 0);
+  const avgProfit = parseFloat(document.getElementById('be-avg-profit')?.value || 8.5);
+  const retour    = parseFloat(document.getElementById('be-retour')?.value || 3) / 100;
+  const netProfit = avgProfit * (1 - retour);
+  const salesNeeded = netProfit > 0 ? Math.ceil(total / netProfit) : null;
+  const dailySales  = salesNeeded ? Math.ceil(salesNeeded / 30) : null;
+  const avgVk = 75; // Ø VK-Preis Annahme
+
+  document.getElementById('be-fixkosten').textContent = `€${total.toFixed(2).replace('.',',')}`;
+  document.getElementById('be-sales').textContent = salesNeeded ? `${salesNeeded} Verkäufe` : '∞';
+  document.getElementById('be-daily').textContent = dailySales ? `${dailySales} Verkäufe/Tag` : '∞';
+  document.getElementById('be-umsatz').textContent = salesNeeded ? `€${(salesNeeded * avgVk).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}` : '∞';
+
+  // Kampagnen-Ersparnis: 8% → 5% auf Ø 750€ Umsatz/Monat
+  const avgUmsatz = salesNeeded ? salesNeeded * avgVk : 750;
+  const ersparnis = avgUmsatz * 0.03;
+  const el = document.getElementById('kampagne-ersparnis');
+  if (el) el.textContent = `€${ersparnis.toFixed(0)}`;
+
+  kostenRender();
+}
+
+function kostenUpdateName(id, val) {
+  const items = kostenLoad();
+  const item = items.find(k => k.id === id);
+  if (item) { item.name = val; kostenSaveAll(items); }
+}
+
+function kostenUpdateAmount(id, val) {
+  const items = kostenLoad();
+  const item = items.find(k => k.id === id);
+  if (item) { item.amount = parseFloat(val) || 0; kostenSaveAll(items); kostenCalc(); }
+}
+
+function kostenDelete(id) {
+  const items = kostenLoad().filter(k => k.id !== id);
+  kostenSaveAll(items);
+  kostenRender();
+  kostenCalc();
+}
+
+function kostenAddRow() {
+  const items = kostenLoad();
+  items.push({ id: 'k_' + Date.now(), name: 'Neuer Kostenpunkt', amount: 0, category: 'Sonstiges' });
+  kostenSaveAll(items);
+  kostenRender();
+}
+
+function kostenSave() {
+  // Aktuell alle Inputs auslesen und speichern
+  kostenCalc();
+  const btn = document.querySelector('[onclick="kostenSave()"]');
+  if (btn) { btn.textContent = '✓ Gespeichert'; setTimeout(() => btn.textContent = '💾 Speichern', 1500); }
+}
+
+let kostenChartInst = null;
+function kostenChart(categories, items) {
+  const canvas = document.getElementById('kosten-chart');
+  if (!canvas) return;
+  const labels = categories;
+  const data   = categories.map(cat => items.filter(k=>k.category===cat).reduce((s,k)=>s+(parseFloat(k.amount)||0),0));
+  const colors = ['#3b82f6','#f59e0b','#10b981','#ef4444','#8b5cf6','#06b6d4'];
+
+  if (kostenChartInst) kostenChartInst.destroy();
+  kostenChartInst = new Chart(canvas, {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data, backgroundColor: colors.slice(0, labels.length), borderWidth: 2, borderColor: '#fff' }] },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'right', labels: { font: { size: 12 } } },
+        tooltip: { callbacks: { label: ctx => ` €${ctx.raw.toFixed(2).replace('.',',')} / Monat` } }
+      }
+    }
+  });
+}
 </script>
 </body>
 </html>

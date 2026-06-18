@@ -585,21 +585,189 @@ def update_supplier_prices(catalog: dict, supplier_map_path: str = SUPPLIER_MAP)
 
 
 # ---------------------------------------------------------------------------
+# eBay Produktbeschreibung aus enrichment_index aufbauen
+# ---------------------------------------------------------------------------
+def build_ebay_description(enr: dict, art: dict, title: str) -> str:
+    """
+    Baut eine HTML-Produktbeschreibung für eBay aus vorhandenen Daten.
+
+    Quellen (Priorität hoch → niedrig):
+      enrichment_index: long_summary, short_summary, marketing_text, specs_html
+      artikeldaten:     long_summary, short_summary, specs (raw text)
+
+    Gibt immer valides HTML zurück (Fallback: Titel).
+    eBay-Limit: 500.000 Zeichen (hier auf 6000 begrenzt für Lesbarkeit).
+    """
+    # Texte holen (enrichment bevorzugt, artikeldaten als Fallback)
+    long_desc   = (enr.get("long_summary")   or art.get("long_summary")   or "").strip()
+    short_desc  = (enr.get("short_summary")  or art.get("short_summary")  or "").strip()
+    marketing   = (enr.get("marketing_text") or art.get("marketing_text") or "").strip()
+    specs_html  = (enr.get("specs_html")     or "").strip()
+    specs_raw   = (art.get("specs")          or "").strip()
+    brand       = (enr.get("brand")          or art.get("hersteller")     or "").strip()
+
+    # Haupttext: am besten long_desc, sonst short_desc, sonst marketing
+    main_text = long_desc or short_desc or marketing
+
+    if not main_text and not specs_html and not specs_raw:
+        # Kein Inhalt → minimale Fallback-Beschreibung
+        return (
+            f'<p style="font-family:Arial,sans-serif;font-size:14px;color:#333;">'
+            f'{title}</p>'
+        )
+
+    parts = []
+
+    # Haupt-Beschreibungstext
+    if main_text:
+        # Bereits HTML? → direkt nutzen; sonst in <p> wrappen
+        if main_text.strip().startswith("<"):
+            parts.append(f'<div class="desc-main">{main_text}</div>')
+        else:
+            # Absätze erhalten (doppelte Zeilenumbrüche → <p>)
+            paragraphs = [p.strip() for p in main_text.split("\n\n") if p.strip()]
+            if len(paragraphs) > 1:
+                html_paras = "".join(f"<p>{p}</p>" for p in paragraphs)
+            else:
+                html_paras = f"<p>{main_text}</p>"
+            parts.append(f'<div class="desc-main">{html_paras}</div>')
+
+    # Marketing-Text (falls vorhanden und verschieden von main_text)
+    if marketing and marketing != main_text:
+        parts.append(
+            f'<p style="font-style:italic;color:#555;">{marketing[:400]}</p>'
+        )
+
+    # Technische Specs
+    if specs_html:
+        parts.append(
+            f'<h3 class="specs-title">Technische Daten</h3>'
+            f'<div class="specs-table">{specs_html}</div>'
+        )
+    elif specs_raw:
+        # Roher Specs-Text: zeilenweise als Liste
+        lines = [l.strip() for l in specs_raw.split("\n") if l.strip()]
+        if lines:
+            items = "".join(f"<li>{l}</li>" for l in lines[:30])
+            parts.append(
+                f'<h3 class="specs-title">Technische Daten</h3>'
+                f'<ul class="specs-list">{items}</ul>'
+            )
+
+    body = "\n".join(parts)
+
+    html = f"""<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333;max-width:900px;line-height:1.6">
+<style>
+  .desc-main p{{margin:0 0 10px 0}}
+  .specs-title{{font-size:16px;color:#0064d2;border-bottom:2px solid #0064d2;padding-bottom:4px;margin:16px 0 8px 0}}
+  .specs-table table{{border-collapse:collapse;width:100%}}
+  .specs-table td,.specs-table th{{border:1px solid #ddd;padding:6px 10px;font-size:13px}}
+  .specs-table tr:nth-child(even){{background:#f9f9f9}}
+  .specs-list{{padding-left:20px;margin:4px 0}}
+  .specs-list li{{margin-bottom:3px;font-size:13px}}
+</style>
+{body}
+</div>"""
+
+    # eBay-Limit (6000 Zeichen für gute Lesbarkeit)
+    return html[:6000]
+
+
+# ---------------------------------------------------------------------------
+# Stock=0 Deaktivierung — läuft immer beim Katalog-Load
+# ---------------------------------------------------------------------------
+def deactivate_zero_stock(catalog: dict, cfg: dict, args, dry_run: bool = False):
+    """
+    Vergleicht supplier_map mit aktuellem Katalog.
+    Artikel die nicht mehr im Katalog sind (Stock=0 oder ausgelistet vom Lieferant)
+    werden sofort von eBay zurückgezogen + aus supplier_map entfernt.
+
+    SICHERHEIT (BAB-ONLY Modus):
+      Bei --bab-only ist catalog nur BAB-Artikel. Kosatec-Artikel würden
+      fälschlich fehlen → nur BAB-Supplier-Einträge prüfen.
+    """
+    smap = load_supplier_map()
+    if not smap:
+        return
+
+    bab_only = getattr(args, 'bab_only', False)
+    log.info("=== Stock=0 Deaktivierung ===")
+    if bab_only:
+        log.info("  BAB-ONLY Modus: prüfe nur BAB-Artikel")
+
+    from ebay_client import EbayClient
+    try:
+        ebay_cfg = cfg.get("ebay", {})
+        client = EbayClient.from_env(ebay_cfg)
+    except Exception as e:
+        log.warning(f"  eBay Client nicht verfügbar — Deaktivierung übersprungen: {e}")
+        return
+
+    offlined = 0
+    checked = 0
+    for sku, entry in list(smap.items()):
+        ean      = entry.get("ean", "")
+        supplier = entry.get("supplier", "")
+
+        # BAB-ONLY: Kosatec-Artikel nicht anfassen (nicht im Katalog geladen)
+        if bab_only and supplier != "BAB":
+            continue
+
+        checked += 1
+        if ean in catalog:
+            continue  # Noch verfügbar → nichts tun
+
+        log.warning(f"  OFFLINE: SKU {sku} (EAN {ean}, {supplier}) — Stock=0 oder nicht mehr gelistet")
+        if dry_run:
+            log.warning(f"  DRY-RUN — würde deaktivieren: {sku}")
+            offlined += 1
+            continue
+
+        try:
+            offer = client.get_offer_for_sku(sku)
+            if offer:
+                offer_id = offer.get("offerId", "")
+                offer_status = offer.get("status", "")
+                if offer_status == "PUBLISHED":
+                    client.withdraw_offer(offer_id)
+                    log.info(f"    ✓ Offer {offer_id} zurückgezogen (war PUBLISHED)")
+                else:
+                    log.info(f"    ✓ Offer {offer_id} bereits {offer_status} — kein Withdraw nötig")
+            else:
+                log.info(f"    Kein aktives Offer für SKU {sku} auf eBay")
+            del smap[sku]
+            offlined += 1
+        except Exception as e:
+            log.error(f"    Fehler beim Deaktivieren SKU {sku}: {e}")
+
+    if offlined and not dry_run:
+        save_supplier_map(smap)
+
+    log.info(
+        f"  {checked} Artikel geprüft | "
+        f"{offlined} deaktiviert{'(dry-run)' if dry_run else ''} | "
+        f"{checked - offlined} noch verfügbar"
+    )
+
+
+# ---------------------------------------------------------------------------
 # Haupt-Logik
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser(description="Smart Lister — Wettbewerbs-basierter Artikel-Auswähler")
-    parser.add_argument("--scan",     action="store_true", help="eBay Score-Cache aktualisieren")
-    parser.add_argument("--select",   action="store_true", help="Top-Artikel auswählen + supplier_map schreiben")
-    parser.add_argument("--dry-run",  action="store_true", help="Nichts schreiben, nur anzeigen")
-    parser.add_argument("--top",      type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
-    parser.add_argument("--limit",    type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
-    parser.add_argument("--list",     action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
-    parser.add_argument("--config",   default=CONFIG_FILE)
-    parser.add_argument("--bab-only", action="store_true", help="Nur BAB-Produkte")
+    parser.add_argument("--scan",       action="store_true", help="eBay Score-Cache aktualisieren")
+    parser.add_argument("--select",     action="store_true", help="Top-Artikel auswählen + supplier_map schreiben")
+    parser.add_argument("--dry-run",    action="store_true", help="Nichts schreiben, nur anzeigen")
+    parser.add_argument("--top",        type=int, default=TOP_SHOP_LIMIT, help=f"Anzahl Artikel (Standard: {TOP_SHOP_LIMIT})")
+    parser.add_argument("--limit",      type=int, default=DAILY_API_LIMIT, help=f"Max API-Calls pro Run (Standard: {DAILY_API_LIMIT})")
+    parser.add_argument("--list",       action="store_true", help="Ausgewählte Artikel auf eBay listen (liest supplier_map.json)")
+    parser.add_argument("--max-new",    type=int, default=0, help="Max NEU-Listings pro Run (0=unbegrenzt). Bestehende Offers werden immer aktualisiert (kostenlos). Neue kosten 0,06€/Stk — z.B. --max-new 15")
+    parser.add_argument("--deactivate", action="store_true", help="Nur Stock=0 Deaktivierung ausführen (kein Scan/Select/List, keine Browse API Calls)")
+    parser.add_argument("--config",     default=CONFIG_FILE)
+    parser.add_argument("--bab-only",   action="store_true", help="Nur BAB-Produkte")
     args = parser.parse_args()
 
-    if not args.scan and not args.select and not args.list:
+    if not args.scan and not args.select and not args.list and not args.deactivate:
         parser.print_help()
         sys.exit(0)
 
@@ -662,6 +830,17 @@ def main():
         f"Bereits bekannt: {len(listed)}"
     )
 
+    # ── Stock=0 Deaktivierung: läuft IMMER (unabhängig von --scan/--select/--list) ──
+    # Artikel die nicht mehr im Katalog sind (Stock=0 oder ausgelistet vom Lieferant)
+    # werden sofort von eBay genommen. So spart man Fehlkäufe + schlechte Bewertungen.
+    if client_id and client_secret:
+        deactivate_zero_stock(catalog, cfg, args, dry_run=args.dry_run)
+
+    # --deactivate-only: nach Deaktivierung sofort beenden (kein Scan/Select/List)
+    if args.deactivate and not args.scan and not args.select and not args.list:
+        log.info("=== --deactivate: fertig ===")
+        sys.exit(0)
+
     # Score-Cache aktualisieren
     cache = load_score_cache()
 
@@ -686,47 +865,6 @@ def main():
     # Top-Artikel auswählen
     if args.select:
         log.info("=== Top-Artikel auswählen ===")
-
-        # --- Nicht mehr verfügbare Artikel deaktivieren ---
-        # SICHERHEIT: Nur wenn VOLLSTAENDIGER Katalog geladen ist.
-        # Bei --bab-only wuerden sonst alle Kosatec-Artikel faelschlich deaktiviert!
-        smap_existing = load_supplier_map()
-        if smap_existing and (client_id and client_secret):
-            log.info("Pruefe supplier_map auf nicht mehr verfuegbare Artikel...")
-            if getattr(args, 'bab_only', False):
-                log.info("BAB-ONLY Modus: Pruefe nur BAB-Artikel (Kosatec wird uebersprungen)")
-            from ebay_client import EbayClient
-            try:
-                ebay_cfg = cfg.get("ebay", {})
-                ebay_client_inst = EbayClient.from_env(ebay_cfg)
-                offlined = 0
-                for sku, entry in list(smap_existing.items()):
-                    ean = entry.get("ean", "")
-                    supplier = entry.get("supplier", "")
-                    # BAB-ONLY: Kosatec-Artikel nicht anfassen (nicht im bab-only Katalog)
-                    if getattr(args, 'bab_only', False) and supplier != "BAB":
-                        continue
-                    if ean not in catalog:
-                        log.warning(f"  OFFLINE: SKU {sku} (EAN {ean}, {supplier}) nicht mehr verfuegbar")
-                        if not args.dry_run:
-                            try:
-                                # Nur withdrawOffer — set_inventory(0) lehnt eBay ab (Fehler 25004)
-                                offer = ebay_client_inst.get_offer_for_sku(sku)
-                                if offer:
-                                    ebay_client_inst.withdraw_offer(offer["offerId"])
-                                    del smap_existing[sku]
-                                    offlined += 1
-                                else:
-                                    log.warning(f"  Kein Offer fuer SKU {sku} gefunden")
-                            except Exception as e:
-                                log.error(f"  Fehler beim Deaktivieren SKU {sku}: {e}")
-                if offlined:
-                    save_supplier_map(smap_existing)
-                    log.info(f"  {offlined} Artikel deaktiviert + aus supplier_map entfernt")
-                else:
-                    log.info("  Alle relevanten Artikel noch verfuegbar")
-            except Exception as e:
-                log.warning(f"  Deaktivierungs-Check uebersprungen: {e}")
 
         selected = select_top_products(catalog, cache, artdata, enrich, listed, top_n=args.top)
 
@@ -804,19 +942,23 @@ def main():
                 enr  = enrich.get(ean, {})
                 image = enr.get("image_main") or art.get("image") or ""
                 title = enr.get("title_seo") or art.get("title") or prod.get("name", sku)
+                desc  = build_ebay_description(enr, art, title)
                 to_list.append({
-                    "sku":      sku,
-                    "ean":      ean,
-                    "name":     title,
-                    "supplier": supplier,
-                    "vk":       entry.get("vk", 0.0),
-                    "image":    image,
+                    "sku":         sku,
+                    "ean":         ean,
+                    "name":        title,
+                    "supplier":    supplier,
+                    "vk":          entry.get("vk", 0.0),
+                    "image":       image,
+                    "description": desc,
                 })
             # Auf top_n beschränken wenn --select + --list zusammen läuft
             if len(to_list) > args.top:
                 to_list = to_list[:args.top]
             log.info(f"Artikel zum Listen: {len(to_list)}")
-            list_products(to_list, cfg, dry_run=args.dry_run)
+            if args.max_new > 0:
+                log.info(f"  max-new Limit: {args.max_new} neue Listings (~{args.max_new * 0.06:.2f}€ max Gebühren)")
+            list_products(to_list, cfg, dry_run=args.dry_run, max_new=args.max_new)
 
     log.info("=== Fertig ===")
 
@@ -824,11 +966,15 @@ def main():
 # ---------------------------------------------------------------------------
 # --list: Ausgewählte Artikel auf eBay listen
 # ---------------------------------------------------------------------------
-def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dict:
+def list_products(selected: list[dict], cfg: dict, dry_run: bool = False,
+                  max_new: int = 0) -> dict:
     """
-    Listet alle Artikel aus selected[] auf eBay via Inventory API.
-    Nutzt ebay_client.upsert_product() (Inventory + Offer + Publish).
-    Gibt {"ok": N, "skip": N, "error": N} zurück.
+    Listet Artikel aus selected[] auf eBay via Inventory API.
+
+    GEBÜHREN-KONTROLLE (max_new):
+      - Offer existiert bereits (PUBLISHED/UNPUBLISHED) → nur aktualisieren, KEINE Gebühr
+      - Neues Offer (noch nie gelistet) → 0,06€ Einstellgebühr pro Stück
+      - max_new > 0: begrenzt neue Listings pro Run (bestehende werden immer aktualisiert)
     """
     from ebay_client import EbayClient
 
@@ -843,9 +989,10 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
         log.error(f"eBay Client Fehler: {e}")
         return {"ok": 0, "skip": 0, "error": 0}
 
-    stats = {"ok": 0, "skip": 0, "error": 0}
+    stats = {"ok": 0, "skip": 0, "error": 0, "new_listings": 0, "updates": 0}
     total = len(selected)
     error_log: list[dict] = []
+    new_count = 0  # Zähler für wirklich NEU angelegte Offers
 
     for i, prod in enumerate(selected, 1):
         sku  = prod["sku"]
@@ -853,23 +1000,41 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
         name = prod["name"]
         vk   = prod["vk"]
 
+        # Gebühren-Check: Offer schon vorhanden?
+        is_new_listing = True
+        try:
+            existing_offer = client.get_offer_for_sku(sku)
+            if existing_offer:
+                is_new_listing = False  # Offer existiert → Update, keine Gebühr
+        except Exception:
+            pass  # Fehler beim Check → annehmen es ist neu
+
+        # max-new Limit prüfen: neue Listings stoppen wenn Limit erreicht
+        if is_new_listing and max_new > 0 and new_count >= max_new:
+            log.info(f"  ⏸ SKU {sku}: max-new Limit ({max_new}) erreicht — übersprungen")
+            stats["skip"] += 1
+            continue
+
         # Produkt-Dict für ebay_client aufbauen
         product = {
             "sku":         sku,
             "ean":         ean,
             "title":       name,
-            "description": name,  # Basis-Beschreibung — später Anthropic API
-            "category":    "",    # ebay_client bestimmt per Taxonomy-API
-            "stock":       1,     # Dropshipping: immer 1 verfügbar
+            "description": prod.get("description") or name,
+            "category":    "",
+            "stock":       1,
             "image_url":   prod.get("image", ""),
             "image_urls":  [prod["image"]] if prod.get("image") else [],
             "condition":   "NEW",
         }
 
-        log.info(f"[{i}/{total}] Liste: SKU {sku} | {name[:50]} | VK {vk:.2f}€")
+        fee_hint = "NEU +0,06€" if is_new_listing else "Update kostenlos"
+        log.info(f"[{i}/{total}] SKU {sku} | {name[:45]} | VK {vk:.2f}€ [{fee_hint}]")
 
         if dry_run:
-            log.warning(f"  DRY-RUN — würde listen: {sku}")
+            log.warning(f"  DRY-RUN — würde {'listen (NEU)' if is_new_listing else 'updaten'}: {sku}")
+            if is_new_listing:
+                new_count += 1
             stats["ok"] += 1
             continue
 
@@ -877,7 +1042,12 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
             result = client.upsert_product(product, vk)
             listing_id = result.get("listing_id", "")
             if listing_id:
-                log.info(f"  ✓ Gelistet: listingId {listing_id}")
+                log.info(f"  ✓ {'Gelistet (NEU)' if is_new_listing else 'Aktualisiert'}: listingId {listing_id}")
+                if is_new_listing:
+                    new_count += 1
+                    stats["new_listings"] += 1
+                else:
+                    stats["updates"] += 1
                 stats["ok"] += 1
             else:
                 log.warning(f"  ⚠ Kein listingId (Draft?): SKU {sku}")
@@ -888,7 +1058,6 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
             stats["error"] += 1
             error_log.append({"sku": sku, "ean": ean, "name": name[:60], "vk": vk, "error": err_msg[:300]})
 
-        # Kurze Pause um Rate-Limits zu vermeiden
         time.sleep(0.3)
 
     # Fehler-Report speichern
@@ -897,7 +1066,10 @@ def list_products(selected: list[dict], cfg: dict, dry_run: bool = False) -> dic
         err_path.write_text(json.dumps(error_log, indent=2, ensure_ascii=False), encoding="utf-8")
         log.info(f"Fehler-Report: {err_path} ({len(error_log)} Einträge)")
 
-    log.info(f"=== Listing abgeschlossen: {stats['ok']} OK | {stats['skip']} Drafts | {stats['error']} Fehler ===")
+    gebuehr = stats.get('new_listings', 0) * 0.06
+    log.info(f"=== Listing abgeschlossen: {stats['ok']} OK "
+             f"({stats.get('new_listings',0)} neu ~{gebuehr:.2f}€, {stats.get('updates',0)} Updates kostenlos) "
+             f"| {stats['skip']} übersprungen | {stats['error']} Fehler ===")
     return stats
 
 

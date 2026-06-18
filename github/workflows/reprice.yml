@@ -1,0 +1,78 @@
+name: Auto Repricing
+
+on:
+  schedule:
+    - cron: "20 * * * *"   # Stündlich um :20 (nach der Artikel-Aktualisierung um :05)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run? (true = nur Simulation)"
+        required: false
+        default: "false"
+      limit:
+        description: "Max. Produkte (0 = Chunk aus Checkpoint)"
+        required: false
+        default: "0"
+      reset:
+        description: "Checkpoint zurücksetzen? (true = von vorne)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ebay-reprice   # eigene Spur — blockiert nicht die stündliche Aktualisierung
+  cancel-in-progress: false
+
+jobs:
+  reprice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Repricer
+        env:
+          CSV_HTTP_USER:        ${{ secrets.CSV_HTTP_USER }}
+          CSV_HTTP_PASSWORD:    ${{ secrets.CSV_HTTP_PASSWORD }}
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run }}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          RESET="${{ github.event.inputs.reset }}"
+          ARGS=""
+          [ "$DRY"   = "true" ] && ARGS="$ARGS --dry-run"
+          [ "$RESET" = "true" ] && ARGS="$ARGS --reset"
+          [ -n "$LIMIT" ] && [ "$LIMIT" != "0" ] && ARGS="$ARGS --limit $LIMIT"
+          python repricer.py $ARGS
+
+      - name: Commit report + checkpoint
+        if: always()
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          # image_fix_needed.json MUSS mitgepusht werden sonst gehen neue Fehler verloren
+          git add repricer_report.json repricer_state.json image_fix_needed.json || true
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen"
+            exit 0
+          fi
+          git commit -m "chore: repricer $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --no-rebase origin main && git push && echo "Push OK ($attempt)" && exit 0
+            echo "Retry $attempt..."
+            sleep $((attempt * 3))
+          done
+          echo "Push fehlgeschlagen nach 3 Versuchen" && exit 1

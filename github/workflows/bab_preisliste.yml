@@ -1,0 +1,49 @@
+name: BAB Preisliste Export
+
+on:
+  schedule:
+    - cron: "45 * * * *"   # Jede Stunde :45
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: bab-preisliste
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: BAB Preisliste → JSON exportieren
+        run: python bab_preisliste_export.py --config config_shop2.yaml --output docs/bab_preisliste.json
+
+      - name: JSON committen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/bab_preisliste.json
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen in der Preisliste"
+            exit 0
+          fi
+          git commit -m "chore: BAB Preisliste Update $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --no-rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1

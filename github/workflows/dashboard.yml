@@ -1,0 +1,62 @@
+name: Dashboard Update
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # Stündlich
+  workflow_dispatch:
+    inputs:
+      mock:
+        description: "Demo-Daten verwenden (true/false)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ebay-dashboard   # Hintergrund — blockiert nie Sync oder Repricing
+  cancel-in-progress: false
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate dashboard data
+        env:
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_DASHBOARD }}
+        run: |
+          if [ "${{ github.event.inputs.mock }}" = "true" ]; then
+            python dashboard_generator.py --mock
+          else
+            python dashboard_generator.py
+          fi
+
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # dashboard.html → docs/index.html (GitHub Pages)
+          cp dashboard.html docs/index.html
+          git add docs/dashboard_data.js docs/index.html
+          if git diff --staged --quiet; then exit 0; fi
+          git commit -m "chore: update dashboard data [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --no-rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1
