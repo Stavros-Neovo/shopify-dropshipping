@@ -313,6 +313,7 @@
     <div class="nav-item" onclick="showSection('rechnungen', this)"><span class="icon">💸</span> BAB Rechnungen <span class="nbadge amber" id="nav-rech-badge">–</span></div>
     <div class="nav-item" onclick="showSection('preisliste', this)"><span class="icon">📦</span> BAB Preisliste <span class="nbadge gray" id="nav-plist-badge">–</span></div>
     <div class="nav-item" onclick="showSection('retouren', this)"><span class="icon">↩️</span> Retouren <span class="nbadge green">0</span></div>
+    <div class="nav-item" onclick="showSection('bildpflege', this)"><span class="icon">🖼️</span> Bild-Pflege <span class="nbadge red" id="nav-bild-badge">49</span></div>
     <div class="nav-section">Tools</div>
     <div class="nav-item" onclick="showSection('repricer', this)"><span class="icon">▶️</span> Repricer</div>
     <div class="nav-item" onclick="showSection('lister', this)"><span class="icon">🚀</span> Smart Lister</div>
@@ -1198,6 +1199,37 @@
     </div>
   </div><!-- /section-preisliste -->
 
+  <!-- ═══════════════════════════════════════════════════════ BILD-PFLEGE -->
+  <div class="section" id="section-bildpflege">
+    <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="kpi-card red"><span class="kpi-icon">🚫</span><div class="kpi-label">Deaktiviert</div><div class="kpi-value" id="bp-count-deakt">49</div><div class="kpi-sub">kein verifiziertes Bild</div></div>
+      <div class="kpi-card green"><span class="kpi-icon">✅</span><div class="kpi-label">Erledigt</div><div class="kpi-value" id="bp-count-done">0</div><div class="kpi-sub">Bild gesetzt + reaktiviert</div></div>
+      <div class="kpi-card amber"><span class="kpi-icon">⏳</span><div class="kpi-label">Offen</div><div class="kpi-value" id="bp-count-open">49</div><div class="kpi-sub">URL noch einzutragen</div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px;padding:16px 20px;background:#fef3c7;border:1px solid #f59e0b;border-radius:10px;font-size:13px;">
+      <strong>⚖️ Rechtliche Grundlage:</strong> Nur offizielle Herstellerbilder verwenden (Hersteller-CDN, Pressematerial, Icecat-Datenbank).
+      <strong>Nicht erlaubt:</strong> Amazon, BestBuy, Idealo, Kaufland, alternate.de — das sind Konkurrenten-Fotos (Urheberrechtsverletzung / Abmahnrisiko!).<br>
+      <strong>Empfehlung:</strong> Direkt auf der Hersteller-Website das Produktbild rechtsklicken → "Bildadresse kopieren" → hier eintragen.
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden">
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+        <input type="text" id="bp-search" placeholder="🔍 SKU oder Titel suchen…" oninput="bpFilter()"
+          style="flex:1;padding:8px 12px;border:1px solid var(--border);border-radius:7px;font-size:13px">
+        <select id="bp-filter" onchange="bpFilter()" style="padding:8px 10px;border:1px solid var(--border);border-radius:7px;font-size:13px">
+          <option value="all">Alle</option>
+          <option value="open">Offen</option>
+          <option value="done">Erledigt</option>
+        </select>
+        <button class="btn btn-outline" onclick="bpLoad()" style="white-space:nowrap">🔄 Neu laden</button>
+      </div>
+      <div id="bp-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:0;border-top:1px solid var(--border)">
+        <div style="padding:40px;text-align:center;color:var(--text-muted);font-size:13px" id="bp-loading">⏳ Wird geladen…</div>
+      </div>
+    </div>
+  </div><!-- /section-bildpflege -->
+
 </div><!-- /main -->
 
 <!-- ═══ MOBILE NAV OVERLAY (Hamburger Drawer) ═══ -->
@@ -1275,6 +1307,7 @@ function showSection(id, el) {
   if (id === 'gewinn') calcGewinn();
   if (id === 'retouren') calcRetoure();
   if (id === 'preisliste' && plistData.length === 0) loadPreisliste();
+  if (id === 'bildpflege' && bpItems.length === 0) bpLoad();
 }
 
 // ——— ANIMATE INV BARS ———
@@ -2100,6 +2133,172 @@ function plistRender() {
 // Initial load + 15min auto-refresh
 loadHealthReport();
 setInterval(() => loadHealthReport(), 15 * 60 * 1000);
+
+// ═══════════════════════════════════════════════════════════════ BILD-PFLEGE
+const BP_URL = 'https://stavros-neovo.github.io/shopify-dropshipping/image_review_items.json';
+const BP_STORAGE_KEY = 'neodeals_bildpflege_images';
+let bpItems = [];
+let bpLocal = {}; // SKU → { url, done }
+
+function bpLoadLocal() {
+  try { bpLocal = JSON.parse(localStorage.getItem(BP_STORAGE_KEY) || '{}'); } catch(e) { bpLocal = {}; }
+}
+function bpSaveLocal() {
+  localStorage.setItem(BP_STORAGE_KEY, JSON.stringify(bpLocal));
+}
+
+async function bpLoad() {
+  bpLoadLocal();
+  document.getElementById('bp-loading').style.display = 'block';
+  document.getElementById('bp-loading').textContent = '⏳ Wird geladen…';
+  try {
+    const r = await fetch(BP_URL + '?t=' + Date.now());
+    bpItems = await r.json();
+    bpFilter();
+  } catch(e) {
+    document.getElementById('bp-loading').textContent = '❌ Fehler beim Laden: ' + e.message;
+  }
+}
+
+function bpFilter() {
+  bpLoadLocal();
+  const q = (document.getElementById('bp-search')?.value || '').toLowerCase();
+  const filter = document.getElementById('bp-filter')?.value || 'all';
+  let visible = bpItems.filter(item => {
+    const matchQ = !q || item.sku.toLowerCase().includes(q) || (item.title||'').toLowerCase().includes(q) || (item.ean||'').includes(q);
+    const isDone = !!(bpLocal[item.sku]?.url);
+    const matchF = filter === 'all' || (filter === 'done' && isDone) || (filter === 'open' && !isDone);
+    return matchQ && matchF;
+  });
+  bpRender(visible);
+}
+
+function bpRender(items) {
+  const grid = document.getElementById('bp-grid');
+  const loading = document.getElementById('bp-loading');
+  if (loading) loading.style.display = 'none';
+
+  const done = bpItems.filter(i => bpLocal[i.sku]?.url).length;
+  const open = bpItems.length - done;
+  document.getElementById('bp-count-deakt').textContent = bpItems.length;
+  document.getElementById('bp-count-done').textContent  = done;
+  document.getElementById('bp-count-open').textContent  = open;
+  document.getElementById('nav-bild-badge').textContent = open || '✓';
+  document.getElementById('nav-bild-badge').className = 'nbadge ' + (open > 0 ? 'red' : 'green');
+
+  grid.innerHTML = items.map(item => {
+    const saved = bpLocal[item.sku] || {};
+    const isDone = !!saved.url;
+    const previewUrl = saved.url || item.suggested_url || '';
+    return `<div style="border-bottom:1px solid var(--border);border-right:1px solid var(--border);padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:${isDone?'#f0fdf4':'#fff'}">
+      <div style="display:flex;align-items:center;gap:8px">
+        <span style="font-size:11px;font-weight:700;background:${isDone?'var(--green)':'var(--red)'};color:#fff;padding:2px 7px;border-radius:20px">${isDone?'✓ OK':'OFFEN'}</span>
+        <span style="font-size:12px;font-weight:700;color:var(--text)">${item.sku}</span>
+        <span style="font-size:11px;color:var(--text-muted);margin-left:auto">${item.ean||'?'}</span>
+      </div>
+      <div style="font-size:12px;color:var(--text);line-height:1.4">${item.title||'<em style="color:var(--text-muted)">Kein Titel</em>'}</div>
+      <div style="display:flex;gap:8px;align-items:flex-start">
+        ${previewUrl ? `<img src="${previewUrl}" alt="" style="width:64px;height:64px;object-fit:contain;border:1px solid var(--border);border-radius:6px;background:#f8fafc;flex-shrink:0" onerror="this.style.opacity='0.2'">` : `<div style="width:64px;height:64px;border:2px dashed var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">📷</div>`}
+        <div style="flex:1;min-width:0">
+          <input type="text" id="bp-url-${item.sku}" value="${previewUrl}"
+            placeholder="https://hersteller.com/produkt.jpg"
+            style="width:100%;padding:6px 8px;border:1px solid var(--border);border-radius:6px;font-size:11px;margin-bottom:6px"
+            oninput="bpPreview('${item.sku}')">
+          <div style="display:flex;gap:6px">
+            <button class="btn btn-primary" style="font-size:11px;padding:5px 10px" onclick="bpSave('${item.sku}')">💾 Speichern</button>
+            <button class="btn btn-outline" style="font-size:11px;padding:5px 10px" onclick="bpOpenSearch('${item.sku}','${(item.title||item.ean||'').replace(/'/g,'')}')">🔍 Suchen</button>
+            ${isDone ? `<button class="btn btn-green" style="font-size:11px;padding:5px 10px" onclick="bpPublish('${item.sku}')">📤 Reaktivieren</button>` : ''}
+          </div>
+        </div>
+      </div>
+      ${saved.published ? `<div style="font-size:11px;color:var(--green)">✅ eBay reaktiviert ${saved.published}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  if (items.length === 0) {
+    grid.innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-muted);font-size:13px">Keine Einträge</div>';
+  }
+}
+
+function bpPreview(sku) {
+  const url = document.getElementById('bp-url-'+sku)?.value;
+  // Bild im Card live ersetzen
+  const card = document.getElementById('bp-url-'+sku)?.closest('div[style]');
+  const img = card?.querySelector('img');
+  if (img && url) img.src = url;
+}
+
+function bpSave(sku) {
+  bpLoadLocal();
+  const url = document.getElementById('bp-url-'+sku)?.value?.trim();
+  if (!url) { alert('Bitte eine Bild-URL eingeben.'); return; }
+  if (!url.startsWith('http')) { alert('URL muss mit http/https beginnen.'); return; }
+  bpLocal[sku] = { ...bpLocal[sku], url, saved_at: new Date().toISOString() };
+  bpSaveLocal();
+  bpFilter();
+
+  // Trigger GitHub Action via API um eBay + supplier_map zu updaten
+  bpTriggerUpdate(sku, url);
+}
+
+function bpOpenSearch(sku, title) {
+  const q = encodeURIComponent(title + ' produktbild site:hersteller OR pressematerial -amazon -ebay -kaufland');
+  window.open(`https://www.google.com/search?q=${q}&tbm=isch`, '_blank');
+}
+
+async function bpTriggerUpdate(sku, imageUrl) {
+  const pat = localStorage.getItem('neodeals_gh_pat');
+  if (!pat) {
+    alert('Kein GitHub PAT gespeichert. Bitte im Dashboard unter Einstellungen hinterlegen.\n\nBild lokal gespeichert — Reaktivierung bitte manuell über "Reaktivieren"-Button.');
+    return;
+  }
+
+  // Erstelle image_updates.json im Repo mit diesem SKU
+  const items = Object.entries(bpLocal)
+    .filter(([,v]) => v.url && !v.published)
+    .map(([s, v]) => ({ sku: s, image_url: v.url }));
+
+  if (items.length === 0) return;
+
+  // GitHub API: Datei schreiben + Workflow dispatchen
+  const REPO = 'Stavros-Neovo/shopify-dropshipping';
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify({ updated_at: new Date().toISOString(), items }, null, 2))));
+
+  // Aktuelle SHA holen
+  let sha = '';
+  try {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/image_updates.json`,
+      { headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github+json' }});
+    if (r.ok) sha = (await r.json()).sha;
+  } catch(e) {}
+
+  await fetch(`https://api.github.com/repos/${REPO}/contents/image_updates.json`, {
+    method: 'PUT',
+    headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: `bild-pflege: ${sku} Bild gesetzt`, content, ...(sha?{sha}:{}) })
+  });
+
+  // Workflow triggern
+  const wf = await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/apply_image_updates.yml/dispatches`, {
+    method: 'POST',
+    headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ref: 'main' })
+  });
+
+  if (wf.ok || wf.status === 204) {
+    bpLocal[sku].triggered = new Date().toISOString();
+    bpSaveLocal();
+    alert(`✅ GitHub Action gestartet — ${sku} wird in ~2 Min auf eBay reaktiviert.`);
+  } else {
+    alert('Bild gespeichert. GitHub Action konnte nicht gestartet werden (PAT prüfen).');
+  }
+}
+
+async function bpPublish(sku) {
+  const saved = bpLocal[sku];
+  if (!saved?.url) { alert('Kein Bild für ' + sku); return; }
+  await bpTriggerUpdate(sku, saved.url);
+}
 </script>
 </body>
 </html>
