@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T16:07:55.570810+00:00",
+  "updated": "2026-06-18T16:11:53.115170+00:00",
   "orders": [
     {
       "id": "23-14765-26114",
@@ -11,7 +11,7 @@
       "vk": 51.99,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -25,7 +25,7 @@
       "vk": 152.99,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -39,7 +39,7 @@
       "vk": 29.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -53,7 +53,7 @@
       "vk": 279.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -67,7 +67,7 @@
       "vk": 219.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -81,7 +81,7 @@
       "vk": 63.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -95,7 +95,7 @@
       "vk": 55.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -109,7 +109,7 @@
       "vk": 25.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -123,7 +123,7 @@
       "vk": 38.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -137,7 +137,7 @@
       "vk": 29.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     },
@@ -151,7 +151,7 @@
       "vk": 23.98,
       "ek": 0,
       "note": "",
-      "status": "done",
+      "status": "open",
       "tracking": "",
       "items_count": 1
     }
