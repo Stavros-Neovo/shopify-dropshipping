@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-18T12:14:08.759548+00:00",
+  "generated_at": "2026-06-18T21:30:47.849506+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 45,
   "repricing": {
@@ -149,19 +149,19 @@ window.DASHBOARD_DATA = {
     "stats": {
       "today_sales": 1,
       "today_revenue": 51.99,
-      "today_profit": 6.07,
+      "today_profit": 32.16,
       "week_sales": 4,
       "week_revenue": 514.94,
-      "week_profit": 31.24,
+      "week_profit": 57.33,
       "prev_week_sales": 5,
       "prev_week_revenue": 404.9,
       "prev_week_profit": 44.18,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 96.72,
+      "month_profit": 122.81,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 96.72
+      "total_profit_30d": 122.81
     },
     "chart_7d": [
       {
@@ -203,7 +203,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "18.06",
         "revenue": 51.99,
-        "profit": 6.07,
+        "profit": 32.16,
         "sales": 1
       }
     ],
@@ -385,7 +385,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "18.06",
         "revenue": 51.99,
-        "profit": 6.07,
+        "profit": 32.16,
         "sales": 1
       }
     ],
@@ -927,11 +927,31 @@ window.DASHBOARD_DATA = {
       {
         "date": "18.06",
         "revenue": 51.99,
-        "profit": 6.07,
+        "profit": 32.16,
         "sales": 1
       }
     ],
     "top_products": [
+      {
+        "sku": "PPSE0017",
+        "title": "yyyECOFLOW Smart Plug",
+        "sold": 1,
+        "revenue": 51.99,
+        "profit": 32.16,
+        "vk": 51.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 55.98,
+          "ebay_fee": 11.76,
+          "vat": 7.06,
+          "netto_vk": 37.16,
+          "ship": 5.0,
+          "ek": 0.0,
+          "profit_u": 32.16,
+          "qty": 1,
+          "profit_t": 32.16
+        }
+      },
       {
         "sku": "NETU0187",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
@@ -1093,26 +1113,6 @@ window.DASHBOARD_DATA = {
         }
       },
       {
-        "sku": "PPSE0017",
-        "title": "yyyECOFLOW Smart Plug",
-        "sold": 1,
-        "revenue": 51.99,
-        "profit": 6.07,
-        "vk": 51.99,
-        "ek": 26.09,
-        "calc": {
-          "vk_brutto": 55.98,
-          "ebay_fee": 11.76,
-          "vat": 7.06,
-          "netto_vk": 37.16,
-          "ship": 5.0,
-          "ek": 26.09,
-          "profit_u": 6.07,
-          "qty": 1,
-          "profit_t": 6.07
-        }
-      },
-      {
         "sku": "HHWB5012",
         "title": "Beurer IL 11 Infrarotlampe",
         "sold": 1,
@@ -1138,7 +1138,7 @@ window.DASHBOARD_DATA = {
         "date": "18.06 10:33",
         "title": "yyyECOFLOW Smart Plug",
         "revenue": 51.99,
-        "profit": 6.07
+        "profit": 32.16
       },
       {
         "date": "16.06 17:06",
@@ -1313,21 +1313,12 @@ window.DASHBOARD_DATA = {
         "urgent": false
       }
     ],
-    "tracking_missing": [
-      {
-        "order_id": "23-14765-26114",
-        "date": "2026-06-18",
-        "items": [
-          "yyyECOFLOW Smart Plug"
-        ],
-        "buyer": "from.the.f.to.the.h"
-      }
-    ],
+    "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 29.02,
-      "gewst_month": 14.51,
-      "total_month": 199.0
+      "est_month": 36.84,
+      "gewst_month": 18.42,
+      "total_month": 210.75
     },
     "expected_payout": 769.3
   },
