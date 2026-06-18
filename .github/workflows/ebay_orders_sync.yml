@@ -1,0 +1,41 @@
+name: eBay Bestellungen & Retouren Sync
+
+on:
+  schedule:
+    - cron: "15 * * * *"   # Stündlich um :15
+  workflow_dispatch:
+
+concurrency:
+  group: ebay-orders-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencies installieren
+        run: pip install requests python-dotenv
+
+      - name: eBay Daten holen
+        env:
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: python fetch_ebay_data.py --days 90
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/orders.json docs/returns.json
+          git diff --staged --quiet && echo "Keine Änderungen" && exit 0
+          git commit -m "sync: eBay Bestellungen + Retouren [skip ci]"
+          git pull --rebase origin main && git push
