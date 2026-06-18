@@ -54,7 +54,7 @@ jobs:
           if git diff --staged --quiet; then exit 0; fi
           git commit -m "chore: bestellungen verarbeitet $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
           for attempt in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            git pull --no-rebase origin main && git push && exit 0
             sleep $((attempt * 3))
           done
           echo "⚠️ Push fehlgeschlagen — processed_orders.json nicht gespeichert!" && exit 1

@@ -71,7 +71,7 @@ jobs:
           fi
           git commit -m "chore: repricer $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
           for attempt in 1 2 3; do
-            git pull --rebase origin main && git push && echo "Push OK ($attempt)" && exit 0
+            git pull --no-rebase origin main && git push && echo "Push OK ($attempt)" && exit 0
             echo "Retry $attempt..."
             sleep $((attempt * 3))
           done

@@ -1,0 +1,98 @@
+name: Deactivate Zero-Stock Listings
+
+# Läuft stündlich: zieht eBay-Listings zurück wenn Lieferant Stock=0 meldet
+# Kein eBay Browse API — kein Limit-Verbrauch, nur Inventory API (write)
+
+on:
+  schedule:
+    - cron: "15 * * * *"   # Jede Stunde :15 (nicht :00 um GitHub Queue zu vermeiden)
+  workflow_dispatch:        # Manuell auslösbar
+    inputs:
+      dry_run:
+        description: "Dry-run? (true/false)"
+        required: false
+        default: "false"
+      bab_only:
+        description: "Nur BAB-Artikel prüfen? (true/false)"
+        required: false
+        default: "true"
+
+concurrency:
+  group: deactivate-zero-stock
+  cancel-in-progress: false
+
+jobs:
+  deactivate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Preislisten herunterladen
+        env:
+          BAB_URL:     ${{ secrets.BAB_PRICELIST_URL }}
+          KOSATEC_URL: ${{ secrets.KOSATEC_PRICELIST_URL }}
+        run: |
+          curl -fL "$BAB_URL" -o bab_preisliste.csv
+          echo "BAB: $(wc -l < bab_preisliste.csv) Zeilen"
+          # Kosatec nur wenn nicht bab_only
+          BAB_ONLY="${{ github.event.inputs.bab_only || 'true' }}"
+          if [ "$BAB_ONLY" != "true" ]; then
+            curl -fL "$KOSATEC_URL" -o kosatec_preisliste.csv
+            echo "Kosatec: $(wc -l < kosatec_preisliste.csv) Zeilen"
+          else
+            echo "BAB-ONLY: Kosatec übersprungen"
+          fi
+
+      - name: Stock=0 Deaktivierung ausführen
+        env:
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          BAB_ONLY="${{ github.event.inputs.bab_only || 'true' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+
+          ARGS="--deactivate"
+          [ "$BAB_ONLY" = "true" ] && ARGS="$ARGS --bab-only"
+          [ "$DRY"      = "true" ] && ARGS="$ARGS --dry-run"
+
+          echo "Starte: python smart_lister.py $ARGS"
+          python smart_lister.py $ARGS
+
+      - name: supplier_map.json committen (wenn geändert)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add supplier_map.json 2>/dev/null || true
+
+          if git diff --staged --quiet; then
+            echo "Keine Änderungen — kein Commit"
+            exit 0
+          fi
+
+          OFFLINED=$(git diff --staged -- supplier_map.json | grep '^-  ' | wc -l || echo "?")
+          git commit -m "chore: deactivate_zero_stock $(date -u '+%Y-%m-%d %H:%M') UTC — ${OFFLINED} offline[skip ci]"
+
+          for attempt in 1 2 3; do
+            if git push origin main; then
+              echo "✓ Push erfolgreich (Versuch $attempt)"
+              exit 0
+            fi
+            git pull --no-rebase origin main || true
+            sleep $((attempt * 2))
+          done
+          echo "✗ Push fehlgeschlagen"
+          exit 1

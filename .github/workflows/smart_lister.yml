@@ -2,10 +2,8 @@ name: Smart Lister
 
 on:
   schedule:
-    - cron: "0 2 * * *"      # 02:00 UTC — Scan + Select + List
-    - cron: "0 8 * * *"      # 08:00 UTC — Select + List (Preisänderungen morgens)
-    - cron: "0 14 * * *"     # 14:00 UTC — Scan + Select + List
-    - cron: "0 20 * * *"     # 20:00 UTC — Select + List (Abend)
+    - cron: "0 2 * * *"      # 02:00 UTC — Scan + Select + List (max 20 neue, ~1,20€/Tag)
+    - cron: "0 14 * * *"     # 14:00 UTC — Scan only (Cache aktualisieren, kostenlos)
   workflow_dispatch:
     inputs:
       mode:
@@ -28,6 +26,10 @@ on:
         description: "Nur BAB-Artikel (Kosatec überspringen)? (true/false)"
         required: false
         default: "true"
+      max_new:
+        description: "Max neue eBay-Listings (0=unbegrenzt, Schedule: 20 = max 1,20€)"
+        required: false
+        default: "20"
       limit:
         description: "Max API-Calls pro Run (Standard: 1200)"
         required: false
@@ -88,28 +90,32 @@ jobs:
           LIMIT="${{ github.event.inputs.limit || '4800' }}"
           BAB_ONLY="${{ github.event.inputs.bab_only || 'true' }}"
 
-          # Schedule: 02:00 + 14:00 → scan+select+list, 08:00 + 20:00 → select+list
+          # Schedule:
+          #   02:00 → Scan + Select + List (max 20 neue Listings = max 1,20€ Gebühren)
+          #   14:00 → Scan only (Cache aktualisieren, KEINE neuen Listings → KEINE Gebühren)
+          MAX_NEW="${{ github.event.inputs.max_new || '20' }}"
+
           if [ "${{ github.event_name }}" = "schedule" ]; then
             HOUR=$(date -u +%H)
-            if [ "$HOUR" = "02" ] || [ "$HOUR" = "14" ]; then
+            if [ "$HOUR" = "02" ]; then
               MODE="both"
               LIMIT="4800"
             else
-              MODE="select"
-              LIMIT="0"
+              MODE="scan"   # 14:00: nur Cache, kein Listing
+              LIMIT="4800"
             fi
-            BAB_ONLY="true"   # Schedule läuft immer nur mit BAB
+            BAB_ONLY="true"
           fi
 
           # Argumente aufbauen
           ARGS="--limit $LIMIT"
           [ "$MODE" = "scan" ]   || [ "$MODE" = "both" ] && ARGS="$ARGS --scan"
           [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --select --top $TOP"
-          # Schedule läuft immer mit --list; manuell nur wenn list_products=true
+          # Schedule 02:00 und manuell mit list_products=true → listen
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            [ "$MODE" = "select" ] || [ "$MODE" = "both" ] && ARGS="$ARGS --list"
+            [ "$MODE" = "both" ] && ARGS="$ARGS --list --max-new $MAX_NEW"
           else
-            [ "${{ github.event.inputs.list_products }}" = "true" ] && ARGS="$ARGS --list"
+            [ "${{ github.event.inputs.list_products }}" = "true" ] && ARGS="$ARGS --list --max-new $MAX_NEW"
           fi
           [ "$BAB_ONLY" = "true" ] && ARGS="$ARGS --bab-only"
           [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
@@ -150,7 +156,7 @@ jobs:
             fi
             echo "Push fehlgeschlagen (Versuch $attempt) — pull + retry..."
             git stash --include-untracked 2>/dev/null || true
-            git pull --rebase origin main || true
+            git pull --no-rebase origin main || true
             git stash pop 2>/dev/null || true
             git add ebay_score_cache.json 2>/dev/null || true
             sleep $((attempt * 3))

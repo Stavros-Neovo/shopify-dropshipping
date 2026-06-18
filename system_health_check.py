@@ -210,6 +210,7 @@ WATCHED = {
     "order_forwarder.yml":      "Order Forwarder",
     "reprice.yml":              "Repricer",
     "smart_lister.yml":         "Smart Lister",
+    "tracking_updater.yml":     "Tracking Updater",
     "hourly_matrixify_csv.yml": "Matrixify CSV",
 }
 

@@ -2,10 +2,7 @@ name: System Health Check
 
 on:
   schedule:
-    - cron: "0 6 * * *"    # 06:00 UTC
-    - cron: "0 12 * * *"   # 12:00 UTC
-    - cron: "0 18 * * *"   # 18:00 UTC
-    - cron: "0 0 * * *"    # 00:00 UTC
+    - cron: "0 * * * *"    # Stündlich
   workflow_dispatch:
 
 env:
@@ -50,7 +47,7 @@ jobs:
           if git diff --staged --quiet; then echo "Keine Änderungen"; exit 0; fi
           git commit -m "chore: health check $(date -u '+%Y-%m-%d %H:%M') [skip ci]"
           for attempt in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            git pull --no-rebase origin main && git push && exit 0
             sleep $((attempt * 3))
           done
           exit 1

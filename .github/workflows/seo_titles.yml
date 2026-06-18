@@ -77,5 +77,5 @@ jobs:
           git config user.name "GitHub Actions"
           git add enrichment_index.csv title_review.csv apply_report.csv seo_state.json || true
           git diff --staged --quiet || git commit -m "chore: SEO titles $(date -u '+%Y-%m-%d %H:%M')"
-          git pull --rebase origin main || true
+          git pull --no-rebase origin main || true
           git push || true
