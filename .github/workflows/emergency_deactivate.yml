@@ -1,0 +1,28 @@
+name: NOTFALL Deaktivierung unsicherer Listings
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run? (true = nur anzeigen)"
+        required: false
+        default: "false"
+
+jobs:
+  deactivate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests python-dotenv
+      - name: Unsichere Listings deaktivieren
+        env:
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+          [ "$DRY" = "true" ] && python emergency_deactivate_unverified.py --dry-run || python emergency_deactivate_unverified.py
