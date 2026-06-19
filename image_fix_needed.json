@@ -4155,5 +4155,50 @@
     "ean": "0023942302308",
     "title": "Verbatim Plectra White 256GB USB-C Flash Drive 30230",
     "detected_at": "2026-06-18T12:04:23.831509+00:00"
+  },
+  "ANTB0008": {
+    "ean": "8885022190173",
+    "title": "ANTHBOT \"RTK Wall Mount Kit\"",
+    "detected_at": "2026-06-18T21:26:28.639333+00:00"
+  },
+  "HDIS0246": {
+    "ean": "8719706022859",
+    "title": "Seagate IronWolf ST10000VN000 / 10TB",
+    "detected_at": "2026-06-18T21:26:43.354139+00:00"
+  },
+  "HDIS0258": {
+    "ean": "8719706022095",
+    "title": "Seagate Exos 7E10 / ST6000NM019B / 6TB / 3,5\"",
+    "detected_at": "2026-06-18T21:26:48.657576+00:00"
+  },
+  "HHWB4006": {
+    "ean": "3030050182644",
+    "title": "BaByliss Wave Secret Air Locken-Styler",
+    "detected_at": "2026-06-18T21:28:26.254507+00:00"
+  },
+  "HHWB5012": {
+    "ean": "4211125614034",
+    "title": "Beurer IL 11 Infrarotlampe",
+    "detected_at": "2026-06-18T21:28:29.630230+00:00"
+  },
+  "HHWB5016": {
+    "ean": "4211125591137",
+    "title": "Beurer HC 25 - Föhn",
+    "detected_at": "2026-06-18T21:28:32.393691+00:00"
+  },
+  "LEGO0048": {
+    "ean": "5702017815640",
+    "title": "LEGO NINJAGO Lloyds grüner Walddrache 71829",
+    "detected_at": "2026-06-18T21:29:18.017713+00:00"
+  },
+  "NOCO0008": {
+    "ean": "1210000619242",
+    "title": "NOCO GENIUS1EU | 1A Battery Charger | Genius Battery Chargers",
+    "detected_at": "2026-06-18T21:30:40.647163+00:00"
+  },
+  "RAM4G0058": {
+    "ean": "4713294226624",
+    "title": "G.Skill Ripjaws - DDR4 - 8 GB",
+    "detected_at": "2026-06-18T21:33:20.117456+00:00"
   }
 }
