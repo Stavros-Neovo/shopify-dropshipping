@@ -544,6 +544,10 @@ def main():
         )
 
         final_title = new_title if use_new else (existing_seo or title_full)
+        # Fallback auf existing_seo/title_full ist NICHT laengenbegrenzt (anders als
+        # generate_seo_title) - eBay lehnt Titel >80 Zeichen ab (Fehler 25718)
+        if len(final_title) > TARGET_MAX:
+            final_title = final_title[:TARGET_MAX].rsplit(" ", 1)[0].rstrip(" ,")
         row["title_seo"] = final_title
 
         review_rows.append({
