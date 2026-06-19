@@ -13580,5 +13580,17 @@
     "ek": 119.26,
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de"
+  },
+  "PPSE0017": {
+    "ean": "",
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "ek": 26.09,
+    "vk": 51.99,
+    "title": "EcoFlow Smart Plug",
+    "listed_at": "2026-06-01T00:00:00",
+    "source": "manual_fix",
+    "image_verified": false,
+    "note": "Nicht mehr in BAB Preisliste. EK/VK aus Bestellung 23-14765-26114 vom 18.06.2026"
   }
 }

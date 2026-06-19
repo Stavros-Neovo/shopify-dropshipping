@@ -149,43 +149,57 @@ def get_ebay_token() -> str | None:
 def ebay_get_offer(token: str, sku: str) -> tuple[str, str]:
     """Gibt (offer_id, status) zurück."""
     h = {"Authorization": f"Bearer {token}"}
-    r = requests.get(f"{EBAY_INV_URL}/offer?sku={sku}", headers=h, timeout=10)
-    if not r.ok:
+    try:
+        r = requests.get(f"{EBAY_INV_URL}/offer?sku={sku}", headers=h, timeout=30)
+        if not r.ok:
+            return "", ""
+        offers = r.json().get("offers", [])
+        if not offers:
+            return "", ""
+        o = offers[0]
+        return o.get("offerId", ""), o.get("status", "")
+    except Exception as e:
+        log.warning(f"ebay_get_offer Fehler ({sku}): {e}")
         return "", ""
-    offers = r.json().get("offers", [])
-    if not offers:
-        return "", ""
-    o = offers[0]
-    return o.get("offerId", ""), o.get("status", "")
 
 
 def ebay_withdraw(token: str, offer_id: str) -> bool:
     h = {"Authorization": f"Bearer {token}"}
-    r = requests.post(f"{EBAY_INV_URL}/offer/{offer_id}/withdraw", headers=h, timeout=10)
-    return r.ok
+    try:
+        r = requests.post(f"{EBAY_INV_URL}/offer/{offer_id}/withdraw", headers=h, timeout=30)
+        return r.ok
+    except Exception as e:
+        log.warning(f"ebay_withdraw Fehler: {e}")
+        return False
 
 
 def ebay_publish(token: str, offer_id: str) -> bool:
     h = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-    r = requests.post(f"{EBAY_INV_URL}/offer/{offer_id}/publish", headers=h, timeout=10)
-    return r.ok
+    try:
+        r = requests.post(f"{EBAY_INV_URL}/offer/{offer_id}/publish", headers=h, timeout=30)
+        return r.ok
+    except Exception as e:
+        log.warning(f"ebay_publish Fehler: {e}")
+        return False
 
 
 def ebay_update_image(token: str, sku: str, images: list[str]) -> bool:
     """Aktualisiert das Bild im eBay Inventory Item."""
     h = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-    # Erst das Item holen
-    r = requests.get(f"{EBAY_INV_URL}/inventory_item/{sku}", headers=h, timeout=10)
-    if not r.ok:
+    try:
+        r = requests.get(f"{EBAY_INV_URL}/inventory_item/{sku}", headers=h, timeout=30)
+        if not r.ok:
+            return False
+        item = r.json()
+        item.setdefault("product", {})["imageUrls"] = images[:1]
+        r2 = requests.put(
+            f"{EBAY_INV_URL}/inventory_item/{sku}",
+            headers=h, json=item, timeout=30
+        )
+        return r2.ok
+    except Exception as e:
+        log.warning(f"ebay_update_image Fehler: {e}")
         return False
-    item = r.json()
-    # Bilder aktualisieren
-    item.setdefault("product", {})["imageUrls"] = images[:1]  # eBay: erstes Bild
-    r2 = requests.put(
-        f"{EBAY_INV_URL}/inventory_item/{sku}",
-        headers=h, json=item, timeout=15
-    )
-    return r2.ok
 
 
 # ---------------------------------------------------------------------------
@@ -203,11 +217,10 @@ def main():
     sm       = json.loads(SUPPLIER_MAP.read_text())
     bab_eans = load_bab_eans()
 
-    # Kandidaten: unverif. DDG-Bild (oder auch: kein Bild + kein verified)
+    # Kandidaten: alles ohne image_verified=True (kein Bild, DDG-Rest, unverif. ipcstore)
     candidates = [
         (sku, v) for sku, v in sm.items()
-        if (v.get("image_unverified_ddg") and not v.get("image_url"))
-        or (not v.get("image_url") and not v.get("image_verified"))
+        if not v.get("image_verified")
     ]
     limit = len(candidates) if args.all else args.limit
     log.info(f"Kandidaten gesamt: {len(candidates)} | Limit: {limit}")
