@@ -914,59 +914,60 @@ class EbayClient:
 
     def create_or_update_offer(self, sku: str, vk_gross: float, category: str = "", description: str = "", title: str = "") -> str:
         """
-        Erstellt ein neues Offer oder aktualisiert den Preis eines bestehenden.
-        Gibt die offerId zurück.
+        Aktualisiert den Preis eines BESTEHENDEN Offers.
+        KEIN neues Offer erstellen — verhindert ungewollte Einstellgebühren (0,06€/Stk).
+        Gibt die offerId zurück, oder "" wenn kein Offer gefunden.
         """
         existing = self.get_offer_for_sku(sku)
 
-        if existing:
-            offer_id = existing["offerId"]
-            # Kategorie korrigieren falls alter Offer mit ungültiger ID (z.B. 58058)
-            valid_cat = self.get_category_for_title(title or sku, bab_category=category)
-            # Preis + Kategorie + Policies + Location aktualisieren
-            update_payload: Dict[str, Any] = {
-                "sku": sku,
-                "marketplaceId": self.marketplace_id,
-                "format": "FIXED_PRICE",
-                "categoryId": valid_cat,
-                "listingDuration": "GTC",
-                "includeCatalogProductDetails": False,
-                "pricingSummary": {
-                    "price": {
-                        "value": f"{vk_gross:.2f}",
-                        "currency": "EUR",
-                    }
-                },
-                "tax": {
-                    "vatPercentage": 19.0,
-                    "applyTax": True,
-                },
-            }
-            if self.merchant_location_key:
-                update_payload["merchantLocationKey"] = self.merchant_location_key
-            policies: Dict[str, Any] = {}
-            if self.fulfillment_policy_id:
-                policies["fulfillmentPolicyId"] = self.fulfillment_policy_id
-            if self.payment_policy_id:
-                policies["paymentPolicyId"] = self.payment_policy_id
-            if self.return_policy_id:
-                policies["returnPolicyId"] = self.return_policy_id
-            if policies:
-                update_payload["listingPolicies"] = policies
-            try:
-                self._request("PUT", f"{OFFER_PATH}/{offer_id}", json_body=update_payload)
-                log.info(f"eBay Offer aktualisiert: SKU {sku}, Kat {valid_cat}, Preis {vk_gross:.2f}€")
-                return offer_id
-            except RuntimeError as e:
-                if "25713" in str(e) or "404" in str(e) or "not available" in str(e).lower():
-                    # Offer existiert nicht mehr auf eBay → neu erstellen
-                    log.warning(f"eBay Offer {offer_id} nicht mehr vorhanden (25713) → wird neu erstellt")
-                    payload = self._build_offer_payload(sku, vk_gross, category=category, description=description, title=title)
-                    result = self._request("POST", OFFER_PATH, json_body=payload)
-                    new_offer_id = (result or {}).get("offerId", "")
-                    log.info(f"eBay Offer neu erstellt: SKU {sku}, offerId {new_offer_id}")
-                    return new_offer_id
-                raise
+        if not existing:
+            # GESPERRT: Kein neues Offer erstellen. Nur bestehende aktualisieren.
+            log.info(f"eBay SKU {sku}: kein Offer gefunden → ÜBERSPRUNGEN (kein neues Listing)")
+            return ""
+
+        offer_id = existing["offerId"]
+        # Kategorie korrigieren falls alter Offer mit ungültiger ID (z.B. 58058)
+        valid_cat = self.get_category_for_title(title or sku, bab_category=category)
+        # Preis + Kategorie + Policies + Location aktualisieren
+        update_payload: Dict[str, Any] = {
+            "sku": sku,
+            "marketplaceId": self.marketplace_id,
+            "format": "FIXED_PRICE",
+            "categoryId": valid_cat,
+            "listingDuration": "GTC",
+            "includeCatalogProductDetails": False,
+            "pricingSummary": {
+                "price": {
+                    "value": f"{vk_gross:.2f}",
+                    "currency": "EUR",
+                }
+            },
+            "tax": {
+                "vatPercentage": 19.0,
+                "applyTax": True,
+            },
+        }
+        if self.merchant_location_key:
+            update_payload["merchantLocationKey"] = self.merchant_location_key
+        policies: Dict[str, Any] = {}
+        if self.fulfillment_policy_id:
+            policies["fulfillmentPolicyId"] = self.fulfillment_policy_id
+        if self.payment_policy_id:
+            policies["paymentPolicyId"] = self.payment_policy_id
+        if self.return_policy_id:
+            policies["returnPolicyId"] = self.return_policy_id
+        if policies:
+            update_payload["listingPolicies"] = policies
+        try:
+            self._request("PUT", f"{OFFER_PATH}/{offer_id}", json_body=update_payload)
+            log.info(f"eBay Offer aktualisiert: SKU {sku}, Kat {valid_cat}, Preis {vk_gross:.2f}€")
+            return offer_id
+        except RuntimeError as e:
+            if "25713" in str(e) or "404" in str(e) or "not available" in str(e).lower():
+                # Offer existiert nicht mehr auf eBay → NICHT neu erstellen, überspringen
+                log.warning(f"eBay Offer {offer_id} nicht mehr vorhanden → ÜBERSPRUNGEN (kein neues Listing)")
+                return ""
+            raise
         else:
             payload = self._build_offer_payload(sku, vk_gross, category=category, description=description, title=title)
             result = self._request("POST", OFFER_PATH, json_body=payload)
