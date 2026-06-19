@@ -15573,5 +15573,15 @@
     "ek": 119.26,
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de"
+  },
+  "PPSE0017": {
+    "ean": "4895251644723",
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "ek": 25.88,
+    "vk": 51.99,
+    "title": "ECOFLOW Smart Plug 2",
+    "image_verified": false,
+    "source": "manual_legacy_sku"
   }
 }
