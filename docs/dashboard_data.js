@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-19T21:12:51.633186+00:00",
+  "generated_at": "2026-06-19T23:02:24.581971+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-19T20:50:07.720629+00:00",
+      "timestamp": "2026-06-19T22:15:48.624589+00:00",
       "checked": 600,
-      "lowered": 4,
-      "raised": 57,
-      "set_to_floor": 44,
+      "lowered": 39,
+      "raised": 60,
+      "set_to_floor": 94,
       "skipped_floor": 0,
-      "skipped_few": 11,
-      "skipped_image": 13,
-      "unchanged": 469,
+      "skipped_few": 21,
+      "skipped_image": 20,
+      "unchanged": 364,
       "errors": 2,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 554.99,
-        "new": 560.95,
-        "diff": 5.96,
-        "action": "raised"
-      },
-      {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 250.99,
-        "new": 251.99,
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 290.99,
+        "new": 291.99,
         "diff": 1.0,
         "action": "raised"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 241.99,
-        "new": 242.99,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 273.99,
+        "new": 274.99,
         "diff": 1.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 172.99,
-        "new": 171.99,
-        "diff": -1.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 496.99,
-        "new": 501.95,
-        "diff": 4.96,
+        "sku": "RAM4K0060",
+        "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8G",
+        "old": 264.99,
+        "new": 265.99,
+        "diff": 1.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 692.99,
-        "new": 700.95,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 745.99,
+        "new": 753.95,
         "diff": 7.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 302.99,
-        "new": 303.99,
-        "diff": 1.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 673.99,
+        "new": 681.95,
+        "diff": 7.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0271",
-        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
-        "old": 370.99,
-        "new": 373.99,
-        "diff": 3.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 645.99,
+        "new": 652.95,
+        "diff": 6.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 405.99,
-        "new": 408.99,
-        "diff": 3.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 97.99,
+        "new": 95.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "REFT0004",
+        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
+        "old": 719.99,
+        "new": 728.95,
+        "diff": 8.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0289",
-        "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
-        "old": 548.99,
-        "new": 554.95,
-        "diff": 5.96,
+        "sku": "REFT0007",
+        "title": "tecXL HP EliteDesk 800 G6 MP",
+        "old": 638.99,
+        "new": 645.95,
+        "diff": 6.96,
+        "action": "raised"
+      },
+      {
+        "sku": "REFT0014",
+        "title": "tecXL HP EliteDesk 800 G4 MP",
+        "old": 465.99,
+        "new": 469.99,
+        "diff": 4.0,
         "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-15",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-16",
         "lowered": 2,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-19",
         "lowered": 4,
         "raised": 57,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 39,
+        "raised": 60,
         "floor": 0
       }
     ]
