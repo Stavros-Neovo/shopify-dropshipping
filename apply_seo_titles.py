@@ -71,6 +71,20 @@ def refresh_user_token(client_id: str, client_secret: str,
 
 # ─── Inventory API ────────────────────────────────────────────────────────────
 
+def get_offer_status(base_url: str, user_token: str, sku: str) -> str:
+    """Gibt den Offer-Status ('PUBLISHED'/'UNPUBLISHED'/'') fuer eine SKU zurueck."""
+    r = requests.get(
+        f"{base_url}/sell/inventory/v1/offer",
+        headers={"Authorization": f"Bearer {user_token}", "Content-Type": "application/json"},
+        params={"sku": sku},
+        timeout=30,
+    )
+    if not r.ok:
+        return ""
+    offers = r.json().get("offers", [])
+    return offers[0].get("status", "") if offers else ""
+
+
 def get_inventory_item(base_url: str, user_token: str, sku: str) -> Optional[dict]:
     r = requests.get(
         f"{base_url}/sell/inventory/v1/inventory_item/{sku}",
@@ -219,11 +233,24 @@ def main():
     ean_to_sku   = load_bab_feed(cfg)
     ean_to_title = load_seo_titles()
 
-    # Schnittmenge: EANs die sowohl Feed als auch SEO-Titel haben
-    all_eans = sorted(set(ean_to_sku.keys()) & set(ean_to_title.keys()))
+    # Nur SKUs mit auflösungsgeprüftem Bild (supplier_map.json::image_verified) -
+    # SEO-Titel optimieren wir ausschließlich bei Listings, die 100% sicher ein
+    # korrektes Bild haben, nicht bei den 654 noch ungeklärten
+    try:
+        smap = json.loads(Path("supplier_map.json").read_text(encoding="utf-8"))
+        image_verified_skus = {sku for sku, v in smap.items() if v.get("image_verified")}
+    except Exception:
+        image_verified_skus = set()
+    print(f"supplier_map.json: {len(image_verified_skus)} SKUs mit verifiziertem Bild")
+
+    # Schnittmenge: EANs die Feed + SEO-Titel haben UND deren SKU verifiziertes Bild hat
+    all_eans = sorted(
+        ean for ean in (set(ean_to_sku.keys()) & set(ean_to_title.keys()))
+        if ean_to_sku[ean] in image_verified_skus
+    )
     total    = len(all_eans)
 
-    print(f"Gesamt zu aktualisieren: {total} Produkte")
+    print(f"Gesamt zu aktualisieren (nur verifizierte Bilder): {total} Produkte")
 
     if args.dry_run:
         print("[DRY-RUN] Erste 10 Beispiele:\n")
@@ -265,6 +292,14 @@ def main():
         print(f"[{offset+i:4}/{total}] SKU={sku} …", end=" ", flush=True)
 
         try:
+            offer_status = get_offer_status(base_url, user_token, sku)
+            if offer_status != "PUBLISHED":
+                print(f"nicht live ({offer_status or 'kein Offer'})")
+                report.append({"ean": ean, "sku": sku, "title": new_title,
+                                "status": "not_live"})
+                skipped += 1
+                continue
+
             item = get_inventory_item(base_url, user_token, sku)
             if item is None:
                 print("nicht auf eBay")
