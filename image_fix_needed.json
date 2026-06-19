@@ -4200,5 +4200,25 @@
     "ean": "4713294226624",
     "title": "G.Skill Ripjaws - DDR4 - 8 GB",
     "detected_at": "2026-06-18T21:33:20.117456+00:00"
+  },
+  "RAM5C0013": {
+    "ean": "649528929983",
+    "title": "Crucial DDR5 - 32GB 5600 SO-DIMM KIT 2x16GB (CT2K16G56C46S5)",
+    "detected_at": "2026-06-19T12:53:39.617328+00:00"
+  },
+  "REFT0013": {
+    "ean": "4262504946918",
+    "title": "tecXL Dell OptiPlex 7070 MP",
+    "detected_at": "2026-06-19T12:53:59.612492+00:00"
+  },
+  "REFT0019": {
+    "ean": "4262431599614",
+    "title": "tecXL HP ProDesk 600 G4 MT",
+    "detected_at": "2026-06-19T12:54:01.867560+00:00"
+  },
+  "SUPL0283": {
+    "ean": "5099206053304",
+    "title": "Logitech Headset H570e Wired / Type Binaural",
+    "detected_at": "2026-06-19T12:55:05.815654+00:00"
   }
 }
