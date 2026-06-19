@@ -1375,16 +1375,6 @@
     ],
     "image_verified": true
   },
-  "ANTB0008": {
-    "ean": "8885022190173",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.75,
-    "vk": 103.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "GARE0003": {
     "ean": "4895251600545",
     "supplier": "BAB",
@@ -1403,7 +1393,7 @@
     "ean": "8006540774724",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.45,
+    "ek": 28.42,
     "vk": 66.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1417,7 +1407,7 @@
     "ean": "8006540957196",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.44,
+    "ek": 27.41,
     "vk": 66.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1445,7 +1435,7 @@
     "ean": "4210201434832",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 32.99,
+    "ek": 31.47,
     "vk": 71.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2550,21 +2540,6 @@
     ],
     "image_verified": true
   },
-  "SUPL0459": {
-    "ean": "5099206099784",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Lift Vertical Ergonomic Mouse",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/127231.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/127231.jpg"
-    ]
-  },
   "SUPL0546": {
     "ean": "5099206112490",
     "supplier": "BAB",
@@ -3628,17 +3603,6 @@
     "title": "Tecget 2 String DC-Übespannungsschutz Typ 2",
     "image_verified": false
   },
-  "RAM4G0022": {
-    "ean": "4719692006851",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 73.08,
-    "vk": 145.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "G.Skill Value Series - DDR4 - 8 GB 2x4 GB",
-    "image_verified": false
-  },
   "RAM4G0058": {
     "ean": "4713294226624",
     "supplier": "BAB",
@@ -4395,7 +4359,7 @@
     "ean": "4210201445111",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.23,
+    "ek": 81.2,
     "vk": 164.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4409,7 +4373,7 @@
     "ean": "4210201445234",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.23,
+    "ek": 81.2,
     "vk": 164.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4423,7 +4387,7 @@
     "ean": "4210201445258",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.71,
+    "ek": 81.2,
     "vk": 161.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4437,7 +4401,7 @@
     "ean": "4210201445197",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.23,
+    "ek": 81.2,
     "vk": 164.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5632,7 +5596,7 @@
     "ean": "4210201408567",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 105.56,
+    "ek": 104.55,
     "vk": 206.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5846,21 +5810,6 @@
       "https://static.wixstatic.com/media/814ec4_c48b53a3e2cb426484b03f25d31dd8f6~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-420-en.jpg"
     ],
     "title": "Teltonika TRB246 - Gateway",
-    "image_verified": true
-  },
-  "NETU0010": {
-    "ean": "0810010078278",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 152.29,
-    "vk": 294.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/7b8f8da5-d684-4170-be1f-71b53af8d7f9/fdce5345-80e9-4edd-bf5b-93cf9141649e.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/7b8f8da5-d684-4170-be1f-71b53af8d7f9/fdce5345-80e9-4edd-bf5b-93cf9141649e.png"
-    ],
-    "title": "UbiQuiti WiFi 6 Mesh Access Point",
     "image_verified": true
   },
   "NETU0013": {
@@ -6104,21 +6053,6 @@
     "image_url": "https://media.ipcstore.net/img/l/260222.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/260222.jpg"
-    ]
-  },
-  "RAM4G0060": {
-    "ean": "4719692019967",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
-    "vk": 217.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "G.Skill Value Series DDR4 16 GB  2x8GB 2666 CL19",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/21287259.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287259.jpg"
     ]
   },
   "RAM4G0061": {
@@ -6566,7 +6500,7 @@
     "ean": "0718037906256",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.23,
+    "ek": 126.98,
     "vk": 250.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7737,20 +7671,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HDIW0162": {
-    "ean": "0718037877662",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 559.13,
-    "vk": 1085.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/116956.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/116956.jpg"
-    ],
-    "image_verified": true
-  },
   "HDIW0206": {
     "ean": "0718037899794",
     "supplier": "BAB",
@@ -7980,7 +7900,7 @@
     "ean": "4210201435587",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 214.17,
+    "ek": 208.08,
     "vk": 410.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8467,21 +8387,6 @@
     "image_url": "https://media.ipcstore.net/img/l/121455.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/121455.jpg"
-    ]
-  },
-  "NETU0079": {
-    "ean": "0810010074775",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 365.33,
-    "vk": 695.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "UbiQuiti USW-ENTERPRISE-8-POE- Switch - L3 - managed - 8 x 10/100/1000/2.5G (PoE+)",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/125818.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/125818.jpg"
     ]
   },
   "NETU0122": {
@@ -10504,7 +10409,7 @@
     "ean": "0718037891378",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 451.01,
+    "ek": 419.0,
     "vk": 856.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10528,21 +10433,6 @@
     "image_url": "https://media.ipcstore.net/img/l/139191.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/139191.jpg"
-    ]
-  },
-  "SSDW0088": {
-    "ean": "0718037903613",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 372.07,
-    "vk": 708.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD 2,5\" 2TB WD Red SA500 NAS SSD",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/136212.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/136212.jpg"
     ]
   },
   "SSDW0089": {
@@ -10603,7 +10493,7 @@
     "ean": "0718037906263",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 210.33,
+    "ek": 202.28,
     "vk": 403.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -11092,22 +10982,24 @@
   "HHWB1111": {
     "ean": "4210201434818",
     "supplier": "BAB",
-    "ek": 34.0,
+    "ek": 31.47,
     "vk": 71.99,
     "title": "Braun Oral-B iO Ultimative Reinigung Aufsteckbürsten weiß 8 Stk",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1125": {
     "ean": "8700216996297",
     "supplier": "BAB",
-    "ek": 214.17,
+    "ek": 208.08,
     "vk": 410.99,
     "title": "Braun Oral-B iO Series 10 Lunar",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1127": {
     "ean": "8006540860793",
@@ -11141,12 +11033,13 @@
   "HHWB1131": {
     "ean": "8700216194761",
     "supplier": "BAB",
-    "ek": 27.41,
+    "ek": 25.38,
     "vk": 59.99,
     "title": "Braun Oral-B iO Aufsteckbürsten Ultimative Reinigung 6er",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1134": {
     "ean": "8700216195027",
@@ -11161,27 +11054,29 @@
   "HHWB1136": {
     "ean": "8700216778541",
     "supplier": "BAB",
-    "ek": 34.0,
+    "ek": 31.47,
     "vk": 71.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 8 St.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1137": {
     "ean": "8700216777063",
     "supplier": "BAB",
-    "ek": 40.09,
+    "ek": 38.57,
     "vk": 83.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 10 St.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1138": {
     "ean": "8700216777131",
     "supplier": "BAB",
-    "ek": 40.09,
+    "ek": 37.56,
     "vk": 87.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 10 St.",
     "listed_at": "2026-06-14T20:49:22",
@@ -11643,7 +11538,7 @@
   "NETT1013": {
     "ean": "4779051840830",
     "supplier": "BAB",
-    "ek": 152.25,
+    "ek": 151.24,
     "vk": 294.99,
     "title": "Teltonika RUT906 - Wireless Router",
     "listed_at": "2026-06-14T20:49:22",
@@ -11652,7 +11547,8 @@
     "images": [
       "https://static.wixstatic.com/media/e7aade_87ff8fdd14224322a487881e7d808a99~mv2.jpg/v1/fill/w_1920,h_760,al_c,q_85/RUT906_1920x760-hero.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NETT1022": {
     "ean": "4779027312385",
@@ -14176,21 +14072,6 @@
     "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "SUPL0057": {
-    "ean": "5099206008441",
-    "supplier": "BAB",
-    "ek": 11.42,
-    "vk": 29.99,
-    "title": "Logitech Headset 960 Wired",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/l/504177.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/504177.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
   "SUPL0094": {
     "ean": "5099206063846",
     "supplier": "BAB",
@@ -15692,17 +15573,5 @@
     "ek": 119.26,
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "PPSE0017": {
-    "ean": "",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.09,
-    "vk": 51.99,
-    "title": "EcoFlow Smart Plug",
-    "listed_at": "2026-06-01T00:00:00",
-    "source": "manual_fix",
-    "image_verified": false,
-    "note": "Nicht mehr in BAB Preisliste. EK/VK aus Bestellung 23-14765-26114 vom 18.06.2026"
   }
 }
