@@ -235,6 +235,19 @@ def main():
     else:
         log.warning(f"enrichment_index.csv nicht gefunden — keine Bilder/Beschreibungen")
 
+    # supplier_map.json: einzige Quelle mit AUFLÖSUNGS-geprüftem image_verified.
+    # enrichment_index.csv hat nur "Icecat hat irgendeine URL", das laesst z.B.
+    # 200x200px ipcstore-Bilder durch, die eBay mit Fehler 25002 ablehnt.
+    image_verified_skus: set[str] = set()
+    supplier_map_path = Path("supplier_map.json")
+    if supplier_map_path.exists():
+        try:
+            smap = json.loads(supplier_map_path.read_text(encoding="utf-8"))
+            image_verified_skus = {sku for sku, v in smap.items() if v.get("image_verified")}
+            log.info(f"supplier_map.json geladen: {len(image_verified_skus)} SKUs mit auflösungsgeprüftem Bild")
+        except Exception as e:
+            log.warning(f"supplier_map.json konnte nicht geladen werden: {e}")
+
     # State-Datei laden (für Diff + verschwundene Artikel)
     state_path = Path(cfg["runtime"]["state_file"])
     state = json.loads(state_path.read_text()) if state_path.exists() else {}
@@ -382,7 +395,13 @@ def main():
                 log.info(f"  [eBay DRY-RUN] SKU {sku} → {ebay_pr.vk_gross:.2f}€")
             elif ebay:
                 try:
-                    result = ebay.upsert_product(product, ebay_pr.vk_gross)
+                    ebay_product = product
+                    if sku not in image_verified_skus and (product.get("image_url") or product.get("image_urls")):
+                        # Bild aus enrichment_index ist NICHT auflösungsgeprüft -> nicht an
+                        # eBay schicken, sonst publiziert upsert_product() trotz zu kleinem Bild
+                        ebay_product = {**product, "image_url": "", "image_urls": []}
+                        log.debug(f"  [eBay] SKU {sku}: Bild nicht auflösungsgeprüft → ohne Bild gesendet (Offer bleibt Draft)")
+                    result = ebay.upsert_product(ebay_product, ebay_pr.vk_gross)
                     action = "ebay_created" if sku not in state else "ebay_updated"
                     stats[action] += 1
                     if result.get("listing_id"):

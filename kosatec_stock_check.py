@@ -127,15 +127,16 @@ def main():
         ean = entry.get("ean", "")
         log.warning(f"  OFFLINE: SKU {sku} EAN {ean}")
         try:
-            # Bestand auf 0
-            client.set_inventory(sku, 0)
-            # Listing deaktivieren
+            # Listing deaktivieren (muss vor set_inventory(0) passieren - eBay
+            # lehnt Bestand=0 bei noch PUBLISHED Offers mit Fehler 25004 ab)
             offer = client.get_offer_for_sku(sku)
             if offer:
                 client.withdraw_offer(offer["offerId"])
                 log.info(f"  ✓ SKU {sku} deaktiviert (Listing zurückgezogen)")
             else:
-                log.info(f"  ✓ SKU {sku} Bestand → 0 (kein aktives Listing gefunden)")
+                log.info(f"  ✓ SKU {sku} kein aktives Listing gefunden")
+            # Bestand auf 0
+            client.set_inventory(sku, 0)
             # Aus supplier_map entfernen
             del smap[sku]
             offlined += 1

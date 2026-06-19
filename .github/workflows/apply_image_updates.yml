@@ -19,7 +19,7 @@ jobs:
           python-version: "3.11"
 
       - name: Dependencies
-        run: pip install requests pyyaml
+        run: pip install requests pyyaml Pillow
 
       - name: Bilder anwenden + eBay reaktivieren
         env:

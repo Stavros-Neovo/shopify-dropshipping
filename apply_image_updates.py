@@ -14,12 +14,27 @@ from __future__ import annotations
 import json, os, csv, io, sys, time, argparse
 from pathlib import Path
 import requests, yaml
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent))
 from ebay_client import EbayClient
 
 INVENTORY_PATH = "/sell/inventory/v1/inventory_item"
 OFFER_PATH     = "/sell/inventory/v1/offer"
+EBAY_MIN_PX    = 500  # eBay lehnt Bilder unter 500x500px ab (Fehler 25002)
+
+
+def meets_min_resolution(url: str) -> bool:
+    """Echte Pixel-Groesse pruefen - manuell eingetragene Bilder (z.B. aus der
+    Bild-Pflege-UI) koennen genau wie Icecat-Bilder zu kleine ipcstore-Thumbnails sein."""
+    try:
+        r = requests.get(url, timeout=10)
+        if not r.ok:
+            return False
+        img = Image.open(io.BytesIO(r.content))
+        return img.size[0] >= EBAY_MIN_PX and img.size[1] >= EBAY_MIN_PX
+    except Exception:
+        return False
 
 
 def main():
@@ -70,11 +85,17 @@ def main():
 
         print(f"\n  → {sku} : {image_url[:70]}")
 
+        if not meets_min_resolution(image_url):
+            print(f"    ⚠️  Bild zu klein (<{EBAY_MIN_PX}px) — eBay würde es ablehnen, übersprungen")
+            results.append({'sku': sku, 'status': 'too_small'})
+            continue
+
         # 1) supplier_map
         v = sm.get(sku, {})
         v['image_url']      = image_url
         v['images']         = [image_url]
         v['image_verified'] = True
+        v.pop('image_too_small', None)
         v['image_source']   = 'dashboard_manual'
         sm[sku] = v
         ean = v.get('ean', '')
