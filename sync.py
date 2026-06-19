@@ -254,12 +254,11 @@ def main():
             log.warning(f"⛔ {len(active_banned)} gesperrte SKUs noch aktiv — werden sofort offline genommen")
             for sku in active_banned:
                 try:
-                    offers = ebay.get_offers_for_sku(sku)
-                    for offer in offers:
-                        if offer.get("status") == "PUBLISHED":
-                            ebay.set_inventory(sku, 0)
-                            ebay.withdraw_offer(offer["offerId"])
-                            log.warning(f"  ⛔ GESPERRT + OFFLINE: {sku}")
+                    offer = ebay.get_offer_for_sku(sku)
+                    if offer and offer.get("status") == "PUBLISHED":
+                        ebay.set_inventory(sku, 0)
+                        ebay.withdraw_offer(offer["offerId"])
+                        log.warning(f"  ⛔ GESPERRT + OFFLINE: {sku}")
                     state[sku]["banned_offlined"] = datetime.now().isoformat()
                 except Exception as e:
                     log.error(f"  Fehler beim Deaktivieren von {sku}: {e}")
