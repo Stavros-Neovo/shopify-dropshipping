@@ -137,12 +137,12 @@ def process_orders(orders: list, ek_map: dict) -> dict:
 
     # Aggregatoren
     agg = {
-        "today":     {"sales": 0, "revenue": 0.0, "profit": 0.0},
-        "week":      {"sales": 0, "revenue": 0.0, "profit": 0.0},
-        "prev_week": {"sales": 0, "revenue": 0.0, "profit": 0.0},
-        "month":     {"sales": 0, "revenue": 0.0, "profit": 0.0},
-        "d30":       {"sales": 0, "revenue": 0.0, "profit": 0.0},
-        "d90":       {"sales": 0, "revenue": 0.0, "profit": 0.0},
+        "today":     {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
+        "week":      {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
+        "prev_week": {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
+        "month":     {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
+        "d30":       {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
+        "d90":       {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
     }
     daily: dict[str, dict] = {}   # "YYYY-MM-DD" → {revenue, profit, sales}
     product_stats: dict    = {}
@@ -167,6 +167,8 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             order.get("pricingSummary", {}).get("total", {}).get("value", 0)
         )
         order_profit = 0.0
+        order_ek     = 0.0
+        order_fee    = 0.0
 
         for item in order.get("lineItems", []):
             sku   = item.get("sku", "")
@@ -176,6 +178,8 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             ek    = ek_map.get(sku, 0)
             calc  = calc_profit_item(vk, ek, qty)
             order_profit += calc["profit_t"]
+            order_ek     += calc["ek"] * qty
+            order_fee    += calc["ebay_fee"] * qty
 
             # Product stats
             if sku not in product_stats:
@@ -218,6 +222,8 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             agg[key]["sales"]   += 1
             agg[key]["revenue"] += order_total
             agg[key]["profit"]  += order_profit
+            agg[key]["ek"]      += order_ek
+            agg[key]["fee"]     += order_fee
 
         if od == today:           add("today")
         if iso_week(od) == this_week:  add("week")
@@ -302,6 +308,8 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             "month_sales":       agg["month"]["sales"],
             "month_revenue":     rnd(agg["month"]["revenue"]),
             "month_profit":      rnd(agg["month"]["profit"]),
+            "month_ek":          rnd(agg["month"]["ek"]),
+            "month_ebay_fee":    rnd(agg["month"]["fee"]),
             "total_sales_30d":   agg["d30"]["sales"],
             "total_revenue_30d": rnd(agg["d30"]["revenue"]),
             "total_profit_30d":  rnd(agg["d30"]["profit"]),

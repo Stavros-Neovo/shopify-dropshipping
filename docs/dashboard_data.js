@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-19T14:51:33.762000+00:00",
+  "generated_at": "2026-06-19T15:04:49.756317+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -204,6 +204,8 @@ window.DASHBOARD_DATA = {
       "month_sales": 11,
       "month_revenue": 973.8,
       "month_profit": 121.7,
+      "month_ek": 475.03,
+      "month_ebay_fee": 206.22,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
       "total_profit_30d": 121.7

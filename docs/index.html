@@ -506,25 +506,16 @@
   <!-- ═══════════════════════════════════ LISTINGS ═══════════════════════════════════ -->
   <div class="section" id="section-listings">
     <div class="kpi-grid">
-      <div class="kpi-card blue"><div class="kpi-label">Listbare BAB-Artikel</div><div class="kpi-value">1.268</div><div class="kpi-sub">in supplier_map</div></div>
-      <div class="kpi-card green"><div class="kpi-label">Letzter Lauf: OK</div><div class="kpi-value" style="color:var(--green)">483</div><div class="kpi-sub">+ 2 Drafts</div></div>
-      <div class="kpi-card amber"><div class="kpi-label">Letzter Lauf: Fehler</div><div class="kpi-value" style="color:var(--red)">15</div><div class="kpi-sub">EAN fehlt, Aspekte, Timeout</div></div>
-      <div class="kpi-card blue"><div class="kpi-label">Bild-Korrekturen</div><div class="kpi-value">207</div><div class="kpi-sub">in image_fix_needed.json</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Listbare BAB-Artikel</div><div class="kpi-value" id="lst-total">–</div><div class="kpi-sub">in BAB-Preisliste</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Bilder verifiziert</div><div class="kpi-value" id="lst-img-ok" style="color:var(--green)">–</div><div class="kpi-sub">Icecat/ipcstore per EAN</div></div>
+      <div class="kpi-card amber"><div class="kpi-label">Bilder fehlen</div><div class="kpi-value" id="lst-img-missing" style="color:var(--red)">–</div><div class="kpi-sub">Listing inaktiv ohne Bild</div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Ø Marge / Artikel</div><div class="kpi-value" id="lst-avgmarge">–</div><div class="kpi-sub">nach Preisformel</div></div>
     </div>
 
     <div class="card">
-      <div class="card-header"><div><div class="card-title">Katalog-Verteilung nach Preisklasse</div><div class="card-subtitle">1.268 BAB Artikel · Ø VK €269,54 · Gesamtwert €341.771,32</div></div></div>
-      <div class="card-body">
-        <div class="inv-bar-row"><div class="inv-bar-label">unter €10</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:7.7%;background:#ef4444"></div></div><div class="inv-bar-count">98</div></div>
-        <div class="inv-bar-row"><div class="inv-bar-label">€10 – 25</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:14.0%;background:#f97316"></div></div><div class="inv-bar-count">178</div></div>
-        <div class="inv-bar-row"><div class="inv-bar-label">€25 – 50</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:7.7%;background:#f59e0b"></div></div><div class="inv-bar-count">98</div></div>
-        <div class="inv-bar-row"><div class="inv-bar-label">€50 – 100</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:15.2%;background:#eab308"></div></div><div class="inv-bar-count">193</div></div>
-        <div class="inv-bar-row"><div class="inv-bar-label">€100 – 200</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:16.6%;background:#84cc16"></div></div><div class="inv-bar-count">210</div></div>
-        <div class="inv-bar-row"><div class="inv-bar-label">€200 – 500</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:22.9%;background:#22c55e"></div></div><div class="inv-bar-count">290</div></div>
-        <div class="inv-bar-row"><div class="inv-bar-label">über €500</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:15.9%;background:#10b981"></div></div><div class="inv-bar-count">201</div></div>
-        <div style="margin-top:12px;padding:10px 14px;background:#f0fdf4;border-radius:7px;border:1px solid #bbf7d0">
-          <span style="font-size:11px;color:#15803d;font-weight:600">💡 Katalogwert €341.771 · Top-Shop Limit €426.675 · Spielraum: <strong>€84.904</strong></span>
-        </div>
+      <div class="card-header"><div><div class="card-title">Katalog-Verteilung nach Preisklasse</div><div class="card-subtitle" id="lst-dist-sub">–</div></div></div>
+      <div class="card-body" id="lst-dist-bars">
+        <div style="font-size:12px;color:var(--text-muted)">Lädt …</div>
       </div>
     </div>
 
@@ -533,8 +524,9 @@
       <div class="card-body">
         <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">🗑️</span><div style="flex:1"><div class="status-label">Kosatec-Bereinigung</div><div class="status-val">2.292 gelöscht · 9.281 nicht gefunden · 15.06.2026</div></div><span class="badge badge-green">✓ Erledigt</span></div>
         <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">👻</span><div style="flex:1"><div class="status-label">Ghost-Listings Fix</div><div class="status-val">24 deaktiviert · 426 in supplier_map eingetragen</div></div><span class="badge badge-green">✓ Erledigt</span></div>
-        <div class="status-item"><div class="status-dot-sm dot-red"></div><span style="font-size:16px">⚡</span><div style="flex:1"><div class="status-label">Notfall-Deaktivierung</div><div class="status-val">12.865 SKUs · emergency_deactivate_all.py</div></div><span class="badge badge-red">Läuft</span></div>
-        <div class="status-item"><div class="status-dot-sm dot-amber"></div><span style="font-size:16px">🖼️</span><div style="flex:1"><div class="status-label">Bild-Abmahnung</div><div class="status-val">HHWM0023 · HHWM0028 · Listing 377239847869 manuell prüfen</div></div><span class="badge badge-amber">Prüfen</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">⚡</span><div style="flex:1"><div class="status-label">Notfall-Deaktivierung unsicherer Bilder</div><div class="status-val">DDG-Bilder vollständig bereinigt · 16.–19.06.2026</div></div><span class="badge badge-green">✓ Erledigt</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">🖼️</span><div style="flex:1"><div class="status-label">Bildrechte-Abmahnung Makita</div><div class="status-val">12 SKUs dauerhaft gesperrt (banned_skus.json) · 16.06.2026</div></div><span class="badge badge-green">✓ Erledigt</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><span style="font-size:16px">🔧</span><div style="flex:1"><div class="status-label">Banned-SKU-Schutz Bugfix</div><div class="status-val">AttributeError verhinderte Auto-Deaktivierung seit 16.06. · gefixt 19.06.</div></div><span class="badge badge-green">✓ Erledigt</span></div>
       </div>
     </div>
   </div>
@@ -699,7 +691,7 @@
 
     <!-- KPI ROW -->
     <div class="kpi-grid">
-      <div class="kpi-card blue"><div class="kpi-icon">📈</div><div class="kpi-label">Umsatz Juni (netto)</div><div class="kpi-value" id="g-umsatz-netto">€645</div><div class="kpi-sub">768,82 ÷ 1,19 = ohne MwSt.</div></div>
+      <div class="kpi-card blue"><div class="kpi-icon">📈</div><div class="kpi-label">Umsatz (netto, 30T)</div><div class="kpi-value" id="g-umsatz-netto">–</div><div class="kpi-sub" id="g-umsatz-sub">ohne MwSt.</div></div>
       <div class="kpi-card amber"><div class="kpi-icon">🧾</div><div class="kpi-label">USt. Zahllast</div><div class="kpi-value" id="g-ust-zahllast" style="color:var(--red)">€46</div><div class="kpi-sub">Ausgangsteuer − Vorsteuer</div></div>
       <div class="kpi-card green"><div class="kpi-icon">💶</div><div class="kpi-label">Gewinn vor Steuern</div><div class="kpi-value" id="g-ebt">€106</div><div class="kpi-sub">nach eBay-Gebühren + EK</div></div>
       <div class="kpi-card green"><div class="kpi-icon">🏦</div><div class="kpi-label">Netto-Gewinn</div><div class="kpi-value" id="g-netto" style="color:var(--green)">€64</div><div class="kpi-sub">nach allen Steuern und Abgaben</div></div>
@@ -1385,7 +1377,7 @@ function showSection(id, el) {
   document.getElementById('page-title').textContent = t[0];
   document.getElementById('page-subtitle').textContent = t[1];
   // Animate bars when switching to listings
-  if (id === 'listings') animateBars();
+  if (id === 'listings') renderListingsStats();
   if (id === 'preise') { animateBars(); initPriceChart(); }
   if (id === 'gewinn') calcGewinn();
   if (id === 'retouren') calcRetoure();
@@ -1404,12 +1396,13 @@ function animateBars() {
 }
 animateBars();
 
-// ——— GEWINN & STEUERN ———
+// ——— GEWINN & STEUERN (Basiswerte aus dashboard_data.js, Monat 30 Tage) ———
+const _gStats = window.DASHBOARD_DATA?.orders?.stats || {};
 const G = {
-  vkBrutto:    768.82,   // alle 9 Bestellungen
-  ekNetto:     404.53,   // EK netto (BAB-Rechnungen)
-  ebayFeeReal: 94.14,    // echte eBay-Gebühr aus Fulfillment API (12,2%)
-  ebayFeeEst:  768.82 * 0.21,  // geschätzt 21% (inkl. geplante Promoted Listings)
+  vkBrutto:    _gStats.month_revenue ?? 0,        // Umsatz brutto (30 Tage)
+  ekNetto:     _gStats.month_ek ?? 0,             // EK netto (BAB)
+  ebayFeeReal: _gStats.month_ebay_fee ?? 0,       // echte eBay-Gebühr (13%+ggf. Promoted)
+  ebayFeeEst:  (_gStats.month_revenue ?? 0) * 0.21,  // geschätzt 21% (inkl. geplante Promoted Listings)
   useRealFees: true,     // toggle: echte vs. kalkulierte Gebühren
 };
 
@@ -1454,6 +1447,7 @@ function calcGewinn() {
   // KPI aktualisieren
   const fmt = v => '€' + Math.round(v);
   document.getElementById('g-umsatz-netto').textContent = fmt(vkNetto);
+  document.getElementById('g-umsatz-sub').textContent = `${fmt(vkBrutto)} ÷ 1,19 = ohne MwSt.`;
   document.getElementById('g-ust-zahllast').textContent = fmt(ustZahllast);
   document.getElementById('g-ebt').textContent = fmt(rohgewinn);
   document.getElementById('g-netto').textContent = fmt(nettoGewinn);
@@ -2209,6 +2203,46 @@ async function loadPreisliste(manual = false) {
     if (status) status.textContent = '❌ Preisliste nicht erreichbar (noch nicht generiert?)';
     if (loading) loading.style.display = 'none';
   }
+}
+
+// ——— LISTINGS: Katalog-Verteilung aus echter BAB-Preisliste ———
+async function renderListingsStats() {
+  if (!plistData.length) await loadPreisliste().catch(() => {});
+  const items = plistData.filter(a => a.vk > 0);
+  const total = items.length;
+  const totalValue = items.reduce((s, a) => s + a.vk, 0);
+  const avgVk = total ? totalValue / total : 0;
+  const avgMarge = total ? items.reduce((s, a) => s + (a.gewinn || 0), 0) / total : 0;
+
+  const verified = window.DASHBOARD_DATA?.catalog?.images_verified ?? 0;
+  const missing  = window.DASHBOARD_DATA?.catalog?.images_missing ?? 0;
+
+  document.getElementById('lst-total').textContent = total.toLocaleString('de-DE');
+  document.getElementById('lst-img-ok').textContent = verified.toLocaleString('de-DE');
+  document.getElementById('lst-img-missing').textContent = missing.toLocaleString('de-DE');
+  document.getElementById('lst-avgmarge').textContent = eur(avgMarge);
+
+  const buckets = [
+    { label: 'unter €10',    min: 0,   max: 10,   color: '#ef4444' },
+    { label: '€10 – 25',     min: 10,  max: 25,   color: '#f97316' },
+    { label: '€25 – 50',     min: 25,  max: 50,   color: '#f59e0b' },
+    { label: '€50 – 100',    min: 50,  max: 100,  color: '#eab308' },
+    { label: '€100 – 200',   min: 100, max: 200,  color: '#84cc16' },
+    { label: '€200 – 500',   min: 200, max: 500,  color: '#22c55e' },
+    { label: 'über €500',    min: 500, max: Infinity, color: '#10b981' },
+  ];
+  buckets.forEach(b => { b.count = items.filter(a => a.vk >= b.min && a.vk < b.max).length; });
+  const maxCount = Math.max(...buckets.map(b => b.count), 1);
+
+  document.getElementById('lst-dist-sub').textContent =
+    `${total.toLocaleString('de-DE')} BAB Artikel · Ø VK ${eur(avgVk)} · Gesamtwert ${eur(totalValue)}`;
+  document.getElementById('lst-dist-bars').innerHTML = buckets.map(b => `
+    <div class="inv-bar-row"><div class="inv-bar-label">${b.label}</div><div class="inv-bar-track"><div class="inv-bar-fill" style="width:${(b.count/maxCount*100).toFixed(1)}%;background:${b.color}"></div></div><div class="inv-bar-count">${b.count}</div></div>
+  `).join('') + `
+    <div style="margin-top:12px;padding:10px 14px;background:#f0fdf4;border-radius:7px;border:1px solid #bbf7d0">
+      <span style="font-size:11px;color:#15803d;font-weight:600">💡 Katalogwert ${eur(totalValue)} · Top-Shop Limit €426.675 · Spielraum: <strong>${eur(Math.max(0, 426675 - totalValue))}</strong></span>
+    </div>`;
+  animateBars();
 }
 
 function plistFilter() {
