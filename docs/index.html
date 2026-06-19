@@ -356,49 +356,37 @@
 
   <!-- ═══════════════════════════════════ DASHBOARD ═══════════════════════════════════ -->
   <div class="section active" id="section-dashboard">
-    <div class="profit-ticker">
-      <div class="ticker-item"><div class="ticker-val" style="color:#34d399">€458,86</div><div class="ticker-label">Umsatz Juni (fertig)</div></div>
+    <div class="profit-ticker" id="dash-ticker">
+      <div class="ticker-item"><div class="ticker-val" id="dt-month-revenue" style="color:#34d399">–</div><div class="ticker-label">Umsatz (30 Tage)</div></div>
       <div class="ticker-divider"></div>
-      <div class="ticker-item"><div class="ticker-val" style="color:#fbbf24">€309,96</div><div class="ticker-label">Offen (2 Bestellungen)</div></div>
+      <div class="ticker-item"><div class="ticker-val" id="dt-month-profit" style="color:#fbbf24">–</div><div class="ticker-label">Gewinn (30 Tage)</div></div>
       <div class="ticker-divider"></div>
-      <div class="ticker-item"><div class="ticker-val" style="color:#60a5fa">€768,82</div><div class="ticker-label">Gesamtumsatz Juni</div></div>
+      <div class="ticker-item"><div class="ticker-val" id="dt-week-trend" style="color:#60a5fa">–</div><div class="ticker-label">Woche vs. Vorwoche</div></div>
       <div class="ticker-divider"></div>
-      <div class="ticker-item"><div class="ticker-val" style="color:#a78bfa">€341.771</div><div class="ticker-label">Katalogwert (1.268 Art.)</div></div>
+      <div class="ticker-item"><div class="ticker-val" id="dt-payout" style="color:#a78bfa">–</div><div class="ticker-label">Erwartete Auszahlung</div></div>
       <div class="ticker-divider"></div>
-      <div class="ticker-item"><div class="ticker-val" style="color:#f472b6">50.000</div><div class="ticker-label">Top-Shop Listing-Limit</div></div>
+      <div class="ticker-item"><div class="ticker-val" id="dt-tax" style="color:#f472b6">–</div><div class="ticker-label">Steuerrücklage (Monat)</div></div>
     </div>
 
     <div class="kpi-grid">
-      <div class="kpi-card blue"><div class="kpi-icon">📦</div><div class="kpi-label">BAB Artikel</div><div class="kpi-value">1.268</div><div class="kpi-sub">in supplier_map · alle auf Lager</div><div class="kpi-change up">↑ +426 Ghost-Listings gefixt</div></div>
-      <div class="kpi-card amber"><div class="kpi-icon">🏷️</div><div class="kpi-label">Aktive Listings</div><div class="kpi-value" style="color:var(--amber)">0</div><div class="kpi-sub">Notfall-Deaktivierung läuft</div><div class="kpi-change neutral">⚡ Ziel: 1.268 nach Re-Listing</div></div>
-      <div class="kpi-card green"><div class="kpi-icon">📬</div><div class="kpi-label">Offene Bestellungen</div><div class="kpi-value" style="color:var(--amber)">2</div><div class="kpi-sub">PETK0049 · NETU0187</div><div class="kpi-change neutral">📧 Emails versandt an BAB</div></div>
-      <div class="kpi-card green"><div class="kpi-icon">💶</div><div class="kpi-label">Ø Gewinn / Artikel</div><div class="kpi-value">€25,79</div><div class="kpi-sub">nach eBay-Gebühren (21%) + MwSt.</div><div class="kpi-change up">9,6% Netto-Marge</div></div>
+      <div class="kpi-card blue"><div class="kpi-icon">📦</div><div class="kpi-label">BAB Artikel</div><div class="kpi-value" id="kpi-articles">–</div><div class="kpi-sub" id="kpi-articles-sub">in supplier_map.json</div></div>
+      <div class="kpi-card amber"><div class="kpi-icon">🏷️</div><div class="kpi-label">Aktive Listings</div><div class="kpi-value" id="kpi-active" style="color:var(--amber)">–</div><div class="kpi-sub" id="kpi-active-sub">im letzten Repricer-Lauf geprüft</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">📬</div><div class="kpi-label">BAB-Fristen offen</div><div class="kpi-value" id="kpi-deadlines" style="color:var(--amber)">–</div><div class="kpi-sub" id="kpi-deadlines-sub">–</div></div>
+      <div class="kpi-card green"><div class="kpi-icon">💶</div><div class="kpi-label">Ø Gewinn / Bestellung</div><div class="kpi-value" id="kpi-avgprofit">–</div><div class="kpi-sub" id="kpi-avgprofit-sub">nach eBay-Gebühren + MwSt.</div></div>
     </div>
 
     <div class="card">
-      <div class="card-header"><div><div class="card-title">Listing-Pipeline</div><div class="card-subtitle">Aktueller Fortschritt</div></div><span class="badge badge-amber">⚡ In Bearbeitung</span></div>
-      <div class="card-body">
-        <div class="pipeline">
-          <div class="pipeline-step"><div class="pipeline-circle done">✓</div><div class="pipeline-label">Kosatec</div><div class="pipeline-count" style="color:var(--green)">2.292 gelöscht</div></div>
-          <div class="pipeline-step"><div class="pipeline-circle done">✓</div><div class="pipeline-label">Ghost-Fix</div><div class="pipeline-count" style="color:var(--green)">426 gefixt</div></div>
-          <div class="pipeline-step"><div class="pipeline-circle active">⟳</div><div class="pipeline-label">Notfall-Deakt.</div><div class="pipeline-count" style="color:var(--accent)">läuft...</div></div>
-          <div class="pipeline-step"><div class="pipeline-circle pending">4</div><div class="pipeline-label">Repricer</div><div class="pipeline-count">ausstehend</div></div>
-          <div class="pipeline-step"><div class="pipeline-circle pending">5</div><div class="pipeline-label">Smart Lister</div><div class="pipeline-count">1.268 warten</div></div>
-          <div class="pipeline-step"><div class="pipeline-circle pending">6</div><div class="pipeline-label">Promoted 8%</div><div class="pipeline-count">Kampagne</div></div>
-        </div>
-        <div style="font-size:11px;color:#92400e;padding:10px 14px;background:#fffbeb;border-radius:7px;border:1px solid #fcd34d">
-          ⚠️ <strong>Jetzt:</strong> eBay Seller Hub → Aktive Angebote → Alle auswählen → Beenden (sofortige Wirkung parallel zum Skript)
-        </div>
-      </div>
+      <div class="card-header"><div><div class="card-title">BAB-Versandfristen</div><div class="card-subtitle">Bestellungen, die an BAB weitergeleitet/verfolgt werden müssen</div></div><span class="badge badge-amber" id="deadline-badge">–</span></div>
+      <div class="card-body" id="deadline-list">–</div>
     </div>
 
     <div class="grid-2-1">
       <div class="card" style="margin-bottom:0">
-        <div class="card-header"><div><div class="card-title">Umsatz Juni 2026</div><div class="card-subtitle">9 Bestellungen · Ø €85,42</div></div></div>
+        <div class="card-header"><div><div class="card-title">Umsatz & Gewinn (30 Tage)</div><div class="card-subtitle" id="revenue-chart-sub">–</div></div></div>
         <div class="card-body"><canvas id="revenueChart" height="190"></canvas></div>
       </div>
       <div class="card" style="margin-bottom:0">
-        <div class="card-header"><div class="card-title">Umsatz nach Kategorie</div></div>
+        <div class="card-header"><div class="card-title">Top-Produkte (30 Tage)</div></div>
         <div class="card-body"><canvas id="categoryChart" height="190"></canvas></div>
       </div>
     </div>
@@ -1368,17 +1356,18 @@
   <button class="mobile-bottom-btn" id="mb-more" onclick="toggleMobileNav()"><span class="mbi">☰</span>Mehr</button>
 </nav>
 
+<script src="dashboard_data.js"></script>
 <script>
 // ——— NAV ROUTING ———
 const titles = {
   dashboard: ['Betriebsübersicht', 'June 2026 · eBay DE · Best_Neodeals'],
   orders: ['Bestellungen', '9 Bestellungen · 2 offen · €768,82 Gesamtumsatz'],
-  listings: ['Listings', '1.268 BAB-Artikel · Katalogwert €341.771'],
+  listings: ['Listings', '1.097 BAB-Artikel · Katalogwert €315.382'],
   preise: ['Preismanager', 'Kalkulation · Formel · Katalog-Analyse'],
-  suppliermap: ['Supplier Map', '1.268 Einträge · supplier_map.json'],
-  fehler: ['Fehlerbehebung', '15 Listing-Fehler · EAN, CPU-Aspekte, Timeout'],
-  repricer: ['Repricer', 'Preise aktualisieren · Schritt 3'],
-  lister: ['Smart Lister', '1.268 BAB-Artikel neu listen · Schritt 4'],
+  suppliermap: ['Supplier Map', '1.097 Einträge · supplier_map.json'],
+  fehler: ['Fehlerbehebung', 'Bekannte Listing-Fehler · EAN, CPU-Aspekte, Timeout'],
+  repricer: ['Repricer', 'Preise aktualisieren · läuft stündlich automatisch'],
+  lister: ['Smart Lister', 'Nur noch Scan-Modus · keine neuen Listings (€0,06/Stk Gebühr gesperrt)'],
   forwarder: ['Order Forwarder', 'Automatische Bestellweiterleitung an BAB'],
   health:    ['System Health', 'Deep-Check aller Komponenten · 4× täglich · 15min Auto-Refresh'],
   gewinn:     ['Gewinn & Steuern', 'Umsatzsteuer · Einkommensteuer · Gewerbesteuer · Rücklagen'],
@@ -1603,30 +1592,100 @@ function initPriceChart() {
   });
 }
 
-// Revenue chart
-const ctx1 = document.getElementById('revenueChart').getContext('2d');
-new Chart(ctx1, {
-  type: 'bar',
-  data: {
-    labels: ['7.Jun', '8.Jun', '9.Jun', '10.Jun', '11.Jun', '12.Jun', '13.Jun', '14.Jun', '15.Jun', '16.Jun'],
-    datasets: [
-      { label: 'Abgeschlossen', data: [53.96, 64.96, 0, 0, 55.98, 63.98, 219.98, 0, 0, 0], backgroundColor: '#10b981', borderRadius: 5, borderSkipped: false },
-      { label: 'Offen', data: [0, 0, 0, 0, 0, 0, 0, 0, 279.98, 29.98], backgroundColor: '#f59e0b', borderRadius: 5, borderSkipped: false }
-    ]
-  },
-  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 }, boxWidth: 12, padding: 12 } }, tooltip: { callbacks: { label: c => c.dataset.label + ': €' + c.parsed.y.toFixed(2) } } }, scales: { x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } }, y: { stacked: true, grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 }, callback: v => '€' + v } } } }
-});
+// ——— DASHBOARD HOME (window.DASHBOARD_DATA aus dashboard_data.js, stündlich generiert) ———
+function eur(v) {
+  return (v ?? 0).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+}
 
-// Category chart
-const ctx2 = document.getElementById('categoryChart').getContext('2d');
-new Chart(ctx2, {
-  type: 'doughnut',
-  data: {
-    labels: ['Netzwerk/IT', 'Audio/AV', 'Kabel/USB', 'Drucker', 'Sonstiges'],
-    datasets: [{ data: [279.98, 219.98, 119.92, 63.98, 85.94], backgroundColor: ['#3b82f6','#10b981','#f59e0b','#8b5cf6','#94a3b8'], borderWidth: 2, borderColor: '#fff' }]
-  },
-  options: { responsive: true, maintainAspectRatio: false, cutout: '65%', plugins: { legend: { position: 'bottom', labels: { font: { size: 10 }, boxWidth: 10, padding: 8 } } } }
-});
+function renderDashboardHome() {
+  const d = window.DASHBOARD_DATA;
+  if (!d) {
+    document.getElementById('dash-ticker').innerHTML =
+      '<div style="font-size:12px;color:var(--text-muted)">⚠️ dashboard_data.js nicht geladen — wird stündlich von dashboard.yml generiert.</div>';
+    return;
+  }
+
+  const stats   = d.orders?.stats || {};
+  const catalog = d.catalog || {};
+  const tax     = d.orders?.tax_reserves || {};
+  const deadlines = d.orders?.bab_deadlines || [];
+
+  document.getElementById('dt-month-revenue').textContent = eur(stats.month_revenue);
+  document.getElementById('dt-month-profit').textContent  = eur(stats.month_profit);
+  const weekDiff = (stats.week_revenue ?? 0) - (stats.prev_week_revenue ?? 0);
+  document.getElementById('dt-week-trend').textContent =
+    (weekDiff >= 0 ? '+' : '') + eur(weekDiff);
+  document.getElementById('dt-payout').textContent = eur(d.orders?.expected_payout);
+  document.getElementById('dt-tax').textContent    = eur(tax.total_month);
+
+  document.getElementById('kpi-articles').textContent = (catalog.total_skus ?? 0).toLocaleString('de-DE');
+  document.getElementById('kpi-articles-sub').textContent =
+    `${catalog.images_verified ?? 0} mit Bild verifiziert · ${catalog.images_missing ?? 0} ohne Bild`;
+
+  document.getElementById('kpi-active').textContent = (d.active_listings ?? 0).toLocaleString('de-DE');
+
+  const urgentCount = deadlines.filter(x => x.urgent).length;
+  document.getElementById('kpi-deadlines').textContent = deadlines.length;
+  document.getElementById('kpi-deadlines-sub').textContent =
+    urgentCount > 0 ? `⚠️ ${urgentCount} dringend (≤2 Tage)` : 'alle entspannt';
+
+  const avgProfit = stats.month_sales ? stats.month_profit / stats.month_sales : 0;
+  document.getElementById('kpi-avgprofit').textContent = eur(avgProfit);
+  const margin = stats.month_revenue ? (stats.month_profit / stats.month_revenue * 100) : 0;
+  document.getElementById('kpi-avgprofit-sub').textContent = margin.toFixed(1).replace('.', ',') + '% Netto-Marge';
+
+  titles.dashboard[1] = `${stats.month_sales ?? 0} Bestellungen (30T) · ${eur(stats.month_revenue)} Umsatz · eBay DE · Best_Neodeals`;
+  if (document.getElementById('page-title').textContent.includes('Betriebsübersicht')) {
+    document.getElementById('page-subtitle').textContent = titles.dashboard[1];
+  }
+
+  // BAB-Versandfristen
+  const badge = document.getElementById('deadline-badge');
+  badge.textContent = urgentCount > 0 ? `⚠️ ${urgentCount} dringend` : '✓ alles entspannt';
+  badge.className = 'badge ' + (urgentCount > 0 ? 'badge-red' : 'badge-green');
+  const list = document.getElementById('deadline-list');
+  if (!deadlines.length) {
+    list.innerHTML = '<div style="font-size:12px;color:var(--text-muted)">Keine offenen BAB-Fristen.</div>';
+  } else {
+    list.innerHTML = deadlines.slice(0, 8).map(x => `
+      <div class="status-item">
+        <div class="status-dot-sm ${x.urgent ? 'dot-red' : 'dot-amber'}"></div>
+        <div style="flex:1">
+          <div class="status-label">${x.order_id} · ${(x.items || []).join(', ').slice(0, 60)}</div>
+          <div class="status-val">Bestellt ${x.date} · Frist ${x.deadline}</div>
+        </div>
+        <span class="badge ${x.urgent ? 'badge-red' : 'badge-amber'}">${x.days_left}d</span>
+      </div>`).join('');
+  }
+
+  // Umsatz & Gewinn (30 Tage)
+  const chart30 = d.orders?.chart_30d || [];
+  document.getElementById('revenue-chart-sub').textContent =
+    `${stats.month_sales ?? 0} Bestellungen · Ø ${eur(stats.month_sales ? stats.month_revenue / stats.month_sales : 0)}`;
+  new Chart(document.getElementById('revenueChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: chart30.map(c => c.date),
+      datasets: [
+        { label: 'Umsatz', data: chart30.map(c => c.revenue), backgroundColor: '#60a5fa', borderRadius: 4, borderSkipped: false },
+        { label: 'Gewinn', data: chart30.map(c => c.profit),  backgroundColor: '#10b981', borderRadius: 4, borderSkipped: false }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 }, boxWidth: 12, padding: 12 } }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + eur(c.parsed.y) } } }, scales: { x: { grid: { display: false }, ticks: { font: { size: 9 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } }, y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 }, callback: v => '€' + v } } } }
+  });
+
+  // Top-Produkte (30 Tage)
+  const top = (d.orders?.top_products || []).slice(0, 6);
+  new Chart(document.getElementById('categoryChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: top.map(p => p.title.slice(0, 22)),
+      datasets: [{ data: top.map(p => p.revenue), backgroundColor: '#3b82f6', borderRadius: 4, borderSkipped: false }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => eur(c.parsed.x) } } }, scales: { x: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 }, callback: v => '€' + v } }, y: { grid: { display: false }, ticks: { font: { size: 10 } } } } }
+  });
+}
+renderDashboardHome();
 
 // ——— MOBILE NAV ———
 const BOTTOM_NAV_IDS = ['dashboard','orders','gewinn','retouren'];

@@ -12,6 +12,7 @@ from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
 import requests, yaml
 
+SUPPLIER_MAP   = "supplier_map.json"
 REPORT_FILE    = "repricer_report.json"
 OUTPUT_FILE    = "docs/dashboard_data.js"
 CONFIG_FILE    = "config_shop2.yaml"
@@ -394,6 +395,21 @@ def load_repricer_data() -> dict:
         return {}
 
 
+def load_catalog_stats() -> dict:
+    """Katalog-Kennzahlen aus supplier_map.json fuer das Dashboard."""
+    try:
+        with open(SUPPLIER_MAP, encoding="utf-8") as f:
+            smap = json.load(f)
+    except Exception:
+        return {"total_skus": 0, "images_verified": 0, "images_missing": 0}
+    verified = sum(1 for v in smap.values() if v.get("image_verified"))
+    return {
+        "total_skus":      len(smap),
+        "images_verified": verified,
+        "images_missing":  len(smap) - verified,
+    }
+
+
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
@@ -451,6 +467,7 @@ def main():
         "generated_at":    datetime.now(timezone.utc).isoformat(),
         "shop_name":       "Best_Neodeals eBay Shop",
         "active_listings": active_listings,
+        "catalog":         load_catalog_stats(),
         "repricing": {
             "last_run":       last_run,
             "recent_changes": recent_changes,

@@ -1,110 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-19T12:37:46.792510+00:00",
+  "generated_at": "2026-06-19T14:51:33.762000+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
+  "catalog": {
+    "total_skus": 1097,
+    "images_verified": 816,
+    "images_missing": 281
+  },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-18T21:26:25.744019+00:00",
+      "timestamp": "2026-06-19T12:53:35.763391+00:00",
       "checked": 600,
-      "lowered": 1,
-      "raised": 38,
-      "set_to_floor": 13,
+      "lowered": 0,
+      "raised": 9,
+      "set_to_floor": 2,
       "skipped_floor": 0,
-      "skipped_few": 50,
-      "skipped_image": 365,
-      "unchanged": 133,
+      "skipped_few": 11,
+      "skipped_image": 425,
+      "unchanged": 153,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 166.99,
-        "new": 171.99,
-        "diff": 5.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 648.99,
+        "new": 681.95,
+        "diff": 32.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 474.99,
-        "new": 498.99,
-        "diff": 24.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 93.99,
+        "new": 95.99,
+        "diff": 2.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 289.99,
-        "new": 301.99,
-        "diff": 12.0,
+        "sku": "REFR2001",
+        "title": "RETEQ Lenovo ThinkPad USB-C Docking - 40A9009",
+        "old": 64.99,
+        "new": 66.99,
+        "diff": 2.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0269",
-        "title": "Seagate IronWolf Pro ST20000NT001 / 20TB",
-        "old": 1316.95,
-        "new": 1327.95,
+        "sku": "SDXS1020",
+        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
+        "old": 416.99,
+        "new": 436.99,
+        "diff": 20.0,
+        "action": "raised"
+      },
+      {
+        "sku": "SHP0130",
+        "title": "Philips Hue White and Color Ambiance - LED-La",
+        "old": 138.99,
+        "new": 142.99,
+        "diff": 4.0,
+        "action": "raised"
+      },
+      {
+        "sku": "SHP0147",
+        "title": "Philips Hue White and Color Ambiance Play ext",
+        "old": 84.99,
+        "new": 86.99,
+        "diff": 2.0,
+        "action": "raised"
+      },
+      {
+        "sku": "SSDC0070",
+        "title": "HDSSD 2.5\" 500 GB Crucial BX500 Box",
+        "old": 135.99,
+        "new": 139.99,
+        "diff": 4.0,
+        "action": "raised"
+      },
+      {
+        "sku": "SUPH0029",
+        "title": "HP Thunderbolt G4 Dock - Dockingstation",
+        "old": 255.99,
+        "new": 266.99,
         "diff": 11.0,
         "action": "raised"
       },
       {
-        "sku": "HDIS0271",
-        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
-        "old": 353.99,
-        "new": 370.99,
-        "diff": 17.0,
-        "action": "raised"
-      },
-      {
-        "sku": "HDIS0280",
-        "title": "Seagate Exos M ST28000NM003K / 28 TB",
-        "old": 1692.99,
-        "new": 1621.95,
-        "diff": -71.04,
+        "sku": "SUPS0342",
+        "title": "Samsung Powerbank - 20000 mAh - 25 Watt - Fas",
+        "old": 50.99,
+        "new": 49.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0286",
-        "title": "Seagate IronWolf Pro ST28000NT000 / 28TB",
-        "old": 1597.99,
-        "new": 1543.95,
-        "diff": -54.04,
+        "sku": "SUPS0368",
+        "title": "Samsung EP-T6010 - Netzteil - without cable -",
+        "old": 42.99,
+        "new": 41.99,
+        "diff": -1.0,
         "action": "lowered"
-      },
-      {
-        "sku": "HDIT0203",
-        "title": "Toshiba MG09ACA18TE / 18TB / 3.5\"",
-        "old": 1083.95,
-        "new": 1093.95,
-        "diff": 10.0,
-        "action": "raised"
-      },
-      {
-        "sku": "HDIT0247",
-        "title": "Toshiba MG11ACA22TE /22 TB / 7200 RPM / 3.5\"",
-        "old": 1137.95,
-        "new": 1147.95,
-        "diff": 10.0,
-        "action": "raised"
-      },
-      {
-        "sku": "HDIT0248",
-        "title": "Toshiba MG11 Series MG11ACA20TE / Festplatte ",
-        "old": 1142.95,
-        "new": 1152.95,
-        "diff": 10.0,
-        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-14",
-        "lowered": 3,
-        "raised": 1,
-        "floor": 0
-      },
       {
         "date": "2026-06-14",
         "lowered": 3,
@@ -182,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 1,
         "raised": 38,
         "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 0,
+        "raised": 9,
+        "floor": 0
       }
     ]
   },
@@ -192,16 +197,16 @@ window.DASHBOARD_DATA = {
       "today_profit": 0.0,
       "week_sales": 4,
       "week_revenue": 514.94,
-      "week_profit": 57.33,
+      "week_profit": 56.22,
       "prev_week_sales": 5,
       "prev_week_revenue": 404.9,
       "prev_week_profit": 44.18,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 122.81,
+      "month_profit": 121.7,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 122.81
+      "total_profit_30d": 121.7
     },
     "chart_7d": [
       {
@@ -219,7 +224,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 22.89,
+        "profit": 21.78,
         "sales": 1
       },
       {
@@ -401,7 +406,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 22.89,
+        "profit": 21.78,
         "sales": 1
       },
       {
@@ -943,7 +948,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 22.89,
+        "profit": 21.78,
         "sales": 1
       },
       {
@@ -979,14 +984,14 @@ window.DASHBOARD_DATA = {
         "revenue": 51.99,
         "profit": 32.16,
         "vk": 51.99,
-        "ek": 0.0,
+        "ek": 0,
         "calc": {
           "vk_brutto": 55.98,
           "ebay_fee": 11.76,
           "vat": 7.06,
           "netto_vk": 37.16,
           "ship": 5.0,
-          "ek": 0.0,
+          "ek": 0,
           "profit_u": 32.16,
           "qty": 1,
           "profit_t": 32.16
@@ -997,19 +1002,19 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 22.89,
+        "profit": 21.78,
         "vk": 275.99,
-        "ek": 157.98,
+        "ek": 159.09,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 58.8,
           "vat": 35.31,
           "netto_vk": 185.87,
           "ship": 5.0,
-          "ek": 157.98,
-          "profit_u": 22.89,
+          "ek": 159.09,
+          "profit_u": 21.78,
           "qty": 1,
-          "profit_t": 22.89
+          "profit_t": 21.78
         }
       },
       {
@@ -1196,7 +1201,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 22.89
+        "profit": 21.78
       },
       {
         "date": "13.06 22:19",
@@ -1356,9 +1361,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 36.84,
-      "gewst_month": 18.42,
-      "total_month": 210.75
+      "est_month": 36.51,
+      "gewst_month": 18.26,
+      "total_month": 210.25
     },
     "expected_payout": 769.3
   },
