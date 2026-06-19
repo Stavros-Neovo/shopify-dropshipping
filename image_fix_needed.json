@@ -68,5 +68,105 @@
     "ean": "4895251641623",
     "title": "ECOFLOW GLACIER Classic 35L",
     "detected_at": "2026-06-19T20:59:36.495262+00:00"
+  },
+  "SDXS0032": {
+    "ean": "8806094914689",
+    "title": "Samsung Portable SSD T9 2TB Black  MU-PG2T0B/EU",
+    "detected_at": "2026-06-19T22:17:41.009326+00:00"
+  },
+  "SHG0044": {
+    "ean": "6974316999997",
+    "title": "Govee - Govee Gaming Wall light*",
+    "detected_at": "2026-06-19T22:18:47.581180+00:00"
+  },
+  "SHG0053": {
+    "ean": "6974316999393",
+    "title": "Govee - Neon Rope Light 2 Clips - 5 pcs - White*",
+    "detected_at": "2026-06-19T22:18:53.744574+00:00"
+  },
+  "SHG0055": {
+    "ean": "6974316999416",
+    "title": "Govee - Neon Rope Light 2 Clips - 5 pcs - Black *",
+    "detected_at": "2026-06-19T22:18:59.871858+00:00"
+  },
+  "SUPB1058": {
+    "ean": "0017817861076",
+    "title": "Bose QuietComfort Ultra Earbuds (2. Gen.) White",
+    "detected_at": "2026-06-19T22:21:15.964215+00:00"
+  },
+  "SUPJ0161": {
+    "ean": "5706991031256",
+    "title": "JABRA Engage 65 SE Stereo - Headset - On-Ear",
+    "detected_at": "2026-06-19T22:27:21.098943+00:00"
+  },
+  "SUPJ0170": {
+    "ean": "5706991031539",
+    "title": "JABRA Evolve 65 TE Stereo - Headset -Bluetooth - kabellos - Adapter USB-A via Bluetooth",
+    "detected_at": "2026-06-19T22:27:27.235987+00:00"
+  },
+  "SUPJ0183": {
+    "ean": "5706991034530",
+    "title": "JABRA Evolve2 40 SE - Mono Headset",
+    "detected_at": "2026-06-19T22:27:37.335514+00:00"
+  },
+  "SUPJ0188": {
+    "ean": "5706991034318",
+    "title": "Jabra Headset Evolve 30 II MS Duo USB-C/A schnurgebunden",
+    "detected_at": "2026-06-19T22:27:41.414068+00:00"
+  },
+  "SUPJ1061": {
+    "ean": "5706991027518",
+    "title": "JABRA Evolve2 55 MS Mono Headset",
+    "detected_at": "2026-06-19T22:27:58.278071+00:00"
+  },
+  "SUPJ1077": {
+    "ean": "5706991030976",
+    "title": "JABRA Engage 75 SE Mono - Headset - On-Ear",
+    "detected_at": "2026-06-19T22:28:04.888983+00:00"
+  },
+  "SUPJ1079": {
+    "ean": "5706991026146",
+    "title": "JABRA Engage 40 Stereo - Headset - On-Ear - kabelgebunden",
+    "detected_at": "2026-06-19T22:28:07.210153+00:00"
+  },
+  "SUPJ1082": {
+    "ean": "5706991019957",
+    "title": "JABRA Evolve 30 II UC Mono - Headset - On-Ear",
+    "detected_at": "2026-06-19T22:28:09.937260+00:00"
+  },
+  "SUPJ1085": {
+    "ean": "5706991031522",
+    "title": "JABRA Evolve 65 TE Stereo - Headset - On-Ear",
+    "detected_at": "2026-06-19T22:28:12.074973+00:00"
+  },
+  "SUPL2028": {
+    "ean": "0195892121305",
+    "title": "Lenovo ThinkPad Smart Dock 7500 Gen 2 - Dockingstation",
+    "detected_at": "2026-06-19T22:29:16.396358+00:00"
+  },
+  "SUPL2029": {
+    "ean": "0195892112907",
+    "title": "Lenovo ThinkPad Smart Dock 7500 - Dockingstation",
+    "detected_at": "2026-06-19T22:29:22.033905+00:00"
+  },
+  "SUPM3004": {
+    "ean": "7109806197006",
+    "title": "Mitel 622dt Set",
+    "detected_at": "2026-06-19T22:29:33.155792+00:00"
+  },
+  "SUPS0269": {
+    "ean": "8806090270062",
+    "title": "Samsung EO-IC100 - Ohrhörer mit Mikrofon kabelgebunden - USB-C - weiß",
+    "detected_at": "2026-06-19T22:31:31.826281+00:00"
+  },
+  "SUPV0028": {
+    "ean": "0023942321477",
+    "title": "Verbatim Share My Screen USB-C Wireless Displ. Ad. 4K/Hub 32147",
+    "detected_at": "2026-06-19T22:33:13.528698+00:00"
+  },
+  "SUPV0048": {
+    "ean": "0023942322047",
+    "title": "Verbatim GNC-200 GaN Charg. 200W 3xUSB-C PD, 1xUSB-A QC 3.0 32204",
+    "detected_at": "2026-06-19T22:33:55.056037+00:00"
   }
 }
