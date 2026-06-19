@@ -23,8 +23,11 @@ import sys
 import time
 from pathlib import Path
 
+import io
+
 import requests
 from dotenv import load_dotenv
+from PIL import Image
 
 load_dotenv()
 log = logging.getLogger("image_audit")
@@ -40,6 +43,8 @@ BAB_CSV       = Path("bab_preisliste.csv")
 ICECAT_API    = "https://live.icecat.biz/api"
 ICECAT_USER   = os.environ.get("ICECAT_USER",  "neovogen")
 ICECAT_TOKEN  = os.environ.get("ICECAT_TOKEN", "a923fe60-04bd-4f83-ae2e-a1e1a8427c98")
+
+EBAY_MIN_PX   = 500  # eBay lehnt Bilder unter 500x500px ab (Fehler 25002)
 
 EBAY_AUTH_URL = "https://api.ebay.com/identity/v1/oauth2/token"
 EBAY_INV_URL  = "https://api.ebay.com/sell/inventory/v1"
@@ -115,6 +120,20 @@ def extract_images(data: dict) -> tuple[str, list[str]]:
                 all_imgs.append(u)
 
     return main_url, all_imgs[:8]
+
+
+def meets_min_resolution(url: str) -> bool:
+    """Prueft die echte Pixel-Groesse - Icecats 'HighUrl' ist nicht immer hochaufgeloest
+    (z.B. ipcstore.net liefert oft nur 200x200px, was eBay mit Fehler 25002 ablehnt)."""
+    try:
+        r = requests.get(url, timeout=10)
+        if not r.ok:
+            return False
+        img = Image.open(io.BytesIO(r.content))
+        return img.size[0] >= EBAY_MIN_PX and img.size[1] >= EBAY_MIN_PX
+    except Exception as e:
+        log.debug(f"    Auflösung nicht prüfbar ({url[:50]}): {e}")
+        return False
 
 
 # ---------------------------------------------------------------------------
@@ -248,6 +267,12 @@ def main():
         # Icecat abfragen — einzige erlaubte Quelle
         data = icecat_fetch(ean)
         main_img, all_imgs = extract_images(data)
+
+        if main_img and not meets_min_resolution(main_img):
+            log.info(f"    ⚠️  Icecat-Bild zu klein (<{EBAY_MIN_PX}px, eBay lehnt ab) → wie kein Bild: {main_img[:60]}")
+            main_img = ""
+            all_imgs = []
+        time.sleep(0.2)  # Icecat Rate-Limit auch für Aufloesungs-Check einhalten
 
         if main_img:
             log.info(f"    ✅ Icecat-Bild: {main_img[:70]}")
