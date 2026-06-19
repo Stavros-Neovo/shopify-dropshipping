@@ -36,7 +36,7 @@ jobs:
           python-version: "3.11"
 
       - name: Dependencies installieren
-        run: pip install requests python-dotenv
+        run: pip install requests python-dotenv Pillow
 
       - name: Bild-Audit ausführen
         env:
