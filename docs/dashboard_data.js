@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-19T15:58:37.202320+00:00",
+  "generated_at": "2026-06-19T21:12:51.633186+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,113 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-19T12:53:35.763391+00:00",
+      "timestamp": "2026-06-19T20:50:07.720629+00:00",
       "checked": 600,
-      "lowered": 0,
-      "raised": 9,
-      "set_to_floor": 2,
+      "lowered": 4,
+      "raised": 57,
+      "set_to_floor": 44,
       "skipped_floor": 0,
       "skipped_few": 11,
-      "skipped_image": 425,
-      "unchanged": 153,
-      "errors": 0,
+      "skipped_image": 13,
+      "unchanged": 469,
+      "errors": 2,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 648.99,
-        "new": 681.95,
-        "diff": 32.96,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 554.99,
+        "new": 560.95,
+        "diff": 5.96,
         "action": "raised"
       },
       {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 93.99,
-        "new": 95.99,
-        "diff": 2.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 250.99,
+        "new": 251.99,
+        "diff": 1.0,
         "action": "raised"
       },
       {
-        "sku": "REFR2001",
-        "title": "RETEQ Lenovo ThinkPad USB-C Docking - 40A9009",
-        "old": 64.99,
-        "new": 66.99,
-        "diff": 2.0,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 241.99,
+        "new": 242.99,
+        "diff": 1.0,
         "action": "raised"
       },
       {
-        "sku": "SDXS1020",
-        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
-        "old": 416.99,
-        "new": 436.99,
-        "diff": 20.0,
-        "action": "raised"
-      },
-      {
-        "sku": "SHP0130",
-        "title": "Philips Hue White and Color Ambiance - LED-La",
-        "old": 138.99,
-        "new": 142.99,
-        "diff": 4.0,
-        "action": "raised"
-      },
-      {
-        "sku": "SHP0147",
-        "title": "Philips Hue White and Color Ambiance Play ext",
-        "old": 84.99,
-        "new": 86.99,
-        "diff": 2.0,
-        "action": "raised"
-      },
-      {
-        "sku": "SSDC0070",
-        "title": "HDSSD 2.5\" 500 GB Crucial BX500 Box",
-        "old": 135.99,
-        "new": 139.99,
-        "diff": 4.0,
-        "action": "raised"
-      },
-      {
-        "sku": "SUPH0029",
-        "title": "HP Thunderbolt G4 Dock - Dockingstation",
-        "old": 255.99,
-        "new": 266.99,
-        "diff": 11.0,
-        "action": "raised"
-      },
-      {
-        "sku": "SUPS0342",
-        "title": "Samsung Powerbank - 20000 mAh - 25 Watt - Fas",
-        "old": 50.99,
-        "new": 49.99,
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 172.99,
+        "new": 171.99,
         "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPS0368",
-        "title": "Samsung EP-T6010 - Netzteil - without cable -",
-        "old": 42.99,
-        "new": 41.99,
-        "diff": -1.0,
-        "action": "lowered"
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 496.99,
+        "new": 501.95,
+        "diff": 4.96,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 692.99,
+        "new": 700.95,
+        "diff": 7.96,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 302.99,
+        "new": 303.99,
+        "diff": 1.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0271",
+        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
+        "old": 370.99,
+        "new": 373.99,
+        "diff": 3.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 405.99,
+        "new": 408.99,
+        "diff": 3.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0289",
+        "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
+        "old": 548.99,
+        "new": 554.95,
+        "diff": 5.96,
+        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-14",
-        "lowered": 3,
-        "raised": 4,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-14",
-        "lowered": 47,
-        "raised": 7,
-        "floor": 0
-      },
       {
         "date": "2026-06-15",
         "lowered": 0,
@@ -186,6 +174,18 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-19",
         "lowered": 0,
         "raised": 9,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 0,
+        "raised": 7,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 4,
+        "raised": 57,
         "floor": 0
       }
     ]
