@@ -349,7 +349,7 @@
       </div>
       <span class="status-dot"></span>
       <span style="font-size:12px;color:var(--text-muted)">System aktiv</span>
-      <button class="btn btn-outline">⟳ Aktualisieren</button>
+      <button class="btn btn-outline" onclick="location.reload()">⟳ Aktualisieren</button>
       <button class="btn btn-primary" onclick="showSection('lister', document.querySelector('[onclick*=lister]'))">🚀 Smart Lister</button>
     </div>
   </div>
@@ -1391,7 +1391,7 @@ function showSection(id, el) {
   if (id === 'retouren') calcRetoure();
   if (id === 'preisliste' && plistData.length === 0) loadPreisliste();
   if (id === 'bildpflege' && bpItems.length === 0) bpLoad();
-  if (id === 'orders') ordersRender();
+  if (id === 'orders') { ordersRender(); ordersSyncFromRemote().then(ordersRender); }
   if (id === 'kosten') kostenInit();
 }
 
@@ -2459,32 +2459,52 @@ async function bpPublish(sku) {
 // ORDERS — dynamisches Bestellungs-Management
 // ═══════════════════════════════════════════════════
 const ORDERS_KEY = 'neodeals_orders';
-
-// Seed-Daten (bisherige Bestellungen) — nur beim ersten Laden
-const ORDERS_SEED = [
-  { id:'ord_001', date:'2026-06-16', nr:'18-14766-10957', buyer:'cengiz önel',    sku:'HHWM0023', name:'Makita Bohrhammer schnurlos',          vk:152.99, ek:107.08, note:'Email an BAB versandt', status:'open' },
-  { id:'ord_002', date:'2026-06-16', nr:'05-14786-31141', buyer:'lostprince77',   sku:'PETK0049', name:'Petkit Selbstreinigende Katzentoilette', vk:29.98,  ek:8.30,   note:'Email an BAB versandt', status:'open' },
-  { id:'ord_003', date:'2026-06-15', nr:'08-14779-12258', buyer:'mr.mxa',         sku:'NETU0187', name:'Ubiquiti UniFi Dream Machine Pro',       vk:279.98, ek:157.00, note:'Email an BAB versandt', status:'open' },
-  { id:'ord_004', date:'2026-06-13', nr:'01-14783-23263', buyer:'thaimakx1',      sku:'ANTB0005', name:'',                                       vk:219.98, ek:122.00, note:'', status:'done' },
-  { id:'ord_005', date:'2026-06-12', nr:'08-14763-57410', buyer:'printgekko',     sku:'SHG0003',  name:'',                                       vk:63.98,  ek:35.00,  note:'', status:'done' },
-  { id:'ord_006', date:'2026-06-11', nr:'20-14740-74871', buyer:'jokez',          sku:'PPSE0102', name:'',                                       vk:55.98,  ek:29.00,  note:'', status:'done' },
-  { id:'ord_007', date:'2026-06-08', nr:'18-14731-45799', buyer:'bb-maid',        sku:'USBK1023', name:'',                                       vk:25.98,  ek:12.00,  note:'', status:'done' },
-  { id:'ord_008', date:'2026-06-08', nr:'23-14722-05332', buyer:'d.breustedt58',  sku:'HHWB5012', name:'',                                       vk:38.98,  ek:15.23,  note:'', status:'done' },
-  { id:'ord_009', date:'2026-06-07', nr:'18-14726-98065', buyer:'cheoxyne',       sku:'USBK1036', name:'',                                       vk:29.98,  ek:15.00,  note:'', status:'done' },
-  { id:'ord_010', date:'2026-06-07', nr:'22-14719-39725', buyer:'colddog71kay',   sku:'SUPD1027', name:'',                                       vk:29.98,  ek:11.00,  note:'', status:'done' },
-];
+const ORDERS_REMOTE_URL = 'https://stavros-neovo.github.io/shopify-dropshipping/orders.json';
 
 function ordersLoad() {
   let stored = localStorage.getItem(ORDERS_KEY);
-  if (!stored) {
-    localStorage.setItem(ORDERS_KEY, JSON.stringify(ORDERS_SEED));
-    return ORDERS_SEED.slice();
-  }
-  return JSON.parse(stored);
+  return stored ? JSON.parse(stored) : [];
 }
 
 function ordersSaveAll(orders) {
   localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
+}
+
+// Holt echte eBay-Bestellungen aus orders.json (stündlich von ebay_orders_sync.yml
+// generiert) und mergt sie mit lokalen Notizen/Tracking/Status-Overrides. EK wird,
+// falls in orders.json noch 0, aus der BAB-Preisliste per SKU nachgeschlagen.
+async function ordersSyncFromRemote() {
+  try {
+    const res = await fetch(ORDERS_REMOTE_URL + '?t=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const remote = (await res.json()).orders || [];
+
+    if (!plistData.length) await loadPreisliste().catch(() => {});
+    const ekBySku = {};
+    plistData.forEach(a => { if (a.sku) ekBySku[a.sku] = a.ek; });
+
+    const local = ordersLoad();
+    const localById = {};
+    local.forEach(o => { localById[o.id] = o; });
+
+    const merged = remote.map(o => {
+      const prev = localById[o.id] || {};
+      return {
+        id: o.id, date: o.date, nr: o.nr, buyer: o.buyer, sku: o.sku, name: o.name,
+        vk: o.vk,
+        ek: (o.ek && o.ek > 0) ? o.ek : (ekBySku[o.sku] ?? prev.ek ?? 0),
+        note: prev.note ?? o.note ?? '',
+        status: prev.status ?? (o.status === 'done' ? 'done' : 'open'),
+        tracking: prev.tracking ?? o.tracking ?? '',
+      };
+    });
+
+    // Manuell angelegte Bestellungen (nicht aus dem eBay-Sync) bleiben erhalten
+    const manualExtra = local.filter(o => !remote.some(r => r.id === o.id));
+    ordersSaveAll([...merged, ...manualExtra]);
+  } catch (e) {
+    console.warn('orders.json nicht ladbar, zeige lokalen Stand:', e.message);
+  }
 }
 
 // Gewinn berechnen (selbe Formel wie smart_lister.py)
@@ -2509,6 +2529,11 @@ function ordersRender() {
   const totalProfit = orders.reduce((s, o) => s + calcProfit(o.vk, o.ek), 0);
   const avgVk = orders.length ? totalVk / orders.length : 0;
   const highestOrder = orders.length ? orders.reduce((a, b) => a.vk > b.vk ? a : b) : null;
+
+  titles.orders[1] = `${orders.length} Bestellungen · ${open.length} offen · ${eur(totalVk)} Gesamtumsatz`;
+  if (document.getElementById('section-orders').classList.contains('active')) {
+    document.getElementById('page-subtitle').textContent = titles.orders[1];
+  }
 
   // KPIs
   document.getElementById('orders-kpi').innerHTML = `
