@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import json
 import os
 import time
 from pathlib import Path
@@ -22,10 +23,11 @@ import requests
 import yaml
 from dotenv import load_dotenv
 
-AUDIT_FILE  = "audit_report.csv"
-REPORT_FILE = "publish_report.csv"
-CONFIG_FILE = "config_shop2.yaml"
-DELAY       = 0.5
+AUDIT_FILE     = "audit_report.csv"
+REPORT_FILE    = "publish_report.csv"
+CONFIG_FILE    = "config_shop2.yaml"
+SUPPLIER_MAP   = "supplier_map.json"
+DELAY          = 0.5
 
 
 def refresh_user_token(client_id, client_secret, refresh_token, sandbox=False):
@@ -94,18 +96,29 @@ def main():
     with open(AUDIT_FILE, encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
 
+    # supplier_map.json ist die einzige Quelle, die Bild-AUFLOESUNG prueft
+    # (audit_report.csv has_image prueft nur "irgendeine Bild-URL vorhanden",
+    # das laesst z.B. 200x200px ipcstore-Bilder durch, die eBay ablehnt -> 25004/25002)
+    try:
+        smap = json.loads(Path(SUPPLIER_MAP).read_text(encoding="utf-8"))
+    except Exception:
+        smap = {}
+
+    def image_ok(sku: str) -> bool:
+        return bool(smap.get(sku, {}).get("image_verified"))
+
     # Candidates: INACTIVE (= UNPUBLISHED) mit Offer ID
     candidates = [
         r for r in rows
         if r["status"] == "INACTIVE"
         and r["offer_id"]
-        and (args.all or r.get("has_image", "").lower() in ("true", "1", "yes"))
+        and (args.all or image_ok(r["sku"]))
     ]
 
     skipped_no_image = [
         r for r in rows
         if r["status"] == "INACTIVE" and r["offer_id"]
-        and r.get("has_image", "").lower() not in ("true", "1", "yes")
+        and not image_ok(r["sku"])
     ]
 
     print(f"Zu publishen:        {len(candidates)}")

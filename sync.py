@@ -132,13 +132,15 @@ def handle_disappeared_products(
                 stats["ebay_offlined"] = stats.get("ebay_offlined", 0) + 1
             elif ebay:
                 try:
-                    # 1. Bestand auf 0 setzen
-                    ebay.set_inventory(sku, 0)
-                    # 2. Offer zurückziehen (Listing wird deaktiviert, NICHT gelöscht)
+                    # 1. Offer zurückziehen (Listing wird deaktiviert, NICHT gelöscht)
+                    #    MUSS vor set_inventory(0) passieren - eBay lehnt Bestand=0 bei
+                    #    noch PUBLISHED Offers mit Fehler 25004 ab
                     offer = ebay.get_offer_for_sku(sku)
                     if offer:
                         ebay.withdraw_offer(offer["offerId"])
-                    log.warning(f"  [eBay] ✓ SKU {sku} offline (Bestand 0 + Listing deaktiviert)")
+                    # 2. Bestand auf 0 setzen
+                    ebay.set_inventory(sku, 0)
+                    log.warning(f"  [eBay] ✓ SKU {sku} offline (Listing deaktiviert + Bestand 0)")
                     stats["ebay_offlined"] = stats.get("ebay_offlined", 0) + 1
                 except Exception as e:
                     log.error(f"  [eBay] Offline-Fehler SKU {sku}: {e}")
@@ -256,8 +258,10 @@ def main():
                 try:
                     offer = ebay.get_offer_for_sku(sku)
                     if offer and offer.get("status") == "PUBLISHED":
-                        ebay.set_inventory(sku, 0)
+                        # Reihenfolge wichtig: eBay lehnt set_inventory(0) bei noch
+                        # PUBLISHED Offers mit Fehler 25004 ab -> erst zurueckziehen
                         ebay.withdraw_offer(offer["offerId"])
+                        ebay.set_inventory(sku, 0)
                         log.warning(f"  ⛔ GESPERRT + OFFLINE: {sku}")
                     state[sku]["banned_offlined"] = datetime.now().isoformat()
                 except Exception as e:
