@@ -1,70 +1,104 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-18T21:30:47.849506+00:00",
+  "generated_at": "2026-06-19T12:37:46.792510+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 45,
+  "active_listings": 600,
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-18T12:04:03.912939+00:00",
-      "checked": 45,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 5,
+      "timestamp": "2026-06-18T21:26:25.744019+00:00",
+      "checked": 600,
+      "lowered": 1,
+      "raised": 38,
+      "set_to_floor": 13,
       "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 27,
-      "unchanged": 12,
+      "skipped_few": 50,
+      "skipped_image": 365,
+      "unchanged": 133,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "USBV0000",
-        "title": "Verbatim Plectra Black 128GB USB-C Flash Driv",
-        "old": 34.99,
-        "new": 31.99,
-        "diff": -3.0,
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 166.99,
+        "new": 171.99,
+        "diff": 5.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 474.99,
+        "new": 498.99,
+        "diff": 24.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 289.99,
+        "new": 301.99,
+        "diff": 12.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0269",
+        "title": "Seagate IronWolf Pro ST20000NT001 / 20TB",
+        "old": 1316.95,
+        "new": 1327.95,
+        "diff": 11.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0271",
+        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
+        "old": 353.99,
+        "new": 370.99,
+        "diff": 17.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0280",
+        "title": "Seagate Exos M ST28000NM003K / 28 TB",
+        "old": 1692.99,
+        "new": 1621.95,
+        "diff": -71.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0002",
-        "title": "Verbatim Plectra Black 256GB USB-C Flash Driv",
-        "old": 52.99,
-        "new": 51.99,
-        "diff": -1.0,
+        "sku": "HDIS0286",
+        "title": "Seagate IronWolf Pro ST28000NT000 / 28TB",
+        "old": 1597.99,
+        "new": 1543.95,
+        "diff": -54.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 50.99,
-        "new": 49.99,
-        "diff": -1.0,
-        "action": "lowered"
+        "sku": "HDIT0203",
+        "title": "Toshiba MG09ACA18TE / 18TB / 3.5\"",
+        "old": 1083.95,
+        "new": 1093.95,
+        "diff": 10.0,
+        "action": "raised"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 18.99,
-        "new": 9.99,
-        "diff": -9.0,
-        "action": "lowered"
+        "sku": "HDIT0247",
+        "title": "Toshiba MG11ACA22TE /22 TB / 7200 RPM / 3.5\"",
+        "old": 1137.95,
+        "new": 1147.95,
+        "diff": 10.0,
+        "action": "raised"
       },
       {
-        "sku": "USBV0021",
-        "title": "Verbatim Metal Executive 32GB USB 3.0 gold",
-        "old": 25.99,
-        "new": 19.99,
-        "diff": -6.0,
-        "action": "lowered"
+        "sku": "HDIT0248",
+        "title": "Toshiba MG11 Series MG11ACA20TE / Festplatte ",
+        "old": 1142.95,
+        "new": 1152.95,
+        "diff": 10.0,
+        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-14",
-        "lowered": 2,
-        "raised": 7,
-        "floor": 0
-      },
       {
         "date": "2026-06-14",
         "lowered": 3,
@@ -142,14 +176,20 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-18",
+        "lowered": 1,
+        "raised": 38,
+        "floor": 0
       }
     ]
   },
   "orders": {
     "stats": {
-      "today_sales": 1,
-      "today_revenue": 51.99,
-      "today_profit": 32.16,
+      "today_sales": 0,
+      "today_revenue": 0.0,
+      "today_profit": 0.0,
       "week_sales": 4,
       "week_revenue": 514.94,
       "week_profit": 57.33,
@@ -164,12 +204,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 122.81
     },
     "chart_7d": [
-      {
-        "date": "12.06",
-        "revenue": 63.98,
-        "profit": 6.69,
-        "sales": 1
-      },
       {
         "date": "13.06",
         "revenue": 219.98,
@@ -205,15 +239,15 @@ window.DASHBOARD_DATA = {
         "revenue": 51.99,
         "profit": 32.16,
         "sales": 1
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "20.05",
+        "date": "19.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "21.05",
         "revenue": 0,
@@ -387,15 +421,15 @@ window.DASHBOARD_DATA = {
         "revenue": 51.99,
         "profit": 32.16,
         "sales": 1
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "21.03",
+        "date": "19.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "22.03",
         "revenue": 0,
@@ -929,6 +963,12 @@ window.DASHBOARD_DATA = {
         "revenue": 51.99,
         "profit": 32.16,
         "sales": 1
+      },
+      {
+        "date": "19.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1206,7 +1246,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1216,7 +1256,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1226,27 +1266,27 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 4,
+        "days_left": 3,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 4,
+        "days_left": 3,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1256,7 +1296,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1266,7 +1306,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1276,7 +1316,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1286,7 +1326,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 12,
+        "days_left": 11,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1296,7 +1336,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 12,
+        "days_left": 11,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1306,7 +1346,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
