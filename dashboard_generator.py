@@ -20,8 +20,9 @@ ORDERS_PATH    = "/sell/fulfillment/v1/order"
 SHOPIFY_CSV    = "docs/shopify_products.csv"
 
 EBAY_FEE      = 0.13   # 13 % eBay-Grundgebühr
-CAMPAIGN_FEE  = 0.08   # 8 % Promoted Listings (cost-per-sale)
-TOTAL_FEE     = EBAY_FEE + CAMPAIGN_FEE  # 21 %
+CAMPAIGN_FEE  = 0.08   # 8 % Promoted Listings (cost-per-sale) - nur Kalkulationspuffer in der Preisformel!
+PROMOTED_LISTINGS_ACTIVE = False  # Keine Campaign-Erstellung im Code, CLAUDE.md: noch nicht aktiviert
+TOTAL_FEE     = EBAY_FEE + (CAMPAIGN_FEE if PROMOTED_LISTINGS_ACTIVE else 0.0)  # echte Gebühr für Reporting
 VAT_FACTOR  = 1.19   # Brutto → Netto
 SHIP_COST   = 5.0    # Pauschale Versandkosten (was wir zahlen)
 BUYER_SHIP  = 3.99   # Versandanteil den Käufer zahlt
