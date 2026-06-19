@@ -168,5 +168,20 @@
     "ean": "0023942322047",
     "title": "Verbatim GNC-200 GaN Charg. 200W 3xUSB-C PD, 1xUSB-A QC 3.0 32204",
     "detected_at": "2026-06-19T22:33:55.056037+00:00"
+  },
+  "SUPV0075": {
+    "ean": "0023942320883",
+    "title": "Verbatim Portable 14\" FHD Touch Monitor LIGHT with Wireless Power Supply incl. Power Bank 5000mAh",
+    "detected_at": "2026-06-19T23:33:04.734790+00:00"
+  },
+  "SUPY0014": {
+    "ean": "6938818307667",
+    "title": "Yealink IP Telefon SIP-T58W",
+    "detected_at": "2026-06-19T23:33:18.193227+00:00"
+  },
+  "SUPY0056": {
+    "ean": "6938818321816",
+    "title": "Yealink BH70 Mono - Headset - Bluetooth",
+    "detected_at": "2026-06-19T23:33:26.085977+00:00"
   }
 }
