@@ -3,5 +3,70 @@
     "ean": "4582563857261",
     "title": "Kioxia Exceria G2 SD Card 1TB",
     "detected_at": "2026-06-19T19:19:24.461652+00:00"
+  },
+  "HDIS0246": {
+    "ean": "8719706022859",
+    "title": "Seagate IronWolf ST10000VN000 / 10TB",
+    "detected_at": "2026-06-19T20:51:13.969865+00:00"
+  },
+  "HDIS0283": {
+    "ean": "8719706028226",
+    "title": "Seagate ST1000VX013 SkyHawk Surveillance 1TB",
+    "detected_at": "2026-06-19T20:51:39.780513+00:00"
+  },
+  "HDIS0313": {
+    "ean": "8719706022064",
+    "title": "Seagate Exos 7E10 / ST2000NM018B / 2TB / 3,5\"",
+    "detected_at": "2026-06-19T20:51:49.196322+00:00"
+  },
+  "HDIS0318": {
+    "ean": "8719706022415",
+    "title": "Seagate Exos 7E10 / ST6000NM000B / 6TB / 3,5\"",
+    "detected_at": "2026-06-19T20:51:52.869020+00:00"
+  },
+  "HDIW0222": {
+    "ean": "0718037877310",
+    "title": "Western Digital WD103KFBX / 10 TB/ Red Pro",
+    "detected_at": "2026-06-19T20:52:02.009892+00:00"
+  },
+  "HHWW032": {
+    "ean": "4211129226776",
+    "title": "WMF KÜCHENminis Smoothie-to-go, Deep Black",
+    "detected_at": "2026-06-19T20:53:45.003302+00:00"
+  },
+  "HHWX0140": {
+    "ean": "6976233677163",
+    "title": "Dreame X40 Master Robotersauger Schwarz",
+    "detected_at": "2026-06-19T20:53:47.581831+00:00"
+  },
+  "NETT1002": {
+    "ean": "4779051840151",
+    "title": "Teltonika RUT241 - Wireless Router",
+    "detected_at": "2026-06-19T20:56:30.031264+00:00"
+  },
+  "NETT1003": {
+    "ean": "4779051840168",
+    "title": "Teltonika RUT951 - Wireless Router",
+    "detected_at": "2026-06-19T20:56:32.434269+00:00"
+  },
+  "NETT1056": {
+    "ean": "4779051843671",
+    "title": "Teltonika TSW200 - Switch",
+    "detected_at": "2026-06-19T20:57:09.080490+00:00"
+  },
+  "NETT1067": {
+    "ean": "4779051840489",
+    "title": "Teltonika RUTM10 - Wireless Router 3-Port-Switch",
+    "detected_at": "2026-06-19T20:57:12.294446+00:00"
+  },
+  "NETT1081": {
+    "ean": "4779051841448",
+    "title": "Teltonika TSW040 - Switch",
+    "detected_at": "2026-06-19T20:57:25.949786+00:00"
+  },
+  "PPCE0007": {
+    "ean": "4895251641623",
+    "title": "ECOFLOW GLACIER Classic 35L",
+    "detected_at": "2026-06-19T20:59:36.495262+00:00"
   }
 }
