@@ -19,7 +19,7 @@ Kostenbasis = EK_netto + 5.00 (Versand) + EK×25% (Marge) + EK×5% (Retouren-Rü
 VK_brutto   = Kostenbasis × 1.19 ÷ (1 − 0.13)
 ```
 - EK aus `Price_B2B` in BAB CSV (netto, ohne MwSt, ohne Versand)
-- 21% eBay-Gebühren eingepreist (13% Grundgebühr + 8% Promoted — Promoted noch NICHT aktiv, daher aktuell etwas Spielraum)
+- 21% eBay-Gebühren eingepreist (13% Grundgebühr + 8% Promoted Listings, **läuft aktiv**, Kampagne bestätigt vom Nutzer 19.06. — nicht nur Kalkulationspuffer!)
 - **Retouren-Rücklage 5% auf EK** (`config_shop2.yaml: ebay_pricing.return_reserve_rate`): BAB nimmt nichts zurück, eBay-Kunden haben aber 14 Tage Widerrufsrecht — jede Retoure ist ein voller EK-Verlust. Noch nicht durch echte Retourenquote validiert, nachjustieren wenn Daten da sind.
 - Gleiche Rücklage fließt in `dashboard_generator.py::calc_profit_item` (Reporting) und den JS-Wasserfall im Gewinn-Tab ein
 

@@ -651,42 +651,12 @@
   <!-- ═══════════════════════════════════ GEWINN & STEUERN ═══════════════════════════════════ -->
   <div class="section" id="section-gewinn">
 
-    <!-- ECHTDATEN TOGGLE BANNER -->
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;margin-bottom:12px">
+    <!-- ECHTDATEN BANNER -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;margin-bottom:16px">
       <div>
-        <div style="font-size:12px;font-weight:700;color:#15803d">📡 eBay API Echtdaten verfügbar</div>
-        <div id="g-fee-toggle-label" style="font-size:11px;color:#166534">Echte API-Gebühr: €94,14 (12,2%) — Promoted Listings noch inaktiv</div>
+        <div style="font-size:12px;font-weight:700;color:#15803d">📡 eBay-Gebühr: 21% (13% Grundgebühr + 8% Promoted Listings, Kampagne aktiv)</div>
+        <div id="g-fee-toggle-label" style="font-size:11px;color:#166534">Basis: echte Bestelldaten der letzten 30 Tage</div>
       </div>
-      <button onclick="G.useRealFees=!G.useRealFees;calcGewinn()" style="padding:6px 14px;border-radius:6px;border:1px solid #16a34a;background:#16a34a;color:#fff;font-size:11px;font-weight:700;cursor:pointer">
-        Kalkulation ↔ Echte Zahlen
-      </button>
-    </div>
-    <!-- VERGLEICHS-PANEL -->
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px">
-      <div style="padding:12px;background:#fff5f5;border:1px solid #fca5a5;border-radius:8px">
-        <div style="font-size:10px;font-weight:700;color:#dc2626;margin-bottom:6px">KALKULATION (21% eBay)</div>
-        <div style="font-size:11px;color:#6b7280">eBay-Gebühr</div>
-        <div style="font-size:16px;font-weight:800;color:#dc2626">€161,45</div>
-        <div style="font-size:11px;color:#6b7280;margin-top:4px">Rohgewinn</div>
-        <div style="font-size:16px;font-weight:800;color:#dc2626">~€64</div>
-      </div>
-      <div style="padding:12px;background:#f0fdf4;border:2px solid #16a34a;border-radius:8px">
-        <div style="font-size:10px;font-weight:700;color:#15803d;margin-bottom:6px">✅ ECHT LAUT API (12,2%)</div>
-        <div style="font-size:11px;color:#6b7280">eBay-Gebühr</div>
-        <div style="font-size:16px;font-weight:800;color:#15803d">€94,14</div>
-        <div style="font-size:11px;color:#6b7280;margin-top:4px">Netto-Gewinn</div>
-        <div style="font-size:18px;font-weight:900;color:#15803d">€181,94</div>
-      </div>
-      <div style="padding:12px;background:#dbeafe;border:1px solid #93c5fd;border-radius:8px">
-        <div style="font-size:10px;font-weight:700;color:#1d4ed8;margin-bottom:6px">DIFFERENZ</div>
-        <div style="font-size:11px;color:#6b7280">mehr als geplant</div>
-        <div style="font-size:16px;font-weight:800;color:#1d4ed8">+€67,31 Gebühr</div>
-        <div style="font-size:11px;color:#6b7280;margin-top:4px">mehr Netto-Gewinn</div>
-        <div style="font-size:16px;font-weight:800;color:#1d4ed8">+€117,94</div>
-      </div>
-    </div>
-    <div style="padding:10px 14px;background:#fffbeb;border:1px solid #fcd34d;border-radius:7px;margin-bottom:16px;font-size:11px;color:#92400e">
-      ⚠️ <strong>Warum 12,2% statt 21%?</strong> Die 8% Promoted Listings Kampagne ist noch <strong>nicht aktiv</strong>. Sobald du die Kampagne startest, steigt die eBay-Gebühr auf ~20%. Die Kalkulation bleibt damit konservativ — du hast aktuell mehr Spielraum.
     </div>
 
     <!-- KPI ROW -->
@@ -885,24 +855,24 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
 
       <div class="card" style="margin-bottom:0">
-        <div class="card-header"><div><div class="card-title">🔍 Wichtige Entdeckung: Echte eBay-Gebühr</div></div></div>
+        <div class="card-header"><div><div class="card-title">🔍 eBay-Gebührenstruktur</div></div></div>
         <div class="card-body">
           <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#fff5f5;border-radius:7px;border:1px solid #fca5a5">
-              <span style="font-size:12px;color:var(--text-muted)">Kalkulierte Gebühr (21%)</span>
-              <span style="font-size:13px;font-weight:700;color:var(--red)">€161,45</span>
+            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#f8fafc;border-radius:7px;border:1px solid var(--border)">
+              <span style="font-size:12px;color:var(--text-muted)">eBay-Grundgebühr</span>
+              <span style="font-size:13px;font-weight:700">13%</span>
             </div>
-            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#f0fdf4;border-radius:7px;border:1px solid #86efac">
-              <span style="font-size:12px;color:var(--text-muted)">Echte Gebühr laut eBay API (12,2%)</span>
-              <span style="font-size:13px;font-weight:700;color:var(--green)">€94,14</span>
+            <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#f8fafc;border-radius:7px;border:1px solid var(--border)">
+              <span style="font-size:12px;color:var(--text-muted)">Promoted Listings (aktive Kampagne)</span>
+              <span style="font-size:13px;font-weight:700">8%</span>
             </div>
             <div style="display:flex;justify-content:space-between;padding:12px 14px;background:#dbeafe;border-radius:7px;border:1px solid #93c5fd">
-              <span style="font-size:13px;font-weight:700;color:#1d4ed8">Differenz (mehr Gewinn)</span>
-              <span style="font-size:15px;font-weight:800;color:#1d4ed8">+€67,31</span>
+              <span style="font-size:13px;font-weight:700;color:#1d4ed8">Gesamt vom VK brutto</span>
+              <span style="font-size:15px;font-weight:800;color:#1d4ed8">21%</span>
             </div>
           </div>
-          <div style="margin-top:12px;padding:10px;background:#fffbeb;border:1px solid #fcd34d;border-radius:7px;font-size:11px;color:#92400e">
-            ⚠️ Die 8% Promoted Listings sind noch <strong>nicht aktiv</strong>. Nach Aktivierung steigt die Gebühr auf ~20%. Die Preisformel ist korrekt kalkuliert — du hast aktuell einfach mehr Spielraum.
+          <div style="margin-top:12px;padding:10px;background:#eff6ff;border:1px solid #93c5fd;border-radius:7px;font-size:11px;color:#1e40af">
+            ℹ️ Die Promoted-Listings-Kampagne läuft aktiv mit 8% Cost-per-Sale. Die Preisformel rechnet damit bereits korrekt — kein zusätzlicher Spielraum mehr.
           </div>
         </div>
       </div>
@@ -1438,9 +1408,7 @@ function calcGewinn() {
 
   // Update toggle-label if present
   const toggleEl = document.getElementById('g-fee-toggle-label');
-  if (toggleEl) toggleEl.textContent = useReal
-    ? `Echte API-Gebühr: €${G.ebayFeeReal} (${ebayPct}%) — Promoted Listings noch inaktiv`
-    : `Kalkulation: €${G.ebayFeeEst.toFixed(2)} (21%) — inkl. 8% Promoted Listings`;
+  if (toggleEl) toggleEl.textContent = `eBay-Gebühr (30 Tage): ${eur(ebayBrutto)} (${ebayPct}%, inkl. 8% Promoted Listings)`;
   const est   = Math.max(0, rohgewinn) * estRate;
   const gst   = Math.max(0, rohgewinn) * gstRate;
   const soli  = est * soliRate;
