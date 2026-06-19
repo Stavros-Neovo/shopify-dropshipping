@@ -1,20 +1,21 @@
 """
-image_audit.py — 100% sichere Bild-Verifizierung via Icecat EAN-Match
-=======================================================================
-Strategie:
-  1. Jedes SKU mit image_unverified_ddg → Icecat per EAN abfragen
-  2. Icecat hat Bild → image_url setzen, image_verified = True, DDG entfernen
-  3. Icecat hat kein Bild → DDG entfernen, image_verified = False (kein Bild)
-  4. Listings ohne verifiziertes Bild → auf eBay deaktivieren
+image_audit.py — 100% sichere Bild-Verifizierung
+==================================================
+Einzige Quelle: Icecat API per EAN (aus BAB CSV)
+Kein DDG. Kein Name-Suche. Kein Raten.
+
+Wenn Icecat kein Bild hat → kein Bild. Listing bleibt deaktiviert.
+Wenn Icecat Bild hat → verifiziert, Listing reaktiviert.
 
 Aufruf:
-  python image_audit.py              # alle unverifizierten SKUs
-  python image_audit.py --limit 50   # max 50 pro Run
-  python image_audit.py --dry-run    # nur anzeigen, nichts schreiben
+  python image_audit.py              # 100 SKUs
+  python image_audit.py --all        # alle auf einmal
+  python image_audit.py --dry-run    # nur anzeigen
 """
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import logging
 import os
@@ -27,91 +28,111 @@ from dotenv import load_dotenv
 
 load_dotenv()
 log = logging.getLogger("image_audit")
-logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)-7s | %(message)s",
-                    handlers=[logging.StreamHandler(sys.stdout)])
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)-7s | %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)],
+)
 
-SUPPLIER_MAP = Path("supplier_map.json")
+SUPPLIER_MAP  = Path("supplier_map.json")
+BAB_CSV       = Path("bab_preisliste.csv")
 
-ICECAT_API   = "https://live.icecat.biz/api"
-ICECAT_USER  = os.environ.get("ICECAT_USER", "neovogen")
-ICECAT_TOKEN = os.environ.get("ICECAT_TOKEN", "a923fe60-04bd-4f83-ae2e-a1e1a8427c98")
+ICECAT_API    = "https://live.icecat.biz/api"
+ICECAT_USER   = os.environ.get("ICECAT_USER",  "neovogen")
+ICECAT_TOKEN  = os.environ.get("ICECAT_TOKEN", "a923fe60-04bd-4f83-ae2e-a1e1a8427c98")
+
+EBAY_AUTH_URL = "https://api.ebay.com/identity/v1/oauth2/token"
+EBAY_INV_URL  = "https://api.ebay.com/sell/inventory/v1"
 
 
 # ---------------------------------------------------------------------------
-# Icecat lookup by EAN
+# BAB CSV: EAN-Mapping (Quelle der Wahrheit)
 # ---------------------------------------------------------------------------
 
-def icecat_by_ean(ean: str) -> dict | None:
-    """Gibt Icecat-Produkt-Dict zurück oder None wenn nicht gefunden."""
+def load_bab_eans() -> dict[str, str]:
+    """Gibt {sku: ean} aus BAB CSV zurück."""
+    mapping = {}
+    if not BAB_CSV.exists():
+        log.warning("bab_preisliste.csv nicht gefunden — EANs aus supplier_map")
+        return mapping
+    with BAB_CSV.open(encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f, delimiter=";"):
+            sku = (row.get("ItemNo") or "").strip()
+            ean = (row.get("GTIN")   or "").strip()
+            if sku and ean and len(ean) >= 8:
+                mapping[sku] = ean
+    log.info(f"BAB CSV: {len(mapping)} EANs geladen")
+    return mapping
+
+
+# ---------------------------------------------------------------------------
+# Icecat: NUR per EAN
+# ---------------------------------------------------------------------------
+
+def icecat_fetch(ean: str) -> dict | None:
+    """Icecat-Daten per EAN — einzige erlaubte Bildquelle."""
+    url = (f"{ICECAT_API}?UserName={ICECAT_USER}"
+           f"&Language=de&GTIN={ean}&output=productid")
     try:
-        url = f"{ICECAT_API}?UserName={ICECAT_USER}&Language=de&GTIN={ean}&output=productid"
-        r = requests.get(url, headers={"Authorization": f"Bearer {ICECAT_TOKEN}"},
-                         timeout=15)
+        r = requests.get(
+            url,
+            headers={"Authorization": f"Bearer {ICECAT_TOKEN}"},
+            timeout=15,
+        )
+        if r.status_code == 404:
+            return None  # EAN nicht in Icecat
         if not r.ok:
+            log.debug(f"Icecat HTTP {r.status_code} für EAN {ean}")
             return None
         data = r.json()
-        msg = data.get("Message", {})
-        if msg.get("Code") != 0:
+        code = data.get("Message", {}).get("Code")
+        if code != 0:
             return None
-        return data.get("data", {})
+        return data.get("data") or None
     except Exception as e:
-        log.debug(f"Icecat Fehler für EAN {ean}: {e}")
+        log.debug(f"Icecat Fehler EAN {ean}: {e}")
         return None
 
 
-def extract_image(data: dict) -> str | None:
-    """Holt bestes Bild aus Icecat-Response."""
+def extract_images(data: dict) -> tuple[str, list[str]]:
+    """Gibt (haupt_bild, alle_bilder) aus Icecat-Daten zurück."""
     if not data:
-        return None
-    # Haupt-Bild
-    img = (data.get("GeneralInfo", {})
-               .get("IcecatId") and
-           data.get("Image", {}).get("HighUrl") or
-           data.get("Image", {}).get("LowUrl"))
-    if not img:
-        # Aus GeneralInfo
-        img = data.get("GeneralInfo", {}).get("Image", {}).get("HighUrl")
-    if not img:
-        # Erster Multimedia-Eintrag
-        for m in data.get("Multimedia", []):
-            if m.get("Type", "").lower() in ("image", "pic", "photo"):
-                img = m.get("Pic") or m.get("URL")
-                break
-    return img or None
+        return "", []
 
+    img_obj  = data.get("Image") or {}
+    main_url = (img_obj.get("HighUrl") or img_obj.get("LowUrl") or
+                data.get("GeneralInfo", {}).get("Image", {}).get("HighUrl") or "")
 
-def icecat_images_all(data: dict) -> list[str]:
-    """Holt alle Bilder aus Icecat-Response."""
-    imgs = []
-    # Haupt-Bild
-    main = extract_image(data)
-    if main:
-        imgs.append(main)
-    # Galerie
-    for m in data.get("Multimedia", []):
-        url = m.get("Pic") or m.get("URL", "")
-        if url and url not in imgs:
-            imgs.append(url)
-    return imgs[:8]
+    all_imgs = []
+    if main_url:
+        all_imgs.append(main_url)
+
+    for m in data.get("Multimedia") or []:
+        u = m.get("Pic") or m.get("URL") or ""
+        if u and u not in all_imgs:
+            ext = u.lower().split("?")[0]
+            if any(ext.endswith(x) for x in (".jpg", ".jpeg", ".png", ".webp", ".gif")):
+                all_imgs.append(u)
+
+    return main_url, all_imgs[:8]
 
 
 # ---------------------------------------------------------------------------
-# eBay: Angebot zurückziehen (deaktivieren)
+# eBay: Offer withdraw / publish
 # ---------------------------------------------------------------------------
 
 def get_ebay_token() -> str | None:
-    """Holt eBay Access Token via Refresh Token."""
-    client_id     = os.environ.get("EBAY_CLIENT_ID")
-    client_secret = os.environ.get("EBAY_CLIENT_SECRET")
-    refresh_token = os.environ.get("EBAY_REFRESH_TOKEN_2") or os.environ.get("EBAY_REFRESH_TOKEN", "")
-    if not (client_id and client_secret and refresh_token):
-        log.warning("eBay Credentials fehlen — eBay-Deaktivierung übersprungen")
+    cid = os.environ.get("EBAY_CLIENT_ID")
+    cs  = os.environ.get("EBAY_CLIENT_SECRET")
+    rt  = os.environ.get("EBAY_REFRESH_TOKEN_2") or os.environ.get("EBAY_REFRESH_TOKEN", "")
+    if not (cid and cs and rt):
+        log.warning("eBay Credentials fehlen")
         return None
     try:
         r = requests.post(
-            "https://api.ebay.com/identity/v1/oauth2/token",
-            auth=(client_id, client_secret),
-            data={"grant_type": "refresh_token", "refresh_token": refresh_token,
+            EBAY_AUTH_URL,
+            auth=(cid, cs),
+            data={"grant_type": "refresh_token", "refresh_token": rt,
                   "scope": ("https://api.ebay.com/oauth/api_scope/sell.inventory "
                             "https://api.ebay.com/oauth/api_scope/sell.account "
                             "https://api.ebay.com/oauth/api_scope/sell.fulfillment")},
@@ -125,32 +146,46 @@ def get_ebay_token() -> str | None:
         return None
 
 
-def ebay_withdraw_offer(token: str, sku: str) -> bool:
-    """Zieht ein eBay-Offer zurück (deaktiviert Listing)."""
-    try:
-        headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-        # Offer per SKU finden
-        r = requests.get(
-            f"https://api.ebay.com/sell/inventory/v1/offer?sku={sku}",
-            headers=headers, timeout=10
-        )
-        if not r.ok:
-            return False
-        offers = r.json().get("offers", [])
-        for offer in offers:
-            if offer.get("status") == "PUBLISHED":
-                offer_id = offer["offerId"]
-                wd = requests.post(
-                    f"https://api.ebay.com/sell/inventory/v1/offer/{offer_id}/withdraw",
-                    headers=headers, timeout=10
-                )
-                if wd.ok:
-                    log.info(f"    eBay deaktiviert: {sku} (Offer {offer_id})")
-                    return True
+def ebay_get_offer(token: str, sku: str) -> tuple[str, str]:
+    """Gibt (offer_id, status) zurück."""
+    h = {"Authorization": f"Bearer {token}"}
+    r = requests.get(f"{EBAY_INV_URL}/offer?sku={sku}", headers=h, timeout=10)
+    if not r.ok:
+        return "", ""
+    offers = r.json().get("offers", [])
+    if not offers:
+        return "", ""
+    o = offers[0]
+    return o.get("offerId", ""), o.get("status", "")
+
+
+def ebay_withdraw(token: str, offer_id: str) -> bool:
+    h = {"Authorization": f"Bearer {token}"}
+    r = requests.post(f"{EBAY_INV_URL}/offer/{offer_id}/withdraw", headers=h, timeout=10)
+    return r.ok
+
+
+def ebay_publish(token: str, offer_id: str) -> bool:
+    h = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+    r = requests.post(f"{EBAY_INV_URL}/offer/{offer_id}/publish", headers=h, timeout=10)
+    return r.ok
+
+
+def ebay_update_image(token: str, sku: str, images: list[str]) -> bool:
+    """Aktualisiert das Bild im eBay Inventory Item."""
+    h = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+    # Erst das Item holen
+    r = requests.get(f"{EBAY_INV_URL}/inventory_item/{sku}", headers=h, timeout=10)
+    if not r.ok:
         return False
-    except Exception as e:
-        log.debug(f"eBay withdraw Fehler {sku}: {e}")
-        return False
+    item = r.json()
+    # Bilder aktualisieren
+    item.setdefault("product", {})["imageUrls"] = images[:1]  # eBay: erstes Bild
+    r2 = requests.put(
+        f"{EBAY_INV_URL}/inventory_item/{sku}",
+        headers=h, json=item, timeout=15
+    )
+    return r2.ok
 
 
 # ---------------------------------------------------------------------------
@@ -159,79 +194,102 @@ def ebay_withdraw_offer(token: str, sku: str) -> bool:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit",   type=int, default=100,  help="Max SKUs pro Run")
-    parser.add_argument("--dry-run", action="store_true",    help="Nur anzeigen")
-    parser.add_argument("--deactivate", action="store_true", help="Listings ohne Bild auf eBay deaktivieren")
+    parser.add_argument("--all",       action="store_true", help="Alle auf einmal")
+    parser.add_argument("--limit",     type=int, default=100)
+    parser.add_argument("--dry-run",   action="store_true")
+    parser.add_argument("--no-ebay",   action="store_true", help="Kein eBay-Update")
     args = parser.parse_args()
 
-    sm = json.loads(SUPPLIER_MAP.read_text())
+    sm       = json.loads(SUPPLIER_MAP.read_text())
+    bab_eans = load_bab_eans()
 
-    # Kandidaten: DDG-Bild vorhanden (nicht verifiziert)
+    # Kandidaten: unverif. DDG-Bild (oder auch: kein Bild + kein verified)
     candidates = [
         (sku, v) for sku, v in sm.items()
-        if v.get("image_unverified_ddg") and not v.get("image_url")
+        if (v.get("image_unverified_ddg") and not v.get("image_url"))
+        or (not v.get("image_url") and not v.get("image_verified"))
     ]
-    log.info(f"Unverifizierte DDG-Bilder: {len(candidates)}")
-    log.info(f"Limit: {args.limit} | dry-run: {args.dry_run}")
+    limit = len(candidates) if args.all else args.limit
+    log.info(f"Kandidaten gesamt: {len(candidates)} | Limit: {limit}")
+    log.info(f"dry-run: {args.dry_run}")
 
-    ebay_token = get_ebay_token() if args.deactivate and not args.dry_run else None
+    ebay_token = None
+    if not args.no_ebay and not args.dry_run:
+        ebay_token = get_ebay_token()
+        log.info(f"eBay Token: {'✓' if ebay_token else '✗ (übersprungen)'}")
 
-    stats = {"icecat_hit": 0, "removed_ddg": 0, "deactivated": 0, "errors": 0}
+    stats = {"icecat_hit": 0, "no_icecat": 0, "ebay_updated": 0, "ebay_deactivated": 0}
     changed = False
 
-    for i, (sku, v) in enumerate(candidates[:args.limit], 1):
-        ean = v.get("ean", "")
+    for i, (sku, v) in enumerate(candidates[:limit], 1):
+        # EAN aus BAB CSV (Quelle der Wahrheit), Fallback: supplier_map
+        ean = bab_eans.get(sku) or v.get("ean", "")
         title = v.get("title", "")[:45]
-        log.info(f"[{i}/{min(len(candidates), args.limit)}] {sku} | EAN {ean} | {title}")
 
-        if not ean:
-            log.info("    Kein EAN → DDG entfernen")
-            if not args.dry_run:
-                sm[sku].pop("image_unverified_ddg", None)
-                sm[sku]["image_verified"] = False
-                changed = True
-            stats["removed_ddg"] += 1
+        log.info(f"[{i}/{min(len(candidates), limit)}] {sku} | EAN={ean} | {title}")
+
+        if not ean or len(ean) < 8:
+            log.info("    ⚠️  Kein gültiger EAN → überspringe")
             continue
 
-        # Icecat abfragen
-        data = icecat_by_ean(ean)
-        img_url = extract_image(data) if data else None
+        # Icecat abfragen — einzige erlaubte Quelle
+        data = icecat_fetch(ean)
+        main_img, all_imgs = extract_images(data)
 
-        if img_url:
-            log.info(f"    ✅ Icecat-Bild gefunden: {img_url[:60]}")
+        if main_img:
+            log.info(f"    ✅ Icecat-Bild: {main_img[:70]}")
             stats["icecat_hit"] += 1
             if not args.dry_run:
-                sm[sku]["image_url"]           = img_url
-                sm[sku]["images"]              = icecat_images_all(data)
-                sm[sku]["image_verified"]      = True
+                sm[sku]["image_url"]          = main_img
+                sm[sku]["images"]             = all_imgs
+                sm[sku]["image_verified"]     = True
+                sm[sku]["ean"]               = ean  # BAB-EAN als Quelle sichern
                 sm[sku].pop("image_unverified_ddg", None)
                 changed = True
+
+            # eBay: Bild aktualisieren + reaktivieren
+            if ebay_token and not args.dry_run:
+                ebay_update_image(ebay_token, sku, all_imgs)
+                offer_id, status = ebay_get_offer(ebay_token, sku)
+                if offer_id and status == "UNPUBLISHED":
+                    if ebay_publish(ebay_token, offer_id):
+                        log.info(f"    📢 eBay reaktiviert")
+                        stats["ebay_updated"] += 1
         else:
-            log.info("    ❌ Kein Icecat-Bild → DDG entfernen, Listing deaktivieren")
-            stats["removed_ddg"] += 1
+            log.info("    ❌ Nicht in Icecat — kein Bild, Listing bleibt deaktiviert")
+            stats["no_icecat"] += 1
             if not args.dry_run:
                 sm[sku].pop("image_unverified_ddg", None)
                 sm[sku]["image_verified"] = False
+                sm[sku]["ean"]            = ean
                 changed = True
-            # eBay deaktivieren wenn kein Bild
-            if args.deactivate and ebay_token and not args.dry_run:
-                if ebay_withdraw_offer(ebay_token, sku):
-                    stats["deactivated"] += 1
 
-        time.sleep(0.3)  # Icecat Rate-Limit
+            # eBay deaktivieren falls noch aktiv
+            if ebay_token and not args.dry_run:
+                offer_id, status = ebay_get_offer(ebay_token, sku)
+                if offer_id and status == "PUBLISHED":
+                    if ebay_withdraw(ebay_token, offer_id):
+                        log.info(f"    📴 eBay deaktiviert")
+                        stats["ebay_deactivated"] += 1
+
+        time.sleep(0.4)  # Icecat Rate-Limit
 
     if changed:
         SUPPLIER_MAP.write_text(json.dumps(sm, ensure_ascii=False, indent=2))
-        log.info(f"✓ supplier_map.json gespeichert")
+        log.info("✓ supplier_map.json gespeichert")
 
-    log.info("=" * 50)
-    log.info(f"Ergebnis:")
-    log.info(f"  ✅ Icecat-Bilder gefunden:    {stats['icecat_hit']}")
-    log.info(f"  🗑️  DDG-Bilder entfernt:       {stats['removed_ddg']}")
-    log.info(f"  📴 eBay deaktiviert:           {stats['deactivated']}")
-    remaining = len([v for v in sm.values() if v.get("image_unverified_ddg")])
-    log.info(f"  ⚠️  Noch unverifiziert:         {remaining}")
-    log.info("=" * 50)
+    # Zusammenfassung
+    remaining = sum(1 for v in sm.values() if v.get("image_unverified_ddg"))
+    verified  = sum(1 for v in sm.values() if v.get("image_verified"))
+    log.info("=" * 55)
+    log.info(f"✅ Icecat-Bilder gefunden:     {stats['icecat_hit']}")
+    log.info(f"❌ Nicht in Icecat:            {stats['no_icecat']}")
+    log.info(f"📢 eBay reaktiviert:           {stats['ebay_updated']}")
+    log.info(f"📴 eBay deaktiviert:           {stats['ebay_deactivated']}")
+    log.info(f"─────────────────────────────────────────────────────")
+    log.info(f"✅ Gesamt verifiziert:          {verified}/{len(sm)}")
+    log.info(f"⚠️  Noch DDG-unsicher:          {remaining}")
+    log.info("=" * 55)
 
 
 if __name__ == "__main__":

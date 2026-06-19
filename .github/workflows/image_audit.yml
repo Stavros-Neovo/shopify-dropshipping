@@ -46,14 +46,9 @@ jobs:
           EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
           EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
         run: |
-          LIMIT="${{ github.event.inputs.limit || '100' }}"
-          DEACT="${{ github.event.inputs.deactivate || 'true' }}"
           DRY="${{ github.event.inputs.dry_run || 'false' }}"
-
-          ARGS="--limit $LIMIT"
-          [ "$DEACT" = "true" ] && ARGS="$ARGS --deactivate"
-          [ "$DRY"   = "true" ] && ARGS="$ARGS --dry-run"
-
+          ARGS="--all"   # Immer alle auf einmal
+          [ "$DRY" = "true" ] && ARGS="$ARGS --dry-run"
           python image_audit.py $ARGS
 
       - name: supplier_map.json committen
