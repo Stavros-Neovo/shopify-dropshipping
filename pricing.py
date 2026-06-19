@@ -20,10 +20,11 @@ import math
 class PricingResult:
     purchase_price_net: float  # EK netto
     vk_gross: float            # Verkaufspreis brutto (Endkunde sieht)
-    margin_eur: float          # absolute Marge in €
+    margin_eur: float          # absolute Marge in € (nach Retouren-Rücklage, = echter erwarteter Gewinn)
     margin_pct: float          # Marge in % des EK
     tier_markup: float         # angewendeter Aufschlag
     shipping_buffer: float     # Versand-Puffer der draufgerechnet wurde
+    return_reserve_eur: float = 0.0  # zurückgehaltener Anteil für Retouren (BAB nimmt nichts zurück)
 
 
 def _select_tier(ek: float, tiers: List[Dict[str, float]]) -> float:
@@ -140,6 +141,7 @@ def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
     vat = float(ebay_pricing_cfg.get("vat_rate", 0.19))
     min_margin = float(ebay_pricing_cfg.get("min_margin_eur", 5.00))
     rounding = ebay_pricing_cfg.get("rounding_strategy", "psychological_99")
+    return_reserve = float(ebay_pricing_cfg.get("return_reserve_rate", 0.0))
 
     # Marge-Staffel
     margin_pct = 0.15  # Fallback
@@ -148,8 +150,10 @@ def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
             margin_pct = float(tier["margin"])
             break
 
-    # Kostenbasis: EK + Versand + Marge auf EK
-    cost_base = ek_net + shipping + ek_net * margin_pct
+    # Kostenbasis: EK + Versand + Marge auf EK + Retouren-Rücklage auf EK
+    # (BAB nimmt nichts zurück - jede Kundenretoure ist ein voller EK-Verlust,
+    # die Rücklage verteilt dieses Risiko auf alle verkauften Einheiten)
+    cost_base = ek_net + shipping + ek_net * margin_pct + ek_net * return_reserve
 
     # MwSt drauf, dann eBay-Gebühr herausrechnen
     # VK_brutto × (1 − eBay_fee) = cost_base × (1 + vat)
@@ -159,12 +163,14 @@ def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
     # Psychologische Rundung
     vk_gross = _round_psychological(vk_gross_raw, rounding)
 
-    # Mindestmarge sicherstellen
-    # Tatsächliche Marge = was nach eBay-Fee und MwSt übrig bleibt minus EK und Versand
+    return_reserve_eur = ek_net * return_reserve
+
+    # Mindestmarge sicherstellen — Rücklage zählt NICHT als Marge, sonst
+    # würde sie effektiv mitverkauft statt zurückgehalten zu werden
     def actual_margin(vk: float) -> float:
         net_after_ebay = vk * (1 - ebay_fee)
         net_without_vat = net_after_ebay / (1 + vat)
-        return net_without_vat - ek_net - shipping
+        return net_without_vat - ek_net - shipping - return_reserve_eur
 
     while actual_margin(vk_gross) < min_margin:
         vk_gross = _round_psychological(vk_gross + 1.0, rounding)
@@ -178,6 +184,7 @@ def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
         purchase_price_net=round(ek_net, 2),
         vk_gross=round(vk_gross, 2),
         margin_eur=round(margin_eur, 2),
+        return_reserve_eur=round(return_reserve_eur, 2),
         margin_pct=round(margin_pct_real, 1),
         tier_markup=margin_pct,
         shipping_buffer=shipping,

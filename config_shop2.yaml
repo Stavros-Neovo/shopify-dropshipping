@@ -84,6 +84,11 @@ ebay_pricing:
     - ek_max: 999999.0
       margin: 0.25
 
+  # Retouren-Rücklage: BAB hat kein Rückgaberecht für uns, eBay-Kunden aber
+  # 14 Tage Widerrufsrecht (Fernabsatzrecht) - jede Rücksendung ist ein
+  # kompletter EK-Verlust. 5% auf EK eingepreist, bis echte Retourenquote vorliegt.
+  return_reserve_rate: 0.05
+
   min_margin_eur: 5.00
   rounding_strategy: "psychological_99"
 

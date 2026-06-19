@@ -1403,6 +1403,7 @@ const G = {
   ekNetto:     _gStats.month_ek ?? 0,             // EK netto (BAB)
   ebayFeeReal: _gStats.month_ebay_fee ?? 0,       // echte eBay-Gebühr (13%+ggf. Promoted)
   ebayFeeEst:  (_gStats.month_revenue ?? 0) * 0.21,  // geschätzt 21% (inkl. geplante Promoted Listings)
+  retourenRuecklage: _gStats.month_return_reserve ?? 0,  // BAB nimmt nichts zurück -> 5% auf EK zurückgehalten
   useRealFees: true,     // toggle: echte vs. kalkulierte Gebühren
 };
 
@@ -1429,10 +1430,11 @@ function calcGewinn() {
 
   const ekNetto    = G.ekNetto;
   const vorstEk    = ekNetto * 0.19;                // Vorsteuer auf EK von BAB
+  const retourenRuecklage = G.retourenRuecklage;    // BAB nimmt nichts zurück -> 5% auf EK zurückgehalten
 
   const ustZahllast = mwstAusgang - vorstEbay - vorstEk;   // ans Finanzamt
 
-  const rohgewinn = vkNetto - ebayNetto - ekNetto;  // Gewinn vor ESt, nach allen Kosten
+  const rohgewinn = vkNetto - ebayNetto - ekNetto - retourenRuecklage;  // Gewinn vor ESt, nach allen Kosten + Rücklage
 
   // Update toggle-label if present
   const toggleEl = document.getElementById('g-fee-toggle-label');
@@ -1464,6 +1466,7 @@ function calcGewinn() {
     { label: 'Umsatz brutto (inkl. MwSt.)',          val: vkBrutto,  type: 'in',   note: 'eBay-Auszahlung' },
     { label: '− Wareneinsatz (EK an BAB)',            val: -ekNetto,  type: 'out',  note: 'Netto-Einkauf' },
     { label: `− eBay Gebühren (${ebayPct}%, ${useReal?'ECHT':'Kalk.'})`, val: -ebayNetto,type: 'out',  note: useReal?'Aus Fulfillment API':'13% Provision + 8% Promoted' },
+    { label: '− Retouren-Rücklage (5% auf EK)',       val: -retourenRuecklage, type: 'out', note: 'BAB nimmt nichts zurück — Widerrufsrecht-Risiko' },
     { label: '= Rohgewinn (vor Steuern)',             val: rohgewinn, type: 'sum',  note: '' },
     { label: '− USt. Zahllast (ans Finanzamt)',       val: -ustZahllast, type: 'tax', note: 'Ausgangsteuer − Vorsteuer' },
     { label: '− Einkommensteuer (' + Math.round(estRate*100) + '%)',   val: -est,   type: 'tax', note: 'Rücklage bilden!' },

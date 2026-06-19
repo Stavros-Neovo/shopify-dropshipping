@@ -27,6 +27,7 @@ SHIP_COST   = 5.0    # Pauschale Versandkosten (was wir zahlen)
 BUYER_SHIP  = 3.99   # Versandanteil den Käufer zahlt
 EST_RATE   = 0.30   # Einkommensteuer-Rücklage
 GEWST_RATE = 0.15   # Gewerbesteuer-Rücklage
+RETURN_RESERVE_RATE = 0.05  # Retouren-Rücklage auf EK - BAB nimmt nichts zurück (siehe pricing.py)
 
 
 # ─── EK-Map aus shopify_products.csv ─────────────────────────────────────────
@@ -99,14 +100,16 @@ def fetch_orders(base_url, token, days=90):
 # ─── Gewinn-Berechnung ────────────────────────────────────────────────────────
 
 def calc_profit_item(unit_price: float, ek: float, qty: int = 1) -> dict:
-    """Gibt vollständige Gewinnrechnung zurück."""
+    """Gibt vollständige Gewinnrechnung zurück. profit_u/profit_t sind NETTO nach
+    Retouren-Rücklage (BAB nimmt nichts zurück, jede Kundenretoure = voller EK-Verlust)."""
     total_vk    = unit_price + BUYER_SHIP              # Gesamtbetrag inkl. Käufer-Versand
     ebay_fee    = round(total_vk * EBAY_FEE, 2)        # eBay Grundgebühr 13%
     campaign    = round(total_vk * CAMPAIGN_FEE, 2)    # Promoted Listings 8%
     total_fees  = round(total_vk * TOTAL_FEE, 2)       # 21% gesamt
     vat         = round((total_vk - total_fees) * (1 - 1 / VAT_FACTOR), 2)
     netto_vk    = round(total_vk - total_fees - vat, 2)
-    profit_u    = round(netto_vk - SHIP_COST - ek, 2)
+    return_reserve = round(ek * RETURN_RESERVE_RATE, 2)
+    profit_u    = round(netto_vk - SHIP_COST - ek - return_reserve, 2)
     ebay_fee    = total_fees  # für Dashboard-Ausgabe: Gesamtgebühr anzeigen
     profit_t  = round(profit_u * qty, 2)
     return {
@@ -116,6 +119,7 @@ def calc_profit_item(unit_price: float, ek: float, qty: int = 1) -> dict:
         "netto_vk":   netto_vk,
         "ship":       SHIP_COST,
         "ek":         round(ek, 2),
+        "return_reserve": round(return_reserve * qty, 2),
         "profit_u":   profit_u,
         "qty":        qty,
         "profit_t":   profit_t,
@@ -137,12 +141,12 @@ def process_orders(orders: list, ek_map: dict) -> dict:
 
     # Aggregatoren
     agg = {
-        "today":     {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
-        "week":      {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
-        "prev_week": {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
-        "month":     {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
-        "d30":       {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
-        "d90":       {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0},
+        "today":     {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0, "return_reserve": 0.0},
+        "week":      {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0, "return_reserve": 0.0},
+        "prev_week": {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0, "return_reserve": 0.0},
+        "month":     {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0, "return_reserve": 0.0},
+        "d30":       {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0, "return_reserve": 0.0},
+        "d90":       {"sales": 0, "revenue": 0.0, "profit": 0.0, "ek": 0.0, "fee": 0.0, "return_reserve": 0.0},
     }
     daily: dict[str, dict] = {}   # "YYYY-MM-DD" → {revenue, profit, sales}
     product_stats: dict    = {}
@@ -169,6 +173,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
         order_profit = 0.0
         order_ek     = 0.0
         order_fee    = 0.0
+        order_reserve = 0.0
 
         for item in order.get("lineItems", []):
             sku   = item.get("sku", "")
@@ -177,9 +182,10 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             vk    = float(item.get("lineItemCost", {}).get("value", 0))
             ek    = ek_map.get(sku, 0)
             calc  = calc_profit_item(vk, ek, qty)
-            order_profit += calc["profit_t"]
-            order_ek     += calc["ek"] * qty
-            order_fee    += calc["ebay_fee"] * qty
+            order_profit  += calc["profit_t"]
+            order_ek      += calc["ek"] * qty
+            order_fee     += calc["ebay_fee"] * qty
+            order_reserve += calc["return_reserve"]
 
             # Product stats
             if sku not in product_stats:
@@ -224,6 +230,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             agg[key]["profit"]  += order_profit
             agg[key]["ek"]      += order_ek
             agg[key]["fee"]     += order_fee
+            agg[key]["return_reserve"] += order_reserve
 
         if od == today:           add("today")
         if iso_week(od) == this_week:  add("week")
@@ -310,6 +317,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             "month_profit":      rnd(agg["month"]["profit"]),
             "month_ek":          rnd(agg["month"]["ek"]),
             "month_ebay_fee":    rnd(agg["month"]["fee"]),
+            "month_return_reserve": rnd(agg["month"]["return_reserve"]),
             "total_sales_30d":   agg["d30"]["sales"],
             "total_revenue_30d": rnd(agg["d30"]["revenue"]),
             "total_profit_30d":  rnd(agg["d30"]["profit"]),
