@@ -1,0 +1,77 @@
+name: Bild-Audit (EAN → Icecat verifizieren)
+
+# Läuft täglich bis alle 506 DDG-Bilder verifiziert oder entfernt sind
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 03:30 UTC täglich
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max SKUs pro Run (Standard: 100)"
+        required: false
+        default: "100"
+      deactivate:
+        description: "Listings ohne Bild auf eBay deaktivieren? (true/false)"
+        required: false
+        default: "true"
+      dry_run:
+        description: "Dry-run? (true/false)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: image-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencies installieren
+        run: pip install requests python-dotenv
+
+      - name: Bild-Audit ausführen
+        env:
+          ICECAT_USER:          neovogen
+          ICECAT_TOKEN:         a923fe60-04bd-4f83-ae2e-a1e1a8427c98
+          EBAY_CLIENT_ID:       ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET:   ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_REFRESH_TOKEN_2: ${{ secrets.EBAY_REFRESH_TOKEN_2 }}
+        run: |
+          LIMIT="${{ github.event.inputs.limit || '100' }}"
+          DEACT="${{ github.event.inputs.deactivate || 'true' }}"
+          DRY="${{ github.event.inputs.dry_run || 'false' }}"
+
+          ARGS="--limit $LIMIT"
+          [ "$DEACT" = "true" ] && ARGS="$ARGS --deactivate"
+          [ "$DRY"   = "true" ] && ARGS="$ARGS --dry-run"
+
+          python image_audit.py $ARGS
+
+      - name: supplier_map.json committen
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add supplier_map.json
+          git diff --staged --quiet && echo "Keine Änderungen" && exit 0
+          REMAINING=$(python3 -c "
+          import json
+          sm = json.load(open('supplier_map.json'))
+          ddg = sum(1 for v in sm.values() if v.get('image_unverified_ddg'))
+          ok  = sum(1 for v in sm.values() if v.get('image_verified'))
+          print(f'verifiziert={ok} noch-ddg={ddg}')
+          ")
+          git commit -m "audit: Bild-Audit $REMAINING [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --no-rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done

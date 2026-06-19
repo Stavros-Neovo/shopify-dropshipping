@@ -91,14 +91,14 @@ jobs:
           BAB_ONLY="${{ github.event.inputs.bab_only || 'true' }}"
 
           # Schedule:
-          #   02:00 → Scan + Select + List (max 20 neue Listings = max 1,20€ Gebühren)
+          #   02:00 → Scan + Select only (KEIN Listing, KEINE neuen Gebühren)
           #   14:00 → Scan only (Cache aktualisieren, KEINE neuen Listings → KEINE Gebühren)
-          MAX_NEW="${{ github.event.inputs.max_new || '20' }}"
+          MAX_NEW="0"  # GESPERRT: Keine neuen Listings — nur aktivieren/deaktivieren
 
           if [ "${{ github.event_name }}" = "schedule" ]; then
             HOUR=$(date -u +%H)
             if [ "$HOUR" = "02" ]; then
-              MODE="both"
+              MODE="scan"   # Nur Cache — kein Listing, keine Gebühren
               LIMIT="4800"
             else
               MODE="scan"   # 14:00: nur Cache, kein Listing
