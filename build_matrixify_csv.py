@@ -149,10 +149,21 @@ def load_enrichment_index(path: str) -> Dict[str, dict]:
     return index
 
 
+def _fallback_description(bab_title: str, brand_stored: str = "") -> str:
+    """Wird genutzt wenn Icecat keine Beschreibungstexte hat - liefert mehr als
+    nur den nackten Titel (sonst geht das 1:1 so an eBay/Shopify raus)."""
+    from title_optimizer import extract_brand_from_title
+    brand = extract_brand_from_title(bab_title, brand_stored)
+    lines = [f"<p>{bab_title}</p>"]
+    if brand:
+        lines.append(f"<p>Marke: {brand}</p>")
+    return "\n".join(lines)
+
+
 def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
     """Baut HTML-Body für Shopify aus Bab-Titel + Enrichment-Daten."""
     if not enrichment:
-        return f"<p>{bab_title}</p>"
+        return _fallback_description(bab_title)
 
     parts = []
     lead = enrichment.get("marketing_text") or enrichment.get("long_summary") or enrichment.get("short_summary") or ""
@@ -167,7 +178,7 @@ def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
     if mfr_url and mfr_url.startswith("http"):
         parts.append(f'<p><small><a href="{mfr_url}" target="_blank" rel="noopener">Herstellerinformationen</a></small></p>')
 
-    return "\n".join(parts) if parts else f"<p>{bab_title}</p>"
+    return "\n".join(parts) if parts else _fallback_description(bab_title, enrichment.get("brand", ""))
 
 
 def slugify(text: str) -> str:
