@@ -7454,36 +7454,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "GARH0001": {
-    "ean": "6975849060284",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1421.0,
-    "vk": 2683.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "GARH0002": {
-    "ean": "6975849060277",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1522.5,
-    "vk": 2874.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "GARH0003": {
-    "ean": "6975849060116",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1522.5,
-    "vk": 2874.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HDIS0241": {
     "ean": "0763649150474",
     "supplier": "BAB",
@@ -8153,48 +8123,6 @@
       "https://images.icecat.biz/img/gallery/3284b348f7a062ea041f67b92986752d561251d4.jpg"
     ]
   },
-  "HHWE0018": {
-    "ean": "6970135035588",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1013.99,
-    "vk": 1916.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/37453b905935fa85f6f6db937e17ca19432402a1.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/37453b905935fa85f6f6db937e17ca19432402a1.jpg"
-    ],
-    "image_verified": true
-  },
-  "HHWE1003": {
-    "ean": "4895251604758",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 517.65,
-    "vk": 982.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-wave-2-zusatzbatterie-1147510555.png?v=1742934203",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-wave-2-zusatzbatterie-1147510555.png?v=1742934203"
-    ],
-    "image_verified": true
-  },
-  "HHWE1008": {
-    "ean": "4895251631020",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 518.46,
-    "vk": 983.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-wave-3-add-on-battery-1161397161.png?v=1746702801",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-wave-3-add-on-battery-1161397161.png?v=1746702801"
-    ],
-    "image_verified": true
-  },
   "HHWG1072": {
     "ean": "5056668006842",
     "supplier": "BAB",
@@ -8211,26 +8139,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 167.48,
     "vk": 322.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "HHWM4005": {
-    "ean": "4006508217847",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 669.9,
-    "vk": 1268.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "HHWM4006": {
-    "ean": "4006508217830",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 654.68,
-    "vk": 1240.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
@@ -8283,93 +8191,6 @@
       "https://media.ipcstore.net/img/l/143688.jpg"
     ],
     "image_too_small": true
-  },
-  "HHWX0136": {
-    "ean": "6970995783445",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 740.95,
-    "vk": 1402.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/5da958763f14dbc3c1fb377e52674229e3e7767b.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/5da958763f14dbc3c1fb377e52674229e3e7767b.jpg"
-    ],
-    "image_verified": true
-  },
-  "HHWX0140": {
-    "ean": "6976233677163",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 395.85,
-    "vk": 752.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/70e28940b07b0e21030861601b9bad6a11e64c18.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/70e28940b07b0e21030861601b9bad6a11e64c18.jpg",
-      "https://images.icecat.biz/img/gallery/7ab0cde26081d9c9e728df8d821dc9598ce12b64.jpg",
-      "https://images.icecat.biz/img/gallery/a5bced8a8f5438b94829fbcde0c1e610bb226dd9.jpg",
-      "https://images.icecat.biz/img/gallery/eb476f8d6700ec861607386b815e106656659902.jpg",
-      "https://images.icecat.biz/img/gallery/f182b3746f1dc1ecf84d96af76dc45f95e5273ad.jpg",
-      "https://images.icecat.biz/img/gallery/61baa081aa1104036e35cfe225d473fe6520c968.jpg",
-      "https://images.icecat.biz/img/gallery/566e0055980cc67dd246df4d0375fab0dbed15d2.jpg",
-      "https://images.icecat.biz/img/gallery/31516ca7bf079e1a5f1ff01e2a04c5a69252daaa.jpg",
-      "https://images.icecat.biz/img/gallery/1080bd21ef6c0a8e5fb2939559e9a512d3c4bbfe.jpg"
-    ]
-  },
-  "HHWX0148": {
-    "ean": "6936905905512",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1004.85,
-    "vk": 1899.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/346d2226319bfd5bdc27ddc2368a300bc7c31531.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/346d2226319bfd5bdc27ddc2368a300bc7c31531.jpg"
-    ],
-    "image_verified": true
-  },
-  "HHWX0149": {
-    "ean": "6936905905154",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 588.7,
-    "vk": 1116.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/f5f22152adb8aeb387a5e618c886d9a221eb6527.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/f5f22152adb8aeb387a5e618c886d9a221eb6527.jpg"
-    ],
-    "image_verified": true
-  },
-  "MBAI0044": {
-    "ean": "4711387730775",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 345.01,
-    "vk": 657.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/f8af43718633437169c7bd400f046d840b70fa31.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/f8af43718633437169c7bd400f046d840b70fa31.jpg",
-      "https://images.icecat.biz/img/gallery/78e9909ffa2e7e82b87938439e41b80b8dc4ef53.jpg",
-      "https://images.icecat.biz/img/gallery/dcad4ab9849d5d14d121c4e8daf10098176f32d6.jpg",
-      "https://images.icecat.biz/img/gallery/5e1673896e570d592d212c63c334c1dd5efca80b.jpg",
-      "https://images.icecat.biz/img/gallery/337aefdf3a41d093ac892f0cf18c52d2c543068c.jpg",
-      "https://images.icecat.biz/img/gallery/c84caad5833c7b3aadc0e2b7dbe2508a127505d7.jpg",
-      "https://images.icecat.biz/img/gallery/30eb0e674b4622a76573a42d66013b5b11351083.jpg",
-      "https://images.icecat.biz/img/gallery/49440c71e966873f9bff9adc09e980cd6258265b.jpg",
-      "https://images.icecat.biz/img/gallery/457d76a78de345057ffd91def1ccbb004292a0a7.jpg",
-      "https://images.icecat.biz/img/gallery/b4ecc7d8b3e032849fe925f4a110485c0831f152.jpg"
-    ]
   },
   "MOHP0024": {
     "ean": "0198122902057",
@@ -8941,48 +8762,6 @@
     "title": "Petkit PUROBOT CRYSTAL DUO With Front Entry Hood-EU",
     "image_verified": false
   },
-  "PPCA0005": {
-    "ean": "0194644126353",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 436.45,
-    "vk": 829.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Anker EverFrost Powered Cooler 33L + Cooler Battery SET",
-    "image_verified": false
-  },
-  "PPCA0006": {
-    "ean": "0194644126346",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 477.05,
-    "vk": 905.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Anker EverFrost Powered Cooler 43L + Cooler Battery SET",
-    "image_verified": false
-  },
-  "PPCA0007": {
-    "ean": "0194644126339",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 558.25,
-    "vk": 1058.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "PPCA0009": {
-    "ean": "194644182649",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1014.99,
-    "vk": 1918.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "PPCE0003": {
     "ean": "4895251604802",
     "supplier": "BAB",
@@ -8997,41 +8776,6 @@
     ],
     "title": "ECOFLOW Glacier Plug-in Battery",
     "image_verified": true
-  },
-  "PPCE0007": {
-    "ean": "4895251641623",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 497.35,
-    "vk": 944.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-glacier-classic-portable-fridge-freezer-1168117510.png?v=1757325813",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-glacier-classic-portable-fridge-freezer-1168117510.png?v=1757325813"
-    ],
-    "title": "ECOFLOW GLACIER Classic 35L",
-    "image_verified": true
-  },
-  "PPE0015": {
-    "ean": "4897082668718",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1231.7,
-    "vk": 2326.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "PPE0209": {
-    "ean": "04897082668718",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1231.7,
-    "vk": 2326.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "PPE0220": {
     "ean": "4895251646673",
@@ -9058,92 +8802,6 @@
     ],
     "title": "ECOFLOW Single Axis Solar Tracker",
     "image_verified": true
-  },
-  "PPSE0041": {
-    "ean": "4897082669210",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 418.59,
-    "vk": 795.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/644284.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/644284.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "PPSE0043": {
-    "ean": "4895251601429",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1319.5,
-    "vk": 2492.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/644281.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/644281.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "PPSE0083": {
-    "ean": "4895251642002",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 416.15,
-    "vk": 791.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "ECOFLOW 4 x250W Rigid Solar Panel",
-    "image_verified": false
-  },
-  "PPSE0101": {
-    "ean": "4895251644037",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 406.0,
-    "vk": 772.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-single-axis-solar-tracker-1175963929.png?v=1751295803",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-single-axis-solar-tracker-1175963929.png?v=1751295803"
-    ],
-    "title": "ECOFLOW Single Axis Solar Tracker",
-    "image_verified": true
-  },
-  "PPSS2003": {
-    "ean": "4260741339395",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 903.35,
-    "vk": 1708.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "PVSG0032": {
-    "ean": "6976922480357",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1164.71,
-    "vk": 2200.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "PVSG0034": {
-    "ean": "6976922480371",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 539.98,
-    "vk": 1024.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "PVSJ0004": {
     "ean": "2010000030448",
@@ -9858,16 +9516,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "REFR2000": {
-    "ean": "4250563440355",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 492.28,
-    "vk": 934.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "REFT0004": {
     "ean": "4262431592554",
     "supplier": "BAB",
@@ -10193,30 +9841,6 @@
       "https://images.icecat.biz/img/gallery/871095cc01aa9f80e72ae63a5db5931b.jpg",
       "https://images.icecat.biz/img/gallery/9df2212ba4a2c72928733f8a33e41820.jpg",
       "https://images.icecat.biz/img/gallery/3178f7e4786ddbdbb0e434964f38e8e8.jpg"
-    ]
-  },
-  "SDXS0034": {
-    "ean": "8806094905410",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 342.5,
-    "vk": 652.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/d86db5c22c7a589ca3fb1f015db1b598.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/d86db5c22c7a589ca3fb1f015db1b598.jpg",
-      "https://images.icecat.biz/img/gallery/20178ca45964b6de669000dc915e918a.jpg",
-      "https://images.icecat.biz/img/gallery/9a88756c8308228179769d4ed4d1a921.jpg",
-      "https://images.icecat.biz/img/gallery/75cc3cbf89091c6ad329b7e90327b48d.jpg",
-      "https://images.icecat.biz/img/gallery/5152146aed873ef4fab40fb0031e7f6c.jpg",
-      "https://images.icecat.biz/img/gallery/8902ef84ae48abc097d36e6520b15f4d.jpg",
-      "https://images.icecat.biz/img/gallery/5e52c85c10ee05cd64b33a4e84d5a568.jpg",
-      "https://images.icecat.biz/img/gallery/3860419e881ca27b6eae58df652721c5.jpg",
-      "https://images.icecat.biz/img/gallery/f9ba78617839fe396c7200235f85eb55.jpg",
-      "https://images.icecat.biz/img/gallery/7864fec21aabe9f12504bff2b60158fa.jpg",
-      "https://images.icecat.biz/img/gallery/74b234aa47d5fa05f37b68550c210faf.jpg"
     ]
   },
   "SDXS1020": {
@@ -10849,21 +10473,6 @@
       "https://images.icecat.biz/img/gallery/edfce852ef95b606311aea2115177d19b8982f1f.jpg"
     ]
   },
-  "SUPH0053": {
-    "ean": "0199485355665",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 781.55,
-    "vk": 1479.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21304626.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21304626.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPJ0121": {
     "ean": "5706991024302",
     "supplier": "BAB",
@@ -10891,20 +10500,6 @@
       "https://images.icecat.biz/img/gallery/6c674022222c655065b3bf68db7ecc4a7008c666.jpg"
     ],
     "image_verified": true
-  },
-  "SUPJ0166": {
-    "ean": "5706991023725",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 782.57,
-    "vk": 1481.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/0ddeb466db3f15669f9e3fa441a28de9ab1c51bb.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/0ddeb466db3f15669f9e3fa441a28de9ab1c51bb.jpg"
-    ]
   },
   "SUPJ0173": {
     "ean": "5706991024364",
@@ -10957,22 +10552,6 @@
     ],
     "image_too_small": true
   },
-  "SUPL0326": {
-    "ean": "5099206079526",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1305.0,
-    "vk": 2464.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Logitech ConferenceCam Rally Plus Video conference kit",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/113968.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/113968.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPL0328": {
     "ean": "0097855143143",
     "supplier": "BAB",
@@ -10986,38 +10565,6 @@
     "image_url": "https://media.ipcstore.net/img/l/122202.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/122202.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SUPL0507": {
-    "ean": "5099206093089",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1363.15,
-    "vk": 2574.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Logitech Rally Bar Mini - Webcam",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/126935.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/126935.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SUPL0589": {
-    "ean": "0097855181596",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1144.92,
-    "vk": 2163.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Logitech ConferenceCam Sight 4k graphite",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/134213.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/134213.jpg"
     ],
     "image_too_small": true
   },
@@ -11053,16 +10600,6 @@
       "https://images.icecat.biz/img/gallery/3c974e0f85675d44fdbe900307ea5cd0ae540cc2.jpg"
     ],
     "image_verified": true
-  },
-  "SUPL6003": {
-    "ean": "0199274117238",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 893.2,
-    "vk": 1689.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "SUPM3006": {
     "ean": "7109806196986",
@@ -11170,26 +10707,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Teufel T6 Subwoofer MK2 20 60W Schwarz Wireless",
     "image_verified": false
-  },
-  "SUPV0037": {
-    "ean": "0023942322399",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 342.06,
-    "vk": 651.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/c8b585b1dc7b20361f0a751fb4f231a017bc5cd8.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/c8b585b1dc7b20361f0a751fb4f231a017bc5cd8.jpg",
-      "https://images.icecat.biz/img/gallery/085bfdef6599f303509e7aea246cf589beebb5f3.jpg",
-      "https://images.icecat.biz/img/gallery/bf549d60cede8f89c6cad3193ef76d5a5d2cfc96.jpg",
-      "https://images.icecat.biz/img/gallery/2fea5f2e1e98a7bad4cab02e42916c777d61e246.jpg",
-      "https://images.icecat.biz/img/gallery/a4c89a66230c4446c6d3ee78a837198cb70ab416.jpg",
-      "https://images.icecat.biz/img/gallery/7b73386b69cf65b1ca8c49d83d62172925f3da9f.jpg",
-      "https://images.icecat.biz/img/gallery/03596ed14e6d1a8374a40a31ab190986ee263cea.jpg"
-    ]
   },
   "SUPV0038": {
     "ean": "0023942322382",
@@ -15385,34 +14902,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/92499040_6674650443.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/92499040_6674650443.jpg"
-    ]
-  },
-  "SUPZ0020": {
-    "ean": "8596375242906",
-    "supplier": "BAB",
-    "ek": 309.58,
-    "vk": 590.99,
-    "title": "Zebra ZD421t - Etikettendrucker - Thermotransfer - Rolle (11,2 cm)",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/43ad3d103fdef2270291b370d7355406a9c6796b.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/43ad3d103fdef2270291b370d7355406a9c6796b.jpg"
-    ]
-  },
-  "SUPZ0033": {
-    "ean": "5704174529460",
-    "supplier": "BAB",
-    "ek": 345.1,
-    "vk": 657.99,
-    "title": "Zebra ZD421t - Etikettendrucker - Thermotransfer",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/c6e255565b02e0bee99eb75248131bc4da14939d.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/c6e255565b02e0bee99eb75248131bc4da14939d.jpg"
     ]
   },
   "USBK0042": {
