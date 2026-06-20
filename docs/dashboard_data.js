@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-20T04:06:52.087389+00:00",
+  "generated_at": "2026-06-20T08:23:42.614665+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 77,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 1097,
     "images_verified": 443,
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-19T23:32:30.857245+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 4,
-      "set_to_floor": 23,
+      "timestamp": "2026-06-20T04:44:24.865681+00:00",
+      "checked": 600,
+      "lowered": 2,
+      "raised": 52,
+      "set_to_floor": 43,
       "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 4,
-      "unchanged": 45,
+      "skipped_few": 12,
+      "skipped_image": 19,
+      "unchanged": 472,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0056",
-        "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x ",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0064",
-        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
-        "old": 64.99,
-        "new": 62.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0067",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
-        "old": 74.99,
-        "new": 72.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0068",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
-        "old": 74.99,
-        "new": 72.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0069",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
-        "old": 82.99,
-        "new": 80.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0070",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
-        "old": 82.99,
-        "new": 80.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0071",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
-        "old": 82.99,
-        "new": 80.99,
-        "diff": -2.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0073",
-        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
-        "old": 329.99,
-        "new": 331.99,
-        "diff": 2.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 554.99,
+        "new": 560.95,
+        "diff": 5.96,
         "action": "raised"
       },
       {
-        "sku": "SUPV0084",
-        "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/P",
-        "old": 32.99,
-        "new": 26.99,
-        "diff": -6.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 250.99,
+        "new": 251.99,
+        "diff": 1.0,
+        "action": "raised"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 241.99,
+        "new": 242.99,
+        "diff": 1.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 172.99,
+        "new": 171.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0085",
-        "title": "Verbatim Cool’n’go Airjet Handheld Fan White/",
-        "old": 32.99,
-        "new": 26.99,
-        "diff": -6.0,
-        "action": "lowered"
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 496.99,
+        "new": 501.95,
+        "diff": 4.96,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 692.99,
+        "new": 700.95,
+        "diff": 7.96,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 302.99,
+        "new": 303.99,
+        "diff": 1.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0271",
+        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
+        "old": 370.99,
+        "new": 373.99,
+        "diff": 3.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 405.99,
+        "new": 408.99,
+        "diff": 3.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0289",
+        "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
+        "old": 548.99,
+        "new": 554.95,
+        "diff": 5.96,
+        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-16",
-        "lowered": 40,
-        "raised": 86,
-        "floor": 0
-      },
       {
         "date": "2026-06-16",
         "lowered": 0,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-19",
         "lowered": 0,
         "raised": 4,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-20",
+        "lowered": 2,
+        "raised": 52,
         "floor": 0
       }
     ]
