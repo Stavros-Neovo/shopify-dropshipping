@@ -213,5 +213,15 @@
     "ean": "1210000621047",
     "title": "NOCO GBC101 | NOCO GBX45 EVA Protection Case | Boost Accessories",
     "detected_at": "2026-06-20T04:52:34.756230+00:00"
+  },
+  "SHG0098": {
+    "ean": "6974316993100",
+    "title": "Govee Three-camera TV Backlight 55-65inches",
+    "detected_at": "2026-06-20T08:34:03.193973+00:00"
+  },
+  "SUPC0089": {
+    "ean": "4025112099915",
+    "title": "CHERRY UM 9.0 PRO RGB - Mikrofon - Schwarz, Bronze",
+    "detected_at": "2026-06-20T08:35:44.260774+00:00"
   }
 }
