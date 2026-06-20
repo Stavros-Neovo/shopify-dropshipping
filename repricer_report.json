@@ -1,16 +1,6 @@
 {
   "history": [
     {
-      "timestamp": "2026-06-10T16:33:05.588168+00:00",
-      "checked": 1182,
-      "lowered": 31,
-      "raised": 0,
-      "skipped_floor": 808,
-      "skipped_few": 186,
-      "unchanged": 152,
-      "errors": 5
-    },
-    {
       "timestamp": "2026-06-11T00:04:46.352411+00:00",
       "checked": 300,
       "lowered": 8,
@@ -320,20 +310,122 @@
       "skipped_image": 8,
       "unchanged": 41,
       "errors": 0
+    },
+    {
+      "timestamp": "2026-06-20T18:50:35.125296+00:00",
+      "checked": 600,
+      "lowered": 0,
+      "raised": 6,
+      "skipped_floor": 0,
+      "skipped_few": 119,
+      "skipped_image": 17,
+      "unchanged": 457,
+      "errors": 1
     }
   ],
-  "last_changes": [],
+  "last_changes": [
+    {
+      "ean": "0763649174883",
+      "sku": "HDIS0273",
+      "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+      "ek": 995.0,
+      "floor_price": 1499.95,
+      "normal_price": 1568.95,
+      "old_price": 1499.95,
+      "new_price": 1568.95,
+      "competitor_count": 0,
+      "lowest_competitor": null,
+      "action": "raised",
+      "reason": "no_competitors_raise_toward_normal",
+      "timestamp": "2026-06-20T18:51:28.657232+00:00"
+    },
+    {
+      "ean": "8719706437301",
+      "sku": "HDIS0280",
+      "title": "Seagate Exos M ST28000NM003K / 28 TB",
+      "ek": 895.01,
+      "floor_price": 1349.95,
+      "normal_price": 1410.95,
+      "old_price": 1349.95,
+      "new_price": 1410.95,
+      "competitor_count": 0,
+      "lowest_competitor": null,
+      "action": "raised",
+      "reason": "no_competitors_raise_toward_normal",
+      "timestamp": "2026-06-20T18:51:32.930600+00:00"
+    },
+    {
+      "ean": "8719706439411",
+      "sku": "HDIS0295",
+      "title": "Seagate BarraCuda ST20000DM001 / 20TB / 3,5\"",
+      "ek": 596.82,
+      "floor_price": 900.95,
+      "normal_price": 941.95,
+      "old_price": 900.95,
+      "new_price": 941.95,
+      "competitor_count": 0,
+      "lowest_competitor": null,
+      "action": "raised",
+      "reason": "no_competitors_raise_toward_normal",
+      "timestamp": "2026-06-20T18:51:40.068136+00:00"
+    },
+    {
+      "ean": "4779051845231",
+      "sku": "NETT1074",
+      "title": "Teltonika RUTM56 - Wireless Router",
+      "ek": 502.43,
+      "floor_price": 758.95,
+      "normal_price": 793.95,
+      "old_price": 761.95,
+      "new_price": 793.95,
+      "competitor_count": 0,
+      "lowest_competitor": null,
+      "action": "raised",
+      "reason": "no_competitors_raise_toward_normal",
+      "timestamp": "2026-06-20T18:53:31.458706+00:00"
+    },
+    {
+      "ean": "0817882027649",
+      "sku": "NETU0017",
+      "title": "UbiQuiti UniFi USW-Pro-24-POE Switch",
+      "ek": 577.72,
+      "floor_price": 872.95,
+      "normal_price": 911.95,
+      "old_price": 872.95,
+      "new_price": 911.95,
+      "competitor_count": 0,
+      "lowest_competitor": null,
+      "action": "raised",
+      "reason": "no_competitors_raise_toward_normal",
+      "timestamp": "2026-06-20T18:53:40.912180+00:00"
+    },
+    {
+      "ean": "0817882027656",
+      "sku": "NETU0023",
+      "title": "UbiQuiti UniFi USW-PRO-48-POE Switch",
+      "ek": 906.57,
+      "floor_price": 1366.95,
+      "normal_price": 1428.95,
+      "old_price": 1366.95,
+      "new_price": 1428.95,
+      "competitor_count": 0,
+      "lowest_competitor": null,
+      "action": "raised",
+      "reason": "no_competitors_raise_toward_normal",
+      "timestamp": "2026-06-20T18:53:45.021361+00:00"
+    }
+  ],
   "last_run": {
-    "timestamp": "2026-06-20T16:55:39.622918+00:00",
-    "checked": 77,
+    "timestamp": "2026-06-20T18:50:35.125296+00:00",
+    "checked": 600,
     "lowered": 0,
-    "raised": 0,
+    "raised": 6,
     "set_to_floor": 0,
     "skipped_floor": 0,
-    "skipped_few": 28,
-    "skipped_image": 8,
-    "unchanged": 41,
-    "errors": 0,
+    "skipped_few": 119,
+    "skipped_image": 17,
+    "unchanged": 457,
+    "errors": 1,
     "dry_run": false
   }
 }
