@@ -1,16 +1,6 @@
 {
   "history": [
     {
-      "timestamp": "2026-06-11T22:24:02.623383+00:00",
-      "checked": 915,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 821,
-      "unchanged": 94,
-      "errors": 0
-    },
-    {
       "timestamp": "2026-06-12T12:03:55.799916+00:00",
       "checked": 1220,
       "lowered": 3,
@@ -322,35 +312,30 @@
       "skipped_image": 29,
       "unchanged": 348,
       "errors": 0
-    }
-  ],
-  "last_changes": [
+    },
     {
-      "ean": "8806097984801",
-      "sku": "SUPS2023",
-      "title": "Samsung Galaxy Buds4 Pro - True Wireless-Kopfhörer - Schwarz",
-      "ek": 148.19,
-      "floor_price": 235.99,
-      "normal_price": 246.99,
-      "old_price": 235.99,
-      "new_price": 246.99,
-      "competitor_count": 0,
-      "lowest_competitor": null,
-      "action": "raised",
-      "reason": "no_competitors_raise_toward_normal",
-      "timestamp": "2026-06-20T20:50:38.329800+00:00"
+      "timestamp": "2026-06-20T22:37:14.455663+00:00",
+      "checked": 77,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 28,
+      "skipped_image": 8,
+      "unchanged": 41,
+      "errors": 0
     }
   ],
+  "last_changes": [],
   "last_run": {
-    "timestamp": "2026-06-20T20:44:44.188090+00:00",
-    "checked": 600,
+    "timestamp": "2026-06-20T22:37:14.455663+00:00",
+    "checked": 77,
     "lowered": 0,
-    "raised": 1,
+    "raised": 0,
     "set_to_floor": 0,
     "skipped_floor": 0,
-    "skipped_few": 222,
-    "skipped_image": 29,
-    "unchanged": 348,
+    "skipped_few": 28,
+    "skipped_image": 8,
+    "unchanged": 41,
     "errors": 0,
     "dry_run": false
   }
