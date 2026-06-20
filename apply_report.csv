@@ -1,14 +1,7 @@
 ﻿ean,sku,title,status
-0017817768429,SUPB1066,Bose SoundLink Micro Bluetooth Lautsprecher 9m kabellos NEU,updated
-0017817846141,SUPB1045,Bose QuietComfort Ultra Headset kabellos NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Konnektivität fehlt. Fügen Sie Konnektivität zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
-0017817846912,SUPB1054,Bose 881046-0020 headphones/headset,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Konnektivität fehlt. Fügen Sie Konnektivität zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
-0017817847643,SUPB1047,Bose QuietComfort Ultra Headset kabellos NEU,updated
-0017817847681,SUPB1046,Bose QuietComfort Ultra Headset kabellos NEU,updated
-0017817852470,SUPB1065,Bose 887612-0100 portable/party speaker,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Konnektivität fehlt. Fügen Sie Konnektivität zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
-0017817859561,SUPB1061,Bose 890101-0200 headphones/headset,updated
 0023942301882,SUPV0068,Verbatim Charge 'n' Travel 70W Universal Violett AC Schnellladung Drinnen,updated
 0023942301929,SUPV0070,Verbatim 30192 Ladegerät für Mobilgeräte Universal Blau AC Schnellladung Drinnen,updated
-0023942301936,SUPV0071,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942301936,SUPV0071,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung,updated
 0023942302117,USBV0018,Verbatim V200 USB-Stick 64GB NEU,updated
 0023942302278,USBV0003,Verbatim USB-S USB-Stick 512GB NEU,updated
 0023942302292,USBV0005,Verbatim USB-S USB-Stick 128GB NEU,updated
@@ -24,28 +17,28 @@
 0023942321521,SUPV0012,Verbatim CMH-09 USB Typ-C 10000 Mbit/s Silber,updated
 0023942321538,SUPV0032,Verbatim CMH-13 USB Typ-C 10000 Mbit/s Silber,updated
 0023942321545,SUPV0013,Verbatim CMH-14 USB Typ-C 5000 Mbit/s Silber,updated
-0023942321569,SUPV0029,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
-0023942321583,SUPV0020,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942321569,SUPV0029,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s,updated
+0023942321583,SUPV0020,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s,updated
 0023942322009,SUPV0044,"Verbatim GNC-35 Universal Schwarz, Grau AC Schnellladung Drinnen",updated
 0023942322030,SUPV0047,"Verbatim GNC-140 Universal Schwarz, Grau AC Schnellladung Drinnen",updated
 0023942322047,SUPV0048,"Verbatim GNC-200 Universal Schwarz, Grau AC Schnellladung Drinnen",updated
 0023942322177,SUPV0053,Verbatim GaN Charger 65W Universal Schwarz AC Schnellladung Drinnen,updated
-0023942322382,SUPV0038,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
-0023942322399,SUPV0037,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942322382,SUPV0038,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD",updated
+0023942322399,SUPV0037,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD",updated
 0023942323402,SUPV0084,"Verbatim Cool 'n' Go AirJet Grau, Violett Handventilator",updated
 0023942323419,SUPV0085,"Verbatim Cool 'n' Go AirJet Silber, Weiß Handventilator",updated
 0023942324034,SUPV0073,Verbatim FHD Monitor Full HD NEU,updated
 0023942435082,SUPV0056,"Verbatim 43508 DVD-Rohling 4,7 GB DVD+R 10 Stück(e)",updated
-0023942437895,SUPV0064,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar, Jewel Case, 5er-Pack",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942437895,SUPV0064,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar",updated
 0023942438892,SUPV0011,Verbatim 43889 Optisches Laufwerk Blu-Ray RW Schwarz,updated
 0023942438908,SUPV0004,Verbatim External Slimline Optisches Laufwerk Blu-Ray RW Schwarz,updated
 0023942490623,USBV0013,Verbatim USB-S USB-Stick 8GB NEU,updated
 0023942490654,USBV0016,Verbatim USB-S USB-Stick 64GB NEU,updated
 0023942490715,USBV0017,Verbatim USB-S USB-Stick 128GB NEU,updated
 0023942491729,USBV0008,Verbatim V3 USB-Stick 16GB USB 3.0 NEU,updated
-0023942495918,SUPV0034,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
-0023942495925,SUPV0036,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
-0023942495932,SUPV0035,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
+0023942495918,SUPV0034,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD",updated
+0023942495925,SUPV0036,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD",updated
+0023942495932,SUPV0035,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD",updated
 0023942530718,HDXV0002,Verbatim Festplatte HDD 1TB USB 3.0 NEU,updated
 0023942531777,HDXV0003,Verbatim Festplatte HDD 2TB USB 3.0 NEU,updated
 0023942531944,HDXV0005,Verbatim Festplatte HDD 1TB USB 3.0 NEU,updated
@@ -54,148 +47,398 @@
 0023942535041,SUPV0001,Verbatim External Slimline CD/DVD Writer Optisches Laufwerk DVD±RW Schwarz,updated
 0023942991045,USBV0020,Verbatim USB-Stick 16GB USB 3.0 NEU,updated
 0023942991052,USBV0021,Verbatim Metal Executive 32 GB - USB 3.0 Drive – Gold,updated
-0088381430128,HHWM0030,Makita Makpac 2 - Tasche für Elektrowerkzeuge,not_found
-0088381443395,HHWM0027,Makita P-81050 - Schraubenziehersatz - 99 Stücke,not_found
-0088381445474,HHWM0017,Makita B-44410 jigsaw/scroll saw/reciprocating saw blade,not_found
-0088381464123,HHWM0024,Makita LXT BL1860B - Batterie - Li-Ion - 6 Ah,not_found
-0088381661768,HHWM0023,Makita Bohrhammer - schnurlos - 3 Modi,not_found
-0088381704038,HHWM0015,Makita P-73374 screwdriver bit,not_found
-0088381723831,HHWM0038,Makita DTW700Z - Schlagschrauber - schnurlos - 18 V,not_found
-0088381736558,HHWM0034,Makita DDF487Z - Bohrer/Schrauber - schnurlos,not_found
-0088381775601,HHWM0029,Makita DHP489Z - Elektrischer Schraubendreher - Pistolengriff - 1800 RPM,not_found
-0088381891424,HHWM0019,Makita DHK180Z - Schlackenhammer - schnurlos,not_found
-0097855119551,SUPL0285,Logitech Mikrofon kabellos NEU,updated
-0097855131171,SUPL0329,Logitech ConferenceCam MeetUp Expansion Microphone,unchanged
-0097855143143,SUPL0328,Logitech ConferenceCam Rally Mic Pod Hub microphone Interface adapter,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPL0328
-0097855153197,SUPL0439,Logitech Rally Mic Pod Mount Mikrofon NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Formfaktor fehlt. Fügen Sie Formfaktor zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
-0097855162045,SUPL0402,Logitech 960-001360 webcam,updated
-0097855166067,SUPL0438,Logitech 952-000020 video conferencing system,updated
-0097855181596,SUPL0589,Logitech Sight video conferencing system,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPL0589
-0190198496201,SUPA0096,Apple MW2R3ZM/A lightning cable,not_found
-0191999788403,SUPL2003,Lenovo AF0135EU Docking Station 4K UHD NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPL2003
-0194252157022,SUPA0236,Apple MHJE3ZM/A mobile device charger,not_found
-0194252750872,SUPA0171,Apple MUQ93ZM USB-C Kabel 1m NEU,not_found
-0194253494850,SUPA0199,Apple MW493ZM USB Kabel 1m NEU,not_found
-0194644126339,PPCA0007,Anker EverFrost Powered Cooler 53L + Cooler Battery SET,unchanged
-0194644126346,PPCA0006,Anker EverFrost Powered Cooler 43L + Cooler Battery SET,unchanged
-0194644126353,PPCA0005,Anker EverFrost Powered Cooler 33L + Cooler Battery SET,unchanged
-0195348192095,SUPL2002,Lenovo USB-C Kabel USB 3.2 4K UHD NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPL2002
-0195348677295,SUPL2008,Lenovo B00300EU Thunderbolt Kabel 230W NEU,error: HTTP 500 | Codes: 25604 | Input error. Seller Inventory Service can not publish the data. Product not found. Please try again or contact customer support..
+0191999788403,SUPL2003,Lenovo AF0135EU Docking Station 4K UHD NEU,updated
+0195348192095,SUPL2002,Lenovo USB-C Kabel USB 3.2 4K UHD NEU,updated
+0195348677295,SUPL2008,Lenovo B00300EU Thunderbolt Kabel 230W NEU,updated
 0195892052982,SUPL2024,Lenovo B30090EU Docking Station USB 3.2 NEU,updated
 0195892120551,SUPL2027,Lenovo USB4 USB-C Kabel USB 4 65W NEU,updated
 0195892130499,SUPL2030,Lenovo USB4 USB-C Kabel USB 4 135W NEU,updated
-0195949085611,SUPA0219,Apple MUQ93ZM USB-C Kabel 1m NEU,not_found
-0195949087714,SUPA0228,Apple MUQW3ZM USB Kabel 1m NEU,not_found
-0195949093432,SUPA0204,Apple MU2G3ZM USB Kabel 2.0 2m NEU,not_found
-0195949333002,SUPA0224,Apple MW2P3ZM HDMI Adapter NEU,not_found
-0195949333989,SUPA0222,Apple MW2R3ZM/A lightning cable,not_found
-0195949371905,SUPA0229,Apple MW493ZM USB Kabel 1m NEU,not_found
-0195949508967,SUPA0209,Apple EarPods,not_found
-0195949775390,SUPA0230,Apple MYQT3ZM USB Kabel 2m NEU,not_found
-0195950084658,SUPA0234,Apple MD3J4ZM/A mobile device charger,not_found
-0195950667523,SUPA0242,Apple AirTag,unchanged
-0196068757403,SUPH0029,HP G4 Docking Station 120W NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPH0029
-0197050011855,HHWM0031,Makita DJV186Z - Akku-Pendelhubstichsäge - 18V,not_found
-0197050364623,HHWM0028,Makita E-25096 - Bit-Set mit Ratschengriff - 44-teilig,not_found
-0197498152394,SUPH4049,HP Poly Poly CS540A Headset mit Handset Lifter,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPH4049
+0196068757403,SUPH0029,HP G4 Docking Station 120W NEU,updated
+0197498152394,SUPH4049,HP Poly Poly CS540A Headset mit Handset Lifter,updated
 0198122902057,MOHP0024,"HP Series 5 Pro Serie 5 Pro 23,8-Zoll-FHD-USB-C-Konferenzmonitor – 524pm",error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/MOHP0024
 0198156725684,MOL0000,Lenovo T24D-40 Monitor Full HD NEU,updated
-0198415233004,SUPH0050,HP G6 Thunderbolt Kabel 100W NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPH0050
-0198415314048,SUPH0051,HP USB-C Kabel USB 3.2 100W NEU,updated
+0198415233004,SUPH0050,HP G6 Thunderbolt Kabel 100W NEU,updated
+0198415314048,SUPH0051,HP USB-C Kabel USB 3.2 100W NEU,error: HTTP 500 | Codes: 25604 | Input error. Seller Inventory Service can not publish the data. Product not found. Please try again or contact customer support..
 0198415314925,SUPH0049,HP G6 Thunderbolt Kabel 180W NEU,updated
-0199274117238,SUPL6003,Lenovo Thinkpad P14s G5 RYZ5Pro 8640HS/16GB/512SSD/W11Pro LTE 4G,unchanged
-0199485355665,SUPH0053,"HP ProBook 4 G1a AMD Ryzen™ 5 230 Notebook AI 40,6 cm (16"") 16GB 512GB W11Pro",error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/SUPH0053
-023942301875,SUPV0067,Verbatim Charge 'n' Travel 70W Universal Blau AC Schnellladung Drinnen,updated
-023942301912,SUPV0069,Verbatim 30191 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,error: HTTP 400 | Codes: 25718 | Invalid value for title. The length should be between 1 and 80 characters.
-023942302254,USBV0000,Verbatim USB-S USB-Stick 128GB NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/USBV0000
-023942302261,USBV0002,Verbatim USB-S USB-Stick 256GB NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/USBV0002
-023942491682,USBV0012,Verbatim V3 USB-Stick 256GB USB 3.0 NEU,error: HTTP 500 | Codes: 25604 | Input error. Seller Inventory Service can not publish the data. Product not found. Please try again or contact customer support..
-04897082668718,PPE0209,ECOFLOW Battery 2kWh,unchanged
-0610371446279,PPE1001,everHome EcoTracker IR - Energiemessgerät,unchanged
-0619659069193,USBS1019,SanDisk Cruzer Blade 32GB USB-Stick NEU,error: 500 Server Error: Internal Server Error for url: https://api.ebay.com/sell/inventory/v1/inventory_item/USBS1019
-0619659097318,USBS1094,SanDisk Cruzer USB-Stick 64GB NEU,error: HTTP 500 | Codes: 25604 | Input error. Seller Inventory Service can not publish the data. Product not found. Please try again or contact customer support..
-0619659125905,USBS1093,SanDisk Cruzer USB-Stick 128GB NEU,updated
-0619659163082,USBS0073,SanDisk Ultra Flair USB-Stick 128GB NEU,updated
-0619659172510,USBS0074,SanDisk 00183579 USB flash drive,updated
-0619659172831,USBS0075,SanDisk Ultra Luxe USB-Stick 64GB NEU,updated
-0619659172855,USBS0076,SanDisk 00183581 USB flash drive,updated
-0619659177171,USBS0019,SanDisk Ultra Dual Drive Go USB-Stick 64GB NEU,updated
-0619659178581,USBS1092,SanDisk Ultra Dual Drive Luxe USB flash drive,updated
-0619659182557,SDXS0015,SanDisk Extreme Portable 1TB NEU,updated
-0619659184384,USBS0071,SanDisk SDSQUNR-032G-GN3MN Speicherkarte 32GB NEU,updated
-0619659188566,USBS0082,SanDisk Extreme Speicherkarte 512GB NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Speicherkapazität fehlt. Fügen Sie Speicherkapazität zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
-0619659204877,SDXS0028,SanDisk SDSSDE30-1T00-G26 1TB NEU,updated
-0619659220860,SSDW0095,Western Digital HDSSD M.2 NVMe SSD 2TB NEU,updated
-0619659220884,SSDW0094,Western Digital BLACK SN8100 M.2 NVMe SSD 1TB NEU,updated
-0649528906564,RAM5C0021,Crucial CT2K32G48C40S5 RAM Arbeitsspeicher 64GB 4800MHz DDR5 2x Kit NEU,updated
-0649528929693,SSDC0070,Crucial HDSSD 2 Interne SSD 500GB NEU,updated
-0649528937735,RAM4C0110,3200 16GB Crucial 16GB Tray,updated
-0649528937803,RAM5C0022,Crucial CP2K16G56C46U5 RAM Arbeitsspeicher 32GB 5600MHz DDR5 2x Kit NEU,updated
-0649528944771,SSDC0078,Crucial P310,updated
-0718037872339,SSDW0036,Western Digital HDSSD M.2 NVMe SSD 2TB NEU,updated
-0718037872353,SSDW0034,Western Digital HDSSD M.2 NVMe SSD 500GB NEU,updated
-0718037877310,HDIW0222,Western Digital Red Pro internal hard drive,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Fügen Sie mindestens 1 Foto hinzu. Je mehr Fotos, desto besser! Zeigen Sie Ihren Artikel von allen Seiten und vergrößern Sie Details."
-0718037877501,HDIW0165,Western Digital Blue internal hard 2TB NEU,updated
-0718037884639,SSDW0070,Western Digital SA510 500GB NEU,updated
-0718037884653,SSDW0069,Western Digital Blue SA510,updated
-0718037884660,SSDW0089,Western Digital Blue SA510,updated
-0718037889245,HDIW0218,Western Digital Blue Purple internal hard drive,updated
-0718037891378,SSDW0075,Western Digital BLACK SN850X M.2 NVMe SSD 4TB NEU,updated
-0718037891392,SSDW0071,Western Digital BLACK SN850X M.2 NVMe SSD 1TB NEU,updated
+023942302254,USBV0000,Verbatim USB-S USB-Stick 128GB NEU,updated
+023942302261,USBV0002,Verbatim USB-S USB-Stick 256GB NEU,updated
+023942491682,USBV0012,Verbatim V3 USB-Stick 256GB USB 3.0 NEU,updated
 0718037893204,SSDW0091,Western Digital WDS100T4X0E-00CJA0 1TB NEU,updated
-0718037893211,SSDW0092,Western Digital WDS200T4X0E-00CJA0 2TB NEU,updated
-0718037893228,SSDW0085,Western Digital WDS200T4B0E 2TB NEU,updated
-0718037894843,SSDW0084,Western Digital SN5000 1TB NEU,updated
-0718037894850,SSDW0083,Western Digital SN5000 500GB NEU,updated
-0718037896199,HDIW0209,Western Digital Purple internal hard 2TB NEU,updated
-0718037896687,HDIW0213,Western Digital WD11PURZ 1TB NEU,updated
-0718037898339,HDIW0212,Western Digital Purple internal hard 6TB NEU,updated
-0718037899770,HDIW0214,Western Digital Red Plus internal hard drive,updated
-0718037899794,HDIW0206,Western Digital Red Plus internal hard drive,updated
-0718037899800,HDIW0207,Western Digital Red Plus internal hard drive,updated
-0718037899817,HDIW0216,Western Digital Red Plus internal hard drive,updated
-0718037901275,HDIW0224,Western Digital WD102PURP 10TB NEU,updated
-0718037901282,HDIW0223,Western Digital Red Pro internal hard drive,unchanged
-0718037901299,HDIW0225,Western Digital WD122PURP 12TB NEU,updated
-0718037901442,HDIW0244,Western Digital WD122KRYZ 12TB NEU,updated
-0718037902814,HDIW0220,Western Digital Red Pro internal hard drive,updated
-0718037902821,HDIW0219,Western Digital Red Pro internal hard drive,updated
-0718037902838,HDIW0221,Western Digital Red Pro internal hard drive,updated
-0718037905464,HDIW0246,Western Digital WD241KFGX 24TB NEU,unchanged
-0718037905754,HDIW0232,Western Digital WD40EFZZ 4TB NEU,updated
-0718037905778,HDIW0234,Western Digital Purple internal hard 4TB NEU,updated
-0718037906201,HDIW0230,Western Digital WD100EFGX 10TB NEU,updated
-0718037906218,HDIW0227,Western Digital WD120EFGX 12TB NEU,updated
-0718037906256,SSDW0097,Western Digital WD Blue SN5100,updated
-0718037906263,SSDW0100,Western Digital WD Blue SN5100,updated
-0718037906287,SSDW0101,Western Digital WD B 500GB NEU,updated
-0718037907154,SSDW0102,Western Digital WD SN3000 M.2 NVMe SSD 1TB NEU,updated
-0730143312745,CPUA0067,Advanced Micro Devices AMD Prozessor CPU NEU,updated
-0730143315272,CPUA0126,AMD Ryzen 9 9950X processor,updated
-0730143315296,CPUA0125,Advanced Micro Devices AMD Prozessor CPU NEU,updated
-0730143315555,CPUA0136,AMD Ryzen 9 9950X3D processor,updated
-0730143315579,CPUA0135,AMD Ryzen 9 9900X3D processor,updated
-0730143318280,CPUA0139,AMD Ryzen 7 9850X3D processor,updated
 0740617277357,SSDK0018,Kingston Technology A400 960 NEU,updated
 0740617319903,RAM4K0015,Kingston Technology FURY RAM Arbeitsspeicher 16GB DDR4 2x Kit NEU,updated
-0740617326130,RAM5K0015,Kingston Technology FURY 64GB RAM Arbeitsspeicher DDR5 2x Kit NEU,not_found
-0740617326147,RAM5K0033,Kingston Technology FURY 32GB RAM Arbeitsspeicher DDR5 2x Kit NEU,updated
-0740617328509,RAM5K0044,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,not_found
 0740617337426,RAM4K0057,Kingston Technology FURY RAM Arbeitsspeicher 16GB DDR4 NEU,updated
 0740617337532,RAM4K0058,Kingston Technology FURY RAM Arbeitsspeicher 16GB DDR4 2x Kit NEU,updated
 0740617337815,RAM4K0060,Kingston Technology FURY 16GB RAM Arbeitsspeicher DDR4 2x Kit NEU,updated
-0740617350173,RAM5K0045,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,updated
+0740617350173,RAM5K0045,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,not_live
 0740617350180,RAM5K0043,Kingston Technology FURY RAM Arbeitsspeicher 32GB DDR5 NEU,updated
-0756893004464,PVSJ0006,Jolywood HD108N-R2-500W 500W NEU,not_found
 0763649113653,HDIS0139,Seagate ST2000DM008 Festplatte HDD 2TB NEU,updated
-0763649125069,HDIS0198,Seagate ST8000VN004 Festplatte HDD 8TB NEU,updated
 0763649150474,HDIS0241,Seagate ST10000VE001 S 10TB NEU,updated
 0763649174883,HDIS0273,Seagate X24 Festplatte HDD 24TB NEU,unchanged
-0763649174920,HDIS0294,Seagate X24 Festplatte HDD 24TB NEU,unchanged
-0763649175095,HDIS0321,Seagate X24 Festplatte HDD 20TB NEU,unchanged
-0763649175279,HDIS0302,Seagate X24 Festplatte HDD 16TB NEU,not_found
-0763649175347,HDIS0306,Seagate X24 Festplatte HDD 12TB NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Fügen Sie mindestens 1 Foto hinzu. Je mehr Fotos, desto besser! Zeigen Sie Ihren Artikel von allen Seiten und vergrößern Sie Details."
-0810010071163,NETU0067,Ubiquiti UniFi Switch Lite 16 PoE NEU,updated
+0763649174920,HDIS0294,Seagate X24 Festplatte HDD 24TB NEU,not_live
 0810010072146,NETU0016,Ubiquiti USW-48-POE Netzwerk Switch PoE NEU,updated
 0810010074386,NETU0143,Ubiquiti UISP Netzwerk Switch NEU,updated
-0810010075574,NETU0090,Ubiquiti UNVR-Pro-EU,updated
+0810010077769,NETU0024,UbiQuiti UniFi Dream Machine Special Edition,unchanged
+0810010079251,NETU0152,Ubiquiti UniFi UNAS Pro - NAS-Server - Rack - einbaufähig,unchanged
+0810084690185,NETU0084,UbiQuiti UniFi Protect UVC-G5-BULLET - Netzwerk-Überwachungskamera,unchanged
+0810084691090,NETU0076,Ubiquiti U6-PLUS WLAN Access Point NEU,updated
+0810084696040,NETU0157,Ubiquiti Netzwerk Switch 5-Port NEU,updated
+0810084698747,NETU0148,Ubiquiti U7-LITE WLAN Access Point Wi-Fi 7 NEU,updated
+0810084698815,NETU0173,Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret,unchanged
+0810177161929,NETU0151,Ubiquiti WiFi 7 Long-Range WLAN Access Point Wi-Fi NEU,updated
+0817882027373,NETU0028,Ubiquiti UniFi Dream Machine WLAN Access Point NEU,updated
+0817882027649,NETU0017,Ubiquiti USW-P Netzwerk Switch PoE NEU,unchanged
+0817882027656,NETU0023,Ubiquiti USW-PRO-48-POE Netzwerk Switch PoE NEU,unchanged
+0817882029698,NETU0034,Ubiquiti USW Netzwerk Switch NEU,updated
+1210000615060,NOCO0006,NOCO GB150 Boost 12V 3000A Jump Starter,updated
+1210000617279,NOCO0020,NOCO GBC013 GB20/40 EVA Schutzcase,updated
+1210000617286,NOCO0021,NOCO GBC014 GB70 EVA Schutzcase,updated
+1210000617309,NOCO0019,NOCO XGC4 56W XGC Power Adapter,updated
+1210000618146,NOCO0028,NOCO GENIUS2DEU 2A Direct-Mount Battery Charger,updated
+1210000620064,NOCO0007,NOCO GBX45 vehicle jump starter,updated
+1210000620071,NOCO0014,NOCO GBX55 Boost X 12V 1750A Jump Starter,updated
+1210000620095,NOCO0017,NOCO GBX155 Boost X 12V 4250A Jump Starter,updated
+1210000621047,NOCO0024,NOCO GBC101 GBX45 EVA Schutzcase,updated
+1210000621054,NOCO0025,NOCO GBC102 GBX55 EVA Schutzcase,updated
+2503062116279,SUPZ0006,Zeb ZD421 Etikettendrucker NEU,not_live
+3221616007222,HHWR3019,Rowenta Dual Force 2-in-1 Akkustaubsauger RH6737,updated
+4015867102244,SUPE2069,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867107829,SUPE2020,Equip USB 2 Kabel 2.0 1.8m NEU,updated
+4015867150511,SUPE2003,"Equip HDMI ZU DVI-D Adapter Kabel, Stecker / Stecker, 3.0m, bidirektional",updated
+4015867151723,SUPE2085,Equip FTP LAN Netzwerkkabel 0.5m NEU,updated
+4015867151754,SUPE2079,Equip FTP LAN Netzwerkkabel 1.0m NEU,updated
+4015867151785,SUPE2080,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867151815,SUPE2081,Equip FTP LAN Netzwerkkabel 3.0m NEU,updated
+4015867151846,SUPE2082,Equip FTP LAN Netzwerkkabel 5.0m NEU,updated
+4015867151877,SUPE2083,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867151938,SUPE2086,Equip FTP LAN Netzwerkkabel 15m NEU,updated
+4015867151969,SUPE2087,Equip FTP LAN Netzwerkkabel 20m NEU,updated
+4015867153123,SUPE2042,Equip DisplayPort auf DVI-I-Dual-Link Adapter,not_live
+4015867157305,SUPE2044,Equip Mini DisplayPort auf HDMI Adapter 17m NEU,not_live
+4015867157503,SUPE2045,Equip HD15 VGA Adapter 15m NEU,not_live
+4015867163085,SUPE2056,Equip FTP LAN Netzwerkkabel 1.0m NEU,updated
+4015867163092,SUPE2058,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867163108,SUPE2057,Equip FTP LAN Netzwerkkabel 3.0m NEU,updated
+4015867163115,SUPE2059,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867163122,SUPE2060,Equip FTP LAN Netzwerkkabel 5.0m NEU,updated
+4015867163139,SUPE2062,Equip FTP LAN Netzwerkkabel 10m NEU,updated
+4015867163146,SUPE2063,Equip FTP LAN Netzwerkkabel 0.5m NEU,updated
+4015867164686,SUPE2029,Equip USB-C Kabel USB 2.0 1.0m NEU,updated
+4015867164723,SUPE2023,Equip USB-C Kabel USB 2.0 1.8m NEU,updated
+4015867164730,SUPE2024,Equip USB-C Kabel USB 2.0 3.0m NEU,updated
+4015867164754,SUPE2031,Equip USB-C Kabel USB 2.0 1.8m NEU,updated
+4015867166130,SUPE2061,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867166178,SUPE2065,Equip FTP LAN Netzwerkkabel 20m NEU,updated
+4015867166703,SUPE2019,Equip USB-C Kabel USB 3.0 3.0m NEU,updated
+4015867173411,SUPE2021,Equip USB-C Kabel USB 2.0 1.0m NEU,not_live
+4015867178065,SUPE2046,Equip DisplayPort auf HDMI Adapter 2m NEU,not_live
+4015867184547,SUPE2022,Equip USB-C Kabel USB 2.0 1.0m NEU,updated
+4015867198698,SUPE2032,Equip USB-C Kabel USB 2.0 1.0m NEU,not_live
+4015867198711,SUPE2033,Equip USB-C Kabel USB 2.0 1.0m 60W NEU,not_live
+4015867198735,SUPE2009,Equip USB-C Kabel USB 3.2 1.0m NEU,updated
+4015867203736,SUPE2049,Equip USB-C DisplayPort Kabel 1.8m NEU,not_live
+4015867204122,SUPE2089,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867204139,SUPE2090,Equip FTP LAN Netzwerkkabel 0.5m NEU,updated
+4015867204146,SUPE2091,Equip FTP LAN Netzwerkkabel 1.0m NEU,updated
+4015867204153,SUPE2092,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867204177,SUPE2094,Equip FTP LAN Netzwerkkabel 5.0m NEU,updated
+4015867204184,SUPE2095,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867204191,SUPE2096,Equip FTP LAN Netzwerkkabel 10m NEU,updated
+4015867204207,SUPE2097,Equip FTP LAN Netzwerkkabel 15m NEU,updated
+4015867204214,SUPE2098,Equip FTP LAN Netzwerkkabel 20m NEU,updated
+4015867204221,SUPE2099,Equip FTP LAN Netzwerkkabel 30m NEU,updated
+4015867204238,SUPE2103,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867204290,SUPE2109,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867204337,SUPE2113,Equip FTP LAN Netzwerkkabel 30m NEU,updated
+4015867205341,SUPE2010,Equip USB-C Kabel USB 3.0 0.25m NEU,updated
+4015867209547,SUPE2114,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867209554,SUPE2115,Equip FTP LAN Netzwerkkabel 0.5m NEU,updated
+4015867209561,SUPE2116,Equip FTP LAN Netzwerkkabel 1.0m NEU,updated
+4015867209578,SUPE2117,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867209585,SUPE2118,Equip FTP LAN Netzwerkkabel 3.0m NEU,updated
+4015867209592,SUPE2119,Equip FTP LAN Netzwerkkabel 5.0m NEU,updated
+4015867209608,SUPE2120,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867209646,SUPE2121,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867209660,SUPE2123,Equip FTP LAN Netzwerkkabel 1.0m NEU,updated
+4015867209677,SUPE2124,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867209684,SUPE2125,Equip FTP LAN Netzwerkkabel 3.0m NEU,updated
+4015867209691,SUPE2126,Equip FTP LAN Netzwerkkabel 5.0m NEU,updated
+4015867209707,SUPE2127,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867222409,SUPE2008,"Equip DisplayPort auf HDMI Adapter kable, 5 m",updated
+4015867223994,SUPE2034,Equip USB 3.0 auf HDMI Adapter NEU,updated
+4015867225172,SUPE2053,Equip 147093 Audio-Kabel 250 m 2 x RCA 3.5mm Schwarz,not_live
+4015867225189,SUPE2054,"Equip 147094 Audio-Kabel 2,5 m 2 x RCA Schwarz",not_live
+4015867228784,SUPE2041,Equip USB-C- DisplayPort Kabel 4K UHD 3.0m NEU,updated
+4015867229583,SUPE2131,Equip FTP LAN Netzwerkkabel 0.25m NEU,updated
+4015867229613,SUPE2134,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867229620,SUPE2135,Equip FTP LAN Netzwerkkabel 3.0m NEU,updated
+4015867229637,SUPE2136,Equip FTP LAN Netzwerkkabel 5.0m NEU,updated
+4015867229644,SUPE2137,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867229651,SUPE2138,Equip FTP LAN Netzwerkkabel 10m NEU,updated
+4015867229668,SUPE2139,Equip FTP LAN Netzwerkkabel 15m NEU,updated
+4015867229675,SUPE2140,Equip FTP LAN Netzwerkkabel 20m NEU,updated
+4015867229682,SUPE2141,Equip FTP LAN Netzwerkkabel 30m NEU,updated
+4015867237076,SUPE2100,Equip FTP LAN Netzwerkkabel 1.5m NEU,updated
+4015867237083,SUPE2101,Equip FTP LAN Netzwerkkabel 25m NEU,updated
+4015867237090,SUPE2102,Equip FTP LAN Netzwerkkabel 15m NEU,updated
+4015867237106,SUPE2128,Equip FTP LAN Netzwerkkabel 1.5m NEU,updated
+4015867237113,SUPE2129,Equip FTP LAN Netzwerkkabel 25m NEU,updated
+4015867237274,SUPE2130,Equip FTP LAN Netzwerkkabel 15m NEU,updated
+4015867237281,SUPE2142,Equip FTP LAN Netzwerkkabel 1.5m NEU,updated
+4015867237298,SUPE2143,Equip FTP LAN Netzwerkkabel 25m NEU,updated
+4015867239223,SUPE2030,Equip USB-C Kabel USB 2.0 2.0m NEU,updated
+4015867594780,SUPE2067,Equip FTP LAN Netzwerkkabel 2.0m NEU,updated
+4015867594810,SUPE2071,Equip FTP LAN Netzwerkkabel 7.5m NEU,updated
+4015867594865,SUPE2076,Equip FTP LAN Netzwerkkabel 30m NEU,updated
+4022167001016,HHWB1130,Braun BNA 100 Elektrisch betriebener Absauger,updated
+4023125030963,NETA0011,FRITZ WLAN-R WLAN Router Wi-Fi 7 NEU,updated
+4025112099915,SUPC0089,"CHERRY UM 9.0 PRO RGB Schwarz, Kupfer Tischmikrofon",updated
+4210201408567,HHWB1051,Braun 408567 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Schwarz,updated
+4210201435457,HHWB1054,Oral-B iO Series 10 Erwachsener Rotierende-vibrierende Zahnbürste Weiß,updated
+4210201435587,HHWB1055,Oral-B iO Series 10 Erwachsener Rotierende-vibrierende Zahnbürste Schwarz,updated
+4210201445111,HHWB1047,Oral-B iO Series 6 Erwachsener Rotierende Zahnbürste Schwarz,updated
+4210201445197,HHWB1050,Oral-B 445197 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Pink,updated
+4210201445234,HHWB1048,Oral-B 445234 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Weiß,updated
+4210201445258,HHWB1049,Braun 445258 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Grau,error: HTTP 400 | Codes: 25097 | Dieses Angebot wurde wegen eines Verstoßes gegen Grundsatz zu Fälschungen entfernt.
+4210201447238,HHWB1128,"Braun 10-in-1 Styling-Set 7 MGK7410 Bart, Körper, Haar. Mit Metallklinge, 100",updated
+4211129226776,HHWW032,"WMF KITCHENminis 0416500071 0,6 l Sport-Mixer 300 W Schwarz",updated
+4250563426243,REFR2001,DOCKLenovo USB-C Kabel 90W NEU,unchanged
+4260771516339,REFT0014,PC HP EliteDesk 800 G4 MP i5-8500T/16GB/512GBSSD/Wlan/Bluetooth W11P,unchanged
+4262431592554,REFT0004,"N15 tecXL HP EliteBook 850 G7 (15,6"")",unchanged
+4262431594756,REFT0007,PC HP EliteDesk 800 G6 MP i5-10500T/16GB/512GBSSD/Wlan+BT W11P,unchanged
+4262504949742,REFT0018,"TFT tecXL Lenovo ThinkVision T24i - LED-Monitor - (24"")",unchanged
+4262575240144,REFT0017,"TFT tecXL Asus BE24WQLB - LED-Monitor - (24.1"")",unchanged
+4582761160187,USBK0042,Card Kioxia SD Exceria Plus 128GB,unchanged
+4711387095119,MBAI0031,ASUS TUF RAM Arbeitsspeicher 128GB DDR5 NEU,updated
+4711387730775,MBAI0044,ASUS X870E-CREATOR RAM Arbeitsspeicher 192GB DDR5 NEU,updated
+4711387797143,MBAI0047,ASUS PRIME B840M-A RAM Arbeitsspeicher 192GB DDR5 NEU,updated
+4711387797273,MBAI0046,ASUS PRIME B840-PLUS RAM Arbeitsspeicher 192GB DDR5 NEU,updated
+4711387931509,MBAI0048,ASUS PRIME B850-PLUS RAM Arbeitsspeicher 256GB DDR5 NEU,updated
+4711387949832,NUCA0015,ASUS NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,updated
+4713294232120,RAM5G0019,G.Skill RAM Arbeitsspeicher 32GB 3000MHz DDR5 2x Kit NEU,unchanged
+4713294236807,RAM5G0026,G.Skill Z5 RAM Arbeitsspeicher 32GB 8000MHz DDR5 2x Kit NEU,not_live
+4719692007681,RAM4G0056,G.Skill Ripjaws RAM Arbeitsspeicher 32GB 2400MHz DDR4 2x Kit NEU,unchanged
+4779027312385,NETT1022,Teletonika TRB142 - Gateway,unchanged
+4779027312774,NETT1035,Teltonika Networks TRM240 DSL Modem NEU,updated
+4779027312958,NETT1030,Teltonika Networks TSW110 Netzwerk Switch NEU,updated
+4779051840137,NETT1023,Teltonika TRB143 - Gateway,unchanged
+4779051840175,NETT1004,Teltonika Networks RUT956 WLAN Router kabellos NEU,updated
+4779051840236,NETT1026,Teltonika TRB500 - Gateway,unchanged
+4779051840540,NETT1014,Teltonika Networks RUTM50 WLAN Router kabellos NEU,updated
+4779051840700,NETT1071,Teltonika Networks RUT140 WLAN Router kabellos NEU,updated
+4779051840724,NETT1072,Teltonika Networks RUT142 WLAN Router kabellos NEU,updated
+4779051840830,NETT1013,Teltonika Networks RUT906 WLAN Router kabellos NEU,updated
+4779051841332,NETT1011,Teltonika Networks RUT260 WLAN Router kabellos NEU,updated
+4779051841455,NETT1078,Teltonika Networks TRM500 WLAN Router kabellos NEU,updated
+4779051841844,NETT1083,Teltonika TRB246 - Gateway,unchanged
+4779051841851,NETT1082,Teltonika TRB256 - Gateway,unchanged
+4779051845231,NETT1074,Teltonika Networks RUTM56 WLAN Router kabellos NEU,unchanged
+4895251600033,PPE0070,ECOFLOW Rigid Solar Panel Mounting Feet,unchanged
+4895251604758,HHWE1003,ECOFLOW Wave 2 Add-on Battery,unchanged
+4895251604802,PPCE0003,ECOFLOW Glacier Plug-in Battery,unchanged
+4895251605205,PPSE0015,ECOFLOW Single Axis Solar Tracker,unchanged
+4895251606653,PPSE0046,ECOFLOW Balcony Hook Kit,unchanged
+4895251627542,PPE0143,EcoFlow Powerbank 65W kabellos NEU,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Modell fehlt. Fügen Sie Modell zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+4895251631020,HHWE1008,ECOFLOW Wave 3 Add-on Battery,unchanged
+4895251631143,HHWE1011,ECOFLOW WAVE Series Car Vent Seal (Magnetic Version),unchanged
+4895251641623,PPCE0007,EcoFlow GLACIER Classic 35L Mobile Kühlbox Gefrierbox Eiswrfelbereiter Camping,updated
+4895251643023,HHWE1012,ECOFLOW Shower Kit,unchanged
+4895251644037,PPSE0101,ECOFLOW Single Axis Solar Tracker,unchanged
+4895251646956,PPSE0103,ECOFLOW Smart Meter,unchanged
+4895251647809,PPE0236,EcoFlow RAPID Powerbank 15W kabellos NEU,updated
+4895251647830,PPE0235,EcoFlow RAPID Powerbank 15W kabellos NEU,updated
+4895251647991,PPE0237,EcoFlow RAPID Powerbank 15W kabellos NEU,updated
+4895251653855,PPE0226,EcoFlow RAPID 25K Powerbank NEU,updated
+4895252503517,NETT0227,TP-Link EAP783 WLAN Access Point PoE NEU,updated
+4897098681367,NETT0218,TP-Link Tapo L930-5 Intelligenter Leuchtstreifen WLAN,updated
+4897098682944,NETT0207,TP-Link Tapo Intelligenter Bewegungssensor,updated
+4897098685105,NETT0192,TP-Link C420S1 CCTV kabellos NEU,updated
+4897098685143,NETT0201,TP-Link Tapo Akku-Pack,updated
+4897098687765,NETT0147,TP-Link AX1800 WLAN Access Point kabellos NEU,updated
+5032037279239,CPUI0215,Intel Core i7-14700 processor,unchanged
+5397063763610,SUPD1027,DELL kabelgebundene Maus – MS116 - schwarz,unchanged
+5397184513972,REFD0002,Dell WD19S 130 Docking Station NEU,unchanged
+5397184961735,SUPD1024,DELL WD25 Kabelgebunden USB 3.2 Gen 2 (3.1 Gen 2) Type-C Schwarz,unchanged
+5397231022495,SOFN0001,Norton 360 For Gamers Antivirus-Sicherheit Kommerziell 1 Lizenz(en) 1 Jahr(e),not_live
+5397321029045,SUPD1030,DELL WD25Z USB-C Kabel USB 3.2 130W NEU,updated
+5704174219279,SUPD1020,Dell E5 N ATX Netzteil 65W NEU,not_live
+5704174529460,SUPZ0033,Zeb ZD421 Etikettendrucker NEU,not_live
+5706991014839,SUPJ1004,Jabra Speak 510,unchanged
+5706991019957,SUPJ1082,Jabra Evolve 30 II UC Mono,unchanged
+5706991022865,SUPJ1056,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991022902,SUPJ0153,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991023190,SUPJ1069,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991023213,SUPJ0168,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991023299,SUPJ0180,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991023725,SUPJ0166,Jabra PanaCast 50,not_live
+5706991024302,SUPJ0121,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991024364,SUPJ0173,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991024425,SUPJ1049,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991026146,SUPJ1079,Jabra Engage 40 Kopfhörer Kabelgebunden Kopfband Büro/Callcenter,unchanged
+5706991027501,SUPJ0184,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991027518,SUPJ1061,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991029109,SUPJ1054,Jabra Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991030976,SUPJ1077,Jabra SE Bluetooth Kopfhörer NEU,unchanged
+5706991031256,SUPJ0161,Jabra SE Kopfhörer kabellos NEU,unchanged
+5706991031522,SUPJ1085,Jabra TE Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991031539,SUPJ0170,Jabra TE Bluetooth Kopfhörer kabellos NEU,unchanged
+5706991034318,SUPJ0188,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C,updated
+5706991034530,SUPJ0183,Jabra Evolve2 40 SE Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C,updated
+5711603083851,REFT1001,T1A DELL RAM Arbeitsspeicher 16GB DDR4 Full HD NEU,unchanged
+5711603084766,REFT1004,T1A X1 RAM Arbeitsspeicher 8GB NEU,unchanged
+5711603085060,REFT1010,T1A DELL RAM Arbeitsspeicher 16GB DDR4 Full HD NEU,unchanged
+5711603086135,REFT1011,T1A X1 RAM Arbeitsspeicher 32GB NEU,unchanged
+5711603086197,REFT1012,T1A X1 RAM Arbeitsspeicher 32GB NEU,unchanged
+5711603087880,REFT1003,T1A X1 RAM Arbeitsspeicher 16GB NEU,unchanged
+5711603088016,REFT1005,T1A HP RAM Arbeitsspeicher 16GB DDR4 NEU,unchanged
+5711603088023,REFT1002,T1A DELL RAM Arbeitsspeicher 16GB DDR4 NEU,unchanged
+5711603088276,REFT1013,T1A DELL L SSD 16GB Full HD NEU,unchanged
+5711603098626,REFT1007,"N14 T1A Lenovo ThinkPad X1 Carbon Gen 8 (14"")",unchanged
+5713518290584,REFR0009,Refurb RFBP00091060 Docking Station NEU,unchanged
+5713518291970,REFR0017,Refurb RFBP00118580 Docking Station NEU,unchanged
+5713552042200,REFU0009,upcycle it M90 RAM Arbeitsspeicher 32GB DDR4 NEU,not_live
+5999056126534,SUPD1021,DELL M0RT ATX Netzteil 1m 65W NEU,not_live
+6935364010065,NETT0081,TP-Link USB-3 USB Hub 3.2 1m 7-Port NEU,updated
+6935364010751,NETT0086,TP-Link SG3452 Netzwerk Switch NEU,updated
+6935364020064,NETT0002,TP-Link Netzwerk Switch 5-Port NEU,updated
+6935364030773,NETT0085,TP-Link Omada SG3428XMP Netzwerk-Switch Managed L2+ Gigabit Ethernet,updated
+6935364070199,NETT0019,TP-LINK TL-WA850RE 300Mbps Universal,unchanged
+6935364072469,NETT0051,TP-Link AC1900 Wi-Fi Range Extender,updated
+6935364086862,NETT0097,TP-Link AC1200-D WLAN Router NEU,updated
+6935364092313,NETT0003,TP-Link Netzwerk Switch 8-Port NEU,updated
+6935364099305,NETT0054,TP-Link 300Mbit/s-WLAN-Repeater,updated
+6936905905154,HHWX0149,"Roborock Qrevo Curv 2 FlowX 0,324 l Weiß",unchanged
+6936905905512,HHWX0148,"Roborock SAROS 20X 0,259 l Schwarz",unchanged
+6938818303171,SUPY0010,Yealink SIP-T54W LAN Netzwerkkabel NEU,unchanged
+6938818303188,SUPY0022,Yealink SIP-T53W LAN Netzwerkkabel NEU,not_live
+6938818306202,SUPY0003,Yealink W90DM DECT-B 1900MHz NEU,not_live
+6938818306578,SUPY0059,Yealink WH67 UC Headset kabellos NEU,unchanged
+6938818307667,SUPY0014,Yealink SIP-T58W LAN Netzwerkkabel NEU,unchanged
+6938818308497,SUPY0038,Yealink W79P IP-T LAN Netzwerkkabel NEU,unchanged
+6938818318410,SUPY0019,Yealink MP56 E2-Mannschaften,unchanged
+6938818319578,SUPY0044,Yealink WH64 Headset kabellos NEU,unchanged
+6938818319592,SUPY0000,Yealink WH64 Headset kabellos NEU,unchanged
+6938818319608,SUPY0060,Yealink WH64 Headset kabellos NEU,unchanged
+6938818321816,SUPY0056,Yealink BH70 Headset kabellos NEU,unchanged
+6970135035588,HHWE0018,Ecovacs Deebot X8 Omni Schwarz,unchanged
+6970135036530,HHWE0017,"Ecovacs Deebot MINI Blue Blau, Weiß",unchanged
+6970995783445,HHWX0136,"Roborock Saros 10R 0,27 l Schwarz",unchanged
+6972822120935,ENAB0009,ENABOT EBO Air 2 Haustierroboter 2K Kamera Nachtsicht WLAN App Wei,unchanged
+6972822121000,ENAB0011,ENABOT EBO Air 2 Haustierroboter 2K Kamera Nachtsicht WLAN App Pink,unchanged
+6973293808971,PETK0059,PETKIT Katzenstreu 5 in 1 Tofu Aktivkohle klumpend staubarm 3 Beutel,updated
+6974316990642,SHG0091,Govee H80C4 I Bluetooth 15 15W NEU,unchanged
+6974316992295,SHG0022,Govee H10D1000 Montageschelle,unchanged
+6974316992745,SHG0021,Govee H6009 I Bluetooth 12 12W NEU,unchanged
+6974316993070,SHG0023,Govee H1061,unchanged
+6974316993117,SHG0099,Govee H66A1 Intelligenter Leuchtstreifen Wi-Fi/Bluetooth,unchanged
+6974316993353,SHG0067,Govee H7093311 Smart LED Lampe Bluetooth NEU,unchanged
+6974316993360,SHG0078,Govee B600CC02 Smart LED Lampe Bluetooth 5 NEU,unchanged
+6974316994251,SHG0013,Govee RGBIC Glide Hexa Light Panels 5 pcs Intelligente Wandleuchte,updated
+6974316994299,SHG0017,Govee H6047 Smart LED Lampe Bluetooth NEU,unchanged
+6974316994305,SHG0019,Govee H61C2 Smart LED Lampe 36W NEU,unchanged
+6974316994312,SHG0020,Govee H6608 Smart LED Lampe Bluetooth NEU,unchanged
+6974316994466,SHG0024,Govee H6061 Intelligentes Panel WLAN,unchanged
+6974316995098,SHG0057,Govee H6046,unchanged
+6974316995784,SHG0094,Govee H6870341 Smart LED Lampe Bluetooth NEU,unchanged
+6974316996798,SHG0074,Govee B5192011 Essensthermometer 0 - 300 °C Digital,unchanged
+6974316999034,SHG0038,Govee H6004 802.11b Bluetooth 9 NEU,unchanged
+6974316999386,SHG0052,Govee H10D1000 Beleuchtungs-Zubehör Montagehalterung,unchanged
+6974316999393,SHG0053,Govee H10D2000 Beleuchtungs-Zubehör Montagehalterung,unchanged
+6974316999409,SHG0054,Govee H10D1001 Beleuchtungs-Zubehör Montagehalterung,unchanged
+6974316999416,SHG0055,Govee H10D2001 Beleuchtungs-Zubehör Montagehalterung,unchanged
+6974316999874,SHG0042,Govee H6098 Intelligenter Leuchtstreifen Wi-Fi/Bluetooth,unchanged
+6974316999881,SHG0043,Govee H70BC Intelligente Strangleuchte Wi-Fi/Bluetooth,unchanged
+6974316999911,SHG0033,Govee H612A 802.11b Bluetooth NEU,unchanged
+6974316999997,SHG0044,Govee H6063 802.11b Bluetooth 72 NEU,unchanged
+6975069301846,PETK0080,PETKIT Wireless Pump-UVC for Sales,updated
+6975069302959,PETK0008,PETKIT Filter5.0-5pcs,"error: HTTP 400 | Codes: 25002 | A user error has occurred. Das Artikelmerkmal Modellkompatibilität fehlt. Fügen Sie Modellkompatibilität zu diesem Angebot hinzu, geben Sie einen gültigen Wert ein und versuchen Sie es dann noch einmal."
+6975069305691,PETK0081,PETKIT Easy Step Trittbrett Katzentoilette fr PURAMAX/2 & PUROBOT Max Pro/Ultra,updated
+6975069306650,PETK0063,PETKIT Crystal PH Katzenstreu - 4 Beutel C01,updated
+6976233677163,HHWX0140,"Dreame X40 Master 0,3 l Schwarz",unchanged
+7109806197006,SUPM3004,Mitel 622dt Set,unchanged
+7109806202564,SUPM3007,Mitel 712dt DECT Set,unchanged
+7109806202571,SUPM3008,Mitel 722dt DECT Set,unchanged
+7636490078323,HDIS0281,Seagate ST2000VN003 Festplatte HDD 2TB NEU,unchanged
+8006540774724,HHWB0036,Oral-B PRO 14876673 Elektrische Zahnbürste Kind Rotierende Zahnbürste,updated
+8006540860793,HHWB1127,Oral-B Deep Cleaning 6 Stück(e) Weiß,unchanged
+8006540957196,HHWB0037,Oral-B PRO 14876674 Elektrische Zahnbürste Kind Rotierende Zahnbürste,updated
+810084695210,NETU0122,UbiQuiti Gateway Pro UniFi UXG-MAX,unchanged
+810177165118,NETU0181,Ubiquiti U7 WLAN Access Point NEU,updated
+8596375242906,SUPZ0020,Zeb ZD421 Etikettendrucker NEU,unchanged
+8718696170809,SHP0147,Philips Hue White and Color ambiance Hue Play Lightbar Erweiterung,unchanged
+8718699771126,SHP0012,Philips by Signify Bluetooth NEU,updated
+8719514339989,SHP0016,"Philips Hue White and Color ambiance Hue Gradient Lightstrip Verlängerung, 1",updated
+8719514356610,SHP0127,Philips E14 Smart LED Lampe NEU,unchanged
+8719514356719,SHP0130,Philips E14 Smart LED Lampe NEU,unchanged
+8719514356733,SHP0126,Philips E14 Smart LED Lampe NEU,unchanged
+8719514356771,SHP0131,Philips E14 Smart LED Lampe NEU,unchanged
+8719514404595,SHP0050,Philips by Signify Bluetooth NEU,updated
+8719706019774,HDIS0317,Seagate ST4000NM001B Festplatte HDD 4TB NEU,not_live
+8719706022088,HDIS0299,Seagate ST4000NM025B Festplatte HDD 4TB NEU,not_live
+8719706022095,HDIS0258,"Seagate Exos 7E10 / ST6000NM019B / 6TB / 3,5""",not_live
+8719706022125,HDIS0315,Seagate ST6000NM020B Festplatte HDD 6TB NEU,not_live
+8719706022163,HDIS0293,Seagate ST8000NM018B Festplatte HDD 8TB NEU,not_live
+8719706022422,HDIS0301,Seagate ST6000NM001B Festplatte HDD 6TB NEU,not_live
+8719706027298,HDIS0314,Seagate ST4000NM027B Festplatte HDD 4TB NEU,not_live
+8719706027670,HDIS0282,Seagate ST6000VN006 Festplatte HDD 6TB NEU,unchanged
+8719706431378,HDIS0300,Seagate X24 Festplatte HDD 20TB NEU,not_live
+8719706431460,HDIS0298,Seagate X24 Festplatte HDD 16TB NEU,not_live
+8719706432276,HDIS0269,Seagate ST20000NT001 Festplatte HDD 20TB NEU,not_live
+8719706437295,HDIS0277,Seagate Festplatte HDD 30TB NEU,not_live
+8719706438667,HDIS0286,Seagate ST28000NT000 Festplatte HDD 28TB NEU,not_live
+8719706439411,HDIS0295,Seagate Festplatte HDD 20TB NEU,unchanged
+8719706439480,HDIS0316,Seagate Festplatte HDD 24TB NEU,not_live
+8720169230033,SHP0072,Philips Hue White ambience GU10 – Smarter Spot – (Doppelpack),unchanged
+8720389015809,HHWP0101,Philips 7000 series DST7050/70 Bügeleisen Dampfbügeleisen SteamGlide,updated
+8801643979379,SUPS0259,Samsung EP-TA800 Handy Weiß AC Schnellladung Drinnen,unchanged
+8806088938141,SUPS0343,Samsung EP-DG930 USB Kabel 5m NEU,unchanged
+8806090270062,SUPS0269,Samsung EO-IC100 Kopfhörer NEU,unchanged
+8806090312403,SDXS1020,Samsung Portable SSD T7 2 TB USB Typ-C 3.2 Gen 2 (3.1 Gen 2) Blau,unchanged
+8806090545917,SSDS0097,"Samsung 870 EVO 1 TB 2.5"" Serial ATA III V-NAND MLC",unchanged
+8806090545924,SSDS0096,"Samsung 870 EVO 500 GB 2.5"" Serial ATA III V-NAND MLC",unchanged
+8806090545931,SSDS0095,"Samsung 870 EVO 250 GB 2.5"" Serial ATA III V-NAND MLC",unchanged
+8806092709843,SUPS0264,Samsung EP-T1510XBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC,updated
+8806092709850,SUPS0262,Samsung EP-T1510NWEGEU Ladegerät für Mobilgeräte Universal Weiß AC,updated
+8806092709874,SUPS0261,Samsung EP-T1510NBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC,updated
+8806092709904,SUPS0263,Samsung EP-T1510XWEGEU Ladegerät für Mobilgeräte Universal Weiß AC,updated
+8806092978683,SUPS0372,Samsung EP-P2400BBEGEU Ladegerät für Mobilgeräte Smartphone Grau USB Drinnen,unchanged
+8806094215021,SSDS0110,Samsung PRO 1 M.2 NVMe SSD NEU,unchanged
+8806094215038,SSDS0111,Samsung PRO 2 M.2 NVMe SSD NEU,unchanged
+8806094257540,SUPS0345,Samsung EP-DX510JBEGEU USB Kabel 8m NEU,unchanged
+8806094413748,SSDS0113,Samsung PRO 1 M.2 NVMe SSD NEU,unchanged
+8806094682748,SUPS0341,Samsung EB-P3400XUE Lithium-Ion (Li-Ion) 10000 mAh Beige,unchanged
+8806094768831,SUPS0267,Samsung EF-QS916CTEGWW Handy Hülle NEU,unchanged
+8806094905403,SDXS0033,Samsung MU-PH2T0S 2 TB 3.2 Gen 1 (3.1 Gen 1) Schwarz,unchanged
+8806094905410,SDXS0034,Samsung MU-PH4T0S 4 TB 3.2 Gen 1 (3.1 Gen 1) Schwarz,unchanged
+8806094911985,SUPS0256,"Samsung EP-T2510 Smartphone Weiß AC, USB Schnellladung Drinnen",unchanged
+8806094912081,SUPS0254,Samsung EP-T2510 Universal Weiß USB Schnellladung Drinnen,unchanged
+8806094912128,SUPS0253,Samsung EP-T2510 Universal Schwarz USB Schnellladung Drinnen,unchanged
+8806094947205,SSDS0115,Samsung PRO 4 M.2 NVMe SSD NEU,unchanged
+8806095312170,SUPS0371,Samsung EB-U2510XUEGEU Powerbank NEU,unchanged
+8806095312187,SUPS0342,Samsung EB-P4520XUEGEU Powerbank NEU,unchanged
+8806095426785,SUPS0272,Samsung EF-XS921CTEGWW Handy Hülle NEU,unchanged
+8806095498522,SUPS0279,"Samsung Suit Case Handy-Schutzhülle 15,8 cm (6.2"") Cover Rot, Transparent",unchanged
+8806095510002,SUPS0286,Samsung Schnellladedapter mit Datenkabel 45 Watt,unchanged
+8806095575650,SSDS0122,Samsung EVO M.2 NVMe SSD 2TB NEU,unchanged
+8806095575667,SSDS0123,Samsung MZ-V9S4T0 M.2 NVMe SSD 4TB NEU,unchanged
+8806095575674,SSDS0121,Samsung EVO M.2 NVMe SSD 1TB NEU,unchanged
+8806095811628,SSDS0124,Samsung PRO PCI M.2 NVMe SSD 1TB NEU,unchanged
+8806097735618,SUPS0368,"Samsung EP-T6010NBEGWW Ladegerät für Mobilgeräte Laptop, Smartphone, Tablets",updated
+8806097740599,SUPS0366,Samsung Schnellladeadapter 45 Watt,unchanged
+8806097918448,SUPS0370,Samsung EB-U2500XJEGWW Powerbank NEU,unchanged
+8885020621440,NETT0165,TP-Link FESTA FS308GP Netzwerk-Switch Managed Gigabit Ethernet (10/100/1000),updated
+8885020621488,NETT0162,TP-Link Festa FS318GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet,updated
+8885020621501,NETT0160,TP-Link Festa FS328GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet,updated
+8885020621525,NETT0168,"TP-Link Festa FR205 Kabelrouter 10 Gigabit Ethernet, 100 Gigabit Ethernet",updated
+8885020622379,NETT0166,TP-Link Festa FS308G Managed L2/L2+ Gigabit Ethernet (10/100/1000) Power over,updated
+8885020622416,NETT0167,TP-Link FESTA FR365 WLAN Router Wi-Fi 6 NEU,updated
+8885020623994,NETT0163,TP-Link Festa FS318G Managed Gigabit Ethernet (10/100/1000) Weiß,updated
+8885020624014,NETT0161,TP-Link Festa FS328G L2/L2+ Gigabit Ethernet (10/100/1000) Weiß,updated
+8885021370156,NETT0150,TP-Link Festa F65-Wall 3000 Mbit/s Weiß Power over Ethernet (PoE),updated
+8885021370163,NETT0151,TP-Link Festa F65-Outdoor 3000 Mbit/s Weiß Power over Ethernet (PoE),updated
+8885021370170,NETT0149,TP-Link Festa F65 3000 Mbit/s Weiß Power over Ethernet (PoE),updated
+8885021370187,NETT0153,TP-Link Festa F61-Outdoor 1800 Mbit/s Weiß Power over Ethernet (PoE),updated
+8885021370194,NETT0152,TP-Link AP WLAN Access Point NEU,updated
+8885021370217,NETT0156,TP-Link Festa F52-Wall 1200 Mbit/s Weiß Power over Ethernet (PoE),updated
+8885021370224,NETT0157,TP-Link Festa F52-Outdoor 1200 Mbit/s Weiß Power over Ethernet (PoE),updated
+8885021370231,NETT0155,TP-Link FESTA F52 WLAN Access Point PoE NEU,updated
+8886419378396,SUPR1019,Razer Blackshark V2 X,unchanged

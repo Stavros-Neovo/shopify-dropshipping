@@ -46,7 +46,7 @@
 6935364010751,TP-Link,TP-Link Omada SG3452 Netzwerk-Switch Managed L2+ Gigabit Ethernet (10/100/1000) 1U Schwarz,TP-Link SG3452 Netzwerk Switch NEU,TP-Link SG3452 Netzwerk Switch NEU,90,34,JA
 5099206080270,Logitech,Logitech G 910-005471 mouse,Logitech 910-005471 Maus NEU,Logitech G 910-005471 Maus NEU,27,28,NEIN
 0817882025607,Ubiquiti,Ubiquiti CKG2-RM rack accessory,Ubiquiti CKG2-RM NEU,Ubiquiti CKG2-RM rack accessory,31,20,NEIN
-5706991019940,Jabra,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,Jabra II Kopfhörer NEU,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,99,22,NEIN
+5706991019940,Jabra,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,Jabra II Kopfhörer NEU,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C,99,22,NEIN
 5706991019957,Jabra,Jabra Evolve 30 II UC Mono,Jabra II UC Kopfhörer NEU,Jabra Evolve 30 II UC Mono,26,25,NEIN
 5099206079526,Logitech,Logitech Rally Plus video conferencing system,Logitech 4K UHD NEU,Logitech Rally Plus video conferencing system,45,19,NEIN
 5099206088252,Logitech,Logitech 920-009474 mobile device keyboard,Logitech Tastatur NEU,Logitech 920-009474 mobile device keyboard,42,21,NEIN
@@ -149,10 +149,10 @@
 8719706022163,Seagate,"Seagate Enterprise ST8000NM018B Interne Festplatte 8 TB 7200 RPM 256 MB 3.5"" SAS",Seagate ST8000NM018B Festplatte HDD 8TB NEU,Seagate ST8000NM018B Festplatte HDD 8TB NEU,80,43,JA
 5099206096547,Logitech,Logitech 910-006221 mouse,Logitech Maus Bluetooth 2000 DPI NEU,Logitech Maus Bluetooth 2000 DPI NEU,25,36,JA
 0194252750872,Apple,Apple MUQ93ZM/A lightning cable,Apple MUQ93ZM USB-C Kabel 1m NEU,Apple MUQ93ZM USB-C Kabel 1m NEU,31,32,JA
-6935364030773,TP-Link,TP-Link Omada SG3428XMP Netzwerk-Switch Managed L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) 1U Schwarz,TP-Link SG3428XMP PoE NEU,TP-Link Omada SG3428XMP Netzwerk-Switch Managed L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) 1U Schwarz,119,25,NEIN
+6935364030773,TP-Link,TP-Link Omada SG3428XMP Netzwerk-Switch Managed L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) 1U Schwarz,TP-Link SG3428XMP PoE NEU,TP-Link Omada SG3428XMP Netzwerk-Switch Managed L2+ Gigabit Ethernet,119,25,NEIN
 4779051840229,Teltonika,Teltonika RUT200,Teltonika RUT200 WLAN Router NEU,Teltonika RUT200 WLAN Router NEU,16,32,JA
-5397063763610,Dell,DELL kabelgebundene Maus – MS116 - schwarz,Dell MS116 Maus 1000 DPI NEU,DELL kabelgebundene Maus – MS116 - schwarz,42,28,NEIN
-4711387095119,Asus,ASUS TUF Gaming B760-Plus WIFI Intel B760 LGA 1700 ATX,Asus TUF RAM Arbeitsspeicher 128GB DDR5 NEU,Asus TUF RAM Arbeitsspeicher 128GB DDR5 NEU,54,43,JA
+5397063763610,DELL,DELL kabelgebundene Maus – MS116 - schwarz,DELL MS116 Maus 1000 DPI NEU,DELL kabelgebundene Maus – MS116 - schwarz,42,28,NEIN
+4711387095119,ASUS,ASUS TUF Gaming B760-Plus WIFI Intel B760 LGA 1700 ATX,ASUS TUF RAM Arbeitsspeicher 128GB DDR5 NEU,ASUS TUF RAM Arbeitsspeicher 128GB DDR5 NEU,54,43,JA
 4713294231369,G.Skill,G.Skill Trident Z5 RGB F5-6400J3239G16GX2-TZ5RK memory module,G.Skill Z5 RGB RAM Arbeitsspeicher 32GB 6400MHz DDR5 2x Kit NEU,G.Skill Z5 RGB RAM Arbeitsspeicher 32GB 6400MHz DDR5 2x Kit NEU,61,63,JA
 4713294231345,G.Skill,G.Skill Trident Z F5-6400J3239G16GX2-TZ5K memory module,G.Skill F5-6400J3239G16GX2-TZ5K RAM Arbeitsspeicher 32GB 6400MHz DDR5 NEU,G.Skill F5-6400J3239G16GX2-TZ5K RAM Arbeitsspeicher 32GB 6400MHz DDR5 NEU,55,73,JA
 4713294230720,G.Skill,G.Skill Trident F5-6000J3636F16GX2-TZ5RK memory module,G.Skill F5-6000J3636F16GX2-TZ5RK RAM Arbeitsspeicher 32GB 6000MHz DDR5 NEU,G.Skill F5-6000J3636F16GX2-TZ5RK RAM Arbeitsspeicher 32GB 6000MHz DDR5 NEU,54,74,JA
@@ -186,17 +186,17 @@
 0619659204877,SanDisk,SanDisk SDSSDE30-1T00-G26 external solid state drive,SanDisk SDSSDE30-1T00-G26 1TB NEU,SanDisk SDSSDE30-1T00-G26 1TB NEU,52,33,JA
 0619659204853,SanDisk,SanDisk SDSSDE30-2T00-G26 external solid state drive,SanDisk SDSSDE30-2T00-G26 2TB NEU,SanDisk SDSSDE30-2T00-G26 2TB NEU,52,33,JA
 8886419379850,Razer,Razer Barracuda X,Razer Barracuda Kopfhörer kabellos NEU,Razer Barracuda Kopfhörer kabellos NEU,17,38,JA
-8806092709843,Samsung,Samsung EP-T1510XBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Samsung EP-T1510XBEGEU 1m NEU,Samsung EP-T1510XBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,91,29,NEIN
-8806092709904,Samsung,Samsung EP-T1510XWEGEU Ladegerät für Mobilgeräte Universal Weiß AC Schnellladung Drinnen,Samsung EP-T1510XWEGEU 1m NEU,Samsung EP-T1510XWEGEU Ladegerät für Mobilgeräte Universal Weiß AC Schnellladung Drinnen,88,29,NEIN
-8806092709874,Samsung,Samsung EP-T1510NBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Samsung EP-T1510NBEGEU NEU,Samsung EP-T1510NBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,91,26,NEIN
-8806092709850,Samsung,Samsung EP-T1510NWEGEU Ladegerät für Mobilgeräte Universal Weiß AC Schnellladung Drinnen,Samsung EP-T1510NWEGEU NEU,Samsung EP-T1510NWEGEU Ladegerät für Mobilgeräte Universal Weiß AC Schnellladung Drinnen,88,26,NEIN
+8806092709843,Samsung,Samsung EP-T1510XBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Samsung EP-T1510XBEGEU 1m NEU,Samsung EP-T1510XBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC,91,29,NEIN
+8806092709904,Samsung,Samsung EP-T1510XWEGEU Ladegerät für Mobilgeräte Universal Weiß AC Schnellladung Drinnen,Samsung EP-T1510XWEGEU 1m NEU,Samsung EP-T1510XWEGEU Ladegerät für Mobilgeräte Universal Weiß AC,88,29,NEIN
+8806092709874,Samsung,Samsung EP-T1510NBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Samsung EP-T1510NBEGEU NEU,Samsung EP-T1510NBEGEU Ladegerät für Mobilgeräte Universal Schwarz AC,91,26,NEIN
+8806092709850,Samsung,Samsung EP-T1510NWEGEU Ladegerät für Mobilgeräte Universal Weiß AC Schnellladung Drinnen,Samsung EP-T1510NWEGEU NEU,Samsung EP-T1510NWEGEU Ladegerät für Mobilgeräte Universal Weiß AC,88,26,NEIN
 5032037278447,Intel,Intel Core i5-14600K processor,Intel Prozessor CPU NEU,Intel Core i5-14600K processor,30,23,NEIN
 5032037278485,Intel,Intel Core i7-14700K processor,Intel Prozessor CPU NEU,Intel Core i7-14700K processor,30,23,NEIN
 5032037278522,Intel,Intel Core i9-14900K processor,Intel Prozessor CPU NEU,Intel Core i9-14900K processor,30,23,NEIN
 5032037278546,Intel,Intel Core i9-14900KF processor,Intel Prozessor CPU NEU,Intel Core i9-14900KF processor,31,23,NEIN
 8806095039893,Samsung,Samsung Galaxy SmartTag Artikel Finder Schwarz,Samsung IP67 NEU,Samsung Galaxy SmartTag Artikel Finder Schwarz,46,16,NEIN
 8806095039824,Samsung,Samsung Galaxy SmartTag2 Artikel Finder Weiß,Samsung IP67 NEU,Samsung Galaxy SmartTag2 Artikel Finder Weiß,44,16,NEIN
-8806095039763,Samsung,Samsung Galaxy SmartTag 2 EI-T5600 4 Per Pack 2x black+ white Artikel Finder Schwarz,Samsung EI-T5600 IP67 NEU,Samsung Galaxy SmartTag 2 EI-T5600 4 Per Pack 2x black+ white Artikel Finder Schwarz,84,25,NEIN
+8806095039763,Samsung,Samsung Galaxy SmartTag 2 EI-T5600 4 Per Pack 2x black+ white Artikel Finder Schwarz,Samsung EI-T5600 IP67 NEU,Samsung Galaxy SmartTag 2 EI-T5600 4 Per Pack 2x black+ white Artikel Finder,84,25,NEIN
 8806094912081,Samsung,Samsung EP-T2510 Universal Weiß USB Schnellladung Drinnen,Samsung EP-T2510 NEU,Samsung EP-T2510 Universal Weiß USB Schnellladung Drinnen,57,20,NEIN
 5706991029147,Jabra,Jabra Evolve2 65 Flex Kopfhörer Kabellos Kopfband Büro/Callcenter USB Typ-A Bluetooth Ladestation,Jabra Bluetooth Kopfhörer kabellos NEU,Jabra Bluetooth Kopfhörer kabellos NEU,97,38,JA
 8806094947205,Samsung,Samsung 990 PRO 4 TB M.2 PCI Express 4.0 NVMe V-NAND TLC,Samsung M.2 NVMe SSD 4TB NEU,Samsung PRO 4 M.2 NVMe SSD NEU,56,28,NEIN
@@ -263,7 +263,7 @@
 5032037282109,Intel,Intel Core Ultra 5 245KF processor,Intel Prozessor CPU NEU,Intel Core Ultra 5 245KF processor,34,23,NEIN
 5032037282086,Intel,Intel Core Ultra 5 245K processor,Intel Prozessor CPU NEU,Intel Core Ultra 5 245K processor,33,23,NEIN
 4711387740309,Asus,ASUS ROG STRIX X870-I GAMING WIFI AMD X870 Sockel AM5 mini ITX,Asus ROG STRIX RAM Arbeitsspeicher 96GB DDR5 NEU,Asus ROG STRIX RAM Arbeitsspeicher 96GB DDR5 NEU,62,48,JA
-4711387730775,Asus,ASUS ProArt X870E-CREATOR WIFI,Asus X870E-CREATOR RAM Arbeitsspeicher 192GB DDR5 NEU,Asus X870E-CREATOR RAM Arbeitsspeicher 192GB DDR5 NEU,30,53,JA
+4711387730775,ASUS,ASUS ProArt X870E-CREATOR WIFI,ASUS X870E-CREATOR RAM Arbeitsspeicher 192GB DDR5 NEU,ASUS X870E-CREATOR RAM Arbeitsspeicher 192GB DDR5 NEU,30,53,JA
 0730143315289,AMD,AMD Ryzen 7 9800X3D processor,AMD X3D Prozessor CPU NEU,AMD Ryzen 7 9800X3D processor,29,25,NEIN
 8806095575667,Samsung,Samsung MZ-V9S4T0,Samsung MZ-V9S4T0 M.2 NVMe SSD 4TB NEU,Samsung MZ-V9S4T0 M.2 NVMe SSD 4TB NEU,17,38,JA
 8806095575650,Samsung,Samsung 990 EVO Plus NVMe™ M.2 SSD - 2 TB,Samsung EVO M.2 NVMe SSD 2TB NEU,Samsung EVO M.2 NVMe SSD 2TB NEU,41,32,JA
@@ -273,7 +273,7 @@
 0718037894850,Western Digital,Western Digital Blue SN5000,Western Digital SN5000 500GB NEU,Western Digital SN5000 500GB NEU,27,32,JA
 5706991031515,Jabra,Jabra Evolve 65 TE Kopfhörer Verkabelt & Kabellos Kopfband Büro/Callcenter USB Typ-A Bluetooth Schwarz,Jabra TE Bluetooth Kopfhörer kabellos NEU,Jabra TE Bluetooth Kopfhörer kabellos NEU,102,41,JA
 5706991031539,Jabra,Jabra Evolve 65 TE Kopfhörer Verkabelt & Kabellos Kopfband Büro/Callcenter USB Typ-A Bluetooth Schwarz,Jabra TE Bluetooth Kopfhörer kabellos NEU,Jabra TE Bluetooth Kopfhörer kabellos NEU,102,41,JA
-0197498152394,HP,HP Poly Poly CS540A Headset mit Handset Lifter,HP CS540A Headset NEU,HP Poly Poly CS540A Headset mit Handset Lifter,46,21,NEIN
+0197498152394,HP Poly,HP Poly Poly CS540A Headset mit Handset Lifter,HP Poly CS540A Headset NEU,HP Poly Poly CS540A Headset mit Handset Lifter,46,26,NEIN
 5706991030976,Jabra,Jabra Engage 75 SE Kopfhörer USB Typ-C Bluetooth,Jabra SE Bluetooth Kopfhörer NEU,Jabra SE Bluetooth Kopfhörer NEU,48,32,JA
 0740617338515,Kingston Technology,Kingston Technology XS1000,Kingston Technology XS1000 1TB USB 3.2 NEU,Kingston Technology XS1000 1TB USB 3.2 NEU,26,42,JA
 0740617341782,Kingston Technology,"Kingston Technology 2TB Externe SSD XS1000 USB 3.2 Gen 2, Rot",Kingston Technology SSD 2TB USB 3.2 NEU,Kingston Technology SSD 2TB USB 3.2 NEU,61,39,JA
@@ -287,8 +287,8 @@
 0195949085611,Apple,Apple MUQ93ZM/A lightning cable,Apple MUQ93ZM USB-C Kabel 1m NEU,Apple MUQ93ZM USB-C Kabel 1m NEU,31,32,JA
 0843367123766,Lexar,Lexar LD4AS008G-B3200GSST memory module,Lexar LD4AS008G-B3200GSST RAM Arbeitsspeicher 8GB 3200MHz DDR4 NEU,Lexar LD4AS008G-B3200GSST RAM Arbeitsspeicher 8GB 3200MHz DDR4 NEU,39,66,JA
 0810084694664,Ubiquiti,Ubiquiti E7 wireless access point,Ubiquiti E7 WLAN Access Point kabellos NEU,Ubiquiti E7 WLAN Access Point kabellos NEU,33,42,JA
-0810043370066,Cosori,"Cosori Smart Chef Edition Einzelbild 5,5 l Eigenständig 1700 W Heißluftfritteuse Schwarz",Cosori 1700W NEU,"Cosori Smart Chef Edition Einzelbild 5,5 l Eigenständig 1700 W Heißluftfritteuse Schwarz",88,16,NEIN
-6974316994251,Govee,Govee RGBIC Glide Hexa Light Panels 5 pcs Intelligente Wandleuchte Wi-Fi/Bluetooth,Govee RGBIC Bluetooth NEU,Govee RGBIC Glide Hexa Light Panels 5 pcs Intelligente Wandleuchte Wi-Fi/Bluetooth,82,25,NEIN
+0810043370066,Cosori,"Cosori Smart Chef Edition Einzelbild 5,5 l Eigenständig 1700 W Heißluftfritteuse Schwarz",Cosori 1700W NEU,"Cosori Smart Chef Edition Einzelbild 5,5 l Eigenständig 1700 W",88,16,NEIN
+6974316994251,Govee,Govee RGBIC Glide Hexa Light Panels 5 pcs Intelligente Wandleuchte Wi-Fi/Bluetooth,Govee RGBIC Bluetooth NEU,Govee RGBIC Glide Hexa Light Panels 5 pcs Intelligente Wandleuchte,82,25,NEIN
 6974316994299,Govee,Govee H6047 Smart Lighting Set für intelligente Beleuchtung Wi-Fi/Bluetooth,Govee H6047 Smart LED Lampe Bluetooth NEU,Govee H6047 Smart LED Lampe Bluetooth NEU,75,41,JA
 6974316994305,Govee,Govee H61C2 Smart Lighting Intelligenter Leuchtstreifen 36 W,Govee H61C2 Smart LED Lampe 36W NEU,Govee H61C2 Smart LED Lampe 36W NEU,60,35,JA
 6974316994312,Govee,Govee H6608 Smart Lighting Set für intelligente Beleuchtung Wi-Fi/Bluetooth,Govee H6608 Smart LED Lampe Bluetooth NEU,Govee H6608 Smart LED Lampe Bluetooth NEU,75,41,JA
@@ -319,7 +319,7 @@
 0195949775390,Apple,Apple MYQT3ZM/A USB cable,Apple MYQT3ZM USB Kabel 2m NEU,Apple MYQT3ZM USB Kabel 2m NEU,25,30,JA
 0195949776274,Apple,Apple EarPods (USB-C),Apple USB-C Kopfhörer NEU,Apple EarPods (USB-C),21,25,NEIN
 0195949371905,Apple,Apple MW493ZM/A USB cable,Apple MW493ZM USB Kabel 1m NEU,Apple MW493ZM USB Kabel 1m NEU,25,30,JA
-4711387797273,Asus,ASUS PRIME B840-PLUS WIFI AMD B840 Sockel AM5 ATX,Asus PRIME B840-PLUS RAM Arbeitsspeicher 192GB DDR5 NEU,Asus PRIME B840-PLUS RAM Arbeitsspeicher 192GB DDR5 NEU,49,55,JA
+4711387797273,ASUS,ASUS PRIME B840-PLUS WIFI AMD B840 Sockel AM5 ATX,ASUS PRIME B840-PLUS RAM Arbeitsspeicher 192GB DDR5 NEU,ASUS PRIME B840-PLUS RAM Arbeitsspeicher 192GB DDR5 NEU,49,55,JA
 8806094257540,Samsung,"Samsung EP-DX510JBEGEU USB Kabel 1,8 m USB C Schwarz",Samsung EP-DX510JBEGEU USB Kabel 8m NEU,Samsung EP-DX510JBEGEU USB Kabel 8m NEU,52,39,JA
 0718037907154,Western Digital,Western Digital Green WD SN3000 NVMe,Western Digital WD SN3000 M.2 NVMe SSD 1TB NEU,Western Digital WD SN3000 M.2 NVMe SSD 1TB NEU,36,46,JA
 0649528942081,Crucial,Crucial P310,Crucial P310 1TB NEU,Crucial P310,12,20,NEIN
@@ -336,15 +336,15 @@
 0810177160632,Ubiquiti,Ubiquiti U7 Pro XG,Ubiquiti U7 NEU,Ubiquiti U7 Pro XG,18,15,NEIN
 0810084698341,Ubiquiti,Ubiquiti U7 Pro XGS,Ubiquiti U7 NEU,Ubiquiti U7 Pro XGS,19,15,NEIN
 8806095811710,Samsung,Samsung 9100 PRO PCIe® 5.0 NVMe™ M.2 SSD - 2 TB,Samsung M.2 NVMe SSD 2TB NEU,Samsung PRO PCI M.2 NVMe SSD 2TB NEU,47,28,NEIN
-4711387931509,Asus,ASUS PRIME B850-PLUS WIFI AMD B850 Sockel AM5 ATX,Asus PRIME B850-PLUS RAM Arbeitsspeicher 256GB DDR5 NEU,Asus PRIME B850-PLUS RAM Arbeitsspeicher 256GB DDR5 NEU,49,55,JA
-5706991034530,Jabra,Jabra Evolve2 40 SE Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,Jabra SE Kopfhörer NEU,Jabra Evolve2 40 SE Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,100,22,NEIN
-0023942495901,Verbatim,"Verbatim 49590 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49590 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Schwarz",85,24,NEIN
-0023942495932,Verbatim,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",99,24,NEIN
+4711387931509,ASUS,ASUS PRIME B850-PLUS WIFI AMD B850 Sockel AM5 ATX,ASUS PRIME B850-PLUS RAM Arbeitsspeicher 256GB DDR5 NEU,ASUS PRIME B850-PLUS RAM Arbeitsspeicher 256GB DDR5 NEU,49,55,JA
+5706991034530,Jabra,Jabra Evolve2 40 SE Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,Jabra SE Kopfhörer NEU,Jabra Evolve2 40 SE Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C,100,22,NEIN
+0023942495901,Verbatim,"Verbatim 49590 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49590 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD",85,24,NEIN
+0023942495932,Verbatim,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49593 Computerbildschirm 43,9 cm (17.3"") 1920 x 1080 Pixel Full HD LCD",99,24,NEIN
 4779051840908,Teltonika,Teltonika PR1US440 network antenna,Teltonika PR1US440 NEU,Teltonika PR1US440 network antenna,34,22,NEIN
 5702017584478,LEGO,LEGO Star Wars Captain Rex Y-Wing Microfighter,LEGO NEU,LEGO Star Wars Captain Rex Y-Wing Microfighter,46,8,NEIN
 4897098687406,TP-Link,TP-Link Tapo Smarte WLAN-Steckdose mit Verbrauchsanzeige,TP-Link WLAN-S LAN Netzwerkkabel 802.11b kabellos NEU,TP-Link WLAN-S LAN Netzwerkkabel 802.11b kabellos NEU,56,53,JA
 6935364030896,TP-Link,TP-Link 5-Port 10G Desktop Switch,TP-Link Netzwerk Switch 5-Port NEU,TP-Link Netzwerk Switch 5-Port NEU,33,34,JA
-8885020621501,TP-Link,TP-Link Festa FS328GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE),TP-Link FS328GP L2 PoE NEU,TP-Link Festa FS328GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE),85,26,NEIN
+8885020621501,TP-Link,TP-Link Festa FS328GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE),TP-Link FS328GP L2 PoE NEU,TP-Link Festa FS328GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet,85,26,NEIN
 8885020624014,TP-Link,TP-Link Festa FS328G L2/L2+ Gigabit Ethernet (10/100/1000) Weiß,TP-Link FS328G L2 NEU,TP-Link Festa FS328G L2/L2+ Gigabit Ethernet (10/100/1000) Weiß,63,21,NEIN
 8885020622416,TP-Link,TP-Link FESTA FR365 WLAN-Router Gigabit Ethernet Dual-band (2.4GHz + 5GHz or 2.4GHz + 6GHz) Weiß,TP-Link FESTA FR365 WLAN Router Wi-Fi 6 NEU,TP-Link FESTA FR365 WLAN Router Wi-Fi 6 NEU,96,43,JA
 8886419379522,Razer,Razer BlackShark V2 X,Razer V2 Kopfhörer NEU,Razer BlackShark V2 X,21,22,NEIN
@@ -363,7 +363,7 @@
 4015867157503,Equip,Equip DisplayPort auf HD15 VGA Adapter,Equip HD15 VGA Adapter 15m NEU,Equip HD15 VGA Adapter 15m NEU,38,30,JA
 4015867178065,Equip,Equip DisplayPort auf HDMI Adapter,Equip DisplayPort auf HDMI Adapter 2m NEU,Equip DisplayPort auf HDMI Adapter 2m NEU,34,41,JA
 4015867184189,Equip,Equip 119336 video cable adapter,Equip DisplayPort Kabel 2.0m NEU,Equip DisplayPort Kabel 2.0m NEU,32,32,JA
-5059902033499,Datalogic,Datalogic GD4290 - Tragbares Barcodelesegerät - 1D - Linear - Kabelgebunden - RS-232 - USB - Schwarz,Datalogic GD4290 NEU,Datalogic GD4290 - Tragbares Barcodelesegerät - 1D - Linear - Kabelgebunden - RS-232 - USB - Schwarz,100,20,NEIN
+5059902033499,Datalogic,Datalogic GD4290 - Tragbares Barcodelesegerät - 1D - Linear - Kabelgebunden - RS-232 - USB - Schwarz,Datalogic GD4290 NEU,Datalogic GD4290 - Tragbares Barcodelesegerät - 1D - Linear - Kabelgebunden -,100,20,NEIN
 4015867198711,Equip,"Equip USB 2.0 Typ C Kabel, 1.0m, PD 60W",Equip USB-C Kabel USB 2.0 1.0m 60W NEU,Equip USB-C Kabel USB 2.0 1.0m 60W NEU,39,38,JA
 4015867198735,Equip,"Equip USB 3.2 Gen 1 C auf A Kabel, M/M, 1.0m, 5Gbps, Schwarz",Equip USB-C Kabel USB 3.2 1.0m NEU,Equip USB-C Kabel USB 3.2 1.0m NEU,60,34,JA
 4015867166703,Equip,"Equip USB 3.0 A auf A Verlängerungskabel Stecker auf Buchse, 3.0m, 5Gbps, Schwarz",Equip USB-C Kabel USB 3.0 3.0m NEU,Equip USB-C Kabel USB 3.0 3.0m NEU,81,34,JA
@@ -434,10 +434,10 @@
 4015867225189,Equip,"Equip 147094 Audio-Kabel 2,5 m 2 x RCA Schwarz",Equip RCA 5m NEU,"Equip 147094 Audio-Kabel 2,5 m 2 x RCA Schwarz",46,16,NEIN
 4015867188767,Equip,"Equip 3,5 mm Stecker auf 2xCinch Stecker Stereo Audio Kabel, 2.5m",Equip 2.5m NEU,"Equip 3,5 mm Stecker auf 2xCinch Stecker Stereo Audio Kabel, 2.5m",65,14,NEIN
 0198122902057,HP,"HP Series 5 Pro Serie 5 Pro 23,8-Zoll-FHD-USB-C-Konferenzmonitor – 524pm",HP FHD-USB-C-K Full HD NEU,"HP Series 5 Pro Serie 5 Pro 23,8-Zoll-FHD-USB-C-Konferenzmonitor – 524pm",72,26,NEIN
-0023942495918,Verbatim,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",97,24,NEIN
-0023942495925,Verbatim,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",99,24,NEIN
-0023942322382,Verbatim,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",Verbatim HD LCD 4K UHD NEU,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",103,26,NEIN
-0023942322399,Verbatim,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",Verbatim HD LCD 4K UHD NEU,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",103,26,NEIN
+0023942495918,Verbatim,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49591 Computerbildschirm 35,6 cm (14"") 1920 x 1080 Pixel Full HD LCD",97,24,NEIN
+0023942495925,Verbatim,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD Touchscreen Schwarz",Verbatim HD LCD Full NEU,"Verbatim 49592 Computerbildschirm 39,6 cm (15.6"") 1920 x 1080 Pixel Full HD LCD",99,24,NEIN
+0023942322382,Verbatim,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",Verbatim HD LCD 4K UHD NEU,"Verbatim 32238 Computerbildschirm 39,6 cm (15.6"") 3840 x 2160 Pixel 4K Ultra HD",103,26,NEIN
+0023942322399,Verbatim,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD LCD Touchscreen Schwarz",Verbatim HD LCD 4K UHD NEU,"Verbatim 32239 Computerbildschirm 43,9 cm (17.3"") 3840 x 2160 Pixel 4K Ultra HD",103,26,NEIN
 4015867164686,Equip,"Equip USB 2.0 A auf B Kabel, 1.0m ,M/M, Schwarz",Equip USB-C Kabel USB 2.0 1.0m NEU,Equip USB-C Kabel USB 2.0 1.0m NEU,47,34,JA
 4015867239223,Equip,"Equip USB 2.0 A auf B Kabel, 2.0m, Black",Equip USB-C Kabel USB 2.0 2.0m NEU,Equip USB-C Kabel USB 2.0 2.0m NEU,40,34,JA
 4548736142428,Sony,Sony WH-CH720,Sony WH-CH720 Kopfhörer kabellos NEU,Sony WH-CH720 Kopfhörer kabellos NEU,13,36,JA
@@ -449,7 +449,7 @@
 4582563850811,Kioxia,Kioxia Exceria,Kioxia Exceria Speicherkarte 64GB NEU,Kioxia Exceria Speicherkarte 64GB NEU,14,37,JA
 4711387949863,Asus,ASUS RNUC15CRKU700002 Schwarz 255H,Asus RNUC15CRKU700002 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,Asus RNUC15CRKU700002 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,34,63,JA
 4711387949924,Asus,ASUS NUC 15 Pro RNUC15CRHI300002,Asus NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,Asus NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,32,53,JA
-4711387949832,Asus,ASUS NUC 15 Pro RNUC15CRKC500002 Schwarz 210H,Asus NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,Asus NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,45,53,JA
+4711387949832,ASUS,ASUS NUC 15 Pro RNUC15CRKC500002 Schwarz 210H,ASUS NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,ASUS NUC 15 RAM Arbeitsspeicher DDR5 Wi-Fi 7 120W NEU,45,53,JA
 0619659149598,SanDisk,SanDisk 173384 USB flash drive,SanDisk USB-Stick 32GB NEU,SanDisk 173384 USB flash drive,30,26,NEIN
 4582563850224,Kioxia,Kioxia TransMemory U202 USB flash drive,Kioxia U202 USB-Stick 128GB NEU,Kioxia U202 USB-Stick 128GB NEU,39,31,JA
 4582563850200,Kioxia,Kioxia TransMemory U202 USB flash drive,Kioxia U202 USB-Stick 32GB NEU,Kioxia U202 USB-Stick 32GB NEU,39,30,JA
@@ -517,7 +517,7 @@
 8806097740599,Samsung,Samsung Schnellladeadapter 45 Watt,Samsung NEU,Samsung Schnellladeadapter 45 Watt,34,11,NEIN
 0195892120551,Lenovo,Lenovo ThinkPad USB4 Smart Dock 5500 Kabelgebunden Schwarz,Lenovo USB4 USB-C Kabel USB 4 65W NEU,Lenovo USB4 USB-C Kabel USB 4 65W NEU,58,37,JA
 0649528937735,,3200 16GB Crucial 16GB Tray,16GB NEU,3200 16GB Crucial 16GB Tray,27,8,NEIN
-4023125030963,Box,"Box 5690 WLAN-Router 2.5 Gigabit Ethernet Dual-Band (2,4 GHz/5 GHz) Rot, Weiß",Box WLAN-R WLAN Router Wi-Fi 7 NEU,Box WLAN-R WLAN Router Wi-Fi 7 NEU,77,34,JA
+4023125030963,FRITZ!,"Box 5690 WLAN-Router 2.5 Gigabit Ethernet Dual-Band (2,4 GHz/5 GHz) Rot, Weiß",FRITZ WLAN-R WLAN Router Wi-Fi 7 NEU,FRITZ WLAN-R WLAN Router Wi-Fi 7 NEU,77,36,JA
 0199485355665,HP,"HP ProBook 4 G1a AMD Ryzen™ 5 230 Notebook AI 40,6 cm (16"") 16GB 512GB W11Pro",HP G1 16GB NEU,"HP ProBook 4 G1a AMD Ryzen™ 5 230 Notebook AI 40,6 cm (16"") 16GB 512GB W11Pro",77,14,NEIN
 5397184961827,Dell,DELL SD25TB5 Kabelgebunden Thunderbolt 5 Schwarz,Dell SD25TB5 Thunderbolt Kabel 15W NEU,Dell SD25TB5 Thunderbolt Kabel 15W NEU,48,38,JA
 0023942302117,Verbatim,Verbatim V200 Metal USB Drive 64GB USB-Stick USB Typ-A 3.2 Gen 1 (3.1 Gen 1) Schwarz,Verbatim V200 USB-Stick 64GB NEU,Verbatim V200 USB-Stick 64GB NEU,84,32,JA
@@ -540,11 +540,11 @@
 8806095426785,Samsung,"Samsung EF-XS921CTEGWW Handy-Schutzhülle 15,8 cm (6.2"") Cover Transparent",Samsung EF-XS921CTEGWW Handy Hülle NEU,Samsung EF-XS921CTEGWW Handy Hülle NEU,73,38,JA
 0195949093432,Apple,Apple MU2G3ZM/A USB cable,Apple MU2G3ZM USB Kabel 2.0 2m NEU,Apple MU2G3ZM USB Kabel 2.0 2m NEU,25,34,JA
 0810354023545,Ubiquiti,Ubiquiti POE-24-30W PoE adapter,Ubiquiti POE-24-30W Adapter PoE 30W NEU,Ubiquiti POE-24-30W Adapter PoE 30W NEU,31,39,JA
-8006540742891,Oral-B,Oral-B Junior 8006540742891 Elektrische Zahnbürste Kind Rotierende Zahnbürste Violett,Oral-B NEU,Oral-B Junior 8006540742891 Elektrische Zahnbürste Kind Rotierende Zahnbürste Violett,85,10,NEIN
+8006540742891,Oral-B,Oral-B Junior 8006540742891 Elektrische Zahnbürste Kind Rotierende Zahnbürste Violett,Oral-B NEU,Oral-B Junior 8006540742891 Elektrische Zahnbürste Kind Rotierende Zahnbürste,85,10,NEIN
 8006540743027,Oral-B,Oral-B Junior 8006540743027 electric toothbrush,Oral-B NEU,Oral-B Junior 8006540743027 electric toothbrush,47,10,NEIN
 0017817846172,Bose,Bose QuietComfort Ultra,Bose QuietComfort Ultra Headset kabellos NEU,Bose QuietComfort Ultra Headset kabellos NEU,23,44,JA
 6947273705093,Grandstream,Grandstream Networks WP816 IP phone,Grandstream WP816 IP NEU,Grandstream Networks WP816 IP phone,35,24,NEIN
-8719514404595,Philips,Philips Hue White and Color ambiance Tragbare Tischleuchte Hue Go,Philips Bluetooth NEU,Philips Hue White and Color ambiance Tragbare Tischleuchte Hue Go,65,21,NEIN
+8719514404595,Philips by Signify,Philips Hue White and Color ambiance Tragbare Tischleuchte Hue Go,Philips by Signify Bluetooth NEU,Philips by Signify Bluetooth NEU,65,32,JA
 5013493465145,Sony,Sony ZV-1 II,Sony ZV-1 4K UHD NEU,Sony ZV-1 II,12,20,NEIN
 4548736156432,Sony,Sony WHULT900NB headphones/headset,Sony WHULT900NB Headset kabellos NEU,Sony WHULT900NB Headset kabellos NEU,34,36,JA
 5060703494907,GHD,GHD Unplugged,GHD Unplugged NEU,GHD Unplugged,13,17,NEIN
@@ -593,7 +593,7 @@
 6938818321816,Yealink,Yealink BH70 Mono Teams USB-C/A Headset,Yealink BH70 Headset kabellos NEU,Yealink BH70 Headset kabellos NEU,39,33,JA
 0023942531944,Verbatim,"Verbatim Portables Festplattenlaufwerk Store 'n' Go USB 3.0, 1 TB, Schwarz",Verbatim Festplatte HDD 1TB USB 3.0 NEU,Verbatim Festplatte HDD 1TB USB 3.0 NEU,74,39,JA
 8886419379645,Razer,Razer Leviathan V2 X,Razer V2 65W kabellos NEU,Razer Leviathan V2 X,20,25,NEIN
-4711387797143,Asus,ASUS PRIME B840M-A WIFI AMD B840 Sockel AM5 micro ATX,Asus PRIME B840M-A RAM Arbeitsspeicher 192GB DDR5 NEU,Asus PRIME B840M-A RAM Arbeitsspeicher 192GB DDR5 NEU,53,53,JA
+4711387797143,ASUS,ASUS PRIME B840M-A WIFI AMD B840 Sockel AM5 micro ATX,ASUS PRIME B840M-A RAM Arbeitsspeicher 192GB DDR5 NEU,ASUS PRIME B840M-A RAM Arbeitsspeicher 192GB DDR5 NEU,53,53,JA
 0718037901442,Western Digital,Western Digital Gold WD122KRYZ internal hard drive,Western Digital WD122KRYZ 12TB NEU,Western Digital WD122KRYZ 12TB NEU,50,34,JA
 0718037903873,Western Digital,Western Digital My Passport WDBR9S0060BBK-WESN external hard drive,Western Digital WDBR9S0060BBK-WESN 6TB NEU,Western Digital WDBR9S0060BBK-WESN 6TB NEU,66,42,JA
 4015867194829,Equip,Equip 11903607 video cable adapter,Equip HDMI Adapter NEU,Equip 11903607 video cable adapter,34,22,NEIN
@@ -618,16 +618,16 @@
 4582761161115,Kioxia,Kioxia LSF10Z002TG8 internal solid state drive,Kioxia LSF10Z002TG8 2TB NEU,Kioxia LSF10Z002TG8 internal solid state drive,46,27,NEIN
 0740617350173,Kingston Technology,Kingston Technology FURY Beast 64GB 5600MT/s DDR5 CL36 DIMM (2er-Kit) Schwarz,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,Kingston Technology FURY RAM Arbeitsspeicher 64GB DDR5 2x Kit NEU,77,65,JA
 6938818312883,Yealink,Yealink BH71-PRO Kopfhörer & Headset Kabellos im Ohr Büro/Callcenter Bluetooth Schwarz,Yealink BH71-PRO Headset Bluetooth NEU,Yealink BH71-PRO Headset Bluetooth NEU,86,38,JA
-5397321029045,Dell,DELL Pro Dock WD25Z Kabelgebunden USB 3.2 Gen 2 (3.1 Gen 2) Type-C Schwarz,Dell WD25Z USB-C Kabel USB 3.2 130W NEU,Dell WD25Z USB-C Kabel USB 3.2 130W NEU,74,39,JA
+5397321029045,DELL,DELL Pro Dock WD25Z Kabelgebunden USB 3.2 Gen 2 (3.1 Gen 2) Type-C Schwarz,DELL WD25Z USB-C Kabel USB 3.2 130W NEU,DELL WD25Z USB-C Kabel USB 3.2 130W NEU,74,39,JA
 0198156725684,Lenovo,Lenovo ThinkVision T24D-40 Monitor,Lenovo T24D-40 Monitor Full HD NEU,Lenovo T24D-40 Monitor Full HD NEU,34,34,JA
 4719692015457,G.Skill,G.Skill 16GB DDR4-3000 memory module,G.Skill RAM Arbeitsspeicher 16GB 3000MHz DDR4 2x Kit NEU,G.Skill RAM Arbeitsspeicher 16GB 3000MHz DDR4 2x Kit NEU,36,56,JA
 0718037877310,Western Digital,Western Digital Red Pro internal hard drive,Western Digital 10TB NEU,Western Digital Red Pro internal hard drive,43,24,NEIN
 0730143318280,AMD,AMD Ryzen 7 9850X3D processor,AMD X3D Prozessor CPU NEU,AMD Ryzen 7 9850X3D processor,29,25,NEIN
 4015867164730,Equip,"Equip USB 2.0 A auf A Verlängerungskabel Stecker auf Buchse, 3.0m , Schwarz",Equip USB-C Kabel USB 2.0 3.0m NEU,Equip USB-C Kabel USB 2.0 3.0m NEU,75,34,JA
 4582563857087,Kioxia,Kioxia LNEX2L128GG4 memory card,Kioxia LNEX2L128GG4 Speicherkarte 128GB NEU,Kioxia LNEX2L128GG4 Speicherkarte 128GB NEU,31,43,JA
-8885020622379,TP-Link,TP-Link Festa FS308G Managed L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,TP-Link FS308G PoE NEU,TP-Link Festa FS308G Managed L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,97,22,NEIN
-8885020621440,TP-Link,TP-Link FESTA FS308GP Netzwerk-Switch Managed Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,TP-Link FESTA FS308GP PoE NEU,TP-Link FESTA FS308GP Netzwerk-Switch Managed Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,107,29,NEIN
-8885020621488,TP-Link,TP-Link Festa FS318GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE),TP-Link FS318GP L2 PoE NEU,TP-Link Festa FS318GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE),85,26,NEIN
+8885020622379,TP-Link,TP-Link Festa FS308G Managed L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,TP-Link FS308G PoE NEU,TP-Link Festa FS308G Managed L2/L2+ Gigabit Ethernet (10/100/1000) Power over,97,22,NEIN
+8885020621440,TP-Link,TP-Link FESTA FS308GP Netzwerk-Switch Managed Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,TP-Link FESTA FS308GP PoE NEU,TP-Link FESTA FS308GP Netzwerk-Switch Managed Gigabit Ethernet (10/100/1000),107,29,NEIN
+8885020621488,TP-Link,TP-Link Festa FS318GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE),TP-Link FS318GP L2 PoE NEU,TP-Link Festa FS318GP L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet,85,26,NEIN
 6975069305028,PETKIT,PETKIT PURA MAX 2,PETKIT PURA MAX NEU,PETKIT PURA MAX 2,17,19,NEIN
 8719706439480,Seagate,"Seagate Barracuda Desktop 24TB HDD Interne Festplatte 7200 RPM 512 MB 3.5"" SATA",Seagate Festplatte HDD 24TB NEU,Seagate Festplatte HDD 24TB NEU,79,31,JA
 4897098687383,TP-Link,TP-Link AXE5400 Wi-Fi 6E Bluetooth 5.2 PCIe Adapter,TP-Link AXE5400 Adapter Bluetooth 5.2 NEU,TP-Link AXE5400 Adapter Bluetooth 5.2 NEU,51,41,JA
@@ -666,7 +666,7 @@
 6938818306578,Yealink,Yealink WH67 UC Headset,Yealink WH67 UC Headset kabellos NEU,Yealink WH67 UC Headset kabellos NEU,23,36,JA
 0017817768429,Bose,Bose SoundLink Micro Bluetooth speaker,Bose SoundLink Micro Bluetooth Lautsprecher 9m kabellos NEU,Bose SoundLink Micro Bluetooth Lautsprecher 9m kabellos NEU,38,59,JA
 6970229250545,,beurer TL 35 Tageslichtlampe Weiß,TL 35 NEU,beurer TL 35 Tageslichtlampe Weiß,33,9,NEIN
-5999056126534,Dell,DELL 0M0RT Netzteil & Spannungsumwandler Drinnen 65 W Schwarz,Dell M0RT ATX Netzteil 1m 65W NEU,Dell M0RT ATX Netzteil 1m 65W NEU,61,33,JA
+5999056126534,DELL,DELL 0M0RT Netzteil & Spannungsumwandler Drinnen 65 W Schwarz,DELL M0RT ATX Netzteil 1m 65W NEU,DELL M0RT ATX Netzteil 1m 65W NEU,61,33,JA
 6975069300863,PETKIT,PETKIT Breezy 2,PETKIT Breezy 2 NEU,PETKIT Breezy 2,15,19,NEIN
 6975069303956,PETKIT,PETKIT N50-2.0,PETKIT N50-2 NEU,PETKIT N50-2.0,14,16,NEIN
 6975069305240,PETKIT,PETKIT N60-3pcs,PETKIT N60-3 NEU,PETKIT N60-3pcs,15,16,NEIN
@@ -683,13 +683,13 @@
 8719706022125,Seagate,"Seagate Enterprise ST6000NM020B Interne Festplatte 6 TB 7200 RPM 256 MB 3.5"" SAS",Seagate ST6000NM020B Festplatte HDD 6TB NEU,Seagate ST6000NM020B Festplatte HDD 6TB NEU,80,43,JA
 0843367136803,Lexar,Lexar Professional NM1090 PRO,Lexar NM1090 PRO 4TB NEU,Lexar Professional NM1090 PRO,29,24,NEIN
 6975069301778,PETKIT,PETKIT HG-P-EU,PETKIT HG-P-EU NEU,PETKIT HG-P-EU,14,18,NEIN
-8718699771126,Philips,Philips Hue White and Color ambiance Bloom Tischleuchte schwarz,Philips Bluetooth NEU,Philips Hue White and Color ambiance Bloom Tischleuchte schwarz,63,21,NEIN
+8718699771126,Philips by Signify,Philips Hue White and Color ambiance Bloom Tischleuchte schwarz,Philips by Signify Bluetooth NEU,Philips by Signify Bluetooth NEU,63,32,JA
 4582761161511,Kioxia,Kioxia Exceria G3,Kioxia G3 2TB NEU,Kioxia Exceria G3,17,17,NEIN
 4582761161504,Kioxia,Kioxia Exceria G3,Kioxia G3 1TB NEU,Kioxia Exceria G3,17,17,NEIN
 4582761160286,Kioxia,Kioxia Exceria PRO G2,Kioxia Exceria PRO G2 1TB NEU,Kioxia Exceria PRO G2,21,29,NEIN
 4582761161108,Kioxia,Kioxia LSF10Z001TG8 internal solid state drive,Kioxia LSF10Z001TG8 1TB NEU,Kioxia LSF10Z001TG8 internal solid state drive,46,27,NEIN
 4582761160293,Kioxia,Kioxia Exceria PRO G2,Kioxia Exceria PRO G2 2TB NEU,Kioxia Exceria PRO G2,21,29,NEIN
-6978515250514,Dreame,Dreame H15 Mix 2-in-1-Stabstaubsauger Akku Trocken&Nass Beutellos 400 W Schwarz 5 Ah,Dreame H15 400W NEU,Dreame H15 Mix 2-in-1-Stabstaubsauger Akku Trocken&Nass Beutellos 400 W Schwarz 5 Ah,84,19,NEIN
+6978515250514,Dreame,Dreame H15 Mix 2-in-1-Stabstaubsauger Akku Trocken&Nass Beutellos 400 W Schwarz 5 Ah,Dreame H15 400W NEU,Dreame H15 Mix 2-in-1-Stabstaubsauger Akku Trocken&Nass Beutellos 400 W Schwarz,84,19,NEIN
 4582563854000,Kioxia,Kioxia Exceria G2,Kioxia G2 2TB NEU,Kioxia Exceria G2,17,17,NEIN
 4582563857872,Kioxia,Kioxia Exceria Plus G3,Kioxia G3 1TB NEU,Kioxia Exceria Plus G3,22,17,NEIN
 3030050179880,BaByliss,BaByliss Hydro-Fusion Hydro Fusion Smooth & Shape,BaByliss NEU,BaByliss Hydro-Fusion Hydro Fusion Smooth & Shape,49,12,NEIN
@@ -745,7 +745,7 @@
 7109806196993,Mitel,Mitel 612dt Set,Mitel NEU,Mitel 612dt Set,15,9,NEIN
 7109806197006,Mitel,Mitel 622dt Set,Mitel NEU,Mitel 622dt Set,15,9,NEIN
 0023942438908,Verbatim,Verbatim External Slimline Optisches Laufwerk Blu-Ray RW Schwarz,Verbatim RW USB 3.2 NEU,Verbatim External Slimline Optisches Laufwerk Blu-Ray RW Schwarz,64,23,NEIN
-5704174219279,Dell,DELL E5 Netzteil & Spannungsumwandler Drinnen 65 W Schwarz,Dell E5 ATX Netzteil 65W NEU,Dell E5 N ATX Netzteil 65W NEU,58,28,NEIN
+5704174219279,DELL,DELL E5 Netzteil & Spannungsumwandler Drinnen 65 W Schwarz,DELL E5 ATX Netzteil 65W NEU,Dell E5 N ATX Netzteil 65W NEU,58,28,NEIN
 0198415314048,HP,HP USB-C 100W G6 Dock Kabelgebunden USB 3.2 Gen 2 (3.1 Gen 2) Type-C Schwarz,HP USB-C Kabel USB 3.2 100W NEU,HP USB-C Kabel USB 3.2 100W NEU,76,31,JA
 4260771516346,,tecXL EliteDesk 800 G4 MP,XL 16GB NEU,tecXL EliteDesk 800 G4 MP,25,11,NEIN
 4260771516339,PC,PC HP EliteDesk 800 G4 MP i5-8500T/16GB/512GBSSD/Wlan/Bluetooth W11P,PC HP 16GB Bluetooth NEU,PC HP EliteDesk 800 G4 MP i5-8500T/16GB/512GBSSD/Wlan/Bluetooth W11P,68,24,NEIN
@@ -779,7 +779,7 @@
 1210000615015,NOCO,NOCO GB20 vehicle jump starter,NOCO GB20 IP65 NEU,NOCO GB20 vehicle jump starter,30,18,NEIN
 8885022190043,ANTHBOT,ANTHBOT Genie 1000 Mähroboter,ANTHBOT NEU,ANTHBOT Genie 1000 Mähroboter,29,11,NEIN
 8885022190173,ANTHBOT,"ANTHBOT ""RTK Wall Mount Kit",ANTHBOT RTK NEU,"ANTHBOT ""RTK Wall Mount Kit",27,15,NEIN
-0850047123572,Chipolo,"Chipolo POP 4 Pack - Tracking tag compatible with Apple Find My on iPhone (Black, Red, White, Blue)",Chipolo POP 4 NEU,"Chipolo POP 4 Pack - Tracking tag compatible with Apple Find My on iPhone (Black, Red, White, Blue)",99,17,NEIN
+0850047123572,Chipolo,"Chipolo POP 4 Pack - Tracking tag compatible with Apple Find My on iPhone (Black, Red, White, Blue)",Chipolo POP 4 NEU,Chipolo POP 4 Pack - Tracking tag compatible with Apple Find My on iPhone,99,17,NEIN
 6973293800258,PETKIT,PETKIT Refill-50ml-4pcs,PETKIT Refill-50ml-4pcs NEU,PETKIT Refill-50ml-4pcs,23,27,NEIN
 6975069302959,PETKIT,PETKIT Filter5.0-5pcs,PETKIT Filter5.0-5pcs NEU,PETKIT Filter5.0-5pcs,21,25,NEIN
 6973293803860,PETKIT,PETKIT Eversweet Trinkbrunnen Filter 5Stk.,PETKIT NEU,PETKIT Eversweet Trinkbrunnen Filter 5Stk.,42,10,NEIN
@@ -792,7 +792,7 @@
 6975069305691,PETKIT,PETKIT Easy Step Trittbrett Katzentoilette fr PURAMAX/2 & PUROBOT Max Pro/Ultra,PETKIT PURAMAX NEU,PETKIT Easy Step Trittbrett Katzentoilette fr PURAMAX/2 & PUROBOT Max Pro/Ultra,79,18,NEIN
 4061245025452,SOL-50,"SOL-50 5,5x22mm Bohrschraube Alu / Alu Edelstahl",SOL-50 NEU,"SOL-50 5,5x22mm Bohrschraube Alu / Alu Edelstahl",48,10,NEIN
 0023942322030,Verbatim,"Verbatim GNC-140 Universal Schwarz, Grau AC Schnellladung Drinnen",Verbatim GNC-140 NEU,"Verbatim GNC-140 Universal Schwarz, Grau AC Schnellladung Drinnen",65,20,NEIN
-0023942321552,Verbatim,Verbatim 32155 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,Verbatim USB Hub 3.2 NEU,Verbatim 32155 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,83,24,NEIN
+0023942321552,Verbatim,Verbatim 32155 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,Verbatim USB Hub 3.2 NEU,Verbatim 32155 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s,83,24,NEIN
 0023942322177,Verbatim,Verbatim GaN Charger 65W Universal Schwarz AC Schnellladung Drinnen,Verbatim AC 8m 65W NEU,Verbatim GaN Charger 65W Universal Schwarz AC Schnellladung Drinnen,67,22,NEIN
 0193124916453,Lenovo,Lenovo 40AS0090EU laptop-dockingstation & portreplikator Kabelgebunden USB 3.2 Gen 1 (3.1 Gen 1) Type-C Schwarz,Lenovo AS0090EU USB-C Kabel USB 3.2 NEU,Lenovo AS0090EU USB-C Kabel USB 3.2 NEU,111,39,JA
 0718037899923,Western Digital,Western Digital Gold WD6004FRYZ internal hard drive,Western Digital WD6004FRYZ 6TB NEU,Western Digital WD6004FRYZ 6TB NEU,51,34,JA
@@ -859,19 +859,19 @@
 0023942530718,Verbatim,"Verbatim Portables Festplattenlaufwerk Store 'n' Go USB 3.0, 1 TB, Silber",Verbatim Festplatte HDD 1TB USB 3.0 NEU,Verbatim Festplatte HDD 1TB USB 3.0 NEU,73,39,JA
 0023942531777,Verbatim,"Verbatim Portables Festplattenlaufwerk Store 'n' Go USB 3.0, 2 TB, Schwarz",Verbatim Festplatte HDD 2TB USB 3.0 NEU,Verbatim Festplatte HDD 2TB USB 3.0 NEU,74,39,JA
 0023942531975,Verbatim,"Verbatim Portables Festplattenlaufwerk Store 'n' Go USB 3.0, 1 TB, Silber",Verbatim Festplatte HDD 1TB USB 3.0 NEU,Verbatim Festplatte HDD 1TB USB 3.0 NEU,73,39,JA
-8006540774724,Oral-B,"Oral-B PRO 14876673 Elektrische Zahnbürste Kind Rotierende Zahnbürste Mehrfarbig, Weiß",Oral-B NEU,"Oral-B PRO 14876673 Elektrische Zahnbürste Kind Rotierende Zahnbürste Mehrfarbig, Weiß",86,10,NEIN
-8006540957196,Oral-B,"Oral-B PRO 14876674 Elektrische Zahnbürste Kind Rotierende Zahnbürste Mehrfarbig, Weiß",Oral-B NEU,"Oral-B PRO 14876674 Elektrische Zahnbürste Kind Rotierende Zahnbürste Mehrfarbig, Weiß",86,10,NEIN
+8006540774724,Oral-B,"Oral-B PRO 14876673 Elektrische Zahnbürste Kind Rotierende Zahnbürste Mehrfarbig, Weiß",Oral-B NEU,Oral-B PRO 14876673 Elektrische Zahnbürste Kind Rotierende Zahnbürste,86,10,NEIN
+8006540957196,Oral-B,"Oral-B PRO 14876674 Elektrische Zahnbürste Kind Rotierende Zahnbürste Mehrfarbig, Weiß",Oral-B NEU,Oral-B PRO 14876674 Elektrische Zahnbürste Kind Rotierende Zahnbürste,86,10,NEIN
 4210201445111,Oral-B,Oral-B iO Series 6 Erwachsener Rotierende Zahnbürste Schwarz,Oral-B NEU,Oral-B iO Series 6 Erwachsener Rotierende Zahnbürste Schwarz,60,10,NEIN
 4210201445234,Oral-B,Oral-B 445234 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Weiß,Oral-B NEU,Oral-B 445234 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Weiß,76,10,NEIN
 4210201445258,Braun,Braun 445258 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Grau,Braun NEU,Braun 445258 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Grau,75,9,NEIN
-4210201445197,Oral-B,"Oral-B 445197 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Pink, Weiß",Oral-B NEU,"Oral-B 445197 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Pink, Weiß",82,10,NEIN
+4210201445197,Oral-B,"Oral-B 445197 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Pink, Weiß",Oral-B NEU,Oral-B 445197 Elektrische Zahnbürste Erwachsener Vibrierende Zahnbürste Pink,82,10,NEIN
 4210201435457,Oral-B,Oral-B iO Series 10 Erwachsener Rotierende-vibrierende Zahnbürste Weiß,Oral-B NEU,Oral-B iO Series 10 Erwachsener Rotierende-vibrierende Zahnbürste Weiß,70,10,NEIN
 4210201435587,Oral-B,Oral-B iO Series 10 Erwachsener Rotierende-vibrierende Zahnbürste Schwarz,Oral-B NEU,Oral-B iO Series 10 Erwachsener Rotierende-vibrierende Zahnbürste Schwarz,73,10,NEIN
 8006540860793,Oral-B,Oral-B Deep Cleaning 6 Stück(e) Weiß,Oral-B NEU,Oral-B Deep Cleaning 6 Stück(e) Weiß,36,10,NEIN
-4210201447238,Braun,"Braun 10-in-1 Styling-Set 7 MGK7410 Bart, Körper, Haar. Mit Metallklinge, 100 Min. Akkulaufzeit, Aufbewahrungsbeutel, in Blau",Braun MGK7410 NEU,"Braun 10-in-1 Styling-Set 7 MGK7410 Bart, Körper, Haar. Mit Metallklinge, 100 Min. Akkulaufzeit, Aufbewahrungsbeutel, in Blau",125,17,NEIN
+4210201447238,Braun,"Braun 10-in-1 Styling-Set 7 MGK7410 Bart, Körper, Haar. Mit Metallklinge, 100 Min. Akkulaufzeit, Aufbewahrungsbeutel, in Blau",Braun MGK7410 NEU,"Braun 10-in-1 Styling-Set 7 MGK7410 Bart, Körper, Haar. Mit Metallklinge, 100",125,17,NEIN
 4022167001016,Braun,Braun BNA 100 Elektrisch betriebener Absauger,Braun BNA 100 NEU,Braun BNA 100 Elektrisch betriebener Absauger,45,17,NEIN
 6970135035588,Ecovacs,Ecovacs Deebot X8 Omni Schwarz,Ecovacs X8 NEU,Ecovacs Deebot X8 Omni Schwarz,30,14,NEIN
-8720389015809,Philips,Philips 7000 series DST7050/70 Bügeleisen Dampfbügeleisen SteamGlide Elite-Sohle 2800 W Grün,Philips DST7050 NEU,Philips 7000 series DST7050/70 Bügeleisen Dampfbügeleisen SteamGlide Elite-Sohle 2800 W Grün,92,19,NEIN
+8720389015809,Philips,Philips 7000 series DST7050/70 Bügeleisen Dampfbügeleisen SteamGlide Elite-Sohle 2800 W Grün,Philips DST7050 NEU,Philips 7000 series DST7050/70 Bügeleisen Dampfbügeleisen SteamGlide,92,19,NEIN
 3221616007222,Rowenta,Rowenta Dual Force 2-in-1 Akkustaubsauger RH6737,Rowenta RH6737 NEU,Rowenta Dual Force 2-in-1 Akkustaubsauger RH6737,48,18,NEIN
 6970995783445,Roborock,"Roborock Saros 10R 0,27 l Schwarz",Roborock NEU,"Roborock Saros 10R 0,27 l Schwarz",33,12,NEIN
 6936905905512,Roborock,"Roborock SAROS 20X 0,259 l Schwarz",Roborock SAROS 20X NEU,"Roborock SAROS 20X 0,259 l Schwarz",34,22,NEIN
@@ -884,8 +884,8 @@
 8885021370187,TP-Link,TP-Link Festa F61-Outdoor 1800 Mbit/s Weiß Power over Ethernet (PoE),TP-Link F61-O PoE NEU,TP-Link Festa F61-Outdoor 1800 Mbit/s Weiß Power over Ethernet (PoE),68,21,NEIN
 8885021370217,TP-Link,TP-Link Festa F52-Wall 1200 Mbit/s Weiß Power over Ethernet (PoE),TP-Link F52-W PoE NEU,TP-Link Festa F52-Wall 1200 Mbit/s Weiß Power over Ethernet (PoE),65,21,NEIN
 8885021370224,TP-Link,TP-Link Festa F52-Outdoor 1200 Mbit/s Weiß Power over Ethernet (PoE),TP-Link F52-O PoE NEU,TP-Link Festa F52-Outdoor 1200 Mbit/s Weiß Power over Ethernet (PoE),68,21,NEIN
-8885020622393,TP-Link,TP-Link Festa FS352G L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,TP-Link FS352G L2 PoE NEU,TP-Link Festa FS352G L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,89,25,NEIN
-8885020621525,TP-Link,"TP-Link Festa FR205 Kabelrouter 10 Gigabit Ethernet, 100 Gigabit Ethernet, Gigabit Ethernet Weiß",TP-Link FR205 NEU,"TP-Link Festa FR205 Kabelrouter 10 Gigabit Ethernet, 100 Gigabit Ethernet, Gigabit Ethernet Weiß",96,17,NEIN
+8885020622393,TP-Link,TP-Link Festa FS352G L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet (PoE) Weiß,TP-Link FS352G L2 PoE NEU,TP-Link Festa FS352G L2/L2+ Gigabit Ethernet (10/100/1000) Power over Ethernet,89,25,NEIN
+8885020621525,TP-Link,"TP-Link Festa FR205 Kabelrouter 10 Gigabit Ethernet, 100 Gigabit Ethernet, Gigabit Ethernet Weiß",TP-Link FR205 NEU,"TP-Link Festa FR205 Kabelrouter 10 Gigabit Ethernet, 100 Gigabit Ethernet",96,17,NEIN
 5397184187197,Dell,DELL WD19TB Kabelgebunden Thunderbolt 3 Schwarz,Dell WD19TB NEU,DELL WD19TB Kabelgebunden Thunderbolt 3 Schwarz,47,15,NEIN
 5397184513972,Dell,DELL Dockingstation – WD19S 130 W,Dell WD19S 130 Docking Station NEU,Dell WD19S 130 Docking Station NEU,33,34,JA
 193905208531,HP,HP USB-C-Dockingstation G5,HP USB-C-D Docking Station NEU,HP USB-C-D Docking Station NEU,26,30,JA
@@ -906,7 +906,7 @@
 6974316995784,Govee,Govee H6870341 Smart Lighting Intelligente Strangleuchte Bluetooth,Govee H6870341 Smart LED Lampe Bluetooth NEU,Govee H6870341 Smart LED Lampe Bluetooth NEU,66,44,JA
 6974316993100,Govee,Govee H66A0 Intelligenter Leuchtstreifen Wi-Fi/Bluetooth,Govee H66A0 Bluetooth NEU,Govee H66A0 Intelligenter Leuchtstreifen Wi-Fi/Bluetooth,56,25,NEIN
 6974316993117,Govee,Govee H66A1 Intelligenter Leuchtstreifen Wi-Fi/Bluetooth,Govee H66A1 Bluetooth NEU,Govee H66A1 Intelligenter Leuchtstreifen Wi-Fi/Bluetooth,56,25,NEIN
-8719514339989,Philips,"Philips Hue White and Color ambiance Hue Gradient Lightstrip Verlängerung, 1 Meter",Philips NEU,"Philips Hue White and Color ambiance Hue Gradient Lightstrip Verlängerung, 1 Meter",82,11,NEIN
+8719514339989,Philips by Signify,"Philips Hue White and Color ambiance Hue Gradient Lightstrip Verlängerung, 1 Meter",Philips by Signify NEU,"Philips Hue White and Color ambiance Hue Gradient Lightstrip Verlängerung, 1",82,22,NEIN
 8720169230033,Philips,Philips Hue White ambience GU10 – Smarter Spot – (Doppelpack),Philips GU10 NEU,Philips Hue White ambience GU10 – Smarter Spot – (Doppelpack),61,16,NEIN
 8719514356733,Philips,Philips Hue White ambience E14 - Smarte Lampe Kerzenform Doppelpack - 470,Philips E14 Smart LED Lampe NEU,Philips E14 Smart LED Lampe NEU,73,31,JA
 8719514356610,Philips,Philips Hue White and Color ambiance E14 - Smarte Lampe Kerzenform - 470,Philips E14 Smart LED Lampe NEU,Philips E14 Smart LED Lampe NEU,72,31,JA
@@ -931,22 +931,22 @@
 0023942438892,Verbatim,Verbatim 43889 Optisches Laufwerk Blu-Ray RW Schwarz,Verbatim RW NEU,Verbatim 43889 Optisches Laufwerk Blu-Ray RW Schwarz,52,15,NEIN
 0023942321521,Verbatim,Verbatim CMH-09 USB Typ-C 10000 Mbit/s Silber,Verbatim CMH-09 NEU,Verbatim CMH-09 USB Typ-C 10000 Mbit/s Silber,45,19,NEIN
 0023942321545,Verbatim,Verbatim CMH-14 USB Typ-C 5000 Mbit/s Silber,Verbatim CMH-14 NEU,Verbatim CMH-14 USB Typ-C 5000 Mbit/s Silber,44,19,NEIN
-0023942321583,Verbatim,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,Verbatim USB Hub 3.2 NEU,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,83,24,NEIN
+0023942321583,Verbatim,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,Verbatim USB Hub 3.2 NEU,Verbatim 32158 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s,83,24,NEIN
 0023942321514,Verbatim,Verbatim CMH-08 USB Typ-C 5000 Mbit/s Silber,Verbatim CMH-08 NEU,Verbatim CMH-08 USB Typ-C 5000 Mbit/s Silber,44,19,NEIN
 0023942318644,Verbatim,"Verbatim 31864 USB Kabel USB 2.0 1,2 m USB C 0,48 Gbit/s 60 W Grün",Verbatim USB Kabel 2.0 2m 60W NEU,Verbatim USB Kabel 2.0 2m 60W NEU,66,33,JA
-0023942321569,Verbatim,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,Verbatim USB Hub 3.2 NEU,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,83,24,NEIN
+0023942321569,Verbatim,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s Grau,Verbatim USB Hub 3.2 NEU,Verbatim 32156 Schnittstellen-Hub USB 3.2 Gen 1 (3.1 Gen 1) Type-C 5000 Mbit/s,83,24,NEIN
 0023942321538,Verbatim,Verbatim CMH-13 USB Typ-C 10000 Mbit/s Silber,Verbatim CMH-13 NEU,Verbatim CMH-13 USB Typ-C 10000 Mbit/s Silber,45,19,NEIN
-0023942321255,Verbatim,Verbatim 32125 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 32125 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,83,15,NEIN
+0023942321255,Verbatim,Verbatim 32125 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 32125 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung,83,15,NEIN
 0023942322009,Verbatim,"Verbatim GNC-35 Universal Schwarz, Grau AC Schnellladung Drinnen",Verbatim GNC-35 NEU,"Verbatim GNC-35 Universal Schwarz, Grau AC Schnellladung Drinnen",64,19,NEIN
 0023942322016,Verbatim,"Verbatim GNC-65 Universal Schwarz, Grau AC Schnellladung Drinnen",Verbatim GNC-65 NEU,"Verbatim GNC-65 Universal Schwarz, Grau AC Schnellladung Drinnen",64,19,NEIN
 0023942322047,Verbatim,"Verbatim GNC-200 Universal Schwarz, Grau AC Schnellladung Drinnen",Verbatim GNC-200 NEU,"Verbatim GNC-200 Universal Schwarz, Grau AC Schnellladung Drinnen",65,20,NEIN
 0023942435082,Verbatim,"Verbatim 43508 DVD-Rohling 4,7 GB DVD+R 10 Stück(e)",Verbatim DVD-R 7GB NEU,"Verbatim 43508 DVD-Rohling 4,7 GB DVD+R 10 Stück(e)",51,22,NEIN
-0023942437895,Verbatim,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar, Jewel Case, 5er-Pack",Verbatim XL 100 NEU,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar, Jewel Case, 5er-Pack",97,19,NEIN
+0023942437895,Verbatim,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar, Jewel Case, 5er-Pack",Verbatim XL 100 NEU,"Verbatim BD-R XL 100 GB* 4x, mit Tintenstrahldrucker großflächig bedruckbar",97,19,NEIN
 023942301875,Verbatim,Verbatim Charge 'n' Travel 70W Universal Blau AC Schnellladung Drinnen,Verbatim AC 70W NEU,Verbatim Charge 'n' Travel 70W Universal Blau AC Schnellladung Drinnen,70,19,NEIN
 0023942301882,Verbatim,Verbatim Charge 'n' Travel 70W Universal Violett AC Schnellladung Drinnen,Verbatim AC 70W NEU,Verbatim Charge 'n' Travel 70W Universal Violett AC Schnellladung Drinnen,73,19,NEIN
-023942301912,Verbatim,Verbatim 30191 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 30191 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,83,15,NEIN
+023942301912,Verbatim,Verbatim 30191 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 30191 Ladegerät für Mobilgeräte Universal Schwarz AC Schnellladung,83,15,NEIN
 0023942301929,Verbatim,Verbatim 30192 Ladegerät für Mobilgeräte Universal Blau AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 30192 Ladegerät für Mobilgeräte Universal Blau AC Schnellladung Drinnen,80,15,NEIN
-0023942301936,Verbatim,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,83,15,NEIN
+0023942301936,Verbatim,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung Drinnen,Verbatim AC NEU,Verbatim 30193 Ladegerät für Mobilgeräte Universal Violett AC Schnellladung,83,15,NEIN
 0023942323402,Verbatim,"Verbatim Cool 'n' Go AirJet Grau, Violett Handventilator",Verbatim NEU,"Verbatim Cool 'n' Go AirJet Grau, Violett Handventilator",56,12,NEIN
 0023942323419,Verbatim,"Verbatim Cool 'n' Go AirJet Silber, Weiß Handventilator",Verbatim NEU,"Verbatim Cool 'n' Go AirJet Silber, Weiß Handventilator",55,12,NEIN
 023942302254,Verbatim,Verbatim 30225 USB-Stick 128 GB USB Typ-C 3.2 Gen 1 (3.1 Gen 1) Schwarz,Verbatim USB-S USB-Stick 128GB NEU,Verbatim USB-S USB-Stick 128GB NEU,71,34,JA
@@ -975,12 +975,12 @@
 5706991024302,Jabra,Jabra Evolve2 75 Kopfhörer Kabellos Kopfband Büro/Callcenter Bluetooth Schwarz,Jabra Bluetooth Kopfhörer kabellos NEU,Jabra Bluetooth Kopfhörer kabellos NEU,78,38,JA
 5706991022841,Jabra,Jabra Evolve2 65 Kopfhörer Kabellos Kopfband Büro/Callcenter USB Typ-C Bluetooth,Jabra Bluetooth Kopfhörer kabellos NEU,Jabra Bluetooth Kopfhörer kabellos NEU,80,38,JA
 5706991031546,Jabra,Jabra Evolve 65 TE Kopfhörer Verkabelt & Kabellos Kopfband Büro/Callcenter USB Typ-A Bluetooth Schwarz,Jabra TE Bluetooth Kopfhörer kabellos NEU,Jabra TE Bluetooth Kopfhörer kabellos NEU,102,41,JA
-5706991034318,Jabra,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,Jabra II Kopfhörer NEU,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,99,22,NEIN
+5706991034318,Jabra,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C / USB Type-A Schwarz,Jabra II Kopfhörer NEU,Jabra Evolve 30 II Kopfhörer Kabelgebunden Kopfband Büro/Callcenter USB Type-C,99,22,NEIN
 5706991014839,Jabra,Jabra Speak 510,Jabra Speak 510 NEU,Jabra Speak 510,15,19,NEIN
 5706991031522,Jabra,Jabra Evolve 65 TE Kopfhörer Verkabelt & Kabellos Kopfband Büro/Callcenter USB Typ-A Bluetooth Schwarz,Jabra TE Bluetooth Kopfhörer kabellos NEU,Jabra TE Bluetooth Kopfhörer kabellos NEU,102,41,JA
 8806094682748,Samsung,Samsung EB-P3400XUE Lithium-Ion (Li-Ion) 10000 mAh Beige,Samsung EB-P3400XUE NEU,Samsung EB-P3400XUE Lithium-Ion (Li-Ion) 10000 mAh Beige,56,23,NEIN
 8806088938141,Samsung,"Samsung EP-DG930 USB Kabel 1,5 m USB A USB C Schwarz",Samsung EP-DG930 USB Kabel 5m NEU,Samsung EP-DG930 USB Kabel 5m NEU,52,33,JA
-8806097735618,Samsung,"Samsung EP-T6010NBEGWW Ladegerät für Mobilgeräte Laptop, Smartphone, Tablets Schwarz AC Schnellladung Drinnen",Samsung EP-T6010NBEGWW NEU,"Samsung EP-T6010NBEGWW Ladegerät für Mobilgeräte Laptop, Smartphone, Tablets Schwarz AC Schnellladung Drinnen",109,26,NEIN
+8806097735618,Samsung,"Samsung EP-T6010NBEGWW Ladegerät für Mobilgeräte Laptop, Smartphone, Tablets Schwarz AC Schnellladung Drinnen",Samsung EP-T6010NBEGWW NEU,"Samsung EP-T6010NBEGWW Ladegerät für Mobilgeräte Laptop, Smartphone, Tablets",109,26,NEIN
 8806092978683,Samsung,Samsung EP-P2400BBEGEU Ladegerät für Mobilgeräte Smartphone Grau USB Drinnen,Samsung EP-P2400BBEGEU NEU,Samsung EP-P2400BBEGEU Ladegerät für Mobilgeräte Smartphone Grau USB Drinnen,76,26,NEIN
 6938818318410,Yealink,Yealink MP56 E2-Mannschaften,Yealink MP56 E2-M NEU,Yealink MP56 E2-Mannschaften,28,21,NEIN
 4895251604758,EcoFlow,ECOFLOW Wave 2 Add-on Battery,EcoFlow NEU,ECOFLOW Wave 2 Add-on Battery,29,11,NEIN
@@ -1017,9 +1017,9 @@
 4066529027887,Kärcher,Kärcher WD 4 S V-20/5/22 - Staubsauger - Kanister,Kärcher WD 4 NEU,Kärcher WD 4 S V-20/5/22 - Staubsauger - Kanister,49,16,NEIN
 4066529027894,Kärcher,Kärcher WD 4 P V-20/5/22 - Staubsauger - Kanister,Kärcher WD 4 NEU,Kärcher WD 4 P V-20/5/22 - Staubsauger - Kanister,49,16,NEIN
 4054278661872,Kärcher,Kärcher WD 5 V-25/5/22 - Staubsauger - Kanister,Kärcher WD 5 NEU,Kärcher WD 5 V-25/5/22 - Staubsauger - Kanister,47,16,NEIN
-4054278975375,Kärcher,"Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",Kärcher VC 4 NEU,"Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",89,16,NEIN
-4054278975399,Kärcher,"Kärcher VC 6, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",Kärcher VC 6 NEU,"Kärcher VC 6, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",89,16,NEIN
-4054278999159,Kärcher,"Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m, 1300 W, 220-240 V",Kärcher SC 1 5m 1300W NEU,"Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m, 1300 W, 220-240 V",94,25,NEIN
+4054278975375,Kärcher,"Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",Kärcher VC 4 NEU,"Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig",89,16,NEIN
+4054278975399,Kärcher,"Kärcher VC 6, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",Kärcher VC 6 NEU,"Kärcher VC 6, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig",89,16,NEIN
+4054278999159,Kärcher,"Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m, 1300 W, 220-240 V",Kärcher SC 1 5m 1300W NEU,"Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m",94,25,NEIN
 4582563857889,Kioxia,SSD M.2 (2280) Kioxia Exceria Plus G3 NVMe 2TB,Kioxia M.2 NVMe SSD 2TB NEU,SSD M.2 (2280) Kioxia Exceria Plus G3 NVMe 2TB,46,27,NEIN
 5099206041271,Logitech,Logitech Mouse B100 Optical Corded Black OEM,Logitech B100 Maus NEU,Logitech Mouse B100 Optical Corded Black OEM,44,22,NEIN
 5099206008441,Logitech,Logitech Headset 960 Wired,Logitech Headset 960 Wired NEU,Logitech Headset 960 Wired NEU,26,30,JA
@@ -1097,24 +1097,24 @@
 4779051841455,Teltonika Networks,Teltonika TRM500 - Wireless Router,Teltonika Networks TRM500 WLAN Router kabellos NEU,Teltonika Networks TRM500 WLAN Router kabellos NEU,34,50,JA
 4779051841851,Teltonika Networks,Teltonika TRB256 - Gateway,Teltonika Networks TRB256 NEU,Teltonika TRB256 - Gateway,26,29,NEIN
 4779051841844,Teltonika Networks,Teltonika TRB246 - Gateway,Teltonika Networks TRB246 NEU,Teltonika TRB246 - Gateway,26,29,NEIN
-850047123503,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (White),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (White),97,15,NEIN
-850047123510,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Yellow),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Yellow),98,15,NEIN
-850047123527,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Red),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Red),95,15,NEIN
-850047123534,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Blue),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Blue),96,15,NEIN
-850047123541,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Green),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Green),97,15,NEIN
-850047123558,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Black),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Black),97,15,NEIN
-850047123565,Chipolo,Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone or Find Hub  (Black),Chipolo POP 4 NEU,Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone or Find Hub  (Black),93,17,NEIN
-850047123787,Chipolo,"Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone (Red, Blue, Yellow, Green)",Chipolo POP 4 NEU,"Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone (Red, Blue, Yellow, Green)",99,17,NEIN
-850070419246,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Chalk),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Chalk),89,16,NEIN
-850070419253,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Honey),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Honey),89,16,NEIN
-850070419260,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone (Coral),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone (Coral),88,16,NEIN
-850070419277,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone or Find Hub (Navy),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone or Find Hub (Navy),99,16,NEIN
-850070419284,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone or Find Hub  (Mint),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone or Find Hub  (Mint),100,16,NEIN
-850070419291,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Charcoal),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Charcoal),92,16,NEIN
-850070419307,Chipolo,Chipolo LOOP 4 Pack – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Charcoal),Chipolo LOOP 4 NEU,Chipolo LOOP 4 Pack – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Charcoal),99,18,NEIN
+850047123503,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (White),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub,97,15,NEIN
+850047123510,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Yellow),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub,98,15,NEIN
+850047123527,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Red),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub,95,15,NEIN
+850047123534,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Blue),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub,96,15,NEIN
+850047123541,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Green),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub,97,15,NEIN
+850047123558,Chipolo,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub on Android (Black),Chipolo POP NEU,Chipolo POP - Tracking tag compatible with Apple Find My on iPhone or Find Hub,97,15,NEIN
+850047123565,Chipolo,Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone or Find Hub  (Black),Chipolo POP 4 NEU,Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone or,93,17,NEIN
+850047123787,Chipolo,"Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone (Red, Blue, Yellow, Green)",Chipolo POP 4 NEU,Chipolo POP 4 Pack -Tracking tag compatible with Apple Find My on iPhone (Red,99,17,NEIN
+850070419246,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Chalk),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on,89,16,NEIN
+850070419253,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Honey),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on,89,16,NEIN
+850070419260,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone (Coral),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on,88,16,NEIN
+850070419277,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone or Find Hub (Navy),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on,99,16,NEIN
+850070419284,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone or Find Hub  (Mint),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on,100,16,NEIN
+850070419291,Chipolo,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Charcoal),Chipolo LOOP NEU,Chipolo LOOP – Rechargeable tracking tag compatible with Apple Find My on,92,16,NEIN
+850070419307,Chipolo,Chipolo LOOP 4 Pack – Rechargeable tracking tag compatible with Apple Find My on iPhone  (Charcoal),Chipolo LOOP 4 NEU,Chipolo LOOP 4 Pack – Rechargeable tracking tag compatible with Apple Find My,99,18,NEIN
 850070419314,Chipolo,"Chipolo LOOP 4 Pack – Rechargeable tracking tag (Charcoal, Chalk, Navy, Coral)",Chipolo LOOP 4 NEU,"Chipolo LOOP 4 Pack – Rechargeable tracking tag (Charcoal, Chalk, Navy, Coral)",78,18,NEIN
-850070419321,Chipolo,Chipolo CARD – Rechargeable tracking card compatible with Apple Find My on iPhone (Charcoal),Chipolo CARD NEU,Chipolo CARD – Rechargeable tracking card compatible with Apple Find My on iPhone (Charcoal),92,16,NEIN
-850070419338,Chipolo,Chipolo LOOP & CARD Bundle – Rechargeable trackers compatible with Apple Find My on iPhone,Chipolo LOOP NEU,Chipolo LOOP & CARD Bundle – Rechargeable trackers compatible with Apple Find My on iPhone,90,16,NEIN
+850070419321,Chipolo,Chipolo CARD – Rechargeable tracking card compatible with Apple Find My on iPhone (Charcoal),Chipolo CARD NEU,Chipolo CARD – Rechargeable tracking card compatible with Apple Find My on,92,16,NEIN
+850070419338,Chipolo,Chipolo LOOP & CARD Bundle – Rechargeable trackers compatible with Apple Find My on iPhone,Chipolo LOOP NEU,Chipolo LOOP & CARD Bundle – Rechargeable trackers compatible with Apple Find,90,16,NEIN
 8885022190166,Anthbot,ANTHBOT Battery 5000mAh,Anthbot Battery 5000mAh NEU,ANTHBOT Battery 5000mAh,23,27,NEIN
 0730143312042,Advanced Micro Devices,AMD Ryzen 5 5600X BOX | 100-100000065BOX,Advanced Micro Devices AMD Prozessor CPU NEU,Advanced Micro Devices AMD Prozessor CPU NEU,40,44,JA
 730143314428,Advanced Micro Devices,AMD Ryzen 7 7700X BOX | 100-100000591WOF,Advanced Micro Devices AMD Prozessor CPU NEU,Advanced Micro Devices AMD Prozessor CPU NEU,40,44,JA
@@ -1309,7 +1309,7 @@
 843367132775,Lexar,"Lexar DDR4 16GB 288 PIN U-DIMM 3200Mhz, CL22, 1.2V- BLISTER Package",Lexar RAM Arbeitsspeicher 16GB 3200MHz DDR4 NEU,Lexar RAM Arbeitsspeicher 16GB 3200MHz DDR4 NEU,67,47,JA
 843367132454,Lexar,"Lexar DDR5 16GB 262 PIN So-DIMM 5600Mhz, CL46, 1.1V- BLISTER Package",Lexar RAM Arbeitsspeicher 16GB 5600MHz DDR5 NEU,Lexar RAM Arbeitsspeicher 16GB 5600MHz DDR5 NEU,68,47,JA
 843367132782,Lexar,"Lexar DDR5 16GB 288 PIN U-DIMM 5600Mhz, CL46, 1.1V- BLISTER Package",Lexar RAM Arbeitsspeicher 16GB 5600MHz DDR5 NEU,Lexar RAM Arbeitsspeicher 16GB 5600MHz DDR5 NEU,67,47,JA
-843367140671,Lexar,"Lexar THOR 2.0 DDR5 6000 CL38 1.3V Memory with heatsink and RGB lighting, Black Color, Dual pack",Lexar THOR 2 DDR5 NEU,"Lexar THOR 2.0 DDR5 6000 CL38 1.3V Memory with heatsink and RGB lighting, Black Color, Dual pack",96,21,NEIN
+843367140671,Lexar,"Lexar THOR 2.0 DDR5 6000 CL38 1.3V Memory with heatsink and RGB lighting, Black Color, Dual pack",Lexar THOR 2 DDR5 NEU,"Lexar THOR 2.0 DDR5 6000 CL38 1.3V Memory with heatsink and RGB lighting, Black",96,21,NEIN
 649528929730,Crucial,Crucial DDR5 - 16GB 5600 DIMM (CT16G56C46U5),Crucial RAM Arbeitsspeicher 16GB DDR5 NEU,Crucial RAM Arbeitsspeicher 16GB DDR5 NEU,44,41,JA
 649528929983,Crucial,Crucial DDR5 - 32GB 5600 SO-DIMM KIT 2x16GB (CT2K16G56C46S5),Crucial RAM Arbeitsspeicher 32GB DDR5 2x Kit NEU,Crucial RAM Arbeitsspeicher 32GB DDR5 2x Kit NEU,60,48,JA
 4713294232755,G.Skill,G.Skill DDR5 64GB PC 6000 CL30 (2x32GB) 64-GX2-TZ5N AMD EX,G.Skill 64GB DDR5 2x Kit NEU,G.Skill DDR5 64GB PC 6000 CL30 (2x32GB) 64-GX2-TZ5N AMD EX,58,28,NEIN
@@ -1377,3 +1377,36 @@
 2503062116279,Zeb,Zebra ZD421d - Etikettendrucker,Zeb ZD421 Etikettendrucker NEU,Zeb ZD421 Etikettendrucker NEU,31,30,JA
 8596375242906,Zeb,"Zebra ZD421t - Etikettendrucker - Thermotransfer - Rolle (11,2 cm)",Zeb ZD421 Etikettendrucker NEU,Zeb ZD421 Etikettendrucker NEU,66,30,JA
 5704174529460,Zeb,Zebra ZD421t - Etikettendrucker - Thermotransfer,Zeb ZD421 Etikettendrucker NEU,Zeb ZD421 Etikettendrucker NEU,48,30,JA
+0619659136703,SanDisk,SanDisk Ultra Flair USB flash drive,SanDisk Ultra Flair USB-Stick 64GB NEU,SanDisk Ultra Flair USB-Stick 64GB NEU,35,38,JA
+0810354023033,Ubiquiti,Ubiquiti POE-24-24W PoE adapter,Ubiquiti POE-24-24W Adapter PoE 24W NEU,Ubiquiti POE-24-24W Adapter PoE 24W NEU,31,39,JA
+0810354023088,Ubiquiti,Ubiquiti POE-48-24W-G,Ubiquiti POE-48-24W-G PoE 24W NEU,Ubiquiti POE-48-24W-G PoE 24W NEU,21,33,JA
+8801643979393,Samsung,Samsung EP-TA800,Samsung EP-TA800 1m NEU,Samsung EP-TA800,16,23,NEIN
+0619659154189,SanDisk,SanDisk Ultra Flair USB flash drive,SanDisk Ultra Flair USB-Stick 256GB NEU,SanDisk Ultra Flair USB-Stick 256GB NEU,35,39,JA
+8806090351679,Samsung,Samsung Portable SSD T7,Samsung Portable SSD T7 1TB NEU,Samsung Portable SSD T7 1TB NEU,23,31,JA
+0810010076830,Ubiquiti,Ubiquiti U6-PRO wireless access point,Ubiquiti U6-PRO WLAN Access Point kabellos NEU,Ubiquiti U6-PRO WLAN Access Point kabellos NEU,37,46,JA
+8719706432290,Seagate,Seagate IronWolf Pro ST16000NT001 internal hard drive,Seagate ST16000NT001 16TB NEU,Seagate IronWolf Pro ST16000NT001 internal hard drive,53,29,NEIN
+4260557512357,Toshiba,Toshiba Canvio Basics external hard drive,Toshiba 2TB NEU,Toshiba Canvio Basics external hard drive,41,15,NEIN
+4260557512364,Toshiba,Toshiba Canvio Basics external hard drive,Toshiba 4TB NEU,Toshiba Canvio Basics external hard drive,41,15,NEIN
+0810084690154,Ubiquiti,Ubiquiti UACC-CM-RJ45-MG network transceiver module,Ubiquiti UACC-CM-RJ45-MG NEU,Ubiquiti UACC-CM-RJ45-MG network transceiver module,51,28,NEIN
+0810084693698,Ubiquiti,Ubiquiti Ultra,Ubiquiti Ultra PoE NEU,Ubiquiti Ultra,14,22,NEIN
+0810084695203,Ubiquiti,Ubiquiti ULTRA gateway/controller,Ubiquiti ULTRA NEU,Ubiquiti ULTRA gateway/controller,33,18,NEIN
+0810084695555,Ubiquiti,Ubiquiti U7 Pro Max,Ubiquiti U7 NEU,Ubiquiti U7 Pro Max,19,15,NEIN
+0810084694275,Ubiquiti,Ubiquiti PowerAmp,Ubiquiti PowerAmp 260W NEU,Ubiquiti PowerAmp,17,26,NEIN
+4719331355791,Gigabyte,GIGABYTE GeForce RTX 5090 GAMING OC 32G,Gigabyte RTX 5090 Grafikkarte 32GB 2550MHz PCIe 5 NEU,Gigabyte RTX 5090 Grafikkarte 32GB 2550MHz PCIe 5 NEU,39,53,JA
+4719331355807,Gigabyte,GIGABYTE AORUS GeForce RTX 5090 MASTER 32G,Gigabyte AORUS Grafikkarte 32GB 2655MHz PCIe 5 NEU,Gigabyte AORUS Grafikkarte 32GB 2655MHz PCIe 5 NEU,42,50,JA
+4719331355906,Gigabyte,GIGABYTE AORUS GeForce RTX 5090 MASTER ICE 32G,Gigabyte AORUS Grafikkarte 32GB 2655MHz PCIe 5 NEU,Gigabyte AORUS Grafikkarte 32GB 2655MHz PCIe 5 NEU,46,50,JA
+0810084696057,Ubiquiti,Ubiquiti UniFi Flex 2.5G,Ubiquiti UniFi Flex 2.5G NEU,Ubiquiti UniFi Flex 2.5G,24,28,NEIN
+0810084698730,Ubiquiti,Ubiquiti U7 Pro Outdoor,Ubiquiti U7 NEU,Ubiquiti U7 Pro Outdoor,23,15,NEIN
+4711174726004,Synology,Synology DiskStation DS925+ NAS/storage server,Synology DS925 4GB DDR4 NEU,Synology DiskStation DS925+ NAS/storage server,46,27,NEIN
+4711174725991,Synology,Synology DiskStation DS425+ NAS/storage server,Synology DS425 2GB DDR4 NEU,Synology DiskStation DS425+ NAS/storage server,46,27,NEIN
+4713294236753,G.Skill,G.Skill Trident Z5 Neo RGB F5-6000J2836G16GX2-TR5NS memory module,G.Skill Z5 RAM Arbeitsspeicher 32GB 6000MHz DDR5 2x Kit NEU,G.Skill Z5 RAM Arbeitsspeicher 32GB 6000MHz DDR5 2x Kit NEU,65,59,JA
+5397184961766,Dell,DELL Pro SD25,Dell SD25 USB 3.2 130W NEU,DELL Pro SD25,13,26,NEIN
+4719331356576,Gigabyte,GIGABYTE AORUS GeForce RTX 5090 STEALTH ICE 32G,Gigabyte AORUS Grafikkarte 32GB 2655MHz PCIe 5 NEU,Gigabyte AORUS Grafikkarte 32GB 2655MHz PCIe 5 NEU,47,50,JA
+4711174726387,Synology,Synology DiskStation DS225+ 2 Bay NAS,Synology DS225 2GB DDR4 NEU,Synology DiskStation DS225+ 2 Bay NAS,37,27,NEIN
+0718037905730,Western Digital,Western Digital Purple internal hard drive,Western Digital Purple internal hard 3TB NEU,Western Digital Purple internal hard 3TB NEU,42,44,JA
+4711387890325,Asus,ASUS TUF Gaming TUF-RTX5090-O32G-GAMING,Asus TUF Grafikkarte 32GB NEU,ASUS TUF Gaming TUF-RTX5090-O32G-GAMING,39,29,NEIN
+0017817859585,Bose,Bose 890101-0100 headphones/headset,Bose Headset kabellos NEU,Bose 890101-0100 headphones/headset,35,25,NEIN
+8719706436830,Seagate,Seagate IronWolf Pro ST32000NT000 internal hard drive,Seagate ST32000NT000 32TB NEU,Seagate IronWolf Pro ST32000NT000 internal hard drive,53,29,NEIN
+8720862502635,Sonos,Sonos Ace,Sonos Ace Bluetooth Kopfhörer kabellos NEU,Sonos Ace Bluetooth Kopfhörer kabellos NEU,9,42,JA
+1210000619266,NOCO,NOCO GENIUS5EU | 5A Battery Charger | Genius Battery Chargers,NOCO GENIUS5EU NEU,NOCO GENIUS5EU | 5A Battery Charger | Genius Battery Chargers,61,18,NEIN
+6977728947303,MOVA,MOVA Z60 Ultra Roller Complete,MOVA Z60 NEU,MOVA Z60 Ultra Roller Complete,30,12,NEIN

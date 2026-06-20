@@ -1,0 +1,236 @@
+{
+  "SUPV0056": {
+    "count": 1,
+    "ean": "0023942435082",
+    "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x Speed, printabl",
+    "ek": 5.38,
+    "floor": 11.99,
+    "competitor": 8.49,
+    "last_seen": "2026-06-20T11:05:36.818064+00:00"
+  },
+  "SUPV0064": {
+    "count": 1,
+    "ean": "0023942437895",
+    "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB 4x Speed wide ",
+    "ek": 32.48,
+    "floor": 56.99,
+    "competitor": 44.21,
+    "last_seen": "2026-06-20T11:05:42.961562+00:00"
+  },
+  "SUPV0070": {
+    "count": 1,
+    "ean": "0023942301929",
+    "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRAVEL ADAPTER WIT",
+    "ek": 42.63,
+    "floor": 72.99,
+    "competitor": 58.99,
+    "last_seen": "2026-06-20T11:06:01.136306+00:00"
+  },
+  "SUPV0071": {
+    "count": 1,
+    "ean": "0023942301936",
+    "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRAVEL ADAPTER WIT",
+    "ek": 42.63,
+    "floor": 72.99,
+    "competitor": 58.99,
+    "last_seen": "2026-06-20T11:06:05.892937+00:00"
+  },
+  "SUPV0073": {
+    "count": 1,
+    "ean": "0023942324034",
+    "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIALS",
+    "ek": 181.69,
+    "floor": 301.99,
+    "competitor": 237.89,
+    "last_seen": "2026-06-20T11:06:11.839087+00:00"
+  },
+  "SUPV0084": {
+    "count": 1,
+    "ean": "0023942323402",
+    "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/Purple 32340",
+    "ek": 12.79,
+    "floor": 23.99,
+    "competitor": 19.66,
+    "last_seen": "2026-06-20T11:06:18.302723+00:00"
+  },
+  "SUPV0085": {
+    "count": 1,
+    "ean": "0023942323419",
+    "title": "Verbatim Cool’n’go Airjet Handheld Fan White/Silver 32341",
+    "ek": 12.79,
+    "floor": 23.99,
+    "competitor": 19.66,
+    "last_seen": "2026-06-20T11:06:23.828358+00:00"
+  },
+  "SUPY0000": {
+    "count": 1,
+    "ean": "6938818319592",
+    "title": "Yealink DECT Headset WH62 Mono UC",
+    "ek": 103.53,
+    "floor": 172.99,
+    "competitor": 155.43,
+    "last_seen": "2026-06-20T11:06:29.170181+00:00"
+  },
+  "SUPY0010": {
+    "count": 1,
+    "ean": "6938818303171",
+    "title": "Yealink IP Telefon SIP-T54W V2",
+    "ek": 108.91,
+    "floor": 181.99,
+    "competitor": 132.64,
+    "last_seen": "2026-06-20T11:06:35.370912+00:00"
+  },
+  "SUPY0019": {
+    "count": 1,
+    "ean": "6938818318410",
+    "title": "Yealink IP Telefon MP56-Teams E2",
+    "ek": 204.02,
+    "floor": 337.99,
+    "competitor": 259.0,
+    "last_seen": "2026-06-20T11:06:42.277695+00:00"
+  },
+  "SUPY0038": {
+    "count": 1,
+    "ean": "6938818308497",
+    "title": "Yealink DECT Telefon W79P (Basis W70B und W59R)",
+    "ek": 128.4,
+    "floor": 213.99,
+    "competitor": 161.41,
+    "last_seen": "2026-06-20T11:06:49.624967+00:00"
+  },
+  "SUPY0059": {
+    "count": 1,
+    "ean": "6938818306578",
+    "title": "Yealink WH67 - Headset WH67 Mono UC",
+    "ek": 154.79,
+    "floor": 256.99,
+    "competitor": 207.62,
+    "last_seen": "2026-06-20T11:06:57.304314+00:00"
+  },
+  "USBV0000": {
+    "count": 1,
+    "ean": "023942302254",
+    "title": "Verbatim Plectra Black 128GB USB-C Flash Drive 30225",
+    "ek": 15.23,
+    "floor": 27.99,
+    "competitor": 20.1,
+    "last_seen": "2026-06-20T11:07:26.487580+00:00"
+  },
+  "USBV0002": {
+    "count": 1,
+    "ean": "023942302261",
+    "title": "Verbatim Plectra Black 256GB USB-C Flash Drive 30226",
+    "ek": 26.64,
+    "floor": 46.99,
+    "competitor": 35.19,
+    "last_seen": "2026-06-20T11:07:32.632440+00:00"
+  },
+  "USBV0003": {
+    "count": 1,
+    "ean": "0023942302278",
+    "title": "Verbatim Plectra Black 512GB USB-C Flash Drive 302",
+    "ek": 51.36,
+    "floor": 87.99,
+    "competitor": 68.09,
+    "last_seen": "2026-06-20T11:07:37.856642+00:00"
+  },
+  "USBV0005": {
+    "count": 1,
+    "ean": "0023942302292",
+    "title": "Verbatim Plectra White 128GB USB-C Flash Drive 30229",
+    "ek": 15.33,
+    "floor": 28.99,
+    "competitor": 22.73,
+    "last_seen": "2026-06-20T11:07:44.919768+00:00"
+  },
+  "USBV0006": {
+    "count": 1,
+    "ean": "0023942302308",
+    "title": "Verbatim Plectra White 256GB USB-C Flash Drive 30230",
+    "ek": 26.09,
+    "floor": 45.99,
+    "competitor": 32.84,
+    "last_seen": "2026-06-20T11:07:50.311445+00:00"
+  },
+  "USBV0007": {
+    "count": 1,
+    "ean": "0023942302315",
+    "title": "Verbatim Plectra White 512GB USB-C Flash Drive 30231",
+    "ek": 51.36,
+    "floor": 87.99,
+    "competitor": 68.09,
+    "last_seen": "2026-06-20T11:07:56.900255+00:00"
+  },
+  "USBV0008": {
+    "count": 1,
+    "ean": "0023942491729",
+    "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 49172",
+    "ek": 5.27,
+    "floor": 11.99,
+    "competitor": 9.95,
+    "last_seen": "2026-06-20T11:08:04.272938+00:00"
+  },
+  "USBV0012": {
+    "count": 1,
+    "ean": "023942491682",
+    "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 49168",
+    "ek": 25.68,
+    "floor": 45.99,
+    "competitor": 34.95,
+    "last_seen": "2026-06-20T11:08:14.531369+00:00"
+  },
+  "USBV0013": {
+    "count": 1,
+    "ean": "0023942490623",
+    "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 black 49062",
+    "ek": 3.44,
+    "floor": 8.99,
+    "competitor": 6.66,
+    "last_seen": "2026-06-20T11:08:29.770752+00:00"
+  },
+  "USBV0016": {
+    "count": 1,
+    "ean": "0023942490654",
+    "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 black 49065",
+    "ek": 5.3,
+    "floor": 11.99,
+    "competitor": 9.12,
+    "last_seen": "2026-06-20T11:08:34.604205+00:00"
+  },
+  "USBV0017": {
+    "count": 1,
+    "ean": "0023942490715",
+    "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 black 49071",
+    "ek": 8.9,
+    "floor": 17.99,
+    "competitor": 14.99,
+    "last_seen": "2026-06-20T11:08:44.516749+00:00"
+  },
+  "USBV0018": {
+    "count": 1,
+    "ean": "0023942302117",
+    "title": "Verbatim V200 Metal USB 3.2 64GB Aluminium",
+    "ek": 8.07,
+    "floor": 16.99,
+    "competitor": 14.99,
+    "last_seen": "2026-06-20T11:08:55.577047+00:00"
+  },
+  "USBV0020": {
+    "count": 1,
+    "ean": "0023942991045",
+    "title": "Verbatim Metal Executive 16GB USB 3.0 gold",
+    "ek": 7.51,
+    "floor": 15.99,
+    "competitor": 11.93,
+    "last_seen": "2026-06-20T11:09:03.255215+00:00"
+  },
+  "USBV0021": {
+    "count": 1,
+    "ean": "0023942991052",
+    "title": "Verbatim Metal Executive 32GB USB 3.0 gold",
+    "ek": 8.55,
+    "floor": 16.99,
+    "competitor": 11.9,
+    "last_seen": "2026-06-20T11:09:12.754133+00:00"
+  }
+}
