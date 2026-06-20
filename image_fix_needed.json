@@ -244,44 +244,14 @@
     "title": "Yealink WH64 Mono - Headset - On-Ear",
     "detected_at": "2026-06-20T11:07:02.835081+00:00"
   },
-  "MOHP0024": {
-    "ean": "0198122902057",
-    "title": "HP 524pm - Series 5 Pro - LED-Monitor - 61 cm (24\") (9E0G9UT#ABB)",
-    "detected_at": "2026-06-20T13:34:49.904722+00:00"
+  "REFR0009": {
+    "ean": "5713518290584",
+    "title": "Refurb® Lenovo ThinkPad Dockingstation 40A90090EU",
+    "detected_at": "2026-06-20T14:36:22.112922+00:00"
   },
-  "MOL0000": {
-    "ean": "0198156725684",
-    "title": "Lenovo ThinkVision T24D-40 - LED-Monitor - 61 cm (23,8\") (64B9GAT1EU)",
-    "detected_at": "2026-06-20T13:34:53.590591+00:00"
-  },
-  "RAM5C0013": {
-    "ean": "649528929983",
-    "title": "Crucial DDR5 - 32GB 5600 SO-DIMM KIT 2x16GB (CT2K16G56C46S5)",
-    "detected_at": "2026-06-20T13:41:59.440987+00:00"
-  },
-  "RAM5C1005": {
-    "ean": "0840006680628",
-    "title": "Corsair Vengeance RGB DDR5 - KIT 32GB-2X16GB -(CMH32GX5M2B6000C38)",
-    "detected_at": "2026-06-20T13:42:05.436818+00:00"
-  },
-  "RAM5K0035": {
-    "ean": "0740617326154",
-    "title": "Kingston FURY IMPACT SODIMM - DDR5-16GB-(KF548S38IB-16)",
-    "detected_at": "2026-06-20T13:42:37.124090+00:00"
-  },
-  "SUPB1057": {
-    "ean": "0017817861120",
-    "title": "Bose QuietComfort Ultra Earbuds (2. Gen.) Black",
-    "detected_at": "2026-06-20T13:48:45.449486+00:00"
-  },
-  "SUPB1067": {
-    "ean": "0017817861083",
-    "title": "Bose QuietComfort Ultra Earbuds (2. Gen.) Midnight Violet",
-    "detected_at": "2026-06-20T13:48:55.633915+00:00"
-  },
-  "SUPJ0184": {
-    "ean": "5706991027501",
-    "title": "JABRA Evolve2 55 - Mono Headset",
-    "detected_at": "2026-06-20T13:57:29.581359+00:00"
+  "REFT1001": {
+    "ean": "5711603083851",
+    "title": "T1A Dell Latitude 5320 (13.3\")",
+    "detected_at": "2026-06-20T14:36:38.533704+00:00"
   }
 }
