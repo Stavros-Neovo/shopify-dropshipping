@@ -183,5 +183,35 @@
     "ean": "6938818321816",
     "title": "Yealink BH70 Mono - Headset - Bluetooth",
     "detected_at": "2026-06-19T23:33:26.085977+00:00"
+  },
+  "NETT1035": {
+    "ean": "4779027312774",
+    "title": "Teltonika TRM240 - Modem",
+    "detected_at": "2026-06-20T04:50:39.509803+00:00"
+  },
+  "NETT1078": {
+    "ean": "4779051841455",
+    "title": "Teltonika TRM500 - Wireless Router",
+    "detected_at": "2026-06-20T04:50:55.529635+00:00"
+  },
+  "NETU0084": {
+    "ean": "0810084690185",
+    "title": "UbiQuiti UniFi Protect UVC-G5-BULLET - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-06-20T04:51:32.347374+00:00"
+  },
+  "NOCO0017": {
+    "ean": "1210000620095",
+    "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boost Jump Starters",
+    "detected_at": "2026-06-20T04:52:22.896352+00:00"
+  },
+  "NOCO0021": {
+    "ean": "1210000617286",
+    "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case | Boost Accessories",
+    "detected_at": "2026-06-20T04:52:31.575720+00:00"
+  },
+  "NOCO0024": {
+    "ean": "1210000621047",
+    "title": "NOCO GBC101 | NOCO GBX45 EVA Protection Case | Boost Accessories",
+    "detected_at": "2026-06-20T04:52:34.756230+00:00"
   }
 }
