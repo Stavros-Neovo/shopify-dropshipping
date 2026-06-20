@@ -243,5 +243,15 @@
     "ean": "6938818319608",
     "title": "Yealink WH64 Mono - Headset - On-Ear",
     "detected_at": "2026-06-20T11:07:02.835081+00:00"
+  },
+  "REFR0009": {
+    "ean": "5713518290584",
+    "title": "Refurb® Lenovo ThinkPad Dockingstation 40A90090EU",
+    "detected_at": "2026-06-20T14:36:22.112922+00:00"
+  },
+  "REFT1001": {
+    "ean": "5711603083851",
+    "title": "T1A Dell Latitude 5320 (13.3\")",
+    "detected_at": "2026-06-20T14:36:38.533704+00:00"
   }
 }
