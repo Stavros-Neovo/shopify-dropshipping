@@ -1,115 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-20T11:02:30.740444+00:00",
+  "generated_at": "2026-06-20T11:21:28.850463+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 77,
   "catalog": {
-    "total_skus": 1097,
-    "images_verified": 443,
-    "images_missing": 654
+    "total_skus": 1059,
+    "images_verified": 428,
+    "images_missing": 631
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-20T08:29:53.879165+00:00",
-      "checked": 600,
-      "lowered": 40,
-      "raised": 58,
-      "set_to_floor": 93,
+      "timestamp": "2026-06-20T11:05:31.462235+00:00",
+      "checked": 77,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 27,
       "skipped_floor": 0,
-      "skipped_few": 21,
-      "skipped_image": 22,
-      "unchanged": 364,
-      "errors": 2,
+      "skipped_few": 1,
+      "skipped_image": 8,
+      "unchanged": 41,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 273.99,
-        "new": 274.99,
-        "diff": 1.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM4K0060",
-        "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8G",
-        "old": 264.99,
-        "new": 265.99,
-        "diff": 1.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 745.99,
-        "new": 753.95,
-        "diff": 7.96,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 673.99,
-        "new": 681.95,
-        "diff": 7.96,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 645.99,
-        "new": 652.95,
-        "diff": 6.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 97.99,
-        "new": 95.99,
-        "diff": -2.0,
+        "sku": "SUPV0056",
+        "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x ",
+        "old": 21.99,
+        "new": 11.99,
+        "diff": -10.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 719.99,
-        "new": 728.95,
-        "diff": 8.96,
-        "action": "raised"
+        "sku": "SUPV0064",
+        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
+        "old": 64.99,
+        "new": 56.99,
+        "diff": -8.0,
+        "action": "lowered"
       },
       {
-        "sku": "REFT0007",
-        "title": "tecXL HP EliteDesk 800 G6 MP",
-        "old": 638.99,
-        "new": 645.95,
-        "diff": 6.96,
-        "action": "raised"
+        "sku": "SUPV0068",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
+        "old": 74.99,
+        "new": 65.99,
+        "diff": -9.0,
+        "action": "lowered"
       },
       {
-        "sku": "REFT0014",
-        "title": "tecXL HP EliteDesk 800 G4 MP",
-        "old": 465.99,
-        "new": 469.99,
-        "diff": 4.0,
-        "action": "raised"
+        "sku": "SUPV0070",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 72.99,
+        "diff": -10.0,
+        "action": "lowered"
       },
       {
-        "sku": "REFT0017",
-        "title": "tecXL Asus BE24WQLB - LED-Monitor - (24.1\")",
-        "old": 97.99,
-        "new": 99.99,
-        "diff": 2.0,
-        "action": "raised"
+        "sku": "SUPV0071",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 72.99,
+        "diff": -10.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 329.99,
+        "new": 301.99,
+        "diff": -28.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0084",
+        "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/P",
+        "old": 32.99,
+        "new": 23.99,
+        "diff": -9.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0085",
+        "title": "Verbatim Cool’n’go Airjet Handheld Fan White/",
+        "old": 32.99,
+        "new": 23.99,
+        "diff": -9.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPY0000",
+        "title": "Yealink DECT Headset WH62 Mono UC",
+        "old": 190.99,
+        "new": 172.99,
+        "diff": -18.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPY0010",
+        "title": "Yealink IP Telefon SIP-T54W V2",
+        "old": 200.99,
+        "new": 181.99,
+        "diff": -19.0,
+        "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-16",
-        "lowered": 4,
-        "raised": 51,
-        "floor": 0
-      },
       {
         "date": "2026-06-17",
         "lowered": 39,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-20",
         "lowered": 40,
         "raised": 58,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-20",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
