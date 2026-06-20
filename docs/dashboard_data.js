@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-19T23:02:24.581971+00:00",
+  "generated_at": "2026-06-20T04:06:52.087389+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 77,
   "catalog": {
     "total_skus": 1097,
     "images_verified": 443,
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-19T22:15:48.624589+00:00",
-      "checked": 600,
-      "lowered": 39,
-      "raised": 60,
-      "set_to_floor": 94,
+      "timestamp": "2026-06-19T23:32:30.857245+00:00",
+      "checked": 77,
+      "lowered": 0,
+      "raised": 4,
+      "set_to_floor": 23,
       "skipped_floor": 0,
-      "skipped_few": 21,
-      "skipped_image": 20,
-      "unchanged": 364,
-      "errors": 2,
+      "skipped_few": 1,
+      "skipped_image": 4,
+      "unchanged": 45,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 290.99,
-        "new": 291.99,
-        "diff": 1.0,
-        "action": "raised"
+        "sku": "SUPV0056",
+        "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x ",
+        "old": 21.99,
+        "new": 13.99,
+        "diff": -8.0,
+        "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 273.99,
-        "new": 274.99,
-        "diff": 1.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM4K0060",
-        "title": "Kingston Fury Renegade - DDR4-KIT-16GB - 2X8G",
-        "old": 264.99,
-        "new": 265.99,
-        "diff": 1.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 745.99,
-        "new": 753.95,
-        "diff": 7.96,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 673.99,
-        "new": 681.95,
-        "diff": 7.96,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 645.99,
-        "new": 652.95,
-        "diff": 6.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 97.99,
-        "new": 95.99,
+        "sku": "SUPV0064",
+        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
+        "old": 64.99,
+        "new": 62.99,
         "diff": -2.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 719.99,
-        "new": 728.95,
-        "diff": 8.96,
+        "sku": "SUPV0067",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
+        "old": 74.99,
+        "new": 72.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0068",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
+        "old": 74.99,
+        "new": 72.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0069",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 80.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0070",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 80.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0071",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 80.99,
+        "diff": -2.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 329.99,
+        "new": 331.99,
+        "diff": 2.0,
         "action": "raised"
       },
       {
-        "sku": "REFT0007",
-        "title": "tecXL HP EliteDesk 800 G6 MP",
-        "old": 638.99,
-        "new": 645.95,
-        "diff": 6.96,
-        "action": "raised"
+        "sku": "SUPV0084",
+        "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/P",
+        "old": 32.99,
+        "new": 26.99,
+        "diff": -6.0,
+        "action": "lowered"
       },
       {
-        "sku": "REFT0014",
-        "title": "tecXL HP EliteDesk 800 G4 MP",
-        "old": 465.99,
-        "new": 469.99,
-        "diff": 4.0,
-        "action": "raised"
+        "sku": "SUPV0085",
+        "title": "Verbatim Cool’n’go Airjet Handheld Fan White/",
+        "old": 32.99,
+        "new": 26.99,
+        "diff": -6.0,
+        "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-16",
-        "lowered": 2,
-        "raised": 51,
-        "floor": 0
-      },
       {
         "date": "2026-06-16",
         "lowered": 40,
@@ -187,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 39,
         "raised": 60,
         "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 0,
+        "raised": 4,
+        "floor": 0
       }
     ]
   },
@@ -212,12 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 97.94
     },
     "chart_7d": [
-      {
-        "date": "13.06",
-        "revenue": 219.98,
-        "profit": 13.14,
-        "sales": 1
-      },
       {
         "date": "14.06",
         "revenue": 0,
@@ -253,15 +247,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "21.05",
+        "date": "20.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "22.05",
         "revenue": 0,
@@ -435,15 +429,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "22.03",
+        "date": "20.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "23.03",
         "revenue": 0,
@@ -977,6 +971,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "20.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1264,7 +1264,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1274,7 +1274,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1284,7 +1284,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1294,7 +1294,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1304,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1314,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1324,7 +1324,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1334,7 +1334,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1344,7 +1344,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1354,7 +1354,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1364,7 +1364,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 13,
+        "days_left": 12,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
