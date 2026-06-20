@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-20T20:18:58.665665+00:00",
+  "generated_at": "2026-06-20T22:13:58.486681+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,75 +9,29 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-20T18:50:35.125296+00:00",
+      "timestamp": "2026-06-20T20:44:44.188090+00:00",
       "checked": 600,
       "lowered": 0,
-      "raised": 6,
+      "raised": 1,
       "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 119,
-      "skipped_image": 17,
-      "unchanged": 457,
-      "errors": 1,
+      "skipped_few": 222,
+      "skipped_image": 29,
+      "unchanged": 348,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "HDIS0273",
-        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
-        "old": 1499.95,
-        "new": 1568.95,
-        "diff": 69.0,
-        "action": "raised"
-      },
-      {
-        "sku": "HDIS0280",
-        "title": "Seagate Exos M ST28000NM003K / 28 TB",
-        "old": 1349.95,
-        "new": 1410.95,
-        "diff": 61.0,
-        "action": "raised"
-      },
-      {
-        "sku": "HDIS0295",
-        "title": "Seagate BarraCuda ST20000DM001 / 20TB / 3,5\"",
-        "old": 900.95,
-        "new": 941.95,
-        "diff": 41.0,
-        "action": "raised"
-      },
-      {
-        "sku": "NETT1074",
-        "title": "Teltonika RUTM56 - Wireless Router",
-        "old": 761.95,
-        "new": 793.95,
-        "diff": 32.0,
-        "action": "raised"
-      },
-      {
-        "sku": "NETU0017",
-        "title": "UbiQuiti UniFi USW-Pro-24-POE Switch",
-        "old": 872.95,
-        "new": 911.95,
-        "diff": 39.0,
-        "action": "raised"
-      },
-      {
-        "sku": "NETU0023",
-        "title": "UbiQuiti UniFi USW-PRO-48-POE Switch",
-        "old": 1366.95,
-        "new": 1428.95,
-        "diff": 62.0,
+        "sku": "SUPS2023",
+        "title": "Samsung Galaxy Buds4 Pro - True Wireless-Kopf",
+        "old": 235.99,
+        "new": 246.99,
+        "diff": 11.0,
         "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-18",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-18",
         "lowered": 1,
@@ -154,6 +108,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-20",
         "lowered": 0,
         "raised": 6,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-20",
+        "lowered": 0,
+        "raised": 1,
         "floor": 0
       }
     ]
