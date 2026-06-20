@@ -23,6 +23,7 @@ import base64
 import json
 import logging
 import os
+import re
 import time
 from pathlib import Path
 from typing import Any, Dict, Optional
@@ -99,6 +100,33 @@ def _load_category_map(path: str = "ebay_categories.yaml"):
         log.warning(f"Kategorie-Mapping nicht geladen: {e} — Fallback-Kategorie wird genutzt")
 
 _load_category_map()
+
+# Titel-Keyword-Erkennung fuer gemischte BAB-Gruppen (CE/ZUBEHÖR/HW/GA/PPS),
+# die keinem einzelnen ItemMainGroup->eBay-Mapping zugeordnet werden koennen.
+# Wird VOR der Taxonomy-API gepruft, da die in get_category_for_title() oft
+# Vorschlaege liefert die an _category_is_feasible() scheitern und dann auf
+# den "Kabel & Adapter"-Default zurueckfallen, obwohl der Titel eindeutig ist.
+# Alle IDs unten am 20.06. gegen die Taxonomy API verifiziert (Vorschlag +
+# _category_is_feasible()==True), NICHT geraten.
+_TITLE_KEYWORD_MAP: list[tuple[re.Pattern, str]] = [
+    (re.compile(r"\bswitch\b|\brouter\b|access\s*point|range\s*extender", re.I), "51268"),   # Netzwerk
+    (re.compile(r"led-lampe|leuchtstreifen|light\s*bar|light\s*panel|glide\s*wall|glide\s*hexa", re.I), "20706"),  # Leuchtmittel
+    (re.compile(r"katzenstreu|cat\s*litter|katzenklo|litter\s*box", re.I), "116363"),  # Katzenstreu
+    (re.compile(r"powerbank|power\s*bank", re.I),                    "20357"),   # Akkus
+    (re.compile(r"zahnbürste|toothbrush", re.I),                     "31770"),   # Elektrische Zahnbürsten
+    (re.compile(r"haartrockner|haarstyler", re.I),                   "11858"),   # Haartrockner
+    (re.compile(r"\btrimmer\b|rasierer|bartschneider|epilierer", re.I), "67408"), # Haar- & Bartschneidegeräte
+    (re.compile(r"dockingstation|dock\b", re.I),                     "31510"),   # Notebooks & Zubehör
+    (re.compile(r"überwachungskamera|security\s*camera|haustierroboter", re.I), "48638"),  # Überwachungskameras
+]
+
+
+def _guess_category_from_title(title: str) -> str:
+    """Keyword-Fallback fuer gemischte BAB-Gruppen, siehe _TITLE_KEYWORD_MAP."""
+    for pattern, cat_id in _TITLE_KEYWORD_MAP:
+        if pattern.search(title):
+            return cat_id
+    return ""
 
 # Cache für Taxonomy-Lookups (title → categoryId)
 _TAXONOMY_CACHE: Dict[str, str] = {}
@@ -836,6 +864,11 @@ class EbayClient:
         # 1. Manuelles Mapping hat Vorrang
         if bab_category and bab_category in _CAT_MAP:
             return _CAT_MAP[bab_category]
+
+        # 1b. Titel-Keyword-Erkennung fuer gemischte BAB-Gruppen (CE/ZUBEHÖR/HW/GA/PPS)
+        guessed = _guess_category_from_title(title)
+        if guessed:
+            return guessed
 
         # 2. Taxonomy-Cache prüfen
         cache_key = title[:40].lower()

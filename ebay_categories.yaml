@@ -10,6 +10,27 @@
 
 category_map:
 
+  # --- ECHTE BAB ItemMainGroup-Codes (20.06.2026 verifiziert gegen bab_preisliste.csv) ---
+  # Alle Keys unten waren vorher Phantom-Werte, die in der aktuellen CSV nie
+  # vorkommen -> 0/1321 Artikel haben je gematcht, alles fiel auf den
+  # "Kabel & Adapter"-Fallback zurueck. Diese hier sind eindeutige 1:1-Gruppen
+  # (gemischte Gruppen wie CE/ZUBEHÖR/HW/GA/PPS/GRADE A bleiben bewusst draussen,
+  # die brauchen Titel-basierte Erkennung statt einer pauschalen Zuordnung).
+  "SSD":                      "175669"  # SSDs
+  "SATA":                     "175669"  # SSDs (meist portable SSDs)
+  "FLASH":                    "175673"  # Flash-Speicher
+  "DDR3":                     "170083"  # Arbeitsspeicher
+  "DDR4":                     "170083"  # Arbeitsspeicher
+  "DDR5":                     "170083"  # Arbeitsspeicher
+  "ROUTER":                   "51268"   # Netzwerk
+  "SWITCH":                   "51268"   # Netzwerk
+  "MONITOR":                  "80053"   # Displays
+  "INTEL":                    "164"     # CPUs
+  "AMD":                      "164"     # CPUs
+  "INTERN":                   "56083"   # Festplatten
+  "EXTERN":                   "56083"   # Festplatten
+  "DOCKING":                  "31510"   # Notebooks & Zubehör
+
   # --- Kabel & Adapter (größte Kategorie, 20k+ Artikel) ---
   "Kabel & Adapter":          "44932"   # ✓ USB-Kabel, -Hubs & -Adapter (Taxonomy-verifiziert)
 
