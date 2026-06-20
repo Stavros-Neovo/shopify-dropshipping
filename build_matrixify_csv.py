@@ -165,10 +165,24 @@ def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
     if not enrichment:
         return _fallback_description(bab_title)
 
-    parts = []
-    lead = enrichment.get("marketing_text") or enrichment.get("long_summary") or enrichment.get("short_summary") or ""
-    if lead:
-        parts.append(f"<p>{lead}</p>")
+    title_norm = bab_title.strip().lower()
+
+    def is_real_text(val: str) -> bool:
+        # Mehrere Quellen (ddg_images, manual, scraper) haben den Titel 1:1 in
+        # short_summary/long_summary kopiert statt einer echten Beschreibung -
+        # das zaehlt NICHT als verwertbarer Text, auch wenn das Feld nicht leer ist
+        return bool(val) and val.strip().lower() != title_norm
+
+    lead = ""
+    for field in ("marketing_text", "long_summary", "short_summary"):
+        candidate = enrichment.get(field) or ""
+        if is_real_text(candidate):
+            lead = candidate
+            break
+
+    # Immer eine substantielle Basis: echter Lead-Text, sonst Titel+Marke-Fallback
+    # (nie nur ein nackter Link oder eine Spec-Tabelle ohne Einleitung)
+    parts = [f"<p>{lead}</p>" if lead else _fallback_description(bab_title, enrichment.get("brand", ""))]
 
     specs = enrichment.get("specs_html") or ""
     if specs:
@@ -178,7 +192,7 @@ def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
     if mfr_url and mfr_url.startswith("http"):
         parts.append(f'<p><small><a href="{mfr_url}" target="_blank" rel="noopener">Herstellerinformationen</a></small></p>')
 
-    return "\n".join(parts) if parts else _fallback_description(bab_title, enrichment.get("brand", ""))
+    return "\n".join(parts)
 
 
 def slugify(text: str) -> str:
