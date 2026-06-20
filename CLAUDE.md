@@ -16,10 +16,11 @@ eBay-Dropshipping via BAB Distribution GmbH. Einziger Lieferant.
 
 ```
 Kostenbasis = EK_netto + 5.00 (Versand) + EK×25% (Marge) + EK×5% (Retouren-Rücklage)
-VK_brutto   = Kostenbasis × 1.19 ÷ (1 − 0.13)
+VK_brutto   = Kostenbasis × 1.19 ÷ (1 − ebay_fee_rate − campaign_fee_rate)
 ```
 - EK aus `Price_B2B` in BAB CSV (netto, ohne MwSt, ohne Versand)
-- 21% eBay-Gebühren eingepreist (13% Grundgebühr + 8% Promoted Listings, **läuft aktiv**, Kampagne bestätigt vom Nutzer 19.06. — nicht nur Kalkulationspuffer!)
+- **Promoted Listings seit 20.06.2026 deaktiviert** (`campaign_fee_rate: 0.0` in `config_shop2.yaml`). War vorher aktiv (8%, vom Nutzer am 19.06. bestätigt). Effektive eBay-Gebühr aktuell nur 13%.
+- **Bug gefunden+gefixt (20.06.):** `pricing.py` hatte `campaign_fee_rate` nie in die Formel eingerechnet (nur `repricer.py` tat das) → die beiden Preis-Skripte widersprachen sich seit Aktivierung der Kampagne. Jetzt konsistent.
 - **Retouren-Rücklage 5% auf EK** (`config_shop2.yaml: ebay_pricing.return_reserve_rate`): BAB nimmt nichts zurück, eBay-Kunden haben aber 14 Tage Widerrufsrecht — jede Retoure ist ein voller EK-Verlust. Noch nicht durch echte Retourenquote validiert, nachjustieren wenn Daten da sind.
 - Gleiche Rücklage fließt in `dashboard_generator.py::calc_profit_item` (Reporting) und den JS-Wasserfall im Gewinn-Tab ein
 

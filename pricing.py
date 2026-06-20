@@ -137,7 +137,10 @@ def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
         raise ValueError(f"Ungültiger EK: {ek_net}")
 
     shipping = float(ebay_pricing_cfg.get("shipping_cost_eur", 5.00))
-    ebay_fee = float(ebay_pricing_cfg.get("ebay_fee_rate", 0.13))
+    # Gesamtgebühr = Grundgebühr + Promoted Listings (falls Kampagne aktiv,
+    # sonst campaign_fee_rate=0 in config_shop2.yaml) - konsistent mit repricer.py::calc_vk
+    ebay_fee = (float(ebay_pricing_cfg.get("ebay_fee_rate", 0.13))
+                + float(ebay_pricing_cfg.get("campaign_fee_rate", 0.0)))
     vat = float(ebay_pricing_cfg.get("vat_rate", 0.19))
     min_margin = float(ebay_pricing_cfg.get("min_margin_eur", 5.00))
     rounding = ebay_pricing_cfg.get("rounding_strategy", "psychological_99")

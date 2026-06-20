@@ -21,7 +21,7 @@ SHOPIFY_CSV    = "docs/shopify_products.csv"
 
 EBAY_FEE      = 0.13   # 13 % eBay-Grundgebühr
 CAMPAIGN_FEE  = 0.08   # 8 % Promoted Listings (cost-per-sale) - nur Kalkulationspuffer in der Preisformel!
-PROMOTED_LISTINGS_ACTIVE = True  # Nutzer bestätigt 19.06.: Kampagne läuft, 8% pro Verkauf
+PROMOTED_LISTINGS_ACTIVE = False  # Nutzer hat Kampagne am 20.06. in Seller Hub beendet
 TOTAL_FEE     = EBAY_FEE + (CAMPAIGN_FEE if PROMOTED_LISTINGS_ACTIVE else 0.0)  # echte Gebühr für Reporting
 VAT_FACTOR  = 1.19   # Brutto → Netto
 SHIP_COST   = 5.0    # Pauschale Versandkosten (was wir zahlen)

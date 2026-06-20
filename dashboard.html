@@ -547,8 +547,8 @@
             <div class="calc-box">
               <div class="calc-row"><span class="calc-label">Einkaufspreis (EK)</span><span class="calc-val" id="c-ek">100,00 €</span></div>
               <div class="calc-row"><span class="calc-label">VK netto (EK×1,25 + 5)</span><span class="calc-val" id="c-vknetto">130,00 €</span></div>
-              <div class="calc-row"><span class="calc-label">VK brutto (÷0,79 ×1,19 − 3,99)</span><span class="calc-val" id="c-vkbrutto">191,84 €</span></div>
-              <div class="calc-row"><span class="calc-label">eBay-Gebühren (21%)</span><span class="calc-val negative" id="c-fee">− 40,29 €</span></div>
+              <div class="calc-row"><span class="calc-label">VK brutto (÷0,87 ×1,19 − 3,99)</span><span class="calc-val" id="c-vkbrutto">191,84 €</span></div>
+              <div class="calc-row"><span class="calc-label">eBay-Gebühren (13%)</span><span class="calc-val negative" id="c-fee">− 40,29 €</span></div>
               <div class="calc-row"><span class="calc-label">MwSt. ans Finanzamt</span><span class="calc-val negative" id="c-vat">− 30,68 €</span></div>
               <div class="calc-row"><span class="calc-label">Reingewinn</span><span class="calc-val positive" id="c-profit">+ 20,87 €</span></div>
               <div class="calc-row"><span class="calc-label">Netto-Marge</span><span class="calc-val positive" id="c-margin">10,9%</span></div>
@@ -559,7 +559,7 @@
             <div class="cmd-box" style="font-size:12px">
               <div style="color:#64748b;margin-bottom:8px"># smart_lister.py / fix_ghost_listings.py</div>
               <div><span class="cmd-prompt">VAT</span>       = <span style="color:#34d399">1.19</span></div>
-              <div><span class="cmd-prompt">TOTAL_FEE</span> = <span style="color:#34d399">0.21</span>  <span style="color:#475569"># eBay + Promoted</span></div>
+              <div><span class="cmd-prompt">TOTAL_FEE</span> = <span style="color:#34d399">0.13</span>  <span style="color:#475569"># eBay, Promoted seit 20.06. deaktiviert</span></div>
               <div><span class="cmd-prompt">SHIP</span>      = <span style="color:#34d399">5.00</span>  <span style="color:#475569"># Versandpauschale</span></div>
               <div style="margin-top:8px">vk_netto = ek * <span style="color:#fbbf24">1.25</span> + SHIP</div>
               <div>vk_brutto = vk_netto * VAT / (1 - TOTAL_FEE) - <span style="color:#fbbf24">3.99</span></div>
@@ -567,8 +567,8 @@
             <div style="margin-top:16px;padding:12px;background:#f0fdf4;border-radius:8px;border:1px solid #bbf7d0">
               <div style="font-size:11px;color:#15803d;font-weight:700;margin-bottom:6px">Gebührenstruktur</div>
               <div style="font-size:11px;color:#166534">• eBay-Provision: 13% vom VK</div>
-              <div style="font-size:11px;color:#166534">• Promoted Listings: 8% vom VK</div>
-              <div style="font-size:11px;color:#166534">• Gesamt: 21% vom VK brutto</div>
+              <div style="font-size:11px;color:#166534">• Promoted Listings: 0% (seit 20.06. deaktiviert)</div>
+              <div style="font-size:11px;color:#166534">• Gesamt: 13% vom VK brutto</div>
               <div style="font-size:11px;color:#166534">• MwSt.: 19% (Top-Shop = Kleinunternehmer?)</div>
             </div>
           </div>
@@ -654,7 +654,7 @@
     <!-- ECHTDATEN BANNER -->
     <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;margin-bottom:16px">
       <div>
-        <div style="font-size:12px;font-weight:700;color:#15803d">📡 eBay-Gebühr: 21% (13% Grundgebühr + 8% Promoted Listings, Kampagne aktiv)</div>
+        <div style="font-size:12px;font-weight:700;color:#15803d">📡 eBay-Gebühr: 13% (Promoted Listings seit 20.06. deaktiviert)</div>
         <div id="g-fee-toggle-label" style="font-size:11px;color:#166534">Basis: echte Bestelldaten der letzten 30 Tage</div>
       </div>
     </div>
@@ -863,16 +863,16 @@
               <span style="font-size:13px;font-weight:700">13%</span>
             </div>
             <div style="display:flex;justify-content:space-between;padding:10px 14px;background:#f8fafc;border-radius:7px;border:1px solid var(--border)">
-              <span style="font-size:12px;color:var(--text-muted)">Promoted Listings (aktive Kampagne)</span>
-              <span style="font-size:13px;font-weight:700">8%</span>
+              <span style="font-size:12px;color:var(--text-muted)">Promoted Listings (seit 20.06. deaktiviert)</span>
+              <span style="font-size:13px;font-weight:700">0%</span>
             </div>
             <div style="display:flex;justify-content:space-between;padding:12px 14px;background:#dbeafe;border-radius:7px;border:1px solid #93c5fd">
               <span style="font-size:13px;font-weight:700;color:#1d4ed8">Gesamt vom VK brutto</span>
-              <span style="font-size:15px;font-weight:800;color:#1d4ed8">21%</span>
+              <span style="font-size:15px;font-weight:800;color:#1d4ed8">13%</span>
             </div>
           </div>
           <div style="margin-top:12px;padding:10px;background:#eff6ff;border:1px solid #93c5fd;border-radius:7px;font-size:11px;color:#1e40af">
-            ℹ️ Die Promoted-Listings-Kampagne läuft aktiv mit 8% Cost-per-Sale. Die Preisformel rechnet damit bereits korrekt — kein zusätzlicher Spielraum mehr.
+            ℹ️ Promoted Listings wurde am 20.06. deaktiviert. Die Preisformel zieht jetzt nur noch die 13%-Grundgebühr ab.
           </div>
         </div>
       </div>
@@ -973,8 +973,8 @@
         <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">BAB-Preisliste laden (CSV via HTTP)</div><div class="status-val">EAN, Preis, Bestand aus BAB-Feed</div></div><span class="badge badge-green">Aktiv</span></div>
         <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Artikel-Daten via IceCat / eBay API anreichern</div><div class="status-val">Titel, Beschreibung, Aspekte, Bilder</div></div><span class="badge badge-green">Aktiv</span></div>
         <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">eBay Offer erstellen / aktualisieren</div><div class="status-val">Nur neue Artikel · bereits gelistete werden übersprungen</div></div><span class="badge badge-green">Aktiv</span></div>
-        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">Makita-Sperre + banned_skus.json</div><div class="status-val">12 gesperrte SKUs werden nie gelistet</div></div><span class="badge badge-green">Aktiv</span></div>
-        <div class="status-item"><div class="status-dot-sm dot-blue"></div><div style="flex:1"><div class="status-label">Promoted Listings Kampagne (8%)</div><div class="status-val">eBay Seller Hub → Marketing → Standard · manuell aktiviert</div></div><span class="badge badge-blue">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-green"></div><div style="flex:1"><div class="status-label">banned_skus.json (Makita + Nischenartikel)</div><div class="status-val">50 gesperrte SKUs werden nie gelistet</div></div><span class="badge badge-green">Aktiv</span></div>
+        <div class="status-item"><div class="status-dot-sm dot-amber"></div><div style="flex:1"><div class="status-label">Promoted Listings Kampagne</div><div class="status-val">eBay Seller Hub → Marketing · seit 20.06. deaktiviert</div></div><span class="badge badge-gray">Aus</span></div>
       </div>
     </div>
 
@@ -1372,7 +1372,7 @@ const G = {
   vkBrutto:    _gStats.month_revenue ?? 0,        // Umsatz brutto (30 Tage)
   ekNetto:     _gStats.month_ek ?? 0,             // EK netto (BAB)
   ebayFeeReal: _gStats.month_ebay_fee ?? 0,       // echte eBay-Gebühr (13%+ggf. Promoted)
-  ebayFeeEst:  (_gStats.month_revenue ?? 0) * 0.21,  // geschätzt 21% (inkl. geplante Promoted Listings)
+  ebayFeeEst:  (_gStats.month_revenue ?? 0) * 0.13,  // geschätzt 13% (Promoted seit 20.06. deaktiviert)
   retourenRuecklage: _gStats.month_return_reserve ?? 0,  // BAB nimmt nichts zurück -> 5% auf EK zurückgehalten
   useRealFees: true,     // toggle: echte vs. kalkulierte Gebühren
 };
@@ -1408,7 +1408,7 @@ function calcGewinn() {
 
   // Update toggle-label if present
   const toggleEl = document.getElementById('g-fee-toggle-label');
-  if (toggleEl) toggleEl.textContent = `eBay-Gebühr (30 Tage): ${eur(ebayBrutto)} (${ebayPct}%, inkl. 8% Promoted Listings)`;
+  if (toggleEl) toggleEl.textContent = `eBay-Gebühr (30 Tage): ${eur(ebayBrutto)} (${ebayPct}%, Promoted Listings deaktiviert)`;
   const est   = Math.max(0, rohgewinn) * estRate;
   const gst   = Math.max(0, rohgewinn) * gstRate;
   const soli  = est * soliRate;
@@ -1524,8 +1524,8 @@ if (retSlider) {
 function calcPrice() {
   const ek = parseFloat(document.getElementById('ek-input').value) || 100;
   const vk_netto = ek * 1.25 + 5;
-  const vk_brutto = (vk_netto * 1.19 / 0.79) - 3.99;
-  const fee = vk_brutto * 0.21;
+  const vk_brutto = (vk_netto * 1.19 / 0.87) - 3.99;
+  const fee = vk_brutto * 0.13;
   const vat = (vk_brutto / 1.19) * 0.19;
   const profit = vk_brutto - fee - vat - ek;
   const margin = (profit / vk_brutto * 100);
@@ -2514,7 +2514,7 @@ async function ordersSyncFromRemote() {
 
 // Gewinn berechnen (selbe Formel wie smart_lister.py)
 function calcProfit(vk, ek) {
-  const TOTAL_FEE = 0.21;
+  const TOTAL_FEE = 0.13;  // Promoted Listings seit 20.06. deaktiviert (war 0.21)
   const VAT = 1.19;
   const SHIP = 5.0;
   const fee = vk * TOTAL_FEE;
