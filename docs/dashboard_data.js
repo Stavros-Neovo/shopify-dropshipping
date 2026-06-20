@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-19T21:12:51.633186+00:00",
+  "generated_at": "2026-06-20T08:23:42.614665+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,16 +9,16 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-19T20:50:07.720629+00:00",
+      "timestamp": "2026-06-20T04:44:24.865681+00:00",
       "checked": 600,
-      "lowered": 4,
-      "raised": 57,
-      "set_to_floor": 44,
+      "lowered": 2,
+      "raised": 52,
+      "set_to_floor": 43,
       "skipped_floor": 0,
-      "skipped_few": 11,
-      "skipped_image": 13,
-      "unchanged": 469,
-      "errors": 2,
+      "skipped_few": 12,
+      "skipped_image": 19,
+      "unchanged": 472,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
@@ -105,24 +105,6 @@ window.DASHBOARD_DATA = {
     ],
     "chart_history": [
       {
-        "date": "2026-06-15",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-16",
-        "lowered": 2,
-        "raised": 51,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-16",
-        "lowered": 40,
-        "raised": 86,
-        "floor": 0
-      },
-      {
         "date": "2026-06-16",
         "lowered": 0,
         "raised": 0,
@@ -187,6 +169,24 @@ window.DASHBOARD_DATA = {
         "lowered": 4,
         "raised": 57,
         "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 39,
+        "raised": 60,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-19",
+        "lowered": 0,
+        "raised": 4,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-20",
+        "lowered": 2,
+        "raised": 52,
+        "floor": 0
       }
     ]
   },
@@ -212,12 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 97.94
     },
     "chart_7d": [
-      {
-        "date": "13.06",
-        "revenue": 219.98,
-        "profit": 13.14,
-        "sales": 1
-      },
       {
         "date": "14.06",
         "revenue": 0,
@@ -253,15 +247,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "21.05",
+        "date": "20.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "22.05",
         "revenue": 0,
@@ -435,15 +429,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "22.03",
+        "date": "20.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "23.03",
         "revenue": 0,
@@ -977,6 +971,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "20.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1264,7 +1264,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1274,7 +1274,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1284,7 +1284,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1294,7 +1294,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1304,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1314,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1324,7 +1324,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1334,7 +1334,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1344,7 +1344,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1354,7 +1354,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1364,7 +1364,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 13,
+        "days_left": 12,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
