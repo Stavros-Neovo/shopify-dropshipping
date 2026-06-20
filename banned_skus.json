@@ -80,5 +80,309 @@
     "brand": "Makita",
     "title": "Makita DTW700Z - Schlagschrauber, 18 V",
     "note": "Vorsichtshalber gesperrt nach Abmahnung HHWM0023/HHWM0028"
+  },
+  "PPCA0005": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 436.45,
+    "title": "Anker EverFrost Powered Cooler 33L + Cooler Battery SET",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPCA0006": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 477.05,
+    "title": "Anker EverFrost Powered Cooler 43L + Cooler Battery SET",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPCA0007": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 558.25,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPCA0009": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1014.99,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPCE0007": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 497.35,
+    "title": "ECOFLOW GLACIER Classic 35L",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPE0015": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1231.7,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPE0209": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1231.7,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPSE0041": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 418.59,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPSE0043": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1319.5,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPSE0083": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 416.15,
+    "title": "ECOFLOW 4 x250W Rigid Solar Panel",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPSE0101": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 406.0,
+    "title": "ECOFLOW Single Axis Solar Tracker",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PPSS2003": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 903.35,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PVSG0032": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1164.71,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "PVSG0034": {
+    "reason": "Nischen-Zubehoer (EcoFlow/Anker Power-Station Ersatzteile/Batterien) - sehr hoher EK, sehr enger Kaeuferkreis, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 539.98,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPL0326": {
+    "reason": "B2B Enterprise Videokonferenz-Equipment - sehr hoher EK, Nischenmarkt, geringes Wiederverkaufspotenzial im Privatkundengeschaeft",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1305.0,
+    "title": "Logitech ConferenceCam Rally Plus Video conference kit",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPL0507": {
+    "reason": "B2B Enterprise Videokonferenz-Equipment - sehr hoher EK, Nischenmarkt, geringes Wiederverkaufspotenzial im Privatkundengeschaeft",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1363.15,
+    "title": "Logitech Rally Bar Mini - Webcam",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPL0589": {
+    "reason": "B2B Enterprise Videokonferenz-Equipment - sehr hoher EK, Nischenmarkt, geringes Wiederverkaufspotenzial im Privatkundengeschaeft",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1144.92,
+    "title": "Logitech ConferenceCam Sight 4k graphite",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPZ0020": {
+    "reason": "B2B Industrie-Etikettendrucker - Nischenmarkt, geringes Wiederverkaufspotenzial im Privatkundengeschaeft",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 309.58,
+    "title": "Zebra ZD421t - Etikettendrucker - Thermotransfer - Rolle (11,2 cm)",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPZ0033": {
+    "reason": "B2B Industrie-Etikettendrucker - Nischenmarkt, geringes Wiederverkaufspotenzial im Privatkundengeschaeft",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 345.1,
+    "title": "Zebra ZD421t - Etikettendrucker - Thermotransfer",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "GARH0001": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1421.0,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "GARH0002": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1522.5,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "GARH0003": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1522.5,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWE0018": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1013.99,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWE1003": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 517.65,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWE1008": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 518.46,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWM4005": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 669.9,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWM4006": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 654.68,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWX0136": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 740.95,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWX0140": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 395.85,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWX0148": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 1004.85,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "HHWX0149": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 588.7,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "MBAI0044": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 345.01,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "REFR2000": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 492.28,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SDXS0034": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 342.5,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPH0053": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 781.55,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPJ0166": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 782.57,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPL6003": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 893.2,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
+  },
+  "SUPV0037": {
+    "reason": "Nie angereichert (kein Titel/Beschreibung vorhanden), hoher EK - unklares Produkt, geringes Wiederverkaufspotenzial",
+    "banned_at": "2026-06-20",
+    "category": "low_resale_potential",
+    "ek": 342.06,
+    "title": "",
+    "note": "Geschaeftsentscheidung (nicht rechtlich) - kann bei Bedarf manuell wieder freigegeben werden"
   }
 }
