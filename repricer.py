@@ -61,8 +61,8 @@ IDENTITY_PATH  = "/commerce/identity/v1/user/"
 
 # Repricing-Parameter
 UNDERCUT_EUR        = 1.01   # €1,01 unter Mitbewerber
-MIN_MARGIN_PCT      = 0.20   # Mindestmarge 20% auf EK (absoluter Boden)
-TARGET_MARGIN_PCT   = 0.25   # Zielpreis 25% auf EK (Normalpreis)
+MIN_MARGIN_PCT      = 0.20   # Fallback falls margin_tiers in config fehlt
+TARGET_MARGIN_PCT   = 0.25   # Fallback falls margin_tiers in config fehlt
 MIN_COMPETITORS     = 2      # Mindestanzahl Mitbewerber für Preissenkung
 MAX_DROP_PCT        = 0.15   # Max 15% Preissenkung pro Lauf
 MAX_RAISE_PCT       = 0.08   # Max 8% Preiserhöhung pro Lauf (sanfte Erholung)
@@ -289,6 +289,20 @@ def get_competitor_prices(
 
 # ─── Repricing-Logik ─────────────────────────────────────────────────────────
 
+def get_margin_tier(ek: float, cfg: dict) -> tuple[float, float]:
+    """Gibt (floor_margin, target_margin) für einen EK-Preis zurück.
+    Je teurer der Artikel, desto niedriger die Marge (Staffel in margin_tiers) -
+    haelt absoluten Gewinn ordentlich, bleibt bei teuren Artikeln aber
+    konkurrenzfaehig statt mit starrem Prozentsatz liegenzubleiben."""
+    tiers = cfg.get("ebay_pricing", {}).get("margin_tiers", [])
+    for tier in tiers:
+        if ek < float(tier["ek_max"]):
+            floor = float(tier.get("floor_margin", MIN_MARGIN_PCT))
+            target = float(tier.get("margin", TARGET_MARGIN_PCT))
+            return floor, target
+    return MIN_MARGIN_PCT, TARGET_MARGIN_PCT
+
+
 def reprice_product(
     ean: str,
     sku: str,
@@ -306,9 +320,27 @@ def reprice_product(
     Repricing-Entscheidung für ein einzelnes Produkt.
     Gibt ein Ergebnis-Dict zurück (für Report/Dashboard).
     """
-    floor_price  = psychological_round(calc_vk(ek, MIN_MARGIN_PCT,    cfg))
-    normal_price = psychological_round(calc_vk(ek, TARGET_MARGIN_PCT, cfg))
+    floor_margin, target_margin = get_margin_tier(ek, cfg)
+    floor_price  = psychological_round(calc_vk(ek, floor_margin,  cfg))
+    normal_price = psychological_round(calc_vk(ek, target_margin, cfg))
     min_margin   = cfg["ebay_pricing"].get("min_margin_eur", 5.0)
+
+    # Absoluter Mindestgewinn sichern - bei sehr günstigen Artikeln kann die
+    # Prozent-Marge der Staffel unter min_margin_eur fallen (z.B. 25% auf EK=15€)
+    ep = cfg["ebay_pricing"]
+    total_fee = ep.get("ebay_fee_rate", 0.13) + ep.get("campaign_fee_rate", 0.0)
+    vat = ep.get("vat_rate", 0.19)
+    ship = ep.get("shipping_cost_eur", 5.0)
+    return_reserve_eur = ek * ep.get("return_reserve_rate", 0.0)
+
+    def floor_actual_margin(vk: float) -> float:
+        return (vk * (1 - total_fee)) / (1 + vat) - ek - ship - return_reserve_eur
+
+    while floor_actual_margin(floor_price) < min_margin:
+        floor_price = psychological_round(floor_price + 1.0)
+        if floor_price > normal_price:
+            normal_price = floor_price
+            break
 
     result = {
         "ean":              ean,

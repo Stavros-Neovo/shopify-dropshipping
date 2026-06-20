@@ -79,10 +79,23 @@ ebay_pricing:
   campaign_fee_rate: 0.0         # Promoted Listings deaktiviert (20.06.2026) - war 0.08
   vat_rate: 0.19
 
-  # Fixe 25% Marge für alle Preisklassen
+  # Margen-Staffel nach EK: je teurer der Artikel, desto niedriger der Prozentsatz
+  # (absoluter Gewinn bleibt ordentlich, aber wir bleiben bei teuren Artikeln
+  # konkurrenzfähig). margin = Zielpreis (Normalpreis), floor_margin = absoluter
+  # Boden, unter den repricer.py niemals geht (siehe MIN_MARGIN_PCT-Ablösung dort).
   margin_tiers:
-    - ek_max: 999999.0
+    - ek_max: 30.0
+      margin: 0.30
+      floor_margin: 0.25
+    - ek_max: 100.0
       margin: 0.25
+      floor_margin: 0.20
+    - ek_max: 300.0
+      margin: 0.20
+      floor_margin: 0.15
+    - ek_max: 999999.0
+      margin: 0.15
+      floor_margin: 0.10
 
   # Retouren-Rücklage: BAB hat kein Rückgaberecht für uns, eBay-Kunden aber
   # 14 Tage Widerrufsrecht (Fernabsatzrecht) - jede Rücksendung ist ein
