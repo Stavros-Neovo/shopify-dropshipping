@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-21T06:07:30.055579+00:00",
+  "generated_at": "2026-06-21T10:34:16.666250+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,26 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-21T01:42:45.863321+00:00",
+      "timestamp": "2026-06-21T07:12:54.180492+00:00",
       "checked": 600,
-      "lowered": 0,
+      "lowered": 39,
       "raised": 0,
-      "set_to_floor": 0,
+      "set_to_floor": 138,
       "skipped_floor": 0,
-      "skipped_few": 126,
-      "skipped_image": 17,
-      "unchanged": 457,
+      "skipped_few": 33,
+      "skipped_image": 38,
+      "unchanged": 352,
       "errors": 0,
       "dry_run": false
     },
-    "recent_changes": [],
-    "chart_history": [
+    "recent_changes": [
       {
-        "date": "2026-06-19",
-        "lowered": 0,
-        "raised": 7,
-        "floor": 0
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 279.99,
+        "new": 253.99,
+        "diff": -26.0,
+        "action": "lowered"
       },
+      {
+        "sku": "RAM4K0015",
+        "title": "Kingston FURY Beast DDR4-3200-16GB KIT (KF432",
+        "old": 227.99,
+        "new": 205.99,
+        "diff": -22.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 210.99,
+        "new": 190.99,
+        "diff": -20.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 263.99,
+        "new": 238.99,
+        "diff": -25.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 688.99,
+        "new": 627.95,
+        "diff": -61.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 622.99,
+        "new": 567.95,
+        "diff": -55.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 596.99,
+        "new": 543.95,
+        "diff": -53.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 97.99,
+        "new": 86.99,
+        "diff": -11.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "REFT0007",
+        "title": "tecXL HP EliteDesk 800 G6 MP",
+        "old": 589.99,
+        "new": 537.95,
+        "diff": -52.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 383.99,
+        "new": 367.99,
+        "diff": -16.0,
+        "action": "lowered"
+      }
+    ],
+    "chart_history": [
       {
         "date": "2026-06-19",
         "lowered": 4,
@@ -104,6 +179,12 @@ window.DASHBOARD_DATA = {
       {
         "date": "2026-06-21",
         "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 39,
         "raised": 0,
         "floor": 0
       }
