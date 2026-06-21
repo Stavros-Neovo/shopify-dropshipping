@@ -323,5 +323,25 @@
     "ean": "0195892130499",
     "title": "Lenovo - ThinkPad Smart Dock 5500 - Dockingstation",
     "detected_at": "2026-06-21T07:25:55.114826+00:00"
+  },
+  "MOHP0024": {
+    "ean": "0198122902057",
+    "title": "HP 524pm - Series 5 Pro - LED-Monitor - 61 cm (24\") (9E0G9UT#ABB)",
+    "detected_at": "2026-06-21T13:22:39.283027+00:00"
+  },
+  "MOL0000": {
+    "ean": "0198156725684",
+    "title": "Lenovo ThinkVision T24D-40 - LED-Monitor - 61 cm (23,8\") (64B9GAT1EU)",
+    "detected_at": "2026-06-21T13:22:41.492832+00:00"
+  },
+  "NETT0192": {
+    "ean": "4897098685105",
+    "title": "TP-LINK Tapo C420S1 - Überwachungskamera",
+    "detected_at": "2026-06-21T13:24:03.772991+00:00"
+  },
+  "NETU0173": {
+    "ean": "0810084698815",
+    "title": "Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret",
+    "detected_at": "2026-06-21T13:26:10.627683+00:00"
   }
 }
