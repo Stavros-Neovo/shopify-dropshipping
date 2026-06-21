@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-20T22:13:58.486681+00:00",
+  "generated_at": "2026-06-21T00:12:49.354466+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 77,
   "catalog": {
     "total_skus": 1059,
     "images_verified": 428,
@@ -9,35 +9,20 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-20T20:44:44.188090+00:00",
-      "checked": 600,
+      "timestamp": "2026-06-20T22:37:14.455663+00:00",
+      "checked": 77,
       "lowered": 0,
-      "raised": 1,
+      "raised": 0,
       "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 222,
-      "skipped_image": 29,
-      "unchanged": 348,
+      "skipped_few": 28,
+      "skipped_image": 8,
+      "unchanged": 41,
       "errors": 0,
       "dry_run": false
     },
-    "recent_changes": [
-      {
-        "sku": "SUPS2023",
-        "title": "Samsung Galaxy Buds4 Pro - True Wireless-Kopf",
-        "old": 235.99,
-        "new": 246.99,
-        "diff": 11.0,
-        "action": "raised"
-      }
-    ],
+    "recent_changes": [],
     "chart_history": [
-      {
-        "date": "2026-06-18",
-        "lowered": 1,
-        "raised": 38,
-        "floor": 0
-      },
       {
         "date": "2026-06-19",
         "lowered": 0,
@@ -115,6 +100,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 1,
         "floor": 0
+      },
+      {
+        "date": "2026-06-20",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -140,12 +131,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 163.95
     },
     "chart_7d": [
-      {
-        "date": "14.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "15.06",
         "revenue": 279.98,
@@ -181,15 +166,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "22.05",
+        "date": "21.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "23.05",
         "revenue": 0,
@@ -363,15 +348,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "23.03",
+        "date": "21.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "24.03",
         "revenue": 0,
@@ -905,6 +890,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "21.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1192,7 +1183,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14726-98065",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Kioxia TransMemory U301 128GB USB 3.0"
         ],
@@ -1202,7 +1193,7 @@ window.DASHBOARD_DATA = {
         "order_id": "22-14719-39725",
         "date": "2026-06-07",
         "deadline": "2026-06-21",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1212,7 +1203,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1222,7 +1213,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1232,7 +1223,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1242,7 +1233,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1252,7 +1243,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1262,7 +1253,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1272,7 +1263,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1282,7 +1273,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1292,7 +1283,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 12,
+        "days_left": 11,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
