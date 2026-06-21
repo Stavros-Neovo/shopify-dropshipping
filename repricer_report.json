@@ -1,16 +1,6 @@
 {
   "history": [
     {
-      "timestamp": "2026-06-12T12:03:55.799916+00:00",
-      "checked": 1220,
-      "lowered": 3,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 903,
-      "unchanged": 138,
-      "errors": 87
-    },
-    {
       "timestamp": "2026-06-14T11:44:38.399747+00:00",
       "checked": 400,
       "lowered": 2,
@@ -323,19 +313,30 @@
       "skipped_image": 8,
       "unchanged": 41,
       "errors": 0
+    },
+    {
+      "timestamp": "2026-06-21T01:42:45.863321+00:00",
+      "checked": 600,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 126,
+      "skipped_image": 17,
+      "unchanged": 457,
+      "errors": 0
     }
   ],
   "last_changes": [],
   "last_run": {
-    "timestamp": "2026-06-20T22:37:14.455663+00:00",
-    "checked": 77,
+    "timestamp": "2026-06-21T01:42:45.863321+00:00",
+    "checked": 600,
     "lowered": 0,
     "raised": 0,
     "set_to_floor": 0,
     "skipped_floor": 0,
-    "skipped_few": 28,
-    "skipped_image": 8,
-    "unchanged": 41,
+    "skipped_few": 126,
+    "skipped_image": 17,
+    "unchanged": 457,
     "errors": 0,
     "dry_run": false
   }
