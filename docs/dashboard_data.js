@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-21T19:49:57.047220+00:00",
+  "generated_at": "2026-06-21T21:19:44.444786+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 77,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 1059,
     "images_verified": 428,
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-21T17:57:58.520119+00:00",
-      "checked": 77,
-      "lowered": 0,
+      "timestamp": "2026-06-21T20:07:28.436799+00:00",
+      "checked": 600,
+      "lowered": 4,
       "raised": 0,
-      "set_to_floor": 18,
+      "set_to_floor": 87,
       "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 9,
+      "skipped_few": 17,
+      "skipped_image": 21,
+      "unchanged": 469,
+      "errors": 2,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0056",
-        "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x ",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 512.99,
+        "new": 466.99,
+        "diff": -46.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0064",
-        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
-        "old": 64.99,
-        "new": 59.99,
-        "diff": -5.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 241.99,
+        "new": 218.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0068",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
-        "old": 74.99,
-        "new": 68.99,
-        "diff": -6.0,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 210.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0070",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
-        "old": 82.99,
-        "new": 74.99,
-        "diff": -8.0,
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 172.99,
+        "new": 155.99,
+        "diff": -17.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0071",
-        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
-        "old": 82.99,
-        "new": 74.99,
-        "diff": -8.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 477.99,
+        "new": 436.99,
+        "diff": -41.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0073",
-        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
-        "old": 317.99,
-        "new": 288.99,
-        "diff": -29.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 639.99,
+        "new": 583.95,
+        "diff": -56.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0084",
-        "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/P",
-        "old": 32.99,
-        "new": 26.99,
-        "diff": -6.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 291.99,
+        "new": 264.99,
+        "diff": -27.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0085",
-        "title": "Verbatim Cool’n’go Airjet Handheld Fan White/",
-        "old": 32.99,
-        "new": 26.99,
-        "diff": -6.0,
+        "sku": "HDIS0271",
+        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
+        "old": 356.99,
+        "new": 324.99,
+        "diff": -32.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0000",
-        "title": "Yealink DECT Headset WH62 Mono UC",
-        "old": 183.99,
-        "new": 165.99,
-        "diff": -18.0,
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 233.99,
+        "new": 211.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 193.99,
-        "new": 174.99,
-        "diff": -19.0,
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 389.99,
+        "new": 355.99,
+        "diff": -34.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-20",
-        "lowered": 40,
-        "raised": 58,
-        "floor": 0
-      },
       {
         "date": "2026-06-20",
         "lowered": 0,
@@ -185,6 +179,12 @@ window.DASHBOARD_DATA = {
       {
         "date": "2026-06-21",
         "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       }
