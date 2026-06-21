@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-21T00:12:49.354466+00:00",
+  "generated_at": "2026-06-21T06:07:30.055579+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 77,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 1059,
     "images_verified": 428,
@@ -9,26 +9,20 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-20T22:37:14.455663+00:00",
-      "checked": 77,
+      "timestamp": "2026-06-21T01:42:45.863321+00:00",
+      "checked": 600,
       "lowered": 0,
       "raised": 0,
       "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 8,
-      "unchanged": 41,
+      "skipped_few": 126,
+      "skipped_image": 17,
+      "unchanged": 457,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [],
     "chart_history": [
-      {
-        "date": "2026-06-19",
-        "lowered": 0,
-        "raised": 9,
-        "floor": 0
-      },
       {
         "date": "2026-06-19",
         "lowered": 0,
@@ -103,6 +97,12 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "2026-06-20",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
         "lowered": 0,
         "raised": 0,
         "floor": 0
