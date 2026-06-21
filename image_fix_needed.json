@@ -343,5 +343,15 @@
     "ean": "0810084698815",
     "title": "Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret",
     "detected_at": "2026-06-21T13:26:10.627683+00:00"
+  },
+  "SUPH4049": {
+    "ean": "0197498152394",
+    "title": "HP Poly CS540A - Headset with handset lifter-EURO",
+    "detected_at": "2026-06-21T15:30:23.263643+00:00"
+  },
+  "SUPJ0184": {
+    "ean": "5706991027501",
+    "title": "JABRA Evolve2 55 - Mono Headset",
+    "detected_at": "2026-06-21T15:30:55.604310+00:00"
   }
 }
