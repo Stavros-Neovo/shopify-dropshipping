@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-20T14:12:57.690241+00:00",
+  "generated_at": "2026-06-22T10:45:00.766944+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,41 +9,41 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-20T11:27:14.822898+00:00",
+      "timestamp": "2026-06-22T05:35:43.661110+00:00",
       "checked": 600,
-      "lowered": 8,
+      "lowered": 4,
       "raised": 0,
-      "set_to_floor": 96,
+      "set_to_floor": 88,
       "skipped_floor": 0,
       "skipped_few": 17,
-      "skipped_image": 17,
-      "unchanged": 460,
-      "errors": 2,
+      "skipped_image": 21,
+      "unchanged": 469,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
         "sku": "CPUI0215",
         "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 554.99,
+        "old": 512.99,
         "new": 466.99,
-        "diff": -88.0,
+        "diff": -46.0,
         "action": "lowered"
       },
       {
         "sku": "ENAB0009",
         "title": "Enabot EBO Air2 White",
-        "old": 250.99,
+        "old": 241.99,
         "new": 218.99,
-        "diff": -32.0,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
         "sku": "ENAB0011",
         "title": "Enabot EBO Air2 Pink",
-        "old": 241.99,
+        "old": 232.99,
         "new": 210.99,
-        "diff": -31.0,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
@@ -57,134 +57,134 @@ window.DASHBOARD_DATA = {
       {
         "sku": "HDIS0198",
         "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 496.99,
+        "old": 477.99,
         "new": 436.99,
-        "diff": -60.0,
+        "diff": -41.0,
         "action": "lowered"
       },
       {
         "sku": "HDIS0241",
         "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 692.99,
+        "old": 639.99,
         "new": 583.95,
-        "diff": -109.04,
+        "diff": -56.04,
         "action": "lowered"
       },
       {
         "sku": "HDIS0247",
         "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 302.99,
+        "old": 291.99,
         "new": 264.99,
-        "diff": -38.0,
+        "diff": -27.0,
         "action": "lowered"
       },
       {
         "sku": "HDIS0271",
         "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
-        "old": 370.99,
+        "old": 356.99,
         "new": 324.99,
-        "diff": -46.0,
+        "diff": -32.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0273",
-        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
-        "old": 1802.95,
-        "new": 1499.95,
-        "diff": -303.0,
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 233.99,
+        "new": 211.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0280",
-        "title": "Seagate Exos M ST28000NM003K / 28 TB",
-        "old": 1621.95,
-        "new": 1349.95,
-        "diff": -272.0,
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 389.99,
+        "new": 355.99,
+        "diff": -34.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
       {
-        "date": "2026-06-17",
+        "date": "2026-06-20",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-17",
-        "lowered": 1,
-        "raised": 49,
+        "date": "2026-06-20",
+        "lowered": 0,
+        "raised": 6,
         "floor": 0
       },
       {
-        "date": "2026-06-17",
-        "lowered": 1,
-        "raised": 24,
+        "date": "2026-06-20",
+        "lowered": 0,
+        "raised": 1,
         "floor": 0
       },
       {
-        "date": "2026-06-18",
+        "date": "2026-06-20",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-18",
-        "lowered": 1,
-        "raised": 38,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-19",
+        "date": "2026-06-21",
         "lowered": 0,
-        "raised": 9,
+        "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-19",
-        "lowered": 0,
-        "raised": 7,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-19",
-        "lowered": 4,
-        "raised": 57,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-19",
+        "date": "2026-06-21",
         "lowered": 39,
-        "raised": 60,
+        "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-19",
-        "lowered": 0,
-        "raised": 4,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-20",
-        "lowered": 2,
-        "raised": 52,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-20",
-        "lowered": 40,
-        "raised": 58,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-20",
+        "date": "2026-06-21",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-20",
-        "lowered": 8,
+        "date": "2026-06-21",
+        "lowered": 5,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 39,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 4,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 41,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-22",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       }
@@ -195,12 +195,12 @@ window.DASHBOARD_DATA = {
       "today_sales": 0,
       "today_revenue": 0.0,
       "today_profit": 0.0,
-      "week_sales": 4,
-      "week_revenue": 514.94,
-      "week_profit": 77.82,
-      "prev_week_sales": 5,
-      "prev_week_revenue": 404.9,
-      "prev_week_profit": 61.43,
+      "week_sales": 0,
+      "week_revenue": 0.0,
+      "week_profit": 0.0,
+      "prev_week_sales": 4,
+      "prev_week_revenue": 514.94,
+      "prev_week_profit": 77.82,
       "month_sales": 11,
       "month_revenue": 973.8,
       "month_profit": 163.95,
@@ -212,18 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 163.95
     },
     "chart_7d": [
-      {
-        "date": "14.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "15.06",
-        "revenue": 279.98,
-        "profit": 32.65,
-        "sales": 1
-      },
       {
         "date": "16.06",
         "revenue": 182.97,
@@ -253,21 +241,21 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "21.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "22.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_30d": [
-      {
-        "date": "22.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "23.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "24.05",
         "revenue": 0,
@@ -435,21 +423,21 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "21.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "22.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_90d": [
-      {
-        "date": "23.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "24.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "25.03",
         "revenue": 0,
@@ -977,6 +965,18 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "21.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "22.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1261,30 +1261,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "18-14726-98065",
-        "date": "2026-06-07",
-        "deadline": "2026-06-21",
-        "days_left": 1,
-        "items": [
-          "Kioxia TransMemory U301 128GB USB 3.0"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "22-14719-39725",
-        "date": "2026-06-07",
-        "deadline": "2026-06-21",
-        "days_left": 1,
-        "items": [
-          "Dell MS116 - Maus - optisch - 2 Tasten -"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 2,
+        "days_left": 0,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1294,7 +1274,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 2,
+        "days_left": 0,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1304,17 +1284,17 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 5,
+        "days_left": 3,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 6,
+        "days_left": 4,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1324,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 7,
+        "days_left": 5,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1334,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 9,
+        "days_left": 7,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1344,7 +1324,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 10,
+        "days_left": 8,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1354,7 +1334,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 10,
+        "days_left": 8,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1364,7 +1344,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 12,
+        "days_left": 10,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],

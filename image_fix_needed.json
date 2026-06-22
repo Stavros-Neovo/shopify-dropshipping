@@ -253,5 +253,105 @@
     "ean": "5711603083851",
     "title": "T1A Dell Latitude 5320 (13.3\")",
     "detected_at": "2026-06-20T14:36:38.533704+00:00"
+  },
+  "RAM5C0013": {
+    "ean": "649528929983",
+    "title": "Crucial DDR5 - 32GB 5600 SO-DIMM KIT 2x16GB (CT2K16G56C46S5)",
+    "detected_at": "2026-06-20T20:44:55.879110+00:00"
+  },
+  "RAM5C1005": {
+    "ean": "0840006680628",
+    "title": "Corsair Vengeance RGB DDR5 - KIT 32GB-2X16GB -(CMH32GX5M2B6000C38)",
+    "detected_at": "2026-06-20T20:44:58.757236+00:00"
+  },
+  "RAM5K0035": {
+    "ean": "0740617326154",
+    "title": "Kingston FURY IMPACT SODIMM - DDR5-16GB-(KF548S38IB-16)",
+    "detected_at": "2026-06-20T20:45:09.626043+00:00"
+  },
+  "SUPB1057": {
+    "ean": "0017817861120",
+    "title": "Bose QuietComfort Ultra Earbuds (2. Gen.) Black",
+    "detected_at": "2026-06-20T20:46:29.247410+00:00"
+  },
+  "SUPB1067": {
+    "ean": "0017817861083",
+    "title": "Bose QuietComfort Ultra Earbuds (2. Gen.) Midnight Violet",
+    "detected_at": "2026-06-20T20:46:32.983715+00:00"
+  },
+  "SUPD1024": {
+    "ean": "5397184961735",
+    "title": "Dell Pro Dock WD25 - Dockingstation - USB-C - HDMI, 2 x DP, USB-C",
+    "detected_at": "2026-06-21T07:19:07.507045+00:00"
+  },
+  "SUPD1027": {
+    "ean": "5397063763610",
+    "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
+    "detected_at": "2026-06-21T07:19:11.346852+00:00"
+  },
+  "SUPD1030": {
+    "ean": "5397321029045",
+    "title": "Dell Pro Dock WD25Z - Dockingstation - USB-C",
+    "detected_at": "2026-06-21T07:19:15.430415+00:00"
+  },
+  "SUPH0049": {
+    "ean": "0198415314925",
+    "title": "HP Thunderbolt Dock G6 - Dockingstation - Thunderbolt 4",
+    "detected_at": "2026-06-21T07:24:32.938094+00:00"
+  },
+  "SUPH0050": {
+    "ean": "0198415233004",
+    "title": "HP Thunderbolt Dock G6 - Dockingstation - Thunderbolt 4",
+    "detected_at": "2026-06-21T07:24:35.647520+00:00"
+  },
+  "SUPH0051": {
+    "ean": "0198415314048",
+    "title": "HP USB-C 100W G6 - Dockingstation",
+    "detected_at": "2026-06-21T07:24:37.834739+00:00"
+  },
+  "SUPL2024": {
+    "ean": "0195892052982",
+    "title": "Lenovo Dockingstation - USB-C - HDMI",
+    "detected_at": "2026-06-21T07:25:50.258447+00:00"
+  },
+  "SUPL2027": {
+    "ean": "0195892120551",
+    "title": "Lenovo ThinkPad Smart Dock 5500 - Dockingstation",
+    "detected_at": "2026-06-21T07:25:52.635551+00:00"
+  },
+  "SUPL2030": {
+    "ean": "0195892130499",
+    "title": "Lenovo - ThinkPad Smart Dock 5500 - Dockingstation",
+    "detected_at": "2026-06-21T07:25:55.114826+00:00"
+  },
+  "MOHP0024": {
+    "ean": "0198122902057",
+    "title": "HP 524pm - Series 5 Pro - LED-Monitor - 61 cm (24\") (9E0G9UT#ABB)",
+    "detected_at": "2026-06-21T13:22:39.283027+00:00"
+  },
+  "MOL0000": {
+    "ean": "0198156725684",
+    "title": "Lenovo ThinkVision T24D-40 - LED-Monitor - 61 cm (23,8\") (64B9GAT1EU)",
+    "detected_at": "2026-06-21T13:22:41.492832+00:00"
+  },
+  "NETT0192": {
+    "ean": "4897098685105",
+    "title": "TP-LINK Tapo C420S1 - Überwachungskamera",
+    "detected_at": "2026-06-21T13:24:03.772991+00:00"
+  },
+  "NETU0173": {
+    "ean": "0810084698815",
+    "title": "Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret",
+    "detected_at": "2026-06-21T13:26:10.627683+00:00"
+  },
+  "SUPH4049": {
+    "ean": "0197498152394",
+    "title": "HP Poly CS540A - Headset with handset lifter-EURO",
+    "detected_at": "2026-06-21T15:30:23.263643+00:00"
+  },
+  "SUPJ0184": {
+    "ean": "5706991027501",
+    "title": "JABRA Evolve2 55 - Mono Headset",
+    "detected_at": "2026-06-21T15:30:55.604310+00:00"
   }
 }
