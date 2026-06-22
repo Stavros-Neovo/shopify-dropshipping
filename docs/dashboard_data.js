@@ -1,115 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-22T10:45:00.766944+00:00",
+  "generated_at": "2026-06-22T15:57:17.701444+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 1059,
-    "images_verified": 428,
-    "images_missing": 631
+    "total_skus": 1041,
+    "images_verified": 420,
+    "images_missing": 621
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-22T05:35:43.661110+00:00",
+      "timestamp": "2026-06-22T12:29:15.979364+00:00",
       "checked": 600,
-      "lowered": 4,
+      "lowered": 42,
       "raised": 0,
-      "set_to_floor": 88,
+      "set_to_floor": 139,
       "skipped_floor": 0,
-      "skipped_few": 17,
-      "skipped_image": 21,
-      "unchanged": 469,
-      "errors": 1,
+      "skipped_few": 30,
+      "skipped_image": 42,
+      "unchanged": 347,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 512.99,
-        "new": 466.99,
-        "diff": -46.0,
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 210.99,
+        "new": 190.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 241.99,
-        "new": 218.99,
-        "diff": -23.0,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 263.99,
+        "new": 238.99,
+        "diff": -25.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 232.99,
-        "new": 210.99,
-        "diff": -22.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 688.99,
+        "new": 627.95,
+        "diff": -61.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 172.99,
-        "new": 155.99,
-        "diff": -17.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 622.99,
+        "new": 567.95,
+        "diff": -55.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 477.99,
-        "new": 436.99,
-        "diff": -41.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 596.99,
+        "new": 543.95,
+        "diff": -53.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 639.99,
-        "new": 583.95,
-        "diff": -56.04,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 97.99,
+        "new": 86.99,
+        "diff": -11.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 291.99,
-        "new": 264.99,
-        "diff": -27.0,
+        "sku": "REFT0007",
+        "title": "tecXL HP EliteDesk 800 G6 MP",
+        "old": 589.99,
+        "new": 537.95,
+        "diff": -52.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0271",
-        "title": "Seagate IronWolf Pro ST4000NT001 / 4TB",
-        "old": 356.99,
-        "new": 324.99,
-        "diff": -32.0,
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 383.99,
+        "new": 367.99,
+        "diff": -16.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 233.99,
-        "new": 211.99,
-        "diff": -22.0,
+        "sku": "SDXS0033",
+        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
+        "old": 365.99,
+        "new": 332.99,
+        "diff": -33.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 389.99,
-        "new": 355.99,
-        "diff": -34.0,
+        "sku": "SDXS1020",
+        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
+        "old": 416.99,
+        "new": 379.99,
+        "diff": -37.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-20",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-20",
         "lowered": 0,
@@ -187,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 4,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-22",
+        "lowered": 42,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -200,16 +200,16 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 4,
       "prev_week_revenue": 514.94,
-      "prev_week_profit": 77.82,
+      "prev_week_profit": 78.26,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 163.95,
-      "month_ek": 475.03,
+      "month_profit": 162.29,
+      "month_ek": 476.61,
       "month_ebay_fee": 127.66,
-      "month_return_reserve": 23.76,
+      "month_return_reserve": 23.84,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 163.95
+      "total_profit_30d": 162.29
     },
     "chart_7d": [
       {
@@ -349,7 +349,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "08.06",
         "revenue": 64.96,
-        "profit": 15.3,
+        "profit": 13.2,
         "sales": 2
       },
       {
@@ -391,7 +391,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 32.65,
+        "profit": 33.09,
         "sales": 1
       },
       {
@@ -891,7 +891,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "08.06",
         "revenue": 64.96,
-        "profit": 15.3,
+        "profit": 13.2,
         "sales": 2
       },
       {
@@ -933,7 +933,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 32.65,
+        "profit": 33.09,
         "sales": 1
       },
       {
@@ -1006,20 +1006,20 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 32.65,
+        "profit": 33.09,
         "vk": 275.99,
-        "ek": 159.09,
+        "ek": 158.67,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 36.4,
           "vat": 38.89,
           "netto_vk": 204.69,
           "ship": 5.0,
-          "ek": 159.09,
-          "return_reserve": 7.95,
-          "profit_u": 32.65,
+          "ek": 158.67,
+          "return_reserve": 7.93,
+          "profit_u": 33.09,
           "qty": 1,
-          "profit_t": 32.65
+          "profit_t": 33.09
         }
       },
       {
@@ -1128,27 +1128,6 @@ window.DASHBOARD_DATA = {
         }
       },
       {
-        "sku": "USBK1023",
-        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
-        "sold": 1,
-        "revenue": 21.99,
-        "profit": 7.79,
-        "vk": 21.99,
-        "ek": 5.9,
-        "calc": {
-          "vk_brutto": 25.98,
-          "ebay_fee": 3.38,
-          "vat": 3.61,
-          "netto_vk": 18.99,
-          "ship": 5.0,
-          "ek": 5.9,
-          "return_reserve": 0.3,
-          "profit_u": 7.79,
-          "qty": 1,
-          "profit_t": 7.79
-        }
-      },
-      {
         "sku": "SUPD1027",
         "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
         "sold": 1,
@@ -1189,6 +1168,27 @@ window.DASHBOARD_DATA = {
           "qty": 1,
           "profit_t": 7.51
         }
+      },
+      {
+        "sku": "USBK1023",
+        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
+        "sold": 1,
+        "revenue": 21.99,
+        "profit": 5.69,
+        "vk": 21.99,
+        "ek": 7.9,
+        "calc": {
+          "vk_brutto": 25.98,
+          "ebay_fee": 3.38,
+          "vat": 3.61,
+          "netto_vk": 18.99,
+          "ship": 5.0,
+          "ek": 7.9,
+          "return_reserve": 0.4,
+          "profit_u": 5.69,
+          "qty": 1,
+          "profit_t": 5.69
+        }
       }
     ],
     "recent_sales": [
@@ -1214,7 +1214,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 32.65
+        "profit": 33.09
       },
       {
         "date": "13.06 22:19",
@@ -1238,7 +1238,7 @@ window.DASHBOARD_DATA = {
         "date": "08.06 16:00",
         "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
         "revenue": 25.98,
-        "profit": 7.79
+        "profit": 5.69
       },
       {
         "date": "08.06 09:44",
@@ -1354,9 +1354,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 49.19,
-      "gewst_month": 24.59,
-      "total_month": 229.26
+      "est_month": 48.69,
+      "gewst_month": 24.34,
+      "total_month": 228.51
     },
     "expected_payout": 847.21
   },
