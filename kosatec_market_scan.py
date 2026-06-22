@@ -22,7 +22,7 @@ import requests
 from ebay_client import EbayClient
 from repricer import calc_vk, get_margin_tier, psychological_round, COMPETITOR_MIN_RATIO, BROWSE_PATH
 
-CANDIDATES_FILE = "/tmp/kosatec_full_candidates.json"
+CANDIDATES_FILE = "kosatec_full_candidates.json"
 STATE_FILE      = "kosatec_scan_state.json"
 RESULTS_FILE    = "kosatec_scan_results.json"
 
