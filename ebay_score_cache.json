@@ -106042,5 +106042,89 @@
     "min_price": 14.0,
     "max_price": 619.99,
     "queried_at": "2026-06-19T19:19:49.175633+00:00"
+  },
+  "0810177160601": {
+    "watch_count": 0,
+    "competitor_count": 2,
+    "min_price": 253.04,
+    "max_price": 301.69,
+    "queried_at": "2026-06-22T18:12:04.029825+00:00"
+  },
+  "4713294232625": {
+    "watch_count": 0,
+    "competitor_count": 13,
+    "min_price": 419.0,
+    "max_price": 1065.12,
+    "queried_at": "2026-06-22T18:12:04.627926+00:00"
+  },
+  "5713552033253": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:04.929436+00:00"
+  },
+  "5713552045331": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:05.250501+00:00"
+  },
+  "5713552044174": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:05.697517+00:00"
+  },
+  "5713552044310": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:06.062397+00:00"
+  },
+  "5713552024145": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:06.428145+00:00"
+  },
+  "5713552037862": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:06.775927+00:00"
+  },
+  "5713552044808": {
+    "watch_count": 0,
+    "competitor_count": 0,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "queried_at": "2026-06-22T18:12:07.119222+00:00"
+  },
+  "8806095811703": {
+    "watch_count": 0,
+    "competitor_count": 4,
+    "min_price": 515.05,
+    "max_price": 1781.76,
+    "queried_at": "2026-06-22T18:12:07.480440+00:00"
+  },
+  "8806090270123": {
+    "watch_count": 0,
+    "competitor_count": 2,
+    "min_price": 17.57,
+    "max_price": 25.18,
+    "queried_at": "2026-06-22T18:12:07.946302+00:00"
+  },
+  "8806092673885": {
+    "watch_count": 0,
+    "competitor_count": 2,
+    "min_price": 49.27,
+    "max_price": 74.55,
+    "queried_at": "2026-06-22T18:12:08.426710+00:00"
   }
 }
