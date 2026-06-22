@@ -601,6 +601,31 @@ class EbayClient:
         if category_id == "179471" or "battery charger" in t:
             return "Batterieladegerät"
 
+        # Headsets/Kopfhörer (80183, 112529) - alle unsere Jabra Evolve/Engage
+        # Modelle sind On-Ear-Buerohheadsets, keine In-Ear/Over-Ear Modelle
+        if category_id in ("80183", "112529"):
+            if "in-ear" in t or "earbuds" in t:        return "In-Ear-Kopfhörer"
+            if "over-ear" in t or "umschließend" in t: return "Ohrumschließende Kopfhörer"
+            return "Ohraufliegende Kopfhörer"
+
+        # Lichtschläuche & -ketten (116022)
+        if category_id == "116022":
+            if "string light" in t or "rope light" in t or "lichterkette" in t:
+                return "Lichterkette"
+            return "Lichtstreifen"
+
+        # Kochthermometer-Kategorie (43421) - Govee Fleisch-/Grillthermometer
+        if category_id == "43421" and "thermometer" in t:
+            return "Bratenthermometer"
+
+        # Reiseadapter/Akku-Zubehör (79846) - Verbatim GaN-Reiseadapter
+        if category_id == "79846" and ("travel adap" in t or "reiseadapter" in t):
+            return "Reiseadapter / Konverter"
+
+        # CD/DVD/Blu-ray-Laufwerke (131542) - externe optische Laufwerke
+        if category_id == "131542" and ("blu-ray" in t or "dvd" in t or "cd" in t):
+            return "Externes Laufwerk"
+
         return "Sonstiges"
 
     def _fetch_category_aspects(self, category_id: str) -> list:
