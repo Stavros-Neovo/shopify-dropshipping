@@ -2002,17 +2002,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "PPE0259": {
-    "ean": "4895251629638",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 49.02,
-    "vk": 99.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW DELTA 3 Bag",
-    "image_verified": false
-  },
   "PPE0286": {
     "ean": "4895251665056",
     "supplier": "BAB",
@@ -3828,22 +3817,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SSDL0010": {
-    "ean": "0843367123148",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 61.49,
-    "vk": 123.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 Lexar NM620 256GB NVME PCIe Gen. 3",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/241207.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/241207.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPA1046": {
     "ean": "0840414681804",
     "supplier": "BAB",
@@ -4277,16 +4250,6 @@
       "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg"
     ],
     "image_verified": true
-  },
-  "HDIW0213": {
-    "ean": "0718037896687",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 99.74,
-    "vk": 195.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDXT0225": {
     "ean": "4260557511213",
@@ -5691,17 +5654,6 @@
     "title": "Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",
     "image_verified": false
   },
-  "HHWM4014": {
-    "ean": "4006508225507",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.18,
-    "vk": 284.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Melitta AromaFresh Glas Pro X - Schwarz/Silber",
-    "image_verified": false
-  },
   "HHWO0004": {
     "ean": "1230000232463",
     "supplier": "BAB",
@@ -6383,7 +6335,7 @@
     "ean": "0843367136841",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 151.69,
+    "ek": 148.91,
     "vk": 293.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6599,37 +6551,6 @@
       "https://media.ipcstore.net/img/l/21287676.jpg"
     ],
     "image_too_small": true
-  },
-  "SUPD1030": {
-    "ean": "5397321029045",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 133.98,
-    "vk": 259.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e6244118916a5b8f13339741e8c7f19a55978131.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e6244118916a5b8f13339741e8c7f19a55978131.jpg",
-      "https://images.icecat.biz/img/gallery/1275de0d9e04eb54cd0bcf46f9a0013fd3ddee78.jpg",
-      "https://images.icecat.biz/img/gallery/d25e68a1a73c71745c629067676fc564f9e8f5ed.jpg",
-      "https://images.icecat.biz/img/gallery/51e130a9b078d048211d11fe2f11b45780813759.jpg"
-    ]
-  },
-  "SUPH0029": {
-    "ean": "0196068757403",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 145.65,
-    "vk": 281.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/102161860_3293911608.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/102161860_3293911608.jpg"
-    ],
-    "image_verified": true
   },
   "SUPH0050": {
     "ean": "0198415233004",
@@ -7127,16 +7048,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "CPUI0204": {
-    "ean": "5032037278508",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 297.01,
-    "vk": 566.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "CPUI0205": {
     "ean": "5032037278522",
     "supplier": "BAB",
@@ -7313,7 +7224,7 @@
     "ean": "8719706022095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 395.01,
+    "ek": 355.01,
     "vk": 751.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7599,16 +7510,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery_mediums/3b7e3e42e6ac4ad1d2fcaae74c9b1d8b69abbb5f.jpg"
     ]
-  },
-  "HDIT0203": {
-    "ean": "4260557511664",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 601.26,
-    "vk": 1139.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDIT0220": {
     "ean": "4260557512920",
@@ -7999,7 +7900,7 @@
     "ean": "6977728947303",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 629.3,
+    "ek": 598.85,
     "vk": 1192.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8310,22 +8211,6 @@
     "image_url": "https://media.ipcstore.net/img/l/21241706.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/21241706.jpg"
-    ],
-    "image_too_small": true
-  },
-  "NETU0160": {
-    "ean": "0810084698730",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 242.09,
-    "vk": 463.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Ubiquiti UniFi U7 Pro Outdoor - Accesspoint - Wi-Fi 7",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21241633.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21241633.jpg"
     ],
     "image_too_small": true
   },
@@ -10415,16 +10300,6 @@
     "title": "Mitel 722dt Set",
     "image_verified": true
   },
-  "SUPS0205": {
-    "ean": "4548736132580",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.48,
-    "vk": 322.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "SUPS0328": {
     "ean": "4548736134294",
     "supplier": "BAB",
@@ -11646,16 +11521,6 @@
     "ek": 11.0,
     "vk": 28.99,
     "title": "Petkit Katzenstreu Entferner Set Tofu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PETK0044": {
-    "ean": "6975069303475",
-    "supplier": "BAB",
-    "ek": 10.0,
-    "vk": 26.99,
-    "title": "Petkit Katzenstreu Entferner Set Mineralsand",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
@@ -14646,20 +14511,6 @@
     ],
     "image_verified": true
   },
-  "SUPY0014": {
-    "ean": "6938818307667",
-    "supplier": "BAB",
-    "ek": 194.17,
-    "vk": 373.99,
-    "title": "Yealink IP Telefon SIP-T58W",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/97934694_5556419105.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/97934694_5556419105.jpg"
-    ]
-  },
   "SUPY0019": {
     "ean": "6938818318410",
     "supplier": "BAB",
@@ -15185,20 +15036,5 @@
     "title": "ECOFLOW Smart Plug 2",
     "image_verified": false,
     "source": "manual_legacy_sku"
-  },
-  "NOCO0015": {
-    "ean": "1210000620088",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 166.46,
-    "vk": 288.99,
-    "listed_at": "2026-06-22T16:16:31.756264+00:00",
-    "updated_at": "2026-06-22T16:16:31.756264+00:00",
-    "title": "NOCO GBX75 | Boost X 12V 2500A Jump Starter | Boost Jump Starters",
-    "image_url": "https://no.co/media/catalog/product/g/b/gbx75.png",
-    "images": [
-      "https://no.co/media/catalog/product/g/b/gbx75.png"
-    ],
-    "image_verified": true
   }
 }
