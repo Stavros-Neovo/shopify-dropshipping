@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-21T23:19:59.983289+00:00",
+  "generated_at": "2026-06-22T04:55:56.840591+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 76,
   "catalog": {
     "total_skus": 1059,
     "images_verified": 428,
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-21T21:45:59.014948+00:00",
-      "checked": 600,
-      "lowered": 41,
+      "timestamp": "2026-06-21T23:47:57.926552+00:00",
+      "checked": 76,
+      "lowered": 0,
       "raised": 0,
-      "set_to_floor": 135,
+      "set_to_floor": 17,
       "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 40,
-      "unchanged": 354,
-      "errors": 0,
+      "skipped_few": 1,
+      "skipped_image": 8,
+      "unchanged": 41,
+      "errors": 9,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 279.99,
-        "new": 253.99,
-        "diff": -26.0,
+        "sku": "SUPV0064",
+        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
+        "old": 64.99,
+        "new": 59.99,
+        "diff": -5.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0015",
-        "title": "Kingston FURY Beast DDR4-3200-16GB KIT (KF432",
-        "old": 227.99,
-        "new": 205.99,
-        "diff": -22.0,
+        "sku": "SUPV0068",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 70W 2C RETRACTABLE",
+        "old": 74.99,
+        "new": 68.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0057",
-        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 210.99,
-        "new": 190.99,
-        "diff": -20.0,
+        "sku": "SUPV0070",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 74.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 263.99,
-        "new": 238.99,
-        "diff": -25.0,
+        "sku": "SUPV0071",
+        "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRA",
+        "old": 82.99,
+        "new": 74.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 688.99,
-        "new": 627.95,
-        "diff": -61.04,
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 317.99,
+        "new": 288.99,
+        "diff": -29.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 622.99,
-        "new": 567.95,
-        "diff": -55.04,
+        "sku": "SUPV0084",
+        "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/P",
+        "old": 32.99,
+        "new": 26.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 596.99,
-        "new": 543.95,
-        "diff": -53.04,
+        "sku": "SUPV0085",
+        "title": "Verbatim Cool’n’go Airjet Handheld Fan White/",
+        "old": 32.99,
+        "new": 26.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 97.99,
-        "new": 86.99,
-        "diff": -11.0,
+        "sku": "SUPY0000",
+        "title": "Yealink DECT Headset WH62 Mono UC",
+        "old": 183.99,
+        "new": 165.99,
+        "diff": -18.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0007",
-        "title": "tecXL HP EliteDesk 800 G6 MP",
-        "old": 589.99,
-        "new": 537.95,
-        "diff": -52.04,
+        "sku": "SUPY0010",
+        "title": "Yealink IP Telefon SIP-T54W V2",
+        "old": 193.99,
+        "new": 174.99,
+        "diff": -19.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 383.99,
-        "new": 367.99,
-        "diff": -16.0,
+        "sku": "SUPY0019",
+        "title": "Yealink IP Telefon MP56-Teams E2",
+        "old": 355.99,
+        "new": 323.99,
+        "diff": -32.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-20",
-        "lowered": 8,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-20",
         "lowered": 30,
@@ -187,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 41,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-21",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -195,12 +195,12 @@ window.DASHBOARD_DATA = {
       "today_sales": 0,
       "today_revenue": 0.0,
       "today_profit": 0.0,
-      "week_sales": 4,
-      "week_revenue": 514.94,
-      "week_profit": 77.82,
-      "prev_week_sales": 5,
-      "prev_week_revenue": 404.9,
-      "prev_week_profit": 61.43,
+      "week_sales": 0,
+      "week_revenue": 0.0,
+      "week_profit": 0.0,
+      "prev_week_sales": 4,
+      "prev_week_revenue": 514.94,
+      "prev_week_profit": 77.82,
       "month_sales": 11,
       "month_revenue": 973.8,
       "month_profit": 163.95,
@@ -212,12 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 163.95
     },
     "chart_7d": [
-      {
-        "date": "15.06",
-        "revenue": 279.98,
-        "profit": 32.65,
-        "sales": 1
-      },
       {
         "date": "16.06",
         "revenue": 182.97,
@@ -253,15 +247,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "23.05",
+        "date": "22.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "24.05",
         "revenue": 0,
@@ -435,15 +429,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "24.03",
+        "date": "22.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "25.03",
         "revenue": 0,
@@ -977,6 +971,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "22.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1261,30 +1261,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "18-14726-98065",
-        "date": "2026-06-07",
-        "deadline": "2026-06-21",
-        "days_left": 0,
-        "items": [
-          "Kioxia TransMemory U301 128GB USB 3.0"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "22-14719-39725",
-        "date": "2026-06-07",
-        "deadline": "2026-06-21",
-        "days_left": 0,
-        "items": [
-          "Dell MS116 - Maus - optisch - 2 Tasten -"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "18-14731-45799",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Kioxia TransMemory U202 white 64GB USB 2"
         ],
@@ -1294,7 +1274,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14722-05332",
         "date": "2026-06-08",
         "deadline": "2026-06-22",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Beurer IL 11 Infrarotlampe"
         ],
@@ -1304,17 +1284,17 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 4,
+        "days_left": 3,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1324,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1334,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1344,7 +1324,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1354,7 +1334,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1364,7 +1344,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 11,
+        "days_left": 10,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
