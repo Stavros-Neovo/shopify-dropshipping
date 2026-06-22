@@ -3405,16 +3405,15 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 51.23,
-    "vk": 104.99,
+    "vk": 87.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "NOCO GENIUS5EU | 5A Battery Charger | Genius Battery Chargers",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21324041.jpg",
+    "image_verified": true,
+    "image_url": "https://no.co/media/wysiwyg/0-GENIUS5_XXL.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21324041.jpg"
-    ],
-    "image_too_small": true
+      "https://no.co/media/wysiwyg/0-GENIUS5_XXL.jpg"
+    ]
   },
   "NOCO0011": {
     "ean": "1210000619273",
@@ -7512,16 +7511,11 @@
     "vk": 1125.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/127944.jpg",
+    "image_verified": true,
+    "image_url": "https://images.icecat.biz/img/gallery_mediums/101647676_4589093638.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/127944.jpg",
-      "https://media.ipcstore.net/img/l/127944_1.jpg",
-      "https://media.ipcstore.net/img/l/127944_2.jpg",
-      "https://media.ipcstore.net/img/l/127944_3.jpg",
-      "https://media.ipcstore.net/img/l/127944_4.jpg"
-    ],
-    "image_too_small": true
+      "https://images.icecat.biz/img/gallery_mediums/101647676_4589093638.jpg"
+    ]
   },
   "HDIS0273": {
     "ean": "0763649174883",
@@ -7759,12 +7753,11 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Seagate IronWolf Pro ST32000NT000 / 32TB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/143319.jpg",
+    "image_verified": true,
+    "image_url": "https://images.icecat.biz/img/gallery_mediums/3b7e3e42e6ac4ad1d2fcaae74c9b1d8b69abbb5f.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/143319.jpg"
-    ],
-    "image_too_small": true
+      "https://images.icecat.biz/img/gallery_mediums/3b7e3e42e6ac4ad1d2fcaae74c9b1d8b69abbb5f.jpg"
+    ]
   },
   "HDIT0203": {
     "ean": "4260557511664",
@@ -8610,7 +8603,7 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 198.78,
-    "vk": 381.99,
+    "vk": 318.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_url": "https://no.co/media/catalog/product/g/b/gb150.png",
@@ -8641,7 +8634,7 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 262.89,
-    "vk": 502.99,
+    "vk": 434.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_url": "https://no.co/media/catalog/product/g/b/gbx155.png",
@@ -15445,5 +15438,20 @@
     "title": "ECOFLOW Smart Plug 2",
     "image_verified": false,
     "source": "manual_legacy_sku"
+  },
+  "NOCO0015": {
+    "ean": "1210000620088",
+    "supplier": "BAB",
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "ek": 166.46,
+    "vk": 288.99,
+    "listed_at": "2026-06-22T16:16:31.756264+00:00",
+    "updated_at": "2026-06-22T16:16:31.756264+00:00",
+    "title": "NOCO GBX75 | Boost X 12V 2500A Jump Starter | Boost Jump Starters",
+    "image_url": "https://no.co/media/catalog/product/g/b/gbx75.png",
+    "images": [
+      "https://no.co/media/catalog/product/g/b/gbx75.png"
+    ],
+    "image_verified": true
   }
 }

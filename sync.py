@@ -262,6 +262,17 @@ def main():
         except Exception as e:
             log.warning(f"banned_skus.json konnte nicht geladen werden: {e}")
 
+    # Manuell fixierte Preise laden - sync.py wuerde sonst stuendlich den
+    # tier-berechneten Normalpreis zurueckschreiben und repricer.py's Pin ueberschreiben
+    pinned_skus: dict = {}
+    pinned_path = Path("pinned_skus.json")
+    if pinned_path.exists():
+        try:
+            pinned_skus = json.loads(pinned_path.read_text())
+            log.info(f"📌 Fixierte Preise geladen: {len(pinned_skus)}")
+        except Exception as e:
+            log.warning(f"pinned_skus.json konnte nicht geladen werden: {e}")
+
     # Gesperrte Listings sofort deaktivieren (falls noch im State)
     if banned_skus and ebay_enabled and ebay and not dry_run:
         active_banned = [sku for sku in banned_skus if sku in state and not state[sku].get("banned_offlined")]
@@ -341,6 +352,9 @@ def main():
                 )
             except Exception as e:
                 log.error(f"eBay-Pricing-Fehler für SKU {product.get('sku')}: {e}")
+
+            if ebay_pr and product["sku"] in pinned_skus:
+                ebay_pr.vk_gross = pinned_skus[product["sku"]]["price"]
 
         sku = product["sku"]
 

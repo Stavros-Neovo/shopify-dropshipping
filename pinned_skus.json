@@ -1,0 +1,22 @@
+{
+  "NOCO0006": {
+    "price": 318.99,
+    "reason": "Konkurrenzpreis 320€ mit 50 echten Verkaeufen beobachtet - bewusst leicht drunter",
+    "pinned_at": "2026-06-22"
+  },
+  "NOCO0017": {
+    "price": 434.99,
+    "reason": "Konkurrenzpreis 435,99€ mit 54 Beobachtern beobachtet - bewusst leicht drunter",
+    "pinned_at": "2026-06-22"
+  },
+  "NOCO0015": {
+    "price": 288.99,
+    "reason": "Neu gelistet - Konkurrenzpreis 290€ mit 45 Beobachtern, bewusst leicht drunter",
+    "pinned_at": "2026-06-22"
+  },
+  "NOCO0010": {
+    "price": 87.99,
+    "reason": "Reaktiviert mit neuem NOCO-Originalbild - Konkurrenzpreis 88€/8 Beobachter, nur 5,54EUR Marge, Repricer soll hier nicht unter den Floor rutschen",
+    "pinned_at": "2026-06-22"
+  }
+}

@@ -640,6 +640,7 @@ def main():
     IMAGE_FIX_FILE      = "image_fix_needed.json"
     VERLUSTBRINGER_FILE = "verlustbringer.json"
     BANNED_FILE         = "banned_skus.json"
+    PINNED_FILE         = "pinned_skus.json"
     try:
         image_fix = json.loads(Path(IMAGE_FIX_FILE).read_text(encoding="utf-8")) if Path(IMAGE_FIX_FILE).exists() else {}
     except Exception:
@@ -658,6 +659,14 @@ def main():
     if banned_skus:
         log.info(f"⛔ {len(banned_skus)} gesperrte SKUs geladen (banned_skus.json) — werden übersprungen")
 
+    try:
+        pinned_skus = json.loads(Path(PINNED_FILE).read_text(encoding="utf-8")) if Path(PINNED_FILE).exists() else {}
+    except Exception:
+        pinned_skus = {}
+
+    if pinned_skus:
+        log.info(f"📌 {len(pinned_skus)} manuell fixierte SKUs geladen (pinned_skus.json) — Preis bleibt stehen")
+
     stats["skipped_image"] = 0
 
     for n, (ean, feed_data) in enumerate(chunk_products, 1):
@@ -670,6 +679,14 @@ def main():
         # Gesperrte Artikel (Abmahnung / Markenrecht) niemals reprisen
         if sku in banned_skus:
             log.warning(f"  ⛔ {sku}: GESPERRT — {banned_skus[sku].get('reason','?')[:60]}")
+            stats["unchanged"] += 1
+            continue
+
+        # Manuell fixierter Preis (z.B. nach beobachtetem Konkurrenz-Verkaufspreis) -
+        # Repricer laesst diese SKUs unberuehrt, damit der Preis stabil bleibt statt
+        # bei fehlenden/wechselnden Konkurrenzdaten wieder Richtung Normalpreis zu klettern.
+        if sku in pinned_skus:
+            log.info(f"  📌 {sku}: Preis fixiert auf {pinned_skus[sku]['price']}€ — {pinned_skus[sku].get('reason','')[:50]}")
             stats["unchanged"] += 1
             continue
 

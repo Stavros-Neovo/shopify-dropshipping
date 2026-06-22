@@ -118,6 +118,8 @@ _TITLE_KEYWORD_MAP: list[tuple[re.Pattern, str]] = [
     (re.compile(r"\btrimmer\b|rasierer|bartschneider|epilierer", re.I), "67408"), # Haar- & Bartschneidegeräte
     (re.compile(r"dockingstation|dock\b", re.I),                     "31510"),   # Notebooks & Zubehör
     (re.compile(r"überwachungskamera|security\s*camera|haustierroboter", re.I), "48638"),  # Überwachungskameras
+    (re.compile(r"jump\s*starter|boost\s*x\b|\bstarthilfe\b", re.I),     "179472"),  # Booster & Starthilfekabel
+    (re.compile(r"\bbattery\s*charger\b", re.I),                        "179471"),  # Batterieladegeräte & Anlasser (NUR exakte Phrase - "charger" allein traf sonst Handy-/USB-Ladegeraete anderer Marken)
 ]
 
 
@@ -508,6 +510,10 @@ class EbayClient:
 
         # Kabel & Adapter (44932, 158840, 32834)
         if category_id in ("44932", "158840", "32834", "31388"):
+            # Jump Starter landen ueber den Taxonomy-Fallback manchmal faelschlich
+            # hier (Kabel & Adapter) statt in 179472 - Titel-Erkennung greift trotzdem
+            if "jump starter" in t or "starthilfe" in t or "boost x" in t:
+                return "Energiestation"
             if "hdmi" in t:                               return "HDMI-Kabel"
             if "displayport" in t or " dp " in t:         return "DisplayPort-Kabel"
             if "thunderbolt" in t:                        return "Thunderbolt-Kabel"
@@ -585,6 +591,15 @@ class EbayClient:
 
         # Mainboards (1244)
         if category_id == "1244": return "Mainboard"
+
+        # Booster & Starthilfekabel (179472) - erlaubte Werte laut eBay Taxonomy
+        # API sind NUR "Energiestation"/"Starthilfekabel", kein freier Text.
+        # Auch per Titel erkannt, falls Taxonomy-Fallback in falscher Kategorie
+        # landet (z.B. 44932 "USB-Kabel..." statt 179472).
+        if category_id == "179472" or "jump starter" in t or "starthilfe" in t or "boost x" in t:
+            return "Energiestation"
+        if category_id == "179471" or "battery charger" in t:
+            return "Batterieladegerät"
 
         return "Sonstiges"
 

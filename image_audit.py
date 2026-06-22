@@ -90,10 +90,11 @@ def icecat_fetch(ean: str) -> dict | None:
             log.debug(f"Icecat HTTP {r.status_code} für EAN {ean}")
             return None
         data = r.json()
-        code = data.get("Message", {}).get("Code")
-        if code != 0:
+        # Icecat gibt bei Erfolg {"msg": "OK", "data": {...}} zurueck, kein "Message.Code" -
+        # die alte Pruefung war immer falsch und hat JEDEN Treffer als "nicht gefunden" verworfen.
+        if data.get("msg") != "OK" or not data.get("data"):
             return None
-        return data.get("data") or None
+        return data["data"]
     except Exception as e:
         log.debug(f"Icecat Fehler EAN {ean}: {e}")
         return None
@@ -105,8 +106,11 @@ def extract_images(data: dict) -> tuple[str, list[str]]:
         return "", []
 
     img_obj  = data.get("Image") or {}
-    main_url = (img_obj.get("HighUrl") or img_obj.get("LowUrl") or
-                data.get("GeneralInfo", {}).get("Image", {}).get("HighUrl") or "")
+    # Pic500x500 ist von Icecat garantiert exakt 500x500 - bevorzugt vor HighPic,
+    # das z.B. ueber ipcstore.net manchmal nur 200x200 liefert. Feldnamen waren
+    # vorher falsch (HighUrl/LowUrl existieren nicht in der Icecat-Antwort).
+    main_url = (img_obj.get("Pic500x500") or img_obj.get("HighPic") or
+                img_obj.get("LowPic") or "")
 
     all_imgs = []
     if main_url:
