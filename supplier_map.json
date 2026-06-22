@@ -1535,20 +1535,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HHWE1011": {
-    "ean": "4895251631143",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 51.16,
-    "vk": 103.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-wave-series-car-vent-seal-1161397142.png?v=1746702576",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-wave-series-car-vent-seal-1161397142.png?v=1746702576"
-    ],
-    "image_verified": true
-  },
   "HHWE1013": {
     "ean": "4895251643016",
     "supplier": "BAB",
@@ -2065,16 +2051,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 24.87,
     "vk": 54.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "PPSE0090": {
-    "ean": "4895251644693",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.59,
-    "vk": 63.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
@@ -2890,22 +2866,6 @@
       "https://images.icecat.biz/img/gallery/3ef789a62aa96b54eca2c5c04ea9be4837b5c762.jpg"
     ]
   },
-  "SUPY1003": {
-    "ean": "5060408465301",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 24.87,
-    "vk": 54.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "YUBICO USB-Sicherheitsschlüssel - NFC - Schwarz",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/128600.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/128600.jpg"
-    ],
-    "image_too_small": true
-  },
   "USBK1040": {
     "ean": "4582563850521",
     "supplier": "BAB",
@@ -3352,21 +3312,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/107336414_4549034474.jpg"
     ]
-  },
-  "NETT1035": {
-    "ean": "4779027312774",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 57.86,
-    "vk": 116.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://static.wixstatic.com/media/814ec4_68c8b4cc523348d3aec67f8923cf2b07~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-83-en.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_68c8b4cc523348d3aec67f8923cf2b07~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-83-en.jpg"
-    ],
-    "title": "Teltonika TRM240 - Modem",
-    "image_verified": true
   },
   "NETU0147": {
     "ean": "0810084690154",
@@ -3897,21 +3842,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/241207.jpg"
     ],
-    "image_too_small": true
-  },
-  "SUPA0242": {
-    "ean": "0195950667523",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 73.08,
-    "vk": 145.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21202434.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21202434.jpg"
-    ],
-    "image_verified": false,
     "image_too_small": true
   },
   "SUPA1046": {
@@ -4537,16 +4467,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HHWK2005": {
-    "ean": "4054278247939",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 92.37,
-    "vk": 181.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HHWK2018": {
     "ean": "4054278242026",
     "supplier": "BAB",
@@ -4616,20 +4536,6 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
-  },
-  "HHWR3019": {
-    "ean": "3221616007222",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 96.43,
-    "vk": 189.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/88724636_0490367772.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/88724636_0490367772.jpg"
-    ],
-    "image_verified": true
   },
   "NETT0147": {
     "ean": "4897098687765",
@@ -5410,23 +5316,6 @@
       "https://images.icecat.biz/img/gallery/32158352_1057326483.jpg"
     ]
   },
-  "SUPY0000": {
-    "ean": "6938818319592",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.53,
-    "vk": 202.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/9ef6ef16f44c233b35db21b0d9aad55250fcbba4.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/9ef6ef16f44c233b35db21b0d9aad55250fcbba4.jpg",
-      "https://images.icecat.biz/img/gallery/bd5775699ee9c252c67bf83d51ea6ca61914b64a.jpg",
-      "https://images.icecat.biz/img/gallery/4b6a84f4c4a0816cd7322eb3e5b688a2618ddc93.jpg",
-      "https://images.icecat.biz/img/gallery/daa1e54ca952f35cfb62a1640720505e1c2fac2d.jpg"
-    ]
-  },
   "SUPY0022": {
     "ean": "6938818303188",
     "supplier": "BAB",
@@ -5580,7 +5469,7 @@
     "ean": "0718037877501",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 134.0,
+    "ek": 132.32,
     "vk": 259.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6099,17 +5988,6 @@
     "title": "EcoFlow TRAIL Plus 300 DC - Portable Powerstation",
     "image_verified": false
   },
-  "PPSE0031": {
-    "ean": "4895251602709",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.92,
-    "vk": 252.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW 2 x 100W Rigid Solar Panel Combo",
-    "image_verified": false
-  },
   "PPSE0098": {
     "ean": "4895251642781",
     "supplier": "BAB",
@@ -6222,32 +6100,6 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
-  },
-  "RAM4K0015": {
-    "ean": "0740617319903",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.01,
-    "vk": 250.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/92899568_5662088843.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/92899568_5662088843.jpg",
-      "https://images.icecat.biz/img/gallery/92995572_8849036341.jpg",
-      "https://images.icecat.biz/img/gallery/92995572_4944778528.jpg",
-      "https://images.icecat.biz/img/gallery/92995572_3113529219.jpg",
-      "https://images.icecat.biz/img/gallery/92995572_2787307658.jpg",
-      "https://images.icecat.biz/img/gallery/92995572_2656056647.jpg",
-      "https://images.icecat.biz/img/gallery/92995572_4237450346.jpg",
-      "https://images.icecat.biz/img/gallery/483b2156eff11efebc1cc5ef4a2df24b.jpg",
-      "https://images.icecat.biz/img/gallery/5758025e91eaeb6352845cdb83628437.jpg",
-      "https://images.icecat.biz/img/gallery/545e9f6d851ac3fca6ed93ccfbf37cdc.jpg",
-      "https://images.icecat.biz/img/gallery/f67af75c08453625d17077019d821494.jpg",
-      "https://images.icecat.biz/img/gallery/5109581b9b259e7482f5aafc8eca9c45.jpg",
-      "https://images.icecat.biz/img/gallery/cf167a71f2cc8f4b5296d2600124c732.jpg"
-    ]
   },
   "RAM4K0057": {
     "ean": "0740617337426",
@@ -6541,17 +6393,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "SSDL0050": {
-    "ean": "843367137008",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 125.76,
-    "vk": 244.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NQ780 NVMe",
-    "image_verified": false
   },
   "SSDS0095": {
     "ean": "8806090545931",
@@ -7331,7 +7172,7 @@
     "ean": "5032037279239",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 308.0,
+    "ek": 299.9,
     "vk": 587.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7597,7 +7438,7 @@
     "ean": "0763649174920",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1199.01,
+    "ek": 950.01,
     "vk": 2265.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7640,7 +7481,7 @@
     "ean": "8719706431378",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 895.01,
+    "ek": 850.0,
     "vk": 1692.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7843,7 +7684,7 @@
     "ean": "0718037899794",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 182.05,
+    "ek": 179.04,
     "vk": 350.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7919,21 +7760,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/137742.jpg"
     ],
-    "image_too_small": true
-  },
-  "HDIW0221": {
-    "ean": "0718037902838",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 294.45,
-    "vk": 561.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/137741.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/137741.jpg"
-    ],
-    "image_verified": false,
     "image_too_small": true
   },
   "HDIW0223": {
@@ -8130,7 +7956,7 @@
     "ean": "4066529086884",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.48,
+    "ek": 164.94,
     "vk": 322.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8648,7 +8474,7 @@
     "ean": "4711387949832",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 320.91,
+    "ek": 303.01,
     "vk": 611.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9383,20 +9209,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5G0026": {
-    "ean": "4713294236807",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 517.14,
-    "vk": 981.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://m.media-amazon.com/images/I/61kEb93ddbL._AC_UY218_.jpg",
-    "images": [
-      "https://www.gskill.com/img/overview/tz5n-rgb/06-trident-z5-neo-rgb-white-overview.jpg"
-    ]
-  },
   "RAM5G0028": {
     "ean": "4713294237590",
     "supplier": "BAB",
@@ -10074,7 +9886,7 @@
     "ean": "0843367136858",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 248.92,
+    "ek": 227.9,
     "vk": 476.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10170,27 +9982,6 @@
       "https://images.icecat.biz/img/gallery/b5b547040a415fe25fdc2ea07abc1213e84c79fc.jpg",
       "https://images.icecat.biz/img/gallery/108373065_0909213558.jpg",
       "https://images.icecat.biz/img/gallery/108373065_7446215078.jpg"
-    ]
-  },
-  "SSDS0115": {
-    "ean": "8806094947205",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 499.0,
-    "vk": 947.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg",
-      "https://images.icecat.biz/img/gallery/1e9a9a119a9e2c8d0f338c640e74fa35.jpg",
-      "https://images.icecat.biz/img/gallery/f46fffe5fdcc76493beb1f64a753c005.jpg",
-      "https://images.icecat.biz/img/gallery/ee884f96317dbf2281159d08eec11891.jpg",
-      "https://images.icecat.biz/img/gallery/0f38a63ac6895936a9ea71edcfcbac0f.jpg",
-      "https://images.icecat.biz/img/gallery/23d45194c29a150251bdef9446552d5e.jpg",
-      "https://images.icecat.biz/img/gallery/3489b2fd35ab7dc3509b364e2d3fcf6e.jpg",
-      "https://images.icecat.biz/img/gallery/94ed3499f468d012c7fd251fb425d212.jpg"
     ]
   },
   "SSDS0121": {
@@ -14897,20 +14688,6 @@
       "https://images.icecat.biz/img/gallery/92499040_6674650443.jpg"
     ]
   },
-  "USBK0042": {
-    "ean": "4582761160187",
-    "supplier": "BAB",
-    "ek": 17.9,
-    "vk": 41.99,
-    "title": "Kioxia SD Exceria Plus 128GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://europe.kioxia.com/content/dam/kioxia/shared/personal/sd-card/exceria-plus-g2/exceria-plus-g2-sdcard-gallery-01.jpg",
-    "images": [
-      "https://europe.kioxia.com/content/dam/kioxia/shared/personal/sd-card/exceria-plus-g2/exceria-plus-g2-sdcard-gallery-01.jpg"
-    ],
-    "image_verified": true
-  },
   "USBK0043": {
     "ean": "4582563858398",
     "supplier": "BAB",
@@ -15012,36 +14789,6 @@
     "ek": 39.03,
     "vk": 81.99,
     "title": "Kioxia Exceria G2 SD Card 512GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "USBK1053": {
-    "ean": "4582761160170",
-    "supplier": "BAB",
-    "ek": 13.01,
-    "vk": 32.99,
-    "title": "Kioxia Exceria Plus G2 SD Card 64GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "USBK1054": {
-    "ean": "4582761160194",
-    "supplier": "BAB",
-    "ek": 32.0,
-    "vk": 67.99,
-    "title": "Kioxia Exceria Plus G2 SD Card 256GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "USBK1056": {
-    "ean": "4582563855472",
-    "supplier": "BAB",
-    "ek": 6.5,
-    "vk": 19.99,
-    "title": "Kioxia TransMemory U301 64GB black USB 3.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
