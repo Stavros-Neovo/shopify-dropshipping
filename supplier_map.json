@@ -5936,17 +5936,6 @@
     "title": "ECOFLOW x Shelly Smart Meter",
     "image_verified": false
   },
-  "PPSE0107": {
-    "ean": "4895251640404",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
-    "vk": 217.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW STREAM Micro Inverter (incl. Cable)",
-    "image_verified": false
-  },
   "RAM4C0110": {
     "ean": "0649528937735",
     "supplier": "BAB",
@@ -7510,16 +7499,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "HDIT0232": {
-    "ean": "4260557512739",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 278.18,
-    "vk": 531.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDIT0237": {
     "ean": "4260557513156",
@@ -9933,22 +9912,6 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
-  },
-  "SSDW0071": {
-    "ean": "0718037891392",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 155.65,
-    "vk": 321.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD M.2 1 TB WD Black™ SN850X NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129013.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129013.jpg"
-    ],
-    "image_too_small": true
   },
   "SSDW0075": {
     "ean": "0718037891378",
@@ -14358,35 +14321,6 @@
       "https://images.icecat.biz/img/gallery/f86334f8f1ace088b7a85c0c28f49bb12c847106.jpg"
     ],
     "image_verified": true
-  },
-  "SUPV0040": {
-    "ean": "0023942321217",
-    "supplier": "BAB",
-    "ek": 40.8,
-    "vk": 84.99,
-    "title": "Verbatim GaN III Uni.Travel Adap 100W Welt-zu-Welt UTA-06 32121",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e993d3cbbdfe0a87abc3260b507966e9.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e993d3cbbdfe0a87abc3260b507966e9.jpg",
-      "https://images.icecat.biz/img/gallery/88a2fff6da84ca7d7e719521ba7948d7.jpg",
-      "https://images.icecat.biz/img/gallery/42b370848c60d0e70c864a92f4c3a3ff.jpg",
-      "https://images.icecat.biz/img/gallery/6e552c5cc4acec5f10a180afaf485851.jpg",
-      "https://images.icecat.biz/img/gallery/fc8d29359a05d6249bfb5fd8b6022fa1.jpg",
-      "https://images.icecat.biz/img/gallery/50021250e97fc0958a9c3f6c93c5f4d2.jpg",
-      "https://images.icecat.biz/img/gallery/c16d03d886e0ccaec02d0f917207892b.jpg",
-      "https://images.icecat.biz/img/gallery/14bff5bbea5542745b81602a7ddc52e9.jpg",
-      "https://images.icecat.biz/img/gallery/d207f64147562c0f7ad725b379e4de7d.jpg",
-      "https://images.icecat.biz/img/gallery/f2607741ca40d68c0e88a757e2e616ce.jpg",
-      "https://images.icecat.biz/img/gallery/2a562c2d18989eb5e94e3e8988a734b2.jpg",
-      "https://images.icecat.biz/img/gallery/5df0aec88b86613099b998e1124e730a.jpg",
-      "https://images.icecat.biz/img/gallery/5f37cb2b3c866bbc8155103c85963651.jpg",
-      "https://images.icecat.biz/img/gallery/bd0206e7b3bb8c47235efcd5188b5eaf.jpg",
-      "https://images.icecat.biz/img/gallery/fcabd5f1f4850c47c3ea1a090f00245f.jpg",
-      "https://images.icecat.biz/img/gallery/ca54f2f01c748e5e72a03065b230ea13.jpg"
-    ]
   },
   "SUPV0044": {
     "ean": "0023942322009",
