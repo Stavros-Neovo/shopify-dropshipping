@@ -1504,7 +1504,7 @@
     "ean": "3030050188042",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.39,
+    "ek": 25.88,
     "vk": 57.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3079,7 +3079,7 @@
     "ean": "3030050190915",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 52.78,
+    "ek": 51.77,
     "vk": 106.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3843,7 +3843,7 @@
     "ean": "8595610601959",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.9,
+    "ek": 40.6,
     "vk": 122.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4612,21 +4612,6 @@
       "https://cdn.ecomm.ui.com/products/6d5c6141-e2e9-416a-b789-53e59416bb1a/853bc73b-f65b-4e59-a171-75c9a4a4615e.png"
     ],
     "title": "UbiQuiti WiFi U6-PLUS Access Point",
-    "image_verified": true
-  },
-  "NETU0084": {
-    "ean": "0810084690185",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 102.12,
-    "vk": 199.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/48ca8dea-109e-4d35-af46-b7ad03764207/0cd9d5ff-af60-45bd-a01f-b0fb050e76bb.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/48ca8dea-109e-4d35-af46-b7ad03764207/0cd9d5ff-af60-45bd-a01f-b0fb050e76bb.png"
-    ],
-    "title": "UbiQuiti UniFi Protect UVC-G5-BULLET - Netzwerk-Überwachungskamera",
     "image_verified": true
   },
   "NETU0107": {
@@ -9869,7 +9854,7 @@
     "ean": "8806095575650",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 255.9,
+    "ek": 249.9,
     "vk": 489.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10695,7 +10680,7 @@
   "HHWR0018": {
     "ean": "5038061139082",
     "supplier": "BAB",
-    "ek": 10.15,
+    "ek": 8.12,
     "vk": 26.99,
     "title": "Remington Haarschneider HC5020",
     "listed_at": "2026-06-14T20:49:22",
@@ -10705,7 +10690,8 @@
     "images": [
       "https://media.ipcstore.net/img/l/638598.jpg"
     ],
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWR8000": {
     "ean": "4892210113375",
@@ -10751,21 +10737,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "LEGO0047": {
-    "ean": "5702017584317",
-    "supplier": "BAB",
-    "ek": 15.73,
-    "vk": 37.99,
-    "title": "LEGO Star Wars Clone Trooper & Battle Droid Battle Pack 75372",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/134246.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/134246.jpg"
-    ],
-    "image_too_small": true
   },
   "LEGO0048": {
     "ean": "5702017815640",
@@ -11028,20 +10999,6 @@
     "image_url": "https://static.wixstatic.com/media/814ec4_ab0dd8998b8b4d1db2ce3e05618018b5~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-74.jpg",
     "images": [
       "https://static.wixstatic.com/media/814ec4_ab0dd8998b8b4d1db2ce3e05618018b5~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-74.jpg"
-    ],
-    "image_verified": true
-  },
-  "NETT1023": {
-    "ean": "4779051840137",
-    "supplier": "BAB",
-    "ek": 126.88,
-    "vk": 246.99,
-    "title": "Teltonika TRB143 - Gateway",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://static.wixstatic.com/media/814ec4_f1674f82274b497d9106a2e41ee7659c~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-75.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_f1674f82274b497d9106a2e41ee7659c~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-75.jpg"
     ],
     "image_verified": true
   },
@@ -12005,22 +11962,24 @@
   "SUPC0008": {
     "ean": "8595610601256",
     "supplier": "BAB",
-    "ek": 19.29,
+    "ek": 15.23,
     "vk": 43.99,
     "title": "Connect IT BATTLE headset USB GH1000 w/mic***",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPC0010": {
     "ean": "8594158528063",
     "supplier": "BAB",
-    "ek": 7.11,
+    "ek": 5.08,
     "vk": 20.99,
     "title": "Connect IT PC headset black/silver w/mic***",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPC0088": {
     "ean": "7340086912839",
@@ -13728,12 +13687,13 @@
   "SUPN0001": {
     "ean": "4043972191389",
     "supplier": "BAB",
-    "ek": 1.52,
+    "ek": 1.02,
     "vk": 10.99,
     "title": "Networx HDMI Kabel (HDMI auf HDMI) 2m",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4000": {
     "ean": "5711157014110",
@@ -13944,12 +13904,13 @@
   "SUPR1055": {
     "ean": "8886419345763",
     "supplier": "BAB",
-    "ek": 73.51,
+    "ek": 71.99,
     "vk": 145.99,
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPR1063": {
     "ean": "8887910082058",
@@ -14626,7 +14587,7 @@
   "USBS0011": {
     "ean": "0619659136703",
     "supplier": "BAB",
-    "ek": 11.9,
+    "ek": 11.8,
     "vk": 29.99,
     "title": "SanDisk Ultra Flair USB 3.0 64GB",
     "listed_at": "2026-06-14T20:49:22",
@@ -14636,7 +14597,8 @@
     "images": [
       "https://media.ipcstore.net/img/l/271631.jpg"
     ],
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBS0013": {
     "ean": "0619659154189",
@@ -14943,14 +14905,6 @@
     "title": "ECOFLOW Bracket - Semi-enclosed Balcony",
     "image_verified": false,
     "ek": 83.74,
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "NETU0180": {
-    "ean": "0810084694664",
-    "title": "Ubiquiti E7 - Enterprise Access Point",
-    "image_verified": false,
-    "ek": 436.45,
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de"
   },
