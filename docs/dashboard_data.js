@@ -1,115 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-23T09:51:22.826038+00:00",
+  "generated_at": "2026-06-23T12:36:55.933733+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 1026,
-    "images_verified": 421,
-    "images_missing": 605
+    "total_skus": 1022,
+    "images_verified": 419,
+    "images_missing": 603
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-23T06:30:04.858770+00:00",
+      "timestamp": "2026-06-23T10:45:19.820778+00:00",
       "checked": 600,
-      "lowered": 4,
-      "raised": 2,
-      "set_to_floor": 87,
+      "lowered": 43,
+      "raised": 0,
+      "set_to_floor": 139,
       "skipped_floor": 0,
-      "skipped_few": 17,
-      "skipped_image": 18,
-      "unchanged": 471,
-      "errors": 1,
+      "skipped_few": 28,
+      "skipped_image": 45,
+      "unchanged": 345,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 519.99,
-        "new": 474.99,
-        "diff": -45.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 688.99,
+        "new": 627.95,
+        "diff": -61.04,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 241.99,
-        "new": 218.99,
-        "diff": -23.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 232.99,
-        "new": 210.99,
-        "diff": -22.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 172.99,
-        "new": 155.99,
-        "diff": -17.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 476.99,
-        "new": 436.99,
-        "diff": -40.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 638.99,
-        "new": 583.95,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 622.99,
+        "new": 567.95,
         "diff": -55.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 290.99,
-        "new": 264.99,
-        "diff": -26.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 596.99,
+        "new": 543.95,
+        "diff": -53.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 232.99,
-        "new": 211.99,
-        "diff": -21.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 97.99,
+        "new": 86.99,
+        "diff": -11.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 388.99,
-        "new": 355.99,
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 383.99,
+        "new": 367.99,
+        "diff": -16.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SDXS0033",
+        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
+        "old": 365.99,
+        "new": 332.99,
         "diff": -33.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0289",
-        "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
-        "old": 506.99,
-        "new": 461.99,
-        "diff": -45.0,
+        "sku": "SDXS1020",
+        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
+        "old": 416.99,
+        "new": 379.99,
+        "diff": -37.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SDXV0009",
+        "title": "Verbatim Metal Mini SSD 1TB USB-C Gen 2 32031",
+        "old": 279.99,
+        "new": 253.99,
+        "diff": -26.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SHG0013",
+        "title": "Govee - Glide Hexa Light Panels - 5 Stück",
+        "old": 81.99,
+        "new": 74.99,
+        "diff": -7.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SHG0017",
+        "title": "Govee - Gaming Smart Light Bars",
+        "old": 64.99,
+        "new": 59.99,
+        "diff": -5.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-21",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-21",
         "lowered": 5,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-23",
         "lowered": 4,
         "raised": 2,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 43,
+        "raised": 0,
         "floor": 0
       }
     ]
