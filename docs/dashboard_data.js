@@ -1,75 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-23T05:06:02.365624+00:00",
+  "generated_at": "2026-06-23T09:51:22.826038+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 47,
+  "active_listings": 600,
   "catalog": {
-    "total_skus": 1029,
-    "images_verified": 420,
-    "images_missing": 609
+    "total_skus": 1026,
+    "images_verified": 421,
+    "images_missing": 605
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-23T01:25:53.318934+00:00",
-      "checked": 47,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 5,
+      "timestamp": "2026-06-23T06:30:04.858770+00:00",
+      "checked": 600,
+      "lowered": 4,
+      "raised": 2,
+      "set_to_floor": 87,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 1,
-      "unchanged": 34,
-      "errors": 7,
+      "skipped_few": 17,
+      "skipped_image": 18,
+      "unchanged": 471,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 519.99,
+        "new": 474.99,
+        "diff": -45.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 54.99,
-        "new": 49.99,
-        "diff": -5.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 241.99,
+        "new": 218.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 18.99,
-        "new": 9.99,
-        "diff": -9.0,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 210.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 172.99,
+        "new": 155.99,
+        "diff": -17.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 26.99,
-        "new": 19.99,
-        "diff": -7.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 476.99,
+        "new": 436.99,
+        "diff": -40.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 638.99,
+        "new": 583.95,
+        "diff": -55.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 290.99,
+        "new": 264.99,
+        "diff": -26.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 232.99,
+        "new": 211.99,
+        "diff": -21.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 388.99,
+        "new": 355.99,
+        "diff": -33.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0289",
+        "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
+        "old": 506.99,
+        "new": 461.99,
+        "diff": -45.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-21",
-        "lowered": 39,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-21",
         "lowered": 0,
@@ -147,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 4,
+        "raised": 2,
+        "floor": 0
       }
     ]
   },
@@ -160,16 +200,16 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 4,
       "prev_week_revenue": 514.94,
-      "prev_week_profit": 78.26,
+      "prev_week_profit": 77.82,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 162.29,
-      "month_ek": 476.61,
+      "month_profit": 161.85,
+      "month_ek": 477.03,
       "month_ebay_fee": 127.66,
-      "month_return_reserve": 23.84,
+      "month_return_reserve": 23.86,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 162.29
+      "total_profit_30d": 161.85
     },
     "chart_7d": [
       {
@@ -345,7 +385,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 33.09,
+        "profit": 32.65,
         "sales": 1
       },
       {
@@ -887,7 +927,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 33.09,
+        "profit": 32.65,
         "sales": 1
       },
       {
@@ -966,20 +1006,20 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 33.09,
+        "profit": 32.65,
         "vk": 275.99,
-        "ek": 158.67,
+        "ek": 159.09,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 36.4,
           "vat": 38.89,
           "netto_vk": 204.69,
           "ship": 5.0,
-          "ek": 158.67,
-          "return_reserve": 7.93,
-          "profit_u": 33.09,
+          "ek": 159.09,
+          "return_reserve": 7.95,
+          "profit_u": 32.65,
           "qty": 1,
-          "profit_t": 33.09
+          "profit_t": 32.65
         }
       },
       {
@@ -1174,7 +1214,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 33.09
+        "profit": 32.65
       },
       {
         "date": "13.06 22:19",
@@ -1294,9 +1334,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 48.69,
-      "gewst_month": 24.34,
-      "total_month": 228.51
+      "est_month": 48.55,
+      "gewst_month": 24.28,
+      "total_month": 228.31
     },
     "expected_payout": 847.21
   },
