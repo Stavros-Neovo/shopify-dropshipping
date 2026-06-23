@@ -8387,27 +8387,31 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 258.83,
-    "vk": 494.99,
+    "vk": 427.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Petkit AirSalon Max",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_137970679?x=1800&y=1800&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1800&ey=1800&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1800&cdy=1800",
+    "images": [
+      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_137970679?x=1800&y=1800&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1800&ey=1800&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1800&cdy=1800"
+    ]
   },
   "PETK0019": {
     "ean": "6975069301778",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 269.1,
-    "vk": 514.99,
+    "vk": 444.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Petkit AirSalon Max Pro",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297876.jpg",
+    "image_verified": true,
+    "image_url": "https://media.cdn.kaufland.de/product-images/2048x2048/ec97f3a63db9bfb03c2a9222f0a7aded.webp",
     "images": [
-      "https://media.ipcstore.net/img/l/21297876.jpg"
-    ],
-    "image_too_small": true
+      "https://media.cdn.kaufland.de/product-images/2048x2048/ec97f3a63db9bfb03c2a9222f0a7aded.webp",
+      "https://media.cdn.kaufland.de/product-images/2048x2048/aba2011f33d8575ca59186b66b77131f.webp"
+    ]
   },
   "PETK0028": {
     "ean": "6975069305028",
@@ -8430,15 +8434,15 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 584.64,
-    "vk": 1108.99,
+    "vk": 922.95,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21297885.jpg",
+    "image_url": "https://petkitgermany.com/cdn/shop/files/14A721AC-3241-4DD4-AE06-38EB4DA3EC13.jpg?v=1771267568&width=800",
     "images": [
-      "https://media.ipcstore.net/img/l/21297885.jpg"
+      "https://petkitgermany.com/cdn/shop/files/14A721AC-3241-4DD4-AE06-38EB4DA3EC13.jpg?v=1771267568&width=800",
+      "https://petkitgermany.com/cdn/shop/files/F40E4960-93F3-4C19-8C29-93A6BBA32421.jpg?v=1771267568&width=1200"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true
   },
   "PETK0045": {
     "ean": "6975069306278",
@@ -8460,11 +8464,15 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 192.85,
-    "vk": 370.99,
+    "vk": 319.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Petkit PUROBOT CRYSTAL DUO With Front Entry Hood-EU",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/1245184/62072201267149/803387/6a2ac8adE9bf62106/42b10752b5083d5e.png.webp",
+    "images": [
+      "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/1245184/62072201267149/803387/6a2ac8adE9bf62106/42b10752b5083d5e.png.webp"
+    ]
   },
   "PPCE0003": {
     "ean": "4895251604802",
