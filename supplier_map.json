@@ -3075,16 +3075,6 @@
     ],
     "image_verified": true
   },
-  "HHWB4003": {
-    "ean": "3030050165388",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 62.93,
-    "vk": 126.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HHWB4016": {
     "ean": "3030050190915",
     "supplier": "BAB",
@@ -9221,21 +9211,6 @@
     "title": "tecXL HP EliteBook 850 G7 (15,6\")",
     "image_verified": true
   },
-  "REFT0007": {
-    "ean": "4262431594756",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 355.25,
-    "vk": 676.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media2.nbb-cdn.de/images/products/4262431591830_1_aaae.jpg?size=2800",
-    "images": [
-      "https://media2.nbb-cdn.de/images/products/4262431591830_1_aaae.jpg?size=2800"
-    ],
-    "title": "tecXL HP EliteDesk 800 G6 MP",
-    "image_verified": true
-  },
   "REFT0010": {
     "ean": "4262504943337",
     "supplier": "BAB",
@@ -9936,7 +9911,7 @@
     "ean": "8806095811628",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 195.9,
+    "ek": 185.9,
     "vk": 376.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -11462,21 +11437,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/21297883.jpg"
     ],
-    "image_too_small": true
-  },
-  "PETK0036": {
-    "ean": "6973293800371",
-    "supplier": "BAB",
-    "ek": 13.8,
-    "vk": 33.99,
-    "title": "Petkit Katzenklo Pura Max 2 / Pura X Auffangmatte Wasserfest",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/21297869.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21297869.jpg"
-    ],
-    "image_verified": false,
     "image_too_small": true
   },
   "PETK0037": {
