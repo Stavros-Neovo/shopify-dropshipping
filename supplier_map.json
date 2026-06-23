@@ -5634,11 +5634,16 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 131.95,
-    "vk": 255.99,
+    "vk": 219.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "OutIn Mino - Space Grey - Portable Electric Espresso Machine",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876574?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
+    "images": [
+      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876574?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
+      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876576?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900"
+    ]
   },
   "HHWW029": {
     "ean": "4000530725172",
@@ -6486,16 +6491,16 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 144.64,
-    "vk": 279.99,
+    "vk": 240.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Bose QuietComfort Ultra Earbuds white",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21294849.jpg",
+    "image_verified": true,
+    "image_url": "https://media.cdn.kaufland.de/product-images/1024x1024/944660fcdd83cedb3737aa5dc94bcdca.webp",
     "images": [
-      "https://media.ipcstore.net/img/l/21294849.jpg"
-    ],
-    "image_too_small": true
+      "https://media.cdn.kaufland.de/product-images/1024x1024/944660fcdd83cedb3737aa5dc94bcdca.webp",
+      "https://media.cdn.kaufland.de/product-images/1024x1024/3632053361cf522ead6f3b2f7a2a88cf.webp"
+    ]
   },
   "SUPD1024": {
     "ean": "5397184961735",
@@ -7155,30 +7160,28 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 233.45,
-    "vk": 447.99,
+    "vk": 386.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21300206.jpg",
+    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_170898797?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
     "images": [
-      "https://media.ipcstore.net/img/l/21300206.jpg"
+      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_170898797?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true
   },
   "ENAB0014": {
     "ean": "6972822121314",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 233.45,
-    "vk": 447.99,
+    "vk": 386.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21300207.jpg",
+    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_170898085?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
     "images": [
-      "https://media.ipcstore.net/img/l/21300207.jpg"
+      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_170898085?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true
   },
   "HDIS0241": {
     "ean": "0763649150474",
@@ -9241,15 +9244,14 @@
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 279.63,
-    "vk": 534.99,
+    "vk": 461.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21177199.jpg",
+    "image_url": "https://www.alternate.de/p/600x600/8/3/Dell_OptiPlex_7070_MP_General_berholt__Mini_PC@@100193538.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21177199.jpg"
+      "https://www.alternate.de/p/600x600/8/3/Dell_OptiPlex_7070_MP_General_berholt__Mini_PC@@100193538.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true
   },
   "REFT0014": {
     "ean": "4260771516339",

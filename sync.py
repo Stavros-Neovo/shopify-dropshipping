@@ -78,6 +78,19 @@ def should_keep(product: dict, filters_cfg: dict) -> tuple[bool, str]:
     return True, ""
 
 
+def apply_verified_images(product: dict, sku: str, smap: dict, image_verified_skus: set[str]) -> dict:
+    """supplier_map.json ist die einzige AUFLÖSUNGS-geprüfte Bildquelle — hat Vorrang
+    vor Icecat/CSV, sonst überschreibt jeder Sync-Lauf manuelle oder image_audit.py-Fixes
+    wieder mit dem ungeprüften (oft fehlenden/zu kleinen) Standardbild."""
+    if sku in image_verified_skus:
+        v = smap.get(sku, {})
+        verified_images = v.get("images") or ([v["image_url"]] if v.get("image_url") else [])
+        if verified_images:
+            product["image_urls"] = verified_images[:12]
+            product["image_url"] = verified_images[0]
+    return product
+
+
 def handle_disappeared_products(
     state: dict,
     seen_skus: set,
@@ -239,6 +252,7 @@ def main():
     # enrichment_index.csv hat nur "Icecat hat irgendeine URL", das laesst z.B.
     # 200x200px ipcstore-Bilder durch, die eBay mit Fehler 25002 ablehnt.
     image_verified_skus: set[str] = set()
+    smap: dict = {}
     supplier_map_path = Path("supplier_map.json")
     if supplier_map_path.exists():
         try:
@@ -374,6 +388,8 @@ def main():
             # Beschreibung als fertiges HTML (gleiche Funktion wie Shopify/Matrixify)
             product["description"] = build_description_html(product.get("title", ""), enrichment)
             product["specs_html"] = enrichment.get("specs_html", "")
+
+        product = apply_verified_images(product, sku, smap, image_verified_skus)
 
         log.info(
             f"SKU {sku} | EK {pr.purchase_price_net:.2f}€ | "
