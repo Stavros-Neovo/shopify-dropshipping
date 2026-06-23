@@ -1,43 +1,27 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-22T15:57:17.701444+00:00",
+  "generated_at": "2026-06-23T12:36:55.933733+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 1041,
-    "images_verified": 420,
-    "images_missing": 621
+    "total_skus": 1022,
+    "images_verified": 419,
+    "images_missing": 603
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-22T12:29:15.979364+00:00",
+      "timestamp": "2026-06-23T10:45:19.820778+00:00",
       "checked": 600,
-      "lowered": 42,
+      "lowered": 43,
       "raised": 0,
       "set_to_floor": 139,
       "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 42,
-      "unchanged": 347,
+      "skipped_few": 28,
+      "skipped_image": 45,
+      "unchanged": 345,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
-      {
-        "sku": "RAM4K0057",
-        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 210.99,
-        "new": 190.99,
-        "diff": -20.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 263.99,
-        "new": 238.99,
-        "diff": -25.0,
-        "action": "lowered"
-      },
       {
         "sku": "RAM5G0019",
         "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
@@ -71,14 +55,6 @@ window.DASHBOARD_DATA = {
         "action": "lowered"
       },
       {
-        "sku": "REFT0007",
-        "title": "tecXL HP EliteDesk 800 G6 MP",
-        "old": 589.99,
-        "new": 537.95,
-        "diff": -52.04,
-        "action": "lowered"
-      },
-      {
         "sku": "REFT1004",
         "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
         "old": 383.99,
@@ -101,45 +77,33 @@ window.DASHBOARD_DATA = {
         "new": 379.99,
         "diff": -37.0,
         "action": "lowered"
+      },
+      {
+        "sku": "SDXV0009",
+        "title": "Verbatim Metal Mini SSD 1TB USB-C Gen 2 32031",
+        "old": 279.99,
+        "new": 253.99,
+        "diff": -26.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SHG0013",
+        "title": "Govee - Glide Hexa Light Panels - 5 Stück",
+        "old": 81.99,
+        "new": 74.99,
+        "diff": -7.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SHG0017",
+        "title": "Govee - Gaming Smart Light Bars",
+        "old": 64.99,
+        "new": 59.99,
+        "diff": -5.0,
+        "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-20",
-        "lowered": 0,
-        "raised": 6,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-20",
-        "lowered": 0,
-        "raised": 1,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-20",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-21",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-21",
-        "lowered": 39,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-21",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-21",
         "lowered": 5,
@@ -187,6 +151,42 @@ window.DASHBOARD_DATA = {
         "lowered": 42,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-22",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-22",
+        "lowered": 4,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-22",
+        "lowered": 43,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 4,
+        "raised": 2,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 43,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -200,24 +200,18 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 4,
       "prev_week_revenue": 514.94,
-      "prev_week_profit": 78.26,
+      "prev_week_profit": 77.82,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 162.29,
-      "month_ek": 476.61,
+      "month_profit": 161.85,
+      "month_ek": 477.03,
       "month_ebay_fee": 127.66,
-      "month_return_reserve": 23.84,
+      "month_return_reserve": 23.86,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 162.29
+      "total_profit_30d": 161.85
     },
     "chart_7d": [
-      {
-        "date": "16.06",
-        "revenue": 182.97,
-        "profit": 9.25,
-        "sales": 2
-      },
       {
         "date": "17.06",
         "revenue": 0,
@@ -253,15 +247,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "24.05",
+        "date": "23.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "25.05",
         "revenue": 0,
@@ -391,7 +385,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 33.09,
+        "profit": 32.65,
         "sales": 1
       },
       {
@@ -435,15 +429,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "25.03",
+        "date": "23.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "26.03",
         "revenue": 0,
@@ -933,7 +927,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 33.09,
+        "profit": 32.65,
         "sales": 1
       },
       {
@@ -977,6 +971,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "23.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1006,20 +1006,20 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 33.09,
+        "profit": 32.65,
         "vk": 275.99,
-        "ek": 158.67,
+        "ek": 159.09,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 36.4,
           "vat": 38.89,
           "netto_vk": 204.69,
           "ship": 5.0,
-          "ek": 158.67,
-          "return_reserve": 7.93,
-          "profit_u": 33.09,
+          "ek": 159.09,
+          "return_reserve": 7.95,
+          "profit_u": 32.65,
           "qty": 1,
-          "profit_t": 33.09
+          "profit_t": 32.65
         }
       },
       {
@@ -1214,7 +1214,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 33.09
+        "profit": 32.65
       },
       {
         "date": "13.06 22:19",
@@ -1261,30 +1261,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "18-14731-45799",
-        "date": "2026-06-08",
-        "deadline": "2026-06-22",
-        "days_left": 0,
-        "items": [
-          "Kioxia TransMemory U202 white 64GB USB 2"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "23-14722-05332",
-        "date": "2026-06-08",
-        "deadline": "2026-06-22",
-        "days_left": 0,
-        "items": [
-          "Beurer IL 11 Infrarotlampe"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1294,17 +1274,17 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 4,
+        "days_left": 3,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1314,7 +1294,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1324,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1334,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 8,
+        "days_left": 7,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1344,7 +1324,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 10,
+        "days_left": 9,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
@@ -1354,9 +1334,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 48.69,
-      "gewst_month": 24.34,
-      "total_month": 228.51
+      "est_month": 48.55,
+      "gewst_month": 24.28,
+      "total_month": 228.31
     },
     "expected_payout": 847.21
   },
