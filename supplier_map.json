@@ -1122,11 +1122,11 @@
     "vk": 65.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/673680.jpg",
+    "image_url": "https://images.icecat.biz/img/gallery_mediums/e1f4e023dfae1e6a6ba2fd65a93ad47f84c82420.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/673680.jpg"
+      "https://images.icecat.biz/img/gallery_mediums/e1f4e023dfae1e6a6ba2fd65a93ad47f84c82420.jpg"
     ],
-    "image_verified": false,
+    "image_verified": true,
     "image_too_small": true
   },
   "SUPR1060": {
@@ -10517,8 +10517,12 @@
     "title": "Braun Oral-B iO Aufsteckbürsten Ultimative Reinigung 6er",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_url": "https://images.icecat.biz/img/gallery_mediums/1dc1714cb258a8e649a9a25c1859c659fb6b5b83.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery_mediums/1dc1714cb258a8e649a9a25c1859c659fb6b5b83.jpg"
+    ]
   },
   "HHWB1134": {
     "ean": "8700216195027",
