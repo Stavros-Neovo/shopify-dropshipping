@@ -1,115 +1,85 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-23T21:01:37.484258+00:00",
+  "generated_at": "2026-06-23T23:11:29.593256+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 56,
   "catalog": {
-    "total_skus": 1016,
+    "total_skus": 1015,
     "images_verified": 427,
-    "images_missing": 589
+    "images_missing": 588
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-23T19:21:35.179434+00:00",
-      "checked": 600,
-      "lowered": 34,
-      "raised": 46,
-      "set_to_floor": 84,
+      "timestamp": "2026-06-23T21:53:05.162378+00:00",
+      "checked": 56,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 7,
       "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 43,
-      "unchanged": 365,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 4,
+      "unchanged": 38,
+      "errors": 7,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4K0057",
-        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 189.99,
-        "new": 190.99,
-        "diff": 1.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 225.99,
-        "new": 238.99,
-        "diff": 13.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 587.95,
-        "new": 627.95,
-        "diff": 40.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 531.95,
-        "new": 567.95,
-        "diff": 36.0,
-        "action": "raised"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 509.95,
-        "new": 543.95,
-        "diff": 34.0,
-        "action": "raised"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 88.99,
-        "new": 86.99,
-        "diff": -2.0,
+        "sku": "SUPY0038",
+        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
+        "old": 226.99,
+        "new": 204.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SDXS0033",
-        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
-        "old": 313.99,
-        "new": 332.99,
-        "diff": 19.0,
-        "action": "raised"
+        "sku": "SUPY0059",
+        "title": "Yealink WH67 - Headset WH67 Mono UC",
+        "old": 271.99,
+        "new": 246.99,
+        "diff": -25.0,
+        "action": "lowered"
       },
       {
-        "sku": "SDXS1020",
-        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
-        "old": 356.99,
-        "new": 379.99,
-        "diff": 23.0,
-        "action": "raised"
+        "sku": "USBV0008",
+        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
+        "old": 21.99,
+        "new": 13.99,
+        "diff": -8.0,
+        "action": "lowered"
       },
       {
-        "sku": "SDXV0009",
-        "title": "Verbatim Metal Mini SSD 1TB USB-C Gen 2 32031",
-        "old": 239.99,
-        "new": 253.99,
-        "diff": 14.0,
-        "action": "raised"
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 54.99,
+        "new": 49.99,
+        "diff": -5.0,
+        "action": "lowered"
       },
       {
-        "sku": "SHG0013",
-        "title": "Govee - Glide Hexa Light Panels - 5 Stück",
-        "old": 75.99,
-        "new": 74.99,
-        "diff": -1.0,
+        "sku": "USBV0013",
+        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
+        "old": 18.99,
+        "new": 9.99,
+        "diff": -9.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "USBV0016",
+        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
+        "old": 21.99,
+        "new": 13.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "USBV0017",
+        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
+        "old": 26.99,
+        "new": 19.99,
+        "diff": -7.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-21",
-        "lowered": 4,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-21",
         "lowered": 41,
@@ -186,6 +156,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-23",
         "lowered": 34,
         "raised": 46,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
