@@ -7108,22 +7108,6 @@
     ],
     "image_too_small": true
   },
-  "CPUI0253": {
-    "ean": "5032037284837",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 266.0,
-    "vk": 508.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Intel Cpu Ultra 7 270K, box | BX80768270K",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/143567.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/143567.jpg"
-    ],
-    "image_too_small": true
-  },
   "ENAB0012": {
     "ean": "6972822121178",
     "supplier": "BAB",
@@ -7701,21 +7685,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/21311902.jpg"
     ],
-    "image_too_small": true
-  },
-  "HDIW0234": {
-    "ean": "0718037905778",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 172.59,
-    "vk": 332.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/142954.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/142954.jpg"
-    ],
-    "image_verified": false,
     "image_too_small": true
   },
   "HDIW0244": {
