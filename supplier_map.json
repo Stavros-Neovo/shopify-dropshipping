@@ -5296,22 +5296,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "CPUI0232": {
-    "ean": "5032037282086",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 149.0,
-    "vk": 288.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Intel Cpu Ultra 5 245K, box | BX80768245K",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/405209.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/405209.jpg"
-    ],
-    "image_too_small": true
-  },
   "CPUI0233": {
     "ean": "5032037282109",
     "supplier": "BAB",
@@ -9577,22 +9561,6 @@
     "image_url": "https://media.ipcstore.net/img/l/241210.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/241210.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SSDL0032": {
-    "ean": "0843367130290",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 184.3,
-    "vk": 354.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NM790 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/241216.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/241216.jpg"
     ],
     "image_too_small": true
   },
