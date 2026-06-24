@@ -1714,22 +1714,6 @@
     "title": "Petkit Breezy2 Haustier Transporttasche Grün",
     "image_verified": false
   },
-  "PETK0016": {
-    "ean": "6973293808506",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 49.7,
-    "vk": 101.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Petkit Breezy2 Haustier Transporttasche Rosa Blau",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297877.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21297877.jpg"
-    ],
-    "image_too_small": true
-  },
   "PETK0017": {
     "ean": "6973293802337",
     "supplier": "BAB",
@@ -6878,22 +6862,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "CPUA0125": {
-    "ean": "0730143315296",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 264.9,
-    "vk": 508.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "AMD Ryzen 9 9900X BOX | 100-100000662WOF",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/136936.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/136936.jpg"
-    ],
-    "image_too_small": true
-  },
   "CPUA0126": {
     "ean": "0730143315272",
     "supplier": "BAB",
@@ -6959,7 +6927,7 @@
     "ean": "5032037278447",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 249.01,
+    "ek": 219.01,
     "vk": 476.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7662,7 +7630,7 @@
     "ean": "0718037901442",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 484.82,
+    "ek": 483.28,
     "vk": 920.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8249,33 +8217,6 @@
     "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boost Jump Starters",
     "image_verified": true
   },
-  "NUCA0015": {
-    "ean": "4711387949832",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 303.01,
-    "vk": 611.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "ASUS NUC 15 Pro Slim Kit RNUC15CRKC500002 | 90AR00R2-M00060",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/a74dc4943209e2d01ace56caf24eba27fac17501.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/a74dc4943209e2d01ace56caf24eba27fac17501.jpg",
-      "https://images.icecat.biz/img/gallery/28dbbe75848b8ee69c7512dc69629d6db66fa88e.jpg",
-      "https://images.icecat.biz/img/gallery/3b8452641d235e4767f0ec44821f3db600ee7745.jpg",
-      "https://images.icecat.biz/img/gallery/070bc3a3f37115ce179f8862b722b1a438019718.jpg",
-      "https://images.icecat.biz/img/gallery/740d99be4bb240b0c795af706943869dc417c653.jpg",
-      "https://images.icecat.biz/img/gallery/0272053ebf0aa1048da3e401ba7f235cd5f75491.jpg",
-      "https://images.icecat.biz/img/gallery/f969b01f5f06fd6d7808870bd001b807e2e3c8fb.jpg",
-      "https://images.icecat.biz/img/gallery/84d2e371413034a513d3c6fef06275cf38b87b8a.jpg",
-      "https://images.icecat.biz/img/gallery/490dcffb0d482d65e649ec93fb90a6aae4347444.jpg",
-      "https://images.icecat.biz/img/gallery/e23da6259d32709254ee00ac7f7952fd86163189.jpg",
-      "https://images.icecat.biz/img/gallery/482e57dc32cdf4920b6ab353a97eee28796bb0a8.jpg",
-      "https://images.icecat.biz/img/gallery/2ba2b36f0f59c272195f50cf569c6bd1a946acee.jpg",
-      "https://images.icecat.biz/img/gallery/8e2ff32e32cd8c91e303634346bda55288f54ea1.jpg"
-    ]
-  },
   "PETK0018": {
     "ean": "6975069301389",
     "supplier": "BAB",
@@ -8408,17 +8349,6 @@
     ],
     "title": "ECOFLOW Single Axis Solar Tracker",
     "image_verified": true
-  },
-  "PVSJ0004": {
-    "ean": "2010000030448",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 162.4,
-    "vk": 313.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Jolywood Solarpanel HD108N-R2-500W Transparent Black",
-    "image_verified": false
   },
   "RAM4C0109": {
     "ean": "649528937780",
@@ -10015,23 +9945,6 @@
       "https://images.icecat.biz/img/gallery/93813283_4682495872.jpg",
       "https://images.icecat.biz/img/gallery/93813283_5491376760.jpg",
       "https://images.icecat.biz/img/gallery/93813283_8039640507.jpg"
-    ]
-  },
-  "SUPJ1077": {
-    "ean": "5706991030976",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 218.12,
-    "vk": 420.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/95975513638dab3505a7f9d08ff92fb85a497e32.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/95975513638dab3505a7f9d08ff92fb85a497e32.jpg",
-      "https://images.icecat.biz/img/gallery/fcde3fda98a200315e70dd9a260b23cbdd040596.jpg",
-      "https://images.icecat.biz/img/gallery/26ab6aeeabb9ef54ac578cd4976be6fa12a5eab5.jpg",
-      "https://images.icecat.biz/img/gallery/d9c5d6a4c4a91ba0c83d0316ec7cd8a733657c7f.jpg"
     ]
   },
   "SUPL0264": {
