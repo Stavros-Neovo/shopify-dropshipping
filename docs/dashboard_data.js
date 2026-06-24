@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-23T23:11:29.593256+00:00",
+  "generated_at": "2026-06-24T03:59:20.510874+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 56,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 1015,
     "images_verified": 427,
@@ -9,83 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-23T21:53:05.162378+00:00",
-      "checked": 56,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 7,
+      "timestamp": "2026-06-23T23:32:28.631942+00:00",
+      "checked": 600,
+      "lowered": 4,
+      "raised": 5,
+      "set_to_floor": 83,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 4,
-      "unchanged": 38,
-      "errors": 7,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 463,
+      "errors": 3,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 226.99,
-        "new": 204.99,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 519.99,
+        "new": 474.99,
+        "diff": -45.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 241.99,
+        "new": 218.99,
+        "diff": -23.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 210.99,
         "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 271.99,
-        "new": 246.99,
-        "diff": -25.0,
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 172.99,
+        "new": 155.99,
+        "diff": -17.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 477.99,
+        "new": 436.99,
+        "diff": -41.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 54.99,
-        "new": 49.99,
-        "diff": -5.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 639.99,
+        "new": 583.95,
+        "diff": -56.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 18.99,
-        "new": 9.99,
-        "diff": -9.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 291.99,
+        "new": 264.99,
+        "diff": -27.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1399.95,
+        "new": 1499.95,
+        "diff": 100.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 233.99,
+        "new": 211.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 26.99,
-        "new": 19.99,
-        "diff": -7.0,
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 389.99,
+        "new": 355.99,
+        "diff": -34.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-21",
-        "lowered": 41,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-21",
         "lowered": 0,
@@ -163,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-23",
+        "lowered": 4,
+        "raised": 5,
+        "floor": 0
       }
     ]
   },
@@ -188,12 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 161.85
     },
     "chart_7d": [
-      {
-        "date": "17.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "18.06",
         "revenue": 51.99,
@@ -229,15 +247,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "25.05",
+        "date": "24.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "26.05",
         "revenue": 0,
@@ -411,15 +429,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "26.03",
+        "date": "24.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "27.03",
         "revenue": 0,
@@ -953,6 +971,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "24.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1240,7 +1264,7 @@ window.DASHBOARD_DATA = {
         "order_id": "20-14740-74871",
         "date": "2026-06-11",
         "deadline": "2026-06-25",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "ECOFLOW Smart Plug 2"
         ],
@@ -1250,7 +1274,7 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1260,17 +1284,17 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 4,
+        "days_left": 3,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 6,
+        "days_left": 5,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1280,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1290,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1300,7 +1324,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 9,
+        "days_left": 8,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
