@@ -6942,7 +6942,7 @@
     "ean": "5032037278485",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 335.0,
+    "ek": 325.0,
     "vk": 638.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7807,29 +7807,6 @@
       "https://media.ipcstore.net/img/l/141796.jpg"
     ],
     "image_too_small": true
-  },
-  "NETA0011": {
-    "ean": "4023125030963",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 218.23,
-    "vk": 418.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/efd89e2d8da424a4e288ba8287186cdeba094c67.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/efd89e2d8da424a4e288ba8287186cdeba094c67.jpg",
-      "https://images.icecat.biz/img/gallery/efd89e2d8da424a4e288ba8287186cdeba094c67.jpg",
-      "https://images.icecat.biz/img/gallery/f1568206652ff60002b16b47df48d1341579ed58.jpg",
-      "https://images.icecat.biz/img/gallery/f1568206652ff60002b16b47df48d1341579ed58.jpg",
-      "https://images.icecat.biz/img/gallery/f3821f399e9053ae39ed76a4815ee6d2c62d1701.jpg",
-      "https://images.icecat.biz/img/gallery/f3821f399e9053ae39ed76a4815ee6d2c62d1701.jpg",
-      "https://images.icecat.biz/img/gallery/323ce832d6a227933b3be88f64123fa8722326b5.jpg",
-      "https://images.icecat.biz/img/gallery/323ce832d6a227933b3be88f64123fa8722326b5.jpg",
-      "https://images.icecat.biz/img/gallery/18d6063fa24bced78fc91bd6c066b1ed67aa81c8.jpg",
-      "https://images.icecat.biz/img/gallery/18d6063fa24bced78fc91bd6c066b1ed67aa81c8.jpg"
-    ]
   },
   "NETT0162": {
     "ean": "8885020621488",
