@@ -8838,21 +8838,6 @@
     ],
     "image_too_small": true
   },
-  "RAM5G0010": {
-    "ean": "4713294232687",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 331.91,
-    "vk": 632.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/129941.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129941.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "RAM5G0013": {
     "ean": "4713294232649",
     "supplier": "BAB",
@@ -8875,16 +8860,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 776.48,
     "vk": 1469.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "RAM5G0016": {
-    "ean": "4713294232762",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 701.37,
-    "vk": 1328.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
@@ -10347,21 +10322,6 @@
       "https://images.icecat.biz/img/gallery/2abeecd927d24727ccd5a7b0ee41a8d2.jpg"
     ],
     "image_verified": true
-  },
-  "HHWB1130": {
-    "ean": "4022167001016",
-    "supplier": "BAB",
-    "ek": 16.75,
-    "vk": 40.99,
-    "title": "Braun BNA100 - Nasensauger - schnurlos",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/71658696_9066971040.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/71658696_9066971040.jpg"
-    ],
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1131": {
     "ean": "8700216194761",
@@ -13889,23 +13849,6 @@
       "https://images.icecat.biz/img/gallery/71845229_4445516595.jpg"
     ]
   },
-  "SUPS0260": {
-    "ean": "8801643979393",
-    "supplier": "BAB",
-    "ek": 9.64,
-    "vk": 25.99,
-    "title": "Samsung Fast Charging Wall Charger EP-TA800 - Netzteil - USB-C 25W - schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/111166.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/111166.jpg",
-      "https://media.ipcstore.net/img/l/111166_1.jpg",
-      "https://media.ipcstore.net/img/l/111166_2.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPS0261": {
     "ean": "8806092709874",
     "supplier": "BAB",
@@ -14270,34 +14213,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/462963_3782907376.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/462963_3782907376.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPV0084": {
-    "ean": "0023942323402",
-    "supplier": "BAB",
-    "ek": 12.79,
-    "vk": 31.99,
-    "title": "Verbatim Cool’n’go Airjet Handheld Fan Grey/Purple 32340",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/386237834fa207df2c80d1e329c2bf081396baad.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/386237834fa207df2c80d1e329c2bf081396baad.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPV0085": {
-    "ean": "0023942323419",
-    "supplier": "BAB",
-    "ek": 12.79,
-    "vk": 31.99,
-    "title": "Verbatim Cool’n’go Airjet Handheld Fan White/Silver 32341",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/b1bec137d50eca7af658ad8003f62e7700bb3a26.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/b1bec137d50eca7af658ad8003f62e7700bb3a26.jpg"
     ],
     "image_verified": true
   },
