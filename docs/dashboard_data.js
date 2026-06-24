@@ -1,115 +1,77 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-24T07:51:29.558026+00:00",
+  "generated_at": "2026-06-24T10:55:11.937594+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 55,
   "catalog": {
-    "total_skus": 1015,
+    "total_skus": 1013,
     "images_verified": 427,
-    "images_missing": 588
+    "images_missing": 586
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-24T04:42:20.476798+00:00",
-      "checked": 600,
-      "lowered": 38,
+      "timestamp": "2026-06-24T08:35:53.626855+00:00",
+      "checked": 55,
+      "lowered": 0,
       "raised": 0,
-      "set_to_floor": 142,
+      "set_to_floor": 6,
       "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 43,
-      "unchanged": 349,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 4,
+      "unchanged": 38,
+      "errors": 7,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4K0057",
-        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 210.99,
-        "new": 190.99,
-        "diff": -20.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 263.99,
-        "new": 238.99,
+        "sku": "SUPY0059",
+        "title": "Yealink WH67 - Headset WH67 Mono UC",
+        "old": 271.99,
+        "new": 246.99,
         "diff": -25.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 688.99,
-        "new": 627.95,
-        "diff": -61.04,
+        "sku": "USBV0008",
+        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
+        "old": 21.99,
+        "new": 13.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 622.99,
-        "new": 567.95,
-        "diff": -55.04,
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 54.99,
+        "new": 49.99,
+        "diff": -5.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 596.99,
-        "new": 543.95,
-        "diff": -53.04,
+        "sku": "USBV0013",
+        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
+        "old": 18.99,
+        "new": 9.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 97.99,
-        "new": 86.99,
-        "diff": -11.0,
+        "sku": "USBV0016",
+        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
+        "old": 21.99,
+        "new": 13.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 383.99,
-        "new": 367.99,
-        "diff": -16.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SDXS0033",
-        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
-        "old": 365.99,
-        "new": 332.99,
-        "diff": -33.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SDXS1020",
-        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
-        "old": 416.99,
-        "new": 379.99,
-        "diff": -37.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SDXV0009",
-        "title": "Verbatim Metal Mini SSD 1TB USB-C Gen 2 32031",
-        "old": 279.99,
-        "new": 253.99,
-        "diff": -26.0,
+        "sku": "USBV0017",
+        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
+        "old": 26.99,
+        "new": 19.99,
+        "diff": -7.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-22",
-        "lowered": 4,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-22",
         "lowered": 42,
@@ -187,6 +149,12 @@ window.DASHBOARD_DATA = {
         "lowered": 38,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-24",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -200,16 +168,16 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 4,
       "prev_week_revenue": 514.94,
-      "prev_week_profit": 77.82,
+      "prev_week_profit": 76.93,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 161.85,
-      "month_ek": 477.03,
+      "month_profit": 160.96,
+      "month_ek": 477.87,
       "month_ebay_fee": 127.66,
-      "month_return_reserve": 23.86,
+      "month_return_reserve": 23.91,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 161.85
+      "total_profit_30d": 160.96
     },
     "chart_7d": [
       {
@@ -379,7 +347,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 32.65,
+        "profit": 31.76,
         "sales": 1
       },
       {
@@ -921,7 +889,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 32.65,
+        "profit": 31.76,
         "sales": 1
       },
       {
@@ -1006,20 +974,20 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 32.65,
+        "profit": 31.76,
         "vk": 275.99,
-        "ek": 159.09,
+        "ek": 159.93,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 36.4,
           "vat": 38.89,
           "netto_vk": 204.69,
           "ship": 5.0,
-          "ek": 159.09,
-          "return_reserve": 7.95,
-          "profit_u": 32.65,
+          "ek": 159.93,
+          "return_reserve": 8.0,
+          "profit_u": 31.76,
           "qty": 1,
-          "profit_t": 32.65
+          "profit_t": 31.76
         }
       },
       {
@@ -1214,7 +1182,7 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 32.65
+        "profit": 31.76
       },
       {
         "date": "13.06 22:19",
@@ -1334,9 +1302,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 48.55,
-      "gewst_month": 24.28,
-      "total_month": 228.31
+      "est_month": 48.29,
+      "gewst_month": 24.14,
+      "total_month": 227.91
     },
     "expected_payout": 847.21
   },
