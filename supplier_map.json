@@ -4306,7 +4306,7 @@
     "ean": "4210201445111",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.2,
+    "ek": 80.19,
     "vk": 164.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4320,7 +4320,7 @@
     "ean": "4210201445234",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.2,
+    "ek": 80.19,
     "vk": 164.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4334,7 +4334,7 @@
     "ean": "4210201445258",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.2,
+    "ek": 80.19,
     "vk": 161.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4348,7 +4348,7 @@
     "ean": "4210201445197",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.2,
+    "ek": 80.19,
     "vk": 164.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5375,7 +5375,7 @@
     "ean": "0718037899770",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 156.03,
+    "ek": 148.77,
     "vk": 301.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5509,7 +5509,7 @@
     "ean": "4210201408567",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 104.55,
+    "ek": 103.53,
     "vk": 206.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6218,22 +6218,6 @@
     "image_url": "https://media.ipcstore.net/img/l/241215.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/241215.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SSDL0040": {
-    "ean": "0843367132218",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 115.6,
-    "vk": 225.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NQ790 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/138137.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/138137.jpg"
     ],
     "image_too_small": true
   },
@@ -7640,7 +7624,7 @@
     "ean": "4210201435457",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 207.06,
+    "ek": 206.05,
     "vk": 397.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7654,7 +7638,7 @@
     "ean": "4210201435587",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 208.08,
+    "ek": 206.05,
     "vk": 410.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8879,16 +8863,6 @@
     ],
     "image_too_small": true
   },
-  "RAM5G0030": {
-    "ean": "4713294233424",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 797.79,
-    "vk": 1509.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "RAM5K0043": {
     "ean": "0740617350180",
     "supplier": "BAB",
@@ -9451,7 +9425,7 @@
     "ean": "0843367132232",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 299.22,
+    "ek": 294.9,
     "vk": 570.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10165,7 +10139,7 @@
   "HHWB1111": {
     "ean": "4210201434818",
     "supplier": "BAB",
-    "ek": 31.47,
+    "ek": 30.45,
     "vk": 71.99,
     "title": "Braun Oral-B iO Ultimative Reinigung Aufsteckbürsten weiß 8 Stk",
     "listed_at": "2026-06-14T20:49:22",
@@ -10176,7 +10150,7 @@
   "HHWB1125": {
     "ean": "8700216996297",
     "supplier": "BAB",
-    "ek": 208.08,
+    "ek": 206.05,
     "vk": 410.99,
     "title": "Braun Oral-B iO Series 10 Lunar",
     "listed_at": "2026-06-14T20:49:22",
@@ -10201,7 +10175,7 @@
   "HHWB1131": {
     "ean": "8700216194761",
     "supplier": "BAB",
-    "ek": 25.38,
+    "ek": 23.85,
     "vk": 59.99,
     "title": "Braun Oral-B iO Aufsteckbürsten Ultimative Reinigung 6er",
     "listed_at": "2026-06-14T20:49:22",
@@ -10216,17 +10190,18 @@
   "HHWB1134": {
     "ean": "8700216195027",
     "supplier": "BAB",
-    "ek": 18.78,
+    "ek": 17.26,
     "vk": 42.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 4 St.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1136": {
     "ean": "8700216778541",
     "supplier": "BAB",
-    "ek": 31.47,
+    "ek": 30.45,
     "vk": 71.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 8 St.",
     "listed_at": "2026-06-14T20:49:22",
@@ -10237,7 +10212,7 @@
   "HHWB1137": {
     "ean": "8700216777063",
     "supplier": "BAB",
-    "ek": 38.57,
+    "ek": 36.54,
     "vk": 83.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 10 St.",
     "listed_at": "2026-06-14T20:49:22",
@@ -10248,7 +10223,7 @@
   "HHWB1138": {
     "ean": "8700216777131",
     "supplier": "BAB",
-    "ek": 37.56,
+    "ek": 37.05,
     "vk": 87.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 10 St.",
     "listed_at": "2026-06-14T20:49:22",
