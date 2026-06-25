@@ -1,107 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-25T12:25:09.085740+00:00",
+  "generated_at": "2026-06-25T15:41:45.053150+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 67,
+  "active_listings": 600,
   "catalog": {
-    "total_skus": 994,
+    "total_skus": 990,
     "images_verified": 419,
-    "images_missing": 575
+    "images_missing": 571
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-25T11:59:10.629271+00:00",
-      "checked": 67,
-      "lowered": 0,
+      "timestamp": "2026-06-25T15:20:01.187725+00:00",
+      "checked": 600,
+      "lowered": 3,
       "raised": 0,
-      "set_to_floor": 9,
+      "set_to_floor": 78,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 6,
-      "unchanged": 45,
-      "errors": 7,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 474,
+      "errors": 3,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 193.99,
-        "new": 174.99,
-        "diff": -19.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 519.99,
+        "new": 474.99,
+        "diff": -45.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0019",
-        "title": "Yealink IP Telefon MP56-Teams E2",
-        "old": 355.99,
-        "new": 323.99,
-        "diff": -32.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 241.99,
+        "new": 218.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 226.99,
-        "new": 204.99,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 210.99,
         "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 271.99,
-        "new": 246.99,
-        "diff": -25.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 480.99,
+        "new": 438.99,
+        "diff": -42.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 643.99,
+        "new": 586.95,
+        "diff": -57.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 54.99,
-        "new": 49.99,
-        "diff": -5.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 292.99,
+        "new": 265.99,
+        "diff": -27.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 18.99,
-        "new": 9.99,
-        "diff": -9.0,
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 234.99,
+        "new": 212.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 391.99,
+        "new": 357.99,
+        "diff": -34.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 26.99,
-        "new": 19.99,
-        "diff": -7.0,
+        "sku": "HDXV0002",
+        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
+        "old": 108.99,
+        "new": 96.99,
+        "diff": -12.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDXV0003",
+        "title": "Verbatim Store n Go 2,5 2TB USB 3.0 schwarz 5",
+        "old": 144.99,
+        "new": 129.99,
+        "diff": -15.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-23",
-        "lowered": 34,
-        "raised": 46,
-        "floor": 0
-      },
       {
         "date": "2026-06-23",
         "lowered": 0,
@@ -179,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-25",
+        "lowered": 3,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -192,16 +200,16 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 4,
       "prev_week_revenue": 514.94,
-      "prev_week_profit": 76.93,
+      "prev_week_profit": 85.65,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 160.96,
-      "month_ek": 477.87,
+      "month_profit": 169.68,
+      "month_ek": 469.57,
       "month_ebay_fee": 127.66,
-      "month_return_reserve": 23.91,
+      "month_return_reserve": 23.49,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 160.96
+      "total_profit_30d": 169.68
     },
     "chart_7d": [
       {
@@ -371,7 +379,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": 9.25,
+        "profit": 17.97,
         "sales": 2
       },
       {
@@ -913,7 +921,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": 9.25,
+        "profit": 17.97,
         "sales": 2
       },
       {
@@ -1036,6 +1044,27 @@ window.DASHBOARD_DATA = {
         }
       },
       {
+        "sku": "PETK0049",
+        "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
+        "sold": 1,
+        "revenue": 25.99,
+        "profit": 16.92,
+        "vk": 25.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 29.98,
+          "ebay_fee": 3.9,
+          "vat": 4.16,
+          "netto_vk": 21.92,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "profit_u": 16.92,
+          "qty": 1,
+          "profit_t": 16.92
+        }
+      },
+      {
         "sku": "USBK1036",
         "title": "Kioxia TransMemory U301 128GB USB 3.0",
         "sold": 1,
@@ -1096,27 +1125,6 @@ window.DASHBOARD_DATA = {
           "profit_u": 8.75,
           "qty": 1,
           "profit_t": 8.75
-        }
-      },
-      {
-        "sku": "PETK0049",
-        "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
-        "sold": 1,
-        "revenue": 25.99,
-        "profit": 8.2,
-        "vk": 25.99,
-        "ek": 8.3,
-        "calc": {
-          "vk_brutto": 29.98,
-          "ebay_fee": 3.9,
-          "vat": 4.16,
-          "netto_vk": 21.92,
-          "ship": 5.0,
-          "ek": 8.3,
-          "return_reserve": 0.42,
-          "profit_u": 8.2,
-          "qty": 1,
-          "profit_t": 8.2
         }
       },
       {
@@ -1200,7 +1208,7 @@ window.DASHBOARD_DATA = {
         "date": "16.06 07:16",
         "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pc",
         "revenue": 29.98,
-        "profit": 8.2
+        "profit": 16.92
       },
       {
         "date": "15.06 22:07",
@@ -1326,9 +1334,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 48.29,
-      "gewst_month": 24.14,
-      "total_month": 227.91
+      "est_month": 50.9,
+      "gewst_month": 25.45,
+      "total_month": 231.84
     },
     "expected_payout": 847.21
   },
