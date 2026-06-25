@@ -2430,7 +2430,7 @@
     "ean": "5099206066823",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.62,
+    "ek": 48.06,
     "vk": 99.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -13080,7 +13080,7 @@
   "SUPL0006": {
     "ean": "5099206041271",
     "supplier": "BAB",
-    "ek": 2.89,
+    "ek": 2.84,
     "vk": 13.99,
     "title": "Logitech Mouse B100 Optical Corded Black OEM",
     "listed_at": "2026-06-14T20:49:22",
@@ -13111,7 +13111,7 @@
   "SUPL0127": {
     "ean": "5099206065062",
     "supplier": "BAB",
-    "ek": 5.63,
+    "ek": 5.58,
     "vk": 18.99,
     "title": "Logitech Mouse B170 Optical Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -13159,7 +13159,7 @@
   "SUPL0233": {
     "ean": "5099206066199",
     "supplier": "BAB",
-    "ek": 8.91,
+    "ek": 8.62,
     "vk": 24.99,
     "title": "Logitech Mouse M220 Silent Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
