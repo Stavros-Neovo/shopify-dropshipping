@@ -1023,7 +1023,7 @@
     "ean": "5099206122017",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 37.45,
+    "ek": 36.64,
     "vk": 79.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1039,7 +1039,7 @@
     "ean": "5099206127128",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.81,
+    "ek": 47.2,
     "vk": 97.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -2569,7 +2569,7 @@
     "ean": "8886419378396",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 27.91,
+    "ek": 27.41,
     "vk": 60.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2583,7 +2583,7 @@
     "ean": "8887910073063",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 40.6,
+    "ek": 38.57,
     "vk": 83.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2608,7 +2608,7 @@
     "ean": "8887910060421",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.44,
+    "ek": 28.93,
     "vk": 64.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2618,7 +2618,7 @@
     "ean": "4548736142428",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.75,
+    "ek": 48.72,
     "vk": 103.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2633,7 +2633,7 @@
     "ean": "8806095312187",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 25.38,
+    "ek": 24.87,
     "vk": 56.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3764,7 +3764,7 @@
     "ean": "0840414681804",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 70.04,
+    "ek": 68.51,
     "vk": 139.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3979,7 +3979,7 @@
     "ean": "8886419334163",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 77.24,
+    "ek": 75.01,
     "vk": 152.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4179,20 +4179,6 @@
       "https://images.icecat.biz/img/gallery/f7b9d70e52c0972976791b653590917850d1d453.jpg",
       "https://images.icecat.biz/img/gallery/3a419e4e39d624d84c4eabbfa9755c23f44ba52c.jpg"
     ]
-  },
-  "HDIS0139": {
-    "ean": "0763649113653",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 93.18,
-    "vk": 182.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg"
-    ],
-    "image_verified": true
   },
   "HDXT0225": {
     "ean": "4260557511213",
@@ -5119,7 +5105,7 @@
     "ean": "8886419333937",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 77.14,
+    "ek": 75.11,
     "vk": 160.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5150,7 +5136,7 @@
     "ean": "8887910060889",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 78.16,
+    "ek": 75.11,
     "vk": 157.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5176,7 +5162,7 @@
     "ean": "4548736158337",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 87.29,
+    "ek": 83.23,
     "vk": 171.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6831,21 +6817,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "CPUA0126": {
-    "ean": "0730143315272",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 388.0,
-    "vk": 740.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/136932.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/136932.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "CPUA0135": {
     "ean": "0730143315579",
     "supplier": "BAB",
@@ -7173,7 +7144,7 @@
     "ean": "8719706438667",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 849.5,
+    "ek": 795.2,
     "vk": 1607.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7482,16 +7453,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "HDIW0219": {
-    "ean": "0718037902821",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 259.22,
-    "vk": 495.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "HDIW0220": {
     "ean": "0718037902814",
@@ -8532,16 +8493,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "RAM5C0022": {
-    "ean": "0649528937803",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 338.0,
-    "vk": 643.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "RAM5C0025": {
     "ean": "0840440492573",
@@ -9982,7 +9933,7 @@
     "ean": "4548736134294",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 175.6,
+    "ek": 172.55,
     "vk": 338.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9998,7 +9949,7 @@
     "ean": "4548736132597",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 169.51,
+    "ek": 167.48,
     "vk": 326.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -13360,17 +13311,18 @@
   "SUPL0600": {
     "ean": "5099206127098",
     "supplier": "BAB",
-    "ek": 48.01,
+    "ek": 47.2,
     "vk": 97.99,
     "title": "Logitech Ultimate Ears MINIROLL majestätisches blau",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPL0601": {
     "ean": "5099206127104",
     "supplier": "BAB",
-    "ek": 47.81,
+    "ek": 47.2,
     "vk": 97.99,
     "title": "Logitech Ultimate Ears MINIROLL Revive Grey",
     "listed_at": "2026-06-14T20:49:22",
@@ -13562,7 +13514,7 @@
   "SUPR1009": {
     "ean": "8886419333265",
     "supplier": "BAB",
-    "ek": 14.96,
+    "ek": 14.29,
     "vk": 35.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - black",
     "listed_at": "2026-06-14T20:49:22",
@@ -13572,12 +13524,13 @@
     "images": [
       "https://media.ipcstore.net/img/l/125612.jpg"
     ],
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPR1027": {
     "ean": "8886419333326",
     "supplier": "BAB",
-    "ek": 15.45,
+    "ek": 14.74,
     "vk": 38.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - white",
     "listed_at": "2026-06-14T20:49:22",
@@ -13608,7 +13561,7 @@
   "SUPR1055": {
     "ean": "8886419345763",
     "supplier": "BAB",
-    "ek": 71.99,
+    "ek": 69.69,
     "vk": 145.99,
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
     "listed_at": "2026-06-14T20:49:22",
@@ -13702,7 +13655,7 @@
   "SUPS0261": {
     "ean": "8806092709874",
     "supplier": "BAB",
-    "ek": 4.67,
+    "ek": 4.62,
     "vk": 16.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - schwarz",
     "listed_at": "2026-06-14T20:49:22",
@@ -13713,7 +13666,8 @@
       "https://images.icecat.biz/img/gallery/95546582_3021996069.jpg",
       "https://images.icecat.biz/img/gallery/95546582_7794563741.jpg",
       "https://images.icecat.biz/img/gallery/95546582_4149181325.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0262": {
     "ean": "8806092709850",
