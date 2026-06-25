@@ -153,7 +153,7 @@
     "ean": "5099206105324",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.67,
+    "ek": 38.57,
     "vk": 80.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -3000,7 +3000,7 @@
     "ean": "0023942531944",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 62.83,
+    "ek": 62.22,
     "vk": 125.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4278,7 +4278,7 @@
     "ean": "0023942531777",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 78.16,
+    "ek": 77.14,
     "vk": 154.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5045,7 +5045,7 @@
     "ean": "5099206133082",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 91.86,
+    "ek": 91.65,
     "vk": 184.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5060,7 +5060,7 @@
     "ean": "5099206133099",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 93.89,
+    "ek": 91.05,
     "vk": 184.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5075,7 +5075,7 @@
     "ean": "5099206133112",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 92.57,
+    "ek": 91.86,
     "vk": 184.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5478,7 +5478,7 @@
     "ean": "0023942532231",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 114.59,
+    "ek": 112.67,
     "vk": 223.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6195,7 +6195,7 @@
     "ean": "0843367130283",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 136.16,
+    "ek": 135.56,
     "vk": 263.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6298,7 +6298,7 @@
     "ean": "0718037894850",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 120.56,
+    "ek": 118.84,
     "vk": 234.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6354,7 +6354,7 @@
     "ean": "0718037907154",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 110.61,
+    "ek": 109.07,
     "vk": 215.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6363,22 +6363,6 @@
     "image_url": "https://media.ipcstore.net/img/l/140429.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/140429.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SUPB1046": {
-    "ean": "0017817847681",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 144.13,
-    "vk": 278.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Bose QuietComfort Ultra Earbuds black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21285453.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21285453.jpg"
     ],
     "image_too_small": true
   },
@@ -7402,7 +7386,7 @@
     "ean": "0718037899794",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 179.04,
+    "ek": 177.81,
     "vk": 350.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -8509,22 +8493,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5C1008": {
-    "ean": "0840006684442",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 349.01,
-    "vk": 664.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Corsair Vengeance - DDR5 - Kit - 32 GB: 2 x 16 GB (CMK32GX5M2B6000C38)",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21310730.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21310730.jpg"
-    ],
-    "image_too_small": true
-  },
   "RAM5C1013": {
     "ean": "0840006667216",
     "supplier": "BAB",
@@ -9556,7 +9524,7 @@
     "ean": "8806095575650",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 249.9,
+    "ek": 246.5,
     "vk": 489.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -11097,16 +11065,6 @@
     "ek": 11.0,
     "vk": 28.99,
     "title": "Petkit Katzenstreu Entferner Set Tofu",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PETK0049": {
-    "ean": "6973293809244",
-    "supplier": "BAB",
-    "ek": 8.3,
-    "vk": 23.99,
-    "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
@@ -13132,22 +13090,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/465424.jpg"
     ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
-  },
-  "SUPL0027": {
-    "ean": "5099206027282",
-    "supplier": "BAB",
-    "ek": 5.84,
-    "vk": 19.99,
-    "title": "Logitech Mouse M185 Wireless Swift Grey",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/789543.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/789543.jpg"
-    ],
-    "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_too_small": true
   },
