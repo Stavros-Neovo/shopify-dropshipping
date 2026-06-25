@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-25T21:00:32.363449+00:00",
+  "generated_at": "2026-06-25T23:22:13.625208+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 63,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 990,
     "images_verified": 419,
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-25T20:24:59.038147+00:00",
-      "checked": 63,
-      "lowered": 0,
+      "timestamp": "2026-06-25T22:51:28.905970+00:00",
+      "checked": 600,
+      "lowered": 2,
       "raised": 0,
-      "set_to_floor": 10,
+      "set_to_floor": 78,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 5,
-      "unchanged": 41,
-      "errors": 7,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 477,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0073",
-        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
-        "old": 317.99,
-        "new": 288.99,
-        "diff": -29.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 519.99,
+        "new": 474.99,
+        "diff": -45.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 193.99,
-        "new": 174.99,
-        "diff": -19.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 241.99,
+        "new": 218.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0019",
-        "title": "Yealink IP Telefon MP56-Teams E2",
-        "old": 355.99,
-        "new": 323.99,
-        "diff": -32.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 226.99,
-        "new": 204.99,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 232.99,
+        "new": 210.99,
         "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 271.99,
-        "new": 246.99,
-        "diff": -25.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 480.99,
+        "new": 438.99,
+        "diff": -42.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 643.99,
+        "new": 586.95,
+        "diff": -57.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 54.99,
-        "new": 49.99,
-        "diff": -5.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 292.99,
+        "new": 265.99,
+        "diff": -27.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 18.99,
-        "new": 9.99,
-        "diff": -9.0,
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 234.99,
+        "new": 212.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 391.99,
+        "new": 357.99,
+        "diff": -34.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 26.99,
-        "new": 19.99,
-        "diff": -7.0,
+        "sku": "HDXV0002",
+        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
+        "old": 108.99,
+        "new": 96.99,
+        "diff": -12.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDXV0003",
+        "title": "Verbatim Store n Go 2,5 2TB USB 3.0 schwarz 5",
+        "old": 144.99,
+        "new": 129.99,
+        "diff": -15.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-24",
-        "lowered": 38,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-24",
         "lowered": 0,
@@ -185,6 +179,12 @@ window.DASHBOARD_DATA = {
       {
         "date": "2026-06-25",
         "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-25",
+        "lowered": 2,
         "raised": 0,
         "floor": 0
       }
