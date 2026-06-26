@@ -358,5 +358,15 @@
     "ean": "5713552042200",
     "title": "Upcycle IT Lenovo ThinkCentre M90q Tiny",
     "detected_at": "2026-06-23T10:46:10.061172+00:00"
+  },
+  "SUPB1047": {
+    "ean": "0017817847643",
+    "title": "Bose QuietComfort Ultra Earbuds white",
+    "detected_at": "2026-06-23T19:25:27.729604+00:00"
+  },
+  "SUPY0019": {
+    "ean": "6938818318410",
+    "title": "Yealink IP Telefon MP56-Teams E2",
+    "detected_at": "2026-06-26T06:31:57.341703+00:00"
   }
 }

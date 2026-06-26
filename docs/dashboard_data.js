@@ -1,182 +1,190 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-23T15:53:28.809913+00:00",
+  "generated_at": "2026-06-26T14:34:10.997554+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 60,
+  "active_listings": 600,
   "catalog": {
-    "total_skus": 1018,
-    "images_verified": 422,
-    "images_missing": 596
+    "total_skus": 985,
+    "images_verified": 419,
+    "images_missing": 566
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-23T13:56:31.702680+00:00",
-      "checked": 60,
-      "lowered": 0,
+      "timestamp": "2026-06-26T13:24:48.066820+00:00",
+      "checked": 600,
+      "lowered": 36,
       "raised": 0,
-      "set_to_floor": 9,
+      "set_to_floor": 138,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 4,
-      "unchanged": 40,
-      "errors": 7,
+      "skipped_few": 30,
+      "skipped_image": 41,
+      "unchanged": 353,
+      "errors": 2,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 193.99,
-        "new": 174.99,
-        "diff": -19.0,
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 279.99,
+        "new": 253.99,
+        "diff": -26.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0019",
-        "title": "Yealink IP Telefon MP56-Teams E2",
-        "old": 355.99,
-        "new": 323.99,
-        "diff": -32.0,
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 210.99,
+        "new": 190.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 226.99,
-        "new": 204.99,
-        "diff": -22.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 271.99,
-        "new": 246.99,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 263.99,
+        "new": 238.99,
         "diff": -25.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 688.99,
+        "new": 627.95,
+        "diff": -61.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 54.99,
-        "new": 49.99,
-        "diff": -5.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 622.99,
+        "new": 567.95,
+        "diff": -55.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 18.99,
-        "new": 9.99,
-        "diff": -9.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 596.99,
+        "new": 543.95,
+        "diff": -53.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 21.99,
-        "new": 13.99,
-        "diff": -8.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 97.99,
+        "new": 86.99,
+        "diff": -11.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 26.99,
-        "new": 19.99,
-        "diff": -7.0,
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 383.99,
+        "new": 367.99,
+        "diff": -16.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SDXS0033",
+        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
+        "old": 365.99,
+        "new": 332.99,
+        "diff": -33.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SDXS1020",
+        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
+        "old": 416.99,
+        "new": 379.99,
+        "diff": -37.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
       {
-        "date": "2026-06-21",
+        "date": "2026-06-24",
+        "lowered": 4,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-24",
         "lowered": 39,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-21",
+        "date": "2026-06-24",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-21",
-        "lowered": 4,
+        "date": "2026-06-25",
+        "lowered": 3,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-21",
-        "lowered": 41,
+        "date": "2026-06-25",
+        "lowered": 52,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-21",
+        "date": "2026-06-25",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-22",
-        "lowered": 4,
+        "date": "2026-06-25",
+        "lowered": 3,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-22",
-        "lowered": 42,
+        "date": "2026-06-25",
+        "lowered": 49,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-22",
+        "date": "2026-06-25",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-22",
-        "lowered": 4,
+        "date": "2026-06-25",
+        "lowered": 2,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-22",
-        "lowered": 43,
+        "date": "2026-06-26",
+        "lowered": 50,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-23",
+        "date": "2026-06-26",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-23",
-        "lowered": 4,
-        "raised": 2,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-23",
-        "lowered": 43,
+        "date": "2026-06-26",
+        "lowered": 2,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-23",
-        "lowered": 0,
+        "date": "2026-06-26",
+        "lowered": 36,
         "raised": 0,
         "floor": 0
       }
@@ -192,36 +200,18 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 4,
       "prev_week_revenue": 514.94,
-      "prev_week_profit": 77.82,
+      "prev_week_profit": 85.65,
       "month_sales": 11,
       "month_revenue": 973.8,
-      "month_profit": 161.85,
-      "month_ek": 477.03,
+      "month_profit": 169.68,
+      "month_ek": 469.57,
       "month_ebay_fee": 127.66,
-      "month_return_reserve": 23.86,
+      "month_return_reserve": 23.49,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 161.85
+      "total_profit_30d": 169.68
     },
     "chart_7d": [
-      {
-        "date": "17.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "18.06",
-        "revenue": 51.99,
-        "profit": 35.92,
-        "sales": 1
-      },
-      {
-        "date": "19.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "20.06",
         "revenue": 0,
@@ -245,27 +235,27 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "24.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "25.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "26.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_30d": [
-      {
-        "date": "25.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "26.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "27.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "28.05",
         "revenue": 0,
@@ -377,13 +367,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 32.65,
+        "profit": 31.76,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": 9.25,
+        "profit": 17.97,
         "sales": 2
       },
       {
@@ -427,27 +417,27 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "24.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "25.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "26.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_90d": [
-      {
-        "date": "26.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "27.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "28.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "29.03",
         "revenue": 0,
@@ -919,13 +909,13 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 32.65,
+        "profit": 31.76,
         "sales": 1
       },
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": 9.25,
+        "profit": 17.97,
         "sales": 2
       },
       {
@@ -969,6 +959,24 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "24.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "25.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "26.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -998,20 +1006,20 @@ window.DASHBOARD_DATA = {
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
         "revenue": 275.99,
-        "profit": 32.65,
+        "profit": 31.76,
         "vk": 275.99,
-        "ek": 159.09,
+        "ek": 159.93,
         "calc": {
           "vk_brutto": 279.98,
           "ebay_fee": 36.4,
           "vat": 38.89,
           "netto_vk": 204.69,
           "ship": 5.0,
-          "ek": 159.09,
-          "return_reserve": 7.95,
-          "profit_u": 32.65,
+          "ek": 159.93,
+          "return_reserve": 8.0,
+          "profit_u": 31.76,
           "qty": 1,
-          "profit_t": 32.65
+          "profit_t": 31.76
         }
       },
       {
@@ -1033,6 +1041,27 @@ window.DASHBOARD_DATA = {
           "profit_u": 27.93,
           "qty": 1,
           "profit_t": 27.93
+        }
+      },
+      {
+        "sku": "PETK0049",
+        "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
+        "sold": 1,
+        "revenue": 25.99,
+        "profit": 16.92,
+        "vk": 25.99,
+        "ek": 0,
+        "calc": {
+          "vk_brutto": 29.98,
+          "ebay_fee": 3.9,
+          "vat": 4.16,
+          "netto_vk": 21.92,
+          "ship": 5.0,
+          "ek": 0,
+          "return_reserve": 0.0,
+          "profit_u": 16.92,
+          "qty": 1,
+          "profit_t": 16.92
         }
       },
       {
@@ -1096,27 +1125,6 @@ window.DASHBOARD_DATA = {
           "profit_u": 8.75,
           "qty": 1,
           "profit_t": 8.75
-        }
-      },
-      {
-        "sku": "PETK0049",
-        "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
-        "sold": 1,
-        "revenue": 25.99,
-        "profit": 8.2,
-        "vk": 25.99,
-        "ek": 8.3,
-        "calc": {
-          "vk_brutto": 29.98,
-          "ebay_fee": 3.9,
-          "vat": 4.16,
-          "netto_vk": 21.92,
-          "ship": 5.0,
-          "ek": 8.3,
-          "return_reserve": 0.42,
-          "profit_u": 8.2,
-          "qty": 1,
-          "profit_t": 8.2
         }
       },
       {
@@ -1200,13 +1208,13 @@ window.DASHBOARD_DATA = {
         "date": "16.06 07:16",
         "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pc",
         "revenue": 29.98,
-        "profit": 8.2
+        "profit": 16.92
       },
       {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 32.65
+        "profit": 31.76
       },
       {
         "date": "13.06 22:19",
@@ -1253,20 +1261,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "20-14740-74871",
-        "date": "2026-06-11",
-        "deadline": "2026-06-25",
-        "days_left": 2,
-        "items": [
-          "ECOFLOW Smart Plug 2"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 3,
+        "days_left": 0,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1276,27 +1274,27 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 4,
+        "days_left": 1,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 6,
+        "days_left": 3,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 7,
+        "days_left": 4,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1306,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 7,
+        "days_left": 4,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1316,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 9,
+        "days_left": 6,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
@@ -1326,9 +1324,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 155.48,
-      "est_month": 48.55,
-      "gewst_month": 24.28,
-      "total_month": 228.31
+      "est_month": 50.9,
+      "gewst_month": 25.45,
+      "total_month": 231.84
     },
     "expected_payout": 847.21
   },

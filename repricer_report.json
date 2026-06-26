@@ -1,270 +1,6 @@
 {
   "history": [
     {
-      "timestamp": "2026-06-19T20:50:07.720629+00:00",
-      "checked": 600,
-      "lowered": 4,
-      "raised": 57,
-      "skipped_floor": 0,
-      "skipped_few": 11,
-      "skipped_image": 13,
-      "unchanged": 469,
-      "errors": 2
-    },
-    {
-      "timestamp": "2026-06-19T22:15:48.624589+00:00",
-      "checked": 600,
-      "lowered": 39,
-      "raised": 60,
-      "skipped_floor": 0,
-      "skipped_few": 21,
-      "skipped_image": 20,
-      "unchanged": 364,
-      "errors": 2
-    },
-    {
-      "timestamp": "2026-06-19T23:32:30.857245+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 4,
-      "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 4,
-      "unchanged": 45,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-20T04:44:24.865681+00:00",
-      "checked": 600,
-      "lowered": 2,
-      "raised": 52,
-      "skipped_floor": 0,
-      "skipped_few": 12,
-      "skipped_image": 19,
-      "unchanged": 472,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-20T08:29:53.879165+00:00",
-      "checked": 600,
-      "lowered": 40,
-      "raised": 58,
-      "skipped_floor": 0,
-      "skipped_few": 21,
-      "skipped_image": 22,
-      "unchanged": 364,
-      "errors": 2
-    },
-    {
-      "timestamp": "2026-06-20T11:05:31.462235+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-20T11:27:14.822898+00:00",
-      "checked": 600,
-      "lowered": 8,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 17,
-      "skipped_image": 17,
-      "unchanged": 460,
-      "errors": 2
-    },
-    {
-      "timestamp": "2026-06-20T14:35:25.848995+00:00",
-      "checked": 600,
-      "lowered": 30,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 24,
-      "unchanged": 489,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-20T16:55:39.622918+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-20T18:50:35.125296+00:00",
-      "checked": 600,
-      "lowered": 0,
-      "raised": 6,
-      "skipped_floor": 0,
-      "skipped_few": 119,
-      "skipped_image": 17,
-      "unchanged": 457,
-      "errors": 1
-    },
-    {
-      "timestamp": "2026-06-20T20:44:44.188090+00:00",
-      "checked": 600,
-      "lowered": 0,
-      "raised": 1,
-      "skipped_floor": 0,
-      "skipped_few": 222,
-      "skipped_image": 29,
-      "unchanged": 348,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-20T22:37:14.455663+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-21T01:42:45.863321+00:00",
-      "checked": 600,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 126,
-      "skipped_image": 17,
-      "unchanged": 457,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-21T07:12:54.180492+00:00",
-      "checked": 600,
-      "lowered": 39,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 33,
-      "skipped_image": 38,
-      "unchanged": 352,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-21T10:50:02.332777+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 9
-    },
-    {
-      "timestamp": "2026-06-21T13:19:32.531523+00:00",
-      "checked": 600,
-      "lowered": 5,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 17,
-      "skipped_image": 21,
-      "unchanged": 463,
-      "errors": 2
-    },
-    {
-      "timestamp": "2026-06-21T15:20:26.400974+00:00",
-      "checked": 600,
-      "lowered": 39,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 34,
-      "skipped_image": 40,
-      "unchanged": 352,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-21T17:57:58.520119+00:00",
-      "checked": 77,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 9
-    },
-    {
-      "timestamp": "2026-06-21T20:07:28.436799+00:00",
-      "checked": 600,
-      "lowered": 4,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 17,
-      "skipped_image": 21,
-      "unchanged": 469,
-      "errors": 2
-    },
-    {
-      "timestamp": "2026-06-21T21:45:59.014948+00:00",
-      "checked": 600,
-      "lowered": 41,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 40,
-      "unchanged": 354,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-21T23:47:57.926552+00:00",
-      "checked": 76,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 1,
-      "skipped_image": 8,
-      "unchanged": 41,
-      "errors": 9
-    },
-    {
-      "timestamp": "2026-06-22T05:35:43.661110+00:00",
-      "checked": 600,
-      "lowered": 4,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 17,
-      "skipped_image": 21,
-      "unchanged": 469,
-      "errors": 1
-    },
-    {
-      "timestamp": "2026-06-22T12:29:15.979364+00:00",
-      "checked": 600,
-      "lowered": 42,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 42,
-      "unchanged": 347,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-22T17:57:05.350109+00:00",
-      "checked": 47,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 1,
-      "unchanged": 32,
-      "errors": 9
-    },
-    {
       "timestamp": "2026-06-22T21:16:58.400632+00:00",
       "checked": 600,
       "lowered": 4,
@@ -329,9 +65,288 @@
       "skipped_image": 4,
       "unchanged": 40,
       "errors": 7
+    },
+    {
+      "timestamp": "2026-06-23T16:44:36.511288+00:00",
+      "checked": 600,
+      "lowered": 3,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 26,
+      "skipped_image": 17,
+      "unchanged": 470,
+      "errors": 2
+    },
+    {
+      "timestamp": "2026-06-23T19:21:35.179434+00:00",
+      "checked": 600,
+      "lowered": 34,
+      "raised": 46,
+      "skipped_floor": 0,
+      "skipped_few": 28,
+      "skipped_image": 43,
+      "unchanged": 365,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-06-23T21:53:05.162378+00:00",
+      "checked": 56,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 4,
+      "unchanged": 38,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-23T23:32:28.631942+00:00",
+      "checked": 600,
+      "lowered": 4,
+      "raised": 5,
+      "skipped_floor": 0,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 463,
+      "errors": 3
+    },
+    {
+      "timestamp": "2026-06-24T04:42:20.476798+00:00",
+      "checked": 600,
+      "lowered": 38,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 28,
+      "skipped_image": 43,
+      "unchanged": 349,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-06-24T08:35:53.626855+00:00",
+      "checked": 55,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 4,
+      "unchanged": 38,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-24T12:03:09.532608+00:00",
+      "checked": 600,
+      "lowered": 4,
+      "raised": 2,
+      "skipped_floor": 0,
+      "skipped_few": 24,
+      "skipped_image": 17,
+      "unchanged": 470,
+      "errors": 1
+    },
+    {
+      "timestamp": "2026-06-24T15:12:19.679164+00:00",
+      "checked": 600,
+      "lowered": 38,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 28,
+      "skipped_image": 42,
+      "unchanged": 352,
+      "errors": 2
+    },
+    {
+      "timestamp": "2026-06-24T17:22:25.484889+00:00",
+      "checked": 53,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 3,
+      "unchanged": 37,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-24T20:14:00.875517+00:00",
+      "checked": 600,
+      "lowered": 4,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 24,
+      "skipped_image": 17,
+      "unchanged": 474,
+      "errors": 1
+    },
+    {
+      "timestamp": "2026-06-24T21:50:17.084565+00:00",
+      "checked": 600,
+      "lowered": 39,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 28,
+      "skipped_image": 44,
+      "unchanged": 349,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-06-24T23:36:55.400104+00:00",
+      "checked": 52,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 2,
+      "unchanged": 37,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-25T04:37:33.715506+00:00",
+      "checked": 600,
+      "lowered": 3,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 474,
+      "errors": 1
+    },
+    {
+      "timestamp": "2026-06-25T08:32:57.067435+00:00",
+      "checked": 600,
+      "lowered": 52,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 29,
+      "skipped_image": 42,
+      "unchanged": 351,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-06-25T11:59:10.629271+00:00",
+      "checked": 67,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 6,
+      "unchanged": 45,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-25T15:20:01.187725+00:00",
+      "checked": 600,
+      "lowered": 3,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 474,
+      "errors": 3
+    },
+    {
+      "timestamp": "2026-06-25T17:27:47.757077+00:00",
+      "checked": 600,
+      "lowered": 49,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 31,
+      "skipped_image": 41,
+      "unchanged": 353,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-06-25T20:24:59.038147+00:00",
+      "checked": 63,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 5,
+      "unchanged": 41,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-25T22:51:28.905970+00:00",
+      "checked": 600,
+      "lowered": 2,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 477,
+      "errors": 1
+    },
+    {
+      "timestamp": "2026-06-26T01:33:09.194322+00:00",
+      "checked": 600,
+      "lowered": 50,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 31,
+      "skipped_image": 41,
+      "unchanged": 355,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-06-26T06:31:47.059475+00:00",
+      "checked": 63,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 6,
+      "unchanged": 41,
+      "errors": 7
+    },
+    {
+      "timestamp": "2026-06-26T10:31:03.710329+00:00",
+      "checked": 600,
+      "lowered": 2,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 25,
+      "skipped_image": 17,
+      "unchanged": 477,
+      "errors": 3
+    },
+    {
+      "timestamp": "2026-06-26T13:24:48.066820+00:00",
+      "checked": 600,
+      "lowered": 36,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 30,
+      "skipped_image": 41,
+      "unchanged": 353,
+      "errors": 2
+    },
+    {
+      "timestamp": "2026-06-26T16:29:51.920111+00:00",
+      "checked": 61,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 6,
+      "unchanged": 39,
+      "errors": 7
     }
   ],
   "last_changes": [
+    {
+      "ean": "0023942324034",
+      "sku": "SUPV0073",
+      "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIALS",
+      "ek": 181.69,
+      "floor_price": 288.99,
+      "normal_price": 301.99,
+      "old_price": 317.99,
+      "new_price": 288.99,
+      "competitor_count": 11,
+      "lowest_competitor": 237.89,
+      "action": "lowered",
+      "reason": "floor_protection_set_to_floor",
+      "timestamp": "2026-06-26T16:29:52.449789+00:00"
+    },
     {
       "ean": "6938818303171",
       "sku": "SUPY0010",
@@ -342,25 +357,10 @@
       "old_price": 193.99,
       "new_price": 174.99,
       "competitor_count": 15,
-      "lowest_competitor": 133.32,
+      "lowest_competitor": 133.42,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:56:32.466113+00:00"
-    },
-    {
-      "ean": "6938818318410",
-      "sku": "SUPY0019",
-      "title": "Yealink IP Telefon MP56-Teams E2",
-      "ek": 204.02,
-      "floor_price": 323.99,
-      "normal_price": 337.99,
-      "old_price": 355.99,
-      "new_price": 323.99,
-      "competitor_count": 13,
-      "lowest_competitor": 259.0,
-      "action": "lowered",
-      "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:56:36.965783+00:00"
+      "timestamp": "2026-06-26T16:29:56.359918+00:00"
     },
     {
       "ean": "6938818308497",
@@ -375,7 +375,7 @@
       "lowest_competitor": 161.41,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:56:41.425130+00:00"
+      "timestamp": "2026-06-26T16:30:00.115002+00:00"
     },
     {
       "ean": "6938818306578",
@@ -387,10 +387,10 @@
       "old_price": 271.99,
       "new_price": 246.99,
       "competitor_count": 9,
-      "lowest_competitor": 208.68,
+      "lowest_competitor": 208.83,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:56:45.902332+00:00"
+      "timestamp": "2026-06-26T16:30:03.825209+00:00"
     },
     {
       "ean": "0023942491729",
@@ -405,7 +405,7 @@
       "lowest_competitor": 9.95,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:57:36.368462+00:00"
+      "timestamp": "2026-06-26T16:30:25.066497+00:00"
     },
     {
       "ean": "023942491682",
@@ -416,11 +416,11 @@
       "normal_price": 49.99,
       "old_price": 54.99,
       "new_price": 49.99,
-      "competitor_count": 21,
+      "competitor_count": 22,
       "lowest_competitor": 35.99,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:57:40.021521+00:00"
+      "timestamp": "2026-06-26T16:30:28.755724+00:00"
     },
     {
       "ean": "0023942490623",
@@ -435,7 +435,7 @@
       "lowest_competitor": 7.23,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:57:43.671387+00:00"
+      "timestamp": "2026-06-26T16:30:32.324282+00:00"
     },
     {
       "ean": "0023942490654",
@@ -450,7 +450,7 @@
       "lowest_competitor": 11.49,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:57:52.030732+00:00"
+      "timestamp": "2026-06-26T16:30:36.032115+00:00"
     },
     {
       "ean": "0023942490715",
@@ -465,19 +465,19 @@
       "lowest_competitor": 14.99,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-06-23T13:58:00.728070+00:00"
+      "timestamp": "2026-06-26T16:30:39.286306+00:00"
     }
   ],
   "last_run": {
-    "timestamp": "2026-06-23T13:56:31.702680+00:00",
-    "checked": 60,
+    "timestamp": "2026-06-26T16:29:51.920111+00:00",
+    "checked": 61,
     "lowered": 0,
     "raised": 0,
     "set_to_floor": 9,
     "skipped_floor": 0,
     "skipped_few": 0,
-    "skipped_image": 4,
-    "unchanged": 40,
+    "skipped_image": 6,
+    "unchanged": 39,
     "errors": 7,
     "dry_run": false
   }
