@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-25T23:22:13.625208+00:00",
+  "generated_at": "2026-06-26T04:07:11.112354+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-25T22:51:28.905970+00:00",
+      "timestamp": "2026-06-26T01:33:09.194322+00:00",
       "checked": 600,
-      "lowered": 2,
+      "lowered": 50,
       "raised": 0,
-      "set_to_floor": 78,
+      "set_to_floor": 123,
       "skipped_floor": 0,
-      "skipped_few": 25,
-      "skipped_image": 17,
-      "unchanged": 477,
-      "errors": 1,
+      "skipped_few": 31,
+      "skipped_image": 41,
+      "unchanged": 355,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 519.99,
-        "new": 474.99,
-        "diff": -45.0,
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 279.99,
+        "new": 253.99,
+        "diff": -26.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 241.99,
-        "new": 218.99,
-        "diff": -23.0,
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 210.99,
+        "new": 190.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 232.99,
-        "new": 210.99,
-        "diff": -22.0,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 263.99,
+        "new": 238.99,
+        "diff": -25.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 480.99,
-        "new": 438.99,
-        "diff": -42.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 688.99,
+        "new": 627.95,
+        "diff": -61.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 643.99,
-        "new": 586.95,
-        "diff": -57.04,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 622.99,
+        "new": 567.95,
+        "diff": -55.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 292.99,
-        "new": 265.99,
-        "diff": -27.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 596.99,
+        "new": 543.95,
+        "diff": -53.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 234.99,
-        "new": 212.99,
-        "diff": -22.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 97.99,
+        "new": 86.99,
+        "diff": -11.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 391.99,
-        "new": 357.99,
-        "diff": -34.0,
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 383.99,
+        "new": 367.99,
+        "diff": -16.0,
         "action": "lowered"
       },
       {
-        "sku": "HDXV0002",
-        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
-        "old": 108.99,
-        "new": 96.99,
-        "diff": -12.0,
+        "sku": "SDXS0033",
+        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
+        "old": 365.99,
+        "new": 332.99,
+        "diff": -33.0,
         "action": "lowered"
       },
       {
-        "sku": "HDXV0003",
-        "title": "Verbatim Store n Go 2,5 2TB USB 3.0 schwarz 5",
-        "old": 144.99,
-        "new": 129.99,
-        "diff": -15.0,
+        "sku": "SDXS1020",
+        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
+        "old": 416.99,
+        "new": 379.99,
+        "diff": -37.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-24",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-24",
         "lowered": 4,
@@ -187,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 2,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-06-26",
+        "lowered": 50,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -212,12 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 169.68
     },
     "chart_7d": [
-      {
-        "date": "19.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "20.06",
         "revenue": 0,
@@ -253,15 +247,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "27.05",
+        "date": "26.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "28.05",
         "revenue": 0,
@@ -435,15 +429,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "28.03",
+        "date": "26.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "29.03",
         "revenue": 0,
@@ -977,6 +971,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "26.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1261,20 +1261,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "20-14740-74871",
-        "date": "2026-06-11",
-        "deadline": "2026-06-25",
-        "days_left": 0,
-        "items": [
-          "ECOFLOW Smart Plug 2"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "08-14763-57410",
         "date": "2026-06-12",
         "deadline": "2026-06-26",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Govee - Glide Wall Light (4+1)"
         ],
@@ -1284,7 +1274,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-14783-23263",
         "date": "2026-06-13",
         "deadline": "2026-06-27",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "ANTHBOT Battery 5000mAh"
         ],
@@ -1294,17 +1284,17 @@ window.DASHBOARD_DATA = {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 4,
+        "days_left": 3,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1314,7 +1304,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 5,
+        "days_left": 4,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1324,7 +1314,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 7,
+        "days_left": 6,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
