@@ -292,21 +292,6 @@
       "https://images.icecat.biz/img/gallery/103109010_3706540787.jpg"
     ]
   },
-  "SUPJ1085": {
-    "ean": "5706991031522",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 99.27,
-    "vk": 195.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "JABRA Evolve 65 TE Stereo - Headset - On-Ear",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e1cc3f60e7a4217b31acb26d7be34649b5a3a04d.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e1cc3f60e7a4217b31acb26d7be34649b5a3a04d.jpg"
-    ]
-  },
   "SUPH4049": {
     "ean": "0197498152394",
     "supplier": "BAB",
@@ -2916,16 +2901,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HDXT0237": {
-    "ean": "4260557512340",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 75.71,
-    "vk": 150.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HDXV0002": {
     "ean": "0023942530718",
     "supplier": "BAB",
@@ -4169,22 +4144,6 @@
     "image_url": "https://media.ipcstore.net/img/l/21296890.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/21296890.jpg"
-    ],
-    "image_too_small": true
-  },
-  "HDXT0238": {
-    "ean": "4260557512357",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 86.28,
-    "vk": 169.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Toshiba Can. Basics 2TB black 2,5\" USB3.2",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129909.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129909.jpg"
     ],
     "image_too_small": true
   },
@@ -8858,20 +8817,6 @@
       "https://media.ipcstore.net/img/l/21177200.jpg"
     ],
     "image_too_small": true
-  },
-  "REFT0013": {
-    "ean": "4262504946918",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 279.63,
-    "vk": 461.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://www.alternate.de/p/600x600/8/3/Dell_OptiPlex_7070_MP_General_berholt__Mini_PC@@100193538.jpg",
-    "images": [
-      "https://www.alternate.de/p/600x600/8/3/Dell_OptiPlex_7070_MP_General_berholt__Mini_PC@@100193538.jpg"
-    ],
-    "image_verified": true
   },
   "REFT0014": {
     "ean": "4260771516339",
