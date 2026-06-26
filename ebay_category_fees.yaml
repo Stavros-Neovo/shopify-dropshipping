@@ -70,9 +70,13 @@ group_roots:
 # nicht aber bei ungeöffneter Rücksendung. Eigene Mindestgewinn-Logik statt
 # Retouren-Rücklage, siehe config_shop2.yaml::ebay_pricing.hygiene_min_profit_eur
 # (Entscheidung Nutzer 24.06.2026, zuerst an Oral-B getestet).
-hygiene_category_roots: ["260773", "260774", "260783", "26395"]
-# 260773 Elektrische Haarstyling Geräte, 260774 Elektrische Mund-/Zahnpflege,
-# 260783 Elektrische Rasur/Enthaarung — deckt Oral-B, Remington, Beurer etc.
-# 26395 Beauty & Gesundheit als Catch-all für kosmetische/liquide Hygieneartikel
-# (ghd Öle/Sprays, Desinfektionsgel) die nicht als Gerät eingestuft sind.
-# ponytail: Falls je non-hygiene Artikel in Beauty&Gesundheit auftauchen, hier explizit excluden.
+hygiene_category_roots: ["260773", "260774", "260783", "11860", "11863"]
+# 260773 Elektrische Haarstyling Geräte (BaByliss, Beurer HT/HC, ghd Geräte)
+# 260774 Elektrische Mund- & Zahnpflege (Oral-B Zahnbürsten + Aufsteckbürsten)
+# 260783 Elektrische Rasur/Enthaarung (Remington)
+# 11860  Frisierprodukte (ghd Öle/Sprays/Seren — versiegelte Kosmetik)
+# 11863  Hautpflege (Desinfektionsgel, Tagespflege — eindeutig §312g BGB)
+# Bewusst NICHT 26395 (Beauty & Gesundheit) als Catch-all: zu breit,
+# würde Tageslichtlampen/Infrarot/Luftbefeuchter/Wärmeunterbetten miterfassen
+# die rechtlich NICHT unter §312g Abs.2 Nr.3 BGB fallen (kein Hygienesiegel,
+# problemlos wiederverkäuflich). Entscheidung 26.06.2026.

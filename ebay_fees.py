@@ -98,8 +98,11 @@ if __name__ == "__main__":
     assert _fee_group_for_category("31770") == "geraete"             # Braun Oral-B Zahnbürste
     assert _fee_group_for_category("99654") == "geraete"             # Oral-B Ersatzbürsten-Zubehör
     assert is_hygiene_category("31770") and is_hygiene_category("99654")  # Oral-B - versiegelter Hygieneartikel
-    assert is_hygiene_category("11860")   # Frisierprodukte (ghd Sprays/Öle) - unter 26395
-    assert is_hygiene_category("21205")   # Tagespflege (Desinfektionsgel) - unter 26395
+    assert is_hygiene_category("11860")   # Frisierprodukte (ghd Sprays/Öle) - direkter Root
+    assert is_hygiene_category("21205")   # Tagespflege → Hautpflege (11863) → qualifiziert
+    assert not is_hygiene_category("26395")  # Beauty&Gesundheit als solches - kein Root mehr
+    # Nicht-Hygiene-Artikel die fälschlicherweise in B&G landen können:
+    assert not is_hygiene_category("80580")  # Luftbefeuchter → Haushaltsgeräte, nicht Hygiene
     assert not is_hygiene_category("51268")  # Netzwerk-Switch - kein Hygieneartikel
     assert not is_hygiene_category("")
     print("ebay_fees.py: alle Selbsttests OK")
