@@ -819,22 +819,6 @@
     ],
     "image_too_small": true
   },
-  "SUPL0480": {
-    "ean": "5099206097223",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.63,
-    "vk": 50.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "title": "Logitech Mouse Signature M650 Graphite",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/126469.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/126469.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPL0492": {
     "ean": "5099206097278",
     "supplier": "BAB",
@@ -886,21 +870,6 @@
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "image_verified": false
-  },
-  "SUPR1014": {
-    "ean": "8886419334095",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 24.17,
-    "vk": 53.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/136848.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/136848.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "SUPR1018": {
     "ean": "8886419378082",
@@ -1982,16 +1951,6 @@
     "title": "ECOFLOW TRAIL Portable Powerstation Waterproof Carrying Case",
     "image_verified": false
   },
-  "PPSE0020": {
-    "ean": "4897082661832",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "PPSE0072": {
     "ean": "4895251606073",
     "supplier": "BAB",
@@ -2492,7 +2451,7 @@
     "ean": "0097855162045",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.63,
+    "ek": 42.44,
     "vk": 90.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -9942,7 +9901,7 @@
     "ean": "8720862502635",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 258.83,
+    "ek": 256.8,
     "vk": 494.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -13884,12 +13843,13 @@
   "SUPS1023": {
     "ean": "8720862502642",
     "supplier": "BAB",
-    "ek": 258.83,
+    "ek": 256.8,
     "vk": 494.99,
     "title": "Sonos Ace Bluetooth-Kopfhörer - Schwarz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS7023": {
     "ean": "3800235261798",
