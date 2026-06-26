@@ -50,6 +50,7 @@ import yaml
 from dotenv import load_dotenv
 
 from ebay_client import EbayClient
+from ebay_fees import resolve_fee_rate, is_hygiene_category
 
 log = logging.getLogger("repricer")
 
@@ -73,7 +74,7 @@ CHUNK_SIZE          = 600    # erhöht von 400 → schnellere Katalog-Abdeckung
 
 # ─── Preisformel (identisch mit sync.py) ─────────────────────────────────────
 
-def calc_vk(ek: float, margin: float, cfg: dict) -> float:
+def calc_vk(ek: float, margin: float, cfg: dict, category_id: str = "") -> float:
     """
     Korrekte Formel — eBay nimmt Gebühr auf (VK + Käufer-Versand):
 
@@ -82,16 +83,16 @@ def calc_vk(ek: float, margin: float, cfg: dict) -> float:
     Auflösen nach VK:
       VK = (EK × (1 + margin) + carrier) × (1 + vat) / (1 − total_fee) − buyer_ship
 
-    total_fee = ebay_fee (13%) + campaign_fee (8%) = 21%
+    total_fee = ebay_fee (kategorie-abhängig, siehe ebay_fees.py) + campaign_fee
     margin = 0.20 → Mindestpreis (20% Marge auf EK nach allen Kosten)
     margin = 0.25 → Normalpreis  (25% Ziel-Marge)
     """
     ep           = cfg["ebay_pricing"]
     carrier      = ep.get("shipping_cost_eur", 5.00)
     buyer_ship   = ep.get("buyer_shipping_eur", 0.00)
-    ebay_fee     = ep.get("ebay_fee_rate", 0.13)
+    ebay_fee     = resolve_fee_rate(category_id, ep.get("ebay_fee_rate", 0.13))
     campaign_fee = ep.get("campaign_fee_rate", 0.08)  # Promoted Listings 8%
-    total_fee    = ebay_fee + campaign_fee             # 21%
+    total_fee    = ebay_fee + campaign_fee
     vat          = ep.get("vat_rate", 0.19)
     vk = (ek * (1 + margin) + carrier) * (1 + vat) / (1 - total_fee) - buyer_ship
     return vk
@@ -179,6 +180,7 @@ def get_offer_data(client: EbayClient, sku: str) -> Optional[dict]:
             "offerId":      offer.get("offerId", ""),
             "currentPrice": price_val,
             "status":       offer.get("status", ""),
+            "categoryId":   offer.get("categoryId", ""),
         }
     except Exception as e:
         log.debug(f"Offer-Fetch SKU={sku}: {e}")
@@ -289,12 +291,22 @@ def get_competitor_prices(
 
 # ─── Repricing-Logik ─────────────────────────────────────────────────────────
 
-def get_margin_tier(ek: float, cfg: dict) -> tuple[float, float]:
+def get_margin_tier(ek: float, cfg: dict, category_id: str = "") -> tuple[float, float]:
     """Gibt (floor_margin, target_margin) für einen EK-Preis zurück.
     Je teurer der Artikel, desto niedriger die Marge (Staffel in margin_tiers) -
     haelt absoluten Gewinn ordentlich, bleibt bei teuren Artikeln aber
-    konkurrenzfaehig statt mit starrem Prozentsatz liegenzubleiben."""
-    tiers = cfg.get("ebay_pricing", {}).get("margin_tiers", [])
+    konkurrenzfaehig statt mit starrem Prozentsatz liegenzubleiben.
+
+    Versiegelte Hygieneartikel (Widerruf entfällt nach Öffnen, §312g BGB):
+    fester Mindestgewinn statt %-Staffel, Floor==Ziel (kein Polster nötig,
+    um "auf Masse" nah an den Mitbewerber zu kommen)."""
+    ep = cfg.get("ebay_pricing", {})
+    hygiene_profit = float(ep.get("hygiene_min_profit_eur", 0.0))
+    if hygiene_profit and is_hygiene_category(category_id):
+        margin = hygiene_profit / ek
+        return margin, margin
+
+    tiers = ep.get("margin_tiers", [])
     for tier in tiers:
         if ek < float(tier["ek_max"]):
             floor = float(tier.get("floor_margin", MIN_MARGIN_PCT))
@@ -315,23 +327,27 @@ def reprice_product(
     base_url: str,
     dry_run: bool,
     client: EbayClient,
+    category_id: str = "",
 ) -> dict:
     """
     Repricing-Entscheidung für ein einzelnes Produkt.
     Gibt ein Ergebnis-Dict zurück (für Report/Dashboard).
     """
-    floor_margin, target_margin = get_margin_tier(ek, cfg)
-    floor_price  = psychological_round(calc_vk(ek, floor_margin,  cfg))
-    normal_price = psychological_round(calc_vk(ek, target_margin, cfg))
-    min_margin   = cfg["ebay_pricing"].get("min_margin_eur", 5.0)
+    floor_margin, target_margin = get_margin_tier(ek, cfg, category_id)
+    floor_price  = psychological_round(calc_vk(ek, floor_margin,  cfg, category_id))
+    normal_price = psychological_round(calc_vk(ek, target_margin, cfg, category_id))
+
+    ep = cfg["ebay_pricing"]
+    is_hygiene = bool(ep.get("hygiene_min_profit_eur")) and is_hygiene_category(category_id)
+    min_margin = ep["hygiene_min_profit_eur"] if is_hygiene else ep.get("min_margin_eur", 5.0)
 
     # Absoluter Mindestgewinn sichern - bei sehr günstigen Artikeln kann die
     # Prozent-Marge der Staffel unter min_margin_eur fallen (z.B. 25% auf EK=15€)
-    ep = cfg["ebay_pricing"]
-    total_fee = ep.get("ebay_fee_rate", 0.13) + ep.get("campaign_fee_rate", 0.0)
+    ebay_fee = resolve_fee_rate(category_id, ep.get("ebay_fee_rate", 0.13))
+    total_fee = ebay_fee + ep.get("campaign_fee_rate", 0.0)
     vat = ep.get("vat_rate", 0.19)
     ship = ep.get("shipping_cost_eur", 5.0)
-    return_reserve_eur = ek * ep.get("return_reserve_rate", 0.0)
+    return_reserve_eur = 0.0 if is_hygiene else ek * ep.get("return_reserve_rate", 0.0)
 
     def floor_actual_margin(vk: float) -> float:
         return (vk * (1 - total_fee)) / (1 + vat) - ek - ship - return_reserve_eur
@@ -667,6 +683,16 @@ def main():
     if pinned_skus:
         log.info(f"📌 {len(pinned_skus)} manuell fixierte SKUs geladen (pinned_skus.json) — Preis bleibt stehen")
 
+    # Echte categoryId aus dem Live-Offer in supplier_map.json zwischenspeichern -
+    # sync.py kennt den Offer nicht und kann die Kategorie sonst nur aus
+    # BAB-Code/Titel schätzen (siehe ebay_fees.py::resolve_fee_category).
+    SUPPLIER_MAP_FILE = "supplier_map.json"
+    try:
+        supplier_map = json.loads(Path(SUPPLIER_MAP_FILE).read_text(encoding="utf-8"))
+    except Exception:
+        supplier_map = {}
+    supplier_map_dirty = False
+
     stats["skipped_image"] = 0
 
     for n, (ean, feed_data) in enumerate(chunk_products, 1):
@@ -704,6 +730,11 @@ def main():
             time.sleep(0.2)
             continue
 
+        real_cat = offer.get("categoryId", "")
+        if real_cat and supplier_map.get(sku, {}).get("ebay_category_id") != real_cat:
+            supplier_map.setdefault(sku, {})["ebay_category_id"] = real_cat
+            supplier_map_dirty = True
+
         # Nur PUBLISHED Offers reprisen — deaktivierte (UNPUBLISHED) überspringen
         if offer.get("status", "PUBLISHED") == "UNPUBLISHED":
             log.debug(f"  {sku}: Offer UNPUBLISHED → übersprungen")
@@ -717,6 +748,7 @@ def main():
                 offer_id=offer["offerId"], cfg=cfg,
                 app_token=app_token, base_url=base_url,
                 dry_run=args.dry_run, client=client,
+                category_id=offer.get("categoryId", ""),
             )
         except Exception as e:
             err_str = str(e)
@@ -824,6 +856,12 @@ def main():
     # ── Report speichern ──────────────────────────────────────────────────
     save_report(REPORT_FILE, stats, all_changes)
     log.info(f"✓ Report gespeichert: {REPORT_FILE}")
+
+    if supplier_map_dirty:
+        Path(SUPPLIER_MAP_FILE).write_text(
+            json.dumps(supplier_map, indent=2, ensure_ascii=False), encoding="utf-8"
+        )
+        log.info(f"✓ {SUPPLIER_MAP_FILE} aktualisiert (echte eBay-Kategorien zwischengespeichert)")
 
 
 if __name__ == "__main__":

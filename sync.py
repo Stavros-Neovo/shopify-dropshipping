@@ -33,6 +33,7 @@ from csv_loader import load_supplier_feed
 from pricing import calculate_vk, calculate_ebay_vk
 from shopify_client import ShopifyClient
 from ebay_client import EbayClient
+from ebay_fees import resolve_fee_category
 from build_matrixify_csv import load_enrichment_index, build_description_html
 
 
@@ -359,10 +360,15 @@ def main():
         ebay_pr = None
         if ebay_enabled:
             try:
+                # Echte, von repricer.py beobachtete Kategorie hat Vorrang vor der
+                # Offline-Schätzung (deutlich genauer, siehe ebay_fees.py)
+                cached_cat = smap.get(sku, {}).get("ebay_category_id", "")
+                category_id = cached_cat or resolve_fee_category(product.get("category", ""), product.get("title", ""))
                 ebay_pr = calculate_ebay_vk(
                     product["purchase_price"],
                     ebay_pricing_cfg,
                     shopify_vk_gross=pr.vk_gross,
+                    category_id=category_id,
                 )
             except Exception as e:
                 log.error(f"eBay-Pricing-Fehler für SKU {product.get('sku')}: {e}")

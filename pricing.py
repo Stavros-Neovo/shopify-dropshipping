@@ -15,6 +15,8 @@ from dataclasses import dataclass
 from typing import List, Dict, Any, Optional
 import math
 
+from ebay_fees import resolve_fee_rate, is_hygiene_category
+
 
 @dataclass
 class PricingResult:
@@ -118,50 +120,70 @@ def calculate_vk(ek_net: float, pricing_cfg: Dict[str, Any]) -> PricingResult:
 
 
 def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
-                      shopify_vk_gross: Optional[float] = None) -> PricingResult:
+                      shopify_vk_gross: Optional[float] = None,
+                      category_id: Optional[str] = None) -> PricingResult:
     """
     Berechnet den eBay-Verkaufspreis nach der exakten Formel:
 
-        VK_brutto = (EK + Versand + EK × Marge%) × 1.19 ÷ (1 − eBay_fee)
+        VK_brutto = (EK + Versand + EK × Marge%) × 1.19 ÷ (1 − eBay_fee) − Käufer-Versand
 
     Die eBay-Gebühr wird herausgerechnet (nicht draufaddiert!), weil eBay
     seinen Anteil vom VK nimmt — der Preis muss also so gesetzt werden,
-    dass nach eBay-Abzug noch die gewünschte Marge übrig bleibt.
+    dass nach eBay-Abzug noch die gewünschte Marge übrig bleibt. eBay
+    berechnet die Provision auf VK + vom Käufer gezahlte Versandkosten
+    (siehe eBay-Gebührenseite: "Gesamtbetrag des Verkaufs umfasst den
+    Artikelpreis... die Kosten für den vom Käufer gewählten Versanddienst"),
+    nicht nur auf den Artikelpreis - konsistent mit repricer.py::calc_vk.
 
     Args:
         ek_net: Einkaufspreis netto in EUR
         ebay_pricing_cfg: das 'ebay_pricing' Sub-Dict aus config.yaml
         shopify_vk_gross: nicht mehr genutzt, nur für Rückwärtskompatibilität
+        category_id: eBay-Kategorie-ID für die kategorie-spezifische Gebühr
+            (siehe ebay_fees.py). Fehlt sie, greift ebay_pricing_cfg's
+            ebay_fee_rate als Fallback (alte Pauschal-Logik).
     """
     if ek_net <= 0:
         raise ValueError(f"Ungültiger EK: {ek_net}")
 
     shipping = float(ebay_pricing_cfg.get("shipping_cost_eur", 5.00))
-    # Gesamtgebühr = Grundgebühr + Promoted Listings (falls Kampagne aktiv,
-    # sonst campaign_fee_rate=0 in config_shop2.yaml) - konsistent mit repricer.py::calc_vk
-    ebay_fee = (float(ebay_pricing_cfg.get("ebay_fee_rate", 0.13))
-                + float(ebay_pricing_cfg.get("campaign_fee_rate", 0.0)))
+    buyer_shipping = float(ebay_pricing_cfg.get("buyer_shipping_eur", 0.00))
+    # Gesamtgebühr = Grundgebühr (kategorie-abhängig, Fallback alte Pauschale) +
+    # Promoted Listings (falls Kampagne aktiv, sonst campaign_fee_rate=0 in
+    # config_shop2.yaml) - konsistent mit repricer.py::calc_vk
+    base_fee = resolve_fee_rate(category_id or "", float(ebay_pricing_cfg.get("ebay_fee_rate", 0.13)))
+    ebay_fee = base_fee + float(ebay_pricing_cfg.get("campaign_fee_rate", 0.0))
     vat = float(ebay_pricing_cfg.get("vat_rate", 0.19))
     min_margin = float(ebay_pricing_cfg.get("min_margin_eur", 5.00))
     rounding = ebay_pricing_cfg.get("rounding_strategy", "psychological_99")
     return_reserve = float(ebay_pricing_cfg.get("return_reserve_rate", 0.0))
 
-    # Marge-Staffel
-    margin_pct = 0.15  # Fallback
-    for tier in ebay_pricing_cfg.get("margin_tiers", []):
-        if ek_net < float(tier["ek_max"]):
-            margin_pct = float(tier["margin"])
-            break
+    # Versiegelte Hygieneartikel (Widerruf entfällt nach Öffnen, §312g BGB):
+    # keine Retouren-Rücklage, fester Mindestgewinn statt %-Marge-Staffel,
+    # um "auf Masse" nah an den Mitbewerber zu kommen.
+    hygiene_profit = float(ebay_pricing_cfg.get("hygiene_min_profit_eur", 0.0))
+    if hygiene_profit and is_hygiene_category(category_id or ""):
+        return_reserve = 0.0
+        min_margin = hygiene_profit
+        margin_pct = hygiene_profit / ek_net
+    else:
+        # Marge-Staffel
+        margin_pct = 0.15  # Fallback
+        for tier in ebay_pricing_cfg.get("margin_tiers", []):
+            if ek_net < float(tier["ek_max"]):
+                margin_pct = float(tier["margin"])
+                break
 
     # Kostenbasis: EK + Versand + Marge auf EK + Retouren-Rücklage auf EK
     # (BAB nimmt nichts zurück - jede Kundenretoure ist ein voller EK-Verlust,
     # die Rücklage verteilt dieses Risiko auf alle verkauften Einheiten)
     cost_base = ek_net + shipping + ek_net * margin_pct + ek_net * return_reserve
 
-    # MwSt drauf, dann eBay-Gebühr herausrechnen
-    # VK_brutto × (1 − eBay_fee) = cost_base × (1 + vat)
-    # → VK_brutto = cost_base × (1 + vat) / (1 − eBay_fee)
-    vk_gross_raw = cost_base * (1 + vat) / (1 - ebay_fee)
+    # MwSt drauf, dann eBay-Gebühr herausrechnen - eBay rechnet seine Provision
+    # auf (VK + Käufer-Versand), nicht nur auf VK:
+    # (VK_brutto + buyer_shipping) × (1 − eBay_fee) = cost_base × (1 + vat)
+    # → VK_brutto = cost_base × (1 + vat) / (1 − eBay_fee) − buyer_shipping
+    vk_gross_raw = cost_base * (1 + vat) / (1 - ebay_fee) - buyer_shipping
 
     # Psychologische Rundung
     vk_gross = _round_psychological(vk_gross_raw, rounding)
@@ -171,7 +193,7 @@ def calculate_ebay_vk(ek_net: float, ebay_pricing_cfg: Dict[str, Any],
     # Mindestmarge sicherstellen — Rücklage zählt NICHT als Marge, sonst
     # würde sie effektiv mitverkauft statt zurückgehalten zu werden
     def actual_margin(vk: float) -> float:
-        net_after_ebay = vk * (1 - ebay_fee)
+        net_after_ebay = (vk + buyer_shipping) * (1 - ebay_fee)
         net_without_vat = net_after_ebay / (1 + vat)
         return net_without_vat - ek_net - shipping - return_reserve_eur
 

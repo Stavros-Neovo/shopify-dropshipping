@@ -74,7 +74,7 @@ shopify:
 # -----------------------------------------------------------------------------
 ebay_pricing:
   shipping_cost_eur: 5.00        # Was wir dem Spediteur zahlen
-  buyer_shipping_eur: 3.99       # Was der Käufer bei eBay zusätzlich zahlt
+  buyer_shipping_eur: 0.00       # Kostenloser Versand (UPS STD) - Käufer zahlt nichts extra, siehe Fulfillment-Policy 257236926010. War fälschlich 3,99€ -> hat Floor/VK systematisch ca. 4€ zu niedrig kalkuliert (23.06.2026 gefunden).
   ebay_fee_rate: 0.13
   campaign_fee_rate: 0.0         # Promoted Listings deaktiviert (20.06.2026) - war 0.08
   vat_rate: 0.19
@@ -104,6 +104,14 @@ ebay_pricing:
 
   min_margin_eur: 5.00
   rounding_strategy: "psychological_99"
+
+  # Versiegelte Hygieneartikel (elektr. Zahn-/Mundpflege, Rasur, Haarstyling -
+  # siehe ebay_fees.is_hygiene_category): Widerruf entfällt nach Öffnen
+  # (§312g Abs.2 Nr.3 BGB), nicht aber bei ungeöffneter Rücksendung - daher
+  # 0% Retouren-Rücklage statt 5%, UND fester Mindestgewinn statt %-Marge,
+  # um "auf Masse" konkurrenzfähig nah an den Mitbewerber zu kommen.
+  # Entscheidung Nutzer 24.06.2026, zuerst an Oral-B getestet.
+  hygiene_min_profit_eur: 1.00  # so aggressiv wie möglich (deckt eBay-Fixgebühr 0,35-0,45€)
 
 # -----------------------------------------------------------------------------
 # EBAY API – SHOP 2 (eigener Seller Account)

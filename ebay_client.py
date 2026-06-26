@@ -113,6 +113,7 @@ _TITLE_KEYWORD_MAP: list[tuple[re.Pattern, str]] = [
     (re.compile(r"led-lampe|leuchtstreifen|light\s*bar|light\s*panel|glide\s*wall|glide\s*hexa", re.I), "20706"),  # Leuchtmittel
     (re.compile(r"katzenstreu|cat\s*litter|katzenklo|litter\s*box", re.I), "116363"),  # Katzenstreu
     (re.compile(r"powerbank|power\s*bank", re.I),                    "20357"),   # Akkus
+    (re.compile(r"aufsteckbürste|ersatzbürste|zahnbürstenaufsatz|bürstenkopf", re.I), "99654"),  # Ersatzbürsten/Zubehör zu elektr. Zahnbürsten - VOR der allgemeinen Zahnbürste-Regel, sonst fällt der Titel ohne Treffer auf die Taxonomy-API zurück, die hier nachweislich Unsinn liefert (HHWB1127 landete wiederholt bei "Elektrofahrradteile", siehe Session-Notiz 23.06.2026 - jeder sync.py-Lauf hätte einen manuellen Fix sonst wieder überschrieben)
     (re.compile(r"zahnbürste|toothbrush", re.I),                     "31770"),   # Elektrische Zahnbürsten
     (re.compile(r"haartrockner|haarstyler", re.I),                   "11858"),   # Haartrockner
     (re.compile(r"\btrimmer\b|rasierer|bartschneider|epilierer", re.I), "67408"), # Haar- & Bartschneidegeräte
