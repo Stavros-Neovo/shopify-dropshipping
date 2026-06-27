@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-27T21:10:07.748619+00:00",
+  "generated_at": "2026-06-27T23:07:14.941935+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 61,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 981,
     "images_verified": 417,
@@ -9,67 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-27T20:34:26.776719+00:00",
-      "checked": 61,
-      "lowered": 0,
+      "timestamp": "2026-06-27T22:32:10.619053+00:00",
+      "checked": 600,
+      "lowered": 4,
       "raised": 0,
-      "set_to_floor": 5,
+      "set_to_floor": 72,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 6,
-      "unchanged": 38,
-      "errors": 12,
+      "skipped_few": 27,
+      "skipped_image": 17,
+      "unchanged": 480,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 19.99,
-        "new": 17.99,
-        "diff": -2.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 483.99,
+        "new": 445.99,
+        "diff": -38.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 50.99,
-        "new": 47.99,
-        "diff": -3.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 235.99,
+        "new": 217.99,
+        "diff": -18.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 17.99,
-        "new": 13.99,
-        "diff": -4.0,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 227.99,
+        "new": 209.99,
+        "diff": -18.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 19.99,
-        "new": 17.99,
-        "diff": -2.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 469.99,
+        "new": 411.99,
+        "diff": -58.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 24.99,
-        "new": 22.99,
-        "diff": -2.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 628.99,
+        "new": 549.95,
+        "diff": -79.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 285.99,
+        "new": 250.99,
+        "diff": -35.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 229.99,
+        "new": 201.99,
+        "diff": -28.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 383.99,
+        "new": 335.99,
+        "diff": -48.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDXV0002",
+        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
+        "old": 101.99,
+        "new": 93.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDXV0003",
+        "title": "Verbatim Store n Go 2,5 2TB USB 3.0 schwarz 5",
+        "old": 133.99,
+        "new": 124.99,
+        "diff": -9.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-26",
-        "lowered": 36,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-26",
         "lowered": 0,
@@ -145,6 +179,12 @@ window.DASHBOARD_DATA = {
       {
         "date": "2026-06-27",
         "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-27",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       }
