@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-27T11:38:25.650282+00:00",
+  "generated_at": "2026-06-27T13:52:12.795028+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-27T11:06:07.726370+00:00",
+      "timestamp": "2026-06-27T12:46:38.879450+00:00",
       "checked": 600,
-      "lowered": 4,
+      "lowered": 20,
       "raised": 0,
-      "set_to_floor": 71,
+      "set_to_floor": 144,
       "skipped_floor": 0,
-      "skipped_few": 27,
-      "skipped_image": 17,
-      "unchanged": 481,
+      "skipped_few": 32,
+      "skipped_image": 39,
+      "unchanged": 365,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 483.99,
-        "new": 445.99,
-        "diff": -38.0,
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 259.99,
+        "new": 239.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 235.99,
-        "new": 217.99,
-        "diff": -18.0,
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 195.99,
+        "new": 189.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 227.99,
-        "new": 209.99,
-        "diff": -18.0,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 244.99,
+        "new": 225.99,
+        "diff": -19.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 469.99,
-        "new": 411.99,
-        "diff": -58.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 640.99,
+        "new": 587.95,
+        "diff": -53.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 628.99,
-        "new": 549.95,
-        "diff": -79.04,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 579.99,
+        "new": 531.95,
+        "diff": -48.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 285.99,
-        "new": 250.99,
-        "diff": -35.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 554.99,
+        "new": 509.95,
+        "diff": -45.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 229.99,
-        "new": 201.99,
-        "diff": -28.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 94.99,
+        "new": 88.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 383.99,
-        "new": 335.99,
-        "diff": -48.0,
+        "sku": "REFT0004",
+        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
+        "old": 649.99,
+        "new": 604.95,
+        "diff": -45.04,
         "action": "lowered"
       },
       {
-        "sku": "HDXV0002",
-        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
-        "old": 101.99,
-        "new": 93.99,
-        "diff": -8.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDXV0003",
-        "title": "Verbatim Store n Go 2,5 2TB USB 3.0 schwarz 5",
-        "old": 133.99,
-        "new": 124.99,
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 374.99,
+        "new": 365.99,
         "diff": -9.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SDXS0033",
+        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
+        "old": 339.99,
+        "new": 313.99,
+        "diff": -26.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-25",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-25",
         "lowered": 2,
@@ -185,6 +179,12 @@ window.DASHBOARD_DATA = {
       {
         "date": "2026-06-27",
         "lowered": 4,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-27",
+        "lowered": 20,
         "raised": 0,
         "floor": 0
       }
