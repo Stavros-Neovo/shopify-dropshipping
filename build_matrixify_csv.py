@@ -103,6 +103,8 @@ MATRIXIFY_HEADERS = [
     "Command",                     # MERGE | UPDATE | NEW | REPLACE
     "Title",                       # Produkt-Titel
     "Body HTML",                   # Produkt-Beschreibung
+    "SEO Title",                   # Meta-Title (Suchergebnis-Überschrift)
+    "SEO Description",             # Meta-Description (Suchergebnis-Text)
     "Vendor",                      # Hersteller / Marke
     "Type",                        # Produkt-Typ / Kategorie
     "Tags",                        # Tags (Komma-separiert)
@@ -195,6 +197,19 @@ def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
     return "\n".join(parts)
 
 
+def build_meta_description(body_html: str, fallback_title: str) -> str:
+    """SEO Meta-Description: HTML raus, auf ~155 Zeichen am Wortende gekürzt.
+    Shopify würde sonst einen rohen Body-Auszug nehmen - das hier ist sauberer."""
+    import re, html
+    text = re.sub(r"<[^>]+>", " ", body_html or "")
+    text = html.unescape(text)
+    text = re.sub(r"\s+", " ", text).strip() or fallback_title.strip()
+    if len(text) <= 155:
+        return text
+    cut = text[:155].rsplit(" ", 1)[0]
+    return cut + "…"
+
+
 def slugify(text: str) -> str:
     """Erzeugt aus einem Titel einen URL-freundlichen Handle."""
     import re
@@ -261,6 +276,13 @@ def build_rows(product: dict, pr, cfg: dict,
 
     body_html = build_description_html(product.get("title", ""), enrichment)
 
+    # SEO an der Quelle einbauen (manuelle Shopify-Edits würde der Sync sonst
+    # bei jedem Lauf überschreiben). Produkttitel = bester Meta-Title: er trägt
+    # Marke + Modell (= die Suchbegriffe), auf ~70 Z. fürs SERP-Display gekappt.
+    # ponytail: title_optimizer (eBay) bewusst NICHT genutzt - der strippt das Modell.
+    seo_title = title if len(title) <= 70 else title[:70].rsplit(" ", 1)[0]
+    seo_description = build_meta_description(body_html, title)
+
     tags = list(filter(None, [
         product.get("category", ""),
         product.get("brand", ""),
@@ -279,6 +301,8 @@ def build_rows(product: dict, pr, cfg: dict,
         "Command": "MERGE",
         "Title": title,
         "Body HTML": body_html,
+        "SEO Title": seo_title,
+        "SEO Description": seo_description,
         "Vendor": product.get("brand", "") or "",
         "Type": product.get("category", "") or "",
         "Tags": ", ".join(tags),

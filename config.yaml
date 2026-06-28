@@ -36,25 +36,20 @@ pricing:
   # Mehrwertsteuer (Deutschland Standard: 19 %)
   vat_rate: 0.19
 
-  # Marge-Staffel: Für jeden EK-Bereich gilt ein anderer Aufschlag
+  # Marge flach 8% — Volumen-Strategie, maximal preiskompetitiv (28.06.2026)
   # ek_max = obere Grenze (exklusiv), markup = Faktor (1.0 = +100%)
   tiers:
-    - ek_max: 50.0
-      markup: 0.30    # +30% für EK unter 50€
     - ek_max: 999999.0
-      markup: 0.20    # +20% für EK über 50€
+      markup: 0.08    # +8% auf (EK+Versand), netto — bewusst dünn für Masse
 
   # Mindest-Bruttomarge in EURO (egal was die Staffel sagt)
   min_absolute_margin_eur: 5.00
 
-  # Versand-Puffer auf günstige Artikel (weil 4,99€ den Versand oft nicht deckt)
+  # Versand IMMER +5€ netto einpreisen (Kunde zahlt versandkostenfrei).
+  # ponytail: pauschal 5€; echte Versandkosten je Gewicht/Größe einbauen, falls Marge wandert
   shipping_buffer:
-    - ek_max: 10.0
-      buffer_eur: 1.50
-    - ek_max: 25.0
-      buffer_eur: 0.80
     - ek_max: 999999.0
-      buffer_eur: 0.00
+      buffer_eur: 5.00
 
   # Endpreis-Rundung: auf welche Endung soll gerundet werden?
   # "psychological_99" → immer auf X,99
