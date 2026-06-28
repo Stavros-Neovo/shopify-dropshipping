@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-28T15:22:37.026097+00:00",
+  "generated_at": "2026-06-28T17:18:13.813245+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 61,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 981,
     "images_verified": 417,
@@ -9,99 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-28T14:18:40.267293+00:00",
-      "checked": 61,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 9,
+      "timestamp": "2026-06-28T15:45:10.471014+00:00",
+      "checked": 600,
+      "lowered": 10,
+      "raised": 4,
+      "set_to_floor": 74,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 6,
-      "unchanged": 37,
-      "errors": 9,
+      "skipped_few": 23,
+      "skipped_image": 17,
+      "unchanged": 470,
+      "errors": 2,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0073",
-        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
-        "old": 310.99,
-        "new": 286.99,
-        "diff": -24.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 483.99,
+        "new": 428.99,
+        "diff": -55.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 188.99,
-        "new": 165.99,
-        "diff": -23.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 235.99,
+        "new": 215.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 221.99,
-        "new": 206.99,
-        "diff": -15.0,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 227.99,
+        "new": 208.99,
+        "diff": -19.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 265.99,
-        "new": 247.99,
-        "diff": -18.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 469.99,
+        "new": 396.99,
+        "diff": -73.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0008",
-        "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 4917",
-        "old": 19.99,
-        "new": 17.99,
-        "diff": -2.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 628.99,
+        "new": 552.95,
+        "diff": -76.04,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 50.99,
-        "new": 47.99,
-        "diff": -3.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 285.99,
+        "new": 243.99,
+        "diff": -42.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0013",
-        "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 bla",
-        "old": 17.99,
-        "new": 13.99,
-        "diff": -4.0,
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1399.95,
+        "new": 1394.95,
+        "diff": -5.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0016",
-        "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 bl",
-        "old": 19.99,
-        "new": 17.99,
-        "diff": -2.0,
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 229.99,
+        "new": 197.99,
+        "diff": -32.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0017",
-        "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 b",
-        "old": 24.99,
-        "new": 22.99,
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 383.99,
+        "new": 323.99,
+        "diff": -60.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0295",
+        "title": "Seagate BarraCuda ST20000DM001 / 20TB / 3,5\"",
+        "old": 841.95,
+        "new": 839.95,
         "diff": -2.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-27",
-        "lowered": 19,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-27",
         "lowered": 0,
@@ -178,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-28",
         "lowered": 0,
         "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-28",
+        "lowered": 10,
+        "raised": 4,
         "floor": 0
       }
     ]
