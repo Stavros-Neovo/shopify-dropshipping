@@ -1,190 +1,190 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-26T14:34:10.997554+00:00",
+  "generated_at": "2026-06-28T13:57:24.242829+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 985,
-    "images_verified": 419,
-    "images_missing": 566
+    "total_skus": 981,
+    "images_verified": 417,
+    "images_missing": 564
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-26T13:24:48.066820+00:00",
+      "timestamp": "2026-06-28T11:59:46.710578+00:00",
       "checked": 600,
-      "lowered": 36,
+      "lowered": 18,
       "raised": 0,
-      "set_to_floor": 138,
+      "set_to_floor": 147,
       "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 41,
-      "unchanged": 353,
-      "errors": 2,
+      "skipped_few": 32,
+      "skipped_image": 39,
+      "unchanged": 364,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
         "sku": "RAM4G0056",
         "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 279.99,
-        "new": 253.99,
-        "diff": -26.0,
+        "old": 259.99,
+        "new": 239.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
         "sku": "RAM4K0057",
         "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 210.99,
-        "new": 190.99,
-        "diff": -20.0,
+        "old": 195.99,
+        "new": 189.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
         "sku": "RAM4K0058",
         "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 263.99,
-        "new": 238.99,
-        "diff": -25.0,
+        "old": 244.99,
+        "new": 225.99,
+        "diff": -19.0,
         "action": "lowered"
       },
       {
         "sku": "RAM5G0019",
         "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 688.99,
-        "new": 627.95,
-        "diff": -61.04,
+        "old": 640.99,
+        "new": 587.95,
+        "diff": -53.04,
         "action": "lowered"
       },
       {
         "sku": "RAM5K0033",
         "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 622.99,
-        "new": 567.95,
-        "diff": -55.04,
+        "old": 579.99,
+        "new": 531.95,
+        "diff": -48.04,
         "action": "lowered"
       },
       {
         "sku": "RAM5K0043",
         "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 596.99,
-        "new": 543.95,
-        "diff": -53.04,
+        "old": 554.99,
+        "new": 509.95,
+        "diff": -45.04,
         "action": "lowered"
       },
       {
         "sku": "REFD0002",
         "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 97.99,
-        "new": 86.99,
-        "diff": -11.0,
+        "old": 94.99,
+        "new": 88.99,
+        "diff": -6.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "REFT0004",
+        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
+        "old": 649.99,
+        "new": 604.95,
+        "diff": -45.04,
         "action": "lowered"
       },
       {
         "sku": "REFT1004",
         "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 383.99,
-        "new": 367.99,
-        "diff": -16.0,
+        "old": 374.99,
+        "new": 365.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
         "sku": "SDXS0033",
         "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
-        "old": 365.99,
-        "new": 332.99,
-        "diff": -33.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SDXS1020",
-        "title": "Samsung Portable SSD MU-PC2T0H/WW T7 2TB Blue",
-        "old": 416.99,
-        "new": 379.99,
-        "diff": -37.0,
+        "old": 339.99,
+        "new": 313.99,
+        "diff": -26.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
       {
-        "date": "2026-06-24",
+        "date": "2026-06-27",
         "lowered": 4,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-24",
-        "lowered": 39,
+        "date": "2026-06-27",
+        "lowered": 19,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-24",
+        "date": "2026-06-27",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
-        "lowered": 3,
+        "date": "2026-06-27",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
-        "lowered": 52,
+        "date": "2026-06-27",
+        "lowered": 20,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
+        "date": "2026-06-27",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
-        "lowered": 3,
+        "date": "2026-06-27",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
-        "lowered": 49,
+        "date": "2026-06-27",
+        "lowered": 20,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
+        "date": "2026-06-27",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-25",
-        "lowered": 2,
+        "date": "2026-06-27",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-26",
-        "lowered": 50,
+        "date": "2026-06-28",
+        "lowered": 19,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-26",
+        "date": "2026-06-28",
         "lowered": 0,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-26",
-        "lowered": 2,
+        "date": "2026-06-28",
+        "lowered": 4,
         "raised": 0,
         "floor": 0
       },
       {
-        "date": "2026-06-26",
-        "lowered": 36,
+        "date": "2026-06-28",
+        "lowered": 18,
         "raised": 0,
         "floor": 0
       }
@@ -212,18 +212,6 @@ window.DASHBOARD_DATA = {
       "total_profit_30d": 169.68
     },
     "chart_7d": [
-      {
-        "date": "20.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "21.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "22.06",
         "revenue": 0,
@@ -253,21 +241,21 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "27.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "28.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_30d": [
-      {
-        "date": "28.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "29.05",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "30.05",
         "revenue": 0,
@@ -435,21 +423,21 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "27.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "28.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_90d": [
-      {
-        "date": "29.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
-        "date": "30.03",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "31.03",
         "revenue": 0,
@@ -977,6 +965,18 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "27.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "28.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1261,30 +1261,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "08-14763-57410",
-        "date": "2026-06-12",
-        "deadline": "2026-06-26",
-        "days_left": 0,
-        "items": [
-          "Govee - Glide Wall Light (4+1)"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "01-14783-23263",
-        "date": "2026-06-13",
-        "deadline": "2026-06-27",
-        "days_left": 1,
-        "items": [
-          "ANTHBOT Battery 5000mAh"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "08-14779-12258",
         "date": "2026-06-15",
         "deadline": "2026-06-29",
-        "days_left": 3,
+        "days_left": 1,
         "items": [
           "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
         ],
@@ -1294,27 +1274,27 @@ window.DASHBOARD_DATA = {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 4,
+        "days_left": 2,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 4,
+        "days_left": 2,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
-        "urgent": false
+        "urgent": true
       },
       {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 6,
+        "days_left": 4,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
