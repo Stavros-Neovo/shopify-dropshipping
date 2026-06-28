@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-28T21:07:22.783439+00:00",
+  "generated_at": "2026-06-28T23:08:26.531171+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 61,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 981,
     "images_verified": 417,
@@ -9,67 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-28T19:49:45.141658+00:00",
-      "checked": 61,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 5,
+      "timestamp": "2026-06-28T21:32:23.767867+00:00",
+      "checked": 600,
+      "lowered": 6,
+      "raised": 8,
+      "set_to_floor": 67,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 6,
-      "unchanged": 46,
-      "errors": 4,
+      "skipped_few": 16,
+      "skipped_image": 17,
+      "unchanged": 486,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0073",
-        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
-        "old": 293.99,
-        "new": 279.99,
-        "diff": -14.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 451.99,
+        "new": 428.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 178.99,
-        "new": 164.99,
-        "diff": -14.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 223.99,
+        "new": 215.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 209.99,
-        "new": 205.99,
-        "diff": -4.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 251.99,
-        "new": 244.99,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 215.99,
+        "new": 208.99,
         "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 47.99,
-        "new": 44.99,
-        "diff": -3.0,
+        "sku": "ENAB0013",
+        "title": "Enabot EBO Air2 Plus Grey",
+        "old": 375.99,
+        "new": 380.99,
+        "diff": 5.0,
+        "action": "raised"
+      },
+      {
+        "sku": "ENAB0014",
+        "title": "Enabot EBO Air2 Plus Pink",
+        "old": 375.99,
+        "new": 380.99,
+        "diff": 5.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 443.99,
+        "new": 396.99,
+        "diff": -47.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 607.99,
+        "new": 552.95,
+        "diff": -55.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 270.99,
+        "new": 243.99,
+        "diff": -27.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 217.99,
+        "new": 197.99,
+        "diff": -20.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 362.99,
+        "new": 323.99,
+        "diff": -39.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-27",
-        "lowered": 20,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-27",
         "lowered": 0,
@@ -146,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-28",
         "lowered": 0,
         "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-28",
+        "lowered": 6,
+        "raised": 8,
         "floor": 0
       }
     ]
