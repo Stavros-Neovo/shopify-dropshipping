@@ -1070,6 +1070,25 @@ class EbayClient:
         except RuntimeError as e:
             log.warning(f"eBay Offer löschen fehlgeschlagen {offer_id}: {e}")
 
+    def flag_offer_for_review(self, sku: str, offer_id: str, reason: str):
+        """Markiert ein problematisches Offer fuer manuelle Kontrolle.
+
+        Im aktuellen Sicherheitsmodus werden Offers nicht automatisch geloescht,
+        weil create_or_update_offer() neue Offers bewusst nicht neu erstellt.
+        """
+        p = Path("offer_review_needed.json")
+        try:
+            data = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+        except Exception:
+            data = {}
+        data[sku] = {
+            "offer_id": offer_id,
+            "reason": reason[:500],
+            "flagged_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }
+        p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        log.warning(f"eBay SKU {sku}: Offer zur manuellen Prüfung markiert → {p}")
+
     # ------------------------------------------------------------------
     # Bestand aktualisieren
     # ------------------------------------------------------------------
@@ -1137,13 +1156,15 @@ class EbayClient:
                     or "revise" in err_str.lower()
                     or "unzulässige" in err_str
                 ):
-                    # Offer ist "stuck" (altes Listing mit falschem Zustand) →
-                    # Offer löschen und im NÄCHSTEN Sync-Run neu anlegen
+                    # Offer ist "stuck" (altes Listing mit falschem Zustand).
+                    # Nicht automatisch löschen: Neue Offers werden bewusst
+                    # blockiert, daher würde ein Delete das Listing aus der
+                    # Automation entfernen.
                     log.warning(
                         f"eBay Publish SKU {sku}: Listing kann nicht revidiert werden (25019) "
-                        f"→ Offer wird gelöscht und beim nächsten Lauf neu angelegt"
+                        f"→ manuelle Prüfung statt automatischem Delete"
                     )
-                    self.delete_offer(offer_id)
+                    self.flag_offer_for_review(sku, offer_id, err_str)
                 elif "Artikelmerkmal" in err_str or ("25002" in err_str and "fehlt" in err_str):
                     # Pflichtmerkmal fehlt → Kategorie auf sicheren Default zurücksetzen und retry
                     log.warning(f"eBay Publish SKU {sku}: Pflichtmerkmal fehlt → Fallback-Kategorie {_DEFAULT_CAT}")
@@ -1181,8 +1202,7 @@ class EbayClient:
                         e2_str = str(e2)
                         log.warning(f"eBay Publish SKU {sku} auch mit Fallback-Kategorie fehlgeschlagen: {e2}")
                         if "25019" in e2_str or "revise" in e2_str.lower() or "unzulässige" in e2_str:
-                            log.warning(f"eBay SKU {sku}: Offer wird gelöscht (25019 im Fallback)")
-                            self.delete_offer(offer_id)
+                            self.flag_offer_for_review(sku, offer_id, e2_str)
                 else:
                     log.warning(f"eBay Publish fehlgeschlagen für SKU {sku}: {e}")
 

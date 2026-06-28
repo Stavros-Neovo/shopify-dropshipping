@@ -252,7 +252,8 @@ def should_keep(product: dict, filters_cfg: dict) -> tuple[bool, str]:
 
 def build_rows(product: dict, pr, cfg: dict,
                enrichment: Optional[dict] = None,
-               max_images: int = 5) -> list[dict]:
+               max_images: int = 5,
+               verified_images: Optional[list[str]] = None) -> list[dict]:
     """
     Wandelt ein Produkt in eine oder mehrere Matrixify-CSV-Zeilen.
 
@@ -262,12 +263,10 @@ def build_rows(product: dict, pr, cfg: dict,
     handle = slugify(product["sku"] + "-" + product.get("title", ""))
     now = datetime.now().isoformat(timespec="seconds")
 
-    # Bilder aus Enrichment-Index (Pipe-separiert)
-    all_images: list[str] = []
-    if enrichment:
-        images_field = enrichment.get("images_all", "")
-        all_images = [u.strip() for u in images_field.split("|") if u.strip().startswith("http")]
-    all_images = all_images[:max_images]
+    # Bilder: NUR auflösungsgeprüfte aus supplier_map.json (≥500×500), exakt wie
+    # eBay (sync.py). KEIN Enrichment-Fallback - das wäre das ungeprüfte, oft
+    # 200×200 ipcstore-Bild, das eBay ablehnt. Ohne verifiziertes Bild → draft.
+    all_images: list[str] = list(verified_images or [])[:max_images]
     first_image = all_images[0] if all_images else ""
 
     title = (enrichment.get("title_full") if enrichment else "") or \
@@ -448,6 +447,15 @@ def main():
     # Enrichment-Index laden (für Bilder + Beschreibungen)
     enrichment_idx = load_enrichment_index(args.enrichment)
 
+    # supplier_map.json: auflösungsgeprüfte Bilder (≥500×500) pro SKU, gleiche
+    # Quelle wie eBay (sync.py). Hat Vorrang vor dem ungeprüften Enrichment-Bild.
+    smap_path = Path("supplier_map.json")
+    smap: Dict[str, dict] = (
+        json.loads(smap_path.read_text(encoding="utf-8")) if smap_path.exists() else {}
+    )
+    verified_count = sum(1 for v in smap.values() if v.get("image_verified"))
+    log.info(f"supplier_map.json: {verified_count} SKUs mit auflösungsgeprüftem Bild")
+
     # Preisüberschreibungen laden
     price_overrides = load_price_overrides(PRICE_OVERRIDES_FILE)
     if price_overrides:
@@ -500,7 +508,16 @@ def main():
                 pr.vk_gross = price_overrides[sku]
                 log.info(f"  ↑ Preisüberschreibung: {sku} → {price_overrides[sku]:.2f}€")
 
-            rows = build_rows(product, pr, cfg, enrichment=enrichment)
+            # Auflösungsgeprüfte Bilder aus supplier_map.json (wie eBay)
+            verified_images = None
+            v = smap.get(sku, {})
+            if v.get("image_verified"):
+                verified_images = v.get("images") or (
+                    [v["image_url"]] if v.get("image_url") else None
+                )
+
+            rows = build_rows(product, pr, cfg, enrichment=enrichment,
+                              verified_images=verified_images)
             for row in rows:
                 writer.writerow(row)
             stats["image_rows"] += len(rows) - 1

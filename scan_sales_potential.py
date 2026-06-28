@@ -49,7 +49,7 @@ for ean, feed_data in bab_feed.items():
     current_price = offer["currentPrice"]
     category_id = offer.get("categoryId", "")
 
-    floor_m, target_m = get_margin_tier(ek, cfg)
+    floor_m, target_m = get_margin_tier(ek, cfg, category_id)
     floor_price = psychological_round(calc_vk(ek, floor_m, cfg, category_id))
 
     comp_prices = get_competitor_prices(ean, app_token, base_url, current_price, floor_price)

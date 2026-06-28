@@ -481,8 +481,12 @@ def main():
         stats=stats,
     )
 
-    # State persistieren
-    state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False))
+    # State persistieren - niemals im Dry-Run, sonst veraendert ein Testlauf
+    # Offset/last_seen/offline_since und beeinflusst den naechsten echten Lauf.
+    if dry_run:
+        log.info("[DRY-RUN] State-Datei bleibt unverändert")
+    else:
+        state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False))
 
     # Schlussreport
     log.info("=" * 60)

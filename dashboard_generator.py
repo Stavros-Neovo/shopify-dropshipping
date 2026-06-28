@@ -12,6 +12,13 @@ from datetime import datetime, timezone, timedelta, date
 from pathlib import Path
 import requests, yaml
 
+from ebay_fees import resolve_fee_rate
+from pricing import (
+    calculate_ebay_margin_eur,
+    get_fee_cost_multiplier,
+    get_order_fixed_fee_eur,
+)
+
 SUPPLIER_MAP   = "supplier_map.json"
 REPORT_FILE    = "repricer_report.json"
 OUTPUT_FILE    = "docs/dashboard_data.js"
@@ -19,16 +26,9 @@ CONFIG_FILE    = "config_shop2.yaml"
 ORDERS_PATH    = "/sell/fulfillment/v1/order"
 SHOPIFY_CSV    = "docs/shopify_products.csv"
 
-EBAY_FEE      = 0.13   # 13 % eBay-Grundgebühr
-CAMPAIGN_FEE  = 0.08   # 8 % Promoted Listings (cost-per-sale) - nur Kalkulationspuffer in der Preisformel!
-PROMOTED_LISTINGS_ACTIVE = False  # Nutzer hat Kampagne am 20.06. in Seller Hub beendet
-TOTAL_FEE     = EBAY_FEE + (CAMPAIGN_FEE if PROMOTED_LISTINGS_ACTIVE else 0.0)  # echte Gebühr für Reporting
 VAT_FACTOR  = 1.19   # Brutto → Netto
-SHIP_COST   = 5.0    # Pauschale Versandkosten (was wir zahlen)
-BUYER_SHIP  = 3.99   # Versandanteil den Käufer zahlt
 EST_RATE   = 0.30   # Einkommensteuer-Rücklage
 GEWST_RATE = 0.15   # Gewerbesteuer-Rücklage
-RETURN_RESERVE_RATE = 0.05  # Retouren-Rücklage auf EK - BAB nimmt nichts zurück (siehe pricing.py)
 
 
 # ─── EK-Map aus shopify_products.csv ─────────────────────────────────────────
@@ -54,6 +54,29 @@ def load_ek_map(csv_path: str = SHOPIFY_CSV) -> dict:
             except ValueError:
                 pass
     return ek_map
+
+
+def load_profit_map(cfg: dict) -> dict:
+    """SKU -> EK und echte eBay-Kategorie aus supplier_map, CSV als Fallback."""
+    result = {}
+    try:
+        with open(SUPPLIER_MAP, encoding="utf-8") as f:
+            smap = json.load(f)
+        for sku, entry in smap.items():
+            if not isinstance(entry, dict):
+                continue
+            ek = entry.get("ek")
+            if isinstance(ek, (int, float)) and ek > 0:
+                result[sku] = {
+                    "ek": float(ek),
+                    "category_id": str(entry.get("ebay_category_id") or ""),
+                }
+    except Exception:
+        pass
+
+    for sku, ek in load_ek_map().items():
+        result.setdefault(sku, {"ek": ek, "category_id": ""})
+    return result
 
 
 # ─── OAuth ────────────────────────────────────────────────────────────────────
@@ -100,27 +123,45 @@ def fetch_orders(base_url, token, days=90):
 
 # ─── Gewinn-Berechnung ────────────────────────────────────────────────────────
 
-def calc_profit_item(unit_price: float, ek: float, qty: int = 1) -> dict:
+def calc_profit_item(unit_price: float, ek: float, qty: int = 1,
+                     cfg: dict | None = None, category_id: str = "") -> dict:
     """Gibt vollständige Gewinnrechnung zurück. profit_u/profit_t sind NETTO nach
     Retouren-Rücklage (BAB nimmt nichts zurück, jede Kundenretoure = voller EK-Verlust)."""
-    total_vk    = unit_price + BUYER_SHIP              # Gesamtbetrag inkl. Käufer-Versand
-    ebay_fee    = round(total_vk * EBAY_FEE, 2)        # eBay Grundgebühr 13%
-    campaign    = round(total_vk * CAMPAIGN_FEE, 2)    # Promoted Listings 8%
-    total_fees  = round(total_vk * TOTAL_FEE, 2)       # 21% gesamt
-    vat         = round((total_vk - total_fees) * (1 - 1 / VAT_FACTOR), 2)
-    netto_vk    = round(total_vk - total_fees - vat, 2)
-    return_reserve = round(ek * RETURN_RESERVE_RATE, 2)
-    profit_u    = round(netto_vk - SHIP_COST - ek - return_reserve, 2)
-    ebay_fee    = total_fees  # für Dashboard-Ausgabe: Gesamtgebühr anzeigen
+    cfg = cfg or yaml.safe_load(Path(CONFIG_FILE).read_text(encoding="utf-8"))
+    ep = cfg["ebay_pricing"]
+    buyer_ship = float(ep.get("buyer_shipping_eur", 0.0))
+    vat_rate = float(ep.get("vat_rate", 0.19))
+    total_vk = unit_price + buyer_ship
+    fee_rate = (
+        resolve_fee_rate(category_id, float(ep.get("ebay_fee_rate", 0.13)))
+        + float(ep.get("campaign_fee_rate", 0.0))
+    ) * get_fee_cost_multiplier(ep)
+    percentage_fee = round(total_vk * fee_rate, 2)
+    fixed_fee = round(get_order_fixed_fee_eur(total_vk, ep), 2)
+    total_fees = round(percentage_fee + fixed_fee, 2)
+    vat = round((total_vk - total_fees) * (1 - 1 / (1 + vat_rate)), 2)
+    netto_vk = round((total_vk * (1 - fee_rate) - fixed_fee) / (1 + vat_rate), 2)
+    expected_profit = calculate_ebay_margin_eur(
+        ek, unit_price, ep, category_id=category_id, include_return_reserve=True
+    )
+    cash_profit = calculate_ebay_margin_eur(
+        ek, unit_price, ep, category_id=category_id, include_return_reserve=False
+    )
+    return_reserve = round(cash_profit - expected_profit, 2)
+    profit_u = round(expected_profit, 2)
     profit_t  = round(profit_u * qty, 2)
     return {
         "vk_brutto":  round(total_vk, 2),
-        "ebay_fee":   ebay_fee,
+        "ebay_fee":   total_fees,
+        "ebay_percent_fee": percentage_fee,
+        "ebay_fixed_fee": fixed_fee,
         "vat":        vat,
         "netto_vk":   netto_vk,
-        "ship":       SHIP_COST,
+        "ship":       float(ep.get("shipping_cost_eur", 5.0)),
         "ek":         round(ek, 2),
         "return_reserve": round(return_reserve * qty, 2),
+        "cash_profit_u": round(cash_profit, 2),
+        "cash_profit_t": round(cash_profit * qty, 2),
         "profit_u":   profit_u,
         "qty":        qty,
         "profit_t":   profit_t,
@@ -133,7 +174,7 @@ def iso_week(d: date) -> tuple:
     return d.isocalendar()[:2]   # (year, week)
 
 
-def process_orders(orders: list, ek_map: dict) -> dict:
+def process_orders(orders: list, profit_map: dict, cfg: dict) -> dict:
     now   = datetime.now(timezone.utc)
     today = now.date()
     this_week  = iso_week(today)
@@ -172,6 +213,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             order.get("pricingSummary", {}).get("total", {}).get("value", 0)
         )
         order_profit = 0.0
+        order_cash_profit = 0.0
         order_ek     = 0.0
         order_fee    = 0.0
         order_reserve = 0.0
@@ -181,9 +223,12 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             title = item.get("title", sku)
             qty   = item.get("quantity", 1)
             vk    = float(item.get("lineItemCost", {}).get("value", 0))
-            ek    = ek_map.get(sku, 0)
-            calc  = calc_profit_item(vk, ek, qty)
+            meta = profit_map.get(sku, {})
+            ek = float(meta.get("ek", 0))
+            category_id = str(meta.get("category_id", ""))
+            calc  = calc_profit_item(vk, ek, qty, cfg=cfg, category_id=category_id)
             order_profit  += calc["profit_t"]
+            order_cash_profit += calc["cash_profit_t"]
             order_ek      += calc["ek"] * qty
             order_fee     += calc["ebay_fee"] * qty
             order_reserve += calc["return_reserve"]
@@ -192,13 +237,14 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             if sku not in product_stats:
                 product_stats[sku] = {
                     "sku": sku, "title": title,
-                    "sold": 0, "revenue": 0.0, "profit": 0.0,
+                    "sold": 0, "revenue": 0.0, "profit": 0.0, "cash_profit": 0.0,
                     "vk": vk, "ek": ek,
-                    "calc": calc_profit_item(vk, ek, 1),   # per unit breakdown
+                    "calc": calc_profit_item(vk, ek, 1, cfg=cfg, category_id=category_id),
                 }
             product_stats[sku]["sold"]    += qty
             product_stats[sku]["revenue"] += vk * qty
             product_stats[sku]["profit"]  += calc["profit_t"]
+            product_stats[sku]["cash_profit"] += calc["cash_profit_t"]
 
         # Tracking fehlt?
         fulfillment = order.get("fulfillmentStartInstructions", [{}])[0]
@@ -260,6 +306,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
                 "title":   order.get("lineItems", [{}])[0].get("title", "")[:50],
                 "revenue": round(order_total, 2),
                 "profit":  round(order_profit, 2),
+                "cash_profit": round(order_cash_profit, 2),
             })
 
     # Top-Produkte
@@ -269,6 +316,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
     for p in top_products:
         p["revenue"] = round(p["revenue"], 2)
         p["profit"]  = round(p["profit"], 2)
+        p["cash_profit"] = round(p.get("cash_profit", 0.0), 2)
 
     bab_deadlines.sort(key=lambda x: x["days_left"])
 
@@ -300,7 +348,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
     }
 
     # Erwartete Auszahlung (eBay Managed Payments: ~wöchentlich)
-    payout = rnd(agg["d30"]["revenue"] * (1 - TOTAL_FEE))
+    payout = rnd(agg["d30"]["revenue"] - agg["d30"]["fee"])
 
     return {
         "stats": {
@@ -322,6 +370,7 @@ def process_orders(orders: list, ek_map: dict) -> dict:
             "total_sales_30d":   agg["d30"]["sales"],
             "total_revenue_30d": rnd(agg["d30"]["revenue"]),
             "total_profit_30d":  rnd(agg["d30"]["profit"]),
+            "total_cash_profit_30d": rnd(agg["d30"]["profit"] + agg["d30"]["return_reserve"]),
         },
         "chart_7d":        build_chart(7),
         "chart_30d":       build_chart(30),
@@ -472,9 +521,9 @@ def main():
             refresh_token = os.getenv(cfg["ebay"]["refresh_token_env_var"], "")
             token      = get_user_token(client_id, client_secret, refresh_token, sandbox)
             raw_orders = fetch_orders(base_url, token, days=90)
-            ek_map     = load_ek_map()
-            print(f"  EK-Map geladen: {len(ek_map)} SKUs")
-            orders_data = process_orders(raw_orders, ek_map=ek_map)
+            profit_map = load_profit_map(cfg)
+            print(f"  Profit-Map geladen: {len(profit_map)} SKUs")
+            orders_data = process_orders(raw_orders, profit_map=profit_map, cfg=cfg)
             print(f"  eBay Orders geladen: {len(raw_orders)}")
         except Exception as e:
             print(f"  eBay API nicht verfügbar ({e}) → Demo-Daten")

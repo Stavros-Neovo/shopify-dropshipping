@@ -69,8 +69,10 @@ shopify:
   location_id: ""
 
 # -----------------------------------------------------------------------------
-# EBAY PRICING – FIXE 25% MARGE
-# Formel: VK_brutto = (EK + 5€ Versand + EK × 25%) × 1.19 ÷ (1 − 0.13)
+# EBAY PRICING – VOLUMEN OHNE MINUS
+# Formel: VK_brutto = (EK + Versand + Zielgewinn + Retourenrücklage
+#                      + fixe eBay-Bestellgebühr) × 1.19
+#                     ÷ (1 − kategoriespezifische eBay-Gebühr)
 # -----------------------------------------------------------------------------
 ebay_pricing:
   shipping_cost_eur: 5.00        # Was wir dem Spediteur zahlen
@@ -78,31 +80,51 @@ ebay_pricing:
   ebay_fee_rate: 0.13
   campaign_fee_rate: 0.0         # Promoted Listings deaktiviert (20.06.2026) - war 0.08
   vat_rate: 0.19
+  ebay_fee_vat_rate: 0.19
+  treat_ebay_fee_vat_as_cost: true  # konservativ: keine Minus-Verkäufe, bis Vorsteuer-Behandlung final bestätigt ist
 
-  # Margen-Staffel nach EK: je teurer der Artikel, desto niedriger der Prozentsatz
-  # (absoluter Gewinn bleibt ordentlich, aber wir bleiben bei teuren Artikeln
-  # konkurrenzfähig). margin = Zielpreis (Normalpreis), floor_margin = absoluter
-  # Boden, unter den repricer.py niemals geht (siehe MIN_MARGIN_PCT-Ablösung dort).
+  # eBay-Fixgebühr pro Bestellung: 0,35€ bis 10€, 0,45€ über 10€.
+  # Werte sind netto; bei treat_ebay_fee_vat_as_cost=true wird 19% USt als
+  # Sicherheitskostenblock addiert.
+  order_fixed_fee_threshold_eur: 10.00
+  order_fixed_fee_low_eur: 0.35
+  order_fixed_fee_high_eur: 0.45
+
+  # Volumen-Staffel: Ziel- und Floor-Margen deutlich niedriger als vorher,
+  # aber immer durch min_margin_tiers + Retourenrücklage + Fixgebühr abgesichert.
+  # margin = Normalpreis, floor_margin = absoluter Repricer-Boden.
   margin_tiers:
     - ek_max: 30.0
-      margin: 0.30
-      floor_margin: 0.25
+      margin: 0.16
+      floor_margin: 0.06
     - ek_max: 100.0
-      margin: 0.25
-      floor_margin: 0.20
+      margin: 0.13
+      floor_margin: 0.05
     - ek_max: 300.0
-      margin: 0.20
-      floor_margin: 0.15
+      margin: 0.10
+      floor_margin: 0.04
     - ek_max: 999999.0
-      margin: 0.15
-      floor_margin: 0.10
+      margin: 0.08
+      floor_margin: 0.03
+
+  # Mindestgewinn NACH allen bekannten Kosten und NACH Retourenrücklage.
+  # Das ist die eigentliche "kein Minus"-Leitplanke für Volumenpreise.
+  min_margin_tiers:
+    - ek_max: 30.0
+      min_margin_eur: 2.00
+    - ek_max: 100.0
+      min_margin_eur: 4.00
+    - ek_max: 300.0
+      min_margin_eur: 8.00
+    - ek_max: 999999.0
+      min_margin_eur: 15.00
 
   # Retouren-Rücklage: BAB hat kein Rückgaberecht für uns, eBay-Kunden aber
   # 14 Tage Widerrufsrecht (Fernabsatzrecht) - jede Rücksendung ist ein
   # kompletter EK-Verlust. 5% auf EK eingepreist, bis echte Retourenquote vorliegt.
   return_reserve_rate: 0.05
 
-  min_margin_eur: 5.00
+  min_margin_eur: 4.00
   rounding_strategy: "psychological_99"
 
   # Versiegelte Hygieneartikel (elektr. Zahn-/Mundpflege, Rasur, Haarstyling -
@@ -111,7 +133,7 @@ ebay_pricing:
   # 0% Retouren-Rücklage statt 5%, UND fester Mindestgewinn statt %-Marge,
   # um "auf Masse" konkurrenzfähig nah an den Mitbewerber zu kommen.
   # Entscheidung Nutzer 24.06.2026, zuerst an Oral-B getestet.
-  hygiene_min_profit_eur: 1.00  # so aggressiv wie möglich (deckt eBay-Fixgebühr 0,35-0,45€)
+  hygiene_min_profit_eur: 1.50  # Volumenmodus, aber nach eBay-Fixgebühr/Fees positiv
 
 # -----------------------------------------------------------------------------
 # EBAY API – SHOP 2 (eigener Seller Account)

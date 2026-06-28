@@ -50,7 +50,8 @@ import yaml
 from dotenv import load_dotenv
 
 from ebay_client import EbayClient
-from ebay_fees import resolve_fee_rate, is_hygiene_category
+from ebay_fees import is_hygiene_category
+from pricing import calculate_ebay_margin_eur, calculate_ebay_vk, get_min_margin_eur
 
 log = logging.getLogger("repricer")
 
@@ -87,15 +88,12 @@ def calc_vk(ek: float, margin: float, cfg: dict, category_id: str = "") -> float
     margin = 0.20 → Mindestpreis (20% Marge auf EK nach allen Kosten)
     margin = 0.25 → Normalpreis  (25% Ziel-Marge)
     """
-    ep           = cfg["ebay_pricing"]
-    carrier      = ep.get("shipping_cost_eur", 5.00)
-    buyer_ship   = ep.get("buyer_shipping_eur", 0.00)
-    ebay_fee     = resolve_fee_rate(category_id, ep.get("ebay_fee_rate", 0.13))
-    campaign_fee = ep.get("campaign_fee_rate", 0.08)  # Promoted Listings 8%
-    total_fee    = ebay_fee + campaign_fee
-    vat          = ep.get("vat_rate", 0.19)
-    vk = (ek * (1 + margin) + carrier) * (1 + vat) / (1 - total_fee) - buyer_ship
-    return vk
+    return calculate_ebay_vk(
+        ek,
+        cfg["ebay_pricing"],
+        category_id=category_id,
+        margin_override=margin,
+    ).vk_gross
 
 
 def psychological_round(price: float) -> float:
@@ -338,19 +336,14 @@ def reprice_product(
     normal_price = psychological_round(calc_vk(ek, target_margin, cfg, category_id))
 
     ep = cfg["ebay_pricing"]
-    is_hygiene = bool(ep.get("hygiene_min_profit_eur")) and is_hygiene_category(category_id)
-    min_margin = ep["hygiene_min_profit_eur"] if is_hygiene else ep.get("min_margin_eur", 5.0)
+    min_margin = get_min_margin_eur(ek, ep, category_id)
 
     # Absoluter Mindestgewinn sichern - bei sehr günstigen Artikeln kann die
     # Prozent-Marge der Staffel unter min_margin_eur fallen (z.B. 25% auf EK=15€)
-    ebay_fee = resolve_fee_rate(category_id, ep.get("ebay_fee_rate", 0.13))
-    total_fee = ebay_fee + ep.get("campaign_fee_rate", 0.0)
-    vat = ep.get("vat_rate", 0.19)
-    ship = ep.get("shipping_cost_eur", 5.0)
-    return_reserve_eur = 0.0 if is_hygiene else ek * ep.get("return_reserve_rate", 0.0)
-
     def floor_actual_margin(vk: float) -> float:
-        return (vk * (1 - total_fee)) / (1 + vat) - ek - ship - return_reserve_eur
+        return calculate_ebay_margin_eur(
+            ek, vk, ep, category_id=category_id, include_return_reserve=True
+        )
 
     while floor_actual_margin(floor_price) < min_margin:
         floor_price = psychological_round(floor_price + 1.0)
@@ -488,8 +481,9 @@ def reprice_product(
         result["reason"] = "max_drop_limit_applied"
         log.info(f"  ⚠ {sku}: Max-Drop-Limit → {target_price:.2f}€ statt {lowest - UNDERCUT_EUR:.2f}€")
 
-    # Sicherheit: Mindest-Absolutmarge
-    if (target_price - ek) < min_margin:
+    # Sicherheit: Mindest-Absolutmarge nach allen Gebühren, Fixkosten und
+    # Retourenrücklage. Das ist die harte "kein Minus"-Leitplanke.
+    if floor_actual_margin(target_price) < min_margin:
         result["action"] = "skipped"
         result["reason"] = "min_absolute_margin_breached"
         log.info(f"  ⚠ {sku}: Absolutmarge würde unter {min_margin:.2f}€ fallen")
