@@ -134,6 +134,37 @@ MATRIXIFY_HEADERS = [
 ]
 
 
+_EBAY_CAT_NAMES: Optional[dict] = None
+_EBAY_SKU_CAT: Optional[dict] = None
+
+
+def ebay_category_name(product: dict) -> str:
+    """Liefert den deutschen eBay-Kategorie-Namen für ein Produkt — exakt die
+    eBay-Logik (Titel-Keywords zuerst, sonst BAB-ItemMainGroup-Map). Wird als
+    Shopify-'Type' genutzt, damit Shopify dieselbe Kategorisierung wie eBay hat."""
+    global _EBAY_CAT_NAMES, _EBAY_SKU_CAT
+    if _EBAY_CAT_NAMES is None:
+        try:
+            _EBAY_CAT_NAMES = json.loads(Path("ebay_category_names_cache.json").read_text(encoding="utf-8"))
+        except Exception:
+            _EBAY_CAT_NAMES = {}
+        # Per-SKU eBay-Kategorien aus Taxonomy-API (categorize_for_shopify.py) — Vorrang
+        try:
+            _EBAY_SKU_CAT = json.loads(Path("ebay_sku_category.json").read_text(encoding="utf-8"))
+        except Exception:
+            _EBAY_SKU_CAT = {}
+    fallback = product.get("category", "") or "Sonstiges"
+    cid = _EBAY_SKU_CAT.get(product.get("sku", ""))
+    if not cid:
+        try:
+            from ebay_client import get_ebay_category_id, _guess_category_from_title
+            cid = _guess_category_from_title(product.get("title", "")) or get_ebay_category_id(product.get("category", ""))
+        except Exception:
+            return fallback
+    name = _EBAY_CAT_NAMES.get(str(cid)) or _EBAY_CAT_NAMES.get(cid)
+    return name or fallback
+
+
 def load_enrichment_index(path: str) -> Dict[str, dict]:
     """Lädt enrichment_index.csv → Dict EAN → Enrichment-Daten."""
     p = Path(path)
@@ -303,7 +334,7 @@ def build_rows(product: dict, pr, cfg: dict,
         "SEO Title": seo_title,
         "SEO Description": seo_description,
         "Vendor": product.get("brand", "") or "",
-        "Type": product.get("category", "") or "",
+        "Type": ebay_category_name(product),
         "Tags": ", ".join(tags),
         "Tags Command": "MERGE",
         "Status": "active" if first_image else "draft",
