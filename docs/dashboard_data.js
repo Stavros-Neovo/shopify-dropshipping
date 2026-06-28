@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-28T19:27:40.001005+00:00",
+  "generated_at": "2026-06-28T21:07:22.783439+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 61,
   "catalog": {
     "total_skus": 981,
     "images_verified": 417,
@@ -9,107 +9,61 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-28T17:38:32.528858+00:00",
-      "checked": 600,
-      "lowered": 16,
-      "raised": 1,
-      "set_to_floor": 132,
+      "timestamp": "2026-06-28T19:49:45.141658+00:00",
+      "checked": 61,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 5,
       "skipped_floor": 0,
-      "skipped_few": 36,
-      "skipped_image": 39,
-      "unchanged": 376,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 6,
+      "unchanged": 46,
+      "errors": 4,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 259.99,
-        "new": 233.99,
-        "diff": -26.0,
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 293.99,
+        "new": 279.99,
+        "diff": -14.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0057",
-        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
-        "old": 195.99,
-        "new": 189.99,
-        "diff": -6.0,
+        "sku": "SUPY0010",
+        "title": "Yealink IP Telefon SIP-T54W V2",
+        "old": 178.99,
+        "new": 164.99,
+        "diff": -14.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 244.99,
-        "new": 220.99,
-        "diff": -24.0,
+        "sku": "SUPY0038",
+        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
+        "old": 209.99,
+        "new": 205.99,
+        "diff": -4.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 640.99,
-        "new": 589.95,
-        "diff": -51.04,
+        "sku": "SUPY0059",
+        "title": "Yealink WH67 - Headset WH67 Mono UC",
+        "old": 251.99,
+        "new": 244.99,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 579.99,
-        "new": 535.95,
-        "diff": -44.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 554.99,
-        "new": 513.95,
-        "diff": -41.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 94.99,
-        "new": 85.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 649.99,
-        "new": 604.95,
-        "diff": -45.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 374.99,
-        "new": 365.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SDXS0033",
-        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
-        "old": 339.99,
-        "new": 301.99,
-        "diff": -38.0,
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 47.99,
+        "new": 44.99,
+        "diff": -3.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-27",
-        "lowered": 4,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-27",
         "lowered": 20,
@@ -186,6 +140,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-28",
         "lowered": 16,
         "raised": 1,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-28",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
