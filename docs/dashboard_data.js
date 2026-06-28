@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-28T17:18:13.813245+00:00",
+  "generated_at": "2026-06-28T19:27:40.001005+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-28T15:45:10.471014+00:00",
+      "timestamp": "2026-06-28T17:38:32.528858+00:00",
       "checked": 600,
-      "lowered": 10,
-      "raised": 4,
-      "set_to_floor": 74,
+      "lowered": 16,
+      "raised": 1,
+      "set_to_floor": 132,
       "skipped_floor": 0,
-      "skipped_few": 23,
-      "skipped_image": 17,
-      "unchanged": 470,
-      "errors": 2,
+      "skipped_few": 36,
+      "skipped_image": 39,
+      "unchanged": 376,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 483.99,
-        "new": 428.99,
-        "diff": -55.0,
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 259.99,
+        "new": 233.99,
+        "diff": -26.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 235.99,
-        "new": 215.99,
-        "diff": -20.0,
+        "sku": "RAM4K0057",
+        "title": "Kingston Fury BEAST RGB - DDR4-KIT-16GB - 2X8",
+        "old": 195.99,
+        "new": 189.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 227.99,
-        "new": 208.99,
-        "diff": -19.0,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 244.99,
+        "new": 220.99,
+        "diff": -24.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 469.99,
-        "new": 396.99,
-        "diff": -73.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 640.99,
+        "new": 589.95,
+        "diff": -51.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 628.99,
-        "new": 552.95,
-        "diff": -76.04,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 579.99,
+        "new": 535.95,
+        "diff": -44.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 285.99,
-        "new": 243.99,
-        "diff": -42.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 554.99,
+        "new": 513.95,
+        "diff": -41.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0273",
-        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
-        "old": 1399.95,
-        "new": 1394.95,
-        "diff": -5.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 94.99,
+        "new": 85.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 229.99,
-        "new": 197.99,
-        "diff": -32.0,
+        "sku": "REFT0004",
+        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
+        "old": 649.99,
+        "new": 604.95,
+        "diff": -45.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 383.99,
-        "new": 323.99,
-        "diff": -60.0,
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 374.99,
+        "new": 365.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0295",
-        "title": "Seagate BarraCuda ST20000DM001 / 20TB / 3,5\"",
-        "old": 841.95,
-        "new": 839.95,
-        "diff": -2.0,
+        "sku": "SDXS0033",
+        "title": "Samsung Portable 2 TB T5 EVO Black MU-PH2T0S/",
+        "old": 339.99,
+        "new": 301.99,
+        "diff": -38.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-27",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-27",
         "lowered": 4,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-28",
         "lowered": 10,
         "raised": 4,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-28",
+        "lowered": 16,
+        "raised": 1,
         "floor": 0
       }
     ]
