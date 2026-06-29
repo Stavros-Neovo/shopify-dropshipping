@@ -818,7 +818,7 @@
     "ean": "5711157075104",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 19.79,
+    "ek": 19.49,
     "vk": 44.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1146,7 +1146,7 @@
     "ean": "3030050179880",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 36.54,
+    "ek": 34.51,
     "vk": 76.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -1392,7 +1392,7 @@
     "ean": "3030050192995",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 41.62,
+    "ek": 40.6,
     "vk": 85.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1402,7 +1402,7 @@
     "ean": "3030050193022",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 34.51,
+    "ek": 32.48,
     "vk": 72.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4138,7 +4138,7 @@
     "ean": "3030050182644",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 86.28,
+    "ek": 84.25,
     "vk": 169.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6564,21 +6564,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "CPUA0139": {
-    "ean": "0730143318280",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 359.01,
-    "vk": 690.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/143293.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/143293.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "CPUI0201": {
     "ean": "5032037278447",
     "supplier": "BAB",
@@ -8170,21 +8155,6 @@
     "title": "Crucial DDR5 - 16GB 5600 DIMM (CT16G56C46U5)",
     "image_verified": false
   },
-  "RAM5C0021": {
-    "ean": "0649528906564",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 485.17,
-    "vk": 922.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287678.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287678.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "RAM5C0025": {
     "ean": "0840440492573",
     "supplier": "BAB",
@@ -9207,7 +9177,7 @@
     "ean": "8806095575650",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 246.5,
+    "ek": 243.9,
     "vk": 489.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9640,7 +9610,7 @@
     "ean": "4048945034953",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 233.45,
+    "ek": 100.49,
     "vk": 447.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10002,12 +9972,13 @@
   "HHWR8000": {
     "ean": "4892210113375",
     "supplier": "BAB",
-    "ek": 11.17,
+    "ek": 10.15,
     "vk": 28.99,
     "title": "Ryobi RAK30MIX - Schraubendreher- und Bohrer-Bitsatz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWT1001": {
     "ean": "4262363856472",
@@ -12858,21 +12829,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_too_small": true
   },
-  "SUPL0438": {
-    "ean": "0097855166067",
-    "supplier": "BAB",
-    "ek": 54.51,
-    "vk": 110.99,
-    "title": "Logitech Rally Table and Ceiling Mount for Rally Mic Pod",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/122129.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/122129.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
@@ -12935,7 +12891,7 @@
   "SUPN4000": {
     "ean": "5711157014110",
     "supplier": "BAB",
-    "ek": 15.48,
+    "ek": 15.23,
     "vk": 36.99,
     "title": "Needit PARK LITE (elektrische Parkscheibe) Blau",
     "listed_at": "2026-06-14T20:49:22",
@@ -12945,7 +12901,8 @@
     "images": [
       "https://media.ipcstore.net/img/l/644222.jpg"
     ],
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4001": {
     "ean": "5711157014127",
@@ -12965,7 +12922,7 @@
   "SUPN4002": {
     "ean": "5711157030141",
     "supplier": "BAB",
-    "ek": 15.48,
+    "ek": 15.23,
     "vk": 36.99,
     "title": "Needit Park Mini (elektrische Parkscheibe) Blau",
     "listed_at": "2026-06-14T20:49:22",
@@ -12975,12 +12932,13 @@
     "images": [
       "https://media.ipcstore.net/img/l/644224.jpg"
     ],
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4003": {
     "ean": "5711157030110",
     "supplier": "BAB",
-    "ek": 15.99,
+    "ek": 15.48,
     "vk": 37.99,
     "title": "Needit Park Mini (elektrische Parkscheibe) Schwarz",
     "listed_at": "2026-06-14T20:49:22",
@@ -12990,7 +12948,8 @@
     "images": [
       "https://media.ipcstore.net/img/l/644225.jpg"
     ],
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4006": {
     "ean": "5711157080412",
@@ -13010,7 +12969,7 @@
   "SUPN4007": {
     "ean": "5711157080382",
     "supplier": "BAB",
-    "ek": 15.68,
+    "ek": 15.48,
     "vk": 37.99,
     "title": "Needit PARK LITE One (elektrische Parkscheibe) Blau",
     "listed_at": "2026-06-14T20:49:22",
@@ -13020,47 +12979,52 @@
       "https://media.ipcstore.net/img/l/644228.jpg"
     ],
     "image_verified": false,
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4009": {
     "ean": "5711157001578",
     "supplier": "BAB",
-    "ek": 13.35,
+    "ek": 13.2,
     "vk": 32.99,
     "title": "Needit PARK Micro (elektrische Parkscheibe) Schwarz/Blau",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4010": {
     "ean": "5711157090206",
     "supplier": "BAB",
-    "ek": 19.03,
+    "ek": 18.78,
     "vk": 43.99,
     "title": "Needit PARK Micro Solar (elektrische Parkscheibe) Schwarz/Blau",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4012": {
     "ean": "5711157057100",
     "supplier": "BAB",
-    "ek": 18.78,
+    "ek": 18.52,
     "vk": 42.99,
     "title": "Needit ParkOne (elektrische Parkscheibe) Schwarz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4013": {
     "ean": "5711157057346",
     "supplier": "BAB",
-    "ek": 18.78,
+    "ek": 18.52,
     "vk": 42.99,
     "title": "Needit ParkOne (elektrische Parkscheibe) Blau",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN5000": {
     "ean": "6976831830168",
