@@ -804,38 +804,6 @@
     ],
     "image_too_small": true
   },
-  "SUPL0492": {
-    "ean": "5099206097278",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.53,
-    "vk": 50.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "title": "Logitech Mouse Signature M650 L for Business Graphit",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/135974.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/135974.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SUPL0583": {
-    "ean": "5099206113053",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 21.62,
-    "vk": 48.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "title": "Logitech Combo Slim Wireless MK370 Keyboard Graphite",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/136952.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/136952.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPN4011": {
     "ean": "5711157090107",
     "supplier": "BAB",
@@ -2315,21 +2283,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "SUPL0095": {
-    "ean": "5099206077379",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.03,
-    "vk": 62.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/102533.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/102533.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPL0125": {
     "ean": "5099206081901",
     "supplier": "BAB",
@@ -3002,17 +2955,6 @@
     "vk": 148.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "HHWK2098": {
-    "ean": "4054278999159",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 65.98,
-    "vk": 131.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Kärcher SC 1 Multi & Up, Tragbarer Dampfreiniger, 0,2 l, Schwarz, Gelb, 5 m, 1300 W, 220-240 V",
     "image_verified": false
   },
   "HHWP0101": {
@@ -5021,26 +4963,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SUPV0004": {
-    "ean": "0023942438908",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 101.5,
-    "vk": 198.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/32158352_8810427901.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/32158352_8810427901.jpg",
-      "https://images.icecat.biz/img/gallery/32158352_0106836808.jpg",
-      "https://images.icecat.biz/img/gallery/32158352_7256179905.jpg",
-      "https://images.icecat.biz/img/gallery/32158352_8394888554.jpg",
-      "https://images.icecat.biz/img/gallery/32158352_6505916302.jpg",
-      "https://images.icecat.biz/img/gallery/32158352_5389883113.jpg",
-      "https://images.icecat.biz/img/gallery/32158352_1057326483.jpg"
-    ]
-  },
   "SUPY0022": {
     "ean": "6938818303188",
     "supplier": "BAB",
@@ -5589,22 +5511,6 @@
     ],
     "title": "UbiQuiti WiFi 7 Long-Range Access Point",
     "image_verified": true
-  },
-  "NETU0156": {
-    "ean": "0810084696057",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 127.65,
-    "vk": 247.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Ubiquiti UniFi Flex 2.5G - Switch - managed",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/140697.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/140697.jpg"
-    ],
-    "image_too_small": true
   },
   "NETU0173": {
     "ean": "0810084698815",
@@ -7099,20 +7005,6 @@
       "https://images.icecat.biz/img/gallery/b61cd04cab8698685c60f357041ce682265397e4.jpg"
     ]
   },
-  "HDIS0317": {
-    "ean": "8719706019774",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 235.0,
-    "vk": 450.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
-  },
   "HDIS0318": {
     "ean": "8719706022415",
     "supplier": "BAB",
@@ -7491,7 +7383,7 @@
     "ean": "6977728947303",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 598.85,
+    "ek": 578.55,
     "vk": 1192.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9208,7 +9100,7 @@
     "ean": "8806090545917",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 242.9,
+    "ek": 238.9,
     "vk": 478.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10301,20 +10193,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/dbc91d74e756274f3311f9799d1bccfe.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/dbc91d74e756274f3311f9799d1bccfe.jpg"
-    ]
-  },
-  "NETT0086": {
-    "ean": "6935364010751",
-    "supplier": "BAB",
-    "ek": 249.69,
-    "vk": 477.99,
-    "title": "TP-LINK JetStream - TL-SG3452 - T2600G-52TS - Switch - managed",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/844d27075b1f017162c9b0113530ff7a.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/844d27075b1f017162c9b0113530ff7a.jpg"
     ]
   },
   "NETT0201": {
