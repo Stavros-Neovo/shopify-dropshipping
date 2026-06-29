@@ -1410,20 +1410,6 @@
     ],
     "image_verified": true
   },
-  "HHWB1128": {
-    "ean": "4210201447238",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 43.65,
-    "vk": 89.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/d261a8c4e69160c7e27d7da8e61d4ed4.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/d261a8c4e69160c7e27d7da8e61d4ed4.jpg"
-    ],
-    "image_verified": true
-  },
   "HHWB1129": {
     "ean": "4210201434832",
     "supplier": "BAB",
@@ -1485,16 +1471,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "ek": 32.48,
     "vk": 68.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "HHWE1013": {
-    "ean": "4895251643016",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.93,
-    "vk": 62.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
@@ -2436,7 +2412,7 @@
     "ean": "0097855162045",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.44,
+    "ek": 42.37,
     "vk": 90.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3840,7 +3816,7 @@
     "ean": "5099206090347",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 72.37,
+    "ek": 72.25,
     "vk": 145.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3903,37 +3879,6 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
-  },
-  "SUPR1017": {
-    "ean": "8886419379850",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.02,
-    "vk": 123.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Razer Barracuda X - Wireless Headset - black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/132537.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/132537.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SUPR1047": {
-    "ean": "8886419379645",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 74.83,
-    "vk": 148.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21281257.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21281257.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "SUPR1052": {
     "ean": "8886419351450",
@@ -4166,7 +4111,7 @@
     "ean": "4260557513262",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.63,
+    "ek": 83.48,
     "vk": 165.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5264,7 +5209,7 @@
     "ean": "0718037899770",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 148.77,
+    "ek": 148.5,
     "vk": 301.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5470,17 +5415,6 @@
       "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876574?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
       "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876576?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900"
     ]
-  },
-  "HHWW029": {
-    "ean": "4000530725172",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 154.28,
-    "vk": 298.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "WMF Perfect Plus One Pot Schnellkochtopf-Set 4,5L+3L",
-    "image_verified": false
   },
   "MBAI0047": {
     "ean": "4711387797143",
@@ -5754,17 +5688,6 @@
     "vk": 212.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "PPSE0104": {
-    "ean": "4895251644747",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 125.86,
-    "vk": 244.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW x Shelly Smart Meter",
     "image_verified": false
   },
   "RAM4C0110": {
@@ -6098,7 +6021,7 @@
     "ean": "0843367130283",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 135.56,
+    "ek": 135.32,
     "vk": 263.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6201,7 +6124,7 @@
     "ean": "0718037894850",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 118.84,
+    "ek": 118.62,
     "vk": 234.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6257,7 +6180,7 @@
     "ean": "0718037907154",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 109.07,
+    "ek": 108.88,
     "vk": 215.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6938,7 +6861,7 @@
     "ean": "8719706022095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 355.01,
+    "ek": 345.01,
     "vk": 751.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7031,7 +6954,7 @@
     "ean": "8719706438667",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 795.2,
+    "ek": 793.8,
     "vk": 1607.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7289,7 +7212,7 @@
     "ean": "0718037899794",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 177.81,
+    "ek": 177.5,
     "vk": 350.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7447,7 +7370,7 @@
     "ean": "0718037901442",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 483.28,
+    "ek": 482.43,
     "vk": 920.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7540,17 +7463,6 @@
     "vk": 322.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "HHWM4007": {
-    "ean": "4006508228034",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 487.2,
-    "vk": 924.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Melitta CI Touch - Silber",
     "image_verified": false
   },
   "HHWM4008": {
@@ -9233,7 +9145,7 @@
     "ean": "0843367132232",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 294.9,
+    "ek": 294.38,
     "vk": 570.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9260,16 +9172,6 @@
       "https://media.ipcstore.net/img/l/21130203.jpg"
     ],
     "image_too_small": true
-  },
-  "SSDL0045": {
-    "ean": "0843367136797",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 253.69,
-    "vk": 485.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "SSDL0046": {
     "ean": "0843367136803",
@@ -9695,7 +9597,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 269.84,
+    "ek": 269.36,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -13014,26 +12916,10 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_too_small": true
   },
-  "SUPL0192": {
-    "ean": "5099206038844",
-    "supplier": "BAB",
-    "ek": 13.09,
-    "vk": 33.99,
-    "title": "Logitech Headset H340 Wired",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/534186.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/534186.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
-  },
   "SUPL0233": {
     "ean": "5099206066199",
     "supplier": "BAB",
-    "ek": 8.62,
+    "ek": 8.61,
     "vk": 24.99,
     "title": "Logitech Mouse M220 Silent Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -13331,7 +13217,7 @@
   "SUPR1009": {
     "ean": "8886419333265",
     "supplier": "BAB",
-    "ek": 14.29,
+    "ek": 14.27,
     "vk": 35.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - black",
     "listed_at": "2026-06-14T20:49:22",
@@ -13347,7 +13233,7 @@
   "SUPR1027": {
     "ean": "8886419333326",
     "supplier": "BAB",
-    "ek": 14.74,
+    "ek": 14.72,
     "vk": 38.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - white",
     "listed_at": "2026-06-14T20:49:22",
@@ -13378,7 +13264,7 @@
   "SUPR1055": {
     "ean": "8886419345763",
     "supplier": "BAB",
-    "ek": 69.69,
+    "ek": 69.57,
     "vk": 145.99,
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
     "listed_at": "2026-06-14T20:49:22",
@@ -13755,17 +13641,6 @@
       "https://images.icecat.biz/img/gallery/95619079_7366132728.jpg"
     ],
     "image_verified": true
-  },
-  "SUPS1023": {
-    "ean": "8720862502642",
-    "supplier": "BAB",
-    "ek": 256.8,
-    "vk": 494.99,
-    "title": "Sonos Ace Bluetooth-Kopfhörer - Schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS7023": {
     "ean": "3800235261798",
