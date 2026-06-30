@@ -580,20 +580,6 @@
       "https://images.icecat.biz/img/gallery/83fa7ae31885ad65dbf2d0f62e5f49b9.jpg"
     ]
   },
-  "NETT0081": {
-    "ean": "6935364010065",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 21.32,
-    "vk": 47.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/79344037_8798820899.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/79344037_8798820899.jpg"
-    ]
-  },
   "ENAB0001": {
     "ean": "6972822120683",
     "supplier": "BAB",
@@ -6736,7 +6722,7 @@
     "ean": "8719706022095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 345.01,
+    "ek": 329.0,
     "vk": 751.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6785,7 +6771,7 @@
     "ean": "0763649174883",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 995.0,
+    "ek": 950.01,
     "vk": 1881.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6799,7 +6785,7 @@
     "ean": "8719706437295",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 1095.0,
+    "ek": 1090.01,
     "vk": 2069.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6861,7 +6847,7 @@
     "ean": "0763649174920",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 950.01,
+    "ek": 899.01,
     "vk": 2265.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6889,7 +6875,7 @@
     "ean": "8719706431460",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 799.01,
+    "ek": 750.0,
     "vk": 1512.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6904,7 +6890,7 @@
     "ean": "8719706431378",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 850.0,
+    "ek": 825.0,
     "vk": 1692.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -9364,22 +9350,6 @@
     ],
     "image_too_small": true
   },
-  "SUPL0328": {
-    "ean": "0097855143143",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 159.86,
-    "vk": 309.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Logitech ConferenceCam Rally Mic Pod Hub microphone Interface adapter",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/122202.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/122202.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPL2008": {
     "ean": "0195348677295",
     "supplier": "BAB",
@@ -9590,7 +9560,7 @@
   "HDIS0299": {
     "ean": "8719706022088",
     "supplier": "BAB",
-    "ek": 295.01,
+    "ek": 255.01,
     "vk": 563.99,
     "title": "Seagate Exos 7E10 / ST4000NM025B / 4TB / 3,5\"",
     "listed_at": "2026-06-14T20:49:22",
@@ -9599,7 +9569,8 @@
     "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1111": {
     "ean": "4210201434818",
@@ -13919,19 +13890,6 @@
     "ek": 83.74,
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "NOCO0003": {
-    "image_url": "https://media.ipcstore.net/img/l/21324033.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21324033.jpg"
-    ],
-    "ean": "1210000615022",
-    "title": "NOCO GB40 | Boost 12V 1000A Jump Starter | Boost Jump Starters",
-    "image_verified": false,
-    "ek": 76.32,
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
   },
   "NOCO0007": {
     "image_url": "https://no.co/media/catalog/product/g/b/gbx45.png",
