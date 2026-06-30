@@ -10076,16 +10076,6 @@
     ],
     "image_verified": true
   },
-  "NETT1008": {
-    "ean": "4779051841370",
-    "supplier": "BAB",
-    "ek": 81.71,
-    "vk": 161.99,
-    "title": "Teltonika TSW212 - Switch",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "NETT1013": {
     "ean": "4779051840830",
     "supplier": "BAB",
