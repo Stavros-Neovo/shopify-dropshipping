@@ -4595,22 +4595,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "RAM4G0030": {
-    "ean": "4713294220998",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 95.41,
-    "vk": 187.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC2666",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287313.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287313.jpg"
-    ],
-    "image_too_small": true
-  },
   "RAM4G0034": {
     "ean": "4713294224385",
     "supplier": "BAB",
@@ -5279,7 +5263,7 @@
     "ean": "4211125100674",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 118.76,
+    "ek": 111.65,
     "vk": 231.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -9206,38 +9190,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "SSDW0075": {
-    "ean": "0718037891378",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 417.91,
-    "vk": 856.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD M.2 4 TB WD Black™ SN850X NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129015.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129015.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SSDW0085": {
-    "ean": "0718037893228",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 219.69,
-    "vk": 432.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD M.2 2TB WD Blue™ SN5000 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/139191.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/139191.jpg"
-    ],
-    "image_too_small": true
-  },
   "SSDW0089": {
     "ean": "0718037884660",
     "supplier": "BAB",
@@ -9292,22 +9244,6 @@
     "image_url": "https://media.ipcstore.net/img/l/141587.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/141587.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SSDW0100": {
-    "ean": "0718037906263",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 201.75,
-    "vk": 403.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD M.2 2TB WD Blue™ SN5100 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21311511.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21311511.jpg"
     ],
     "image_too_small": true
   },
