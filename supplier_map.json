@@ -12552,22 +12552,6 @@
       "https://images.icecat.biz/img/gallery/32851348_9301309902.jpg"
     ]
   },
-  "SUPL0006": {
-    "ean": "5099206041271",
-    "supplier": "BAB",
-    "ek": 2.84,
-    "vk": 13.99,
-    "title": "Logitech Mouse B100 Optical Corded Black OEM",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/465424.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/465424.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
-  },
   "SUPL0094": {
     "ean": "5099206063846",
     "supplier": "BAB",
