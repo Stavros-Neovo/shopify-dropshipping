@@ -24,9 +24,12 @@ from pathlib import Path
 
 import requests
 
-ICECAT_API   = "https://live.icecat.biz/api"
-ICECAT_USER  = os.environ.get("ICECAT_USER",  "neovogen")
-ICECAT_TOKEN = os.environ.get("ICECAT_TOKEN", "a923fe60-04bd-4f83-ae2e-a1e1a8427c98")
+ICECAT_API     = "https://live.icecat.biz/api"
+ICECAT_USER    = os.environ.get("ICECAT_USER",  "neovogen")
+ICECAT_TOKEN   = os.environ.get("ICECAT_TOKEN", "a923fe60-04bd-4f83-ae2e-a1e1a8427c98")
+# Optionaler Full-Icecat app_key (schaltet die „Full-Icecat"-Produkte frei, z.B. CPUs,
+# die mit dem Open-Token 403 geben). Wenn gesetzt, wird er an die Anfrage gehängt.
+ICECAT_APP_KEY = os.environ.get("ICECAT_APP_KEY", "").strip()
 BAB_CSV      = Path("bab_preisliste.csv")
 SUPPLIER_MAP = Path("supplier_map.json")
 REVIEW_FILE  = Path("icecat_mpn_review.json")
@@ -53,10 +56,12 @@ def identity_ok(searched_mpn: str, part_code: str, title: str) -> bool:
 
 def icecat_by_mpn(brand: str, mpn: str) -> dict | None:
     """Sucht Icecat per Brand + ProductCode. Gibt data-Objekt oder None."""
+    params = {"UserName": ICECAT_USER, "Language": "de", "Brand": brand, "ProductCode": mpn}
+    if ICECAT_APP_KEY:
+        params["app_key"] = ICECAT_APP_KEY      # schaltet Full-Icecat frei, falls gesetzt
     try:
         r = requests.get(
-            ICECAT_API,
-            params={"UserName": ICECAT_USER, "Language": "de", "Brand": brand, "ProductCode": mpn},
+            ICECAT_API, params=params,
             headers={"Authorization": f"Bearer {ICECAT_TOKEN}"},
             timeout=20,
         )

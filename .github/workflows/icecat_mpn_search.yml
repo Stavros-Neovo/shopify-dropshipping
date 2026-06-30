@@ -1,0 +1,73 @@
+name: Icecat MPN-Bildsuche (Brand + Modellnummer)
+
+# Findet für Produkte OHNE verifiziertes Bild ein identitätsbestätigtes Icecat-Bild
+# über Marke + Modellnummer (Fallback, wenn der GTIN-Lookup nichts hat). Schreibt
+# icecat_mpn_images.json — die nächste Matrixify-Generierung schaltet die Produkte
+# (mit dem Identitäts-Gate) automatisch aktiv. eBay/supplier_map bleiben unberührt.
+
+on:
+  schedule:
+    - cron: "15 4 * * *"   # 04:15 UTC, nach image_audit (03:30) + enrich (01:00)
+  workflow_dispatch:
+
+concurrency:
+  group: icecat-mpn-search
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Abhängigkeiten
+        run: pip install requests pyyaml
+
+      - name: BAB-Preisliste frisch holen
+        run: |
+          python - <<'PY'
+          import requests, re, yaml
+          cfg = yaml.safe_load(open("config_shop2.yaml"))
+          url = cfg["csv"]["url"]
+          r = requests.get(url, timeout=60, allow_redirects=True)
+          if "text/html" in r.headers.get("Content-Type", ""):
+              m = re.search(r'url=([^\s"\']+\.csv[^\s"\']*)', r.text)
+              r = requests.get(m.group(1), timeout=120, allow_redirects=True)
+          r.encoding = "utf-8-sig"
+          open("bab_preisliste.csv", "w", encoding="utf-8").write(r.text)
+          print("BAB CSV gespeichert:", len(r.text), "Zeichen")
+          PY
+
+      - name: MPN-Suche + Apply
+        env:
+          ICECAT_USER:  neovogen
+          ICECAT_TOKEN: a923fe60-04bd-4f83-ae2e-a1e1a8427c98
+          # Full-Icecat (z.B. CPUs, die mit dem Open-Token 403 geben) freischalten:
+          # echten Icecat app_key als Secret hinterlegen und hier setzen —
+          # ICECAT_APP_KEY: ${{ secrets.ICECAT_APP_KEY }}
+        run: |
+          python icecat_mpn_search.py --only-missing
+          python icecat_mpn_search.py --apply
+
+      - name: icecat_mpn_images.json committen
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # bab_preisliste.csv NICHT committen (nur lokaler Fetch fürs Skript)
+          git checkout -- bab_preisliste.csv 2>/dev/null || true
+          git add icecat_mpn_images.json
+          if git diff --staged --quiet; then
+            echo "Keine Änderung an icecat_mpn_images.json"
+            exit 0
+          fi
+          git commit -m "chore: Icecat MPN-Bilder Update $(date -u '+%Y-%m-%d %H:%M') UTC [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --no-rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1
