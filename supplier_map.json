@@ -9085,28 +9085,6 @@
       "https://images.icecat.biz/img/gallery/87569819_0404401974.jpg"
     ]
   },
-  "SSDS0110": {
-    "ean": "8806094215021",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 178.5,
-    "vk": 355.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/02f22486b20431787a434cec5ed485373e56710b.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/02f22486b20431787a434cec5ed485373e56710b.jpg",
-      "https://images.icecat.biz/img/gallery/275d761b1644235147c7a8eeac80692b2b77ac2c.jpg",
-      "https://images.icecat.biz/img/gallery/63ea87f5e40ee6d7e5d08fc43e3fd9ede8411ab8.jpg",
-      "https://images.icecat.biz/img/gallery/fef333e853cfb4aef0143a94291bb59c.jpg",
-      "https://images.icecat.biz/img/gallery/59b323cf75817c10a7ac121619644596e344c73d.jpg",
-      "https://images.icecat.biz/img/gallery/d70e282021bef7f036147874e3e3d924e4f9b131.jpg",
-      "https://images.icecat.biz/img/gallery/026e432e979e98a2e7e42fa4ebafb687d6fe6ead.jpg",
-      "https://images.icecat.biz/img/gallery/14c648259344a5463be0f78ed49f095cf0cf275e.jpg",
-      "https://images.icecat.biz/img/gallery/00a0cb2917ab94582f5ac2213f9cc71a80fa71bf.jpg"
-    ]
-  },
   "SSDS0111": {
     "ean": "8806094215038",
     "supplier": "BAB",
@@ -9171,27 +9149,6 @@
       "https://images.icecat.biz/img/gallery/32f01707e4f948e54fd14158d39bc02b87b08f2c.jpg",
       "https://images.icecat.biz/img/gallery/73a4e62404e98d135b654d6b6f3aea1df5157821.jpg",
       "https://images.icecat.biz/img/gallery/7a9c91592ec666718432296404e1aee297aceda4.jpg"
-    ]
-  },
-  "SSDS0122": {
-    "ean": "8806095575650",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 243.9,
-    "vk": 489.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e5ee8561948b973e7f74cdca30041658539774d5.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e5ee8561948b973e7f74cdca30041658539774d5.jpg",
-      "https://images.icecat.biz/img/gallery/425445eabd09af0144c47e0aa38644eb2340537c.jpg",
-      "https://images.icecat.biz/img/gallery/874707f2106e304c4e46d9d24c850c39aaef4e9b.jpg",
-      "https://images.icecat.biz/img/gallery/4208dfccbbb71999254091a3356a242918bbc926.jpg",
-      "https://images.icecat.biz/img/gallery/1be6470a4ed24f92debf51a66ebaea8d832b1e2d.jpg",
-      "https://images.icecat.biz/img/gallery/4ccbfa662724f4d0b607c339d98e938eaccc33be.jpg",
-      "https://images.icecat.biz/img/gallery/2c924625348e6a36e7138d27c940ef4cd6b8f3e6.jpg",
-      "https://images.icecat.biz/img/gallery/6d184ac500ef5ae85c9fc1d95acf97da8692eb26.jpg"
     ]
   },
   "SSDS0123": {
@@ -9269,7 +9226,7 @@
     "ean": "0718037893228",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 225.5,
+    "ek": 219.69,
     "vk": 432.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
