@@ -128,12 +128,31 @@ def load_candidates(only_missing: bool) -> list[dict]:
     return out
 
 
+IMAGES_FILE = Path("icecat_mpn_images.json")  # Apply-Ziel: {sku: image_url} (nur Shopify, eBay unberührt)
+
+
+def apply_review():
+    """Übernimmt die identitätsbestätigten Review-Treffer in icecat_mpn_images.json.
+    Diese Datei liest build_matrixify_csv.py als Shopify-Bildquelle (supplier_map/eBay
+    bleibt unangetastet). Bilder sind alle icecat.biz (rechtssicher) + MPN-verifiziert."""
+    if not REVIEW_FILE.exists():
+        print("Keine Review-Datei — erst Suche laufen lassen.", file=sys.stderr); return
+    hits = json.loads(REVIEW_FILE.read_text(encoding="utf-8"))
+    out = {h["sku"]: h["image"] for h in hits if "icecat.biz" in h.get("image", "")}
+    IMAGES_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"✅ {len(out)} bestätigte Bilder → {IMAGES_FILE}", file=sys.stderr)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="nur N Produkte (Test)")
     ap.add_argument("--only-missing", action="store_true", help="nur Produkte ohne verifiziertes Bild")
     ap.add_argument("--check-size", action="store_true", help="Bildgröße per Download prüfen (langsam)")
+    ap.add_argument("--apply", action="store_true", help="Review → icecat_mpn_images.json (kein Suchlauf)")
     args = ap.parse_args()
+
+    if args.apply:
+        apply_review(); return
 
     cands = load_candidates(args.only_missing)
     if args.limit:

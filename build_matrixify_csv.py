@@ -304,19 +304,31 @@ def _mpn_tokens(text: str) -> set:
 
 
 def image_identity_ok(bab_title: str, enrichment: Optional[dict], sku: str) -> bool:
-    """True nur wenn das Icecat-Bild beweisbar zum BAB-Artikel gehört:
-    gemeinsame Modellnummer in BAB- und Icecat-Titel. Sonst → kein Bild → draft."""
+    """True wenn das (per GTIN gematchte) Icecat-Bild dem BAB-Artikel vertraut werden darf.
+
+    Haupt-Risiko für Falschbilder = REFURBISHED: deren EAN ist ein Refurbisher-Code,
+    den Icecat auf ein anderes Produkt mappt → immer ausschließen.
+    Für Neuware ist das Bild per GTIN gematcht (image_audit holt es über die exakte EAN)
+    und damit korrekt; als Sanity-Check muss die Marke ODER die Modellnummer zwischen
+    BAB- und Icecat-Titel übereinstimmen (fängt grobe Brand-Mismatches ab). Icecat-Titel
+    lassen die Teilenummer oft weg, darum reicht der Marken-Match — ein striktes
+    MPN-im-Titel-Muss würde ~85% korrekter Bilder fälschlich verwerfen."""
     if _REFURB_SKU.match(sku or "") or _REFURB_KW.search(bab_title or ""):
         return False
     if not enrichment:
-        return False
+        return True                        # Neuware + GTIN-Bild, kein Enrichment zum Abgleich
+    bab = (bab_title or "").lower()
+    brand = (enrichment.get("brand") or "").lower().split()
+    if brand and brand[0] in bab:          # Marke stimmt überein
+        return True
     return bool(_mpn_tokens(bab_title) & _mpn_tokens(enrichment.get("title_full") or ""))
 
 
 def build_rows(product: dict, pr, cfg: dict,
                enrichment: Optional[dict] = None,
                max_images: int = 5,
-               verified_images: Optional[list[str]] = None) -> list[dict]:
+               verified_images: Optional[list[str]] = None,
+               mpn_image: Optional[str] = None) -> list[dict]:
     """
     Wandelt ein Produkt in eine oder mehrere Matrixify-CSV-Zeilen.
 
@@ -331,8 +343,12 @@ def build_rows(product: dict, pr, cfg: dict,
     # 200×200 ipcstore-Bild, das eBay ablehnt. Ohne verifiziertes Bild → draft.
     # ZUSÄTZLICH: Identitäts-Gate - Bild nur, wenn Modellnummer in BAB- UND
     # Icecat-Titel übereinstimmt (sonst Falschbild-Retoure). Sonst → draft.
-    if image_identity_ok(product.get("title", ""), enrichment, product.get("sku", "")):
-        all_images: list[str] = list(verified_images or [])[:max_images]
+    # mpn_image kommt aus der Icecat-Brand+MPN-Suche und ist bereits per
+    # BrandPartCode==MPN verifiziert → Gate bereits bestanden, direkt nutzen.
+    if mpn_image:
+        all_images: list[str] = [mpn_image]
+    elif image_identity_ok(product.get("title", ""), enrichment, product.get("sku", "")):
+        all_images = list(verified_images or [])[:max_images]
     else:
         all_images = []
     first_image = all_images[0] if all_images else ""
@@ -524,6 +540,16 @@ def main():
     verified_count = sum(1 for v in smap.values() if v.get("image_verified"))
     log.info(f"supplier_map.json: {verified_count} SKUs mit auflösungsgeprüftem Bild")
 
+    # Icecat-MPN-Bilder (Brand+Modellnummer-Suche, bereits per BrandPartCode==MPN
+    # verifiziert, icecat.biz/rechtssicher). NUR Shopify-Bildquelle — supplier_map
+    # und damit eBay bleiben unangetastet.
+    mpn_images_path = Path("icecat_mpn_images.json")
+    mpn_images: Dict[str, str] = (
+        json.loads(mpn_images_path.read_text(encoding="utf-8")) if mpn_images_path.exists() else {}
+    )
+    if mpn_images:
+        log.info(f"Icecat-MPN-Bilder (zusätzliche Shopify-Quelle): {len(mpn_images)} SKUs")
+
     # Preisüberschreibungen laden
     price_overrides = load_price_overrides(PRICE_OVERRIDES_FILE)
     if price_overrides:
@@ -585,7 +611,8 @@ def main():
                 )
 
             rows = build_rows(product, pr, cfg, enrichment=enrichment,
-                              verified_images=verified_images)
+                              verified_images=verified_images,
+                              mpn_image=mpn_images.get(sku))
             for row in rows:
                 writer.writerow(row)
             stats["image_rows"] += len(rows) - 1

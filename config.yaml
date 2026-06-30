@@ -63,8 +63,11 @@ pricing:
 filters:
   # Maximales Gewicht in kg (alles darüber wird nicht importiert)
   max_weight_kg: 50.0
-  # Minimaler Lagerbestand: erst ab dieser Anzahl wird das Produkt aktiv geschaltet
-  min_stock: 1
+  # Minimaler Lagerbestand: 0 = Out-of-Stock-Artikel bleiben online sichtbar
+  # (aktiv, Menge 0, Policy "deny" = nicht bestellbar → Theme zeigt "Bald wieder
+  # verfügbar"). So weiß der Kunde, dass wir das Produkt führen. Nur Produkte MIT
+  # bestätigtem Bild gehen aktiv; ohne Bild bleiben sie draft (Falschbild-Schutz).
+  min_stock: 0
   # Maximaler EK (Schutz gegen Cash-Bindung bei hochpreisigen Drop-Ship-Risiken)
   max_purchase_price_eur: 500.0
   # Optional: nur diese Kategorien importieren (leer = alle)
