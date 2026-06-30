@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-29T22:11:59.551337+00:00",
+  "generated_at": "2026-06-30T00:09:29.588670+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 56,
   "catalog": {
     "total_skus": 960,
     "images_verified": 413,
@@ -9,107 +9,45 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-29T21:47:58.383733+00:00",
-      "checked": 600,
-      "lowered": 3,
-      "raised": 7,
-      "set_to_floor": 80,
+      "timestamp": "2026-06-29T23:29:14.537684+00:00",
+      "checked": 56,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 3,
       "skipped_floor": 0,
-      "skipped_few": 31,
-      "skipped_image": 42,
-      "unchanged": 437,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 5,
+      "unchanged": 44,
+      "errors": 4,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 243.99,
-        "new": 233.99,
-        "diff": -10.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 229.99,
-        "new": 220.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 612.99,
-        "new": 589.95,
-        "diff": -23.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 553.99,
-        "new": 535.95,
-        "diff": -18.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 530.99,
-        "new": 513.95,
-        "diff": -17.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 89.99,
-        "new": 85.99,
+        "sku": "SUPY0038",
+        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
+        "old": 209.99,
+        "new": 205.99,
         "diff": -4.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 627.99,
-        "new": 604.95,
-        "diff": -23.04,
+        "sku": "SUPY0059",
+        "title": "Yealink WH67 - Headset WH67 Mono UC",
+        "old": 251.99,
+        "new": 244.99,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1002",
-        "title": "T1A Dell Latitude 5430 (14\")",
-        "old": 510.99,
-        "new": 511.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 354.99,
-        "new": 345.99,
-        "diff": -9.0,
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 47.99,
+        "new": 44.99,
+        "diff": -3.0,
         "action": "lowered"
-      },
-      {
-        "sku": "REFT1005",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-        "old": 549.99,
-        "new": 550.95,
-        "diff": 0.96,
-        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-28",
-        "lowered": 4,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-28",
         "lowered": 18,
@@ -187,6 +125,12 @@ window.DASHBOARD_DATA = {
         "lowered": 3,
         "raised": 7,
         "floor": 0
+      },
+      {
+        "date": "2026-06-29",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
       }
     ]
   },
@@ -213,12 +157,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 115.17
     },
     "chart_7d": [
-      {
-        "date": "23.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "24.06",
         "revenue": 0,
@@ -254,15 +192,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "31.05",
+        "date": "30.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "01.06",
         "revenue": 0,
@@ -436,15 +374,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "01.04",
+        "date": "30.06",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "02.04",
         "revenue": 0,
@@ -978,6 +916,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "30.06",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1323,20 +1267,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "08-14779-12258",
-        "date": "2026-06-15",
-        "deadline": "2026-06-29",
-        "days_left": 0,
-        "items": [
-          "Ubiquiti  UniFi Protect G6 - Netzwerk-Üb"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "18-14766-10957",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Makita Bohrhammer - schnurlos - 3 Modi"
         ],
@@ -1346,7 +1280,7 @@ window.DASHBOARD_DATA = {
         "order_id": "05-14786-31141",
         "date": "2026-06-16",
         "deadline": "2026-06-30",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Petkit Schaumstofffilter für Wireless Pu"
         ],
@@ -1356,7 +1290,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 3,
+        "days_left": 2,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
