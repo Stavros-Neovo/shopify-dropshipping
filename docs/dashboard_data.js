@@ -1,115 +1,93 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-30T18:00:53.900798+00:00",
+  "generated_at": "2026-06-30T20:58:22.849699+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 79,
   "catalog": {
-    "total_skus": 950,
+    "total_skus": 948,
     "images_verified": 409,
-    "images_missing": 541
+    "images_missing": 539
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-30T17:18:48.995647+00:00",
-      "checked": 600,
-      "lowered": 3,
-      "raised": 7,
-      "set_to_floor": 72,
+      "timestamp": "2026-06-30T19:12:53.779885+00:00",
+      "checked": 79,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 8,
       "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 33,
-      "unchanged": 454,
-      "errors": 1,
+      "skipped_few": 0,
+      "skipped_image": 12,
+      "unchanged": 55,
+      "errors": 4,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 243.99,
-        "new": 233.99,
-        "diff": -10.0,
+        "sku": "SUPV0047",
+        "title": "Verbatim GNC-140 GaN Charg. 140W 3xUSB-C PD, ",
+        "old": 73.99,
+        "new": 67.99,
+        "diff": -6.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 229.99,
-        "new": 220.99,
-        "diff": -9.0,
+        "sku": "SUPV0053",
+        "title": "Verbatim Gan Charger 65W 2xUSB-C PD,1xUSB-A, ",
+        "old": 49.99,
+        "new": 46.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 612.99,
-        "new": 589.95,
-        "diff": -23.04,
+        "sku": "SUPV0064",
+        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
+        "old": 59.99,
+        "new": 56.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 553.99,
-        "new": 535.95,
-        "diff": -18.04,
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 293.99,
+        "new": 279.99,
+        "diff": -14.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 530.99,
-        "new": 513.95,
-        "diff": -17.04,
+        "sku": "SUPY0010",
+        "title": "Yealink IP Telefon SIP-T54W V2",
+        "old": 178.99,
+        "new": 164.99,
+        "diff": -14.0,
         "action": "lowered"
       },
       {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 89.99,
-        "new": 85.99,
+        "sku": "SUPY0038",
+        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
+        "old": 209.99,
+        "new": 205.99,
         "diff": -4.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 627.99,
-        "new": 604.95,
-        "diff": -23.04,
+        "sku": "SUPY0059",
+        "title": "Yealink WH67 - Headset WH67 Mono UC",
+        "old": 251.99,
+        "new": 244.99,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1002",
-        "title": "T1A Dell Latitude 5430 (14\")",
-        "old": 510.99,
-        "new": 511.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 354.99,
-        "new": 345.99,
-        "diff": -9.0,
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 47.99,
+        "new": 44.99,
+        "diff": -3.0,
         "action": "lowered"
-      },
-      {
-        "sku": "REFT1005",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-        "old": 549.99,
-        "new": 550.95,
-        "diff": 0.96,
-        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-28",
-        "lowered": 6,
-        "raised": 8,
-        "floor": 0
-      },
       {
         "date": "2026-06-28",
         "lowered": 2,
@@ -186,6 +164,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-30",
         "lowered": 3,
         "raised": 7,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-30",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
