@@ -6623,7 +6623,7 @@
     "ean": "5032037279130",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 175.01,
+    "ek": 165.01,
     "vk": 362.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -9237,7 +9237,7 @@
     "ean": "0017817859585",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 284.2,
+    "ek": 279.13,
     "vk": 552.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9253,7 +9253,7 @@
     "ean": "0017817859561",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 284.2,
+    "ek": 279.13,
     "vk": 556.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9368,20 +9368,6 @@
       "https://images.icecat.biz/img/gallery/92439622_7710979999.jpg",
       "https://images.icecat.biz/img/gallery/92439622_6484765338.jpg"
     ]
-  },
-  "SUPL2030": {
-    "ean": "0195892130499",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 159.36,
-    "vk": 307.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/3c974e0f85675d44fdbe900307ea5cd0ae540cc2.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/3c974e0f85675d44fdbe900307ea5cd0ae540cc2.jpg"
-    ],
-    "image_verified": true
   },
   "SUPM3006": {
     "ean": "7109806196986",
@@ -11053,7 +11039,7 @@
   "SUPB1062": {
     "ean": "0017817859516",
     "supplier": "BAB",
-    "ek": 284.2,
+    "ek": 279.13,
     "vk": 552.99,
     "title": "Bose QuietComfort Ultra 2.Gen Wüstengold",
     "listed_at": "2026-06-14T20:49:22",
