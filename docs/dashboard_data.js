@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-30T00:09:29.588670+00:00",
+  "generated_at": "2026-06-30T05:08:18.774159+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 56,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 960,
     "images_verified": 413,
@@ -9,51 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-29T23:29:14.537684+00:00",
-      "checked": 56,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 3,
+      "timestamp": "2026-06-30T04:38:06.104800+00:00",
+      "checked": 600,
+      "lowered": 6,
+      "raised": 4,
+      "set_to_floor": 67,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 5,
-      "unchanged": 44,
-      "errors": 4,
+      "skipped_few": 20,
+      "skipped_image": 17,
+      "unchanged": 486,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 209.99,
-        "new": 205.99,
-        "diff": -4.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 451.99,
+        "new": 428.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 251.99,
-        "new": 244.99,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 223.99,
+        "new": 215.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 215.99,
+        "new": 208.99,
         "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 47.99,
-        "new": 44.99,
-        "diff": -3.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 442.99,
+        "new": 395.99,
+        "diff": -47.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 606.99,
+        "new": 551.95,
+        "diff": -55.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 270.99,
+        "new": 243.99,
+        "diff": -27.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 216.99,
+        "new": 197.99,
+        "diff": -19.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 361.99,
+        "new": 323.99,
+        "diff": -38.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDXV0002",
+        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
+        "old": 94.99,
+        "new": 89.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDXV0003",
+        "title": "Verbatim Store n Go 2,5 2TB USB 3.0 schwarz 5",
+        "old": 124.99,
+        "new": 116.99,
+        "diff": -8.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-28",
-        "lowered": 18,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-28",
         "lowered": 0,
@@ -130,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-29",
         "lowered": 0,
         "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-30",
+        "lowered": 6,
+        "raised": 4,
         "floor": 0
       }
     ]
