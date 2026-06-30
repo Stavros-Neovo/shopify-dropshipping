@@ -23,6 +23,7 @@ import csv
 import json
 import logging
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -281,6 +282,37 @@ def should_keep(product: dict, filters_cfg: dict) -> tuple[bool, str]:
     return True, ""
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# Bild-Identitäts-Gate: ein Icecat-Bild wird NUR verwendet, wenn beweisbar ist,
+# dass es zum BAB-Artikel gehört — d.h. BAB-Titel und Icecat-Titel teilen eine
+# echte Modellnummer (MPN). Verhindert Falschbild-Retouren (Stand: 5/11 Retouren
+# wegen falscher Bilder). Refurbished ausgeschlossen: deren EAN ist ein
+# Refurbisher-Code, den Icecat auf ein anderes Produkt mappt.
+_REFURB_SKU = re.compile(r"^(REF|REL|RER|RET|REU)", re.I)
+_REFURB_KW  = re.compile(r"refurb|tecxl|upcycle|reteq|\bt1a\b|grade\s+[a-c]\b", re.I)
+
+
+def _mpn_tokens(text: str) -> set:
+    """Distinktive Modellnummern aus einem Titel: alphanumerisch, ≥6 Zeichen,
+    mit MINDESTENS einem Buchstaben UND einer Ziffer (z.B. st8000vn004,
+    cm8071504821112, 7800x3d). Reine Zahlen/Kapazitäten (16gb, 3200) zählen nicht."""
+    out = set()
+    for t in re.findall(r"[a-z0-9]{4,}", (text or "").lower()):
+        if len(t) >= 6 and any(c.isalpha() for c in t) and any(c.isdigit() for c in t):
+            out.add(t)
+    return out
+
+
+def image_identity_ok(bab_title: str, enrichment: Optional[dict], sku: str) -> bool:
+    """True nur wenn das Icecat-Bild beweisbar zum BAB-Artikel gehört:
+    gemeinsame Modellnummer in BAB- und Icecat-Titel. Sonst → kein Bild → draft."""
+    if _REFURB_SKU.match(sku or "") or _REFURB_KW.search(bab_title or ""):
+        return False
+    if not enrichment:
+        return False
+    return bool(_mpn_tokens(bab_title) & _mpn_tokens(enrichment.get("title_full") or ""))
+
+
 def build_rows(product: dict, pr, cfg: dict,
                enrichment: Optional[dict] = None,
                max_images: int = 5,
@@ -297,7 +329,12 @@ def build_rows(product: dict, pr, cfg: dict,
     # Bilder: NUR auflösungsgeprüfte aus supplier_map.json (≥500×500), exakt wie
     # eBay (sync.py). KEIN Enrichment-Fallback - das wäre das ungeprüfte, oft
     # 200×200 ipcstore-Bild, das eBay ablehnt. Ohne verifiziertes Bild → draft.
-    all_images: list[str] = list(verified_images or [])[:max_images]
+    # ZUSÄTZLICH: Identitäts-Gate - Bild nur, wenn Modellnummer in BAB- UND
+    # Icecat-Titel übereinstimmt (sonst Falschbild-Retoure). Sonst → draft.
+    if image_identity_ok(product.get("title", ""), enrichment, product.get("sku", "")):
+        all_images: list[str] = list(verified_images or [])[:max_images]
+    else:
+        all_images = []
     first_image = all_images[0] if all_images else ""
 
     title = (enrichment.get("title_full") if enrichment else "") or \
