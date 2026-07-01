@@ -4185,26 +4185,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HHWK2092": {
-    "ean": "4066529027870",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.2,
-    "vk": 160.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "HHWK2093": {
-    "ean": "4066529027887",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 97.44,
-    "vk": 191.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "NETT0147": {
     "ean": "4897098687765",
     "supplier": "BAB",
@@ -4732,17 +4712,6 @@
     "vk": 179.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2016": {
-    "ean": "850070419314",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 91.35,
-    "vk": 179.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Chipolo LOOP 4 Pack – Rechargeable tracking tag (Charcoal, Chalk, Navy, Coral)",
     "image_verified": false
   },
   "SUPH0051": {
@@ -6239,21 +6208,6 @@
     ],
     "image_too_small": true
   },
-  "SUPL0605": {
-    "ean": "5099206123069",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 149.21,
-    "vk": 292.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/137886.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/137886.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPL2002": {
     "ean": "0195348192095",
     "supplier": "BAB",
@@ -6492,16 +6446,6 @@
       "https://images.icecat.biz/img/gallery/b6df1f114550fdfb60266a948ecc55af4a260b14.jpg",
       "https://images.icecat.biz/img/gallery/36557098861de63506865423fec0b3b731763798.jpg"
     ]
-  },
-  "CPUA0067": {
-    "ean": "0730143312745",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 262.51,
-    "vk": 507.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "CPUA0135": {
     "ean": "0730143315579",
