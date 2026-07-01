@@ -1,115 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-01T12:40:38.977311+00:00",
+  "generated_at": "2026-07-01T15:46:03.821038+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 88,
   "catalog": {
-    "total_skus": 943,
-    "images_verified": 409,
-    "images_missing": 534
+    "total_skus": 940,
+    "images_verified": 408,
+    "images_missing": 532
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-01T10:50:47.154233+00:00",
-      "checked": 600,
-      "lowered": 6,
-      "raised": 11,
-      "set_to_floor": 64,
+      "timestamp": "2026-07-01T13:42:26.737646+00:00",
+      "checked": 88,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 14,
       "skipped_floor": 0,
-      "skipped_few": 29,
-      "skipped_image": 33,
-      "unchanged": 457,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 12,
+      "unchanged": 57,
+      "errors": 5,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 244.99,
-        "new": 234.99,
-        "diff": -10.0,
+        "sku": "SUPV0032",
+        "title": "Verbatim USB-C Pro Multiport Hub 13 Port CMH-",
+        "old": 98.99,
+        "new": 94.99,
+        "diff": -4.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 230.99,
-        "new": 221.99,
-        "diff": -9.0,
+        "sku": "SUPV0034",
+        "title": "Verbatim PMT-14 Portable Touchscreen Monitor",
+        "old": 210.99,
+        "new": 190.99,
+        "diff": -20.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 616.99,
-        "new": 593.95,
-        "diff": -23.04,
+        "sku": "SUPV0035",
+        "title": "Verbatim PMT-17 Portable Touchscreen Monitor",
+        "old": 414.99,
+        "new": 367.99,
+        "diff": -47.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 557.99,
-        "new": 538.95,
-        "diff": -19.04,
+        "sku": "SUPV0036",
+        "title": "Verbatim PMT-15 Portable Touchscreen Monitor",
+        "old": 242.99,
+        "new": 218.99,
+        "diff": -24.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 533.99,
-        "new": 516.95,
-        "diff": -17.04,
+        "sku": "SUPV0038",
+        "title": "Verbatim PMT-15 4K Portable Touchscreen Monit",
+        "old": 404.99,
+        "new": 358.99,
+        "diff": -46.0,
         "action": "lowered"
       },
       {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 90.99,
-        "new": 87.99,
+        "sku": "SUPV0039",
+        "title": "Verbatim GaN III Univers. Travel Adapt. Welt-",
+        "old": 55.99,
+        "new": 52.99,
         "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 636.99,
-        "new": 604.95,
-        "diff": -32.04,
+        "sku": "SUPV0047",
+        "title": "Verbatim GNC-140 GaN Charg. 140W 3xUSB-C PD, ",
+        "old": 74.99,
+        "new": 67.99,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1002",
-        "title": "T1A Dell Latitude 5430 (14\")",
-        "old": 517.99,
-        "new": 518.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 359.99,
-        "new": 350.99,
-        "diff": -9.0,
+        "sku": "SUPV0053",
+        "title": "Verbatim Gan Charger 65W 2xUSB-C PD,1xUSB-A, ",
+        "old": 50.99,
+        "new": 47.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1005",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-        "old": 556.99,
-        "new": 557.95,
-        "diff": 0.96,
-        "action": "raised"
+        "sku": "SUPV0064",
+        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
+        "old": 60.99,
+        "new": 56.99,
+        "diff": -4.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 297.99,
+        "new": 283.99,
+        "diff": -14.0,
+        "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-29",
-        "lowered": 6,
-        "raised": 4,
-        "floor": 0
-      },
       {
         "date": "2026-06-29",
         "lowered": 3,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-01",
         "lowered": 6,
         "raised": 11,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-01",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
