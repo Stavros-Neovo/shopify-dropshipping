@@ -1,115 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-01T18:01:37.982269+00:00",
+  "generated_at": "2026-07-01T20:48:53.514798+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 939,
+    "total_skus": 938,
     "images_verified": 408,
-    "images_missing": 531
+    "images_missing": 530
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-01T16:41:26.516116+00:00",
+      "timestamp": "2026-07-01T19:14:15.164105+00:00",
       "checked": 600,
-      "lowered": 7,
-      "raised": 3,
-      "set_to_floor": 67,
+      "lowered": 0,
+      "raised": 20,
+      "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 20,
-      "skipped_image": 16,
-      "unchanged": 487,
+      "skipped_few": 175,
+      "skipped_image": 33,
+      "unchanged": 372,
       "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 454.99,
-        "new": 431.99,
-        "diff": -23.0,
-        "action": "lowered"
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 616.99,
+        "new": 617.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 226.99,
-        "new": 218.99,
-        "diff": -8.0,
-        "action": "lowered"
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 557.99,
+        "new": 558.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 218.99,
-        "new": 211.99,
-        "diff": -7.0,
-        "action": "lowered"
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 533.99,
+        "new": 534.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 448.99,
-        "new": 397.99,
-        "diff": -51.0,
-        "action": "lowered"
+        "sku": "REFT1002",
+        "title": "T1A Dell Latitude 5430 (14\")",
+        "old": 517.99,
+        "new": 518.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 613.99,
-        "new": 554.95,
-        "diff": -59.04,
-        "action": "lowered"
+        "sku": "REFT1005",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
+        "old": 556.99,
+        "new": 557.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 273.99,
-        "new": 244.99,
-        "diff": -29.0,
-        "action": "lowered"
+        "sku": "REFT1007",
+        "title": "T1A Lenovo ThinkPad X1 Carbon Gen 8 (14\")",
+        "old": 612.99,
+        "new": 613.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "HDIS0279",
-        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
-        "old": 1350.95,
-        "new": 1206.95,
-        "diff": -144.0,
-        "action": "lowered"
+        "sku": "REFT1011",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 6 (14\")",
+        "old": 708.99,
+        "new": 709.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 225.99,
-        "new": 203.99,
-        "diff": -22.0,
-        "action": "lowered"
+        "sku": "SHG0033",
+        "title": "Govee - LED Strip Lights Matter ready 5 Meter",
+        "old": 45.99,
+        "new": 47.99,
+        "diff": 2.0,
+        "action": "raised"
       },
       {
-        "sku": "HDIS0282",
-        "title": "Seagate IronWolf ST6000VN006/ 6TB",
-        "old": 365.99,
-        "new": 324.99,
-        "diff": -41.0,
-        "action": "lowered"
+        "sku": "SHG0091",
+        "title": "Govee - String Lights 2S - 20M",
+        "old": 90.99,
+        "new": 93.99,
+        "diff": 3.0,
+        "action": "raised"
       },
       {
-        "sku": "HDXV0002",
-        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silber 53",
-        "old": 94.99,
-        "new": 90.99,
-        "diff": -4.0,
-        "action": "lowered"
+        "sku": "SHP0012",
+        "title": "Philips Hue Bloom gen4 EU/UK black",
+        "old": 89.99,
+        "new": 92.99,
+        "diff": 3.0,
+        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-29",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-30",
         "lowered": 6,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-01",
         "lowered": 7,
         "raised": 3,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-01",
+        "lowered": 0,
+        "raised": 20,
         "floor": 0
       }
     ]
