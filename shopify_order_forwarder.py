@@ -175,11 +175,19 @@ def main():
     load_dotenv()
     cfg = yaml.safe_load(open(args.config, encoding="utf-8"))
 
-    store = os.environ.get("SHOPIFY_STORE", "").strip()
-    token = os.environ.get("SHOPIFY_ADMIN_TOKEN", "").strip()
+    store_raw = os.environ.get("SHOPIFY_STORE", "")
+    token_raw = os.environ.get("SHOPIFY_ADMIN_TOKEN", "")
+    store = store_raw.strip()
+    token = token_raw.strip()
     if not (store and token):
         log.error("SHOPIFY_STORE / SHOPIFY_ADMIN_TOKEN fehlen — abbruch")
         sys.exit(1)
+
+    # Sichere Diagnose (zeigt NICHT den Token selbst)
+    log.info(f"DIAG Store: endet auf '.myshopify.com'={store.endswith('.myshopify.com')}, "
+             f"enthält 'https'={'http' in store.lower()}, Leerzeichen-getrimmt={store!=store_raw}")
+    log.info(f"DIAG Token: Länge={len(token)}, Präfix='{token.split('_')[0]+'_' if '_' in token else 'KEIN_'}', "
+             f"Leerzeichen-getrimmt={token!=token_raw}")
 
     processed = load_processed(PROCESSED_FILE)
     try:
