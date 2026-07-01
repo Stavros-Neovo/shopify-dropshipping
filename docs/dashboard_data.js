@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-01T05:25:32.972379+00:00",
+  "generated_at": "2026-07-01T09:57:24.071267+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 87,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 948,
     "images_verified": 409,
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-01T01:35:09.924457+00:00",
-      "checked": 87,
-      "lowered": 0,
-      "raised": 2,
-      "set_to_floor": 12,
+      "timestamp": "2026-07-01T06:47:51.312720+00:00",
+      "checked": 600,
+      "lowered": 6,
+      "raised": 9,
+      "set_to_floor": 67,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 12,
-      "unchanged": 57,
-      "errors": 4,
+      "skipped_few": 19,
+      "skipped_image": 16,
+      "unchanged": 482,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0032",
-        "title": "Verbatim USB-C Pro Multiport Hub 13 Port CMH-",
-        "old": 97.99,
-        "new": 94.99,
-        "diff": -3.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 454.99,
+        "new": 431.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0034",
-        "title": "Verbatim PMT-14 Portable Touchscreen Monitor",
-        "old": 207.99,
-        "new": 190.99,
-        "diff": -17.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0035",
-        "title": "Verbatim PMT-17 Portable Touchscreen Monitor",
-        "old": 408.99,
-        "new": 367.99,
-        "diff": -41.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "SUPV0036",
-        "title": "Verbatim PMT-15 Portable Touchscreen Monitor",
-        "old": 239.99,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 226.99,
         "new": 218.99,
-        "diff": -21.0,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0038",
-        "title": "Verbatim PMT-15 4K Portable Touchscreen Monit",
-        "old": 399.99,
-        "new": 358.99,
-        "diff": -41.0,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 218.99,
+        "new": 211.99,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0039",
-        "title": "Verbatim GaN III Univers. Travel Adapt. Welt-",
-        "old": 54.99,
-        "new": 52.99,
-        "diff": -2.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 448.99,
+        "new": 397.99,
+        "diff": -51.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0047",
-        "title": "Verbatim GNC-140 GaN Charg. 140W 3xUSB-C PD, ",
-        "old": 73.99,
-        "new": 67.99,
-        "diff": -6.0,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 614.99,
+        "new": 554.95,
+        "diff": -60.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0053",
-        "title": "Verbatim Gan Charger 65W 2xUSB-C PD,1xUSB-A, ",
-        "old": 49.99,
-        "new": 47.99,
-        "diff": -2.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 273.99,
+        "new": 244.99,
+        "diff": -29.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPV0056",
-        "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x ",
-        "old": 17.99,
-        "new": 18.99,
-        "diff": 1.0,
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1331.95,
+        "new": 1339.95,
+        "diff": 8.0,
         "action": "raised"
       },
       {
-        "sku": "SUPV0064",
-        "title": "Verbatim 5er-Pack Verbatim BD-R Blu-Ray 100GB",
-        "old": 59.99,
-        "new": 56.99,
-        "diff": -3.0,
+        "sku": "HDIS0280",
+        "title": "Seagate Exos M ST28000NM003K / 28 TB",
+        "old": 1254.95,
+        "new": 1262.95,
+        "diff": 8.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 225.99,
+        "new": 203.99,
+        "diff": -22.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 366.99,
+        "new": 324.99,
+        "diff": -42.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-29",
-        "lowered": 3,
-        "raised": 7,
-        "floor": 0
-      },
       {
         "date": "2026-06-29",
         "lowered": 0,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-01",
         "lowered": 0,
         "raised": 2,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-01",
+        "lowered": 6,
+        "raised": 9,
         "floor": 0
       }
     ]
