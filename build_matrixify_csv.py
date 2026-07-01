@@ -91,6 +91,8 @@ DEFAULT_GOOGLE_CATEGORY = "Electronics"
 
 def get_google_category(product: dict) -> str:
     """Gibt die passende Google Produktkategorie für ein Produkt zurück."""
+    if product.get("google_category"):      # Kosatec liefert Google-Kategorie direkt
+        return product["google_category"]
     cat = (product.get("category") or "").strip().upper()
     return GOOGLE_CATEGORY_MAP.get(cat, DEFAULT_GOOGLE_CATEGORY)
 
@@ -147,6 +149,8 @@ def ebay_category_name(product: dict) -> str:
     """Liefert den deutschen eBay-Kategorie-Namen für ein Produkt — exakt die
     eBay-Logik (Titel-Keywords zuerst, sonst BAB-ItemMainGroup-Map). Wird als
     Shopify-'Type' genutzt, damit Shopify dieselbe Kategorisierung wie eBay hat."""
+    if product.get("type_override"):        # Kosatec liefert Kategorie direkt
+        return product["type_override"]
     global _EBAY_CAT_NAMES, _EBAY_SKU_CAT
     if _EBAY_CAT_NAMES is None:
         try:
@@ -579,6 +583,8 @@ def main():
                         help="State-Datei für Diff-Erkennung (verschwundene SKUs)")
     parser.add_argument("--enrichment", default="enrichment_index.csv",
                         help="Kleiner Enrichment-Index mit Bildern + Beschreibungen")
+    parser.add_argument("--include-kosatec", action="store_true",
+                        help="Zweiten Lieferanten Kosatec mit reinnehmen (dedupliziert gegen BAB)")
     args = parser.parse_args()
 
     cfg = yaml.safe_load(open(args.config, encoding="utf-8"))
@@ -640,6 +646,7 @@ def main():
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     seen_skus: set[str] = set()
+    seen_eans: set[str] = set()       # für Kosatec-Dedup (EAN-basiert)
     new_state: Dict[str, dict] = {}
 
     with open(out_path, "w", newline="", encoding="utf-8") as f:
@@ -666,6 +673,8 @@ def main():
                 continue
 
             ean = (product.get("ean") or "").strip()
+            if ean:
+                seen_eans.add(ean.lstrip("0"))
             enrichment = enrichment_idx.get(ean) if ean else None
             if enrichment:
                 stats["enriched"] += 1
@@ -706,6 +715,43 @@ def main():
             if stats["kept"] % 100 == 0:
                 log.info(f"… {stats['kept']} Produkte verarbeitet  "
                          f"({stats['enriched']} mit Bildern, {stats['without_image']} ohne)")
+
+        # ----- Kosatec als zweiter Lieferant (dedupliziert gegen BAB per EAN) -----
+        if args.include_kosatec:
+            from kosatec_feed import load_kosatec_products
+            kos_n = 0
+            for product in load_kosatec_products(seen_eans, max_ek=300.0):
+                e = (product.get("ean") or "").strip().lstrip("0")
+                if e and e in seen_eans:          # Sicherheits-Dedup
+                    continue
+                sku = product["sku"]
+                try:
+                    pr = calculate_vk(product["purchase_price"], cfg["pricing"])
+                except Exception as ex:
+                    log.error(f"Kosatec Pricing-Fehler {sku}: {ex}")
+                    stats["errors"] += 1
+                    continue
+                # Kosatec-Bild via mpn_image → bypasst das Icecat-Gate (Kosatecs eigenes
+                # Produktfoto, korrekt by design). Enrichment = Kosatec-Beschreibung.
+                rows = build_rows(product, pr, cfg,
+                                  enrichment=product.get("kosatec_enrichment"),
+                                  mpn_image=(product.get("kosatec_image") or None),
+                                  hygiene=False,
+                                  mpn_code=product.get("mpn_code", ""))
+                for row in rows:
+                    writer.writerow(row)
+                stats["image_rows"] += len(rows) - 1
+                seen_skus.add(sku)
+                if e:
+                    seen_eans.add(e)
+                new_state[sku] = {
+                    "handle": rows[0]["Handle"], "title": rows[0]["Title"],
+                    "vk": rows[0]["Variant Price"],
+                    "last_seen": datetime.now().isoformat(timespec="seconds"),
+                }
+                stats["kept"] += 1
+                kos_n += 1
+            log.info(f"Kosatec: {kos_n} Produkte hinzugefügt (EK≤300, konkurrenzfähig, netto-neu)")
 
         # ----- verschwundene SKUs auf 'draft' setzen -----
         gone_skus = set(state.keys()) - seen_skus
