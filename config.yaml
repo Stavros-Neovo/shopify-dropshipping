@@ -36,6 +36,12 @@ pricing:
   # Mehrwertsteuer (Deutschland Standard: 19 %)
   vat_rate: 0.19
 
+  # Zahlungsgebühr Shopify Payments (Basic, DE, EU-Karten): ~1,9 % + 0,25 €.
+  # Wird in den VK eingerechnet, damit nach Abzug die Zielmarge bleibt.
+  # Exakten Satz in Einstellungen → Zahlungen prüfen und ggf. anpassen.
+  payment_fee_pct: 0.019
+  payment_fee_fixed_eur: 0.25
+
   # Marge flach 8% — Volumen-Strategie, maximal preiskompetitiv (28.06.2026)
   # ek_max = obere Grenze (exklusiv), markup = Faktor (1.0 = +100%)
   tiers:

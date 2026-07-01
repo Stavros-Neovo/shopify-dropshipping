@@ -381,6 +381,9 @@ def hygiene_pricing_cfg(pricing_cfg: dict) -> dict:
         "min_absolute_margin_eur": ship + profit,
         "shipping_buffer": [{"ek_max": 9999999.0, "buffer_eur": ship}],
         "rounding_strategy": pricing_cfg.get("rounding_strategy", "psychological_99"),
+        # Zahlungsgebühr auch in der Hygiene-Formel (sonst frisst sie den 1,50€-Gewinn)
+        "payment_fee_pct": pricing_cfg.get("payment_fee_pct", 0.0),
+        "payment_fee_fixed_eur": pricing_cfg.get("payment_fee_fixed_eur", 0.0),
     }
 
 

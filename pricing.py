@@ -173,18 +173,31 @@ def calculate_vk(ek_net: float, pricing_cfg: Dict[str, Any]) -> PricingResult:
     vat = float(pricing_cfg["vat_rate"])
     vk_gross = vk_net * (1 + vat)
 
+    # 5b. Zahlungsgebühr (Shopify Payments) herausrechnen, damit nach Abzug der
+    # Gebühr die Zielmarge übrig bleibt: VK/(1−%) + Fixgebühr. So bleibt der Preis
+    # so günstig wie möglich, deckt aber die Gebühr (sonst verstecktes Minus,
+    # v.a. bei den dünnen Hygiene-/Volumen-Preisen).
+    pf_pct = float(pricing_cfg.get("payment_fee_pct", 0.0))
+    pf_fixed = float(pricing_cfg.get("payment_fee_fixed_eur", 0.0))
+    if pf_pct or pf_fixed:
+        vk_gross = (vk_gross + pf_fixed) / (1 - pf_pct)
+
     # 6. Psychologische Rundung
     rounding = pricing_cfg.get("rounding_strategy", "psychological_99")
     vk_gross = _round_psychological(vk_gross, rounding)
 
-    # Korrigiere falls Rundung Mindestmarge unterschreitet
-    while (vk_gross / (1 + vat)) - ek_net < min_margin:
-        # Eine Stufe höher runden (nächste ,99)
+    def _net_margin(vkg: float) -> float:
+        """Marge nach Zahlungsgebühr UND MwSt (echter erwarteter Gewinn)."""
+        net_after_fee = vkg - (pf_pct * vkg + pf_fixed)
+        return (net_after_fee / (1 + vat)) - ek_net
+
+    # Korrigiere falls Rundung Mindestmarge (nach Gebühr) unterschreitet
+    while _net_margin(vk_gross) < min_margin:
         vk_gross = _round_psychological(vk_gross + 1.0, rounding)
         if vk_gross > 9999:  # Sicherheits-Stop
             break
 
-    margin_eur = (vk_gross / (1 + vat)) - ek_net
+    margin_eur = _net_margin(vk_gross)
     margin_pct = (margin_eur / ek_net) * 100
 
     return PricingResult(
