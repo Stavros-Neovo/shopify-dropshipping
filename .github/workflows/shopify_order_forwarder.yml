@@ -33,9 +33,11 @@ jobs:
 
       - name: Bestellungen weiterleiten
         env:
-          SHOPIFY_STORE:       ${{ secrets.SHOPIFY_STORE }}
-          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
-          SMTP_HOST:           smtp.gmail.com
+          SHOPIFY_STORE:         ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_ADMIN_TOKEN:   ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+          SHOPIFY_CLIENT_ID:     ${{ secrets.SHOPIFY_CLIENT_ID }}
+          SHOPIFY_CLIENT_SECRET: ${{ secrets.SHOPIFY_CLIENT_SECRET }}
+          SMTP_HOST:             smtp.gmail.com
           SMTP_PORT:           587
           SMTP_USER:           ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD:       ${{ secrets.SMTP_PASSWORD }}

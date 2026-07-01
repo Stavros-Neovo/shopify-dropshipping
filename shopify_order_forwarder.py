@@ -38,6 +38,36 @@ API_VERSION = "2026-01"
 PROCESSED_FILE = "processed_orders_shopify.json"
 
 
+def get_access_token(store: str) -> str:
+    """Liefert ein Admin-API-Token.
+
+    1. Bevorzugt SHOPIFY_ADMIN_TOKEN, falls es ein echtes Admin-Token ist (shpat_/shpca_).
+    2. Sonst Client-Credentials-Grant (Dev-Dashboard-App): tauscht CLIENT_ID + CLIENT_SECRET
+       gegen ein frisches shpat_-Token (24h gültig, wird bei jedem Lauf neu geholt)."""
+    static = os.environ.get("SHOPIFY_ADMIN_TOKEN", "").strip()
+    if static.startswith(("shpat_", "shpca_", "shppa_")):
+        return static
+
+    cid = os.environ.get("SHOPIFY_CLIENT_ID", "").strip()
+    secret = os.environ.get("SHOPIFY_CLIENT_SECRET", "").strip()
+    if not (cid and secret):
+        raise RuntimeError(
+            "Kein gültiges Token: SHOPIFY_ADMIN_TOKEN ist kein shpat_-Token und "
+            "SHOPIFY_CLIENT_ID/SHOPIFY_CLIENT_SECRET fehlen (Client-Credentials-Grant)."
+        )
+    r = requests.post(
+        f"https://{store}/admin/oauth/access_token",
+        data={"grant_type": "client_credentials", "client_id": cid, "client_secret": secret},
+        timeout=30,
+    )
+    r.raise_for_status()
+    tok = r.json().get("access_token", "")
+    if not tok:
+        raise RuntimeError(f"Client-Credentials-Grant lieferte kein Token: {r.text[:200]}")
+    log.info(f"Frisches Admin-Token via Client-Credentials geholt (Präfix {tok.split('_')[0]}_)")
+    return tok
+
+
 # ---------------------------------------------------------------------------
 # Shopify: neue bezahlte, unversandte Bestellungen holen
 # ---------------------------------------------------------------------------
@@ -175,19 +205,15 @@ def main():
     load_dotenv()
     cfg = yaml.safe_load(open(args.config, encoding="utf-8"))
 
-    store_raw = os.environ.get("SHOPIFY_STORE", "")
-    token_raw = os.environ.get("SHOPIFY_ADMIN_TOKEN", "")
-    store = store_raw.strip()
-    token = token_raw.strip()
-    if not (store and token):
-        log.error("SHOPIFY_STORE / SHOPIFY_ADMIN_TOKEN fehlen — abbruch")
+    store = os.environ.get("SHOPIFY_STORE", "").strip()
+    if not store:
+        log.error("SHOPIFY_STORE fehlt — abbruch")
         sys.exit(1)
-
-    # Sichere Diagnose (zeigt NICHT den Token selbst)
-    log.info(f"DIAG Store: endet auf '.myshopify.com'={store.endswith('.myshopify.com')}, "
-             f"enthält 'https'={'http' in store.lower()}, Leerzeichen-getrimmt={store!=store_raw}")
-    log.info(f"DIAG Token: Länge={len(token)}, Präfix='{token.split('_')[0]+'_' if '_' in token else 'KEIN_'}', "
-             f"Leerzeichen-getrimmt={token!=token_raw}")
+    try:
+        token = get_access_token(store)
+    except Exception as e:
+        log.error(f"Token-Beschaffung fehlgeschlagen: {e}")
+        sys.exit(1)
 
     processed = load_processed(PROCESSED_FILE)
     try:
