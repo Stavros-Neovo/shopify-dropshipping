@@ -30,7 +30,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate Matrixify CSV
-        run: python build_matrixify_csv.py
+        run: python build_matrixify_csv.py --include-kosatec
 
       - name: Commit and push CSV
         if: always()
