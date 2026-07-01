@@ -324,11 +324,49 @@ def image_identity_ok(bab_title: str, enrichment: Optional[dict], sku: str) -> b
     return bool(_mpn_tokens(bab_title) & _mpn_tokens(enrichment.get("title_full") or ""))
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# Hygiene-Preislogik (§312g BGB, versiegelt) — aggressive Volumen-Formel wie eBay:
+# kein %-Markup, nur Versand + fester Mindestgewinn, keine Retouren-Rücklage.
+# Erkennung identisch zu eBay: is_hygiene_category über die eBay-Kategorie der SKU.
+try:
+    from ebay_fees import is_hygiene_category
+except Exception:                       # ebay_fees nicht ladbar → keine Hygiene-Sonderpreise
+    def is_hygiene_category(_cat):
+        return False
+
+
+def load_sku_categories(path: str = "ebay_sku_category.json") -> Dict[str, str]:
+    p = Path(path)
+    if not p.exists():
+        return {}
+    return {k: str(v) for k, v in json.loads(p.read_text(encoding="utf-8")).items()}
+
+
+def is_hygiene_sku(sku: str, sku_cat: Dict[str, str]) -> bool:
+    cat = sku_cat.get(sku)
+    return bool(cat) and is_hygiene_category(cat)
+
+
+def hygiene_pricing_cfg(pricing_cfg: dict) -> dict:
+    """calculate_vk-taugliche Config für Hygiene: VK_netto = EK + Versand + Mindestgewinn."""
+    hyg = pricing_cfg.get("hygiene", {}) or {}
+    ship = float(hyg.get("shipping_buffer_eur", 5.0))
+    profit = float(hyg.get("min_profit_eur", 1.5))
+    return {
+        "vat_rate": pricing_cfg["vat_rate"],
+        "tiers": [{"ek_max": 9999999.0, "markup": float(hyg.get("markup", 0.0))}],
+        "min_absolute_margin_eur": ship + profit,
+        "shipping_buffer": [{"ek_max": 9999999.0, "buffer_eur": ship}],
+        "rounding_strategy": pricing_cfg.get("rounding_strategy", "psychological_99"),
+    }
+
+
 def build_rows(product: dict, pr, cfg: dict,
                enrichment: Optional[dict] = None,
                max_images: int = 5,
                verified_images: Optional[list[str]] = None,
-               mpn_image: Optional[str] = None) -> list[dict]:
+               mpn_image: Optional[str] = None,
+               hygiene: bool = False) -> list[dict]:
     """
     Wandelt ein Produkt in eine oder mehrere Matrixify-CSV-Zeilen.
 
@@ -372,6 +410,8 @@ def build_rows(product: dict, pr, cfg: dict,
     ]))
     if not first_image:
         tags.append("import-ohne-bild")
+    if hygiene:
+        tags.append("Hygiene")            # für Smart-Collection + Landing-Highlight
 
     google_cat = get_google_category(product)
 
@@ -550,6 +590,11 @@ def main():
     if mpn_images:
         log.info(f"Icecat-MPN-Bilder (zusätzliche Shopify-Quelle): {len(mpn_images)} SKUs")
 
+    # Hygiene: eBay-Kategorien pro SKU + aggressive Preis-Config (wie eBay)
+    sku_cat = load_sku_categories()
+    hyg_cfg = hygiene_pricing_cfg(cfg["pricing"])
+    log.info(f"Hygiene-Erkennung: {len(sku_cat)} SKU→eBay-Kategorie geladen")
+
     # Preisüberschreibungen laden
     price_overrides = load_price_overrides(PRICE_OVERRIDES_FILE)
     if price_overrides:
@@ -582,14 +627,16 @@ def main():
                 filter_reasons[reason] = filter_reasons.get(reason, 0) + 1
                 continue
 
+            sku = product["sku"]
+            # Hygiene-Artikel → aggressive Volumen-Formel (wie eBay), sonst Standard
+            hyg = is_hygiene_sku(sku, sku_cat)
             try:
-                pr = calculate_vk(product["purchase_price"], cfg["pricing"])
+                pr = calculate_vk(product["purchase_price"], hyg_cfg if hyg else cfg["pricing"])
             except Exception as e:
                 log.error(f"Pricing-Fehler für SKU {product.get('sku')}: {e}")
                 stats["errors"] += 1
                 continue
 
-            sku = product["sku"]
             ean = (product.get("ean") or "").strip()
             enrichment = enrichment_idx.get(ean) if ean else None
             if enrichment:
@@ -612,7 +659,8 @@ def main():
 
             rows = build_rows(product, pr, cfg, enrichment=enrichment,
                               verified_images=verified_images,
-                              mpn_image=mpn_images.get(sku))
+                              mpn_image=mpn_images.get(sku),
+                              hygiene=hyg)
             for row in rows:
                 writer.writerow(row)
             stats["image_rows"] += len(rows) - 1

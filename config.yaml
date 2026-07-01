@@ -57,6 +57,15 @@ pricing:
   # "none" → keine Rundung
   rounding_strategy: "psychological_99"
 
+  # Hygiene-Artikel (§312g BGB, versiegelt — nicht rückgabefähig): aggressive
+  # Volumen-Formel wie bei eBay. Kein %-Markup, nur Versand + fester Mindestgewinn,
+  # keine Retouren-Rücklage nötig (kein Widerrufsrecht nach Öffnen der Versiegelung).
+  # VK_netto = EK + shipping_buffer_eur + min_profit_eur  → ×1,19 → ,99
+  hygiene:
+    markup: 0.0
+    shipping_buffer_eur: 5.00
+    min_profit_eur: 1.50     # fester Mindestgewinn über dem Versand (wie eBay)
+
 # -----------------------------------------------------------------------------
 # FILTER (welche Produkte überhaupt importieren?)
 # -----------------------------------------------------------------------------
