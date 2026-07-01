@@ -1,140 +1,110 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-06-30T18:00:53.900798+00:00",
+  "generated_at": "2026-07-01T09:57:24.071267+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 950,
+    "total_skus": 948,
     "images_verified": 409,
-    "images_missing": 541
+    "images_missing": 539
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-06-30T17:18:48.995647+00:00",
+      "timestamp": "2026-07-01T06:47:51.312720+00:00",
       "checked": 600,
-      "lowered": 3,
-      "raised": 7,
-      "set_to_floor": 72,
+      "lowered": 6,
+      "raised": 9,
+      "set_to_floor": 67,
       "skipped_floor": 0,
-      "skipped_few": 30,
-      "skipped_image": 33,
-      "unchanged": 454,
+      "skipped_few": 19,
+      "skipped_image": 16,
+      "unchanged": 482,
       "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0056",
-        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
-        "old": 243.99,
-        "new": 233.99,
-        "diff": -10.0,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 454.99,
+        "new": 431.99,
+        "diff": -23.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 229.99,
-        "new": 220.99,
-        "diff": -9.0,
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 226.99,
+        "new": 218.99,
+        "diff": -8.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 612.99,
-        "new": 589.95,
-        "diff": -23.04,
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 218.99,
+        "new": 211.99,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 553.99,
-        "new": 535.95,
-        "diff": -18.04,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 448.99,
+        "new": 397.99,
+        "diff": -51.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 530.99,
-        "new": 513.95,
-        "diff": -17.04,
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 614.99,
+        "new": 554.95,
+        "diff": -60.04,
         "action": "lowered"
       },
       {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 89.99,
-        "new": 85.99,
-        "diff": -4.0,
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 273.99,
+        "new": 244.99,
+        "diff": -29.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT0004",
-        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
-        "old": 627.99,
-        "new": 604.95,
-        "diff": -23.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT1002",
-        "title": "T1A Dell Latitude 5430 (14\")",
-        "old": 510.99,
-        "new": 511.95,
-        "diff": 0.96,
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1331.95,
+        "new": 1339.95,
+        "diff": 8.0,
         "action": "raised"
       },
       {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 354.99,
-        "new": 345.99,
-        "diff": -9.0,
+        "sku": "HDIS0280",
+        "title": "Seagate Exos M ST28000NM003K / 28 TB",
+        "old": 1254.95,
+        "new": 1262.95,
+        "diff": 8.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 225.99,
+        "new": 203.99,
+        "diff": -22.0,
         "action": "lowered"
       },
       {
-        "sku": "REFT1005",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-        "old": 549.99,
-        "new": 550.95,
-        "diff": 0.96,
-        "action": "raised"
+        "sku": "HDIS0282",
+        "title": "Seagate IronWolf ST6000VN006/ 6TB",
+        "old": 366.99,
+        "new": 324.99,
+        "diff": -42.0,
+        "action": "lowered"
       }
     ],
     "chart_history": [
       {
-        "date": "2026-06-28",
-        "lowered": 6,
-        "raised": 8,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-28",
-        "lowered": 2,
-        "raised": 8,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-29",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-29",
-        "lowered": 4,
-        "raised": 0,
-        "floor": 0
-      },
-      {
-        "date": "2026-06-29",
-        "lowered": 3,
-        "raised": 7,
-        "floor": 0
-      },
-      {
         "date": "2026-06-29",
         "lowered": 0,
         "raised": 0,
@@ -186,6 +156,36 @@ window.DASHBOARD_DATA = {
         "date": "2026-06-30",
         "lowered": 3,
         "raised": 7,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-30",
+        "lowered": 0,
+        "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-30",
+        "lowered": 5,
+        "raised": 4,
+        "floor": 0
+      },
+      {
+        "date": "2026-06-30",
+        "lowered": 3,
+        "raised": 7,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-01",
+        "lowered": 0,
+        "raised": 2,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-01",
+        "lowered": 6,
+        "raised": 9,
         "floor": 0
       }
     ]
@@ -201,24 +201,18 @@ window.DASHBOARD_DATA = {
       "prev_week_sales": 0,
       "prev_week_revenue": 0.0,
       "prev_week_profit": 0.0,
-      "month_sales": 11,
-      "month_revenue": 973.8,
-      "month_profit": 90.62,
-      "month_ek": 491.1,
-      "month_ebay_fee": 151.02,
-      "month_return_reserve": 24.55,
+      "month_sales": 0,
+      "month_revenue": 0.0,
+      "month_profit": 0.0,
+      "month_ek": 0.0,
+      "month_ebay_fee": 0.0,
+      "month_return_reserve": 0.0,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
       "total_profit_30d": 90.62,
       "total_cash_profit_30d": 115.17
     },
     "chart_7d": [
-      {
-        "date": "24.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "25.06",
         "revenue": 0,
@@ -254,15 +248,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "01.06",
+        "date": "01.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "02.06",
         "revenue": 0,
@@ -436,15 +430,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "02.04",
+        "date": "01.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "03.04",
         "revenue": 0,
@@ -978,6 +972,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "01.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1323,30 +1323,10 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
-        "order_id": "18-14766-10957",
-        "date": "2026-06-16",
-        "deadline": "2026-06-30",
-        "days_left": 0,
-        "items": [
-          "Makita Bohrhammer - schnurlos - 3 Modi"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "05-14786-31141",
-        "date": "2026-06-16",
-        "deadline": "2026-06-30",
-        "days_left": 0,
-        "items": [
-          "Petkit Schaumstofffilter für Wireless Pu"
-        ],
-        "urgent": true
-      },
-      {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 2,
+        "days_left": 1,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
@@ -1355,10 +1335,10 @@ window.DASHBOARD_DATA = {
     ],
     "tracking_missing": [],
     "tax_reserves": {
-      "ust_month": 155.48,
-      "est_month": 27.19,
-      "gewst_month": 13.59,
-      "total_month": 196.26
+      "ust_month": 0.0,
+      "est_month": 0.0,
+      "gewst_month": 0.0,
+      "total_month": 0.0
     },
     "expected_payout": 822.78
   },
