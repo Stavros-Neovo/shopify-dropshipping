@@ -4708,22 +4708,6 @@
       "https://images.icecat.biz/img/gallery/f45f1863522732ab11f7d5b344899cb511dfceb0.jpg"
     ]
   },
-  "SUPH3013": {
-    "ean": "5704174522720",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 98.46,
-    "vk": 192.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "HONEYWELL Genesis XP 7680g - Barcode-Scanner",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/128842.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/128842.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPL0464": {
     "ean": "5099206103016",
     "supplier": "BAB",
