@@ -1,0 +1,61 @@
+name: Shopify Bestell-Weiterleitung (→ BAB)
+
+# Leitet neue bezahlte Shopify-Bestellungen per E-Mail an den Lieferanten weiter
+# (Ersatz für das Make.com-Szenario, das auf den falschen Store zeigte).
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # alle 15 Minuten
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Nur Test (Mail in outbox/, nicht senden)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: shopify-order-forwarder
+  cancel-in-progress: false
+
+jobs:
+  forward:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Abhängigkeiten
+        run: pip install requests pyyaml python-dotenv
+
+      - name: Bestellungen weiterleiten
+        env:
+          SHOPIFY_STORE:       ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+          SMTP_HOST:           smtp.gmail.com
+          SMTP_PORT:           587
+          SMTP_USER:           ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD:       ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          ARGS="--hours 2"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python shopify_order_forwarder.py $ARGS
+
+      - name: State committen (verarbeitete Bestellungen)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add processed_orders_shopify.json
+          if git diff --staged --quiet; then
+            echo "Keine neuen Bestellungen"
+            exit 0
+          fi
+          git commit -m "chore: Shopify-Bestellungen verarbeitet $(date -u '+%Y-%m-%d %H:%M') UTC [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --no-rebase origin main && git push && exit 0
+            sleep $((attempt * 3))
+          done
+          exit 1
