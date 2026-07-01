@@ -13472,21 +13472,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "USBS0071": {
-    "ean": "0619659184384",
-    "supplier": "BAB",
-    "ek": 10.9,
-    "vk": 28.99,
-    "title": "SanDisk Ultra - Flash-Speicherkarte - 32 GB - Class 10",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/131756.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/131756.jpg"
-    ],
-    "image_too_small": true
-  },
   "USBS0074": {
     "ean": "0619659172510",
     "supplier": "BAB",
