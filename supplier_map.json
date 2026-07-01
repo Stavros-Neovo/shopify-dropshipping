@@ -4509,21 +4509,6 @@
     "title": "ECOFLOW Bracket - Lightweight",
     "image_verified": false
   },
-  "PPSE0103": {
-    "ean": "4895251646956",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.74,
-    "vk": 165.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-smart-meter-gratis-1155815305.png?v=1744636040",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-smart-meter-gratis-1155815305.png?v=1744636040"
-    ],
-    "title": "ECOFLOW Smart Meter",
-    "image_verified": true
-  },
   "PVSL0002": {
     "ean": "4262431421731",
     "supplier": "BAB",
@@ -4685,22 +4670,6 @@
     "image_url": "https://media.ipcstore.net/img/l/142314.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/142314.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SUPB1065": {
-    "ean": "0017817852470",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 98.46,
-    "vk": 196.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Bose SoundLink Flex 2nd - Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21236474.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21236474.jpg"
     ],
     "image_too_small": true
   },
@@ -7082,21 +7051,6 @@
     "image_url": "https://media.ipcstore.net/img/l/349779.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/349779.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "HDIW0224": {
-    "ean": "0718037901275",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 346.05,
-    "vk": 659.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/349773.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/349773.jpg"
     ],
     "image_verified": false,
     "image_too_small": true
