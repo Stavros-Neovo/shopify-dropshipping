@@ -132,6 +132,10 @@ MATRIXIFY_HEADERS = [
     "Metafield: custom.ek_price [number_decimal]",  # zur Diagnose
     "Metafield: custom.margin_eur [number_decimal]",
     "Metafield: custom.last_sync [date_time]",
+    # Google Shopping (Merchant Center) — Namespace mm-google-shopping liest die Google-&-YouTube-App
+    "Metafield: mm-google-shopping.condition [single_line_text_field]",     # immer 'new'
+    "Metafield: mm-google-shopping.mpn [single_line_text_field]",           # Hersteller-Teilenr. (rettet Produkte ohne GTIN)
+    "Metafield: mm-google-shopping.custom_label_0 [single_line_text_field]", # Kampagnen-Segment (Hygiene / Kategorie)
 ]
 
 
@@ -347,6 +351,21 @@ def is_hygiene_sku(sku: str, sku_cat: Dict[str, str]) -> bool:
     return bool(cat) and is_hygiene_category(cat)
 
 
+def load_sku_mpn(path: str = "bab_preisliste.csv") -> Dict[str, str]:
+    """SKU → Hersteller-Teilenummer (ReferenceNumber) für Google-Shopping-MPN."""
+    p = Path(path)
+    out: Dict[str, str] = {}
+    if not p.exists():
+        return out
+    with p.open(encoding="utf-8-sig") as f:
+        for row in csv.DictReader(f, delimiter=";"):
+            sku = (row.get("ItemNo") or "").strip()
+            ref = (row.get("ReferenceNumber") or "").strip()
+            if sku and ref:
+                out[sku] = ref
+    return out
+
+
 def hygiene_pricing_cfg(pricing_cfg: dict) -> dict:
     """calculate_vk-taugliche Config für Hygiene: VK_netto = EK + Versand + Mindestgewinn."""
     hyg = pricing_cfg.get("hygiene", {}) or {}
@@ -366,7 +385,8 @@ def build_rows(product: dict, pr, cfg: dict,
                max_images: int = 5,
                verified_images: Optional[list[str]] = None,
                mpn_image: Optional[str] = None,
-               hygiene: bool = False) -> list[dict]:
+               hygiene: bool = False,
+               mpn_code: str = "") -> list[dict]:
     """
     Wandelt ein Produkt in eine oder mehrere Matrixify-CSV-Zeilen.
 
@@ -452,6 +472,11 @@ def build_rows(product: dict, pr, cfg: dict,
         "Metafield: custom.ek_price [number_decimal]": f"{pr.purchase_price_net:.2f}",
         "Metafield: custom.margin_eur [number_decimal]": f"{pr.margin_eur:.2f}",
         "Metafield: custom.last_sync [date_time]": now,
+        # Google Shopping
+        "Metafield: mm-google-shopping.condition [single_line_text_field]": "new",
+        "Metafield: mm-google-shopping.mpn [single_line_text_field]": mpn_code or "",
+        "Metafield: mm-google-shopping.custom_label_0 [single_line_text_field]":
+            "Hygiene" if hygiene else "Technik",
     })
 
     # Zusätzliche Bilder als eigene Zeilen (Matrixify-Konvention)
@@ -594,6 +619,9 @@ def main():
     sku_cat = load_sku_categories()
     hyg_cfg = hygiene_pricing_cfg(cfg["pricing"])
     log.info(f"Hygiene-Erkennung: {len(sku_cat)} SKU→eBay-Kategorie geladen")
+    sku_mpn = load_sku_mpn()   # SKU→ReferenceNumber für Google-Shopping-MPN
+    if sku_mpn:
+        log.info(f"Google-Shopping-MPN: {len(sku_mpn)} SKU→Teilenummer geladen")
 
     # Preisüberschreibungen laden
     price_overrides = load_price_overrides(PRICE_OVERRIDES_FILE)
@@ -660,7 +688,8 @@ def main():
             rows = build_rows(product, pr, cfg, enrichment=enrichment,
                               verified_images=verified_images,
                               mpn_image=mpn_images.get(sku),
-                              hygiene=hyg)
+                              hygiene=hyg,
+                              mpn_code=sku_mpn.get(sku, ""))
             for row in rows:
                 writer.writerow(row)
             stats["image_rows"] += len(rows) - 1
