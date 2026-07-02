@@ -268,6 +268,17 @@ def build_meta_description(body_html: str, fallback_title: str) -> str:
     return cut + "…"
 
 
+def _best_title(bab_title: str, ice_title: str) -> str:
+    """Wählt den BESCHREIBENDEN Titel. Der Icecat-title_full ist oft nur Marke+Modell
+    ("PETKIT PN103487"), während der BAB-Titel das Produkt benennt ("Petkit Haustier-
+    Rasierer PN103487"). Der beschreibende Titel ist praktisch immer länger → nimm den
+    längeren; bei Gleichstand den BAB-Titel (Lieferant beschreibt konkret)."""
+    bab = " ".join((bab_title or "").split())
+    ice = " ".join((ice_title or "").split())
+    best = bab if len(bab) >= len(ice) else ice
+    return best or bab or ice or "Unbenanntes Produkt"
+
+
 def seo_title(title: str, brand: str = "") -> str:
     """Meta-Title für Google: Marke vorne (= Suchbegriff), am Wortende auf ~65 Z.
     gekürzt. Google zeigt ~60 Z. an, indexiert aber den vollen String – Modellnummer
@@ -475,9 +486,8 @@ def build_rows(product: dict, pr, cfg: dict,
         all_images = []
     first_image = all_images[0] if all_images else ""
 
-    title = (enrichment.get("title_full") if enrichment else "") or \
-            product.get("title", "Unbenanntes Produkt")
-    title = title[:250]
+    title = _best_title(product.get("title", ""),
+                        enrichment.get("title_full") if enrichment else "")[:250]
 
     body_html = build_description_html(product.get("title", ""), enrichment)
 
@@ -533,11 +543,11 @@ def build_rows(product: dict, pr, cfg: dict,
         "Variant Weight Unit": "kg",
         "Variant Barcode": product.get("ean", "") or "",
         "Image Src": first_image,
-        # REPLACE ersetzt beim Import das alte Shopify-Bild durch das verifizierte
-        # (MERGE ließ alte 115px/Amazon-Bilder liegen). NUR wenn wir ein Bild haben —
-        # sonst leer lassen, um evtl. gute manuelle Bilder nicht zu löschen; bildlose
-        # Produkte gehen ohnehin auf draft (Status unten) und sind nicht sichtbar.
-        "Image Command": "REPLACE" if first_image else "",
+        # REPLACE ersetzt beim Import das alte Shopify-Bild durch das neue. NUR bei
+        # geprüften Quellen (kosatec/mpn, am Apply auf Erreichbarkeit+Auflösung getestet)
+        # — sonst würde REPLACE bei einer inzwischen TOTEN Legacy-/Icecat-URL das alte
+        # Bild löschen und kein neues laden (= Bild ganz weg). Legacy → MERGE (behält Bild).
+        "Image Command": "REPLACE" if (first_image and image_source in TRUSTED_IMG_SOURCES) else "",
         "Image Position": "1" if first_image else "",
         "Image Alt Text": title if first_image else "",
         "Metafield: custom.ek_price [number_decimal]": f"{pr.purchase_price_net:.2f}",

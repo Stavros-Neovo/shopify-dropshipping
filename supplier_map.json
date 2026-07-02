@@ -964,22 +964,12 @@
     "vk": 80.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_verified": false,
-    "image_url": "https://images.icecat.biz/img/gallery/106175397_1540950944.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21299799.jpg",
     "images": [
-      "https://images.icecat.biz/img/gallery/106175397_1540950944.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_6575214391.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_2942850450.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_0947402609.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_4415200858.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_1079967204.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_9517463562.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_8362796708.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_9327223817.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_8781666472.jpg",
-      "https://images.icecat.biz/img/gallery/106175397_4671995710.jpg"
+      "https://media.ipcstore.net/img/21299799.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1059": {
     "ean": "8887910061091",
@@ -1111,12 +1101,12 @@
     "vk": 59.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_verified": false,
-    "image_url": "https://images.icecat.biz/img/gallery/b97422122ae5e350330063db31409aa3e5a5a729.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21235175.jpg",
     "images": [
-      "https://images.icecat.biz/img/gallery/b97422122ae5e350330063db31409aa3e5a5a729.jpg"
+      "https://media.ipcstore.net/img/21235175.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HHWB5009": {
     "ean": "6970229250545",
@@ -3026,22 +3016,12 @@
     "vk": 110.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_url": "https://images.icecat.biz/img/gallery/ae5a0c976fc40c89f71267cb06e0da26b91f19bd.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21235461.jpg",
     "images": [
-      "https://images.icecat.biz/img/gallery/ae5a0c976fc40c89f71267cb06e0da26b91f19bd.jpg",
-      "https://images.icecat.biz/img/gallery/55ff5dcef2ea18984a382f4cde58cccb640b8e80.jpg",
-      "https://images.icecat.biz/img/gallery/460da7fc9e947e87ce46ada3348787d002e41ec1.jpg",
-      "https://images.icecat.biz/img/gallery/9e2d2d0c84fe03a9d7feedc7c4fdba4eaf95ace2.jpg",
-      "https://images.icecat.biz/img/gallery/3381321a3360c5c4e7de222a98b0286d5fed3c29.jpg",
-      "https://images.icecat.biz/img/gallery/f82e1ab61d5943ce91f8bb0a8cc707a5765573a3.jpg",
-      "https://images.icecat.biz/img/gallery/f6afce92e2626902d99c4edca3d239c3f51de0a1.jpg",
-      "https://images.icecat.biz/img/gallery/58ca2a6a1ae19b2c10e92a88b2f744524ac13c91.jpg",
-      "https://images.icecat.biz/img/gallery/21c247662cd87638fe9548d5d80afd8d902fdcde.jpg",
-      "https://images.icecat.biz/img/gallery/080657d9834545374817158a7437617ac909e03e.jpg",
-      "https://images.icecat.biz/img/gallery/ce3d80ca7ca46992a7a3ad44ac0a3816a70945c7.jpg"
+      "https://media.ipcstore.net/img/21235461.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT0192": {
     "ean": "4897098685105",
@@ -5140,12 +5120,12 @@
     "vk": 206.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_url": "https://images.icecat.biz/img/gallery/101334373_3801331118.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21250547.jpg",
     "images": [
-      "https://images.icecat.biz/img/gallery/101334373_3801331118.jpg"
+      "https://media.ipcstore.net/img/21250547.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HHWB5022": {
     "ean": "4211125100674",
