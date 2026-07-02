@@ -146,6 +146,7 @@ MATRIXIFY_HEADERS = [
     "Variant Weight Unit",         # kg
     "Variant Barcode",             # EAN
     "Image Src",                   # Bild-URL
+    "Image Command",               # REPLACE = alte Shopify-Bilder ersetzen/entfernen (MERGE tut das nicht!)
     "Image Position",              # 1 = Haupt-Bild
     "Image Alt Text",
     "Metafield: custom.ek_price [number_decimal]",  # zur Diagnose
@@ -532,6 +533,11 @@ def build_rows(product: dict, pr, cfg: dict,
         "Variant Weight Unit": "kg",
         "Variant Barcode": product.get("ean", "") or "",
         "Image Src": first_image,
+        # REPLACE ersetzt beim Import das alte Shopify-Bild durch das verifizierte
+        # (MERGE ließ alte 115px/Amazon-Bilder liegen). NUR wenn wir ein Bild haben —
+        # sonst leer lassen, um evtl. gute manuelle Bilder nicht zu löschen; bildlose
+        # Produkte gehen ohnehin auf draft (Status unten) und sind nicht sichtbar.
+        "Image Command": "REPLACE" if first_image else "",
         "Image Position": "1" if first_image else "",
         "Image Alt Text": title if first_image else "",
         "Metafield: custom.ek_price [number_decimal]": f"{pr.purchase_price_net:.2f}",
