@@ -13614,7 +13614,9 @@
       "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 94.4,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HDIS0289": {
     "ean": "8719706432337",
@@ -13625,7 +13627,9 @@
       "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 314.65,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "RAM5K0015": {
     "ean": "0740617326130",
@@ -13636,7 +13640,9 @@
       "https://images.icecat.biz/img/gallery/a7269fc172da5fe5669c5e41b1bee6f1.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 645.0,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "RAM5K0044": {
     "ean": "0740617328509",
@@ -13647,7 +13653,9 @@
       "https://images.icecat.biz/img/gallery/e2ee578b51f234933d534614f2f0acd4.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 750.0,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SSDS0115": {
     "ean": "8806094947205",
@@ -13658,7 +13666,9 @@
       "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 502.0,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0235": {
     "ean": "8806090270123",
@@ -13669,7 +13679,9 @@
       "https://images.icecat.biz/img/gallery/76980268_9231647426.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 8.42,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0266": {
     "ean": "8806095039893",
@@ -13680,7 +13692,9 @@
       "https://images.icecat.biz/img/gallery/05651522f7bea2969562069ede123d2c.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 11.77,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0268": {
     "ean": "8806095039763",
@@ -13691,7 +13705,9 @@
       "https://images.icecat.biz/img/gallery/7a9321a3fa070cd7d08368a1b5363e1c.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 45.17,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0287": {
     "ean": "8806092673885",
@@ -13702,6 +13718,8 @@
       "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 20.3,
+    "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
