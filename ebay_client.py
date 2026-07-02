@@ -1146,15 +1146,19 @@ class EbayClient:
         listing_id = ""
         if not has_image:
             log.info(f"eBay SKU {sku}: kein Bild vorhanden — Offer bleibt als Draft")
-        # NOTLAGE-SPERRE (2026-07-02, User-Regel): eBay NUR bestehende Live-Listings
-        # pflegen (Preis/Bestand via create_or_update_offer/set_inventory) und
-        # deaktivieren (withdraw) — NIEMALS automatisch neue Listings schalten.
-        # Das automatische Publish machte aus neu-bebilderten Draft-Offers stündlich
-        # neue Listings. Aktivieren erfolgt nur noch bewusst über publish_offers.py.
-        # Zum Reaktivieren: EBAY_AUTO_PUBLISH=true setzen.
+        # SPERRE (2026-07-02, User-Regel): eBay NUR bestehende Live-Listings pflegen +
+        # bei Wieder-Verfügbarkeit reaktivieren — aber NIE-live Draft-Offers NIEMALS
+        # automatisch publishen (das machte aus neu-bebilderten Drafts stündlich neue
+        # Listings). "war schon mal live" = eBay-Offer hat eine listingId oder status
+        # PUBLISHED. EBAY_AUTO_PUBLISH=true hebt die Sperre komplett auf.
         AUTO_PUBLISH = os.getenv("EBAY_AUTO_PUBLISH", "false").lower() == "true"
-        if int(product.get("stock", 0)) > 0 and offer_id and has_image and not AUTO_PUBLISH:
-            log.info(f"eBay SKU {sku}: Auto-Publish gesperrt (keine neuen Listings) → übersprungen")
+        was_live = False
+        if offer_id and not AUTO_PUBLISH:
+            _off = self.get_offer_for_sku(sku) or {}
+            was_live = bool((_off.get("listing") or {}).get("listingId")) or _off.get("status") == "PUBLISHED"
+        may_publish = AUTO_PUBLISH or was_live
+        if int(product.get("stock", 0)) > 0 and offer_id and has_image and not may_publish:
+            log.info(f"eBay SKU {sku}: nie-live Draft — Auto-Publish gesperrt (kein neues Listing)")
         elif int(product.get("stock", 0)) > 0 and offer_id and has_image:
             try:
                 listing_id = self.publish_offer(offer_id) or ""
