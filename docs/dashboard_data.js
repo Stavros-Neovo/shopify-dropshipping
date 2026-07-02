@@ -1,51 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-02T09:20:09.169503+00:00",
+  "generated_at": "2026-07-02T12:10:59.341240+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 88,
+  "active_listings": 600,
   "catalog": {
-    "total_skus": 937,
-    "images_verified": 408,
-    "images_missing": 529
+    "total_skus": 932,
+    "images_verified": 406,
+    "images_missing": 526
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-02T06:12:34.225439+00:00",
-      "checked": 88,
-      "lowered": 0,
-      "raised": 2,
-      "set_to_floor": 0,
+      "timestamp": "2026-07-02T09:38:38.473755+00:00",
+      "checked": 600,
+      "lowered": 10,
+      "raised": 3,
+      "set_to_floor": 69,
       "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 12,
-      "unchanged": 46,
-      "errors": 0,
+      "skipped_few": 24,
+      "skipped_image": 16,
+      "unchanged": 476,
+      "errors": 2,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 212.99,
-        "new": 218.99,
-        "diff": 6.0,
-        "action": "raised"
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 454.99,
+        "new": 431.99,
+        "diff": -23.0,
+        "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 254.99,
-        "new": 261.99,
-        "diff": 7.0,
-        "action": "raised"
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 226.99,
+        "new": 218.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 218.99,
+        "new": 211.99,
+        "diff": -7.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 449.99,
+        "new": 398.99,
+        "diff": -51.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 615.99,
+        "new": 555.95,
+        "diff": -60.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 274.99,
+        "new": 245.99,
+        "diff": -29.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1401.95,
+        "new": 1339.95,
+        "diff": -62.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0279",
+        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
+        "old": 1261.95,
+        "new": 1206.95,
+        "diff": -55.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0280",
+        "title": "Seagate Exos M ST28000NM003K / 28 TB",
+        "old": 1320.95,
+        "new": 1262.95,
+        "diff": -58.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 225.99,
+        "new": 203.99,
+        "diff": -22.0,
+        "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-30",
-        "lowered": 3,
-        "raised": 7,
-        "floor": 0
-      },
       {
         "date": "2026-06-30",
         "lowered": 0,
@@ -122,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-02",
         "lowered": 0,
         "raised": 2,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-02",
+        "lowered": 10,
+        "raised": 3,
         "floor": 0
       }
     ]
