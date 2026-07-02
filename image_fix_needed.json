@@ -383,5 +383,20 @@
     "ean": "0023942301936",
     "title": "VERBATIM CHARGE 'N' TRAVEL 100W UNIVERSAL TRAVEL ADAPTER WITH RETRACTABLE CABLE PURPLE",
     "detected_at": "2026-06-29T05:03:36.186230+00:00"
+  },
+  "HHWB0036": {
+    "ean": "8006540774724",
+    "title": "Braun Oral-B Junior Pro Frozen",
+    "detected_at": "2026-07-02T18:07:50.159949+00:00"
+  },
+  "HHWB0037": {
+    "ean": "8006540957196",
+    "title": "Braun Oral-B Junior Pro Grogu/Starwars",
+    "detected_at": "2026-07-02T18:07:52.731556+00:00"
+  },
+  "HHWB1048": {
+    "ean": "4210201445234",
+    "title": "Braun Oral-B iO Series 6 White",
+    "detected_at": "2026-07-02T18:07:59.997308+00:00"
   }
 }
