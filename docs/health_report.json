@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-07-02T15:22:42.788539+00:00",
+  "generated_at": "2026-07-02T17:47:05.017208+00:00",
   "overall": "warn",
   "checks": {
     "repricer_last_run": {
       "status": "ok",
-      "detail": "Letzter Run vor 2.8h | Zyklus 40 | 1200/1275",
+      "detail": "Letzter Run vor 2.2h | Zyklus 41 | 0/1266",
       "value": {
-        "age_hours": 2.8,
-        "cycle": 40,
-        "offset": 1200,
-        "total": 1275
+        "age_hours": 2.2,
+        "cycle": 41,
+        "offset": 0,
+        "total": 1266
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "repricer_errors": {
       "status": "ok",
@@ -20,7 +20,7 @@
         "errors": 0,
         "checked": 0
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "orders_processed": {
       "status": "ok",
@@ -28,7 +28,7 @@
       "value": {
         "count": 0
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "orders_pending": {
       "status": "ok",
@@ -36,7 +36,7 @@
       "value": {
         "count": 0
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "orders_flagged": {
       "status": "ok",
@@ -44,13 +44,13 @@
       "value": {
         "count": 0
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "sync_state": {
       "status": "warn",
       "detail": "state_shop2.json nicht auf Runner — Sync-Status via Workflow-Check",
       "value": null,
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "banned_skus_count": {
       "status": "ok",
@@ -58,7 +58,7 @@
       "value": {
         "count": 50
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "banned_in_supplier_map": {
       "status": "ok",
@@ -67,7 +67,7 @@
         "count": 0,
         "skus": []
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "supplier_map_bab": {
       "status": "warn",
@@ -76,7 +76,7 @@
         "bab_count": 925,
         "non_bab_count": 0
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "supplier_map_non_bab": {
       "status": "ok",
@@ -84,73 +84,73 @@
       "value": {
         "count": 0
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "workflow_hourly_sync": {
       "status": "ok",
-      "detail": "Hourly Sync: läuft gerade vor 0.4h",
+      "detail": "Hourly Sync: success vor 0.8h",
       "value": {
-        "conclusion": null,
-        "age_hours": 0.4,
-        "run_id": 28600031172
+        "conclusion": "success",
+        "age_hours": 0.8,
+        "run_id": 28607581212
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "workflow_order_forwarder": {
       "status": "ok",
-      "detail": "Order Forwarder: success vor 0.4h",
-      "value": {
-        "conclusion": "success",
-        "age_hours": 0.4,
-        "run_id": 28599803049
-      },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
-    },
-    "workflow_reprice": {
-      "status": "ok",
-      "detail": "Repricer: success vor 3.0h",
-      "value": {
-        "conclusion": "success",
-        "age_hours": 3.0,
-        "run_id": 28589661405
-      },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
-    },
-    "workflow_smart_lister": {
-      "status": "ok",
-      "detail": "Smart Lister: success vor 9.6h",
-      "value": {
-        "conclusion": "success",
-        "age_hours": 9.6,
-        "run_id": 28568444203
-      },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
-    },
-    "workflow_tracking_updater": {
-      "status": "ok",
-      "detail": "Tracking Updater: success vor 0.9h",
-      "value": {
-        "conclusion": "success",
-        "age_hours": 0.9,
-        "run_id": 28597669009
-      },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
-    },
-    "workflow_hourly_matrixify_csv": {
-      "status": "ok",
-      "detail": "Matrixify CSV: success vor 1.0h",
+      "detail": "Order Forwarder: success vor 1.0h",
       "value": {
         "conclusion": "success",
         "age_hours": 1.0,
-        "run_id": 28597576495
+        "run_id": 28606811639
       },
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
+    },
+    "workflow_reprice": {
+      "status": "ok",
+      "detail": "Repricer: success vor 2.2h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 2.2,
+        "run_id": 28602313078
+      },
+      "ts": "2026-07-02T17:47:05.017208+00:00"
+    },
+    "workflow_smart_lister": {
+      "status": "ok",
+      "detail": "Smart Lister: success vor 1.7h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 1.7,
+        "run_id": 28604129513
+      },
+      "ts": "2026-07-02T17:47:05.017208+00:00"
+    },
+    "workflow_tracking_updater": {
+      "status": "ok",
+      "detail": "Tracking Updater: success vor 0.8h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.8,
+        "run_id": 28607526340
+      },
+      "ts": "2026-07-02T17:47:05.017208+00:00"
+    },
+    "workflow_hourly_matrixify_csv": {
+      "status": "ok",
+      "detail": "Matrixify CSV: success vor 0.8h",
+      "value": {
+        "conclusion": "success",
+        "age_hours": 0.8,
+        "run_id": 28607445715
+      },
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     },
     "smtp": {
       "status": "ok",
       "detail": "SMTP-Verbindung OK (smtp.gmail.com:587)",
       "value": null,
-      "ts": "2026-07-02T15:22:42.788539+00:00"
+      "ts": "2026-07-02T17:47:05.017208+00:00"
     }
   },
   "summary": {
