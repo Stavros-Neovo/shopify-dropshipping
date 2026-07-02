@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-02T00:12:48.613936+00:00",
+  "generated_at": "2026-07-02T05:01:30.005781+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-01T22:43:15.898811+00:00",
+      "timestamp": "2026-07-02T01:27:40.909901+00:00",
       "checked": 600,
       "lowered": 0,
-      "raised": 19,
-      "set_to_floor": 1,
+      "raised": 18,
+      "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 96,
-      "skipped_image": 16,
-      "unchanged": 467,
-      "errors": 1,
+      "skipped_few": 177,
+      "skipped_image": 33,
+      "unchanged": 372,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "HDIS0273",
-        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
-        "old": 1339.95,
-        "new": 1401.95,
-        "diff": 62.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 616.99,
+        "new": 617.95,
+        "diff": 0.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0279",
-        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
-        "old": 1206.95,
-        "new": 1261.95,
-        "diff": 55.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 557.99,
+        "new": 558.95,
+        "diff": 0.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0280",
-        "title": "Seagate Exos M ST28000NM003K / 28 TB",
-        "old": 1262.95,
-        "new": 1320.95,
-        "diff": 58.0,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 533.99,
+        "new": 534.95,
+        "diff": 0.96,
         "action": "raised"
       },
       {
-        "sku": "HDIS0295",
-        "title": "Seagate BarraCuda ST20000DM001 / 20TB / 3,5\"",
-        "old": 844.95,
-        "new": 883.95,
-        "diff": 39.0,
+        "sku": "REFT1002",
+        "title": "T1A Dell Latitude 5430 (14\")",
+        "old": 517.99,
+        "new": 518.95,
+        "diff": 0.96,
         "action": "raised"
       },
       {
-        "sku": "HDXV0006",
-        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silver Ge",
-        "old": 95.99,
-        "new": 90.99,
-        "diff": -5.0,
-        "action": "lowered"
+        "sku": "REFT1005",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
+        "old": 556.99,
+        "new": 557.95,
+        "diff": 0.96,
+        "action": "raised"
       },
       {
-        "sku": "HHWE1012",
-        "title": "ECOFLOW Shower Kit",
-        "old": 115.99,
-        "new": 118.99,
+        "sku": "REFT1007",
+        "title": "T1A Lenovo ThinkPad X1 Carbon Gen 8 (14\")",
+        "old": 612.99,
+        "new": 613.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "REFT1011",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 6 (14\")",
+        "old": 708.99,
+        "new": 709.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "SHG0033",
+        "title": "Govee - LED Strip Lights Matter ready 5 Meter",
+        "old": 45.99,
+        "new": 47.99,
+        "diff": 2.0,
+        "action": "raised"
+      },
+      {
+        "sku": "SHG0091",
+        "title": "Govee - String Lights 2S - 20M",
+        "old": 90.99,
+        "new": 93.99,
         "diff": 3.0,
         "action": "raised"
       },
       {
-        "sku": "NETT0085",
-        "title": "TP-LINK JetStream TL-SG3428XMP - Switch - man",
-        "old": 513.99,
-        "new": 514.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "NETT0227",
-        "title": "TP-LINK Omada EAP783 V1 - Accesspoint - Wi-Fi",
-        "old": 602.99,
-        "new": 603.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "NETT1014",
-        "title": "Teltonika RUTM50 - Wireless Router",
-        "old": 610.99,
-        "new": 611.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "NETT1074",
-        "title": "Teltonika RUTM56 - Wireless Router",
-        "old": 761.95,
-        "new": 796.95,
-        "diff": 35.0,
+        "sku": "SHP0012",
+        "title": "Philips Hue Bloom gen4 EU/UK black",
+        "old": 89.99,
+        "new": 92.99,
+        "diff": 3.0,
         "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-30",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-30",
         "lowered": 6,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-01",
         "lowered": 0,
         "raised": 19,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-02",
+        "lowered": 0,
+        "raised": 18,
         "floor": 0
       }
     ]
