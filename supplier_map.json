@@ -5183,16 +5183,6 @@
     ],
     "image_too_small": true
   },
-  "HHWG1079": {
-    "ean": "5056668002868",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 125.86,
-    "vk": 244.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HHWK2094": {
     "ean": "4066529027894",
     "supplier": "BAB",
@@ -7703,7 +7693,7 @@
     "ean": "6975069305523",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 584.64,
+    "ek": 532.88,
     "vk": 922.95,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
