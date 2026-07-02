@@ -1,0 +1,12 @@
+# Manuelle SEO-Überschreibungen — SKU: {title, description}
+# Der Sync generiert SEO deterministisch an der Quelle. Wer eine bessere SEO von Hand
+# will, trägt sie HIER ein (nicht im Shopify-Admin) — dieser Eintrag gewinnt immer und
+# wird bei jedem stündlichen Sync re-appliziert, kann also nicht überschrieben werden.
+#
+# title:       ≤ 65 Zeichen, wichtigstes Keyword vorne
+# description: ≤ 160 Zeichen, Nutzen + CTA
+#
+# Beispiel:
+# HDIS0250:
+#   title: "Seagate SkyHawk 4TB Überwachungs-Festplatte 3.5\" SATA"
+#   description: "Seagate SkyHawk 4TB HDD für Videoüberwachung, 24/7-Dauerbetrieb. Versandkostenfrei & sofort lieferbar bei Neovodeals."

@@ -8,12 +8,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Logitech Desktop MK330 Wireless Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/330330.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/330330.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/330330.jpg"
+      "https://media.ipcstore.net/img/330330.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBS0073": {
     "ean": "0619659163082",
@@ -127,12 +127,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Logitech Lift Vertical Ergonomic Mouse",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/128040.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/128040.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/128040.jpg"
+      "https://media.ipcstore.net/img/128040.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0591": {
     "ean": "5099206096547",
@@ -158,12 +158,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Logitech Signature MK650 Off-White",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/342862.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/342862.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/342862.jpg"
+      "https://media.ipcstore.net/img/342862.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SHG0017": {
     "ean": "6974316994299",
@@ -205,12 +205,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "ECOFLOW AC Cable - DE-Wieland - Charging cable",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/638513.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/638513.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/638513.jpg"
+      "https://media.ipcstore.net/img/638513.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1039": {
     "ean": "8886419379522",
@@ -236,12 +236,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Logitech Keyboard K400 Plus Touch Wireless Black - US Layout",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/653871.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/653871.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/653871.jpg"
+      "https://media.ipcstore.net/img/653871.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1054": {
     "ean": "8886419334576",
@@ -433,12 +433,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Logitech Desktop MK850 Performance - Tastatur-und-Maus-Set - US-Layout",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/101882.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/101882.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/101882.jpg"
+      "https://media.ipcstore.net/img/101882.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPY0003": {
     "ean": "6938818306202",
@@ -481,12 +481,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Ubiquiti PowerAmp - Netzwerkverstärker - 2 x",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/286321.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/286321.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/286321.jpg"
+      "https://media.ipcstore.net/img/286321.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PPSE0056": {
     "ean": "4895251604550",
@@ -538,12 +538,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "G.Skill TridentZ Neo Series - DDR4 - 16 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/115484.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/115484.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/115484.jpg"
+      "https://media.ipcstore.net/img/115484.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPJ0170": {
     "ean": "5706991031539",
@@ -589,12 +589,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Enabot ROLA PetPal Spiele Modul",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21303473.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21303473.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21303473.jpg"
+      "https://media.ipcstore.net/img/21303473.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPD1021": {
     "ean": "5999056126534",
@@ -767,12 +767,12 @@
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "title": "Logitech Desktop MK295 Silent Wireless Combo Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/116925.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/116925.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/116925.jpg"
+      "https://media.ipcstore.net/img/116925.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0458": {
     "ean": "5099206090828",
@@ -783,12 +783,12 @@
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "title": "Logitech Presenter Wireless R500s Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/125358.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/125358.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/125358.jpg"
+      "https://media.ipcstore.net/img/125358.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPN4011": {
     "ean": "5711157090107",
@@ -819,12 +819,12 @@
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "title": "Razer Kraken X Lite - Headset - black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/136420.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/136420.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/136420.jpg"
+      "https://media.ipcstore.net/img/136420.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPS0368": {
     "ean": "8806097735618",
@@ -936,12 +936,12 @@
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "title": "Logitech Ultimate Ears WONDERBOOM Play Active Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21241980.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21241980.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21241980.jpg"
+      "https://media.ipcstore.net/img/21241980.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0599": {
     "ean": "5099206127128",
@@ -1239,12 +1239,12 @@
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
     "title": "Teltonika DAP142 - Accesspoint",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21169244.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21169244.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21169244.jpg"
+      "https://media.ipcstore.net/img/21169244.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT1071": {
     "ean": "4779051840700",
@@ -1549,12 +1549,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Trinkbrunnen Eversweet Solo 2",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133115.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133115.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133115.jpg"
+      "https://media.ipcstore.net/img/21133115.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0014": {
     "ean": "6975069300863",
@@ -1565,12 +1565,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Breezy2 Haustier Transporttasche Cremeweiß",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297874.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21297874.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21297874.jpg"
+      "https://media.ipcstore.net/img/21297874.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0015": {
     "ean": "6973293808629",
@@ -1622,12 +1622,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Urine Monitor Cat Litter  - 4bags",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21329298.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21329298.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21329298.jpg"
+      "https://media.ipcstore.net/img/21329298.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0072": {
     "ean": "6973293806052",
@@ -1906,12 +1906,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill AEGIS - DDR4 - 8 GB - DIMM 288-PIN",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/103898.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/103898.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/103898.jpg"
+      "https://media.ipcstore.net/img/103898.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0020": {
     "ean": "4719692006844",
@@ -1933,12 +1933,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill Value Series DDR4 8 GB DIMM 288-PIN",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/108568.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/108568.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/108568.jpg"
+      "https://media.ipcstore.net/img/108568.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0033": {
     "ean": "4713294224378",
@@ -1949,12 +1949,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill AEGIS - DDR4 - 8 GB - PC3200",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/115479.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/115479.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/115479.jpg"
+      "https://media.ipcstore.net/img/115479.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "REFR0009": {
     "ean": "5713518290584",
@@ -2267,12 +2267,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Mouse MX Vertical Wireless Grey",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/104723.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/104723.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/104723.jpg"
+      "https://media.ipcstore.net/img/104723.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0187": {
     "ean": "5099206066823",
@@ -2283,12 +2283,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Desktop MK850 Performance Wireless Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/223009.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/223009.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/223009.jpg"
+      "https://media.ipcstore.net/img/223009.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0283": {
     "ean": "5099206053304",
@@ -2314,12 +2314,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Gaming Mouse G502 HERO Corded Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/110044.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/110044.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/110044.jpg"
+      "https://media.ipcstore.net/img/110044.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0301": {
     "ean": "5099206077461",
@@ -2345,12 +2345,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech HD Pro Webcam C920e",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/122152.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/122152.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/122152.jpg"
+      "https://media.ipcstore.net/img/122152.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0439": {
     "ean": "0097855153197",
@@ -2361,12 +2361,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Rally Mic Pod Mount",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/125975.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/125975.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/125975.jpg"
+      "https://media.ipcstore.net/img/125975.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0546": {
     "ean": "5099206112490",
@@ -2711,12 +2711,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill Trident Z5 6400 CL32 - DDR5 - 32 GB 2x16 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129936.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/129936.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/129936.jpg"
+      "https://media.ipcstore.net/img/129936.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPJ0168": {
     "ean": "5706991023213",
@@ -2870,12 +2870,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Beurer HC 100 Haartrockner Violett",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21132198.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21132198.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21132198.jpg"
+      "https://media.ipcstore.net/img/21132198.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HHWB5011": {
     "ean": "4211125608101",
@@ -2886,12 +2886,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Beurer TL 80 - Energielicht",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21132208.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21132208.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21132208.jpg"
+      "https://media.ipcstore.net/img/21132208.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HHWB5030": {
     "ean": "4211125375003",
@@ -2983,7 +2983,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "TP-LINK Festa F54 - Access Point",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://images.icecat.biz/img/gallery_mediums/f4e2de7f6ed2bc6cc1c1fe4d46310d66d25ac21e.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery_mediums/f4e2de7f6ed2bc6cc1c1fe4d46310d66d25ac21e.jpg"
+    ],
+    "image_source": "icecat_mpn"
   },
   "NETT0157": {
     "ean": "8885021370224",
@@ -3066,12 +3071,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Ubiquiti SFP+-Transceiver-Modul - UACC-CM-RJ45-MG",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129955.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/129955.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/129955.jpg"
+      "https://media.ipcstore.net/img/129955.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NOCO0002": {
     "ean": "1210000615015",
@@ -3082,12 +3087,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "NOCO GB20 | Boost 12V 500A Jump Starter | Boost Jump Starters",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21324045.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21324045.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21324045.jpg"
+      "https://media.ipcstore.net/img/21324045.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NOCO0010": {
     "ean": "1210000619266",
@@ -3124,12 +3129,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Trinkbrunnen Eversweet Max - UVC Pump",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133123.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133123.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133123.jpg"
+      "https://media.ipcstore.net/img/21133123.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0047": {
     "ean": "6975069307107",
@@ -3155,12 +3160,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Trinkbrunnen Eversweet Max 2 - 100 - UVC Pump",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133124.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133124.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133124.jpg"
+      "https://media.ipcstore.net/img/21133124.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0051": {
     "ean": "6973293802276",
@@ -3223,12 +3228,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "ECOFLOW Portable Power Station Grounding Adapter",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/644299.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/644299.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/644299.jpg"
+      "https://media.ipcstore.net/img/644299.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PPE0031": {
     "ean": "4897082665571",
@@ -3276,12 +3281,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "ECOFLOW RAPID 25K Build-in cable - Powerbank Green",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21329335.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21329335.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21329335.jpg"
+      "https://media.ipcstore.net/img/21329335.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PPE0226": {
     "ean": "4895251653855",
@@ -3307,12 +3312,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "ECOFLOW RAPID 25K no build-in cable - Powerbank Silver",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21329333.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21329333.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21329333.jpg"
+      "https://media.ipcstore.net/img/21329333.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PPE0228": {
     "ean": "4895251653831",
@@ -3396,12 +3401,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill AEGIS - DDR4 - 8 GB 2400 CL17",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287258.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287258.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287258.jpg"
+      "https://media.ipcstore.net/img/21287258.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4L0036": {
     "ean": "843367132768",
@@ -3412,7 +3417,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Lexar DDR4 8GB 288 PIN U-DIMM 3200Mhz, CL22, 1.2V- BLISTER Package",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21132389.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/21132389.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "REFT0018": {
     "ean": "4262504949742",
@@ -3581,12 +3591,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Amazon Echo Dot Max - Sphärisch - Weiß",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21317036.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21317036.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21317036.jpg"
+      "https://media.ipcstore.net/img/21317036.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPB1066": {
     "ean": "0017817768429",
@@ -3597,12 +3607,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Bose SoundLink Micro - Lautsprecher - tragbar",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21293663.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21293663.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21293663.jpg"
+      "https://media.ipcstore.net/img/21293663.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPC0009": {
     "ean": "8595610601959",
@@ -3690,12 +3700,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Presenter Spotlight Wireless Grey",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/887888.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/887888.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/887888.jpg"
+      "https://media.ipcstore.net/img/887888.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0266": {
     "ean": "5099206085855",
@@ -3706,12 +3716,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Keyboard ERGO K860 Wireless Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/114354.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/114354.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/114354.jpg"
+      "https://media.ipcstore.net/img/114354.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0446": {
     "ean": "5099206104914",
@@ -3722,12 +3732,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Brio 500 Webcam Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/130374.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/130374.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/130374.jpg"
+      "https://media.ipcstore.net/img/130374.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0501": {
     "ean": "5099206090347",
@@ -3738,12 +3748,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Zone Wired MS-Teams Headseat",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/117477.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/117477.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/117477.jpg"
+      "https://media.ipcstore.net/img/117477.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0574": {
     "ean": "5099206107427",
@@ -3754,12 +3764,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Slim Folio Keyboard black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/138846.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/138846.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/138846.jpg"
+      "https://media.ipcstore.net/img/138846.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0603": {
     "ean": "5099206106710",
@@ -3770,12 +3780,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Combo Touch Keyboard for iPad 10.9",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/130308.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/130308.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/130308.jpg"
+      "https://media.ipcstore.net/img/130308.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1011": {
     "ean": "8886419379874",
@@ -3916,7 +3926,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SanDisk microSDXC Extreme Pro 256GB",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/389041.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/389041.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "USBV0003": {
     "ean": "0023942302278",
@@ -4245,12 +4260,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Teltonika PR1KC640 - Antenne",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/131949.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/131949.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/131949.jpg"
+      "https://media.ipcstore.net/img/131949.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT1075": {
     "ean": "4779027312620",
@@ -4261,12 +4276,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Teltonika TRB141 - Gateway",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21169261.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21169261.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21169261.jpg"
+      "https://media.ipcstore.net/img/21169261.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT1082": {
     "ean": "4779051841851",
@@ -4307,12 +4322,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "UbiQuiti UniFi Cloud Gateway Ultra UniFi - UCG-ULTRA",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/135493.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/135493.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/135493.jpg"
+      "https://media.ipcstore.net/img/135493.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0148": {
     "ean": "0810084698747",
@@ -4338,12 +4353,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Ubiquiti UniFi Switch Ultra L2, Gigabit Ethernet",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/135483.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/135483.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/135483.jpg"
+      "https://media.ipcstore.net/img/135483.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0011": {
     "ean": "6975069302713",
@@ -4354,12 +4369,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Futterautomat YumShare Dual-Hopper mit Kamera",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133117.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133117.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133117.jpg"
+      "https://media.ipcstore.net/img/21133117.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0020": {
     "ean": "6975069301723",
@@ -4370,12 +4385,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Petkit Tierfell Staubsauger-Set",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297872.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21297872.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21297872.jpg"
+      "https://media.ipcstore.net/img/21297872.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PPCE0004": {
     "ean": "4895251605984",
@@ -4518,12 +4533,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill AEGIS - DDR4 - 16 GB 2x8 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/103423.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/103423.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/103423.jpg"
+      "https://media.ipcstore.net/img/103423.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0003": {
     "ean": "4719692013453",
@@ -4544,12 +4559,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill AEGIS - DDR4 - 16 GB - PC3200",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/115480.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/115480.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/115480.jpg"
+      "https://media.ipcstore.net/img/115480.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0035": {
     "ean": "4713294224408",
@@ -4580,12 +4595,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill Ripjaws - DDR4 - 16 GB 2x8 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129004.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/129004.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/129004.jpg"
+      "https://media.ipcstore.net/img/129004.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0063": {
     "ean": "4719692007667",
@@ -4596,12 +4611,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill SO-DIMM Ripjaws - DDR4 - 16 GB 2x8 GB 2400 CL16",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287291.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287291.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287291.jpg"
+      "https://media.ipcstore.net/img/21287291.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4L0037": {
     "ean": "843367132775",
@@ -4612,7 +4627,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Lexar DDR4 16GB 288 PIN U-DIMM 3200Mhz, CL22, 1.2V- BLISTER Package",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21132390.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/21132390.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "SHP0050": {
     "ean": "8719514404595",
@@ -4655,12 +4675,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "HDSSD M.2 500GB WD Blue™ SN5100 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/142314.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/142314.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/142314.jpg"
+      "https://media.ipcstore.net/img/142314.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPC2015": {
     "ean": "850070419307",
@@ -4822,12 +4842,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Sony WH-ULT900N - Kopfhörer - Schwarz",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/267985.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/267985.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/267985.jpg"
+      "https://media.ipcstore.net/img/267985.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPS0297": {
     "ean": "4548736158337",
@@ -4885,12 +4905,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SanDisk Extreme Pro Flash-Speicherkarte  512 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/389042.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/389042.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/389042.jpg"
+      "https://media.ipcstore.net/img/389042.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "ANTB0005": {
     "ean": "8885022190166",
@@ -4940,12 +4960,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Enabot EBO Air2 Blue",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21300203.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21300203.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21300203.jpg"
+      "https://media.ipcstore.net/img/21300203.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "ENAB0011": {
     "ean": "6972822121000",
@@ -4986,12 +5006,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Western Digital WD20EZBX / 2TB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/118928.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/118928.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/118928.jpg"
+      "https://media.ipcstore.net/img/118928.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HDIW0209": {
     "ean": "0718037896199",
@@ -5032,12 +5052,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Western Digital WD34PURZ / 3 TB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/143289.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/143289.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/143289.jpg"
+      "https://media.ipcstore.net/img/143289.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HDIW0245": {
     "ean": "718037905761",
@@ -5118,12 +5138,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Toshiba Canvio Flex 4TB silver",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21296891.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21296891.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21296891.jpg"
+      "https://media.ipcstore.net/img/21296891.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HDXV0011": {
     "ean": "0023942532231",
@@ -5165,12 +5185,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Beurer LB 300 Plus - Luftbefeuchter - Black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21296274.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21296274.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21296274.jpg"
+      "https://media.ipcstore.net/img/21296274.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HHWK2094": {
     "ean": "4066529027894",
@@ -5345,12 +5365,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "UbiQuiti UniFi U6-PRO Wi-Fi 6 Access Point",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/125816.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/125816.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/125816.jpg"
+      "https://media.ipcstore.net/img/125816.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0104": {
     "ean": "0810084693650",
@@ -5361,12 +5381,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "UbiQuiti UniFi U7-PRO - AccessPoint - WiFi 7 - Indoor",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/134496.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/134496.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/134496.jpg"
+      "https://media.ipcstore.net/img/134496.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0151": {
     "ean": "0810177161929",
@@ -5531,12 +5551,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "G.Skill TridentZ RGB Series - DDR4 - 16 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/260222.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/260222.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/260222.jpg"
+      "https://media.ipcstore.net/img/260222.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0061": {
     "ean": "4719692007506",
@@ -5607,12 +5627,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SanDisk SDSSDE61-1T00-G25 Extreme Portable 1TB SSD",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/116706.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/116706.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/116706.jpg"
+      "https://media.ipcstore.net/img/116706.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SDXS0028": {
     "ean": "0619659204877",
@@ -5623,12 +5643,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SanDisk Portable SDSSDE30-1T00-G26 1TB SSD Gen 2",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/132485.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/132485.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/132485.jpg"
+      "https://media.ipcstore.net/img/132485.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SHG0099": {
     "ean": "6974316993117",
@@ -5671,12 +5691,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "HDSSD 2,5\" 960GB Kioxia Exceria SATA 6Gbit/s",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/118431.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/118431.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/118431.jpg"
+      "https://media.ipcstore.net/img/118431.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDK1016": {
     "ean": "4582563857872",
@@ -5702,12 +5722,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SSD M.2 (2280) Kioxia Exceria Plus G4 NVMe 1TB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21309890.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21309890.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21309890.jpg"
+      "https://media.ipcstore.net/img/21309890.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDK1029": {
     "ean": "4582761161108",
@@ -5718,12 +5738,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SSD M.2 (2280) Kioxia Exceria Basic NVMe 1TB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133036.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133036.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133036.jpg"
+      "https://media.ipcstore.net/img/21133036.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDK1033": {
     "ean": "4582761161504",
@@ -5734,12 +5754,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SSD Kioxia Exceria G3 1TB (PCIe5.0/NVMe)",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133030.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133030.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133030.jpg"
+      "https://media.ipcstore.net/img/21133030.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDL0012": {
     "ean": "0843367123162",
@@ -5885,12 +5905,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "HDSSD M.2 500 GB WD Blue™ SN5000 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/139193.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/139193.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/139193.jpg"
+      "https://media.ipcstore.net/img/139193.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDW0084": {
     "ean": "0718037894843",
@@ -5901,12 +5921,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "HDSSD M.2 1TB WD Blue™ SN5000 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/139190.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/139190.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/139190.jpg"
+      "https://media.ipcstore.net/img/139190.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDW0091": {
     "ean": "0718037893204",
@@ -5941,12 +5961,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "HDSSD M.2 1TB WD Green™ SN3000 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/140429.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/140429.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/140429.jpg"
+      "https://media.ipcstore.net/img/140429.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPB1047": {
     "ean": "0017817847643",
@@ -5987,12 +6007,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "DELL Pro SD25",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287676.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287676.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287676.jpg"
+      "https://media.ipcstore.net/img/21287676.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPH0050": {
     "ean": "0198415233004",
@@ -6065,12 +6085,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech ConferenceCam GROUP Expansion Microphones",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/322818.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/322818.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/322818.jpg"
+      "https://media.ipcstore.net/img/322818.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0329": {
     "ean": "0097855131171",
@@ -6081,12 +6101,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech ConferenceCam MeetUp Expansion Microphone",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/107558.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/107558.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/107558.jpg"
+      "https://media.ipcstore.net/img/107558.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0490": {
     "ean": "5099206104419",
@@ -6112,12 +6132,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Logitech Combo Touch Keyboard for iPad Air 11",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/137883.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/137883.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/137883.jpg"
+      "https://media.ipcstore.net/img/137883.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL2002": {
     "ean": "0195348192095",
@@ -6367,12 +6387,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/140612.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/140612.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/140612.jpg"
+      "https://media.ipcstore.net/img/140612.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "CPUA0136": {
     "ean": "0730143315555",
@@ -6443,12 +6463,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Intel Cpu Core i9-14900KF, box | BX8071514900KF",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/442355.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/442355.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/442355.jpg"
+      "https://media.ipcstore.net/img/442355.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "CPUI0215": {
     "ean": "5032037279239",
@@ -6949,7 +6969,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Western Digital WD80EFPX / 8TB / red plus",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/137477.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/137477.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "HDIW0218": {
     "ean": "0718037889245",
@@ -6975,12 +7000,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Western Digital WD4005FFBX / 4 TB / Red Pro",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/137742.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/137742.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/137742.jpg"
+      "https://media.ipcstore.net/img/137742.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HDIW0223": {
     "ean": "0718037901282",
@@ -7046,12 +7071,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Western Digital WD40EFZZ / 4TB / red plus",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21311902.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21311902.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21311902.jpg"
+      "https://media.ipcstore.net/img/21311902.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HDIW0244": {
     "ean": "0718037901442",
@@ -7311,12 +7336,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "UbiQuiti UniFi USW-16-POE Switch",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/115491.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/115491.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/115491.jpg"
+      "https://media.ipcstore.net/img/115491.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0016": {
     "ean": "0810010072146",
@@ -7431,12 +7456,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "UbiQuiti UniFi U7 Pro Wall - Access Point",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/137204.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/137204.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/137204.jpg"
+      "https://media.ipcstore.net/img/137204.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0143": {
     "ean": "0810010074386",
@@ -7462,12 +7487,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Ubiquiti UniFi Cloud Gateway Fiber - Gateway",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21241706.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21241706.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21241706.jpg"
+      "https://media.ipcstore.net/img/21241706.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0170": {
     "ean": "0810084693582",
@@ -7478,12 +7503,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Ubiquiti UniFi Protect G5 PTZ - Netzwerk-Überwachungskamera",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/237018.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/237018.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/237018.jpg"
+      "https://media.ipcstore.net/img/237018.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0171": {
     "ean": "0810084691915",
@@ -7494,12 +7519,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Ubiquiti UniFi Touch - VoIP-Telefon",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21241697.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21241697.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21241697.jpg"
+      "https://media.ipcstore.net/img/21241697.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0172": {
     "ean": "0810084698341",
@@ -7510,12 +7535,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Ubiquiti UniFi U7 Pro XGS - Accesspoint - Wi-Fi 7",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/141163.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/141163.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/141163.jpg"
+      "https://media.ipcstore.net/img/141163.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0181": {
     "ean": "810177165118",
@@ -7541,7 +7566,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/143343.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/143343.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0187": {
     "ean": "0810084698792",
@@ -7562,7 +7592,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Ubiquiti  UniFi G6 Pro Turret - Netzwerk-Überwachungskamera",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21130772.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/21130772.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "NOCO0006": {
     "ean": "1210000615060",
@@ -7588,12 +7623,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "NOCO AX65 | Boost Air 12V 2000A | Jump Starter and Air Compressor",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21324032.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21324032.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21324032.jpg"
+      "https://media.ipcstore.net/img/21324032.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NOCO0017": {
     "ean": "1210000620095",
@@ -7650,12 +7685,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Petkit Katzenklo Pura Max 2 Premium",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297880.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21297880.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21297880.jpg"
+      "https://media.ipcstore.net/img/21297880.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0030": {
     "ean": "6975069305523",
@@ -7752,7 +7787,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Crucial Pro DDR4 - 32GB 3200 DIMM KIT 2x16GB (CP2K16G4DFRA32A)",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/136485.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/136485.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0000": {
     "ean": "4713294236753",
@@ -7763,12 +7803,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR5 32GB PC 6000 CL28 G.Skill KIT (2x16GB) TR5NS NEO RGB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287256.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287256.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287256.jpg"
+      "https://media.ipcstore.net/img/21287256.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0004": {
     "ean": "4719692013460",
@@ -7779,12 +7819,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill AEGIS - DDR4 - 32 GB 2x16 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/109043.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/109043.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/109043.jpg"
+      "https://media.ipcstore.net/img/109043.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0015": {
     "ean": "4719692015396",
@@ -7795,12 +7835,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill TridentZ RGB Series - DDR4 - 32 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21286936.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21286936.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21286936.jpg"
+      "https://media.ipcstore.net/img/21286936.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0031": {
     "ean": "4719692007018",
@@ -7811,12 +7851,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/112769.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/112769.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/112769.jpg"
+      "https://media.ipcstore.net/img/112769.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0036": {
     "ean": "4713294224415",
@@ -7827,12 +7867,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill AEGIS - DDR4 - 32 GB - PC3200",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/115483.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/115483.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/115483.jpg"
+      "https://media.ipcstore.net/img/115483.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0037": {
     "ean": "4713294223623",
@@ -7843,12 +7883,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/118362.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/118362.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/118362.jpg"
+      "https://media.ipcstore.net/img/118362.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0050": {
     "ean": "4713294223104",
@@ -7869,12 +7909,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR4 32GB PC 4000 CL18 KIT (2x16GB) 32GVK Ripjaws",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287305.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287305.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287305.jpg"
+      "https://media.ipcstore.net/img/21287305.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0052": {
     "ean": "4713294223081",
@@ -7914,12 +7954,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR4 32GB PC 6000 CL22 KIT (2x16GB) 32GRS Ripjaws",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287401.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287401.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287401.jpg"
+      "https://media.ipcstore.net/img/21287401.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4L0038": {
     "ean": "843367132454",
@@ -7941,7 +7981,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Lexar DDR5 16GB 288 PIN U-DIMM 5600Mhz, CL46, 1.1V- BLISTER Package",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21132306.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/21132306.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "RAM4L0041": {
     "ean": "843367140671",
@@ -7963,7 +8008,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Crucial DDR5 - 16GB 5600 DIMM (CT16G56C46U5)",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/134162.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/134162.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5C0025": {
     "ean": "0840440492573",
@@ -8004,12 +8054,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Corsair Vengeance RGB - DDR5 - Kit - 32 GB: 2 x 16 GB (CMH32GX5M2B6400C36)",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287758.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287758.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287758.jpg"
+      "https://media.ipcstore.net/img/21287758.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0000": {
     "ean": "4713294231949",
@@ -8035,12 +8085,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill Trident Z5 - DDR5 - 64 GB 2x 32GB Kit",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21292364.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21292364.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21292364.jpg"
+      "https://media.ipcstore.net/img/21292364.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0006": {
     "ean": "4713294231833",
@@ -8081,12 +8131,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR5 32GB PC 6400 CL32 KIT (2x16GB) 32-TZ5RK",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129935.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/129935.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/129935.jpg"
+      "https://media.ipcstore.net/img/129935.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0009": {
     "ean": "4713294232656",
@@ -8097,12 +8147,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21286929.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21286929.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21286929.jpg"
+      "https://media.ipcstore.net/img/21286929.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0013": {
     "ean": "4713294232649",
@@ -8113,12 +8163,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-TZ5NR AMD EX",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129943.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/129943.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/129943.jpg"
+      "https://media.ipcstore.net/img/129943.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0015": {
     "ean": "4713294232755",
@@ -8183,12 +8233,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR5 64GB PC 6000 CL28 (2x32GB) 64-GX2-FX5 FLARE AMD",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287341.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287341.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287341.jpg"
+      "https://media.ipcstore.net/img/21287341.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0023": {
     "ean": "4713294232069",
@@ -8199,12 +8249,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill Trident Z5 6800 CL34 - DDR5 - 64 GB 2x32 GB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287971.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287971.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287971.jpg"
+      "https://media.ipcstore.net/img/21287971.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0024": {
     "ean": "4713294233868",
@@ -8215,12 +8265,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill Ripjaws S5 6000 CL36 - DDR5 - 64 GB KIT (2x32GB)",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21287294.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21287294.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21287294.jpg"
+      "https://media.ipcstore.net/img/21287294.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5G0025": {
     "ean": "4713294237644",
@@ -8246,12 +8296,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21292370.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21292370.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21292370.jpg"
+      "https://media.ipcstore.net/img/21292370.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "RAM5K0043": {
     "ean": "0740617350180",
@@ -8327,7 +8377,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Lexar DDR5-6000 DIMM 2x16GB THOR Gaming",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133370.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/21133370.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "REFL0003": {
     "ean": "7435110112153",
@@ -8711,12 +8766,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD M.2 (2280) Kioxia Exceria Basic NVMe 2TB",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21130284.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21130284.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21130284.jpg"
+      "https://media.ipcstore.net/img/21130284.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDK1034": {
     "ean": "4582761161511",
@@ -8727,12 +8782,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD Kioxia Exceria G3 2TB (PCIe5.0/NVMe)",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133033.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133033.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133033.jpg"
+      "https://media.ipcstore.net/img/21133033.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDK1035": {
     "ean": "4582761160286",
@@ -8758,12 +8813,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD Kioxia Exceria Pro G2 2TB (PCIe5.0/NVMe)",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21133037.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21133037.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21133037.jpg"
+      "https://media.ipcstore.net/img/21133037.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDL0022": {
     "ean": "0843367123179",
@@ -8790,12 +8845,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NQ790 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/138138.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/138138.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/138138.jpg"
+      "https://media.ipcstore.net/img/138138.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDL0042": {
     "ean": "0843367132232",
@@ -8806,12 +8861,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD M.2 Lexar 4TB PCIe Gen 4X4 NQ790 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/138139.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/138139.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/138139.jpg"
+      "https://media.ipcstore.net/img/138139.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDL0044": {
     "ean": "0843367136780",
@@ -8822,12 +8877,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD M.2 Lexar 1TB PCIe Gen 5 NM1090 Pro NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21130203.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21130203.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21130203.jpg"
+      "https://media.ipcstore.net/img/21130203.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDL0046": {
     "ean": "0843367136803",
@@ -8853,12 +8908,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "SSD M.2 Lexar 2TB PCIe Gen 5 NM990 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21132405.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21132405.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21132405.jpg"
+      "https://media.ipcstore.net/img/21132405.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDS0097": {
     "ean": "8806090545917",
@@ -8998,12 +9053,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "HDSSD M.2 2TB WD Black™ SN7100 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/139413.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/139413.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/139413.jpg"
+      "https://media.ipcstore.net/img/139413.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDW0094": {
     "ean": "0619659220884",
@@ -9029,12 +9084,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "HDSSD M.2 2TB WD Black™ SN8100 NVMe PCI5.0",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/141587.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/141587.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/141587.jpg"
+      "https://media.ipcstore.net/img/141587.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPB1060": {
     "ean": "0017817859585",
@@ -9045,12 +9100,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Bose QuietComfort Ultra 2.Gen black",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21130438.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21130438.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21130438.jpg"
+      "https://media.ipcstore.net/img/21130438.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPB1061": {
     "ean": "0017817859561",
@@ -9146,12 +9201,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Logitech ConferenceCam Video conference kit Connect",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/800502.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/800502.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/800502.jpg"
+      "https://media.ipcstore.net/img/800502.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL2008": {
     "ean": "0195348677295",
@@ -9211,12 +9266,12 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Sony WH-1000XM5L True Wireless Headset | Night Blue",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21298785.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21298785.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21298785.jpg"
+      "https://media.ipcstore.net/img/21298785.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPS0329": {
     "ean": "4548736132597",
@@ -9328,8 +9383,13 @@
     "title": "AMD Ryzen 7 7700X BOX | 100-100000591WOF",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_url": "https://media.ipcstore.net/img/127180.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/127180.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "ENAB0004": {
     "ean": "6972822120867",
@@ -9339,12 +9399,12 @@
     "title": "Enabot ROLA Mini Cat Teaser",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/21300201.jpg",
+    "image_url": "https://media.ipcstore.net/img/21300201.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21300201.jpg"
+      "https://media.ipcstore.net/img/21300201.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "HDIS0299": {
     "ean": "8719706022088",
@@ -9464,12 +9524,12 @@
     "title": "Beurer IL 11 Infrarotlampe",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/21132133.jpg",
+    "image_url": "https://media.ipcstore.net/img/21132133.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21132133.jpg"
+      "https://media.ipcstore.net/img/21132133.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "HHWB5016": {
     "ean": "4211125591137",
@@ -9479,12 +9539,12 @@
     "title": "Beurer HC 25 - Föhn",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/21296158.jpg",
+    "image_url": "https://media.ipcstore.net/img/21296158.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21296158.jpg"
+      "https://media.ipcstore.net/img/21296158.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "HHWB5025": {
     "ean": "4211125648145",
@@ -9509,12 +9569,12 @@
     "title": "Ghd Mini Paddle Brush - schwarz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/638545.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/638545.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/638545.jpg"
+      "https://media.ipcstore.net/img/638545.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "HHWG1040": {
     "ean": "5060829514640",
@@ -9635,12 +9695,12 @@
     "title": "LEGO Star Wars Captain Rex Y-Wing Microfighter",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21234976.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21234976.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21234976.jpg"
+      "https://media.ipcstore.net/img/21234976.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "LEGO0045": {
     "ean": "5702017816135",
@@ -9660,12 +9720,12 @@
     "title": "LEGO NINJAGO Lloyds grüner Walddrache 71829",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/21283409.jpg",
+    "image_url": "https://media.ipcstore.net/img/21283409.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21283409.jpg"
+      "https://media.ipcstore.net/img/21283409.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "LEGO0062": {
     "ean": "5702017471549",
@@ -9675,12 +9735,12 @@
     "title": "LEGO Botanical Lotusblumen",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/135495.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/135495.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/135495.jpg"
+      "https://media.ipcstore.net/img/135495.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "MBAI0031": {
     "ean": "4711387095119",
@@ -9939,12 +9999,12 @@
     "title": "Teltonika PR1KCS28 - Antenne",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21169270.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21169270.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21169270.jpg"
+      "https://media.ipcstore.net/img/21169270.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT1054": {
     "ean": "4779051841042",
@@ -9954,12 +10014,12 @@
     "title": "Teltonika PR5MEC12 - Oberflächenbefestigungs-Kit",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/127494.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/127494.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/127494.jpg"
+      "https://media.ipcstore.net/img/127494.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT1094": {
     "ean": "4779051840908",
@@ -9969,12 +10029,12 @@
     "title": "Teltonika\tMobile SMA antenna",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21231675.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21231675.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21231675.jpg"
+      "https://media.ipcstore.net/img/21231675.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETT1099": {
     "ean": "4779051840618",
@@ -9984,12 +10044,12 @@
     "title": "Teltonika Ethernet cable 1.5M",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21169285.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21169285.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21169285.jpg"
+      "https://media.ipcstore.net/img/21169285.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0035": {
     "ean": "0810354023538",
@@ -9999,12 +10059,12 @@
     "title": "UbiQuiti Networks POE-24-24W-G - Power Injector",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/633601.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/633601.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/633601.jpg"
+      "https://media.ipcstore.net/img/633601.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0090": {
     "ean": "0810010075574",
@@ -10014,7 +10074,12 @@
     "title": "UbiQuiti UniFi Protect Pro - UNVR-PRO - netzwerkfähig",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/130598.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/130598.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0100": {
     "ean": "0810084690246",
@@ -10024,12 +10089,12 @@
     "title": "UbiQuiti UniFi Protect UVC-G5-PRO - Netzwerk-Überwachungskamera",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/131747.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/131747.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/131747.jpg"
+      "https://media.ipcstore.net/img/131747.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0110": {
     "ean": "0810084691656",
@@ -10039,7 +10104,12 @@
     "title": "UbiQuiti UniFi Access Reader G2 Professional - UA-G2-PRO",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/672413.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/672413.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0136": {
     "ean": "0810084691670",
@@ -10049,12 +10119,12 @@
     "title": "UbiQuiti UniFi G2 Starter Kit - Zugangskontrollgerät",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/672411.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/672411.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/672411.jpg"
+      "https://media.ipcstore.net/img/672411.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "NETU0152": {
     "ean": "0810010079251",
@@ -10209,12 +10279,12 @@
     "title": "Petkit 2 in 1 Trimmer Pro",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21303467.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21303467.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21303467.jpg"
+      "https://media.ipcstore.net/img/21303467.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0023": {
     "ean": "6975069303017",
@@ -10264,12 +10334,12 @@
     "title": "Petkit Katzenklo Pura X Lufterfrischer Nachfüller 4x50 ml",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297883.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21297883.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21297883.jpg"
+      "https://media.ipcstore.net/img/21297883.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0037": {
     "ean": "6975069303956",
@@ -10279,12 +10349,12 @@
     "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrischer N50 3 Stk.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/21297879.jpg",
+    "image_url": "https://media.ipcstore.net/img/21297879.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21297879.jpg"
+      "https://media.ipcstore.net/img/21297879.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0038": {
     "ean": "6975069305240",
@@ -10294,12 +10364,12 @@
     "title": "Petkit Katzenklo Purobot Ultra Lufterfrischer N60 3 Stk (P9224)",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21297889.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21297889.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21297889.jpg"
+      "https://media.ipcstore.net/img/21297889.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "PETK0041": {
     "ean": "6975069303413",
@@ -10765,13 +10835,13 @@
     "title": "Crucial P310 Gen4 2280 2TB NVMe PCIe M.2 SSD mit heatsink",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/140468.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/140468.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/140468.jpg"
+      "https://media.ipcstore.net/img/140468.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SSDK1017": {
     "ean": "4582563857889",
@@ -10806,12 +10876,12 @@
     "title": "Bose Ultra Open Earbuds | White",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21236472.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21236472.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21236472.jpg"
+      "https://media.ipcstore.net/img/21236472.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPB1062": {
     "ean": "0017817859516",
@@ -10854,12 +10924,12 @@
     "title": "CHERRY Xtrfy M42 - Maus - optisch - kabellos - Schwarz ",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/267294.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/267294.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/267294.jpg"
+      "https://media.ipcstore.net/img/267294.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPD1027": {
     "ean": "5397063763610",
@@ -12337,12 +12407,12 @@
     "title": "Logitech Desktop MK235 Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/553333.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/553333.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/553333.jpg"
+      "https://media.ipcstore.net/img/553333.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0127": {
     "ean": "5099206065062",
@@ -12352,13 +12422,13 @@
     "title": "Logitech Mouse B170 Optical Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/170171.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/170171.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/170171.jpg"
+      "https://media.ipcstore.net/img/170171.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0183": {
     "ean": "5099206033139",
@@ -12368,13 +12438,13 @@
     "title": "Logitech Keyboard K270 Wireless Black/White",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/640390.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/640390.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/640390.jpg"
+      "https://media.ipcstore.net/img/640390.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0233": {
     "ean": "5099206066199",
@@ -12384,13 +12454,13 @@
     "title": "Logitech Mouse M220 Silent Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/691497.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/691497.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/691497.jpg"
+      "https://media.ipcstore.net/img/691497.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0279": {
     "ean": "5099206066687",
@@ -12400,13 +12470,13 @@
     "title": "Logitech Mouse M330 SILENT PLUS Wireless Blue",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/404030.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/404030.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/404030.jpg"
+      "https://media.ipcstore.net/img/404030.jpg"
     ],
-    "image_too_small": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0312": {
     "ean": "5099206086449",
@@ -12416,13 +12486,13 @@
     "title": "Logitech Desktop MK470 Slim Wireless Combo Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/119821.jpg",
+    "image_url": "https://media.ipcstore.net/img/119821.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/119821.jpg"
+      "https://media.ipcstore.net/img/119821.jpg"
     ],
-    "image_verified": false,
+    "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0395": {
     "ean": "5099206088252",
@@ -12432,13 +12502,13 @@
     "title": "Logitech Slim Folio Keyboard black ",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/114867.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/114867.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/114867.jpg"
+      "https://media.ipcstore.net/img/114867.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0504": {
     "ean": "5099206105508",
@@ -12448,13 +12518,13 @@
     "title": "Logitech Signature K650 Keyboard Black ",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/1455.jpg",
+    "image_url": "https://media.ipcstore.net/img/1455.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/1455.jpg"
+      "https://media.ipcstore.net/img/1455.jpg"
     ],
-    "image_verified": false,
+    "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPL0600": {
     "ean": "5099206127098",
@@ -12507,13 +12577,13 @@
     "title": "Needit PARK LITE (elektrische Parkscheibe) Blau",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/644222.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/644222.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/644222.jpg"
+      "https://media.ipcstore.net/img/644222.jpg"
     ],
-    "image_too_small": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_source": "kosatec_ipcstore"
   },
   "SUPN4001": {
     "ean": "5711157014127",
@@ -12523,12 +12593,12 @@
     "title": "Needit PARK LITE (elektrische Parkscheibe) Schwarz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/644223.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/644223.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/644223.jpg"
+      "https://media.ipcstore.net/img/644223.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPN4002": {
     "ean": "5711157030141",
@@ -12554,13 +12624,13 @@
     "title": "Needit Park Mini (elektrische Parkscheibe) Schwarz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/644225.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/644225.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/644225.jpg"
+      "https://media.ipcstore.net/img/644225.jpg"
     ],
-    "image_too_small": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_source": "kosatec_ipcstore"
   },
   "SUPN4006": {
     "ean": "5711157080412",
@@ -12675,13 +12745,13 @@
     "title": "Razer DeathAdder Essential - Gaming Maus - black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/125612.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/125612.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/125612.jpg"
+      "https://media.ipcstore.net/img/125612.jpg"
     ],
-    "image_too_small": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1027": {
     "ean": "8886419333326",
@@ -12691,13 +12761,13 @@
     "title": "Razer DeathAdder Essential - Gaming Maus - white",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/131683.jpg",
+    "image_url": "https://media.ipcstore.net/img/131683.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/131683.jpg"
+      "https://media.ipcstore.net/img/131683.jpg"
     ],
-    "image_verified": false,
+    "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de",
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1044": {
     "ean": "8886419334552",
@@ -12707,12 +12777,12 @@
     "title": "Razer DeathAdder V3 HyperSpeed - Maus - ergonomisch - 5 Tasten - kabellos, kabelgebunden",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/138263.jpg",
+    "image_url": "https://media.ipcstore.net/img/138263.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/138263.jpg"
+      "https://media.ipcstore.net/img/138263.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "SUPR1055": {
     "ean": "8886419345763",
@@ -13103,12 +13173,12 @@
     "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/263798.jpg",
+    "image_url": "https://media.ipcstore.net/img/263798.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/263798.jpg"
+      "https://media.ipcstore.net/img/263798.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "SUPV0026": {
     "ean": "0023942318644",
@@ -13222,12 +13292,12 @@
     "title": "Kioxia microSD Exceria 32GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21280689.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21280689.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21280689.jpg"
+      "https://media.ipcstore.net/img/21280689.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBK1022": {
     "ean": "4582563850200",
@@ -13237,12 +13307,12 @@
     "title": "Kioxia TransMemory U202 white 32GB USB 2.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21280801.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21280801.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21280801.jpg"
+      "https://media.ipcstore.net/img/21280801.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBK1023": {
     "ean": "4582563850217",
@@ -13252,12 +13322,12 @@
     "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21280802.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21280802.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21280802.jpg"
+      "https://media.ipcstore.net/img/21280802.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBK1024": {
     "ean": "4582563850224",
@@ -13267,12 +13337,12 @@
     "title": "Kioxia TransMemory U202 white 128GB USB 2.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21280800.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21280800.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21280800.jpg"
+      "https://media.ipcstore.net/img/21280800.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBK1035": {
     "ean": "4582563850033",
@@ -13282,12 +13352,12 @@
     "title": "Kioxia TransMemory U301 64GB USB 3.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21280805.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/21280805.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/21280805.jpg"
+      "https://media.ipcstore.net/img/21280805.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBK1050": {
     "ean": "4582563857209",
@@ -13322,13 +13392,13 @@
     "title": "SanDisk Ultra Flair USB 3.0 64GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/271631.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/271631.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/271631.jpg"
+      "https://media.ipcstore.net/img/271631.jpg"
     ],
-    "image_too_small": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_source": "kosatec_ipcstore"
   },
   "USBS0013": {
     "ean": "0619659154189",
@@ -13338,13 +13408,12 @@
     "title": "SanDisk Ultra Flair USB 3.0 256GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/291797.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/291797.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/291797.jpg",
-      "https://media.ipcstore.net/img/l/291797_1.jpg"
+      "https://media.ipcstore.net/img/291797.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBS0019": {
     "ean": "0619659177171",
@@ -13354,12 +13423,12 @@
     "title": "SanDisk Ultra Dual Drive Go USB 3.1 /USB-C 64GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/291781.jpg",
+    "image_url": "https://media.ipcstore.net/img/291781.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/291781.jpg"
+      "https://media.ipcstore.net/img/291781.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "USBS0074": {
     "ean": "0619659172510",
@@ -13369,12 +13438,12 @@
     "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 32 GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/l/291800.jpg",
+    "image_url": "https://media.ipcstore.net/img/291800.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/291800.jpg"
+      "https://media.ipcstore.net/img/291800.jpg"
     ],
-    "image_verified": false,
-    "image_too_small": true
+    "image_verified": true,
+    "image_source": "kosatec_ipcstore"
   },
   "USBS0075": {
     "ean": "0619659172831",
@@ -13384,12 +13453,12 @@
     "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 64 GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/291801.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/291801.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/291801.jpg"
+      "https://media.ipcstore.net/img/291801.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBS0076": {
     "ean": "0619659172855",
@@ -13399,7 +13468,12 @@
     "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 128 GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/291802.jpg",
+    "images": [
+      "https://media.ipcstore.net/img/291802.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "USBS1019": {
     "ean": "0619659069193",
@@ -13409,12 +13483,12 @@
     "title": "SanDisk USB Cruzer Blade 32GB USB2.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/328695.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/328695.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/328695.jpg"
+      "https://media.ipcstore.net/img/328695.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBS1092": {
     "ean": "0619659178581",
@@ -13424,12 +13498,12 @@
     "title": "SanDisk Ultra Dual Drive Luxe USB 3.1 Gen 1 / USB-C 32GB",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/291785.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/291785.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/291785.jpg"
+      "https://media.ipcstore.net/img/291785.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBS1093": {
     "ean": "0619659125905",
@@ -13439,12 +13513,12 @@
     "title": "SanDisk USB Cruzer Blade 128GB USB 2.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/213562.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/213562.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/213562.jpg"
+      "https://media.ipcstore.net/img/213562.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBS1094": {
     "ean": "0619659097318",
@@ -13454,12 +13528,12 @@
     "title": "SanDisk USB Cruzer Blade 64GB USB 2.0",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/345689.jpg",
+    "image_verified": true,
+    "image_url": "https://media.ipcstore.net/img/345689.jpg",
     "images": [
-      "https://media.ipcstore.net/img/l/345689.jpg"
+      "https://media.ipcstore.net/img/345689.jpg"
     ],
-    "image_too_small": true
+    "image_source": "kosatec_ipcstore"
   },
   "USBV0000": {
     "ean": "023942302254",

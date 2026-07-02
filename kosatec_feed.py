@@ -19,7 +19,7 @@ Quellen:
   artikeldaten.csv (222 MB)  – Bilder (images_m) + Beschreibungen + specs
 """
 from __future__ import annotations
-import csv, json
+import csv, json, re
 from pathlib import Path
 from typing import Dict, Iterator
 
@@ -56,8 +56,22 @@ def _norm_ean(e: str) -> str:
 
 
 def _first_image(images_field: str) -> str:
-    """images_m ist pipe-getrennt — nimm das erste (Kosatec-Produktfoto, ipcstore/Icecat-CDN)."""
+    """Pipe-getrennt — nimm das erste (Kosatec-Produktfoto, ipcstore/Icecat-CDN)."""
     return (images_field or "").split("|")[0].strip()
+
+
+# Kosatec-Artname beginnt oft mit Port-Anzahl statt Marke: "3P …", "4+2P …", "48P …".
+_PORT_PREFIX = re.compile(r"^\s*\d[\dP+]*P\s+", re.I)
+
+
+def _clean_title(raw: str, brand: str = "") -> str:
+    """Roher Kosatec-Artname → verkäufer-/SEO-tauglicher Titel: Port-Präfix weg,
+    Marke nach vorne (= Suchbegriff). Sonst bleibt der Titel wie er ist."""
+    t = re.sub(r"\s+", " ", _PORT_PREFIX.sub("", (raw or "").strip())).strip()
+    b = (brand or "").strip()
+    if b and not t.lower().startswith(b.lower()):
+        t = f"{b} {t}"
+    return t
 
 
 def load_kosatec_products(bab_eans: set[str], *, min_ek: float = 10.0,
@@ -108,12 +122,13 @@ def _build_from_artikeldaten(bab_eans: set[str], *, min_ek: float, max_ek: float
                 continue
             t = targets[artnr]
             ean = _norm_ean(row.get("ean", ""))
-            title = (row.get("artname") or row.get("title") or "").strip()
+            brand = (row.get("hersteller") or "").strip()
+            title = _clean_title(row.get("artname") or row.get("title") or "", brand)
             kat1 = (row.get("kat1") or t.get("kat1") or "").strip()
             type_name, google_cat = KAT_MAP.get(kat1, _DEFAULT)
-            image = _first_image(row.get("images_m", ""))
+            image = _first_image(row.get("images_xl", ""))   # Full-Res (/img/<id>.jpg), NICHT images_m (=115px!)
             enrichment = {
-                "title_full": (row.get("title") or title),
+                "title_full": title,
                 "short_summary": (row.get("short_summary") or "").strip(),
                 "long_summary": (row.get("long_summary") or "").strip(),
                 "marketing_text": (row.get("marketing_text") or "").strip(),
@@ -150,14 +165,50 @@ def _to_float(s) -> float:
 def _selftest():
     assert _norm_ean("0065030836548") == "65030836548"
     assert _first_image("https://a/1.jpg|https://a/2.jpg") == "https://a/1.jpg"
+    assert _clean_title("3P ALLNET ALL-SGI8003P POE industrial", "ALLNET") == "ALLNET ALL-SGI8003P POE industrial"
+    assert _clean_title("4+2P ALLNET X POE", "ALLNET") == "ALLNET X POE"
+    assert _clean_title("Xerox Toner 006R03841", "Xerox") == "Xerox Toner 006R03841"   # kein Port-Präfix, unverändert
     assert KAT_MAP["Netzwerk"][0] == "Netzwerk-Switches"
     assert KAT_MAP.get("gibtsnicht", _DEFAULT) == _DEFAULT
     print("selftest OK")
 
 
+def _verify_images(prods: list, *, min_px: int = 500, workers: int = 20) -> int:
+    """Pixel-Check gegen den CDN: kosatec_image < min_px oder unerreichbar → leeren
+    (Produkt geht dann auf draft, statt ein unscharfes Bild zu veröffentlichen).
+    Läuft NUR hier beim lokalen --export; die Action liest den geprüften Cache."""
+    import io, urllib.request
+    from PIL import Image
+    from concurrent.futures import ThreadPoolExecutor
+
+    def ok(u: str) -> bool:
+        if not u:
+            return False
+        try:
+            raw = urllib.request.urlopen(
+                urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=20).read()
+            return min(Image.open(io.BytesIO(raw)).size) >= min_px
+        except Exception:
+            return False
+
+    good = list(ThreadPoolExecutor(max_workers=workers).map(
+        lambda p: ok(p.get("kosatec_image", "")), prods))
+    dropped = 0
+    for p, g in zip(prods, good):
+        if p.get("kosatec_image") and not g:
+            p["kosatec_image"] = ""
+            if isinstance(p.get("kosatec_enrichment"), dict):
+                p["kosatec_enrichment"]["image_main"] = ""
+            dropped += 1
+    return dropped
+
+
 def export_slim(path: str = SLIM_FILE) -> int:
-    """Erzeugt den schlanken, committbaren Produkt-Export aus der 222-MB-artikeldaten.csv."""
+    """Erzeugt den schlanken, committbaren Produkt-Export aus der 222-MB-artikeldaten.csv.
+    Verifiziert jedes Bild auf ≥500px — nicht bestandene werden geleert (→ draft)."""
     prods = list(_build_from_artikeldaten(set(), min_ek=10.0, max_ek=300.0, competitive_only=True))
+    dropped = _verify_images(prods)
+    print(f"Bild-Check: {dropped}/{len(prods)} Bilder <500px entfernt (→ draft)")
     Path(path).write_text(json.dumps(prods, ensure_ascii=False), encoding="utf-8")
     return len(prods)
 

@@ -36,6 +36,12 @@ from csv_loader import load_supplier_feed
 from pricing import calculate_vk
 
 PRICE_OVERRIDES_FILE = "price_overrides.yaml"
+SEO_OVERRIDES_FILE = "seo_overrides.yaml"
+BANNED_SKUS_FILE = "banned_skus.json"
+_BANNED: set = set()   # in main() geladen — gesperrte SKUs (Abmahnung) NIE nach Shopify
+# Bildquellen, die am Apply schon EAN+Marke+Modell+Auflösung geprüft wurden →
+# im Build nicht erneut gegen Enrichment gaten (apply_kosatec_images / apply_mpn_images).
+TRUSTED_IMG_SOURCES = {"kosatec_ipcstore", "icecat_mpn"}
 
 def load_price_overrides(path: str) -> Dict[str, float]:
     """Lädt manuelle Preisüberschreibungen aus price_overrides.yaml."""
@@ -44,6 +50,17 @@ def load_price_overrides(path: str) -> Dict[str, float]:
         return {}
     data = yaml.safe_load(open(p, encoding="utf-8")) or {}
     return {str(k): float(v) for k, v in data.items()}
+
+def load_seo_overrides(path: str) -> Dict[str, dict]:
+    """Manuelle SEO-Überschreibungen aus seo_overrides.yaml (SKU → {title, description}).
+    Der Sync generiert SEO deterministisch; ein Override hier gewinnt immer und wird
+    bei jedem Lauf re-appliziert → Shopify-Admin-Edits nie an dieser Stelle pflegen,
+    sondern hier (single source of truth), sonst überschreibt der stündliche Sync sie."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    data = yaml.safe_load(open(p, encoding="utf-8")) or {}
+    return {str(k): (v or {}) for k, v in data.items()}
 
 # CSVs mit langen Feldern (Specs-HTML kann sehr lang sein)
 csv.field_size_limit(sys.maxsize)
@@ -250,6 +267,31 @@ def build_meta_description(body_html: str, fallback_title: str) -> str:
     return cut + "…"
 
 
+def seo_title(title: str, brand: str = "") -> str:
+    """Meta-Title für Google: Marke vorne (= Suchbegriff), am Wortende auf ~65 Z.
+    gekürzt. Google zeigt ~60 Z. an, indexiert aber den vollen String – Modellnummer
+    (steht früh im Titel) bleibt so erhalten. Shop-Name hängt Google selbst an."""
+    t = " ".join((title or "").split())
+    b = (brand or "").strip()
+    if b and not t.lower().startswith(b.lower()):
+        t = f"{b} {t}"
+    if len(t) <= 65:
+        return t
+    return t[:65].rsplit(" ", 1)[0]
+
+
+def seo_description(body_html: str, title: str) -> str:
+    """Meta-Description: produktspezifischer Lead (Keywords vorne) + Free-Shipping-Hook
+    als CTR-Booster. ≤160 Z., damit Google nicht abschneidet."""
+    HOOK = "Versandkostenfrei & sofort lieferbar bei Neovodeals."
+    budget = 159 - len(HOOK) - 1
+    lead = build_meta_description(body_html, title)
+    if len(lead) > budget:
+        lead = lead[:budget].rsplit(" ", 1)[0]
+    lead = lead.rstrip(" .…") + "."
+    return f"{lead} {HOOK}"
+
+
 def slugify(text: str) -> str:
     """Erzeugt aus einem Titel einen URL-freundlichen Handle."""
     import re
@@ -265,6 +307,8 @@ def slugify(text: str) -> str:
 
 def should_keep(product: dict, filters_cfg: dict) -> tuple[bool, str]:
     """Entscheidet, ob ein Produkt importiert werden soll."""
+    if product.get("sku") in _BANNED:
+        return False, "gesperrt (banned_skus.json — Abmahnung/Markenrecht)"
     if product.get("purchase_price", 0) <= 0:
         return False, "EK ist 0 oder fehlt"
     if product.get("purchase_price", 0) > filters_cfg.get("max_purchase_price_eur", 1e9):
@@ -326,10 +370,18 @@ def image_identity_ok(bab_title: str, enrichment: Optional[dict], sku: str) -> b
     if not enrichment:
         return True                        # Neuware + GTIN-Bild, kein Enrichment zum Abgleich
     bab = (bab_title or "").lower()
+    tf = enrichment.get("title_full") or ""
     brand = (enrichment.get("brand") or "").lower().split()
     if brand and brand[0] in bab:          # Marke stimmt überein
         return True
-    return bool(_mpn_tokens(bab_title) & _mpn_tokens(enrichment.get("title_full") or ""))
+    if not brand:
+        # enrichment_index hat oft ein leeres brand-Feld → GTIN-verifizierte Bilder
+        # fielen fälschlich raus. Der BAB-Titel beginnt praktisch immer mit der Marke:
+        # steht sie auch im (EAN-gematchten) Icecat-Titel, ist das Bild bestätigt.
+        bab_brand = bab.split()[0] if bab.split() else ""
+        if bab_brand and bab_brand in tf.lower():
+            return True
+    return bool(_mpn_tokens(bab_title) & _mpn_tokens(tf))
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -393,7 +445,9 @@ def build_rows(product: dict, pr, cfg: dict,
                verified_images: Optional[list[str]] = None,
                mpn_image: Optional[str] = None,
                hygiene: bool = False,
-               mpn_code: str = "") -> list[dict]:
+               mpn_code: str = "",
+               seo_override: Optional[dict] = None,
+               image_source: str = "") -> list[dict]:
     """
     Wandelt ein Produkt in eine oder mehrere Matrixify-CSV-Zeilen.
 
@@ -406,12 +460,14 @@ def build_rows(product: dict, pr, cfg: dict,
     # Bilder: NUR auflösungsgeprüfte aus supplier_map.json (≥500×500), exakt wie
     # eBay (sync.py). KEIN Enrichment-Fallback - das wäre das ungeprüfte, oft
     # 200×200 ipcstore-Bild, das eBay ablehnt. Ohne verifiziertes Bild → draft.
-    # ZUSÄTZLICH: Identitäts-Gate - Bild nur, wenn Modellnummer in BAB- UND
-    # Icecat-Titel übereinstimmt (sonst Falschbild-Retoure). Sonst → draft.
-    # mpn_image kommt aus der Icecat-Brand+MPN-Suche und ist bereits per
-    # BrandPartCode==MPN verifiziert → Gate bereits bestanden, direkt nutzen.
-    if mpn_image:
-        all_images: list[str] = [mpn_image]
+    # TRUSTED_IMG_SOURCES: kosatec/mpn-Bilder sind schon am Apply per EAN+Marke+
+    # Modell+Auflösung geprüft → nicht ein zweites Mal gegen (oft leeres) Enrichment
+    # gaten, sonst fallen korrekte Bilder wieder raus.
+    # Sonst Identitäts-Gate: Bild nur wenn Marke/Modell BAB↔Icecat matcht.
+    if image_source in TRUSTED_IMG_SOURCES and verified_images:
+        all_images: list[str] = list(verified_images)[:max_images]
+    elif mpn_image:
+        all_images = [mpn_image]
     elif image_identity_ok(product.get("title", ""), enrichment, product.get("sku", "")):
         all_images = list(verified_images or [])[:max_images]
     else:
@@ -424,12 +480,14 @@ def build_rows(product: dict, pr, cfg: dict,
 
     body_html = build_description_html(product.get("title", ""), enrichment)
 
-    # SEO an der Quelle einbauen (manuelle Shopify-Edits würde der Sync sonst
-    # bei jedem Lauf überschreiben). Produkttitel = bester Meta-Title: er trägt
-    # Marke + Modell (= die Suchbegriffe), auf ~70 Z. fürs SERP-Display gekappt.
-    # ponytail: title_optimizer (eBay) bewusst NICHT genutzt - der strippt das Modell.
-    seo_title = title if len(title) <= 70 else title[:70].rsplit(" ", 1)[0]
-    seo_description = build_meta_description(body_html, title)
+    # SEO deterministisch an der Quelle (Shopify ist NICHT source of truth – der
+    # stündliche Sync würde Admin-Edits sonst überschreiben). Manuelle Korrektur nur
+    # via seo_overrides.yaml, die gewinnt hier und bleibt so dauerhaft erhalten.
+    meta_title = seo_title(title, product.get("brand", ""))
+    meta_desc = seo_description(body_html, title)
+    if seo_override:
+        meta_title = seo_override.get("title") or meta_title
+        meta_desc = seo_override.get("description") or meta_desc
 
     tags = list(filter(None, [
         product.get("category", ""),
@@ -451,8 +509,8 @@ def build_rows(product: dict, pr, cfg: dict,
         "Command": "MERGE",
         "Title": title,
         "Body HTML": body_html,
-        "SEO Title": seo_title,
-        "SEO Description": seo_description,
+        "SEO Title": meta_title,
+        "SEO Description": meta_desc,
         "Vendor": product.get("brand", "") or "",
         "Type": ebay_category_name(product),
         "Tags": ", ".join(tags),
@@ -614,15 +672,9 @@ def main():
     verified_count = sum(1 for v in smap.values() if v.get("image_verified"))
     log.info(f"supplier_map.json: {verified_count} SKUs mit auflösungsgeprüftem Bild")
 
-    # Icecat-MPN-Bilder (Brand+Modellnummer-Suche, bereits per BrandPartCode==MPN
-    # verifiziert, icecat.biz/rechtssicher). NUR Shopify-Bildquelle — supplier_map
-    # und damit eBay bleiben unangetastet.
-    mpn_images_path = Path("icecat_mpn_images.json")
-    mpn_images: Dict[str, str] = (
-        json.loads(mpn_images_path.read_text(encoding="utf-8")) if mpn_images_path.exists() else {}
-    )
-    if mpn_images:
-        log.info(f"Icecat-MPN-Bilder (zusätzliche Shopify-Quelle): {len(mpn_images)} SKUs")
+    # Icecat-MPN-Bilder werden jetzt per apply_mpn_images.py (Auflösungscheck +
+    # gallery-Volloriginal) in supplier_map als image_source=icecat_mpn geschrieben
+    # und über TRUSTED_IMG_SOURCES genutzt — der alte ungeprüfte Direktpfad entfällt.
 
     # Hygiene: eBay-Kategorien pro SKU + aggressive Preis-Config (wie eBay)
     sku_cat = load_sku_categories()
@@ -636,6 +688,15 @@ def main():
     price_overrides = load_price_overrides(PRICE_OVERRIDES_FILE)
     if price_overrides:
         log.info(f"Preisüberschreibungen geladen: {len(price_overrides)} SKUs")
+
+    seo_overrides = load_seo_overrides(SEO_OVERRIDES_FILE)
+    if seo_overrides:
+        log.info(f"SEO-Überschreibungen geladen: {len(seo_overrides)} SKUs")
+
+    global _BANNED
+    if Path(BANNED_SKUS_FILE).exists():
+        _BANNED = set(json.loads(Path(BANNED_SKUS_FILE).read_text(encoding="utf-8")))
+        log.info(f"Gesperrte SKUs (banned_skus.json, nie nach Shopify): {len(_BANNED)}")
 
     # Counters
     stats = {"total": 0, "filtered": 0, "kept": 0,
@@ -699,9 +760,10 @@ def main():
 
             rows = build_rows(product, pr, cfg, enrichment=enrichment,
                               verified_images=verified_images,
-                              mpn_image=mpn_images.get(sku),
                               hygiene=hyg,
-                              mpn_code=sku_mpn.get(sku, ""))
+                              mpn_code=sku_mpn.get(sku, ""),
+                              seo_override=seo_overrides.get(sku),
+                              image_source=v.get("image_source", ""))
             for row in rows:
                 writer.writerow(row)
             stats["image_rows"] += len(rows) - 1
@@ -728,6 +790,8 @@ def main():
                 if e and e in seen_eans:          # Sicherheits-Dedup
                     continue
                 sku = product["sku"]
+                if sku in _BANNED:
+                    continue
                 try:
                     pr = calculate_vk(product["purchase_price"], cfg["pricing"])
                 except Exception as ex:
