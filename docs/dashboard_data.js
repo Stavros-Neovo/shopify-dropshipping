@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-01T22:20:45.927758+00:00",
+  "generated_at": "2026-07-02T00:12:48.613936+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 88,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 938,
     "images_verified": 408,
@@ -9,43 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-01T20:57:22.996968+00:00",
-      "checked": 88,
+      "timestamp": "2026-07-01T22:43:15.898811+00:00",
+      "checked": 600,
       "lowered": 0,
-      "raised": 2,
-      "set_to_floor": 0,
+      "raised": 19,
+      "set_to_floor": 1,
       "skipped_floor": 0,
-      "skipped_few": 28,
-      "skipped_image": 12,
-      "unchanged": 46,
-      "errors": 0,
+      "skipped_few": 96,
+      "skipped_image": 16,
+      "unchanged": 467,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 212.99,
-        "new": 218.99,
-        "diff": 6.0,
+        "sku": "HDIS0273",
+        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
+        "old": 1339.95,
+        "new": 1401.95,
+        "diff": 62.0,
         "action": "raised"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 254.99,
-        "new": 261.99,
-        "diff": 7.0,
+        "sku": "HDIS0279",
+        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
+        "old": 1206.95,
+        "new": 1261.95,
+        "diff": 55.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0280",
+        "title": "Seagate Exos M ST28000NM003K / 28 TB",
+        "old": 1262.95,
+        "new": 1320.95,
+        "diff": 58.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDIS0295",
+        "title": "Seagate BarraCuda ST20000DM001 / 20TB / 3,5\"",
+        "old": 844.95,
+        "new": 883.95,
+        "diff": 39.0,
+        "action": "raised"
+      },
+      {
+        "sku": "HDXV0006",
+        "title": "Verbatim Store n Go 2,5 1TB USB 3.0 silver Ge",
+        "old": 95.99,
+        "new": 90.99,
+        "diff": -5.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HHWE1012",
+        "title": "ECOFLOW Shower Kit",
+        "old": 115.99,
+        "new": 118.99,
+        "diff": 3.0,
+        "action": "raised"
+      },
+      {
+        "sku": "NETT0085",
+        "title": "TP-LINK JetStream TL-SG3428XMP - Switch - man",
+        "old": 513.99,
+        "new": 514.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "NETT0227",
+        "title": "TP-LINK Omada EAP783 V1 - Accesspoint - Wi-Fi",
+        "old": 602.99,
+        "new": 603.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "NETT1014",
+        "title": "Teltonika RUTM50 - Wireless Router",
+        "old": 610.99,
+        "new": 611.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "NETT1074",
+        "title": "Teltonika RUTM56 - Wireless Router",
+        "old": 761.95,
+        "new": 796.95,
+        "diff": 35.0,
         "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-30",
-        "lowered": 2,
-        "raised": 7,
-        "floor": 0
-      },
       {
         "date": "2026-06-30",
         "lowered": 0,
@@ -123,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 2,
         "floor": 0
+      },
+      {
+        "date": "2026-07-01",
+        "lowered": 0,
+        "raised": 19,
+        "floor": 0
       }
     ]
   },
@@ -149,12 +213,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 115.17
     },
     "chart_7d": [
-      {
-        "date": "25.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "26.06",
         "revenue": 0,
@@ -190,15 +248,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "02.06",
+        "date": "02.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "03.06",
         "revenue": 0,
@@ -372,15 +430,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "03.04",
+        "date": "02.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "04.04",
         "revenue": 0,
@@ -914,6 +972,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "02.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1262,7 +1326,7 @@ window.DASHBOARD_DATA = {
         "order_id": "23-14765-26114",
         "date": "2026-06-18",
         "deadline": "2026-07-02",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "yyyECOFLOW Smart Plug"
         ],
