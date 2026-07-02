@@ -448,11 +448,12 @@
     "vk": 337.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/87315939_3237923707.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/87315939_3237923707.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPJ1049": {
     "ean": "5706991024425",
@@ -605,11 +606,12 @@
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
     "title": "Dell USB-C AC Adapter E5 - Kit - Netzteil - 65 Watt",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/96641971_1808209740.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/96641971_1808209740.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HHWB5014": {
     "ean": "4211125572112",
@@ -752,11 +754,12 @@
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "title": "Dell USB-C AC Adapter E5 - Kit - Netzteil - 65 Watt",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/68778456_1314329956.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/68778456_1314329956.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPL0344": {
     "ean": "5099206092372",
@@ -961,7 +964,7 @@
     "vk": 80.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/106175397_1540950944.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/106175397_1540950944.jpg",
@@ -975,7 +978,8 @@
       "https://images.icecat.biz/img/gallery/106175397_9327223817.jpg",
       "https://images.icecat.biz/img/gallery/106175397_8781666472.jpg",
       "https://images.icecat.biz/img/gallery/106175397_4671995710.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPR1059": {
     "ean": "8887910061091",
@@ -1107,11 +1111,12 @@
     "vk": 59.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/b97422122ae5e350330063db31409aa3e5a5a729.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/b97422122ae5e350330063db31409aa3e5a5a729.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HHWB5009": {
     "ean": "6970229250545",
@@ -1348,7 +1353,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/991603469f9d273c3d4704c1fdbe520d.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB0037": {
     "ean": "8006540957196",
@@ -1362,7 +1368,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/cccbf8176eeb65d54a3c5d5eb5bc2578.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB1129": {
     "ean": "4210201434832",
@@ -1471,7 +1478,7 @@
     "vk": 98.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/40f8c263cece032f548e042c38de13553dbba81e.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/40f8c263cece032f548e042c38de13553dbba81e.jpg",
@@ -1483,7 +1490,8 @@
       "https://images.icecat.biz/img/gallery/a4215f87ecacd3ed8f31179bf2247b4859707463.jpg",
       "https://images.icecat.biz/img/gallery/7cecf2b4c8199f480a02a45257b94c73fed83edc.jpg",
       "https://images.icecat.biz/img/gallery/1ff62f7d250ca2eefb035397e5398e4eb41c5a23.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "NOCO0008": {
     "ean": "1210000619242",
@@ -1817,7 +1825,8 @@
     "images": [
       "https://fbr.etailercdn.de/media/pimg/40/407948/thumbs/1489375_8413330.png"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "PPE0239": {
     "ean": "4895251648004",
@@ -3017,7 +3026,7 @@
     "vk": 110.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/ae5a0c976fc40c89f71267cb06e0da26b91f19bd.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/ae5a0c976fc40c89f71267cb06e0da26b91f19bd.jpg",
@@ -3031,7 +3040,8 @@
       "https://images.icecat.biz/img/gallery/21c247662cd87638fe9548d5d80afd8d902fdcde.jpg",
       "https://images.icecat.biz/img/gallery/080657d9834545374817158a7437617ac909e03e.jpg",
       "https://images.icecat.biz/img/gallery/ce3d80ca7ca46992a7a3ad44ac0a3816a70945c7.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "NETT0192": {
     "ean": "4897098685105",
@@ -4080,7 +4090,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/ef718d594dc5138cbf627ac455ab3b7a53a12594.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB1049": {
     "ean": "4210201445258",
@@ -4108,7 +4119,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/3d7acb245f2a516a151a5f5216ce23f8fbb291f4.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB4006": {
     "ean": "3030050182644",
@@ -4858,12 +4870,13 @@
     "vk": 194.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/97934692_6251822159.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/97934692_6251822159.jpg",
       "https://images.icecat.biz/img/gallery/4f6fd82ed50fc530d786be700038f230e00dabf1.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPY0060": {
     "ean": "6938818319608",
@@ -4919,7 +4932,8 @@
     "images": [
       "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_173837501?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "ENAB0010": {
     "ean": "6972822121079",
@@ -4949,7 +4963,8 @@
     "images": [
       "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_153265234?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HDIS0281": {
     "ean": "7636490078323",
@@ -5125,11 +5140,12 @@
     "vk": 206.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/101334373_3801331118.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/101334373_3801331118.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HHWB5022": {
     "ean": "4211125100674",
@@ -6290,11 +6306,12 @@
     "vk": 212.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/352d78ce07fecead5d0bf9811229585a34fa3180.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/352d78ce07fecead5d0bf9811229585a34fa3180.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPY0044": {
     "ean": "6938818319578",
@@ -6556,11 +6573,12 @@
     "vk": 751.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HDIS0269": {
     "ean": "8719706432276",
@@ -6724,11 +6742,12 @@
     "vk": 619.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HDIS0314": {
     "ean": "8719706027298",
@@ -6739,11 +6758,12 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "Seagate Exos 7E10 / ST4000NM027B / 4TB / 3,5\"",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HDIS0315": {
     "ean": "8719706022125",
@@ -6753,11 +6773,12 @@
     "vk": 532.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HDIS0316": {
     "ean": "8719706439480",
@@ -7054,7 +7075,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/101807859_5400024475.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWE0017": {
     "ean": "6970135036530",
@@ -7849,11 +7871,12 @@
     "vk": 307.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://m.media-amazon.com/images/I/61zjzScHqiL._AC_UY218_.jpg",
     "images": [
       "https://sellme.ee/image/catalog/product/2235958_4.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "RAM4G0057": {
     "ean": "4713294226655",
@@ -9279,11 +9302,12 @@
     "vk": 475.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/89299545_0059374121.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/89299545_0059374121.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "CPUA0098": {
     "ean": "730143314428",
@@ -9324,12 +9348,13 @@
     "title": "Seagate Exos 7E10 / ST4000NM025B / 4TB / 3,5\"",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
     ],
-    "supplier_email": "SSchulze@bab-distribution.de"
+    "supplier_email": "SSchulze@bab-distribution.de",
+    "image_too_small": true
   },
   "HHWB1111": {
     "ean": "4210201434818",
@@ -9375,12 +9400,13 @@
     "title": "Braun Oral-B iO Aufsteckbürsten Ultimative Reinigung 6er",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_url": "https://images.icecat.biz/img/gallery_mediums/1dc1714cb258a8e649a9a25c1859c659fb6b5b83.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery_mediums/1dc1714cb258a8e649a9a25c1859c659fb6b5b83.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "HHWB1134": {
     "ean": "8700216195027",
@@ -9737,12 +9763,13 @@
     "title": "TP-LINK TL-WA850RE 300Mbps Universal",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/15759189_9489094216.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/15759189_9489094216.jpg",
       "https://images.icecat.biz/img/gallery/15759189_3733683680.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "NETT0054": {
     "ean": "6935364099305",
@@ -10716,11 +10743,12 @@
     "title": "Norton 360 for Gamers",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/4af96bbe934ea58d79b479053fb168207e8268c5.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/4af96bbe934ea58d79b479053fb168207e8268c5.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SSDC0078": {
     "ean": "0649528944771",
@@ -10940,11 +10968,12 @@
     "title": "Equip USB 2.0 Cable - USB-A - Micro-USB - 1m - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/1505494_8081.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/1505494_8081.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2022": {
     "ean": "4015867184547",
@@ -11042,11 +11071,12 @@
     "title": "Equip USB 2.0 Cable - USB-C (M) - USB-A (M) - 1m - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/33264284_0120368995.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/33264284_0120368995.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2033": {
     "ean": "4015867198711",
@@ -11056,11 +11086,12 @@
     "title": "Equip USB 2.0 Cable - USB-C (M) - USB-C (M) - 1m - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/33264285_2297825571.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/33264285_2297825571.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2034": {
     "ean": "4015867223994",
@@ -11106,11 +11137,12 @@
     "title": "Equip Adapter - DisplayPort (M) - DVI-V (W) - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/5087977_2855477134.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/5087977_2855477134.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2044": {
     "ean": "4015867157305",
@@ -11120,11 +11152,12 @@
     "title": "Equip Adapter - Mini DisplayPort (M) - HDMI (W) - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/6854058_5892195291.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/6854058_5892195291.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2045": {
     "ean": "4015867157503",
@@ -11134,11 +11167,12 @@
     "title": "Equip Adapter - DisplayPort (M) - HD-15 VGA (W) - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/norm/high/6859762-3071.jpg",
     "images": [
       "https://images.icecat.biz/img/norm/high/6859762-3071.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2046": {
     "ean": "4015867178065",
@@ -11148,11 +11182,12 @@
     "title": "Equip Adapter - DisplayPort (M) - HDMI (W) - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/14618357_6792151845.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/14618357_6792151845.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2049": {
     "ean": "4015867203736",
@@ -11162,13 +11197,14 @@
     "title": "Equip Adapter - DisplayPort (M) - USB-C (M) - 1,8m - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/57965552_6365312380.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/57965552_6365312380.jpg",
       "https://images.icecat.biz/img/gallery/57965552_5375588864.jpg",
       "https://images.icecat.biz/img/gallery/57965552_3723804116.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2053": {
     "ean": "4015867225172",
@@ -11178,11 +11214,12 @@
     "title": "Equip Audiokabel - 2 RCA (W) - mini-phone 3.5mm (M) - 2,5m - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/87420102_4378770867.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/87420102_4378770867.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2054": {
     "ean": "4015867225189",
@@ -11192,11 +11229,12 @@
     "title": "Equip Audiokabel - 2 RCA (M) - 2 RCA (M) - 2,5m - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": true,
+    "image_verified": false,
     "image_url": "https://images.icecat.biz/img/gallery/87420135_4298542323.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/87420135_4298542323.jpg"
-    ]
+    ],
+    "image_too_small": true
   },
   "SUPE2056": {
     "ean": "4015867163085",
@@ -12982,10 +13020,11 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/95913960_1376872032.jpg",
+    "image_url": "https://media.ipcstore.net/img/140383.jpg",
     "images": [
-      "https://images.icecat.biz/img/gallery/95913960_1376872032.jpg"
-    ]
+      "https://media.ipcstore.net/img/140383.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "SUPS0366": {
     "ean": "8806097740599",
@@ -13550,12 +13589,11 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/a12e40c3a4a9cfb934cf5ea26413da22e887568c.jpg",
+    "image_url": "https://media.ipcstore.net/img/21306974.jpg",
     "images": [
-      "https://images.icecat.biz/img/gallery/a12e40c3a4a9cfb934cf5ea26413da22e887568c.jpg",
-      "https://images.icecat.biz/img/gallery/487cd126931dc30314d309628126cf91c2e89467.jpg",
-      "https://images.icecat.biz/img/gallery/da1a9ecfea2131b10adf11e159ca0c6ebbf2102c.jpg"
-    ]
+      "https://media.ipcstore.net/img/21306974.jpg"
+    ],
+    "image_source": "kosatec_ipcstore"
   },
   "USBV0020": {
     "ean": "0023942991045",
