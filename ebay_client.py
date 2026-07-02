@@ -1146,7 +1146,16 @@ class EbayClient:
         listing_id = ""
         if not has_image:
             log.info(f"eBay SKU {sku}: kein Bild vorhanden — Offer bleibt als Draft")
-        if int(product.get("stock", 0)) > 0 and offer_id and has_image:
+        # NOTLAGE-SPERRE (2026-07-02, User-Regel): eBay NUR bestehende Live-Listings
+        # pflegen (Preis/Bestand via create_or_update_offer/set_inventory) und
+        # deaktivieren (withdraw) — NIEMALS automatisch neue Listings schalten.
+        # Das automatische Publish machte aus neu-bebilderten Draft-Offers stündlich
+        # neue Listings. Aktivieren erfolgt nur noch bewusst über publish_offers.py.
+        # Zum Reaktivieren: EBAY_AUTO_PUBLISH=true setzen.
+        AUTO_PUBLISH = os.getenv("EBAY_AUTO_PUBLISH", "false").lower() == "true"
+        if int(product.get("stock", 0)) > 0 and offer_id and has_image and not AUTO_PUBLISH:
+            log.info(f"eBay SKU {sku}: Auto-Publish gesperrt (keine neuen Listings) → übersprungen")
+        elif int(product.get("stock", 0)) > 0 and offer_id and has_image:
             try:
                 listing_id = self.publish_offer(offer_id) or ""
             except RuntimeError as e:
