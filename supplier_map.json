@@ -5568,22 +5568,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SDXS0028": {
-    "ean": "0619659204877",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 113.01,
-    "vk": 225.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SanDisk Portable SDSSDE30-1T00-G26 1TB SSD Gen 2",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/132485.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/132485.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SHG0099": {
     "ean": "6974316993117",
     "supplier": "BAB",
