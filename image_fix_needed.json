@@ -473,5 +473,15 @@
     "ean": "6938818303188",
     "title": "Yealink IP Telefon SIP-T53W",
     "detected_at": "2026-07-02T21:36:33.744815+00:00"
+  },
+  "NETT1049": {
+    "ean": "4779051840328",
+    "title": "Teltonika PR1KCS28 - Antenne",
+    "detected_at": "2026-07-02T23:37:53.082699+00:00"
+  },
+  "NETU0170": {
+    "ean": "0810084693582",
+    "title": "Ubiquiti UniFi Protect G5 PTZ - Netzwerk-Überwachungskamera",
+    "detected_at": "2026-07-02T23:39:53.159321+00:00"
   }
 }
