@@ -2926,7 +2926,7 @@
     "ean": "4054278990279",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 74.6,
+    "ek": 70.04,
     "vk": 148.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2943,20 +2943,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/96f0aeb47c4315e62a84236596255dd6978f733b.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/96f0aeb47c4315e62a84236596255dd6978f733b.jpg"
-    ],
-    "image_verified": true
-  },
-  "NETT0097": {
-    "ean": "6935364086862",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 52.78,
-    "vk": 106.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/77001888_1605330015.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/77001888_1605330015.jpg"
     ],
     "image_verified": true
   },
@@ -4173,7 +4159,7 @@
     "ean": "4066529180155",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 79.17,
+    "ek": 75.11,
     "vk": 156.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4896,22 +4882,6 @@
       "https://images.icecat.biz/img/gallery/8296d44b436d5012edfb64c99158d11481464dee.jpg"
     ]
   },
-  "USBS0082": {
-    "ean": "0619659188566",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 89.9,
-    "vk": 176.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SanDisk Extreme Pro Flash-Speicherkarte  512 GB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/389042.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/389042.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "ANTB0005": {
     "ean": "8885022190166",
     "supplier": "BAB",
@@ -5012,21 +4982,6 @@
       "https://media.ipcstore.net/img/118928.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "HDIW0209": {
-    "ean": "0718037896199",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 124.27,
-    "vk": 245.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/130852.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/130852.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "HDIW0214": {
     "ean": "0718037899770",
@@ -6703,21 +6658,6 @@
       "https://images.icecat.biz/img/gallery/fb3d8afd921c45853a37ac5f51e2586989ea5f3c.jpg"
     ]
   },
-  "HDIS0293": {
-    "ean": "8719706022163",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 380.01,
-    "vk": 723.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Seagate Exos 7E10  ST8000NM018B / 8TB",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
-  },
   "HDIS0294": {
     "ean": "0763649174920",
     "supplier": "BAB",
@@ -6879,21 +6819,6 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
-  },
-  "HDIT0229": {
-    "ean": "4260557512722",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 303.71,
-    "vk": 579.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287495.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287495.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "HDIT0237": {
     "ean": "4260557513156",
@@ -7736,21 +7661,6 @@
     "images": [
       "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/1245184/62072201267149/803387/6a2ac8adE9bf62106/42b10752b5083d5e.png.webp"
     ]
-  },
-  "PPCE0003": {
-    "ean": "4895251604802",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 221.68,
-    "vk": 424.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-glacier-zusatzbatterie-1167272299.png?v=1747400841",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-glacier-zusatzbatterie-1167272299.png?v=1747400841"
-    ],
-    "title": "ECOFLOW Glacier Plug-in Battery",
-    "image_verified": true
   },
   "PPE0220": {
     "ean": "4895251646673",
@@ -9922,21 +9832,6 @@
       "https://static.wixstatic.com/media/814ec4_301620fa362641499b60078954ade8fd~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-19.jpg"
     ],
     "image_verified": true
-  },
-  "NETT1013": {
-    "ean": "4779051840830",
-    "supplier": "BAB",
-    "ek": 151.24,
-    "vk": 294.99,
-    "title": "Teltonika RUT906 - Wireless Router",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://static.wixstatic.com/media/e7aade_87ff8fdd14224322a487881e7d808a99~mv2.jpg/v1/fill/w_1920,h_760,al_c,q_85/RUT906_1920x760-hero.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/e7aade_87ff8fdd14224322a487881e7d808a99~mv2.jpg/v1/fill/w_1920,h_760,al_c,q_85/RUT906_1920x760-hero.jpg"
-    ],
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NETT1022": {
     "ean": "4779027312385",
@@ -13168,7 +13063,7 @@
   "SUPS7023": {
     "ean": "3800235261798",
     "supplier": "BAB",
-    "ek": 11.17,
+    "ek": 10.66,
     "vk": 28.99,
     "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
     "listed_at": "2026-06-14T20:49:22",
@@ -13178,7 +13073,8 @@
       "https://media.ipcstore.net/img/263798.jpg"
     ],
     "image_verified": true,
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPV0026": {
     "ean": "0023942318644",
