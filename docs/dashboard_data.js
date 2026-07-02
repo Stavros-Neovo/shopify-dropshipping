@@ -1,115 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-02T12:10:59.341240+00:00",
+  "generated_at": "2026-07-02T15:20:04.733068+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
-    "total_skus": 932,
-    "images_verified": 406,
-    "images_missing": 526
+    "total_skus": 925,
+    "images_verified": 585,
+    "images_missing": 340
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-02T09:38:38.473755+00:00",
+      "timestamp": "2026-07-02T12:23:17.857543+00:00",
       "checked": 600,
-      "lowered": 10,
-      "raised": 3,
-      "set_to_floor": 69,
+      "lowered": 3,
+      "raised": 9,
+      "set_to_floor": 72,
       "skipped_floor": 0,
-      "skipped_few": 24,
-      "skipped_image": 16,
-      "unchanged": 476,
-      "errors": 2,
+      "skipped_few": 32,
+      "skipped_image": 33,
+      "unchanged": 450,
+      "errors": 1,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 454.99,
-        "new": 431.99,
-        "diff": -23.0,
+        "sku": "RAM4G0056",
+        "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+        "old": 244.99,
+        "new": 234.99,
+        "diff": -10.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 226.99,
-        "new": 218.99,
-        "diff": -8.0,
+        "sku": "RAM4K0058",
+        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
+        "old": 230.99,
+        "new": 221.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 218.99,
-        "new": 211.99,
-        "diff": -7.0,
+        "sku": "RAM5G0019",
+        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
+        "old": 616.99,
+        "new": 593.95,
+        "diff": -23.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 449.99,
-        "new": 398.99,
-        "diff": -51.0,
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 557.99,
+        "new": 538.95,
+        "diff": -19.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 615.99,
-        "new": 555.95,
-        "diff": -60.04,
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 533.99,
+        "new": 516.95,
+        "diff": -17.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 274.99,
-        "new": 245.99,
-        "diff": -29.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 90.99,
+        "new": 87.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0273",
-        "title": "Seagate Exos X24 ST24000NM002H / 24TB",
-        "old": 1401.95,
-        "new": 1339.95,
-        "diff": -62.0,
+        "sku": "REFT0004",
+        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
+        "old": 636.99,
+        "new": 604.95,
+        "diff": -32.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0279",
-        "title": "Seagate Exos X22 ST22000NM001E / 22TB",
-        "old": 1261.95,
-        "new": 1206.95,
-        "diff": -55.0,
+        "sku": "REFT1002",
+        "title": "T1A Dell Latitude 5430 (14\")",
+        "old": 517.99,
+        "new": 518.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 359.99,
+        "new": 350.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0280",
-        "title": "Seagate Exos M ST28000NM003K / 28 TB",
-        "old": 1320.95,
-        "new": 1262.95,
-        "diff": -58.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0281",
-        "title": "Seagate IronWolf ST2000VN003 / 2TB",
-        "old": 225.99,
-        "new": 203.99,
-        "diff": -22.0,
-        "action": "lowered"
+        "sku": "REFT1005",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
+        "old": 556.99,
+        "new": 557.95,
+        "diff": 0.96,
+        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-06-30",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-06-30",
         "lowered": 5,
@@ -187,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 10,
         "raised": 3,
         "floor": 0
+      },
+      {
+        "date": "2026-07-02",
+        "lowered": 3,
+        "raised": 9,
+        "floor": 0
       }
     ]
   },
@@ -209,8 +209,8 @@ window.DASHBOARD_DATA = {
       "month_return_reserve": 0.0,
       "total_sales_30d": 11,
       "total_revenue_30d": 973.8,
-      "total_profit_30d": 90.62,
-      "total_cash_profit_30d": 115.17
+      "total_profit_30d": 199.32,
+      "total_cash_profit_30d": 218.69
     },
     "chart_7d": [
       {
@@ -338,7 +338,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": 7.53,
+        "profit": 116.23,
         "sales": 2
       },
       {
@@ -880,7 +880,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "16.06",
         "revenue": 182.97,
-        "profit": 7.53,
+        "profit": 116.23,
         "sales": 2
       },
       {
@@ -981,6 +981,32 @@ window.DASHBOARD_DATA = {
       }
     ],
     "top_products": [
+      {
+        "sku": "HHWM0023",
+        "title": "Makita Bohrhammer - schnurlos - 3 Modi",
+        "sold": 1,
+        "revenue": 152.99,
+        "profit": 103.22,
+        "cash_profit": 103.22,
+        "vk": 152.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 152.99,
+          "ebay_fee": 24.21,
+          "ebay_percent_fee": 23.67,
+          "ebay_fixed_fee": 0.54,
+          "vat": 20.56,
+          "netto_vk": 108.22,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 103.22,
+          "cash_profit_t": 103.22,
+          "profit_u": 103.22,
+          "qty": 1,
+          "profit_t": 103.22
+        }
+      },
       {
         "sku": "NETU0187",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
@@ -1214,32 +1240,6 @@ window.DASHBOARD_DATA = {
           "qty": 1,
           "profit_t": 3.98
         }
-      },
-      {
-        "sku": "HHWB5012",
-        "title": "Beurer IL 11 Infrarotlampe",
-        "sold": 1,
-        "revenue": 34.99,
-        "profit": 3.41,
-        "cash_profit": 4.17,
-        "vk": 34.99,
-        "ek": 15.23,
-        "calc": {
-          "vk_brutto": 34.99,
-          "ebay_fee": 5.95,
-          "ebay_percent_fee": 5.41,
-          "ebay_fixed_fee": 0.54,
-          "vat": 4.64,
-          "netto_vk": 24.4,
-          "ship": 5.0,
-          "ek": 15.23,
-          "return_reserve": 0.76,
-          "cash_profit_u": 4.17,
-          "cash_profit_t": 4.17,
-          "profit_u": 3.41,
-          "qty": 1,
-          "profit_t": 3.41
-        }
       }
     ],
     "recent_sales": [
@@ -1254,8 +1254,8 @@ window.DASHBOARD_DATA = {
         "date": "16.06 17:06",
         "title": "Makita Bohrhammer - schnurlos - 3 Modi",
         "revenue": 152.99,
-        "profit": -5.48,
-        "cash_profit": -0.31
+        "profit": 103.22,
+        "cash_profit": 103.22
       },
       {
         "date": "16.06 07:16",
