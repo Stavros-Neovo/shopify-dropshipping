@@ -13604,5 +13604,104 @@
     "title": "ECOFLOW Smart Plug 2",
     "image_verified": false,
     "source": "manual_legacy_sku"
+  },
+  "HDIS0139": {
+    "ean": "0763649113653",
+    "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "HDIS0289": {
+    "ean": "8719706432337",
+    "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "RAM5K0015": {
+    "ean": "0740617326130",
+    "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-64GB-2x32 (KF548S38IBK2-64)",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/a7269fc172da5fe5669c5e41b1bee6f1.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/a7269fc172da5fe5669c5e41b1bee6f1.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "RAM5K0044": {
+    "ean": "0740617328509",
+    "title": "Kingston FURY BEAST RGB - DDR5-KIT-64GB-2x32 (KF556C40BBAK2-64)",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/e2ee578b51f234933d534614f2f0acd4.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/e2ee578b51f234933d534614f2f0acd4.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "SSDS0115": {
+    "ean": "8806094947205",
+    "title": "SSD M.2 (2280) 4TB Samsung 990 PRO (PCIe/NVMe)",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "SUPS0235": {
+    "ean": "8806090270123",
+    "title": "Samsung EO-IC100 - Ohrhörer mit Mikrofon kabelgebunden - USB-C - schwarz",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/76980268_9231647426.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/76980268_9231647426.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "SUPS0266": {
+    "ean": "8806095039893",
+    "title": "Samsung Galaxy SmartTag2 - Anti-Verlust Bluetooth-Tag für Handy - schwarz",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/05651522f7bea2969562069ede123d2c.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/05651522f7bea2969562069ede123d2c.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "SUPS0268": {
+    "ean": "8806095039763",
+    "title": "Samsung Galaxy SmartTag2 - Anti-Verlust Bluetooth-Tag für Handy - 4 Pack 2 schwarz, 2 weiß",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/7a9321a3fa070cd7d08368a1b5363e1c.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/7a9321a3fa070cd7d08368a1b5363e1c.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
+  },
+  "SUPS0287": {
+    "ean": "8806092673885",
+    "title": "Samsung EP-T6530 - Netzteil - 65 Watt - 2 x USB-C - schwarz",
+    "supplier": "BAB",
+    "image_url": "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg",
+    "images": [
+      "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg"
+    ],
+    "image_verified": true,
+    "image_source": "icecat_mpn"
   }
 }
