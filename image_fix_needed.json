@@ -398,5 +398,75 @@
     "ean": "4210201445234",
     "title": "Braun Oral-B iO Series 6 White",
     "detected_at": "2026-07-02T18:07:59.997308+00:00"
+  },
+  "RAM4G0056": {
+    "ean": "4719692007681",
+    "title": "G.Skill Ripjaws - DDR4 - 32 GB 2x16 GB",
+    "detected_at": "2026-07-02T19:56:54.302460+00:00"
+  },
+  "SUPA1046": {
+    "ean": "0840414681804",
+    "title": "Amazon Echo Dot Max - Sphärisch - Weiß",
+    "detected_at": "2026-07-02T20:02:16.607256+00:00"
+  },
+  "SUPB1054": {
+    "ean": "0017817846912",
+    "title": "Bose Ultra Open Earbuds | White",
+    "detected_at": "2026-07-02T20:02:19.197729+00:00"
+  },
+  "SUPB1060": {
+    "ean": "0017817859585",
+    "title": "Bose QuietComfort Ultra 2.Gen black",
+    "detected_at": "2026-07-02T20:02:22.260769+00:00"
+  },
+  "SUPB1066": {
+    "ean": "0017817768429",
+    "title": "Bose SoundLink Micro - Lautsprecher - tragbar",
+    "detected_at": "2026-07-02T20:02:24.901801+00:00"
+  },
+  "SUPD1025": {
+    "ean": "5397184961766",
+    "title": "Dell Pro Smart Dock SD25 - Dockingstation - USB-C - HDMI, 2 x DP, USB-C - 1GbE, 2.5GbE - 180 Watt",
+    "detected_at": "2026-07-02T20:02:37.447313+00:00"
+  },
+  "SUPE2049": {
+    "ean": "4015867203736",
+    "title": "Equip Adapter - DisplayPort (M) - USB-C (M) - 1,8m - Black",
+    "detected_at": "2026-07-02T20:02:59.199360+00:00"
+  },
+  "SUPL0060": {
+    "ean": "5099206070011",
+    "title": "Logitech Presenter Spotlight Wireless Grey",
+    "detected_at": "2026-07-02T20:05:03.283790+00:00"
+  },
+  "SUPL0458": {
+    "ean": "5099206090828",
+    "title": "Logitech Presenter Wireless R500s Black",
+    "detected_at": "2026-07-02T20:06:05.806294+00:00"
+  },
+  "SUPL0501": {
+    "ean": "5099206090347",
+    "title": "Logitech Zone Wired MS-Teams Headseat",
+    "detected_at": "2026-07-02T20:06:10.502836+00:00"
+  },
+  "SUPN4000": {
+    "ean": "5711157014110",
+    "title": "Needit PARK LITE (elektrische Parkscheibe) Blau",
+    "detected_at": "2026-07-02T20:07:16.004280+00:00"
+  },
+  "SUPN4003": {
+    "ean": "5711157030110",
+    "title": "Needit Park Mini (elektrische Parkscheibe) Schwarz",
+    "detected_at": "2026-07-02T20:07:19.410360+00:00"
+  },
+  "SUPS0296": {
+    "ean": "4548736156432",
+    "title": "Sony WH-ULT900N - Kopfhörer - Schwarz",
+    "detected_at": "2026-07-02T20:08:20.295930+00:00"
+  },
+  "SUPS0328": {
+    "ean": "4548736134294",
+    "title": "Sony WH-1000XM5L True Wireless Headset | Night Blue",
+    "detected_at": "2026-07-02T20:08:30.105326+00:00"
   }
 }
