@@ -1,72 +1,6 @@
 {
   "history": [
     {
-      "timestamp": "2026-06-28T21:32:23.767867+00:00",
-      "checked": 600,
-      "lowered": 6,
-      "raised": 8,
-      "skipped_floor": 0,
-      "skipped_few": 16,
-      "skipped_image": 17,
-      "unchanged": 486,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-28T23:33:10.656889+00:00",
-      "checked": 600,
-      "lowered": 2,
-      "raised": 8,
-      "skipped_floor": 0,
-      "skipped_few": 31,
-      "skipped_image": 39,
-      "unchanged": 440,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-29T05:03:27.072118+00:00",
-      "checked": 67,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 11,
-      "unchanged": 47,
-      "errors": 4
-    },
-    {
-      "timestamp": "2026-06-29T10:01:21.660420+00:00",
-      "checked": 600,
-      "lowered": 4,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 23,
-      "skipped_image": 17,
-      "unchanged": 485,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-29T14:30:32.277966+00:00",
-      "checked": 600,
-      "lowered": 3,
-      "raised": 7,
-      "skipped_floor": 0,
-      "skipped_few": 31,
-      "skipped_image": 42,
-      "unchanged": 438,
-      "errors": 0
-    },
-    {
-      "timestamp": "2026-06-29T17:55:20.014543+00:00",
-      "checked": 56,
-      "lowered": 0,
-      "raised": 0,
-      "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 5,
-      "unchanged": 44,
-      "errors": 4
-    },
-    {
       "timestamp": "2026-06-29T20:17:39.158073+00:00",
       "checked": 600,
       "lowered": 6,
@@ -329,6 +263,72 @@
       "skipped_image": 10,
       "unchanged": 46,
       "errors": 5
+    },
+    {
+      "timestamp": "2026-07-02T18:05:25.489441+00:00",
+      "checked": 600,
+      "lowered": 10,
+      "raised": 11,
+      "skipped_floor": 0,
+      "skipped_few": 30,
+      "skipped_image": 19,
+      "unchanged": 418,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-07-02T19:56:51.855031+00:00",
+      "checked": 600,
+      "lowered": 5,
+      "raised": 12,
+      "skipped_floor": 0,
+      "skipped_few": 35,
+      "skipped_image": 48,
+      "unchanged": 370,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-07-02T21:36:21.601472+00:00",
+      "checked": 66,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 11,
+      "unchanged": 45,
+      "errors": 5
+    },
+    {
+      "timestamp": "2026-07-02T23:32:42.274291+00:00",
+      "checked": 600,
+      "lowered": 10,
+      "raised": 11,
+      "skipped_floor": 0,
+      "skipped_few": 29,
+      "skipped_image": 21,
+      "unchanged": 417,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-07-03T04:12:59.304939+00:00",
+      "checked": 600,
+      "lowered": 6,
+      "raised": 12,
+      "skipped_floor": 0,
+      "skipped_few": 35,
+      "skipped_image": 49,
+      "unchanged": 369,
+      "errors": 0
+    },
+    {
+      "timestamp": "2026-07-03T07:42:31.949307+00:00",
+      "checked": 62,
+      "lowered": 0,
+      "raised": 0,
+      "skipped_floor": 0,
+      "skipped_few": 0,
+      "skipped_image": 7,
+      "unchanged": 45,
+      "errors": 5
     }
   ],
   "last_changes": [
@@ -342,10 +342,10 @@
       "old_price": 297.99,
       "new_price": 283.99,
       "competitor_count": 11,
-      "lowest_competitor": 219.9,
+      "lowest_competitor": 220.01,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-07-02T15:35:49.664382+00:00"
+      "timestamp": "2026-07-03T07:42:32.473512+00:00"
     },
     {
       "ean": "6938818303171",
@@ -357,10 +357,10 @@
       "old_price": 181.99,
       "new_price": 165.99,
       "competitor_count": 17,
-      "lowest_competitor": 116.67,
+      "lowest_competitor": 116.73,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-07-02T15:35:54.257067+00:00"
+      "timestamp": "2026-07-03T07:42:36.745912+00:00"
     },
     {
       "ean": "6938818308497",
@@ -375,7 +375,7 @@
       "lowest_competitor": 161.41,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-07-02T15:35:58.639736+00:00"
+      "timestamp": "2026-07-03T07:42:40.067995+00:00"
     },
     {
       "ean": "6938818306578",
@@ -387,10 +387,10 @@
       "old_price": 254.99,
       "new_price": 251.99,
       "competitor_count": 9,
-      "lowest_competitor": 210.02,
+      "lowest_competitor": 210.12,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-07-02T15:36:03.758126+00:00"
+      "timestamp": "2026-07-03T07:42:44.028734+00:00"
     },
     {
       "ean": "023942491682",
@@ -405,19 +405,19 @@
       "lowest_competitor": 34.95,
       "action": "lowered",
       "reason": "floor_protection_set_to_floor",
-      "timestamp": "2026-07-02T15:36:32.302904+00:00"
+      "timestamp": "2026-07-03T07:43:10.809423+00:00"
     }
   ],
   "last_run": {
-    "timestamp": "2026-07-02T15:35:48.743484+00:00",
-    "checked": 66,
+    "timestamp": "2026-07-03T07:42:31.949307+00:00",
+    "checked": 62,
     "lowered": 0,
     "raised": 0,
     "set_to_floor": 5,
     "skipped_floor": 0,
     "skipped_few": 0,
-    "skipped_image": 10,
-    "unchanged": 46,
+    "skipped_image": 7,
+    "unchanged": 45,
     "errors": 5,
     "dry_run": false
   }

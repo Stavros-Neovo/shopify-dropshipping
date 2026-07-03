@@ -2326,7 +2326,7 @@
     "ean": "0097855162045",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.3,
+    "ek": 42.21,
     "vk": 90.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3706,7 +3706,7 @@
     "ean": "5099206090347",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 72.12,
+    "ek": 71.99,
     "vk": 145.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4006,7 +4006,7 @@
     "ean": "4260557513262",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.34,
+    "ek": 83.19,
     "vk": 165.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4966,7 +4966,7 @@
     "ean": "0718037899770",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 148.24,
+    "ek": 147.99,
     "vk": 301.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5291,22 +5291,6 @@
     "title": "Teltonika TRB246 - Gateway",
     "image_verified": true
   },
-  "NETU0013": {
-    "ean": "0810010076830",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 132.92,
-    "vk": 257.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "UbiQuiti UniFi U6-PRO Wi-Fi 6 Access Point",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/125816.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/125816.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "NETU0104": {
     "ean": "0810084693650",
     "supplier": "BAB",
@@ -5569,22 +5553,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SDXS0028": {
-    "ean": "0619659204877",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 113.01,
-    "vk": 225.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SanDisk Portable SDSSDE30-1T00-G26 1TB SSD Gen 2",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/132485.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/132485.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SHG0099": {
     "ean": "6974316993117",
     "supplier": "BAB",
@@ -5732,7 +5700,7 @@
     "ean": "0843367130283",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 135.09,
+    "ek": 134.84,
     "vk": 263.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5835,7 +5803,7 @@
     "ean": "0718037894850",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 118.42,
+    "ek": 118.21,
     "vk": 234.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5891,7 +5859,7 @@
     "ean": "0718037907154",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 108.69,
+    "ek": 108.49,
     "vk": 215.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6625,7 +6593,7 @@
     "ean": "8719706438667",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 792.41,
+    "ek": 791.02,
     "vk": 1607.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6839,7 +6807,7 @@
     "ean": "0718037899794",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 177.19,
+    "ek": 176.87,
     "vk": 350.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6956,7 +6924,7 @@
     "ean": "0718037906201",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 377.28,
+    "ek": 376.97,
     "vk": 717.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6987,7 +6955,7 @@
     "ean": "0718037901442",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 481.58,
+    "ek": 480.73,
     "vk": 920.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8732,7 +8700,7 @@
     "ean": "0843367132225",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 180.41,
+    "ek": 180.39,
     "vk": 347.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8748,7 +8716,7 @@
     "ean": "0843367132232",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 293.86,
+    "ek": 293.35,
     "vk": 570.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8940,7 +8908,7 @@
     "ean": "0718037893211",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 219.0,
+    "ek": 218.04,
     "vk": 430.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9088,7 +9056,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 260.67,
+    "ek": 259.53,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -12325,7 +12293,7 @@
   "SUPL0233": {
     "ean": "5099206066199",
     "supplier": "BAB",
-    "ek": 8.59,
+    "ek": 8.58,
     "vk": 24.99,
     "title": "Logitech Mouse M220 Silent Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -12616,7 +12584,7 @@
   "SUPR1009": {
     "ean": "8886419333265",
     "supplier": "BAB",
-    "ek": 14.25,
+    "ek": 14.22,
     "vk": 35.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - black",
     "listed_at": "2026-06-14T20:49:22",
@@ -12632,7 +12600,7 @@
   "SUPR1027": {
     "ean": "8886419333326",
     "supplier": "BAB",
-    "ek": 14.69,
+    "ek": 14.67,
     "vk": 38.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - white",
     "listed_at": "2026-06-14T20:49:22",
@@ -12663,7 +12631,7 @@
   "SUPR1055": {
     "ean": "8886419345763",
     "supplier": "BAB",
-    "ek": 69.45,
+    "ek": 69.32,
     "vk": 145.99,
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
     "listed_at": "2026-06-14T20:49:22",
@@ -13617,7 +13585,9 @@
       "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 94.4,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HDIS0289": {
     "ean": "8719706432337",
@@ -13628,7 +13598,9 @@
       "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 314.65,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "RAM5K0015": {
     "ean": "0740617326130",
@@ -13639,7 +13611,9 @@
       "https://images.icecat.biz/img/gallery/a7269fc172da5fe5669c5e41b1bee6f1.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 645.0,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "RAM5K0044": {
     "ean": "0740617328509",
@@ -13650,7 +13624,9 @@
       "https://images.icecat.biz/img/gallery/e2ee578b51f234933d534614f2f0acd4.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 750.0,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SSDS0115": {
     "ean": "8806094947205",
@@ -13661,7 +13637,9 @@
       "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 502.0,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0235": {
     "ean": "8806090270123",
@@ -13672,7 +13650,9 @@
       "https://images.icecat.biz/img/gallery/76980268_9231647426.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 8.42,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0266": {
     "ean": "8806095039893",
@@ -13683,7 +13663,9 @@
       "https://images.icecat.biz/img/gallery/05651522f7bea2969562069ede123d2c.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 11.77,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0268": {
     "ean": "8806095039763",
@@ -13694,7 +13676,9 @@
       "https://images.icecat.biz/img/gallery/7a9321a3fa070cd7d08368a1b5363e1c.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 45.17,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0287": {
     "ean": "8806092673885",
@@ -13705,6 +13689,8 @@
       "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg"
     ],
     "image_verified": true,
-    "image_source": "icecat_mpn"
+    "image_source": "icecat_mpn",
+    "ek": 20.3,
+    "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
