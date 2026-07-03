@@ -4043,7 +4043,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/101441405_8607756630.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB1048": {
     "ean": "4210201445234",
@@ -7019,7 +7020,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/101904057_9138441525.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB1055": {
     "ean": "4210201435587",
@@ -9345,7 +9347,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/2abeecd927d24727ccd5a7b0ee41a8d2.jpg"
     ],
-    "image_verified": true
+    "image_verified": false,
+    "image_too_small": true
   },
   "HHWB1131": {
     "ean": "8700216194761",
