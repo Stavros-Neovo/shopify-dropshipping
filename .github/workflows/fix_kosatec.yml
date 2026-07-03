@@ -1,0 +1,37 @@
+name: Fix Kosatec Produkte
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "true = live schreiben (sonst Dry-Run)"
+        required: false
+        default: "false"
+      limit:
+        description: "Nur N Produkte (0 = alle 244)"
+        required: false
+        default: "5"
+
+concurrency:
+  group: fix-kosatec
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: pip install requests pyyaml
+      - name: Fix Kosatec-Produkte
+        env:
+          SHOPIFY_ADMIN_TOKEN: ${{ secrets.SHOPIFY_ADMIN_TOKEN }}
+        run: |
+          ARGS="--limit=${{ github.event.inputs.limit }}"
+          [ "${{ github.event.inputs.apply }}" = "true" ] && ARGS="$ARGS --apply"
+          echo "Starte: python fix_kosatec_products.py $ARGS"
+          python fix_kosatec_products.py $ARGS
