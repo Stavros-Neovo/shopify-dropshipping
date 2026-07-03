@@ -5946,21 +5946,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0490": {
-    "ean": "5099206104419",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 115.1,
-    "vk": 224.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/130789.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/130789.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPL0575": {
     "ean": "5099206121942",
     "supplier": "BAB",
@@ -12068,21 +12053,6 @@
     ],
     "image_verified": true
   },
-  "SUPG4011": {
-    "ean": "6947273704874",
-    "supplier": "BAB",
-    "ek": 88.31,
-    "vk": 173.99,
-    "title": "Grandstream GWN7665 - Accesspoint - Wi-Fi 6 - Wi-Fi 6E",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/135994.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/135994.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPJ0180": {
     "ean": "5706991023299",
     "supplier": "BAB",
@@ -13443,14 +13413,6 @@
       "https://images.icecat.biz/img/gallery/30389245_4532139143.jpg"
     ],
     "image_verified": true
-  },
-  "PPSE0092": {
-    "ean": "4895251642804",
-    "title": "ECOFLOW Bracket - Semi-enclosed Balcony",
-    "image_verified": false,
-    "ek": 83.74,
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NOCO0007": {
     "image_url": "https://no.co/media/catalog/product/g/b/gbx45.png",
