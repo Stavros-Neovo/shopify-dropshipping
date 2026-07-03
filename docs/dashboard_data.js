@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-02T23:12:26.699258+00:00",
+  "generated_at": "2026-07-03T03:40:52.662991+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 66,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 933,
     "images_verified": 587,
@@ -9,67 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-02T21:36:21.601472+00:00",
-      "checked": 66,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 5,
+      "timestamp": "2026-07-02T23:32:42.274291+00:00",
+      "checked": 600,
+      "lowered": 10,
+      "raised": 11,
+      "set_to_floor": 112,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 11,
-      "unchanged": 45,
-      "errors": 5,
+      "skipped_few": 29,
+      "skipped_image": 21,
+      "unchanged": 417,
+      "errors": 0,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "SUPV0073",
-        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
-        "old": 297.99,
-        "new": 283.99,
-        "diff": -14.0,
+        "sku": "CPUA0135",
+        "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
+        "old": 602.99,
+        "new": 580.95,
+        "diff": -22.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0010",
-        "title": "Yealink IP Telefon SIP-T54W V2",
-        "old": 181.99,
-        "new": 165.99,
-        "diff": -16.0,
+        "sku": "CPUI0206",
+        "title": "Intel Cpu Core i9-14900KF, box | BX8071514900",
+        "old": 535.99,
+        "new": 518.95,
+        "diff": -17.04,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0038",
-        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
-        "old": 212.99,
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 454.99,
+        "new": 431.99,
+        "diff": -23.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 226.99,
+        "new": 218.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0010",
+        "title": "Enabot EBO Air2 Blue",
+        "old": 218.99,
+        "new": 223.99,
+        "diff": 5.0,
+        "action": "raised"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 218.99,
         "new": 211.99,
-        "diff": -1.0,
+        "diff": -7.0,
         "action": "lowered"
       },
       {
-        "sku": "SUPY0059",
-        "title": "Yealink WH67 - Headset WH67 Mono UC",
-        "old": 254.99,
-        "new": 251.99,
-        "diff": -3.0,
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 162.99,
+        "new": 141.99,
+        "diff": -21.0,
         "action": "lowered"
       },
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 47.99,
-        "new": 44.99,
-        "diff": -3.0,
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 449.99,
+        "new": 398.99,
+        "diff": -51.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 615.99,
+        "new": 555.95,
+        "diff": -60.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 274.99,
+        "new": 245.99,
+        "diff": -29.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-07-01",
-        "lowered": 6,
-        "raised": 11,
-        "floor": 0
-      },
       {
         "date": "2026-07-01",
         "lowered": 0,
@@ -147,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-07-02",
+        "lowered": 10,
+        "raised": 11,
+        "floor": 0
       }
     ]
   },
@@ -173,12 +213,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 218.69
     },
     "chart_7d": [
-      {
-        "date": "26.06",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "27.06",
         "revenue": 0,
@@ -214,15 +248,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "03.06",
+        "date": "03.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "04.06",
         "revenue": 0,
@@ -396,15 +430,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "04.04",
+        "date": "03.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "05.04",
         "revenue": 0,
@@ -938,6 +972,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "03.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1281,18 +1321,7 @@ window.DASHBOARD_DATA = {
         "cash_profit": 4.23
       }
     ],
-    "bab_deadlines": [
-      {
-        "order_id": "23-14765-26114",
-        "date": "2026-06-18",
-        "deadline": "2026-07-02",
-        "days_left": 0,
-        "items": [
-          "yyyECOFLOW Smart Plug"
-        ],
-        "urgent": true
-      }
-    ],
+    "bab_deadlines": [],
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 0.0,
