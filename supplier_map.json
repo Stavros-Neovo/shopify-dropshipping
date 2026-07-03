@@ -545,20 +545,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPJ0170": {
-    "ean": "5706991031539",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 119.77,
-    "vk": 233.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e1cc3f60e7a4217b31acb26d7be34649b5a3a04d.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e1cc3f60e7a4217b31acb26d7be34649b5a3a04d.jpg"
-    ]
-  },
   "RAM4K0058": {
     "ean": "0740617337532",
     "supplier": "BAB",
@@ -886,25 +872,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "MBAI0048": {
-    "ean": "4711387931509",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.91,
-    "vk": 203.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/91791fe5b962d13be197b75fde43677d41396d23.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/91791fe5b962d13be197b75fde43677d41396d23.jpg",
-      "https://images.icecat.biz/img/gallery/0350938ee4e0bcd05bb2654ad70094aed230e4b1.jpg",
-      "https://images.icecat.biz/img/gallery/6d3a3cea8de88f3a5a1b6f81c18500ef308f957b.jpg",
-      "https://images.icecat.biz/img/gallery/e84832bc67659a8d54d7023ad1b07ec8c11a826a.jpg",
-      "https://images.icecat.biz/img/gallery/a1d1de37769a1d318e395e876fee2f1315e17ec5.jpg",
-      "https://images.icecat.biz/img/gallery/0efdbee62420ab95a26a6efb557a230903e053ed.jpg"
-    ]
   },
   "USBV0006": {
     "ean": "0023942302308",
@@ -5148,22 +5115,6 @@
     "title": "Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",
     "image_verified": false
   },
-  "HHWO0004": {
-    "ean": "1230000232463",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.95,
-    "vk": 219.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "OutIn Mino - Space Grey - Portable Electric Espresso Machine",
-    "image_verified": true,
-    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876574?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
-    "images": [
-      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876574?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
-      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_171876576?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900"
-    ]
-  },
   "MBAI0047": {
     "ean": "4711387797143",
     "supplier": "BAB",
@@ -5290,22 +5241,6 @@
     ],
     "title": "Teltonika TRB246 - Gateway",
     "image_verified": true
-  },
-  "NETU0104": {
-    "ean": "0810084693650",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.9,
-    "vk": 286.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "UbiQuiti UniFi U7-PRO - AccessPoint - WiFi 7 - Indoor",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/134496.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/134496.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "NETU0151": {
     "ean": "0810177161929",
@@ -6386,16 +6321,6 @@
     "images": [
       "https://www.techpowerup.com/cpu-specs/images/chips/3442-front.jpg"
     ]
-  },
-  "CPUI0216": {
-    "ean": "5059902133663",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 265.01,
-    "vk": 610.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "CPUI0222": {
     "ean": "5032037279130",
@@ -7963,21 +7888,6 @@
     "image_url": "https://media.ipcstore.net/img/l/21287255.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/21287255.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "RAM5G0007": {
-    "ean": "4713294230720",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 350.18,
-    "vk": 666.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/129937.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129937.jpg"
     ],
     "image_verified": false,
     "image_too_small": true
