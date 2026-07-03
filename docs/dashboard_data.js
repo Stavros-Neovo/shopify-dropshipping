@@ -1,115 +1,37 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-03T17:37:10.236134+00:00",
+  "generated_at": "2026-07-03T19:35:31.793951+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 45,
   "catalog": {
-    "total_skus": 921,
-    "images_verified": 577,
+    "total_skus": 919,
+    "images_verified": 575,
     "images_missing": 344
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-03T15:30:28.406699+00:00",
-      "checked": 600,
-      "lowered": 5,
-      "raised": 11,
-      "set_to_floor": 128,
+      "timestamp": "2026-07-03T17:52:45.152851+00:00",
+      "checked": 45,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 1,
       "skipped_floor": 0,
-      "skipped_few": 32,
-      "skipped_image": 55,
-      "unchanged": 369,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 1,
+      "unchanged": 38,
+      "errors": 5,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM5C1016",
-        "title": "Corsair Vengeance RGB - DDR5 - Kit - 32 GB: 2",
-        "old": 577.99,
-        "new": 557.95,
-        "diff": -20.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0008",
-        "title": "G.Skill DDR5 32GB PC 6400 CL32 KIT (2x16GB) 3",
-        "old": 580.99,
-        "new": 560.95,
-        "diff": -20.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0009",
-        "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX",
-        "old": 547.99,
-        "new": 529.95,
-        "diff": -18.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0013",
-        "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX",
-        "old": 584.99,
-        "new": 563.95,
-        "diff": -21.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0019",
-        "title": "G.Skill Ripjaws S5 schwarz - DDR5 - 32 GB KIT",
-        "old": 616.99,
-        "new": 593.95,
-        "diff": -23.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0023",
-        "title": "G.Skill Trident Z5 6800 CL34 - DDR5 - 64 GB 2",
-        "old": 651.99,
-        "new": 626.95,
-        "diff": -25.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0027",
-        "title": "G.Skill Trident Z5 6400 CL32 - DDR5 - 32 GB 2",
-        "old": 596.99,
-        "new": 575.95,
-        "diff": -21.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0028",
-        "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX",
-        "old": 666.99,
-        "new": 640.95,
-        "diff": -26.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 557.99,
-        "new": 538.95,
-        "diff": -19.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 533.99,
-        "new": 516.95,
-        "diff": -17.04,
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 47.99,
+        "new": 44.99,
+        "diff": -3.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-07-01",
-        "lowered": 0,
-        "raised": 19,
-        "floor": 0
-      },
       {
         "date": "2026-07-02",
         "lowered": 0,
@@ -186,6 +108,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-03",
         "lowered": 5,
         "raised": 11,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-03",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
