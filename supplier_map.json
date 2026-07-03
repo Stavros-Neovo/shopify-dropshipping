@@ -6568,21 +6568,6 @@
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
     ]
   },
-  "HDIS0314": {
-    "ean": "8719706027298",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 235.0,
-    "vk": 450.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Seagate Exos 7E10 / ST4000NM027B / 4TB / 3,5\"",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
-  },
   "HDIS0315": {
     "ean": "8719706022125",
     "supplier": "BAB",
@@ -7321,22 +7306,6 @@
     ],
     "title": "Ubiquiti UniFi U7 Pro XG Wall - Accesspoint",
     "image_verified": true
-  },
-  "NETU0186": {
-    "ean": "0810177163398",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 157.58,
-    "vk": 304.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/143343.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/143343.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "NETU0187": {
     "ean": "0810084698792",
