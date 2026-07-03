@@ -1,115 +1,69 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-03T07:26:18.637535+00:00",
+  "generated_at": "2026-07-03T10:41:32.898198+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 62,
   "catalog": {
-    "total_skus": 933,
-    "images_verified": 587,
-    "images_missing": 346
+    "total_skus": 932,
+    "images_verified": 583,
+    "images_missing": 349
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-03T04:12:59.304939+00:00",
-      "checked": 600,
-      "lowered": 6,
-      "raised": 12,
-      "set_to_floor": 129,
+      "timestamp": "2026-07-03T07:42:31.949307+00:00",
+      "checked": 62,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 5,
       "skipped_floor": 0,
-      "skipped_few": 35,
-      "skipped_image": 49,
-      "unchanged": 369,
-      "errors": 0,
+      "skipped_few": 0,
+      "skipped_image": 7,
+      "unchanged": 45,
+      "errors": 5,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "RAM4G0057",
-        "title": "G.Skill DDR4 32GB PC 6000 CL22 KIT (2x16GB) 3",
-        "old": 263.99,
-        "new": 251.99,
-        "diff": -12.0,
+        "sku": "SUPV0073",
+        "title": "VERBATIM PORTABLE 15.6 DUAL MONITOR ESSENTIAL",
+        "old": 297.99,
+        "new": 283.99,
+        "diff": -14.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4G0059",
-        "title": "G.Skill AEGIS - DDR4 - 8 GB 2400 CL17",
-        "old": 87.99,
-        "new": 84.99,
-        "diff": -3.0,
+        "sku": "SUPY0010",
+        "title": "Yealink IP Telefon SIP-T54W V2",
+        "old": 181.99,
+        "new": 165.99,
+        "diff": -16.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4G0063",
-        "title": "G.Skill SO-DIMM Ripjaws - DDR4 - 16 GB 2x8 GB",
-        "old": 157.99,
-        "new": 154.99,
-        "diff": -3.0,
+        "sku": "SUPY0038",
+        "title": "Yealink DECT Telefon W79P (Basis W70B und W59",
+        "old": 212.99,
+        "new": 211.99,
+        "diff": -1.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM4K0058",
-        "title": "Kingston FURY Beast RGB - DDR4-16GB - 2x8GB -",
-        "old": 230.99,
-        "new": 221.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM4L0037",
-        "title": "Lexar DDR4 16GB 288 PIN U-DIMM 3200Mhz, CL22,",
-        "old": 162.99,
-        "new": 159.99,
-        "diff": -3.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM4L0040",
-        "title": "Lexar DDR5 16GB 288 PIN U-DIMM 5600Mhz, CL46,",
-        "old": 278.99,
-        "new": 265.99,
-        "diff": -13.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5C0004",
-        "title": "Crucial DDR5 - 16GB 5600 DIMM (CT16G56C46U5)",
+        "sku": "SUPY0059",
+        "title": "Yealink WH67 - Headset WH67 Mono UC",
         "old": 254.99,
-        "new": 243.99,
-        "diff": -11.0,
+        "new": 251.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "RAM5C1016",
-        "title": "Corsair Vengeance RGB - DDR5 - Kit - 32 GB: 2",
-        "old": 577.99,
-        "new": 557.95,
-        "diff": -20.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0008",
-        "title": "G.Skill DDR5 32GB PC 6400 CL32 KIT (2x16GB) 3",
-        "old": 580.99,
-        "new": 560.95,
-        "diff": -20.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0009",
-        "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX",
-        "old": 547.99,
-        "new": 529.95,
-        "diff": -18.04,
+        "sku": "USBV0012",
+        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
+        "old": 47.99,
+        "new": 44.99,
+        "diff": -3.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-07-01",
-        "lowered": 7,
-        "raised": 3,
-        "floor": 0
-      },
       {
         "date": "2026-07-01",
         "lowered": 0,
@@ -186,6 +140,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-03",
         "lowered": 6,
         "raised": 12,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-03",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
