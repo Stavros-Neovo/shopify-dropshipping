@@ -5894,26 +5894,6 @@
       "https://images.icecat.biz/img/gallery/78360442_5838600927.jpg"
     ]
   },
-  "SUPJ1056": {
-    "ean": "5706991022865",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 145.15,
-    "vk": 284.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "JABRA Evolve2 65 MS Stereo Headset",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/78360297_7617598890.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/78360297_7617598890.jpg",
-      "https://images.icecat.biz/img/gallery/78360442_1688644602.jpg",
-      "https://images.icecat.biz/img/gallery/78360396_0361543907.jpg",
-      "https://images.icecat.biz/img/gallery/78360297_6210690140.jpg",
-      "https://images.icecat.biz/img/gallery/78360297_8233719885.jpg",
-      "https://images.icecat.biz/img/gallery/78360396_0672645038.jpg"
-    ]
-  },
   "SUPL0285": {
     "ean": "0097855119551",
     "supplier": "BAB",
@@ -9498,28 +9478,6 @@
       "https://media.ipcstore.net/img/135495.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "MBAI0031": {
-    "ean": "4711387095119",
-    "supplier": "BAB",
-    "ek": 95.91,
-    "vk": 205.99,
-    "title": "TUF GAMING B760-PLUS WIFI | 90MB1ER0-M1EAY0",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_url": "https://images.icecat.biz/img/gallery/2d9a1b4029b097a7977990a934dd7d0fc02ff685.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/2d9a1b4029b097a7977990a934dd7d0fc02ff685.jpg",
-      "https://images.icecat.biz/img/gallery/6a40e4ab48f5dc5a75c93a968f440c0625c9dcab.jpg",
-      "https://images.icecat.biz/img/gallery/568217c0d7529f4d4bf8eb06780986ec4fc9eb41.jpg",
-      "https://images.icecat.biz/img/gallery/98c9b7dd3cc067344608052bf690f3ed40b3e8d7.jpg",
-      "https://images.icecat.biz/img/gallery/1c063f9eddff03f40619bfba47802ccf9eb98760.jpg",
-      "https://images.icecat.biz/img/gallery/24b62d0eb08749e1601984ec4d8685f8950d46f0.jpg",
-      "https://images.icecat.biz/img/gallery/ae26448436540b0652f8ce8ce98e0071f6e7a8ef.jpg",
-      "https://images.icecat.biz/img/gallery/76d38544d77cab3489bb6ed7af91ccaf9c2ee9cd.jpg"
-    ]
   },
   "MBAI0046": {
     "ean": "4711387797273",
