@@ -27357,10 +27357,10 @@
   },
   "6947273701972": {
     "watch_count": 0,
-    "competitor_count": 58,
-    "min_price": 37.99,
+    "competitor_count": 56,
+    "min_price": 75.0,
     "max_price": 949.99,
-    "queried_at": "2026-06-27T05:46:05.898846+00:00"
+    "queried_at": "2026-07-04T15:02:58.798827+00:00"
   },
   "6947273702009": {
     "watch_count": 0,
@@ -27422,8 +27422,8 @@
     "watch_count": 0,
     "competitor_count": 13,
     "min_price": 85.0,
-    "max_price": 158.24,
-    "queried_at": "2026-06-27T05:46:06.527979+00:00"
+    "max_price": 168.12,
+    "queried_at": "2026-07-04T15:02:59.318497+00:00"
   },
   "6947273702801": {
     "watch_count": 0,
@@ -27483,17 +27483,17 @@
   },
   "6947273702993": {
     "watch_count": 0,
-    "competitor_count": 11,
-    "min_price": 59.99,
-    "max_price": 171.9,
-    "queried_at": "2026-06-27T05:46:01.801645+00:00"
+    "competitor_count": 8,
+    "min_price": 60.0,
+    "max_price": 148.68,
+    "queried_at": "2026-07-04T15:02:55.875720+00:00"
   },
   "6947273703068": {
     "watch_count": 0,
     "competitor_count": 10,
     "min_price": 63.0,
     "max_price": 131.99,
-    "queried_at": "2026-06-27T05:46:07.160074+00:00"
+    "queried_at": "2026-07-04T15:02:59.719647+00:00"
   },
   "6947273703051": {
     "watch_count": 0,
@@ -27632,15 +27632,15 @@
     "watch_count": 0,
     "competitor_count": 6,
     "min_price": 50.0,
-    "max_price": 126.36,
-    "queried_at": "2026-06-27T05:46:07.866265+00:00"
+    "max_price": 136.1,
+    "queried_at": "2026-07-04T15:03:00.236985+00:00"
   },
   "6947273703983": {
     "watch_count": 0,
     "competitor_count": 5,
-    "min_price": 93.89,
-    "max_price": 125.17,
-    "queried_at": "2026-06-27T05:46:08.532736+00:00"
+    "min_price": 93.59,
+    "max_price": 128.04,
+    "queried_at": "2026-07-04T15:03:00.714616+00:00"
   },
   "6947273704409": {
     "watch_count": 0,
@@ -27689,7 +27689,7 @@
     "competitor_count": 9,
     "min_price": 309.89,
     "max_price": 1189.95,
-    "queried_at": "2026-06-27T05:46:09.444542+00:00"
+    "queried_at": "2026-07-04T15:03:01.290862+00:00"
   },
   "6947273703860": {
     "watch_count": 0,
@@ -31285,9 +31285,9 @@
   "6947273704485": {
     "watch_count": 0,
     "competitor_count": 5,
-    "min_price": 120.73,
-    "max_price": 219.71,
-    "queried_at": "2026-06-27T05:46:09.995932+00:00"
+    "min_price": 134.72,
+    "max_price": 220.73,
+    "queried_at": "2026-07-04T15:03:01.763992+00:00"
   },
   "6947273704874": {
     "watch_count": 0,
@@ -106010,37 +106010,37 @@
   "4897082661290": {
     "watch_count": 0,
     "competitor_count": 1,
-    "min_price": 40.99,
-    "max_price": 40.99,
-    "queried_at": "2026-06-27T05:46:03.000814+00:00"
+    "min_price": 41.18,
+    "max_price": 41.18,
+    "queried_at": "2026-07-04T15:02:56.308005+00:00"
   },
   "4895251628679": {
     "watch_count": 0,
     "competitor_count": 1,
-    "min_price": 211.74,
-    "max_price": 211.74,
-    "queried_at": "2026-06-27T05:46:03.575548+00:00"
+    "min_price": 173.84,
+    "max_price": 173.84,
+    "queried_at": "2026-07-04T15:02:56.920135+00:00"
   },
   "4895251644709": {
     "watch_count": 0,
     "competitor_count": 0,
     "min_price": 0.0,
     "max_price": 0.0,
-    "queried_at": "2026-06-27T05:46:04.158828+00:00"
+    "queried_at": "2026-07-04T15:02:57.306274+00:00"
   },
   "4895251642774": {
     "watch_count": 0,
-    "competitor_count": 0,
-    "min_price": 0.0,
-    "max_price": 0.0,
-    "queried_at": "2026-06-27T05:46:04.607999+00:00"
+    "competitor_count": 1,
+    "min_price": 179.56,
+    "max_price": 179.56,
+    "queried_at": "2026-07-04T15:02:57.912847+00:00"
   },
   "6947273701798": {
     "watch_count": 0,
-    "competitor_count": 34,
+    "competitor_count": 37,
     "min_price": 15.0,
-    "max_price": 619.99,
-    "queried_at": "2026-06-27T05:46:05.276574+00:00"
+    "max_price": 1100.0,
+    "queried_at": "2026-07-04T15:02:58.286280+00:00"
   },
   "0810177160601": {
     "watch_count": 0,
