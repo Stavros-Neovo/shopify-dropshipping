@@ -9853,20 +9853,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "NOCO0020": {
-    "ean": "1210000617279",
-    "supplier": "BAB",
-    "ek": 15.11,
-    "vk": 35.99,
-    "title": "NOCO GBC013 | NOCO GB20/40 EVA Protection Case | Boost Accessories",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://no.co/media/catalog/product/g/b/gbc013.png",
-    "images": [
-      "https://no.co/media/catalog/product/g/b/gbc013.png"
-    ],
-    "image_verified": true
-  },
   "NOCO0021": {
     "ean": "1210000617286",
     "supplier": "BAB",
