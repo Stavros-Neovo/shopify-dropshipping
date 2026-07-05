@@ -9,10 +9,10 @@
 #   make dry           → alles im Dry-Run (kein echtes Senden)
 # =============================================================================
 
-.PHONY: all sync orders tracking kosatec_stock fix_images dry
+.PHONY: all sync orders tracking kosatec_stock dry
 
 # Stündlicher Komplett-Durchlauf (GitHub Actions)
-all: sync orders tracking kosatec_stock fix_images
+all: sync orders tracking kosatec_stock
 
 # Produkt-Sync: Preise + Bestand auf eBay aktualisieren
 sync:
@@ -33,10 +33,6 @@ tracking:
 kosatec_stock:
 	curl -fL "$$KOSATEC_URL" -o kosatec_preisliste.csv 2>/dev/null || true
 	python kosatec_stock_check.py
-
-# Bilder mit zu geringer Auflösung (eBay Error 25002) automatisch reparieren
-fix_images:
-	python fix_low_res_images.py --limit 30 2>/dev/null || true
 
 # Alles im Dry-Run (nichts wird wirklich gesendet)
 dry:

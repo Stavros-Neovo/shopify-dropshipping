@@ -2,11 +2,10 @@ name: Upload Tracking (BAB Mail → eBay)
 
 # Liest BAB "Abliefernachweis"-Mails aus Gmail und lädt Tracking-Nummern
 # automatisch zu eBay Sell Fulfillment API hoch.
-# Läuft alle 30 Minuten — Käufer sehen Tracking binnen ~30 min nach BAB-Versand.
+# DEAKTIVIERT (nur noch manuell): Gmail-OAuth wurde nie fertig eingerichtet,
+# der Schedule schlug alle 30 min fehl. Tracking läuft über tracking_updater.yml (IMAP).
 
 on:
-  schedule:
-    - cron: "*/30 * * * *"   # Alle 30 Minuten
   workflow_dispatch:
     inputs:
       dry_run:
