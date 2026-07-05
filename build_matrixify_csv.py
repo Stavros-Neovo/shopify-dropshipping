@@ -248,11 +248,19 @@ def build_description_html(bab_title: str, enrichment: Optional[dict]) -> str:
     if specs:
         parts.append(f'<div class="product-specs">{specs}</div>')
 
-    mfr_url = enrichment.get("manufacturer_url") or ""
-    if mfr_url and mfr_url.startswith("http"):
-        parts.append(f'<p><small><a href="{mfr_url}" target="_blank" rel="noopener">Herstellerinformationen</a></small></p>')
+    # KEINE Links in Beschreibungen (User-Regel, Shop UND eBay): Hersteller-Verweis
+    # entfaellt, alles wird zusaetzlich defensiv von <a>-Tags/URLs befreit.
+    return strip_links("\n".join(parts))
 
-    return "\n".join(parts)
+
+def strip_links(html: str) -> str:
+    """Entfernt jegliche Links aus Beschreibungen - der Shop/eBay zeigt nie Verweise.
+    Ganze <a>...</a>-Elemente (inkl. Linktext) raus + nackte URLs + leere Reste."""
+    import re
+    html = re.sub(r"<a\b[^>]*>.*?</a>", "", html, flags=re.I | re.S)
+    html = re.sub(r"https?://\S+", "", html)
+    html = re.sub(r"<p>\s*(?:<small>\s*</small>\s*)?</p>", "", html, flags=re.I)
+    return html.strip()
 
 
 def build_meta_description(body_html: str, fallback_title: str) -> str:

@@ -669,8 +669,9 @@ def build_ebay_description(enr: dict, art: dict, title: str) -> str:
 {body}
 </div>"""
 
-    # eBay-Limit (6000 Zeichen für gute Lesbarkeit)
-    return html[:6000]
+    # KEINE Links in Beschreibungen (User-Regel) + eBay-Limit (6000 Zeichen)
+    from build_matrixify_csv import strip_links
+    return strip_links(html)[:6000]
 
 
 # ---------------------------------------------------------------------------
