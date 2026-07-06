@@ -74,6 +74,25 @@ def normalize_row(row: dict, column_map: Dict[str, str]) -> dict:
     return result
 
 
+_TITLE_OVERRIDES = None
+
+
+def _title_overrides() -> Dict[str, str]:
+    """SKU -> korrigierter Titel aus title_overrides.yaml. Fixt falsche
+    Lieferanten-Titel an EINER Stelle für Shop + eBay + SEO; wird bei jedem
+    Feed-Load neu angewandt, ist also BAB-resistent."""
+    global _TITLE_OVERRIDES
+    if _TITLE_OVERRIDES is None:
+        try:
+            import yaml
+            p = os.path.join(os.path.dirname(__file__), "title_overrides.yaml")
+            with open(p, encoding="utf-8") as fh:
+                _TITLE_OVERRIDES = yaml.safe_load(fh) or {}
+        except (FileNotFoundError, ImportError):
+            _TITLE_OVERRIDES = {}
+    return _TITLE_OVERRIDES
+
+
 def load_supplier_feed(cfg: Dict[str, Any]) -> Iterator[dict]:
     """
     Komfort-Funktion: Lädt, parst, normalisiert in einem Rutsch.
@@ -88,5 +107,10 @@ def load_supplier_feed(cfg: Dict[str, Any]) -> Iterator[dict]:
     )
     rows = parse_csv(text, delimiter=csv_cfg.get("delimiter", ";"))
     column_map = csv_cfg["columns"]
+    overrides = _title_overrides()
     for raw in rows:
-        yield normalize_row(raw, column_map)
+        item = normalize_row(raw, column_map)
+        ov = overrides.get(item.get("sku"))
+        if ov:
+            item["title"] = ov
+        yield item

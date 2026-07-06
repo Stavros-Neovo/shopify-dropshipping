@@ -1,0 +1,13 @@
+# SKU -> korrigierter Produkttitel.
+# Fixt FALSCHE Lieferanten-Titel (BAB liefert manche falsch, z.B. Copy-Paste
+# zwischen Varianten). Wird in csv_loader.load_supplier_feed bei JEDEM Feed-Load
+# angewandt -> greift auf Shop (Matrixify) + eBay + abgeleitete SEO, und ist
+# BAB-resistent (der Feed kann den Titel nicht wieder kaputt machen).
+# Quelle der Wahrheit = Hersteller-MPN (ReferenceNumber in bab_preisliste.csv).
+
+# RAM5G0023: BAB-Titel war "6800 CL34 64GB 2x32" (vom 64GB-Modell RAM5G0022 kopiert).
+# Echte MPN F5-6000J3040F16GX2-TZ5RK = 6000 CL30, 32GB (2x16GB), Trident Z5 RGB.
+RAM5G0023: "G.Skill Trident Z5 RGB DDR5-6000 CL30 32GB (2x16GB) schwarz"
+
+# RAM5G0028: BAB-Titel sagte "CL32"; echte MPN F5-6000J2836G16GX2-FX5 = CL28 (Flare X5, AMD EXPO).
+RAM5G0028: "G.Skill Flare X5 DDR5-6000 CL28 32GB (2x16GB) AMD EXPO"
