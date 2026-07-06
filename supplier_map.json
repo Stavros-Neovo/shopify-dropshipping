@@ -632,20 +632,6 @@
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "image_verified": false
   },
-  "NETU0034": {
-    "ean": "0817882029698",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 23.73,
-    "vk": 52.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/5a176b22-af34-40f2-820c-958610df1825/19394e07-5146-4f8c-b72d-7fdbdf679c97.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/5a176b22-af34-40f2-820c-958610df1825/19394e07-5146-4f8c-b72d-7fdbdf679c97.png"
-    ],
-    "image_verified": true
-  },
   "NOCO0025": {
     "ean": "1210000621054",
     "supplier": "BAB",
@@ -816,7 +802,7 @@
     "ean": "8806097735618",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 20.81,
+    "ek": 20.2,
     "vk": 46.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1978,24 +1964,6 @@
       "https://images.icecat.biz/img/gallery/5867ab19be9921d8c1ba01ccb58127c0886ff49a.jpg"
     ],
     "image_verified": true
-  },
-  "SHP0012": {
-    "ean": "8718699771126",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.24,
-    "vk": 102.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/736b881ba91842a98bc78b8ea410fc71ad71ee81.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/736b881ba91842a98bc78b8ea410fc71ad71ee81.jpg",
-      "https://images.icecat.biz/img/gallery/28306966c40e508f20130a3a527f61a9baa8fdc3.jpg",
-      "https://images.icecat.biz/img/gallery/227138430fcb0a75391911a26c486ae82e186620.jpg",
-      "https://images.icecat.biz/img/gallery/5f5d1052a8ee0b89b3479e5d1a21d63a66ef92cd.jpg",
-      "https://images.icecat.biz/img/gallery/eba4f7ef8405a31fd887d547e49aafbe557c04c2.jpg"
-    ]
   },
   "SHP0016": {
     "ean": "8719514339989",
@@ -4262,21 +4230,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "NETU0148": {
-    "ean": "0810084698747",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 81.87,
-    "vk": 161.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/253cc208-4b09-4b2e-9d1a-7aa1e8f93507/49241c96-878f-4e40-8541-c2e89c1c5e6e.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/253cc208-4b09-4b2e-9d1a-7aa1e8f93507/49241c96-878f-4e40-8541-c2e89c1c5e6e.png"
-    ],
-    "title": "UbiQuiti U7-LITE - Access Point - WiFi 7 - Indoor",
-    "image_verified": true
-  },
   "NETU0189": {
     "ean": "0810084693698",
     "supplier": "BAB",
@@ -4401,17 +4354,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "PPSE0063": {
-    "ean": "4895251608442",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 95.71,
-    "vk": 187.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW Adjustable Ground & Suspended Solar Bracket",
-    "image_verified": false
   },
   "PPSE0078": {
     "ean": "4895251628808",
@@ -5635,7 +5577,7 @@
     "ean": "0843367130283",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 134.84,
+    "ek": 132.66,
     "vk": 263.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6238,21 +6180,6 @@
     "image_url": "https://media.ipcstore.net/img/l/442349.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/442349.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "CPUI0205": {
-    "ean": "5032037278522",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 388.91,
-    "vk": 746.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/442353.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/442353.jpg"
     ],
     "image_verified": false,
     "image_too_small": true
@@ -7227,22 +7154,6 @@
     ],
     "title": "UbiQuiti UISP Professional - UISP-S-PRO - Switch - managed",
     "image_verified": true
-  },
-  "NETU0150": {
-    "ean": "0810177161288",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 228.0,
-    "vk": 436.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Ubiquiti UniFi Cloud Gateway Fiber - Gateway",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21241706.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21241706.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "NETU0170": {
     "ean": "0810084693582",
@@ -9165,7 +9076,7 @@
   "HHWB1131": {
     "ean": "8700216194761",
     "supplier": "BAB",
-    "ek": 23.85,
+    "ek": 23.55,
     "vk": 59.99,
     "title": "Braun Oral-B iO Aufsteckbürsten Ultimative Reinigung 6er",
     "listed_at": "2026-06-14T20:49:22",
@@ -9338,16 +9249,6 @@
     "ek": 0.51,
     "vk": 8.99,
     "title": "HAND Desinfektionsgel MOVE Med+ 100ml",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "HHWK2072": {
-    "ean": "4066529041487",
-    "supplier": "BAB",
-    "ek": 12.69,
-    "vk": 31.99,
-    "title": "Kärcher Fensterdüse Comfort Zubehör",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
