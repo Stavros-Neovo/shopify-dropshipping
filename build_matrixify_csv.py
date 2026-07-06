@@ -494,8 +494,12 @@ def build_rows(product: dict, pr, cfg: dict,
         all_images = []
     first_image = all_images[0] if all_images else ""
 
-    title = _best_title(product.get("title", ""),
-                        enrichment.get("title_full") if enrichment else "")[:250]
+    # Expliziter Titel-Override (title_overrides.yaml) gewinnt IMMER — auch gegen einen
+    # längeren Icecat-title_full, den _best_title sonst bevorzugen würde.
+    from csv_loader import _title_overrides
+    _title_ov = _title_overrides().get(product.get("sku"))
+    title = (_title_ov or _best_title(product.get("title", ""),
+                        enrichment.get("title_full") if enrichment else ""))[:250]
 
     body_html = build_description_html(product.get("title", ""), enrichment)
 
