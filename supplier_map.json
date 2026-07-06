@@ -1321,16 +1321,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HHWB4008": {
-    "ean": "3030050192995",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 40.6,
-    "vk": 85.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HHWB4012": {
     "ean": "3030050193022",
     "supplier": "BAB",
@@ -3562,7 +3552,7 @@
     "ean": "6947273705147",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 58.21,
+    "ek": 57.75,
     "vk": 117.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4901,16 +4891,6 @@
       "https://media.ipcstore.net/img/143289.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "HDIW0245": {
-    "ean": "718037905761",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 134.35,
-    "vk": 260.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDXT0228": {
     "ean": "4260557511220",
@@ -7769,22 +7749,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "RAM5G0013": {
-    "ean": "4713294232649",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 392.81,
-    "vk": 747.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-TZ5NR AMD EX",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/129943.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/129943.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5G0015": {
     "ean": "4713294232755",
     "supplier": "BAB",
@@ -8726,7 +8690,7 @@
     "ean": "0017817859561",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 279.13,
+    "ek": 277.1,
     "vk": 556.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9095,17 +9059,6 @@
     "ek": 17.26,
     "vk": 42.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 4 St.",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "HHWB1136": {
-    "ean": "8700216778541",
-    "supplier": "BAB",
-    "ek": 30.45,
-    "vk": 71.99,
-    "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 8 St.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
