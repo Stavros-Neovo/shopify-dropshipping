@@ -15,3 +15,7 @@ RAM5G0028: "G.Skill Flare X5 DDR5-6000 CL28 32GB (2x16GB) AMD EXPO"
 # RAM4G0057: BAB-Titel sagte "PC 6000" — DDR4 gibt es nicht mit 6000.
 # Echte MPN F4-3200C22D-32GRS = DDR4-3200 CL22, 32GB (2x16GB), Ripjaws.
 RAM4G0057: "G.Skill Ripjaws DDR4-3200 CL22 32GB (2x16GB)"
+
+# RAM5G0025: BAB-Titel-Kopf sagte "32GB", ist aber 64GB (2x32). Icecat + MPN
+# F5-6000J3636F32GX2-FX5W bestätigen: 6000 CL36, 64GB (2x32), Flare X5 weiß, EXPO.
+RAM5G0025: "G.Skill Flare X5 DDR5-6000 CL36 64GB (2x32GB) AMD EXPO weiß"
