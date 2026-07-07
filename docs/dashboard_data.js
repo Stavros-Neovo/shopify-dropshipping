@@ -1,43 +1,109 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-07T14:47:06.761219+00:00",
+  "generated_at": "2026-07-07T17:20:51.421060+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 24,
+  "active_listings": 600,
   "catalog": {
-    "total_skus": 898,
-    "images_verified": 562,
-    "images_missing": 336
+    "total_skus": 892,
+    "images_verified": 560,
+    "images_missing": 332
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-07T12:12:00.334512+00:00",
-      "checked": 24,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 1,
+      "timestamp": "2026-07-07T15:20:08.508218+00:00",
+      "checked": 600,
+      "lowered": 8,
+      "raised": 11,
+      "set_to_floor": 109,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 0,
-      "unchanged": 18,
-      "errors": 5,
+      "skipped_few": 36,
+      "skipped_image": 22,
+      "unchanged": 411,
+      "errors": 3,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "USBV0012",
-        "title": "Verbatim Store n Go V3 256GB USB 3.0 grey 491",
-        "old": 47.99,
-        "new": 44.99,
-        "diff": -3.0,
+        "sku": "CPUA0135",
+        "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
+        "old": 602.99,
+        "new": 580.95,
+        "diff": -22.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUI0206",
+        "title": "Intel Cpu Core i9-14900KF, box | BX8071514900",
+        "old": 535.99,
+        "new": 518.95,
+        "diff": -17.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 454.99,
+        "new": 431.99,
+        "diff": -23.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 226.99,
+        "new": 218.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0010",
+        "title": "Enabot EBO Air2 Blue",
+        "old": 218.99,
+        "new": 223.99,
+        "diff": 5.0,
+        "action": "raised"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 218.99,
+        "new": 211.99,
+        "diff": -7.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0139",
+        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
+        "old": 162.99,
+        "new": 141.99,
+        "diff": -21.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 447.99,
+        "new": 396.99,
+        "diff": -51.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 612.99,
+        "new": 552.95,
+        "diff": -60.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 269.99,
+        "new": 241.99,
+        "diff": -28.0,
         "action": "lowered"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-07-05",
-        "lowered": 4,
-        "raised": 11,
-        "floor": 0
-      },
       {
         "date": "2026-07-05",
         "lowered": 0,
@@ -114,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-07",
         "lowered": 0,
         "raised": 0,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-07",
+        "lowered": 8,
+        "raised": 11,
         "floor": 0
       }
     ]
