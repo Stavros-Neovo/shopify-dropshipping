@@ -1927,20 +1927,6 @@
     ],
     "image_verified": true
   },
-  "SHG0091": {
-    "ean": "6974316990642",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.65,
-    "vk": 102.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/f62fb2b6e7503746221a30e5779adefda8b35967.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/f62fb2b6e7503746221a30e5779adefda8b35967.jpg"
-    ],
-    "image_verified": true
-  },
   "SHG0094": {
     "ean": "6974316995784",
     "supplier": "BAB",
@@ -2430,28 +2416,6 @@
       "https://images.icecat.biz/img/gallery/bc857fb86678aae596f1909f6ae7a7e963c1865f.jpg"
     ],
     "image_verified": true
-  },
-  "SUPV0047": {
-    "ean": "0023942322030",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 40.6,
-    "vk": 83.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/18c91c268139b6c1e26af1f35e1eaf90.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/18c91c268139b6c1e26af1f35e1eaf90.jpg",
-      "https://images.icecat.biz/img/gallery/3216a08b0d657fa357012001d2c43495.jpg",
-      "https://images.icecat.biz/img/gallery/894dbaee2baf5a78821479f60d3586dc.jpg",
-      "https://images.icecat.biz/img/gallery/ecfb8db25cc956d0133d4f3cf39d5a7c.jpg",
-      "https://images.icecat.biz/img/gallery/5e9c6a31dffbc60e5338eb852a80c06e.jpg",
-      "https://images.icecat.biz/img/gallery/e055decf74bca04663a2a2c4c97b4efb.jpg",
-      "https://images.icecat.biz/img/gallery/9f9d9a551157442c1d3a30226f131632.jpg",
-      "https://images.icecat.biz/img/gallery/e92ed127001785ad3e1cad6fc5b70c19.jpg",
-      "https://images.icecat.biz/img/gallery/dd86c9853a571ed3e5fd008a64a77552.jpg"
-    ]
   },
   "SUPV0053": {
     "ean": "0023942322177",
@@ -6430,20 +6394,6 @@
       "https://images.icecat.biz/img/gallery/dbf9c1a2320ede1802858ec94bb2c242.jpg"
     ]
   },
-  "HDIS0301": {
-    "ean": "8719706022422",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 325.0,
-    "vk": 619.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ]
-  },
   "HDIS0315": {
     "ean": "8719706022125",
     "supplier": "BAB",
@@ -6936,21 +6886,6 @@
     "images": [
       "https://static.wixstatic.com/media/814ec4_9d0238339932461e97be88591581864a~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-523.jpg"
     ],
-    "image_verified": true
-  },
-  "NETT1078": {
-    "ean": "4779051841455",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 261.87,
-    "vk": 500.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://static.wixstatic.com/media/814ec4_c2bea5c53ff147ccbce0d286146b9ed7~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-462.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_c2bea5c53ff147ccbce0d286146b9ed7~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-462.jpg"
-    ],
-    "title": "Teltonika TRM500 - Wireless Router",
     "image_verified": true
   },
   "NETU0008": {
@@ -8372,7 +8307,7 @@
     "ean": "0843367123179",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 216.83,
+    "ek": 201.22,
     "vk": 415.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8462,25 +8397,6 @@
       "https://media.ipcstore.net/img/21132405.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "SSDS0097": {
-    "ean": "8806090545917",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 238.9,
-    "vk": 478.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/87569819_1136020079.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/87569819_1136020079.jpg",
-      "https://images.icecat.biz/img/gallery/87569819_4866112901.jpg",
-      "https://images.icecat.biz/img/gallery/87569819_6249399515.jpg",
-      "https://images.icecat.biz/img/gallery/87569819_3632117534.jpg",
-      "https://images.icecat.biz/img/gallery/87569819_0116267224.jpg",
-      "https://images.icecat.biz/img/gallery/87569819_0404401974.jpg"
-    ]
   },
   "SSDS0111": {
     "ean": "8806094215038",
@@ -9004,22 +8920,6 @@
       "https://images.icecat.biz/img/gallery/2abeecd927d24727ccd5a7b0ee41a8d2.jpg"
     ],
     "image_verified": false,
-    "image_too_small": true
-  },
-  "HHWB1131": {
-    "ean": "8700216194761",
-    "supplier": "BAB",
-    "ek": 23.55,
-    "vk": 59.99,
-    "title": "Braun Oral-B iO Aufsteckbürsten Ultimative Reinigung 6er",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_url": "https://images.icecat.biz/img/gallery_mediums/1dc1714cb258a8e649a9a25c1859c659fb6b5b83.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery_mediums/1dc1714cb258a8e649a9a25c1859c659fb6b5b83.jpg"
-    ],
     "image_too_small": true
   },
   "HHWB1134": {
