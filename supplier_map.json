@@ -1073,21 +1073,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HHWB4001": {
-    "ean": "3030050179880",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 34.51,
-    "vk": 76.99,
-    "listed_at": "2026-06-14T23:57:46.549786+00:00",
-    "updated_at": "2026-06-14T23:57:46.549786+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/673624.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/673624.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HHWB5010": {
     "ean": "6970229251702",
     "supplier": "BAB",
@@ -3098,17 +3083,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "PPE0166": {
-    "ean": "4895251609142",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 73.59,
-    "vk": 146.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW Delta Pro 3 EV-stream adapter",
-    "image_verified": false
-  },
   "PPE0223": {
     "ean": "4895251653671",
     "supplier": "BAB",
@@ -4138,21 +4112,6 @@
     "title": "Teltonika TRB256 - Gateway",
     "image_verified": true
   },
-  "NETU0076": {
-    "ean": "0810084691090",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.89,
-    "vk": 165.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/6d5c6141-e2e9-416a-b789-53e59416bb1a/853bc73b-f65b-4e59-a171-75c9a4a4615e.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/6d5c6141-e2e9-416a-b789-53e59416bb1a/853bc73b-f65b-4e59-a171-75c9a4a4615e.png"
-    ],
-    "title": "UbiQuiti WiFi U6-PLUS Access Point",
-    "image_verified": true
-  },
   "NETU0107": {
     "ean": "0810084695203",
     "supplier": "BAB",
@@ -4510,7 +4469,7 @@
     "ean": "0198415314048",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 95.92,
+    "ek": 92.87,
     "vk": 188.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5681,7 +5640,7 @@
     "ean": "5397184961735",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.92,
+    "ek": 126.37,
     "vk": 252.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5695,7 +5654,7 @@
     "ean": "5397184961766",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 142.1,
+    "ek": 137.03,
     "vk": 275.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5711,7 +5670,7 @@
     "ean": "0198415233004",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.92,
+    "ek": 123.83,
     "vk": 252.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5834,7 +5793,7 @@
     "ean": "0195892120551",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 145.15,
+    "ek": 139.06,
     "vk": 280.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -8590,7 +8549,7 @@
     "ean": "0198415314925",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 170.52,
+    "ek": 161.39,
     "vk": 328.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8762,21 +8721,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "SUPS1024": {
-    "ean": "8720862502635",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 256.8,
-    "vk": 494.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21322219.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21322219.jpg"
-    ],
-    "image_too_small": true
-  },
   "SUPT4010": {
     "ean": "4048945034953",
     "supplier": "BAB",
@@ -8839,22 +8783,6 @@
       "https://images.icecat.biz/img/gallery/89299545_0059374121.jpg"
     ]
   },
-  "CPUA0098": {
-    "ean": "730143314428",
-    "supplier": "BAB",
-    "ek": 166.5,
-    "vk": 322.99,
-    "title": "AMD Ryzen 7 7700X BOX | 100-100000591WOF",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_url": "https://media.ipcstore.net/img/127180.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/127180.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "ENAB0004": {
     "ean": "6972822120867",
     "supplier": "BAB",
@@ -8883,17 +8811,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
     ],
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "HHWB1111": {
-    "ean": "4210201434818",
-    "supplier": "BAB",
-    "ek": 30.45,
-    "vk": 71.99,
-    "title": "Braun Oral-B iO Ultimative Reinigung Aufsteckbürsten weiß 8 Stk",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1125": {
