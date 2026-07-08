@@ -812,20 +812,6 @@
     ],
     "image_verified": true
   },
-  "SUPV0020": {
-    "ean": "0023942321583",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 19.79,
-    "vk": 44.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/fe552546a0aa5ce7a06b0d52ae04229c80fd498f.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/fe552546a0aa5ce7a06b0d52ae04229c80fd498f.jpg"
-    ],
-    "image_verified": true
-  },
   "NETT0161": {
     "ean": "8885020624014",
     "supplier": "BAB",
@@ -7488,22 +7474,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5C1016": {
-    "ean": "0840006666073",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 389.01,
-    "vk": 751.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Corsair Vengeance RGB - DDR5 - Kit - 32 GB: 2 x 16 GB (CMH32GX5M2B6400C36)",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21287758.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21287758.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5G0000": {
     "ean": "4713294231949",
     "supplier": "BAB",
@@ -9439,16 +9409,6 @@
     "ek": 161.97,
     "vk": 312.99,
     "title": "Ubiquiti UniFi UNAS 2 - NAS-Server - RAM 4 GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "NOCO0004": {
-    "ean": "1210000618177",
-    "supplier": "BAB",
-    "ek": 106.58,
-    "vk": 208.99,
-    "title": "NOCO GB50 | Boost 12V 1500A Jump Starter | Boost Jump Starters",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
