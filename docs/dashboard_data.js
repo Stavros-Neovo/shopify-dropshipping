@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-08T04:17:03.961633+00:00",
+  "generated_at": "2026-07-08T07:31:39.880092+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 600,
   "catalog": {
@@ -9,107 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-08T03:50:33.363634+00:00",
+      "timestamp": "2026-07-08T06:41:21.736203+00:00",
       "checked": 600,
-      "lowered": 10,
-      "raised": 11,
-      "set_to_floor": 110,
+      "lowered": 4,
+      "raised": 10,
+      "set_to_floor": 119,
       "skipped_floor": 0,
-      "skipped_few": 33,
-      "skipped_image": 22,
-      "unchanged": 414,
-      "errors": 0,
+      "skipped_few": 36,
+      "skipped_image": 55,
+      "unchanged": 371,
+      "errors": 5,
       "dry_run": false
     },
     "recent_changes": [
       {
-        "sku": "CPUA0135",
-        "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
-        "old": 602.99,
-        "new": 580.95,
-        "diff": -22.04,
+        "sku": "RAM5G0027",
+        "title": "G.Skill Trident Z5 6400 CL32 - DDR5 - 32 GB 2",
+        "old": 596.99,
+        "new": 575.95,
+        "diff": -21.04,
         "action": "lowered"
       },
       {
-        "sku": "CPUI0206",
-        "title": "Intel Cpu Core i9-14900KF, box | BX8071514900",
-        "old": 535.99,
-        "new": 518.95,
+        "sku": "RAM5G0028",
+        "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX",
+        "old": 666.99,
+        "new": 640.95,
+        "diff": -26.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM5K0033",
+        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
+        "old": 557.99,
+        "new": 538.95,
+        "diff": -19.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "RAM5K0043",
+        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
+        "old": 533.99,
+        "new": 516.95,
         "diff": -17.04,
         "action": "lowered"
       },
       {
-        "sku": "CPUI0215",
-        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
-        "old": 454.99,
-        "new": 431.99,
-        "diff": -23.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0009",
-        "title": "Enabot EBO Air2 White",
-        "old": 226.99,
-        "new": 218.99,
-        "diff": -8.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "ENAB0010",
-        "title": "Enabot EBO Air2 Blue",
-        "old": 218.99,
-        "new": 223.99,
-        "diff": 5.0,
+        "sku": "RAM5L0009",
+        "title": "Lexar DDR5-6000 DIMM 2x16GB THOR Gaming",
+        "old": 522.99,
+        "new": 524.95,
+        "diff": 1.96,
         "action": "raised"
       },
       {
-        "sku": "ENAB0011",
-        "title": "Enabot EBO Air2 Pink",
-        "old": 218.99,
-        "new": 211.99,
-        "diff": -7.0,
+        "sku": "REFD0002",
+        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
+        "old": 90.99,
+        "new": 87.99,
+        "diff": -3.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0139",
-        "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-        "old": 162.99,
-        "new": 141.99,
-        "diff": -21.0,
+        "sku": "REFT0004",
+        "title": "tecXL HP EliteBook 850 G7 (15,6\")",
+        "old": 636.99,
+        "new": 604.95,
+        "diff": -32.04,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0198",
-        "title": "Seagate IronWolf ST8000VN004 / 8TB",
-        "old": 447.99,
-        "new": 396.99,
-        "diff": -51.0,
+        "sku": "REFT1002",
+        "title": "T1A Dell Latitude 5430 (14\")",
+        "old": 517.99,
+        "new": 518.95,
+        "diff": 0.96,
+        "action": "raised"
+      },
+      {
+        "sku": "REFT1004",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
+        "old": 359.99,
+        "new": 350.99,
+        "diff": -9.0,
         "action": "lowered"
       },
       {
-        "sku": "HDIS0241",
-        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-        "old": 612.99,
-        "new": 552.95,
-        "diff": -60.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "HDIS0247",
-        "title": "Seagate IronWolf ST4000VN006 / 4TB",
-        "old": 269.99,
-        "new": 241.99,
-        "diff": -28.0,
-        "action": "lowered"
+        "sku": "REFT1005",
+        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
+        "old": 556.99,
+        "new": 557.95,
+        "diff": 0.96,
+        "action": "raised"
       }
     ],
     "chart_history": [
-      {
-        "date": "2026-07-06",
-        "lowered": 0,
-        "raised": 0,
-        "floor": 0
-      },
       {
         "date": "2026-07-06",
         "lowered": 9,
@@ -186,6 +180,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-08",
         "lowered": 10,
         "raised": 11,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-08",
+        "lowered": 4,
+        "raised": 10,
         "floor": 0
       }
     ]
