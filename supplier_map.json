@@ -6338,21 +6338,6 @@
       "https://images.icecat.biz/img/gallery/dbf9c1a2320ede1802858ec94bb2c242.jpg"
     ]
   },
-  "HDIS0300": {
-    "ean": "8719706431378",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 825.0,
-    "vk": 1692.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/10576e91477c4a02a594c903cad22a64.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/10576e91477c4a02a594c903cad22a64.jpg",
-      "https://images.icecat.biz/img/gallery/dbf9c1a2320ede1802858ec94bb2c242.jpg"
-    ]
-  },
   "HDIS0315": {
     "ean": "8719706022125",
     "supplier": "BAB",
@@ -6551,21 +6536,6 @@
     "image_url": "https://media.ipcstore.net/img/l/349779.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/349779.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "HDIW0225": {
-    "ean": "0718037901299",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 446.66,
-    "vk": 848.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/349781.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/349781.jpg"
     ],
     "image_verified": false,
     "image_too_small": true
@@ -12985,19 +12955,6 @@
     "title": "ECOFLOW Smart Plug 2",
     "image_verified": false,
     "source": "manual_legacy_sku"
-  },
-  "HDIS0139": {
-    "ean": "0763649113653",
-    "title": "Seagate BarraCuda ST2000DM008 / 2TB / 3,5\"",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/37656306_6808651525.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 94.4,
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HDIS0289": {
     "ean": "8719706432337",
