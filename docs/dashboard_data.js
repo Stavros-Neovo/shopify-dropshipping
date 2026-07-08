@@ -1,115 +1,28 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-08T15:24:45.479852+00:00",
+  "generated_at": "2026-07-08T17:41:40.755699+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 9,
   "catalog": {
-    "total_skus": 883,
+    "total_skus": 881,
     "images_verified": 554,
-    "images_missing": 329
+    "images_missing": 327
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-08T14:43:56.530705+00:00",
-      "checked": 600,
-      "lowered": 3,
-      "raised": 10,
-      "set_to_floor": 116,
+      "timestamp": "2026-07-08T16:52:54.866372+00:00",
+      "checked": 9,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 40,
-      "skipped_image": 56,
-      "unchanged": 370,
-      "errors": 5,
+      "skipped_few": 0,
+      "skipped_image": 0,
+      "unchanged": 9,
+      "errors": 0,
       "dry_run": false
     },
-    "recent_changes": [
-      {
-        "sku": "RAM5G0027",
-        "title": "G.Skill Trident Z5 6400 CL32 - DDR5 - 32 GB 2",
-        "old": 596.99,
-        "new": 575.95,
-        "diff": -21.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5G0028",
-        "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX",
-        "old": 666.99,
-        "new": 640.95,
-        "diff": -26.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 557.99,
-        "new": 538.95,
-        "diff": -19.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 533.99,
-        "new": 516.95,
-        "diff": -17.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5L0009",
-        "title": "Lexar DDR5-6000 DIMM 2x16GB THOR Gaming",
-        "old": 523.99,
-        "new": 524.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 90.99,
-        "new": 87.99,
-        "diff": -3.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT1002",
-        "title": "T1A Dell Latitude 5430 (14\")",
-        "old": 517.99,
-        "new": 518.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 359.99,
-        "new": 350.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT1005",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-        "old": 556.99,
-        "new": 557.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1007",
-        "title": "T1A Lenovo ThinkPad X1 Carbon Gen 8 (14\")",
-        "old": 612.99,
-        "new": 613.95,
-        "diff": 0.96,
-        "action": "raised"
-      }
-    ],
+    "recent_changes": [],
     "chart_history": [
-      {
-        "date": "2026-07-07",
-        "lowered": 10,
-        "raised": 11,
-        "floor": 0
-      },
       {
         "date": "2026-07-07",
         "lowered": 3,
@@ -186,6 +99,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-08",
         "lowered": 3,
         "raised": 10,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-08",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
