@@ -2654,7 +2654,7 @@
     "ean": "0023942531944",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 62.22,
+    "ek": 62.02,
     "vk": 125.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3552,22 +3552,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0574": {
-    "ean": "5099206107427",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 54.4,
-    "vk": 114.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Slim Folio Keyboard black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/138846.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/138846.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0603": {
     "ean": "5099206106710",
     "supplier": "BAB",
@@ -3821,21 +3805,6 @@
     ],
     "image_too_small": true
   },
-  "HDXT0242": {
-    "ean": "4260557513279",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 93.93,
-    "vk": 184.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/140561.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/140561.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HDXT0244": {
     "ean": "4260557513262",
     "supplier": "BAB",
@@ -3855,7 +3824,7 @@
     "ean": "0023942531777",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 77.14,
+    "ek": 76.94,
     "vk": 154.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5055,21 +5024,6 @@
       "https://cdn.ecomm.ui.com/products/350070a0-ae43-431b-b052-8e849c3b0a75/bad94693-bc54-4ab4-b060-9b972401941c.png"
     ],
     "title": "UbiQuiti WiFi 7 Long-Range Access Point",
-    "image_verified": true
-  },
-  "NETU0173": {
-    "ean": "0810084698815",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 156.7,
-    "vk": 302.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/cc0e6f23-b53b-45b5-bff5-faf69f4fbf30/40f697ee-d5c1-4e96-b418-1c642ab1ea19.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/cc0e6f23-b53b-45b5-bff5-faf69f4fbf30/40f697ee-d5c1-4e96-b418-1c642ab1ea19.png"
-    ],
-    "title": "Ubiquiti UniFi Protect G6 - Netzwerk-Überwachungskamera - Turret",
     "image_verified": true
   },
   "PETK0067": {
