@@ -3683,21 +3683,6 @@
       "https://images.icecat.biz/img/gallery/5fb2ae78abbf5f3bb5b8dd570df2ce690c7907c3.jpg"
     ]
   },
-  "USBK1051": {
-    "ean": "4582563857261",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 68.5,
-    "vk": 136.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21212536.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21212536.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "USBS0072": {
     "ean": "619659188542",
     "supplier": "BAB",
@@ -4708,21 +4693,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "HDIW0214": {
-    "ean": "0718037899770",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.99,
-    "vk": 301.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/133325.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/133325.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HDIW0233": {
     "ean": "0718037905730",
     "supplier": "BAB",
@@ -5538,7 +5508,7 @@
     "ean": "0718037906256",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 126.64,
+    "ek": 123.9,
     "vk": 250.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6648,7 +6618,7 @@
     "ean": "6977728947303",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 568.4,
+    "ek": 558.25,
     "vk": 1192.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8381,7 +8351,7 @@
     "ean": "0619659220884",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 208.15,
+    "ek": 189.92,
     "vk": 399.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
