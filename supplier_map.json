@@ -6588,7 +6588,7 @@
     "ean": "6977728947303",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 558.25,
+    "ek": 548.1,
     "vk": 1192.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9920,22 +9920,6 @@
       "https://images.icecat.biz/img/gallery/4af96bbe934ea58d79b479053fb168207e8268c5.jpg"
     ]
   },
-  "SSDC0078": {
-    "ean": "0649528944771",
-    "supplier": "BAB",
-    "ek": 190.72,
-    "vk": 420.99,
-    "title": "Crucial P310 Gen4 2280 2TB NVMe PCIe M.2 SSD mit heatsink",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/140468.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/140468.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "SSDK1017": {
     "ean": "4582563857889",
     "supplier": "BAB",
@@ -12822,19 +12806,6 @@
     "image_verified": true,
     "image_source": "icecat_mpn",
     "ek": 750.0,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SSDS0115": {
-    "ean": "8806094947205",
-    "title": "SSD M.2 (2280) 4TB Samsung 990 PRO (PCIe/NVMe)",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/4108f80d87bfbdceed80c05533861c2a.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 502.0,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0235": {
