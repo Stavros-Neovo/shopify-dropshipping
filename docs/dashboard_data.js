@@ -1,10 +1,10 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-09T17:59:55.113100+00:00",
+  "generated_at": "2026-07-09T20:00:00.988122+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 875,
-    "images_verified": 550,
+    "total_skus": 873,
+    "images_verified": 548,
     "images_missing": 325
   },
   "repricing": {
@@ -709,7 +709,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "08.06",
         "revenue": 64.96,
-        "profit": 7.39,
+        "profit": 7.93,
         "sales": 2
       },
       {
@@ -1222,8 +1222,8 @@ window.DASHBOARD_DATA = {
         "date": "08.06 09:44",
         "title": "Beurer IL 11 Infrarotlampe",
         "revenue": 38.98,
-        "profit": 3.41,
-        "cash_profit": 4.17
+        "profit": 3.95,
+        "cash_profit": 4.68
       },
       {
         "date": "07.06 17:46",
