@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-09T07:50:44.948791+00:00",
+  "generated_at": "2026-07-09T11:13:05.752648+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 600,
+  "active_listings": 7,
   "catalog": {
     "total_skus": 881,
     "images_verified": 554,
@@ -9,107 +9,20 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-09T05:21:50.336586+00:00",
-      "checked": 600,
-      "lowered": 2,
-      "raised": 10,
-      "set_to_floor": 115,
+      "timestamp": "2026-07-09T08:51:37.435143+00:00",
+      "checked": 7,
+      "lowered": 0,
+      "raised": 0,
+      "set_to_floor": 0,
       "skipped_floor": 0,
-      "skipped_few": 36,
-      "skipped_image": 55,
-      "unchanged": 376,
-      "errors": 6,
+      "skipped_few": 0,
+      "skipped_image": 0,
+      "unchanged": 7,
+      "errors": 0,
       "dry_run": false
     },
-    "recent_changes": [
-      {
-        "sku": "RAM5K0033",
-        "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-32GB-2",
-        "old": 557.99,
-        "new": 538.95,
-        "diff": -19.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5K0043",
-        "title": "Kingston FURY BEAST - DDR5 - 32GB (KF556C36BB",
-        "old": 533.99,
-        "new": 516.95,
-        "diff": -17.04,
-        "action": "lowered"
-      },
-      {
-        "sku": "RAM5L0009",
-        "title": "Lexar DDR5-6000 DIMM 2x16GB THOR Gaming",
-        "old": 523.99,
-        "new": 524.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFD0002",
-        "title": "Dell WD19S Dockingstation | 130W - Refurbishe",
-        "old": 90.99,
-        "new": 87.99,
-        "diff": -3.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT1002",
-        "title": "T1A Dell Latitude 5430 (14\")",
-        "old": 517.99,
-        "new": 518.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1004",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 4 (14\")",
-        "old": 359.99,
-        "new": 350.99,
-        "diff": -9.0,
-        "action": "lowered"
-      },
-      {
-        "sku": "REFT1005",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 5 (14\")",
-        "old": 556.99,
-        "new": 557.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1007",
-        "title": "T1A Lenovo ThinkPad X1 Carbon Gen 8 (14\")",
-        "old": 612.99,
-        "new": 613.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "REFT1011",
-        "title": "T1A Lenovo ThinkPad X1 Yoga Gen 6 (14\")",
-        "old": 708.99,
-        "new": 709.95,
-        "diff": 0.96,
-        "action": "raised"
-      },
-      {
-        "sku": "SDXS0015",
-        "title": "SanDisk SDSSDE61-1T00-G25 Extreme Portable 1T",
-        "old": 220.99,
-        "new": 212.99,
-        "diff": -8.0,
-        "action": "lowered"
-      }
-    ],
+    "recent_changes": [],
     "chart_history": [
-      {
-        "date": "2026-07-07",
-        "lowered": 10,
-        "raised": 11,
-        "floor": 0
-      },
       {
         "date": "2026-07-07",
         "lowered": 3,
@@ -186,6 +99,12 @@ window.DASHBOARD_DATA = {
         "date": "2026-07-09",
         "lowered": 2,
         "raised": 10,
+        "floor": 0
+      },
+      {
+        "date": "2026-07-09",
+        "lowered": 0,
+        "raised": 0,
         "floor": 0
       }
     ]
