@@ -1252,21 +1252,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HHWB0036": {
-    "ean": "8006540774724",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 66.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/991603469f9d273c3d4704c1fdbe520d.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/991603469f9d273c3d4704c1fdbe520d.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HHWB0037": {
     "ean": "8006540957196",
     "supplier": "BAB",
@@ -4802,21 +4787,6 @@
       "https://images.icecat.biz/img/gallery/34566818_3683691652.jpg"
     ]
   },
-  "HHWB1051": {
-    "ean": "4210201408567",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.53,
-    "vk": 206.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21250547.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21250547.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "HHWB5022": {
     "ean": "4211125100674",
     "supplier": "BAB",
@@ -5230,7 +5200,7 @@
     "ean": "0740617277357",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 109.51,
+    "ek": 99.0,
     "vk": 213.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5758,7 +5728,7 @@
     "ean": "5707119056502",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 124.85,
+    "ek": 116.73,
     "vk": 255.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5769,7 +5739,7 @@
     "ean": "5707119041331",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 121.8,
+    "ek": 116.73,
     "vk": 294.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -8366,7 +8336,7 @@
     "ean": "0619659220860",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 340.85,
+    "ek": 297.9,
     "vk": 649.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8583,17 +8553,6 @@
     "vk": 351.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
-  "SUPT4010": {
-    "ean": "4048945034953",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 100.49,
-    "vk": 447.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Teufel T6 Subwoofer MK2 20 60W Schwarz Wireless",
     "image_verified": false
   },
   "SUPV0038": {
@@ -9297,20 +9256,6 @@
       "https://media.ipcstore.net/img/672411.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "NETU0152": {
-    "ean": "0810010079251",
-    "supplier": "BAB",
-    "ek": 409.35,
-    "vk": 778.99,
-    "title": "Ubiquiti UniFi UNAS Pro - NAS-Server - Rack - einbaufähig",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://cdn.ecomm.ui.com/products/c73f5f36-f1af-4eb2-bf44-8a9f31eb3e3b/26cb92f6-4e46-4da6-945d-9f8e2f8a283b.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/c73f5f36-f1af-4eb2-bf44-8a9f31eb3e3b/26cb92f6-4e46-4da6-945d-9f8e2f8a283b.png"
-    ],
-    "image_verified": true
   },
   "NETU0164": {
     "ean": "0810354023545",
@@ -12505,7 +12450,7 @@
   "USBS0011": {
     "ean": "0619659136703",
     "supplier": "BAB",
-    "ek": 11.8,
+    "ek": 11.49,
     "vk": 29.99,
     "title": "SanDisk Ultra Flair USB 3.0 64GB",
     "listed_at": "2026-06-14T20:49:22",
