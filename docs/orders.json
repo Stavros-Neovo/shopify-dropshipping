@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T22:15:38.480470+00:00",
+  "updated": "2026-07-09T00:19:22.906907+00:00",
   "orders": [
     {
       "id": "23-14765-26114",
@@ -109,7 +109,7 @@
       "vk": 25.98,
       "ek": 0,
       "note": "",
-      "status": "open",
+      "status": "done",
       "tracking": "",
       "items_count": 1
     },
@@ -123,7 +123,7 @@
       "vk": 38.98,
       "ek": 0,
       "note": "",
-      "status": "open",
+      "status": "done",
       "tracking": "",
       "items_count": 1
     },
