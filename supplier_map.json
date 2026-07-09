@@ -601,7 +601,7 @@
     "ean": "4211125572112",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 23.85,
+    "ek": 22.33,
     "vk": 52.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -1048,7 +1048,7 @@
     "ean": "6970229250545",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 37.56,
+    "ek": 36.03,
     "vk": 78.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1211,7 +1211,7 @@
     "ean": "4211125104047",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.9,
+    "ek": 26.39,
     "vk": 58.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -1226,7 +1226,7 @@
     "ean": "4211125591199",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.93,
+    "ek": 28.42,
     "vk": 62.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -1301,7 +1301,7 @@
     "ean": "4211125370008",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 49.74,
+    "ek": 46.69,
     "vk": 101.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1316,7 +1316,7 @@
     "ean": "4211125103507",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 32.48,
+    "ek": 31.47,
     "vk": 68.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1908,20 +1908,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/adb0e4d3a7c0eb5c05423bf39df05ee18872c837.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/adb0e4d3a7c0eb5c05423bf39df05ee18872c837.jpg"
-    ],
-    "image_verified": true
-  },
-  "SHP0072": {
-    "ean": "8720169230033",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.96,
-    "vk": 65.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/68b5300140233ab288a09dc294291b255e730308.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/68b5300140233ab288a09dc294291b255e730308.jpg"
     ],
     "image_verified": true
   },
@@ -2697,7 +2683,7 @@
     "ean": "4211125608101",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 55.83,
+    "ek": 52.78,
     "vk": 112.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7583,7 +7569,7 @@
     "ean": "0740617350180",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 359.01,
+    "ek": 355.01,
     "vk": 713.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8698,7 +8684,7 @@
   "HHWB5012": {
     "ean": "4211125614034",
     "supplier": "BAB",
-    "ek": 15.23,
+    "ek": 14.72,
     "vk": 36.99,
     "title": "Beurer IL 11 Infrarotlampe",
     "listed_at": "2026-06-14T20:49:22",
@@ -8708,12 +8694,13 @@
       "https://media.ipcstore.net/img/21132133.jpg"
     ],
     "image_verified": true,
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB5016": {
     "ean": "4211125591137",
     "supplier": "BAB",
-    "ek": 15.23,
+    "ek": 13.2,
     "vk": 36.99,
     "title": "Beurer HC 25 - Föhn",
     "listed_at": "2026-06-14T20:49:22",
@@ -8723,7 +8710,8 @@
       "https://media.ipcstore.net/img/21296158.jpg"
     ],
     "image_verified": true,
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB5025": {
     "ean": "4211125648145",
@@ -11958,7 +11946,7 @@
   "SUPS0262": {
     "ean": "8806092709850",
     "supplier": "BAB",
-    "ek": 4.77,
+    "ek": 4.57,
     "vk": 16.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -11975,7 +11963,8 @@
       "https://images.icecat.biz/img/gallery/b419ab23225822c782e1d694bbe75dd97e0ce86f.jpg",
       "https://images.icecat.biz/img/gallery/db5ef527ab8e666a97a0eede71cd4b81f2353bf4.jpg",
       "https://images.icecat.biz/img/gallery/573a7fb90a70e413bc64ed22b6c093dfd606a51f.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0263": {
     "ean": "8806092709904",
@@ -12832,19 +12821,6 @@
     "image_verified": true,
     "image_source": "icecat_mpn",
     "ek": 11.77,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPS0268": {
-    "ean": "8806095039763",
-    "title": "Samsung Galaxy SmartTag2 - Anti-Verlust Bluetooth-Tag für Handy - 4 Pack 2 schwarz, 2 weiß",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/7a9321a3fa070cd7d08368a1b5363e1c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/7a9321a3fa070cd7d08368a1b5363e1c.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 45.17,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0287": {
