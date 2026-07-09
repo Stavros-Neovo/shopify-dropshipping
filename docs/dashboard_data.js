@@ -1,7 +1,7 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-08T23:12:09.916793+00:00",
+  "generated_at": "2026-07-09T03:41:38.510488+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
-  "active_listings": 9,
+  "active_listings": 600,
   "catalog": {
     "total_skus": 881,
     "images_verified": 554,
@@ -9,26 +9,101 @@ window.DASHBOARD_DATA = {
   },
   "repricing": {
     "last_run": {
-      "timestamp": "2026-07-08T22:27:11.780265+00:00",
-      "checked": 9,
-      "lowered": 0,
-      "raised": 0,
-      "set_to_floor": 0,
+      "timestamp": "2026-07-09T01:05:24.560409+00:00",
+      "checked": 600,
+      "lowered": 8,
+      "raised": 11,
+      "set_to_floor": 109,
       "skipped_floor": 0,
-      "skipped_few": 0,
-      "skipped_image": 0,
-      "unchanged": 9,
-      "errors": 0,
+      "skipped_few": 34,
+      "skipped_image": 21,
+      "unchanged": 415,
+      "errors": 2,
       "dry_run": false
     },
-    "recent_changes": [],
-    "chart_history": [
+    "recent_changes": [
       {
-        "date": "2026-07-07",
-        "lowered": 3,
-        "raised": 10,
-        "floor": 0
+        "sku": "CPUA0135",
+        "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
+        "old": 602.99,
+        "new": 580.95,
+        "diff": -22.04,
+        "action": "lowered"
       },
+      {
+        "sku": "CPUI0206",
+        "title": "Intel Cpu Core i9-14900KF, box | BX8071514900",
+        "old": 535.99,
+        "new": 518.95,
+        "diff": -17.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "CPUI0215",
+        "title": "Intel Cpu Core 7-14700, box | BX8071514700",
+        "old": 454.99,
+        "new": 431.99,
+        "diff": -23.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0009",
+        "title": "Enabot EBO Air2 White",
+        "old": 226.99,
+        "new": 218.99,
+        "diff": -8.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "ENAB0010",
+        "title": "Enabot EBO Air2 Blue",
+        "old": 218.99,
+        "new": 223.99,
+        "diff": 5.0,
+        "action": "raised"
+      },
+      {
+        "sku": "ENAB0011",
+        "title": "Enabot EBO Air2 Pink",
+        "old": 218.99,
+        "new": 211.99,
+        "diff": -7.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0198",
+        "title": "Seagate IronWolf ST8000VN004 / 8TB",
+        "old": 448.99,
+        "new": 397.99,
+        "diff": -51.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0241",
+        "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
+        "old": 613.99,
+        "new": 554.95,
+        "diff": -59.04,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0247",
+        "title": "Seagate IronWolf ST4000VN006 / 4TB",
+        "old": 270.99,
+        "new": 241.99,
+        "diff": -29.0,
+        "action": "lowered"
+      },
+      {
+        "sku": "HDIS0281",
+        "title": "Seagate IronWolf ST2000VN003 / 2TB",
+        "old": 225.99,
+        "new": 203.99,
+        "diff": -22.0,
+        "action": "lowered"
+      }
+    ],
+    "chart_history": [
       {
         "date": "2026-07-07",
         "lowered": 0,
@@ -106,6 +181,12 @@ window.DASHBOARD_DATA = {
         "lowered": 0,
         "raised": 0,
         "floor": 0
+      },
+      {
+        "date": "2026-07-09",
+        "lowered": 8,
+        "raised": 11,
+        "floor": 0
       }
     ]
   },
@@ -126,18 +207,12 @@ window.DASHBOARD_DATA = {
       "month_ek": 0.0,
       "month_ebay_fee": 0.0,
       "month_return_reserve": 0.0,
-      "total_sales_30d": 9,
-      "total_revenue_30d": 919.84,
-      "total_profit_30d": 182.31,
-      "total_cash_profit_30d": 201.45
+      "total_sales_30d": 7,
+      "total_revenue_30d": 854.88,
+      "total_profit_30d": 174.92,
+      "total_cash_profit_30d": 193.01
     },
     "chart_7d": [
-      {
-        "date": "02.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "03.07",
         "revenue": 0,
@@ -173,15 +248,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "09.06",
+        "date": "09.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "10.06",
         "revenue": 0,
@@ -355,15 +430,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "10.04",
+        "date": "09.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "11.04",
         "revenue": 0,
@@ -897,6 +972,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "09.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1248,7 +1329,7 @@ window.DASHBOARD_DATA = {
       "gewst_month": 0.0,
       "total_month": 0.0
     },
-    "expected_payout": 777.01
+    "expected_payout": 721.94
   },
   "pending_orders": {},
   "flagged_orders": {}
