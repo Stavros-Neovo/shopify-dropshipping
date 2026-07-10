@@ -2223,7 +2223,7 @@
     "ean": "8886419378396",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 27.41,
+    "ek": 26.9,
     "vk": 60.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2262,7 +2262,7 @@
     "ean": "8887910060421",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.93,
+    "ek": 27.91,
     "vk": 64.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4493,7 +4493,7 @@
     "ean": "8887910060889",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 75.11,
+    "ek": 72.07,
     "vk": 157.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -8511,7 +8511,7 @@
   "HHWB1127": {
     "ean": "8006540860793",
     "supplier": "BAB",
-    "ek": 15.23,
+    "ek": 14.21,
     "vk": 36.99,
     "title": "Braun Oral-B Pro Tiefenreinigung Aufsteckbürsten - 6 Stk - Weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -8521,7 +8521,8 @@
       "https://images.icecat.biz/img/gallery/2abeecd927d24727ccd5a7b0ee41a8d2.jpg"
     ],
     "image_verified": false,
-    "image_too_small": true
+    "image_too_small": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1134": {
     "ean": "8700216195027",
@@ -11322,21 +11323,6 @@
       "https://images.icecat.biz/img/gallery/32851348_9301309902.jpg"
     ]
   },
-  "SUPL0094": {
-    "ean": "5099206063846",
-    "supplier": "BAB",
-    "ek": 17.56,
-    "vk": 40.99,
-    "title": "Logitech Desktop MK235 Wireless Black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/553333.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/553333.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0127": {
     "ean": "5099206065062",
     "supplier": "BAB",
@@ -11647,7 +11633,7 @@
   "SUPR1009": {
     "ean": "8886419333265",
     "supplier": "BAB",
-    "ek": 14.21,
+    "ek": 13.77,
     "vk": 35.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - black",
     "listed_at": "2026-06-14T20:49:22",
@@ -11663,7 +11649,7 @@
   "SUPR1027": {
     "ean": "8886419333326",
     "supplier": "BAB",
-    "ek": 14.66,
+    "ek": 13.77,
     "vk": 38.99,
     "title": "Razer DeathAdder Essential - Gaming Maus - white",
     "listed_at": "2026-06-14T20:49:22",
@@ -11694,7 +11680,7 @@
   "SUPR1055": {
     "ean": "8886419345763",
     "supplier": "BAB",
-    "ek": 69.26,
+    "ek": 67.55,
     "vk": 145.99,
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
     "listed_at": "2026-06-14T20:49:22",
