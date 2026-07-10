@@ -6402,22 +6402,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HDIW0232": {
-    "ean": "0718037905754",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 179.53,
-    "vk": 345.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Western Digital WD40EFZZ / 4TB / red plus",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21311902.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21311902.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "HDIW0244": {
     "ean": "0718037901442",
     "supplier": "BAB",
@@ -6709,22 +6693,6 @@
     ],
     "title": "UbiQuiti UniFi Dream Machine Pro Access Point",
     "image_verified": true
-  },
-  "NETU0067": {
-    "ean": "0810010071163",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.26,
-    "vk": 322.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "UbiQuiti UniFi Switch Lite USW-Lite-16-POE - Switch",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/121455.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/121455.jpg"
-    ],
-    "image_too_small": true
   },
   "NETU0130": {
     "ean": "0810084695548",
@@ -8442,7 +8410,7 @@
     "ean": "4548736163591",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 182.7,
+    "ek": 172.55,
     "vk": 351.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -11449,22 +11417,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0395": {
-    "ean": "5099206088252",
-    "supplier": "BAB",
-    "ek": 57.35,
-    "vk": 116.99,
-    "title": "Logitech Slim Folio Keyboard black ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/114867.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/114867.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
@@ -12705,19 +12657,6 @@
     "image_verified": true,
     "image_source": "icecat_mpn",
     "ek": 8.42,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPS0266": {
-    "ean": "8806095039893",
-    "title": "Samsung Galaxy SmartTag2 - Anti-Verlust Bluetooth-Tag für Handy - schwarz",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/05651522f7bea2969562069ede123d2c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/05651522f7bea2969562069ede123d2c.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 11.77,
     "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
