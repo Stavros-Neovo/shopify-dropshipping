@@ -357,24 +357,6 @@
       "https://images.icecat.biz/img/gallery/0c1090f608033a8bbe8184b9781f5089.jpg"
     ]
   },
-  "SUPJ1061": {
-    "ean": "5706991027518",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.95,
-    "vk": 255.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "JABRA Evolve2 55 MS Mono Headset",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/107505055_1270905803.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/107505055_1270905803.jpg",
-      "https://images.icecat.biz/img/gallery/07d6c4ffd99f6f6ee5b14405f4f8d97e.jpg",
-      "https://images.icecat.biz/img/gallery/107505043_7333761901.jpg",
-      "https://images.icecat.biz/img/gallery/107505038_1565762677.jpg"
-    ]
-  },
   "SUPC0089": {
     "ean": "4025112099915",
     "supplier": "BAB",
@@ -4338,7 +4320,7 @@
     "ean": "0843367123155",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 87.16,
+    "ek": 84.9,
     "vk": 171.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4797,17 +4779,6 @@
     "vk": 208.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "HHWK2096": {
-    "ean": "4054278975375",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 117.23,
-    "vk": 228.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Kärcher VC 4, 2-in-1-Stabstaubsauger, Beutellos, Schwarz, Gelb, Rechteckig, Trocken, HEPA",
     "image_verified": false
   },
   "MBAI0047": {
@@ -6709,20 +6680,6 @@
     ],
     "image_verified": true
   },
-  "NETU0023": {
-    "ean": "0817882027656",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 897.92,
-    "vk": 1698.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/6e019f0c-26b5-4fdf-b4e1-994abd9ce6e1/483da8b5-c584-4100-a4f2-18d11fa7187e.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/6e019f0c-26b5-4fdf-b4e1-994abd9ce6e1/483da8b5-c584-4100-a4f2-18d11fa7187e.png"
-    ],
-    "image_verified": true
-  },
   "NETU0024": {
     "ean": "0810010077769",
     "supplier": "BAB",
@@ -6768,21 +6725,6 @@
       "https://media.ipcstore.net/img/l/121455.jpg"
     ],
     "image_too_small": true
-  },
-  "NETU0122": {
-    "ean": "810084695210",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 161.97,
-    "vk": 312.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/8733d39f-7799-4268-bb24-3185c7cd0877/f94c1ece-2a1a-4760-afb2-167c7c46337f.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/8733d39f-7799-4268-bb24-3185c7cd0877/f94c1ece-2a1a-4760-afb2-167c7c46337f.png"
-    ],
-    "title": "UbiQuiti Gateway Pro UniFi UXG-MAX",
-    "image_verified": true
   },
   "NETU0130": {
     "ean": "0810084695548",
@@ -8092,22 +8034,6 @@
     "image_url": "https://media.ipcstore.net/img/138138.jpg",
     "images": [
       "https://media.ipcstore.net/img/138138.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "SSDL0042": {
-    "ean": "0843367132232",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 293.09,
-    "vk": 570.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "SSD M.2 Lexar 4TB PCIe Gen 4X4 NQ790 NVMe",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/138139.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/138139.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -12376,16 +12302,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "USBK1050": {
-    "ean": "4582563857209",
-    "supplier": "BAB",
-    "ek": 39.03,
-    "vk": 81.99,
-    "title": "Kioxia Exceria G2 SD Card 512GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "USBK1060": {
     "ean": "4582563858435",
     "supplier": "BAB",
@@ -12802,19 +12718,6 @@
     "image_verified": true,
     "image_source": "icecat_mpn",
     "ek": 11.77,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPS0287": {
-    "ean": "8806092673885",
-    "title": "Samsung EP-T6530 - Netzteil - 65 Watt - 2 x USB-C - schwarz",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93413266_3165211977.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 20.3,
     "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
