@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-09T23:16:21.718412+00:00",
+  "generated_at": "2026-07-10T03:43:34.719391+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -133,12 +133,6 @@ window.DASHBOARD_DATA = {
     },
     "chart_7d": [
       {
-        "date": "03.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
         "date": "04.07",
         "revenue": 0,
         "profit": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "10.06",
+        "date": "10.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "11.06",
         "revenue": 55.98,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "11.04",
+        "date": "10.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "12.04",
         "revenue": 0,
@@ -894,6 +888,12 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
+      },
+      {
+        "date": "10.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
