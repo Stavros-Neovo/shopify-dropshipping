@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-11T22:55:21.436716+00:00",
+  "generated_at": "2026-07-12T00:02:28.557142+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -126,18 +126,12 @@ window.DASHBOARD_DATA = {
       "month_ek": 0.0,
       "month_ebay_fee": 0.0,
       "month_return_reserve": 0.0,
-      "total_sales_30d": 7,
-      "total_revenue_30d": 854.88,
-      "total_profit_30d": 174.92,
-      "total_cash_profit_30d": 193.01
+      "total_sales_30d": 6,
+      "total_revenue_30d": 798.9,
+      "total_profit_30d": 170.61,
+      "total_cash_profit_30d": 187.41
     },
     "chart_7d": [
-      {
-        "date": "05.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "06.07",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "12.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_30d": [
-      {
-        "date": "12.06",
-        "revenue": 63.98,
-        "profit": 4.84,
-        "sales": 1
-      },
       {
         "date": "13.06",
         "revenue": 219.98,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "13.04",
+        "date": "12.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "14.04",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "12.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1248,7 +1248,7 @@ window.DASHBOARD_DATA = {
       "gewst_month": 0.0,
       "total_month": 0.0
     },
-    "expected_payout": 721.94
+    "expected_payout": 674.54
   },
   "pending_orders": {},
   "flagged_orders": {}
