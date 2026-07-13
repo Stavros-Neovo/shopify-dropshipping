@@ -118,22 +118,6 @@
       "https://images.icecat.biz/img/gallery/36544548_9316499936.jpg"
     ]
   },
-  "SUPL0509": {
-    "ean": "5099206099876",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.66,
-    "vk": 91.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "Logitech Lift Vertical Ergonomic Mouse",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/128040.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/128040.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0591": {
     "ean": "5099206096547",
     "supplier": "BAB",
@@ -1376,21 +1360,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "NOCO0019": {
-    "ean": "1210000617309",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.53,
-    "vk": 87.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://no.co/media/catalog/product/x/g/xgc4.png",
-    "images": [
-      "https://no.co/media/catalog/product/x/g/xgc4.png"
-    ],
-    "title": "NOCO XGC4 | Genius Boost | 56W XGC Power Adapter",
-    "image_verified": true
   },
   "NOCO0028": {
     "ean": "1210000618146",
@@ -6362,31 +6331,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "HDIW0223": {
-    "ean": "0718037901282",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 509.11,
-    "vk": 966.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/349779.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/349779.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "HDIW0228": {
-    "ean": "718037896748",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 328.71,
-    "vk": 626.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "HDIW0230": {
     "ean": "0718037906201",
     "supplier": "BAB",
@@ -6497,7 +6441,7 @@
     "ean": "4066529086884",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 164.94,
+    "ek": 162.4,
     "vk": 322.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7322,16 +7266,6 @@
       "https://media.ipcstore.net/img/21286929.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "RAM5G0015": {
-    "ean": "4713294232755",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 776.48,
-    "vk": 1469.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "RAM5G0018": {
     "ean": "4713294234575",
@@ -9155,20 +9089,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "NOCO0021": {
-    "ean": "1210000617286",
-    "supplier": "BAB",
-    "ek": 18.22,
-    "vk": 41.99,
-    "title": "NOCO GBC014 | NOCO GB70 EVA Protection Case | Boost Accessories",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://no.co/media/catalog/product/g/b/gbc014.png",
-    "images": [
-      "https://no.co/media/catalog/product/g/b/gbc014.png"
-    ],
-    "image_verified": true
   },
   "NOCO0022": {
     "ean": "1210000617293",
