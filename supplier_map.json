@@ -9194,16 +9194,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "PETK0077": {
-    "ean": "6975069303680",
-    "supplier": "BAB",
-    "ek": 11.0,
-    "vk": 28.99,
-    "title": "Petkit Ständer für Futterautomat",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PETK0080": {
     "ean": "6975069301846",
     "supplier": "BAB",
@@ -10790,21 +10780,6 @@
       "https://media.ipcstore.net/img/291800.jpg"
     ],
     "image_verified": true,
-    "image_source": "kosatec_ipcstore"
-  },
-  "USBS0075": {
-    "ean": "0619659172831",
-    "supplier": "BAB",
-    "ek": 11.9,
-    "vk": 29.99,
-    "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 64 GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/291801.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/291801.jpg"
-    ],
     "image_source": "kosatec_ipcstore"
   },
   "USBS0076": {
