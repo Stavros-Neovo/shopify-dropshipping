@@ -4198,7 +4198,7 @@
     "ean": "4713294226631",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 94.9,
+    "ek": 88.51,
     "vk": 186.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5978,27 +5978,6 @@
       "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
     ]
   },
-  "HDIS0269": {
-    "ean": "8719706432276",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 704.25,
-    "vk": 1333.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/95784011_5984120292.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/95784011_5984120292.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_0250252630.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_0582923902.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_5823766517.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_5470380123.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_4900369001.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_1255667047.jpg",
-      "https://images.icecat.biz/img/gallery/95784011_6250401826.jpg"
-    ]
-  },
   "HDIS0270": {
     "ean": "8719706432290",
     "supplier": "BAB",
@@ -6932,7 +6911,7 @@
     "ean": "4719692007018",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 177.63,
+    "ek": 173.87,
     "vk": 342.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6980,7 +6959,7 @@
     "ean": "4713294223104",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 208.58,
+    "ek": 186.96,
     "vk": 400.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7182,7 +7161,7 @@
     "ean": "4713294232656",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 368.45,
+    "ek": 365.4,
     "vk": 701.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
