@@ -438,22 +438,6 @@
       "https://images.icecat.biz/img/gallery/93797034_9009600323.jpg"
     ]
   },
-  "NETU0183": {
-    "ean": "0810084694275",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 492.12,
-    "vk": 934.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "Ubiquiti PowerAmp - Netzwerkverstärker - 2 x",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/286321.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/286321.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "PPSE0056": {
     "ean": "4895251604550",
     "supplier": "BAB",
@@ -2067,22 +2051,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "SUPL0293": {
-    "ean": "5099206080270",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.59,
-    "vk": 59.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Gaming Mouse G502 HERO Corded Black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/110044.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/110044.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "SUPL0301": {
     "ean": "5099206077461",
@@ -4188,7 +4156,7 @@
     "ean": "4713294226631",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 88.51,
+    "ek": 88.0,
     "vk": 186.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4943,7 +4911,7 @@
     "ean": "4719692004970",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 122.31,
+    "ek": 104.55,
     "vk": 237.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6892,7 +6860,7 @@
     "ean": "4713294224415",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 181.69,
+    "ek": 176.2,
     "vk": 349.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6924,7 +6892,7 @@
     "ean": "4713294223104",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 186.96,
+    "ek": 184.43,
     "vk": 400.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7119,22 +7087,6 @@
     "image_url": "https://media.ipcstore.net/img/129935.jpg",
     "images": [
       "https://media.ipcstore.net/img/129935.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "RAM5G0009": {
-    "ean": "4713294232656",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 365.4,
-    "vk": 701.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21286929.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21286929.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -10009,17 +9961,6 @@
     "ek": 13.2,
     "vk": 32.99,
     "title": "Needit PARK Micro (elektrische Parkscheibe) Schwarz/Blau",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPN4010": {
-    "ean": "5711157090206",
-    "supplier": "BAB",
-    "ek": 18.78,
-    "vk": 43.99,
-    "title": "Needit PARK Micro Solar (elektrische Parkscheibe) Schwarz/Blau",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
