@@ -2364,20 +2364,6 @@
     ],
     "image_verified": true
   },
-  "USBV0012": {
-    "ean": "023942491682",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 25.68,
-    "vk": 55.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/24603157_0567488732.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/24603157_0567488732.jpg"
-    ],
-    "image_verified": true
-  },
   "NETT0160": {
     "ean": "8885020621501",
     "supplier": "BAB",
@@ -2525,7 +2511,7 @@
     "ean": "0023942531975",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 57.45,
+    "ek": 57.35,
     "vk": 115.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3921,22 +3907,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "NETU0189": {
-    "ean": "0810084693698",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 82.75,
-    "vk": 163.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Ubiquiti UniFi Switch Ultra L2, Gigabit Ethernet",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/135483.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/135483.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "PETK0011": {
     "ean": "6975069302713",
     "supplier": "BAB",
@@ -4642,7 +4612,7 @@
     "ean": "0023942532231",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 112.67,
+    "ek": 112.46,
     "vk": 223.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4777,21 +4747,6 @@
       "https://images.icecat.biz/img/gallery/a50d37dbda6bd94a100450309c350d5cca9e87a6.jpg",
       "https://images.icecat.biz/img/gallery/3f2b576c994e6cf6150e52ec9624ffe8e0e40327.jpg"
     ]
-  },
-  "NETT1011": {
-    "ean": "4779051841332",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 138.04,
-    "vk": 267.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://static.wixstatic.com/media/814ec4_85cf41193b1b42a2a7883a002a91e2a0~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-399-en.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_85cf41193b1b42a2a7883a002a91e2a0~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-399-en.jpg"
-    ],
-    "title": "Teltonika RUT260 - Wireless Router",
-    "image_verified": true
   },
   "NETT1083": {
     "ean": "4779051841844",
@@ -7970,7 +7925,7 @@
     "ean": "0017817859585",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 277.1,
+    "ek": 274.05,
     "vk": 552.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7986,7 +7941,7 @@
     "ean": "0017817859561",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 277.1,
+    "ek": 274.05,
     "vk": 556.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -9561,7 +9516,7 @@
   "SUPB1062": {
     "ean": "0017817859516",
     "supplier": "BAB",
-    "ek": 279.13,
+    "ek": 274.05,
     "vk": 552.99,
     "title": "Bose QuietComfort Ultra 2.Gen Wüstengold",
     "listed_at": "2026-06-14T20:49:22",
@@ -10813,25 +10768,6 @@
       "https://images.icecat.biz/img/gallery/bed8f21d2823e43c6be1f84420fc576865c6c266.jpg",
       "https://images.icecat.biz/img/gallery/93d7d74b3a81fb9565277bdd94a49acfdf913e98.jpg",
       "https://images.icecat.biz/img/gallery/1aa54eb2357418027603a9c439025c6581f042f7.jpg",
-      "https://images.icecat.biz/img/gallery/2d396eb0dcad377fc277ba6cec9056b244f36839.jpg"
-    ]
-  },
-  "USBV0016": {
-    "ean": "0023942490654",
-    "supplier": "BAB",
-    "ek": 5.3,
-    "vk": 17.99,
-    "title": "Verbatim Store n Go 64GB Pinstripe USB 2.0 black 49065",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/80d1cbbac8b1928379d10186b4ff342434b22e25.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/80d1cbbac8b1928379d10186b4ff342434b22e25.jpg",
-      "https://images.icecat.biz/img/gallery/bed8f21d2823e43c6be1f84420fc576865c6c266.jpg",
-      "https://images.icecat.biz/img/gallery/dfa7a3ccc380b9f7a5ddb0a5655d5a34f405c3b6.jpg",
-      "https://images.icecat.biz/img/gallery/93d7d74b3a81fb9565277bdd94a49acfdf913e98.jpg",
-      "https://images.icecat.biz/img/gallery/f757977fcdb69884ab542af62c3a124dcec4e07a.jpg",
       "https://images.icecat.biz/img/gallery/2d396eb0dcad377fc277ba6cec9056b244f36839.jpg"
     ]
   },
