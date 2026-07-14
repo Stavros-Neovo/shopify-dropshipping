@@ -7858,21 +7858,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDW0094": {
-    "ean": "0619659220884",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 189.58,
-    "vk": 399.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/141588.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/141588.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SSDW0095": {
     "ean": "0619659220860",
     "supplier": "BAB",
