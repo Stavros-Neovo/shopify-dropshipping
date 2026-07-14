@@ -836,7 +836,7 @@
     "ean": "5099206122017",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 36.64,
+    "ek": 36.13,
     "vk": 79.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -852,7 +852,7 @@
     "ean": "5099206127128",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.2,
+    "ek": 46.18,
     "vk": 97.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -877,7 +877,7 @@
     "ean": "8887910061091",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.58,
+    "ek": 44.56,
     "vk": 95.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -937,7 +937,7 @@
     "ean": "8887910061114",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.9,
+    "ek": 44.56,
     "vk": 97.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -2505,16 +2505,6 @@
       "https://media.ipcstore.net/img/l/21288610.jpg"
     ],
     "image_too_small": true
-  },
-  "HDXT0224": {
-    "ean": "4260557511268",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 70.42,
-    "vk": 140.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDXT0234": {
     "ean": "4260557511237",
@@ -6040,7 +6030,7 @@
     "ean": "8719706438667",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 790.33,
+    "ek": 785.98,
     "vk": 1607.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6080,21 +6070,6 @@
       "https://images.icecat.biz/img/gallery/bbb35da6e28c6cb7e7c22a0488e5e7a3fd411467.jpg"
     ],
     "image_verified": true
-  },
-  "HDIS0298": {
-    "ean": "8719706431460",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 750.0,
-    "vk": 1512.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/10576e91477c4a02a594c903cad22a64.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/10576e91477c4a02a594c903cad22a64.jpg",
-      "https://images.icecat.biz/img/gallery/dbf9c1a2320ede1802858ec94bb2c242.jpg"
-    ]
   },
   "HDIS0315": {
     "ean": "8719706022125",
@@ -6160,16 +6135,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery_mediums/3b7e3e42e6ac4ad1d2fcaae74c9b1d8b69abbb5f.jpg"
     ]
-  },
-  "HDIT0220": {
-    "ean": "4260557512920",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 379.42,
-    "vk": 721.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDIT0237": {
     "ean": "4260557513156",
@@ -8578,12 +8543,13 @@
   "LEGO0045": {
     "ean": "5702017816135",
     "supplier": "BAB",
-    "ek": 14.41,
+    "ek": 14.21,
     "vk": 34.99,
     "title": "LEGO Speed Champions Visa Cash App RB VCARB 01 F1 Rennauto 77246",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "LEGO0048": {
     "ean": "5702017815640",
@@ -9903,7 +9869,7 @@
   "SUPL0600": {
     "ean": "5099206127098",
     "supplier": "BAB",
-    "ek": 46.99,
+    "ek": 46.18,
     "vk": 97.99,
     "title": "Logitech Ultimate Ears MINIROLL majestätisches blau",
     "listed_at": "2026-06-14T20:49:22",
@@ -9914,7 +9880,7 @@
   "SUPL0601": {
     "ean": "5099206127104",
     "supplier": "BAB",
-    "ek": 47.2,
+    "ek": 46.18,
     "vk": 97.99,
     "title": "Logitech Ultimate Ears MINIROLL Revive Grey",
     "listed_at": "2026-06-14T20:49:22",
@@ -10490,26 +10456,6 @@
       "https://images.icecat.biz/img/gallery/85e379d6031704313135501aa35e20a45c06407c.jpg",
       "https://images.icecat.biz/img/gallery/0ab4677d7ea0fcf3bfcf0c608b4d60ea373e5b0a.jpg",
       "https://images.icecat.biz/img/gallery/1f094051e5ba1eebde564cf34e91855b58f56041.jpg"
-    ]
-  },
-  "SUPS0371": {
-    "ean": "8806095312170",
-    "supplier": "BAB",
-    "ek": 19.29,
-    "vk": 43.99,
-    "title": "Samsung Powerbank - 10000 mAh - 25 Watt - Fast Charge",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/c7b62f70413f4175587b3cb54a59f06e.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/c7b62f70413f4175587b3cb54a59f06e.jpg",
-      "https://images.icecat.biz/img/gallery/4ab456dc6ace92acbfc0400cc3e1e78c.jpg",
-      "https://images.icecat.biz/img/gallery/7654e690aa901aace2275c7b346b0935.jpg",
-      "https://images.icecat.biz/img/gallery/97f980a3c487c282213e4a1687cbcdeb.jpg",
-      "https://images.icecat.biz/img/gallery/2c1292353434f0fb1943a99b343b7d4c.jpg",
-      "https://images.icecat.biz/img/gallery/a25adf563a92ca163c3fb011398025d2.jpg",
-      "https://images.icecat.biz/img/gallery/255f334c939bc6ae4a2131914ae62aa9.jpg"
     ]
   },
   "SUPS0372": {
