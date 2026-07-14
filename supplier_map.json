@@ -457,7 +457,7 @@
     "ean": "0023942495932",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 254.77,
+    "ek": 252.74,
     "vk": 487.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -799,7 +799,7 @@
     "ean": "0023942302308",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.09,
+    "ek": 25.78,
     "vk": 56.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1023,7 +1023,7 @@
     "ean": "0023942535041",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 24.77,
+    "ek": 24.36,
     "vk": 54.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -2213,7 +2213,7 @@
     "ean": "0023942321521",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.75,
+    "ek": 30.25,
     "vk": 65.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2227,7 +2227,7 @@
     "ean": "0023942321545",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.93,
+    "ek": 42.53,
     "vk": 88.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2255,7 +2255,7 @@
     "ean": "0023942322177",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 25.58,
+    "ek": 24.82,
     "vk": 55.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2349,20 +2349,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "USBV0002": {
-    "ean": "023942302261",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.64,
-    "vk": 57.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/983d271891bb3b84a05c670042ea6854c2aad1c4.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/983d271891bb3b84a05c670042ea6854c2aad1c4.jpg"
-    ],
-    "image_verified": true
   },
   "NETT0160": {
     "ean": "8885020621501",
@@ -3481,7 +3467,7 @@
     "ean": "0023942321538",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 55.52,
+    "ek": 55.01,
     "vk": 112.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3542,7 +3528,7 @@
     "ean": "0023942302278",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 51.36,
+    "ek": 50.34,
     "vk": 104.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5008,24 +4994,6 @@
     ],
     "image_verified": true
   },
-  "SSDK0018": {
-    "ean": "0740617277357",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 99.0,
-    "vk": 213.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/36750821_7004061640.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/36750821_7004061640.jpg",
-      "https://images.icecat.biz/img/gallery/36750821_9811304394.jpg",
-      "https://images.icecat.biz/img/gallery/36750821_1806532310.jpg",
-      "https://images.icecat.biz/img/gallery/52131673_1022425046.jpg",
-      "https://images.icecat.biz/img/gallery/52131673_5601373130.jpg"
-    ]
-  },
   "SSDK1003": {
     "ean": "4582563851863",
     "supplier": "BAB",
@@ -5562,7 +5530,7 @@
     "ean": "0023942438892",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 108.61,
+    "ek": 105.86,
     "vk": 212.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5576,7 +5544,7 @@
     "ean": "0023942495918",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 126.88,
+    "ek": 125.86,
     "vk": 246.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5599,7 +5567,7 @@
     "ean": "0023942495925",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.18,
+    "ek": 146.16,
     "vk": 284.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5622,7 +5590,7 @@
     "ean": "0023942320883",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 145.15,
+    "ek": 143.72,
     "vk": 280.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7574,7 +7542,7 @@
     "ean": "0023942320319",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 159.25,
+    "ek": 157.33,
     "vk": 307.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8132,7 +8100,7 @@
     "ean": "0023942322382",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 248.68,
+    "ek": 243.6,
     "vk": 475.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8150,7 +8118,7 @@
     "ean": "0023942324034",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 181.69,
+    "ek": 176.61,
     "vk": 351.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -10415,7 +10383,7 @@
   "SUPV0044": {
     "ean": "0023942322009",
     "supplier": "BAB",
-    "ek": 8.98,
+    "ek": 8.83,
     "vk": 24.99,
     "title": "Verbatim GNC-35 GaN Charger 34W 1xUSB-C PD, 1xUSB-A QC 3.0 32200",
     "listed_at": "2026-06-14T20:49:22",
@@ -10424,7 +10392,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/31c201d459add3f24621a598ddd3aa42.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPV0056": {
     "ean": "0023942435082",
@@ -10699,24 +10668,10 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "USBV0000": {
-    "ean": "023942302254",
-    "supplier": "BAB",
-    "ek": 15.23,
-    "vk": 36.99,
-    "title": "Verbatim Plectra Black 128GB USB-C Flash Drive 30225",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/c18523fff073af7333224b561676bc3ddcb6e412.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/c18523fff073af7333224b561676bc3ddcb6e412.jpg"
-    ],
-    "image_verified": true
-  },
   "USBV0005": {
     "ean": "0023942302292",
     "supplier": "BAB",
-    "ek": 15.33,
+    "ek": 14.87,
     "vk": 36.99,
     "title": "Verbatim Plectra White 128GB USB-C Flash Drive 30229",
     "listed_at": "2026-06-14T20:49:22",
@@ -10732,7 +10687,8 @@
       "https://images.icecat.biz/img/gallery/3a419e4e39d624d84c4eabbfa9755c23f44ba52c.jpg",
       "https://images.icecat.biz/img/gallery/f7b9d70e52c0972976791b653590917850d1d453.jpg",
       "https://images.icecat.biz/img/gallery/f0d1c80357df8f748083b30b2a6e911885e1f2ef.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBV0008": {
     "ean": "0023942491729",
@@ -10774,7 +10730,7 @@
   "USBV0017": {
     "ean": "0023942490715",
     "supplier": "BAB",
-    "ek": 8.9,
+    "ek": 8.88,
     "vk": 24.99,
     "title": "Verbatim Store n Go 128GB Pinstripe USB 2.0 black 49071",
     "listed_at": "2026-06-14T20:49:22",
@@ -10788,12 +10744,13 @@
       "https://images.icecat.biz/img/gallery/93d7d74b3a81fb9565277bdd94a49acfdf913e98.jpg",
       "https://images.icecat.biz/img/gallery/1895153c2f59c82c3736960ae274f706b135fdbb.jpg",
       "https://images.icecat.biz/img/gallery/45ef32d76404d53c3e3b338882d14a2b51661d2f.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBV0018": {
     "ean": "0023942302117",
     "supplier": "BAB",
-    "ek": 8.07,
+    "ek": 7.97,
     "vk": 22.99,
     "title": "Verbatim V200 Metal USB 3.2 64GB Aluminium",
     "listed_at": "2026-06-14T20:49:22",
@@ -10803,12 +10760,13 @@
     "images": [
       "https://media.ipcstore.net/img/21306974.jpg"
     ],
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBV0020": {
     "ean": "0023942991045",
     "supplier": "BAB",
-    "ek": 7.51,
+    "ek": 7.37,
     "vk": 21.99,
     "title": "Verbatim Metal Executive 16GB USB 3.0 gold",
     "listed_at": "2026-06-14T20:49:22",
@@ -10817,7 +10775,8 @@
     "image_url": "https://images.icecat.biz/img/gallery/30389245_4532139143.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/30389245_4532139143.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBV0021": {
     "ean": "0023942991052",
@@ -10866,19 +10825,6 @@
     "title": "ECOFLOW Smart Plug 2",
     "image_verified": false,
     "source": "manual_legacy_sku"
-  },
-  "HDIS0289": {
-    "ean": "8719706432337",
-    "title": "Seagate IronWolf Pro ST8000NT001 / 8 TB",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/101647684_9023331475.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 314.65,
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "RAM5K0015": {
     "ean": "0740617326130",
