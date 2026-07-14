@@ -890,7 +890,7 @@
     "ean": "6947273705093",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.08,
+    "ek": 46.03,
     "vk": 94.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -2294,7 +2294,7 @@
     "ean": "0023942301882",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.06,
+    "ek": 37.56,
     "vk": 79.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2309,7 +2309,7 @@
     "ean": "0023942301929",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.63,
+    "ek": 41.82,
     "vk": 87.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2324,7 +2324,7 @@
     "ean": "0023942301936",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.63,
+    "ek": 41.72,
     "vk": 87.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3286,7 +3286,7 @@
     "ean": "6947273705147",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 57.65,
+    "ek": 57.45,
     "vk": 117.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3447,7 +3447,7 @@
     "ean": "0023942321460",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 58.67,
+    "ek": 57.14,
     "vk": 118.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -10355,7 +10355,7 @@
   "SUPV0026": {
     "ean": "0023942318644",
     "supplier": "BAB",
-    "ek": 6.14,
+    "ek": 5.94,
     "vk": 19.99,
     "title": "Verbatim Sync&Charge 60W 120cm USB-C/USB-C Magnetic grün 31864",
     "listed_at": "2026-06-14T20:49:22",
@@ -10364,12 +10364,13 @@
     "images": [
       "https://images.icecat.biz/img/gallery/28ea0042bc1333f92149c7e3b564d61caa5e738c.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPV0029": {
     "ean": "0023942321569",
     "supplier": "BAB",
-    "ek": 16.75,
+    "ek": 16.44,
     "vk": 39.99,
     "title": "Verbatim USB-C Essentials Multi- Port Hub 6 Port/card read. 32156",
     "listed_at": "2026-06-14T20:49:22",
@@ -10378,7 +10379,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/f86334f8f1ace088b7a85c0c28f49bb12c847106.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPV0044": {
     "ean": "0023942322009",
@@ -10781,7 +10783,7 @@
   "USBV0021": {
     "ean": "0023942991052",
     "supplier": "BAB",
-    "ek": 8.55,
+    "ek": 8.48,
     "vk": 23.99,
     "title": "Verbatim Metal Executive 32GB USB 3.0 gold",
     "listed_at": "2026-06-14T20:49:22",
@@ -10790,7 +10792,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/30389245_4532139143.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NOCO0007": {
     "image_url": "https://no.co/media/catalog/product/g/b/gbx45.png",
