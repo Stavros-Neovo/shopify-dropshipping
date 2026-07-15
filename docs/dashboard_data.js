@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-15T14:55:40.683096+00:00",
+  "generated_at": "2026-07-15T16:27:18.746274+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 706,
-    "images_verified": 398,
-    "images_missing": 308
+    "total_skus": 703,
+    "images_verified": 396,
+    "images_missing": 307
   },
   "repricing": {
     "last_run": {
@@ -703,7 +703,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "13.06",
         "revenue": 219.98,
-        "profit": 20.09,
+        "profit": 41.4,
         "sales": 1
       },
       {
@@ -927,6 +927,32 @@ window.DASHBOARD_DATA = {
         }
       },
       {
+        "sku": "ANTB0005",
+        "title": "ANTHBOT Battery 5000mAh",
+        "sold": 1,
+        "revenue": 215.99,
+        "profit": 41.4,
+        "cash_profit": 46.48,
+        "vk": 215.99,
+        "ek": 101.5,
+        "calc": {
+          "vk_brutto": 215.99,
+          "ebay_fee": 33.95,
+          "ebay_percent_fee": 33.41,
+          "ebay_fixed_fee": 0.54,
+          "vat": 29.07,
+          "netto_vk": 152.97,
+          "ship": 5.0,
+          "ek": 101.5,
+          "return_reserve": 5.08,
+          "cash_profit_u": 46.48,
+          "cash_profit_t": 46.48,
+          "profit_u": 41.4,
+          "qty": 1,
+          "profit_t": 41.4
+        }
+      },
+      {
         "sku": "SHG0003",
         "title": "Govee - Glide Wall Light (4+1)",
         "sold": 1,
@@ -976,32 +1002,6 @@ window.DASHBOARD_DATA = {
           "profit_u": 25.14,
           "qty": 1,
           "profit_t": 25.14
-        }
-      },
-      {
-        "sku": "ANTB0005",
-        "title": "ANTHBOT Battery 5000mAh",
-        "sold": 1,
-        "revenue": 215.99,
-        "profit": 20.09,
-        "cash_profit": 26.18,
-        "vk": 215.99,
-        "ek": 121.8,
-        "calc": {
-          "vk_brutto": 215.99,
-          "ebay_fee": 33.95,
-          "ebay_percent_fee": 33.41,
-          "ebay_fixed_fee": 0.54,
-          "vat": 29.07,
-          "netto_vk": 152.97,
-          "ship": 5.0,
-          "ek": 121.8,
-          "return_reserve": 6.09,
-          "cash_profit_u": 26.18,
-          "cash_profit_t": 26.18,
-          "profit_u": 20.09,
-          "qty": 1,
-          "profit_t": 20.09
         }
       },
       {
@@ -1194,8 +1194,8 @@ window.DASHBOARD_DATA = {
         "date": "13.06 22:19",
         "title": "ANTHBOT Battery 5000mAh",
         "revenue": 219.98,
-        "profit": 20.09,
-        "cash_profit": 26.18
+        "profit": 41.4,
+        "cash_profit": 46.48
       },
       {
         "date": "12.06 06:07",
