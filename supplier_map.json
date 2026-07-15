@@ -30,62 +30,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SHG0019": {
-    "ean": "6974316994305",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 24.2,
-    "vk": 53.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/1b2b4ca777838dc2d6eb8a732e3bdc430a31ea29.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/1b2b4ca777838dc2d6eb8a732e3bdc430a31ea29.jpg",
-      "https://images.icecat.biz/img/gallery/913a76706d738d2edf6edc7183a1871cdf205333.jpg",
-      "https://images.icecat.biz/img/gallery/e79a2954ff35f2deb0035ec4e72fe67fd7c5369b.jpg",
-      "https://images.icecat.biz/img/gallery/a673517a97086344572319c3b81bf8b808d25dc7.jpg"
-    ]
-  },
-  "SHG0024": {
-    "ean": "6974316994466",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 19.79,
-    "vk": 44.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/2d82092b701fb028d45daac4acc57529ea6539d5.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/2d82092b701fb028d45daac4acc57529ea6539d5.jpg",
-      "https://images.icecat.biz/img/gallery/bf0c1334b0b2ba93192a6fd3cfb8707179b5fdff.jpg"
-    ]
-  },
-  "SHG0033": {
-    "ean": "6974316999911",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.88,
-    "vk": 50.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/2c75f00488c9ac9de4da0f8271c2a3000a7c32ee.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/2c75f00488c9ac9de4da0f8271c2a3000a7c32ee.jpg",
-      "https://images.icecat.biz/img/gallery/fdc92c516be4b75a583a18fa6d6556488f385f79.jpg",
-      "https://images.icecat.biz/img/gallery/509feb52fd2fe53ca7ba06b30a29c2952fc7c551.jpg",
-      "https://images.icecat.biz/img/gallery/f9199f1cb54738710322de8ad82ccec36e3ae5c9.jpg",
-      "https://images.icecat.biz/img/gallery/67f67df3a9155cd73242f8b73ab55612bd310535.jpg",
-      "https://images.icecat.biz/img/gallery/5df739ee93276504205dab737adcfb5391348491.jpg",
-      "https://images.icecat.biz/img/gallery/7806e1d7ad87431ff10e08462db2fe046e2e58e6.jpg",
-      "https://images.icecat.biz/img/gallery/90a63c888a2cc9d0fc76f3beaa8fa237897316ee.jpg",
-      "https://images.icecat.biz/img/gallery/77e3a9e51c343ac2d4ceb0a5536adaa790c07905.jpg",
-      "https://images.icecat.biz/img/gallery/0e3297fa0bca45ebfe05777aae39b8bb76b44741.jpg",
-      "https://images.icecat.biz/img/gallery/1d1534e264e58aac4fd30d17cd404fbffe052373.jpg"
-    ]
-  },
   "SUPH3021": {
     "ean": "4015867104675",
     "supplier": "BAB",
@@ -148,37 +92,6 @@
       "https://media.ipcstore.net/img/342862.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "SHG0017": {
-    "ean": "6974316994299",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 32.53,
-    "vk": 68.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/4f2ca821d8dbfb67161d0b2f907c8ee0ab54486b.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/4f2ca821d8dbfb67161d0b2f907c8ee0ab54486b.jpg",
-      "https://images.icecat.biz/img/gallery/01a7a0e446f5fdd3e71515a3e2ef458653eb458d.jpg"
-    ]
-  },
-  "SHG0020": {
-    "ean": "6974316994312",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 36.49,
-    "vk": 76.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/8b1690d0eabd50d598072861b65b3bcc301ec82a.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/8b1690d0eabd50d598072861b65b3bcc301ec82a.jpg",
-      "https://images.icecat.biz/img/gallery/8c3863efc9c650beffa337d1d319fce6b839aa89.jpg",
-      "https://images.icecat.biz/img/gallery/83e5e9d05bef8f802f5723e27cf0aa045fe322ab.jpg"
-    ]
   },
   "PPSE0010": {
     "ean": "4895251607773",
@@ -358,22 +271,6 @@
       "https://images.icecat.biz/img/gallery/108956945_0941101833.jpg",
       "https://images.icecat.biz/img/gallery/108956945_0151169293.jpg",
       "https://images.icecat.biz/img/gallery/108956947_1515282123.jpg"
-    ]
-  },
-  "SHG0013": {
-    "ean": "6974316994251",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.19,
-    "vk": 86.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e277837a74cca5d3d700f2b101477e3111658e0a.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e277837a74cca5d3d700f2b101477e3111658e0a.jpg",
-      "https://images.icecat.biz/img/gallery/8804acedffc5caba716f2c53d2bd8b18304a070e.jpg",
-      "https://images.icecat.biz/img/gallery/2f037401fc04c8091d2eb2f88b37eeb3e3e51cd1.jpg"
     ]
   },
   "SUPJ0188": {
@@ -900,21 +797,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/236661.jpg"
     ],
-    "image_too_small": true
-  },
-  "SHG0003": {
-    "ean": "6974316994152",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.78,
-    "vk": 65.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery_mediums/e1f4e023dfae1e6a6ba2fd65a93ad47f84c82420.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery_mediums/e1f4e023dfae1e6a6ba2fd65a93ad47f84c82420.jpg"
-    ],
-    "image_verified": true,
     "image_too_small": true
   },
   "SUPR1060": {
@@ -1791,20 +1673,6 @@
     ],
     "image_verified": true
   },
-  "SHG0094": {
-    "ean": "6974316995784",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.65,
-    "vk": 102.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/5867ab19be9921d8c1ba01ccb58127c0886ff49a.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/5867ab19be9921d8c1ba01ccb58127c0886ff49a.jpg"
-    ],
-    "image_verified": true
-  },
   "SHP0016": {
     "ean": "8719514339989",
     "supplier": "BAB",
@@ -2071,7 +1939,7 @@
     "ean": "0097855162045",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.18,
+    "ek": 41.95,
     "vk": 90.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3061,104 +2929,6 @@
     "title": "tecXL Lenovo ThinkVision T24i - LED-Monitor - (24\")",
     "image_verified": true
   },
-  "SHG0043": {
-    "ean": "6974316999881",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 62.18,
-    "vk": 124.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/44f4d23de23af3b374a2d0912d15bf1478e40510.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/44f4d23de23af3b374a2d0912d15bf1478e40510.jpg",
-      "https://images.icecat.biz/img/gallery/187f57c60b9dcdfc331387d9610792e0549545a2.jpg",
-      "https://images.icecat.biz/img/gallery/0ce4dd128ff3b58cc04f4ff5dd519c6be6b44c9d.jpg",
-      "https://images.icecat.biz/img/gallery/a27cb10704a8fae4fa8e7b79143e7f3b61a5a253.jpg",
-      "https://images.icecat.biz/img/gallery/9628d5316f077b731632cba0cda62a715329cf37.jpg",
-      "https://images.icecat.biz/img/gallery/71841145bcce2d20b3d1f4c5c9ccd048b7b49591.jpg",
-      "https://images.icecat.biz/img/gallery/e855d4b2a2c0439ddb7770b59baf430ff6618f4e.jpg",
-      "https://images.icecat.biz/img/gallery/e20bb6d803ac9d616a4b11e9d51c20e69e7e09b1.jpg",
-      "https://images.icecat.biz/img/gallery/f70a77f51c7429543f042326c6c4e7d1f47397be.jpg",
-      "https://images.icecat.biz/img/gallery/9e0d463542d678516f03345e080a792df1626eec.jpg"
-    ]
-  },
-  "SHG0044": {
-    "ean": "6974316999997",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 72.52,
-    "vk": 144.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/bf58d6d7432d84f2babdf1493c58dced2f8d9027.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/bf58d6d7432d84f2babdf1493c58dced2f8d9027.jpg",
-      "https://images.icecat.biz/img/gallery/9eafe3f02486182ef4a6fd90d5c050ec097e3aab.jpg",
-      "https://images.icecat.biz/img/gallery/8e27fa79376009c629b0a332699860444ea86340.jpg",
-      "https://images.icecat.biz/img/gallery/f17415d450cdb857492870d4dde91949ad08e0a5.jpg",
-      "https://images.icecat.biz/img/gallery/ee6e1362c70e9dcec2fb160f9786b052fc70d2dc.jpg",
-      "https://images.icecat.biz/img/gallery/2562231465825666f4dbf453ba59aec31f94b04d.jpg",
-      "https://images.icecat.biz/img/gallery/27e8182425fd8141aedec0565b259112a644c502.jpg",
-      "https://images.icecat.biz/img/gallery/b2a3a414e353c53ac6d812514ae9b825fa4803a9.jpg",
-      "https://images.icecat.biz/img/gallery/d0baf98536675eeaf33120d861840894ce82b1b0.jpg",
-      "https://images.icecat.biz/img/gallery/66c3c5f587c81bc9c49caa250bc37c878309a619.jpg",
-      "https://images.icecat.biz/img/gallery/4ea89ca89589d6e6ec6a2b76e5e119ff934ba223.jpg",
-      "https://images.icecat.biz/img/gallery/3f72dcff817ee4e4c994e8bec2b07d63f594efce.jpg",
-      "https://images.icecat.biz/img/gallery/f3cfcd9e798ab60a16ef317e5bec988c9cf810c6.jpg",
-      "https://images.icecat.biz/img/gallery/b765d718d23f531466756b5d120270504947b374.jpg",
-      "https://images.icecat.biz/img/gallery/e66c898b8244d40e7afb9769dced06ee114c4f9a.jpg",
-      "https://images.icecat.biz/img/gallery/3225cbac21640917e032370be25fc0013bfa06e2.jpg",
-      "https://images.icecat.biz/img/gallery/9d4794bda14b709b02d15b588d9e9c5aec31785f.jpg",
-      "https://images.icecat.biz/img/gallery/2315f039723ba96b6177df64895478f7f33cf2f6.jpg",
-      "https://images.icecat.biz/img/gallery/43e7a8260916ceb4052c9c9e9f129f804b495c29.jpg",
-      "https://images.icecat.biz/img/gallery/61e23083c7bd4700d755405e9b6f462376f5d37b.jpg",
-      "https://images.icecat.biz/img/gallery/d1da809ab22e5ca95714691a129e99c296207366.jpg",
-      "https://images.icecat.biz/img/gallery/aeb1b218a469f0d111ec3b36eb2e06a124344bc4.jpg",
-      "https://images.icecat.biz/img/gallery/41d7b362e3b7e6f3879b64d1f05206029a8a2f48.jpg",
-      "https://images.icecat.biz/img/gallery/9e4f735222f43ef509da9fe94c2ff68cc3a51934.jpg",
-      "https://images.icecat.biz/img/gallery/a9f4c125120695186a415477c1baa0c1adc76a25.jpg",
-      "https://images.icecat.biz/img/gallery/18be9cdc218a4cf208fb068567872b2df841aa17.jpg",
-      "https://images.icecat.biz/img/gallery/6a4296aeca5cfad1b7d0f83ec0dddba1706eb867.jpg",
-      "https://images.icecat.biz/img/gallery/f0319fdecf15959cba176f5efb6a25a0a097c248.jpg",
-      "https://images.icecat.biz/img/gallery/92b1fce68c324e80a2361b8f6faaa83958f47191.jpg",
-      "https://images.icecat.biz/img/gallery/39d7124e993197c67a922afcc8fde20f2f16e97f.jpg",
-      "https://images.icecat.biz/img/gallery/4233d6b0f91ea1a245c129e01388e8fec96bc863.jpg",
-      "https://images.icecat.biz/img/gallery/23d17d55c168778774fe5fc284c91f1896cca5b1.jpg",
-      "https://images.icecat.biz/img/gallery/9b4f8a4296fd8588f2e0d79a62489a659c9d1407.jpg",
-      "https://images.icecat.biz/img/gallery/6a2c4b59911b1272bd2ae75a30558fb6a49d6779.jpg"
-    ]
-  },
-  "SHG0067": {
-    "ean": "6974316993353",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 54.71,
-    "vk": 110.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/ba3572a9499fc56bb45b984da157c843591ba42c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/ba3572a9499fc56bb45b984da157c843591ba42c.jpg"
-    ],
-    "image_verified": true
-  },
-  "SHG0074": {
-    "ean": "6974316996798",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 54.81,
-    "vk": 110.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/d3935746c8b340e6274b22d3d5c5479eb7f8ab74.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/d3935746c8b340e6274b22d3d5c5479eb7f8ab74.jpg"
-    ],
-    "image_verified": true
-  },
   "SHP0130": {
     "ean": "8719514356719",
     "supplier": "BAB",
@@ -3495,7 +3265,7 @@
     "ean": "6938818321816",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 61.41,
+    "ek": 60.39,
     "vk": 128.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3643,21 +3413,6 @@
       "https://images.icecat.biz/img/gallery/22578774_2948354442.jpg"
     ],
     "image_verified": true
-  },
-  "HHWB1047": {
-    "ean": "4210201445111",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 80.19,
-    "vk": 164.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/101441405_8607756630.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/101441405_8607756630.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "HHWB1048": {
     "ean": "4210201445234",
@@ -4372,7 +4127,7 @@
     "ean": "6938818319608",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.23,
+    "ek": 100.38,
     "vk": 202.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4964,20 +4719,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SHG0099": {
-    "ean": "6974316993117",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 123.73,
-    "vk": 240.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/b5fc099fe715e85680b6a9022b2a2fc7649c257f.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/b5fc099fe715e85680b6a9022b2a2fc7649c257f.jpg"
-    ],
-    "image_verified": true
-  },
   "SSDK1003": {
     "ean": "4582563851863",
     "supplier": "BAB",
@@ -5337,7 +5078,7 @@
     "ean": "5706991022902",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 141.59,
+    "ek": 139.36,
     "vk": 274.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5625,7 +5366,7 @@
     "ean": "6938818306578",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 154.79,
+    "ek": 153.77,
     "vk": 298.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5699,22 +5440,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "CPUI0206": {
-    "ean": "5032037278546",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 359.91,
-    "vk": 694.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Intel Cpu Core i9-14900KF, box | BX8071514900KF",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/442355.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/442355.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "CPUI0215": {
     "ean": "5032037279239",
@@ -6345,22 +6070,6 @@
     ],
     "image_verified": true
   },
-  "NETU0008": {
-    "ean": "0817882028547",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 244.73,
-    "vk": 468.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "UbiQuiti UniFi USW-16-POE Switch",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/115491.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/115491.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "NETU0016": {
     "ean": "0810010072146",
     "supplier": "BAB",
@@ -6374,20 +6083,6 @@
       "https://cdn.ecomm.ui.com/products/147e90c2-da47-44ad-ad19-b98e223cb54b/378bcc80-2ebd-45f1-a2fc-0e66669824e1.png"
     ],
     "title": "UbiQuiti UniFi USW-48-POE Switch",
-    "image_verified": true
-  },
-  "NETU0017": {
-    "ean": "0817882027649",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 572.21,
-    "vk": 1084.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/5b69cdb5-e7ea-44e6-ae16-8714339038fb/18d39964-78e7-45f9-874d-e331f1408730.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/5b69cdb5-e7ea-44e6-ae16-8714339038fb/18d39964-78e7-45f9-874d-e331f1408730.png"
-    ],
     "image_verified": true
   },
   "NETU0143": {
@@ -6769,16 +6464,6 @@
       "https://media.ipcstore.net/img/118362.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "RAM4G0050": {
-    "ean": "4713294223104",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 184.43,
-    "vk": 400.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "RAM4G0051": {
     "ean": "4713294224149",
@@ -9172,205 +8857,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "SHG0021": {
-    "ean": "6974316992745",
-    "supplier": "BAB",
-    "ek": 13.15,
-    "vk": 32.99,
-    "title": "Govee - Smart Wifi&BLE Light Bulb 1200lm",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/51d2cd79b04e13c9002f597b8a3fb0bf81e3a765.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/51d2cd79b04e13c9002f597b8a3fb0bf81e3a765.jpg",
-      "https://images.icecat.biz/img/gallery/4a453d9f183511839624b5c2a30f6a84ed205dff.jpg",
-      "https://images.icecat.biz/img/gallery/9b3b0754ec8f5c585b1d47c2cc5606b463783948.jpg",
-      "https://images.icecat.biz/img/gallery/fb1ce671432986b5fbd15adedcdb8c9d8ec304df.jpg",
-      "https://images.icecat.biz/img/gallery/acb41fd4b0b1b62b670d4be6838170fd29e6e12f.jpg",
-      "https://images.icecat.biz/img/gallery/8999320a73858131e47e0dcec469b5890a6b8322.jpg",
-      "https://images.icecat.biz/img/gallery/a4f233e0e3561bec5f5e15c3215caa243cb5100c.jpg",
-      "https://images.icecat.biz/img/gallery/fb8d2a15b00b4157f2e4d45cd82af1a69cbcd174.jpg",
-      "https://images.icecat.biz/img/gallery/a22f91a369c5cef1190b9b507ba7ccc899b88ff2.jpg",
-      "https://images.icecat.biz/img/gallery/b20d5f7980f9a257984b8710247d23539f6c6aa9.jpg",
-      "https://images.icecat.biz/img/gallery/5bd119f991b2dd88ad6faa3f1f5f0a52c9f2ffc9.jpg",
-      "https://images.icecat.biz/img/gallery/b60d781d3d4a43bc387f5db502d3a7806f49dc75.jpg",
-      "https://images.icecat.biz/img/gallery/91777596e0376599e3fe489450aba6e615eea77a.jpg",
-      "https://images.icecat.biz/img/gallery/bac9c987a7d4f3b1c241a82adbb172e91cd9188e.jpg"
-    ]
-  },
-  "SHG0022": {
-    "ean": "6974316992295",
-    "supplier": "BAB",
-    "ek": 7.19,
-    "vk": 21.99,
-    "title": "Govee - 20 x clips mounting bracket for neon LED strip H61A1 profiles*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/6b85c5584fc794d89569ebbfe2d5dc9790bd8d4c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/6b85c5584fc794d89569ebbfe2d5dc9790bd8d4c.jpg"
-    ],
-    "image_verified": true
-  },
-  "SHG0023": {
-    "ean": "6974316993070",
-    "supplier": "BAB",
-    "ek": 4.54,
-    "vk": 16.99,
-    "title": "Govee - Double Sided Tape (15pcs) for RGBIC Light Panels H6061*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e5743ef9670700018d167db52285447dcd2441c8.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e5743ef9670700018d167db52285447dcd2441c8.jpg"
-    ]
-  },
-  "SHG0038": {
-    "ean": "6974316999034",
-    "supplier": "BAB",
-    "ek": 5.63,
-    "vk": 18.99,
-    "title": "Govee - Smart Wifi&BLE Light Bulb 800lm ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/206d5df2a62b3e32ec2b7c3d6154e8ac4f95ef6f.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/206d5df2a62b3e32ec2b7c3d6154e8ac4f95ef6f.jpg",
-      "https://images.icecat.biz/img/gallery/220c727a908b5b6c9cd2bb4b8feaee09b0c5dcdb.jpg",
-      "https://images.icecat.biz/img/gallery/21213831c000b015f88477d05f3eac8b87ef28a1.jpg",
-      "https://images.icecat.biz/img/gallery/a4f233e0e3561bec5f5e15c3215caa243cb5100c.jpg",
-      "https://images.icecat.biz/img/gallery/fb8d2a15b00b4157f2e4d45cd82af1a69cbcd174.jpg",
-      "https://images.icecat.biz/img/gallery/0b67af51603a5733823c1840256167deffd6ce7d.jpg",
-      "https://images.icecat.biz/img/gallery/290243ce31550593ae5b8fd7c59ba46d69526ca7.jpg",
-      "https://images.icecat.biz/img/gallery/a99a255c8cb7bfad8af680ab2ea0fe6089e6b50a.jpg",
-      "https://images.icecat.biz/img/gallery/cc9374912c44f9882bdbe07a644a1080a5552308.jpg",
-      "https://images.icecat.biz/img/gallery/d7c6ef815af16504c0c2b6afbcc32e1d6b1becca.jpg",
-      "https://images.icecat.biz/img/gallery/a9f5b018eb7f6e4e0e36dda683573bd3aac15cbd.jpg",
-      "https://images.icecat.biz/img/gallery/d87e0be374128c546c9477f37edbc6ed4ed4babd.jpg",
-      "https://images.icecat.biz/img/gallery/a98beba9d8405bc61823a93cc30fe5348d3d2d6e.jpg",
-      "https://images.icecat.biz/img/gallery/8ac9edb055ff7189c341cc6ce102beb400cf635f.jpg",
-      "https://images.icecat.biz/img/gallery/a299ef4b951755ce5d72f52774bfb522a501c018.jpg",
-      "https://images.icecat.biz/img/gallery/d4213bea417a544a73ec96d741b22371932370be.jpg",
-      "https://images.icecat.biz/img/gallery/74e80ce31e0b3a4823ca36288098379f6c51c3cb.jpg",
-      "https://images.icecat.biz/img/gallery/65fa6e1e5ec5434bba03d32af4066c1d846803f8.jpg"
-    ]
-  },
-  "SHG0042": {
-    "ean": "6974316999874",
-    "supplier": "BAB",
-    "ek": 48.64,
-    "vk": 99.99,
-    "title": "Govee - Netflix Envisual TV Backlight 55~65 inch*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/6a584be2acc6f6ede25e11dda98a03a9d16a6ddb.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/6a584be2acc6f6ede25e11dda98a03a9d16a6ddb.jpg",
-      "https://images.icecat.biz/img/gallery/ed5cc463d6f55537ea697d7a62c0641575faac77.jpg",
-      "https://images.icecat.biz/img/gallery/06979158f542ce8a3bc93cbb488958a4ce7187c6.jpg",
-      "https://images.icecat.biz/img/gallery/111647a8d73cfd30eb8910a2dd3fa9cc9c1bb407.jpg",
-      "https://images.icecat.biz/img/gallery/70a3ccd3fadf935c3336e030a8fc9535b70c1451.jpg",
-      "https://images.icecat.biz/img/gallery/95eebc5bf0e72da898e625b0b70875be8f4876b4.jpg",
-      "https://images.icecat.biz/img/gallery/ed38d11f99c5929f2eb5a14b851789d61892cd69.jpg",
-      "https://images.icecat.biz/img/gallery/614c5ee84bce31e2393f04f3b6692730d1fde958.jpg",
-      "https://images.icecat.biz/img/gallery/2adde0dd512ea65d87418bbe83e8f3c7fb94b02b.jpg",
-      "https://images.icecat.biz/img/gallery/8c0ad3cb9480de0c461fc1d2faf4afd4d25dfa9e.jpg",
-      "https://images.icecat.biz/img/gallery/efaadc482abdf38a6503914569d163e8740e2f2c.jpg",
-      "https://images.icecat.biz/img/gallery/8173214e55f5a4637da86a35206d03c7b0ba9c34.jpg",
-      "https://images.icecat.biz/img/gallery/0520ae79c99e8af06e3092f5aea7c6703431e219.jpg",
-      "https://images.icecat.biz/img/gallery/c2c4f2a778ab9d10fd06b10d9439246b8b1b66c6.jpg",
-      "https://images.icecat.biz/img/gallery/71b509d2c0f76a1658e8785e3ac3bb670fd18876.jpg"
-    ]
-  },
-  "SHG0052": {
-    "ean": "6974316999386",
-    "supplier": "BAB",
-    "ek": 4.97,
-    "vk": 16.99,
-    "title": "Govee - Neon Rope Light 2 Bracket - 20 pcs- White*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/c586396abf6c61b114a8e2c47e4240912b20ef5d.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/c586396abf6c61b114a8e2c47e4240912b20ef5d.jpg"
-    ]
-  },
-  "SHG0053": {
-    "ean": "6974316999393",
-    "supplier": "BAB",
-    "ek": 4.97,
-    "vk": 16.99,
-    "title": "Govee - Neon Rope Light 2 Clips - 5 pcs - White*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/2d4e5cad6eefe8d528888fe219188b8db11a1dec.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/2d4e5cad6eefe8d528888fe219188b8db11a1dec.jpg"
-    ]
-  },
-  "SHG0054": {
-    "ean": "6974316999409",
-    "supplier": "BAB",
-    "ek": 4.97,
-    "vk": 16.99,
-    "title": "Govee - Neon Rope Light 2 Bracket  - 20 pcs- Black*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/af0093b279e1561ecc765e2e3217353513215ebf.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/af0093b279e1561ecc765e2e3217353513215ebf.jpg"
-    ]
-  },
-  "SHG0055": {
-    "ean": "6974316999416",
-    "supplier": "BAB",
-    "ek": 4.97,
-    "vk": 16.99,
-    "title": "Govee - Neon Rope Light 2 Clips - 5 pcs - Black *",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/578a62c7c44897973314b49afc16ab56ec89d777.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/578a62c7c44897973314b49afc16ab56ec89d777.jpg"
-    ]
-  },
-  "SHG0057": {
-    "ean": "6974316995098",
-    "supplier": "BAB",
-    "ek": 37.35,
-    "vk": 77.99,
-    "title": "Govee - RGBIC RGBIC TV Light Bars for 45-70 inch TVs*",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/b955066705a76e22bd2ddc54a6feddc848d0472e.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/b955066705a76e22bd2ddc54a6feddc848d0472e.jpg",
-      "https://images.icecat.biz/img/gallery/f7fa4444c0084de5b66a7269fab7a84dd22be80f.jpg"
-    ]
-  },
-  "SHG0078": {
-    "ean": "6974316993360",
-    "supplier": "BAB",
-    "ek": 10.35,
-    "vk": 27.99,
-    "title": "Govee RGBWW Smart LED Bulb (2Packs) E14",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/bab111a1ac0c99362cf50e209c33ff5b74bf439c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/bab111a1ac0c99362cf50e209c33ff5b74bf439c.jpg"
-    ],
-    "image_verified": true
-  },
   "SOFN0001": {
     "ean": "5397231022495",
     "supplier": "BAB",
@@ -10358,7 +9844,7 @@
   "SUPY0019": {
     "ean": "6938818318410",
     "supplier": "BAB",
-    "ek": 204.02,
+    "ek": 203.3,
     "vk": 391.99,
     "title": "Yealink IP Telefon MP56-Teams E2",
     "listed_at": "2026-06-14T20:49:22",
@@ -10367,7 +9853,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/0bc760f46cb840114f0e8816c2d449d700bb5dd7.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPY0038": {
     "ean": "6938818308497",
