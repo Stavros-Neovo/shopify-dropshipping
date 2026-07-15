@@ -922,7 +922,7 @@
     "ean": "3800235262214",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.72,
+    "ek": 47.71,
     "vk": 99.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -2865,7 +2865,7 @@
     "ean": "4061496516495",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 76.13,
+    "ek": 71.05,
     "vk": 150.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3616,22 +3616,6 @@
     "title": "Teltonika TRB256 - Gateway",
     "image_verified": true
   },
-  "NETU0107": {
-    "ean": "0810084695203",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.19,
-    "vk": 164.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "UbiQuiti UniFi Cloud Gateway Ultra UniFi - UCG-ULTRA",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/135493.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/135493.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "PETK0011": {
     "ean": "6975069302713",
     "supplier": "BAB",
@@ -4144,7 +4128,7 @@
     "ean": "8885022190166",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 121.8,
+    "ek": 101.5,
     "vk": 236.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4733,22 +4717,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "SSDK1023": {
-    "ean": "4582563859975",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 148.3,
-    "vk": 286.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 (2280) Kioxia Exceria Plus G4 NVMe 1TB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21309890.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21309890.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "SSDK1029": {
     "ean": "4582761161108",
@@ -5903,7 +5871,7 @@
     "ean": "4006508223923",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 355.25,
+    "ek": 329.88,
     "vk": 676.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6226,21 +6194,6 @@
       "https://petkitgermany.com/cdn/shop/files/F40E4960-93F3-4C19-8C29-93A6BBA32421.jpg?v=1771267568&width=1200"
     ],
     "image_verified": true
-  },
-  "PETK0045": {
-    "ean": "6975069306278",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 369.92,
-    "vk": 704.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21133122.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21133122.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "PETK0085": {
     "ean": "6975069308807",
@@ -9699,7 +9652,7 @@
   "SUPS7023": {
     "ean": "3800235261798",
     "supplier": "BAB",
-    "ek": 10.66,
+    "ek": 10.15,
     "vk": 28.99,
     "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
     "listed_at": "2026-06-14T20:49:22",
