@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-15T12:18:54.944244+00:00",
+  "generated_at": "2026-07-15T14:55:40.683096+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 711,
-    "images_verified": 401,
-    "images_missing": 310
+    "total_skus": 706,
+    "images_verified": 398,
+    "images_missing": 308
   },
   "repricing": {
     "last_run": {
@@ -697,7 +697,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "12.06",
         "revenue": 63.98,
-        "profit": 4.84,
+        "profit": 37.16,
         "sales": 1
       },
       {
@@ -927,6 +927,32 @@ window.DASHBOARD_DATA = {
         }
       },
       {
+        "sku": "SHG0003",
+        "title": "Govee - Glide Wall Light (4+1)",
+        "sold": 1,
+        "revenue": 59.99,
+        "profit": 37.16,
+        "cash_profit": 37.16,
+        "vk": 59.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 59.99,
+          "ebay_fee": 9.82,
+          "ebay_percent_fee": 9.28,
+          "ebay_fixed_fee": 0.54,
+          "vat": 8.01,
+          "netto_vk": 42.16,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 37.16,
+          "cash_profit_t": 37.16,
+          "profit_u": 37.16,
+          "qty": 1,
+          "profit_t": 37.16
+        }
+      },
+      {
         "sku": "NETU0187",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
         "sold": 1,
@@ -1028,32 +1054,6 @@ window.DASHBOARD_DATA = {
           "profit_u": 13.01,
           "qty": 1,
           "profit_t": 13.01
-        }
-      },
-      {
-        "sku": "SHG0003",
-        "title": "Govee - Glide Wall Light (4+1)",
-        "sold": 1,
-        "revenue": 59.99,
-        "profit": 4.84,
-        "cash_profit": 6.38,
-        "vk": 59.99,
-        "ek": 30.78,
-        "calc": {
-          "vk_brutto": 59.99,
-          "ebay_fee": 9.82,
-          "ebay_percent_fee": 9.28,
-          "ebay_fixed_fee": 0.54,
-          "vat": 8.01,
-          "netto_vk": 42.16,
-          "ship": 5.0,
-          "ek": 30.78,
-          "return_reserve": 1.54,
-          "cash_profit_u": 6.38,
-          "cash_profit_t": 6.38,
-          "profit_u": 4.84,
-          "qty": 1,
-          "profit_t": 4.84
         }
       },
       {
@@ -1201,8 +1201,8 @@ window.DASHBOARD_DATA = {
         "date": "12.06 06:07",
         "title": "Govee - Glide Wall Light (4+1)",
         "revenue": 63.98,
-        "profit": 4.84,
-        "cash_profit": 6.38
+        "profit": 37.16,
+        "cash_profit": 37.16
       },
       {
         "date": "11.06 12:07",
