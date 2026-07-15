@@ -280,7 +280,7 @@
     "ean": "0197498152394",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 95.92,
+    "ek": 95.11,
     "vk": 189.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -410,7 +410,7 @@
     "ean": "6938818306202",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 175.09,
+    "ek": 170.52,
     "vk": 337.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -3495,7 +3495,7 @@
     "ean": "6938818321816",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 61.92,
+    "ek": 61.41,
     "vk": 128.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3843,22 +3843,6 @@
     "image_url": "https://media.ipcstore.net/img/131949.jpg",
     "images": [
       "https://media.ipcstore.net/img/131949.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "NETT1075": {
-    "ean": "4779027312620",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 92.37,
-    "vk": 181.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Teltonika TRB141 - Gateway",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21169261.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21169261.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -4374,7 +4358,7 @@
     "ean": "6938818303188",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 99.37,
+    "ek": 91.65,
     "vk": 194.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5608,7 +5592,7 @@
     "ean": "6938818303171",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 108.91,
+    "ek": 103.12,
     "vk": 212.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5622,7 +5606,7 @@
     "ean": "6938818319578",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 110.64,
+    "ek": 108.2,
     "vk": 220.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5760,16 +5744,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "CPUI0235": {
-    "ean": "5032037281980",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 203.0,
-    "vk": 406.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "CPUI0241": {
     "ean": "5032037282390",
@@ -6414,21 +6388,6 @@
     "images": [
       "https://cdn.ecomm.ui.com/products/5b69cdb5-e7ea-44e6-ae16-8714339038fb/18d39964-78e7-45f9-874d-e331f1408730.png"
     ],
-    "image_verified": true
-  },
-  "NETU0028": {
-    "ean": "0817882027373",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 334.52,
-    "vk": 637.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/9df27ed4-c4ae-471a-8982-f5b0650da76a/2ede4300-385f-4043-8d96-e0400a22465f.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/9df27ed4-c4ae-471a-8982-f5b0650da76a/2ede4300-385f-4043-8d96-e0400a22465f.png"
-    ],
-    "title": "UbiQuiti UniFi Dream Machine Pro Access Point",
     "image_verified": true
   },
   "NETU0143": {
