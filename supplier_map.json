@@ -3,7 +3,7 @@
     "ean": "5099206073173",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.43,
+    "ek": 22.13,
     "vk": 49.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -1877,7 +1877,7 @@
     "ean": "5099206081901",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.66,
+    "ek": 44.25,
     "vk": 94.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1909,7 +1909,7 @@
     "ean": "5099206053304",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 31.47,
+    "ek": 31.16,
     "vk": 67.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3119,7 +3119,7 @@
     "ean": "5099206104914",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 63.64,
+    "ek": 63.44,
     "vk": 127.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4208,22 +4208,6 @@
       "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_153265234?x=536&y=402&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=536&ey=402&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=536&cdy=402"
     ],
     "image_verified": true
-  },
-  "HDIS0281": {
-    "ean": "7636490078323",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.17,
-    "vk": 254.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/9fccac5975696aed640e4976d5e0cb69773640b6.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/9fccac5975696aed640e4976d5e0cb69773640b6.jpg",
-      "https://images.icecat.biz/img/gallery/7f85448716662a56451ccc1bbd43b473d9d419be.jpg",
-      "https://images.icecat.biz/img/gallery/50de8696d6849f809f75dc38d9dbfd203c328a5e.jpg"
-    ]
   },
   "HDIW0165": {
     "ean": "0718037877501",
@@ -5602,20 +5586,6 @@
       "https://images.icecat.biz/img/gallery/b3e2ff88226a3ba4eac49e9ba773b2a3a51e250a.jpg"
     ]
   },
-  "HDIS0282": {
-    "ean": "8719706027670",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 218.32,
-    "vk": 418.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/1c2fda9116e193e2cbf63fe63ca6c116.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/1c2fda9116e193e2cbf63fe63ca6c116.jpg"
-    ],
-    "image_verified": true
-  },
   "HDIS0286": {
     "ean": "8719706438667",
     "supplier": "BAB",
@@ -5751,16 +5721,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HDIT0248": {
-    "ean": "4260557513606",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 633.83,
-    "vk": 1200.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HDIW0206": {
     "ean": "0718037899794",
     "supplier": "BAB",
@@ -5806,21 +5766,6 @@
       "https://media.ipcstore.net/img/137477.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "HDIW0218": {
-    "ean": "0718037889245",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 298.79,
-    "vk": 570.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/137994.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/137994.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "HDIW0220": {
     "ean": "0718037902814",
@@ -6068,21 +6013,6 @@
     "images": [
       "https://static.wixstatic.com/media/814ec4_9d0238339932461e97be88591581864a~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-523.jpg"
     ],
-    "image_verified": true
-  },
-  "NETU0016": {
-    "ean": "0810010072146",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 488.57,
-    "vk": 927.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/147e90c2-da47-44ad-ad19-b98e223cb54b/378bcc80-2ebd-45f1-a2fc-0e66669824e1.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/147e90c2-da47-44ad-ad19-b98e223cb54b/378bcc80-2ebd-45f1-a2fc-0e66669824e1.png"
-    ],
-    "title": "UbiQuiti UniFi USW-48-POE Switch",
     "image_verified": true
   },
   "NETU0143": {
@@ -9094,7 +9024,7 @@
   "SUPL0183": {
     "ean": "5099206033139",
     "supplier": "BAB",
-    "ek": 20.3,
+    "ek": 19.79,
     "vk": 46.99,
     "title": "Logitech Keyboard K270 Wireless Black/White",
     "listed_at": "2026-06-14T20:49:22",
@@ -10126,7 +10056,7 @@
   "USBV0008": {
     "ean": "0023942491729",
     "supplier": "BAB",
-    "ek": 5.27,
+    "ek": 5.24,
     "vk": 17.99,
     "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 49172",
     "listed_at": "2026-06-14T20:49:22",
@@ -10139,7 +10069,8 @@
       "https://images.icecat.biz/img/gallery/13837231_0752274202.jpg",
       "https://images.icecat.biz/img/gallery/13837231_0227030580.jpg",
       "https://images.icecat.biz/img/gallery/13837232_0005927167.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBV0013": {
     "ean": "0023942490623",
