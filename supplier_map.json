@@ -380,7 +380,7 @@
     "ean": "4713294223449",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 127.89,
+    "ek": 114.19,
     "vk": 248.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -3031,7 +3031,7 @@
     "ean": "6947273705147",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 57.45,
+    "ek": 57.35,
     "vk": 117.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3358,21 +3358,6 @@
     "images": [
       "https://media.ipcstore.net/img/l/21296890.jpg"
     ],
-    "image_too_small": true
-  },
-  "HDXT0244": {
-    "ean": "4260557513262",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 82.98,
-    "vk": 165.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21288617.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21288617.jpg"
-    ],
-    "image_verified": false,
     "image_too_small": true
   },
   "HDXV0003": {
@@ -4260,22 +4245,6 @@
     ],
     "image_too_small": true
   },
-  "HDXT0240": {
-    "ean": "4260557513286",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 141.73,
-    "vk": 274.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Toshiba Canvio Flex 4TB silver",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21296891.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21296891.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "HDXV0011": {
     "ean": "0023942532231",
     "supplier": "BAB",
@@ -4534,7 +4503,7 @@
     "ean": "4719692004970",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 104.55,
+    "ek": 97.74,
     "vk": 237.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5639,21 +5608,6 @@
       "https://images.icecat.biz/img/gallery_mediums/3b7e3e42e6ac4ad1d2fcaae74c9b1d8b69abbb5f.jpg"
     ]
   },
-  "HDIT0237": {
-    "ean": "4260557513156",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 349.48,
-    "vk": 665.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21292467.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21292467.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HDIT0247": {
     "ean": "4260557513613",
     "supplier": "BAB",
@@ -6548,7 +6502,7 @@
     "ean": "4713294237637",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 685.13,
+    "ek": 683.1,
     "vk": 1297.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7253,30 +7207,6 @@
       "https://images.icecat.biz/img/gallery/101333591_6807635809.jpg",
       "https://images.icecat.biz/img/gallery/101333591_2468837415.jpg",
       "https://images.icecat.biz/img/gallery/101333591_2802182781.jpg"
-    ]
-  },
-  "SSDS0113": {
-    "ean": "8806094413748",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 195.9,
-    "vk": 376.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/60d0edc427cd2e986b1f9c19e8712d03fe946069.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/60d0edc427cd2e986b1f9c19e8712d03fe946069.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_4018145223.jpg",
-      "https://images.icecat.biz/img/gallery/d868f05d16b0f77169d462b33c25c3bba08ccd8b.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_1803001035.jpg",
-      "https://images.icecat.biz/img/gallery/d9092c097864fea1cbc7b72581a769083a89a767.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_5390666331.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_0008499591.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_2154655179.jpg",
-      "https://images.icecat.biz/img/gallery/b5b547040a415fe25fdc2ea07abc1213e84c79fc.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_0909213558.jpg",
-      "https://images.icecat.biz/img/gallery/108373065_7446215078.jpg"
     ]
   },
   "SSDS0121": {
