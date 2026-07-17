@@ -417,7 +417,7 @@
     "ean": "6972822120683",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.84,
+    "ek": 19.79,
     "vk": 50.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -463,7 +463,7 @@
     "ean": "6972822120706",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 24.36,
+    "ek": 21.82,
     "vk": 53.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1893,7 +1893,7 @@
     "ean": "5099206066823",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.06,
+    "ek": 47.6,
     "vk": 99.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2277,7 +2277,7 @@
     "ean": "6975849061229",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 76.13,
+    "ek": 71.05,
     "vk": 150.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4113,7 +4113,7 @@
     "ean": "6972822120935",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 137.03,
+    "ek": 111.65,
     "vk": 265.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4127,7 +4127,7 @@
     "ean": "6972822121079",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.95,
+    "ek": 111.65,
     "vk": 255.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4143,7 +4143,7 @@
     "ean": "6972822121000",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.95,
+    "ek": 111.65,
     "vk": 255.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5342,7 +5342,7 @@
     "ean": "6972822121178",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 253.75,
+    "ek": 243.6,
     "vk": 485.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5357,7 +5357,7 @@
     "ean": "6972822121246",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 233.45,
+    "ek": 223.3,
     "vk": 386.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5371,7 +5371,7 @@
     "ean": "6972822121314",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 233.45,
+    "ek": 223.3,
     "vk": 386.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -7179,16 +7179,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "SSDW0089": {
-    "ean": "0718037884660",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 259.32,
-    "vk": 495.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "SSDW0092": {
     "ean": "0718037893211",
     "supplier": "BAB",
@@ -7464,7 +7454,7 @@
   "ENAB0004": {
     "ean": "6972822120867",
     "supplier": "BAB",
-    "ek": 9.64,
+    "ek": 8.12,
     "vk": 25.99,
     "title": "Enabot ROLA Mini Cat Teaser",
     "listed_at": "2026-06-14T20:49:22",
@@ -7474,7 +7464,8 @@
       "https://media.ipcstore.net/img/21300201.jpg"
     ],
     "image_verified": true,
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HDIS0299": {
     "ean": "8719706022088",
@@ -7614,26 +7605,6 @@
     "ek": 4.87,
     "vk": 16.99,
     "title": "Ghd Perfect Ending - Final Fix Haarspray",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "HHWG1043": {
-    "ean": "5060356734306",
-    "supplier": "BAB",
-    "ek": 7.31,
-    "vk": 21.99,
-    "title": "Ghd Shiny Ever After - Hitzeschutz Spray",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "HHWG1046": {
-    "ean": "5060356734290",
-    "supplier": "BAB",
-    "ek": 9.44,
-    "vk": 25.99,
-    "title": "Ghd Dramatic Ending - Haarserum",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
@@ -7913,20 +7884,6 @@
     ],
     "image_verified": true
   },
-  "NETT1022": {
-    "ean": "4779027312385",
-    "supplier": "BAB",
-    "ek": 81.2,
-    "vk": 160.99,
-    "title": "Teletonika TRB142 - Gateway",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://static.wixstatic.com/media/814ec4_ab0dd8998b8b4d1db2ce3e05618018b5~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-74.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_ab0dd8998b8b4d1db2ce3e05618018b5~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-74.jpg"
-    ],
-    "image_verified": true
-  },
   "NETT1024": {
     "ean": "4779027312415",
     "supplier": "BAB",
@@ -8180,16 +8137,6 @@
     "ek": 5.08,
     "vk": 17.99,
     "title": "Petkit Trinkbrunnen Reinigungsset",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PETK0012": {
-    "ean": "6931580101280",
-    "supplier": "BAB",
-    "ek": 5.5,
-    "vk": 17.99,
-    "title": "Petkit Futterautomat Feuchtigkeitsbeutel (Desiccant) 5 Stk",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
@@ -8748,7 +8695,7 @@
   "SUPL0127": {
     "ean": "5099206065062",
     "supplier": "BAB",
-    "ek": 5.58,
+    "ek": 5.53,
     "vk": 18.99,
     "title": "Logitech Mouse B170 Optical Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -8780,7 +8727,7 @@
   "SUPL0233": {
     "ean": "5099206066199",
     "supplier": "BAB",
-    "ek": 8.56,
+    "ek": 8.34,
     "vk": 24.99,
     "title": "Logitech Mouse M220 Silent Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
