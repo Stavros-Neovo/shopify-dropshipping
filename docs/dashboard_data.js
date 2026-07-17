@@ -1,10 +1,10 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-17T14:46:15.005122+00:00",
+  "generated_at": "2026-07-17T16:18:13.680912+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 684,
-    "images_verified": 389,
+    "total_skus": 683,
+    "images_verified": 388,
     "images_missing": 295
   },
   "repricing": {
@@ -111,25 +111,25 @@ window.DASHBOARD_DATA = {
   },
   "orders": {
     "stats": {
-      "today_sales": 0,
-      "today_revenue": 0.0,
-      "today_profit": 0.0,
-      "week_sales": 0,
-      "week_revenue": 0.0,
-      "week_profit": 0.0,
+      "today_sales": 1,
+      "today_revenue": 29.99,
+      "today_profit": 2.83,
+      "week_sales": 1,
+      "week_revenue": 29.99,
+      "week_profit": 2.83,
       "prev_week_sales": 0,
       "prev_week_revenue": 0.0,
       "prev_week_profit": 0.0,
-      "month_sales": 0,
-      "month_revenue": 0.0,
-      "month_profit": 0.0,
-      "month_ek": 0.0,
-      "month_ebay_fee": 0.0,
-      "month_return_reserve": 0.0,
-      "total_sales_30d": 1,
-      "total_revenue_30d": 51.99,
-      "total_profit_30d": 4.31,
-      "total_cash_profit_30d": 5.6
+      "month_sales": 1,
+      "month_revenue": 29.99,
+      "month_profit": 2.83,
+      "month_ek": 12.4,
+      "month_ebay_fee": 5.18,
+      "month_return_reserve": 0.62,
+      "total_sales_30d": 2,
+      "total_revenue_30d": 81.98,
+      "total_profit_30d": 7.14,
+      "total_cash_profit_30d": 9.05
     },
     "chart_7d": [
       {
@@ -170,9 +170,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "17.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
+        "revenue": 29.99,
+        "profit": 2.83,
+        "sales": 1
       }
     ],
     "chart_30d": [
@@ -352,9 +352,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "17.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
+        "revenue": 29.99,
+        "profit": 2.83,
+        "sales": 1
       }
     ],
     "chart_90d": [
@@ -894,9 +894,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "17.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
+        "revenue": 29.99,
+        "profit": 2.83,
+        "sales": 1
       }
     ],
     "top_products": [
@@ -1163,6 +1163,13 @@ window.DASHBOARD_DATA = {
     ],
     "recent_sales": [
       {
+        "date": "17.07 15:00",
+        "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrisc",
+        "revenue": 29.99,
+        "profit": 2.83,
+        "cash_profit": 3.45
+      },
+      {
         "date": "18.06 10:33",
         "title": "yyyECOFLOW Smart Plug",
         "revenue": 51.99,
@@ -1240,15 +1247,35 @@ window.DASHBOARD_DATA = {
         "cash_profit": 4.23
       }
     ],
-    "bab_deadlines": [],
-    "tracking_missing": [],
+    "bab_deadlines": [
+      {
+        "order_id": "26-14881-15484",
+        "date": "2026-07-17",
+        "deadline": "2026-07-31",
+        "days_left": 14,
+        "items": [
+          "Petkit Katzenklo Pura Max & Pura Max 2 L"
+        ],
+        "urgent": false
+      }
+    ],
+    "tracking_missing": [
+      {
+        "order_id": "26-14881-15484",
+        "date": "2026-07-17",
+        "items": [
+          "Petkit Katzenklo Pura Max & Pura Max 2 L"
+        ],
+        "buyer": "mir597120"
+      }
+    ],
     "tax_reserves": {
-      "ust_month": 0.0,
-      "est_month": 0.0,
-      "gewst_month": 0.0,
-      "total_month": 0.0
+      "ust_month": 4.79,
+      "est_month": 0.85,
+      "gewst_month": 0.42,
+      "total_month": 6.06
     },
-    "expected_payout": 43.41
+    "expected_payout": 68.22
   },
   "pending_orders": {},
   "flagged_orders": {}
