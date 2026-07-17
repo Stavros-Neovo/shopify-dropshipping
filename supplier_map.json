@@ -7195,22 +7195,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDW0095": {
-    "ean": "0619659220860",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 296.86,
-    "vk": 649.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD M.2 2TB WD Black™ SN8100 NVMe PCI5.0",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/141587.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/141587.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPB1060": {
     "ean": "0017817859585",
     "supplier": "BAB",
