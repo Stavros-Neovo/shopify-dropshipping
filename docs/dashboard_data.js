@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-16T23:00:56.537183+00:00",
+  "generated_at": "2026-07-17T02:56:45.764312+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -126,18 +126,12 @@ window.DASHBOARD_DATA = {
       "month_ek": 0.0,
       "month_ebay_fee": 0.0,
       "month_return_reserve": 0.0,
-      "total_sales_30d": 3,
-      "total_revenue_30d": 234.96,
-      "total_profit_30d": 120.54,
-      "total_cash_profit_30d": 121.83
+      "total_sales_30d": 1,
+      "total_revenue_30d": 51.99,
+      "total_profit_30d": 4.31,
+      "total_cash_profit_30d": 5.6
     },
     "chart_7d": [
-      {
-        "date": "10.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "11.07",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "17.06",
+        "date": "17.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "18.06",
         "revenue": 51.99,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "18.04",
+        "date": "17.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "19.04",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "17.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1248,7 +1248,7 @@ window.DASHBOARD_DATA = {
       "gewst_month": 0.0,
       "total_month": 0.0
     },
-    "expected_payout": 197.61
+    "expected_payout": 43.41
   },
   "pending_orders": {},
   "flagged_orders": {}
