@@ -4211,40 +4211,6 @@
     ],
     "image_too_small": true
   },
-  "HDXT0230": {
-    "ean": "4260557511282",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 133.81,
-    "vk": 259.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Toshiba Canvio Advance 4TB red",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21288615.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21288615.jpg"
-    ],
-    "image_too_small": true
-  },
-  "HDXT0239": {
-    "ean": "4260557512364",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 132.05,
-    "vk": 256.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/129910.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129910.jpg",
-      "https://media.ipcstore.net/img/l/129910_1.jpg",
-      "https://media.ipcstore.net/img/l/129910_2.jpg",
-      "https://media.ipcstore.net/img/l/129910_3.jpg"
-    ],
-    "image_too_small": true
-  },
   "HDXV0011": {
     "ean": "0023942532231",
     "supplier": "BAB",
@@ -4498,16 +4464,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "RAM4G0006": {
-    "ean": "4719692004970",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 97.74,
-    "vk": 237.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "RAM4G0011": {
     "ean": "4719692006417",
@@ -5425,21 +5381,6 @@
     ],
     "image_verified": true
   },
-  "HDIS0241": {
-    "ean": "0763649150474",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 382.06,
-    "vk": 726.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Seagate ST10000VE001 SkyHawk AI / 10TB",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/92855880_8162297118.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/92855880_8162297118.jpg"
-    ]
-  },
   "HDIS0258": {
     "ean": "8719706022095",
     "supplier": "BAB",
@@ -5607,16 +5548,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery_mediums/3b7e3e42e6ac4ad1d2fcaae74c9b1d8b69abbb5f.jpg"
     ]
-  },
-  "HDIT0247": {
-    "ean": "4260557513613",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 631.19,
-    "vk": 1196.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDIW0206": {
     "ean": "0718037899794",
@@ -6375,22 +6306,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Lexar THOR 2.0 DDR5 6000 CL38 1.3V Memory with heatsink and RGB lighting, Black Color, Dual pack",
     "image_verified": false
-  },
-  "RAM5C0004": {
-    "ean": "649528929730",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 165.95,
-    "vk": 320.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Crucial DDR5 - 16GB 5600 DIMM (CT16G56C46U5)",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/134162.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/134162.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "RAM5C0025": {
     "ean": "0840440492573",
@@ -7389,24 +7304,6 @@
     ],
     "image_verified": true
   },
-  "SUPJ0173": {
-    "ean": "5706991024364",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 194.68,
-    "vk": 379.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "JABRA Evolve2 75 - Headset",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93797034_1810455412.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93797034_1810455412.jpg",
-      "https://images.icecat.biz/img/gallery/93813283_4682495872.jpg",
-      "https://images.icecat.biz/img/gallery/93813283_5491376760.jpg",
-      "https://images.icecat.biz/img/gallery/93813283_8039640507.jpg"
-    ]
-  },
   "SUPL0264": {
     "ean": "5099206059030",
     "supplier": "BAB",
@@ -7700,21 +7597,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "HHWG1032": {
-    "ean": "5060829516477",
-    "supplier": "BAB",
-    "ek": 11.17,
-    "vk": 28.99,
-    "title": "Ghd Mini Paddle Brush - schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/638545.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/638545.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "HHWG1040": {
     "ean": "5060829514640",
