@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-18T06:08:30.427567+00:00",
+  "generated_at": "2026-07-18T08:50:33.350167+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
