@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-17T23:58:23.786858+00:00",
+  "generated_at": "2026-07-18T03:20:28.643986+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -111,9 +111,9 @@ window.DASHBOARD_DATA = {
   },
   "orders": {
     "stats": {
-      "today_sales": 1,
-      "today_revenue": 29.99,
-      "today_profit": 2.83,
+      "today_sales": 0,
+      "today_revenue": 0.0,
+      "today_profit": 0.0,
       "week_sales": 1,
       "week_revenue": 29.99,
       "week_profit": 2.83,
@@ -132,12 +132,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 9.05
     },
     "chart_7d": [
-      {
-        "date": "11.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "12.07",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 29.99,
         "profit": 2.83,
         "sales": 1
+      },
+      {
+        "date": "18.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "chart_30d": [
-      {
-        "date": "18.06",
-        "revenue": 51.99,
-        "profit": 4.31,
-        "sales": 1
-      },
       {
         "date": "19.06",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 29.99,
         "profit": 2.83,
         "sales": 1
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "19.04",
+        "date": "18.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "20.04",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 29.99,
         "profit": 2.83,
         "sales": 1
+      },
+      {
+        "date": "18.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1252,7 +1252,7 @@ window.DASHBOARD_DATA = {
         "order_id": "26-14881-15484",
         "date": "2026-07-17",
         "deadline": "2026-07-31",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "Petkit Katzenklo Pura Max & Pura Max 2 L"
         ],
