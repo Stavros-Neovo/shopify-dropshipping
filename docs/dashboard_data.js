@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-20T10:15:15.613350+00:00",
+  "generated_at": "2026-07-20T13:09:27.397567+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 682,
-    "images_verified": 388,
-    "images_missing": 294
+    "total_skus": 676,
+    "images_verified": 385,
+    "images_missing": 291
   },
   "repricing": {
     "last_run": {
@@ -119,17 +119,17 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 1,
       "prev_week_revenue": 29.99,
-      "prev_week_profit": 2.83,
+      "prev_week_profit": 15.85,
       "month_sales": 1,
       "month_revenue": 29.99,
-      "month_profit": 2.83,
-      "month_ek": 12.4,
+      "month_profit": 15.85,
+      "month_ek": 0.0,
       "month_ebay_fee": 5.18,
-      "month_return_reserve": 0.62,
+      "month_return_reserve": 0.0,
       "total_sales_30d": 1,
       "total_revenue_30d": 29.99,
-      "total_profit_30d": 2.83,
-      "total_cash_profit_30d": 3.45
+      "total_profit_30d": 15.85,
+      "total_cash_profit_30d": 15.85
     },
     "chart_7d": [
       {
@@ -153,7 +153,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "17.07",
         "revenue": 29.99,
-        "profit": 2.83,
+        "profit": 15.85,
         "sales": 1
       },
       {
@@ -335,7 +335,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "17.07",
         "revenue": 29.99,
-        "profit": 2.83,
+        "profit": 15.85,
         "sales": 1
       },
       {
@@ -661,7 +661,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "11.06",
         "revenue": 55.98,
-        "profit": 4.31,
+        "profit": 31.48,
         "sales": 1
       },
       {
@@ -703,7 +703,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "18.06",
         "revenue": 51.99,
-        "profit": 4.31,
+        "profit": 31.48,
         "sales": 1
       },
       {
@@ -877,7 +877,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "17.07",
         "revenue": 29.99,
-        "profit": 2.83,
+        "profit": 15.85,
         "sales": 1
       },
       {
@@ -1005,6 +1005,84 @@ window.DASHBOARD_DATA = {
         }
       },
       {
+        "sku": "PPSE0017",
+        "title": "yyyECOFLOW Smart Plug",
+        "sold": 1,
+        "revenue": 51.99,
+        "profit": 31.48,
+        "cash_profit": 31.48,
+        "vk": 51.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 51.99,
+          "ebay_fee": 8.58,
+          "ebay_percent_fee": 8.04,
+          "ebay_fixed_fee": 0.54,
+          "vat": 6.93,
+          "netto_vk": 36.48,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 31.48,
+          "cash_profit_t": 31.48,
+          "profit_u": 31.48,
+          "qty": 1,
+          "profit_t": 31.48
+        }
+      },
+      {
+        "sku": "PPSE0102",
+        "title": "ECOFLOW Smart Plug 2",
+        "sold": 1,
+        "revenue": 51.99,
+        "profit": 31.48,
+        "cash_profit": 31.48,
+        "vk": 51.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 51.99,
+          "ebay_fee": 8.58,
+          "ebay_percent_fee": 8.04,
+          "ebay_fixed_fee": 0.54,
+          "vat": 6.93,
+          "netto_vk": 36.48,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 31.48,
+          "cash_profit_t": 31.48,
+          "profit_u": 31.48,
+          "qty": 1,
+          "profit_t": 31.48
+        }
+      },
+      {
+        "sku": "PETK0037",
+        "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrischer N50 3 Stk.",
+        "sold": 1,
+        "revenue": 29.99,
+        "profit": 15.85,
+        "cash_profit": 15.85,
+        "vk": 29.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 29.99,
+          "ebay_fee": 5.18,
+          "ebay_percent_fee": 4.64,
+          "ebay_fixed_fee": 0.54,
+          "vat": 3.96,
+          "netto_vk": 20.85,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 15.85,
+          "cash_profit_t": 15.85,
+          "profit_u": 15.85,
+          "qty": 1,
+          "profit_t": 15.85
+        }
+      },
+      {
         "sku": "PETK0049",
         "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
         "sold": 1,
@@ -1057,58 +1135,6 @@ window.DASHBOARD_DATA = {
         }
       },
       {
-        "sku": "PPSE0017",
-        "title": "yyyECOFLOW Smart Plug",
-        "sold": 1,
-        "revenue": 51.99,
-        "profit": 4.31,
-        "cash_profit": 5.6,
-        "vk": 51.99,
-        "ek": 25.88,
-        "calc": {
-          "vk_brutto": 51.99,
-          "ebay_fee": 8.58,
-          "ebay_percent_fee": 8.04,
-          "ebay_fixed_fee": 0.54,
-          "vat": 6.93,
-          "netto_vk": 36.48,
-          "ship": 5.0,
-          "ek": 25.88,
-          "return_reserve": 1.29,
-          "cash_profit_u": 5.6,
-          "cash_profit_t": 5.6,
-          "profit_u": 4.31,
-          "qty": 1,
-          "profit_t": 4.31
-        }
-      },
-      {
-        "sku": "PPSE0102",
-        "title": "ECOFLOW Smart Plug 2",
-        "sold": 1,
-        "revenue": 51.99,
-        "profit": 4.31,
-        "cash_profit": 5.6,
-        "vk": 51.99,
-        "ek": 25.88,
-        "calc": {
-          "vk_brutto": 51.99,
-          "ebay_fee": 8.58,
-          "ebay_percent_fee": 8.04,
-          "ebay_fixed_fee": 0.54,
-          "vat": 6.93,
-          "netto_vk": 36.48,
-          "ship": 5.0,
-          "ek": 25.88,
-          "return_reserve": 1.29,
-          "cash_profit_u": 5.6,
-          "cash_profit_t": 5.6,
-          "profit_u": 4.31,
-          "qty": 1,
-          "profit_t": 4.31
-        }
-      },
-      {
         "sku": "SUPD1027",
         "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
         "sold": 1,
@@ -1133,32 +1159,6 @@ window.DASHBOARD_DATA = {
           "qty": 1,
           "profit_t": 4.0
         }
-      },
-      {
-        "sku": "USBK1023",
-        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
-        "sold": 1,
-        "revenue": 21.99,
-        "profit": 3.98,
-        "cash_profit": 4.27,
-        "vk": 21.99,
-        "ek": 5.9,
-        "calc": {
-          "vk_brutto": 21.99,
-          "ebay_fee": 3.94,
-          "ebay_percent_fee": 3.4,
-          "ebay_fixed_fee": 0.54,
-          "vat": 2.88,
-          "netto_vk": 15.17,
-          "ship": 5.0,
-          "ek": 5.9,
-          "return_reserve": 0.29,
-          "cash_profit_u": 4.27,
-          "cash_profit_t": 4.27,
-          "profit_u": 3.98,
-          "qty": 1,
-          "profit_t": 3.98
-        }
       }
     ],
     "recent_sales": [
@@ -1166,15 +1166,15 @@ window.DASHBOARD_DATA = {
         "date": "17.07 15:00",
         "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrisc",
         "revenue": 29.99,
-        "profit": 2.83,
-        "cash_profit": 3.45
+        "profit": 15.85,
+        "cash_profit": 15.85
       },
       {
         "date": "18.06 10:33",
         "title": "yyyECOFLOW Smart Plug",
         "revenue": 51.99,
-        "profit": 4.31,
-        "cash_profit": 5.6
+        "profit": 31.48,
+        "cash_profit": 31.48
       },
       {
         "date": "16.06 17:06",
@@ -1215,8 +1215,8 @@ window.DASHBOARD_DATA = {
         "date": "11.06 12:07",
         "title": "ECOFLOW Smart Plug 2",
         "revenue": 55.98,
-        "profit": 4.31,
-        "cash_profit": 5.6
+        "profit": 31.48,
+        "cash_profit": 31.48
       },
       {
         "date": "08.06 16:00",
@@ -1262,9 +1262,9 @@ window.DASHBOARD_DATA = {
     "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 4.79,
-      "est_month": 0.85,
-      "gewst_month": 0.42,
-      "total_month": 6.06
+      "est_month": 4.75,
+      "gewst_month": 2.38,
+      "total_month": 11.92
     },
     "expected_payout": 24.81
   },
