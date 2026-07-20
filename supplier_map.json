@@ -1324,17 +1324,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "PLAY0002": {
-    "ean": "4008789701916",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.75,
-    "vk": 103.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Playmobil 70191 City Life - Krankenhaus mit Einrichtung",
-    "image_verified": false
-  },
   "PPE0047": {
     "ean": "4897082669357",
     "supplier": "BAB",
@@ -9193,23 +9182,6 @@
       "https://images.icecat.biz/img/gallery/e5857cbb7e3a7639244d88341926675e.jpg"
     ],
     "image_verified": true
-  },
-  "SUPS0286": {
-    "ean": "8806095510002",
-    "supplier": "BAB",
-    "ek": 15.94,
-    "vk": 37.99,
-    "title": "Samsung EP-T4511 - Netzteil - 45 Watt - 5 A - Fast Charge - schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/dee67520ca2e0e71e23a18e848cab852c8b2eac1.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/dee67520ca2e0e71e23a18e848cab852c8b2eac1.jpg",
-      "https://images.icecat.biz/img/gallery/30246e1d7123f387d0d80c69383859c5ad67cbde.jpg",
-      "https://images.icecat.biz/img/gallery/95348f1a11a75ebc836382ca6d44b2aa3aae0933.jpg",
-      "https://images.icecat.biz/img/gallery/8db450a5b987c5acf626656f81b8901f8479042e.jpg"
-    ]
   },
   "SUPS0341": {
     "ean": "8806094682748",
