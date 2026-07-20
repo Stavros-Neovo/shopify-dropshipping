@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-20T06:51:11.398547+00:00",
+  "generated_at": "2026-07-20T10:15:15.613350+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -1259,16 +1259,7 @@ window.DASHBOARD_DATA = {
         "urgent": false
       }
     ],
-    "tracking_missing": [
-      {
-        "order_id": "26-14881-15484",
-        "date": "2026-07-17",
-        "items": [
-          "Petkit Katzenklo Pura Max & Pura Max 2 L"
-        ],
-        "buyer": "mir597120"
-      }
-    ],
+    "tracking_missing": [],
     "tax_reserves": {
       "ust_month": 4.79,
       "est_month": 0.85,
