@@ -258,7 +258,7 @@
     "ean": "4025112099915",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
+    "ek": 29.44,
     "vk": 74.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -1930,7 +1930,7 @@
     "ean": "0097855153197",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.75,
+    "ek": 50.24,
     "vk": 103.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3197,20 +3197,6 @@
     ],
     "image_verified": true
   },
-  "SUPV0048": {
-    "ean": "0023942322047",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 54.2,
-    "vk": 109.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/0750f75c4e81c240e8aa8c2ef9f16687.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/0750f75c4e81c240e8aa8c2ef9f16687.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPY0056": {
     "ean": "6938818321816",
     "supplier": "BAB",
@@ -4148,7 +4134,7 @@
     "ean": "0718037905730",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 149.0,
+    "ek": 148.86,
     "vk": 288.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4796,7 +4782,7 @@
     "ean": "0718037893204",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 135.74,
+    "ek": 135.29,
     "vk": 263.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4908,7 +4894,7 @@
     "ean": "0097855119551",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 141.09,
+    "ek": 138.04,
     "vk": 277.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4924,7 +4910,7 @@
     "ean": "0097855131171",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 123.63,
+    "ek": 122.41,
     "vk": 242.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5512,7 +5498,7 @@
     "ean": "0718037899794",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 176.42,
+    "ek": 172.51,
     "vk": 350.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6914,7 +6900,7 @@
     "ean": "4582761161115",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 190.43,
+    "ek": 188.71,
     "vk": 390.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7132,7 +7118,7 @@
     "ean": "0718037893211",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 217.46,
+    "ek": 217.16,
     "vk": 430.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7231,7 +7217,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 258.85,
+    "ek": 253.3,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8074,21 +8060,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "PETK0021": {
-    "ean": "6973293809190",
-    "supplier": "BAB",
-    "ek": 12.4,
-    "vk": 30.99,
-    "title": "Petkit 2 in 1 Trimmer Pro",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21303467.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21303467.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "PETK0023": {
     "ean": "6975069303017",
     "supplier": "BAB",
@@ -8462,7 +8433,7 @@
   "SUPC0088": {
     "ean": "7340086912839",
     "supplier": "BAB",
-    "ek": 57.86,
+    "ek": 20.4,
     "vk": 116.99,
     "title": "CHERRY Xtrfy M42 - Maus - optisch - kabellos - Schwarz ",
     "listed_at": "2026-06-14T20:49:22",
@@ -8472,7 +8443,8 @@
     "images": [
       "https://media.ipcstore.net/img/267294.jpg"
     ],
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPD1027": {
     "ean": "5397063763610",
