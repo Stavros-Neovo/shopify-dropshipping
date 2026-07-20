@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-19T23:01:38.754734+00:00",
+  "generated_at": "2026-07-20T03:33:19.701767+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 683,
+    "total_skus": 682,
     "images_verified": 388,
-    "images_missing": 295
+    "images_missing": 294
   },
   "repricing": {
     "last_run": {
@@ -114,12 +114,12 @@ window.DASHBOARD_DATA = {
       "today_sales": 0,
       "today_revenue": 0.0,
       "today_profit": 0.0,
-      "week_sales": 1,
-      "week_revenue": 29.99,
-      "week_profit": 2.83,
-      "prev_week_sales": 0,
-      "prev_week_revenue": 0.0,
-      "prev_week_profit": 0.0,
+      "week_sales": 0,
+      "week_revenue": 0.0,
+      "week_profit": 0.0,
+      "prev_week_sales": 1,
+      "prev_week_revenue": 29.99,
+      "prev_week_profit": 2.83,
       "month_sales": 1,
       "month_revenue": 29.99,
       "month_profit": 2.83,
@@ -132,12 +132,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 3.45
     },
     "chart_7d": [
-      {
-        "date": "13.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "14.07",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "20.06",
+        "date": "20.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "21.06",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "21.04",
+        "date": "20.07",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "22.04",
         "revenue": 0,
@@ -691,7 +685,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "15.06",
         "revenue": 279.98,
-        "profit": 25.14,
+        "profit": 190.6,
         "sales": 1
       },
       {
@@ -897,9 +891,41 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "20.07",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
+      {
+        "sku": "NETU0187",
+        "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
+        "sold": 1,
+        "revenue": 275.99,
+        "profit": 190.6,
+        "cash_profit": 190.6,
+        "vk": 275.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 275.99,
+          "ebay_fee": 43.24,
+          "ebay_percent_fee": 42.7,
+          "ebay_fixed_fee": 0.54,
+          "vat": 37.16,
+          "netto_vk": 195.59,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 190.6,
+          "cash_profit_t": 190.6,
+          "profit_u": 190.6,
+          "qty": 1,
+          "profit_t": 190.6
+        }
+      },
       {
         "sku": "HHWM0023",
         "title": "Makita Bohrhammer - schnurlos - 3 Modi",
@@ -976,32 +1002,6 @@ window.DASHBOARD_DATA = {
           "profit_u": 37.16,
           "qty": 1,
           "profit_t": 37.16
-        }
-      },
-      {
-        "sku": "NETU0187",
-        "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungskamera",
-        "sold": 1,
-        "revenue": 275.99,
-        "profit": 25.14,
-        "cash_profit": 33.02,
-        "vk": 275.99,
-        "ek": 157.58,
-        "calc": {
-          "vk_brutto": 275.99,
-          "ebay_fee": 43.24,
-          "ebay_percent_fee": 42.7,
-          "ebay_fixed_fee": 0.54,
-          "vat": 37.16,
-          "netto_vk": 195.59,
-          "ship": 5.0,
-          "ek": 157.58,
-          "return_reserve": 7.88,
-          "cash_profit_u": 33.02,
-          "cash_profit_t": 33.02,
-          "profit_u": 25.14,
-          "qty": 1,
-          "profit_t": 25.14
         }
       },
       {
@@ -1194,8 +1194,8 @@ window.DASHBOARD_DATA = {
         "date": "15.06 22:07",
         "title": "Ubiquiti  UniFi Protect G6 - Netzwerk-Überwachungs",
         "revenue": 279.98,
-        "profit": 25.14,
-        "cash_profit": 33.02
+        "profit": 190.6,
+        "cash_profit": 190.6
       },
       {
         "date": "13.06 22:19",
@@ -1252,7 +1252,7 @@ window.DASHBOARD_DATA = {
         "order_id": "26-14881-15484",
         "date": "2026-07-17",
         "deadline": "2026-07-31",
-        "days_left": 12,
+        "days_left": 11,
         "items": [
           "Petkit Katzenklo Pura Max & Pura Max 2 L"
         ],
