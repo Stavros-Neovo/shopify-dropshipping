@@ -5314,7 +5314,7 @@
     "ean": "8719706022095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 329.0,
+    "ek": 309.01,
     "vk": 751.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6928,22 +6928,6 @@
     ],
     "image_too_small": true
   },
-  "SSDL0041": {
-    "ean": "0843367132225",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 180.23,
-    "vk": 347.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 4X4 NQ790 NVMe",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/138138.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/138138.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SSDL0044": {
     "ean": "0843367136780",
     "supplier": "BAB",
@@ -7342,7 +7326,7 @@
   "HDIS0299": {
     "ean": "8719706022088",
     "supplier": "BAB",
-    "ek": 255.01,
+    "ek": 249.01,
     "vk": 563.99,
     "title": "Seagate Exos 7E10 / ST4000NM025B / 4TB / 3,5\"",
     "listed_at": "2026-06-14T20:49:22",
@@ -7425,22 +7409,6 @@
     "image_url": "https://media.ipcstore.net/img/21132133.jpg",
     "images": [
       "https://media.ipcstore.net/img/21132133.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "kosatec_ipcstore",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "HHWB5016": {
-    "ean": "4211125591137",
-    "supplier": "BAB",
-    "ek": 13.2,
-    "vk": 36.99,
-    "title": "Beurer HC 25 - Föhn",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/21296158.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21296158.jpg"
     ],
     "image_verified": true,
     "image_source": "kosatec_ipcstore",
@@ -8563,22 +8531,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0312": {
-    "ean": "5099206086449",
-    "supplier": "BAB",
-    "ek": 29.03,
-    "vk": 63.99,
-    "title": "Logitech Desktop MK470 Slim Wireless Combo Black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/119821.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/119821.jpg"
-    ],
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
@@ -9548,25 +9500,6 @@
       "https://images.icecat.biz/img/gallery/13837232_0005927167.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "USBV0013": {
-    "ean": "0023942490623",
-    "supplier": "BAB",
-    "ek": 3.44,
-    "vk": 14.99,
-    "title": "Verbatim Store n Go 8GB Pinstripe USB 2.0 black 49062",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/f1fe3eb25c5c3c98ab434b732af2ee4ecbfa6fe2.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/f1fe3eb25c5c3c98ab434b732af2ee4ecbfa6fe2.jpg",
-      "https://images.icecat.biz/img/gallery/d7533513155b2b0f69f85aa5ec4bd8061a5bb78c.jpg",
-      "https://images.icecat.biz/img/gallery/bed8f21d2823e43c6be1f84420fc576865c6c266.jpg",
-      "https://images.icecat.biz/img/gallery/93d7d74b3a81fb9565277bdd94a49acfdf913e98.jpg",
-      "https://images.icecat.biz/img/gallery/1aa54eb2357418027603a9c439025c6581f042f7.jpg",
-      "https://images.icecat.biz/img/gallery/2d396eb0dcad377fc277ba6cec9056b244f36839.jpg"
-    ]
   },
   "USBV0017": {
     "ean": "0023942490715",
