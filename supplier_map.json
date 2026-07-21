@@ -62,26 +62,11 @@
       "https://images.icecat.biz/img/gallery/36544548_9316499936.jpg"
     ]
   },
-  "SUPL0591": {
-    "ean": "5099206096547",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 31.57,
-    "vk": 66.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/129157.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129157.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPL0538": {
     "ean": "5099206105324",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 38.47,
+    "ek": 37.66,
     "vk": 80.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -235,24 +220,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "SUPJ1054": {
-    "ean": "5706991029109",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 125.86,
-    "vk": 244.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "JABRA Evolve2 65 Flex UC Stereo Headset",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e449345c98aa2704e6a334507f333a5e6ec26820.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e449345c98aa2704e6a334507f333a5e6ec26820.jpg",
-      "https://images.icecat.biz/img/gallery/dfcf75865c1aab038988a2b5bb4f8246f2f08a28.jpg",
-      "https://images.icecat.biz/img/gallery/e8d64ed2defe3a4ef2f56662e6e5614c26daa7ec.jpg",
-      "https://images.icecat.biz/img/gallery/0c1090f608033a8bbe8184b9781f5089.jpg"
-    ]
   },
   "SUPC0089": {
     "ean": "4025112099915",
@@ -1852,7 +1819,7 @@
     "ean": "5099206066823",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.6,
+    "ek": 47.4,
     "vk": 99.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3037,7 +3004,7 @@
     "ean": "5099206085855",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 65.87,
+    "ek": 65.37,
     "vk": 134.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3046,22 +3013,6 @@
     "image_url": "https://media.ipcstore.net/img/114354.jpg",
     "images": [
       "https://media.ipcstore.net/img/114354.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "SUPL0446": {
-    "ean": "5099206104914",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 63.44,
-    "vk": 127.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Brio 500 Webcam Black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/130374.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/130374.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -4627,22 +4578,6 @@
     ],
     "image_too_small": true
   },
-  "SSDL0031": {
-    "ean": "0843367130283",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 132.32,
-    "vk": 263.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 Lexar 1TB PCIe Gen 4X4 NM790 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/241215.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/241215.jpg"
-    ],
-    "image_too_small": true
-  },
   "SSDL0047": {
     "ean": "0843367136841",
     "supplier": "BAB",
@@ -4761,20 +4696,6 @@
       "https://media.ipcstore.net/img/139190.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "SSDW0091": {
-    "ean": "0718037893204",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 135.29,
-    "vk": 263.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://m.media-amazon.com/images/I/5135330Og+L._AC_UY218_.jpg",
-    "images": [
-      "https://i5.walmartimages.com/seo/WD-BLACK-SN7100-M-2-2280-1TB-PCI-Express-4-0-x4-TLC-3D-NAND-Internal-Solid-State-Drive-SSD-WDS100T4X0E_fb4f50ca-9433-48ea-9bb6-d2c755412e17.6ed6195e20ad30fa02d47c5bcd005b79.png?odnHeight=580&odnWidth=580&odnBg=FFFFFF"
-    ]
   },
   "SSDW0097": {
     "ean": "0718037906256",
@@ -7051,22 +6972,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "SSDW0092": {
-    "ean": "0718037893211",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 217.16,
-    "vk": 430.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "HDSSD M.2 2TB WD Black™ SN7100 NVMe",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/139413.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/139413.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPB1060": {
     "ean": "0017817859585",
     "supplier": "BAB",
@@ -7646,20 +7551,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/dbc91d74e756274f3311f9799d1bccfe.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/dbc91d74e756274f3311f9799d1bccfe.jpg"
-    ]
-  },
-  "NETT0201": {
-    "ean": "4897098685143",
-    "supplier": "BAB",
-    "ek": 16.54,
-    "vk": 38.99,
-    "title": "TP-LINK Tapo A100 - Powerbank ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/e4f935b20113a795eedb968f7abec168.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e4f935b20113a795eedb968f7abec168.jpg"
     ]
   },
   "NETT0207": {
@@ -8486,7 +8377,7 @@
   "SUPL0183": {
     "ean": "5099206033139",
     "supplier": "BAB",
-    "ek": 19.18,
+    "ek": 18.68,
     "vk": 46.99,
     "title": "Logitech Keyboard K270 Wireless Black/White",
     "listed_at": "2026-06-14T20:49:22",
@@ -8515,26 +8406,10 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0279": {
-    "ean": "5099206066687",
-    "supplier": "BAB",
-    "ek": 11.27,
-    "vk": 29.99,
-    "title": "Logitech Mouse M330 SILENT PLUS Wireless Blue",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/404030.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/404030.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
-    "ek": 27.51,
+    "ek": 27.25,
     "vk": 60.99,
     "title": "Logitech Signature K650 Keyboard Black ",
     "listed_at": "2026-06-14T20:49:22",
@@ -8682,17 +8557,6 @@
     ],
     "image_verified": false,
     "image_too_small": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPN4009": {
-    "ean": "5711157001578",
-    "supplier": "BAB",
-    "ek": 13.2,
-    "vk": 32.99,
-    "title": "Needit PARK Micro (elektrische Parkscheibe) Schwarz/Blau",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPN4012": {
