@@ -1590,22 +1590,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "RAM4G0033": {
-    "ean": "4713294224378",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.46,
-    "vk": 103.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "G.Skill AEGIS - DDR4 - 8 GB - PC3200",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/115479.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/115479.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "REFR0009": {
     "ean": "5713518290584",
     "supplier": "BAB",
@@ -3037,7 +3021,7 @@
     "ean": "5099206070011",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.9,
+    "ek": 60.8,
     "vk": 122.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5212,7 +5196,7 @@
     "ean": "5032037278447",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 217.5,
+    "ek": 215.01,
     "vk": 476.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5832,22 +5816,6 @@
     "image_url": "https://media.ipcstore.net/img/21241697.jpg",
     "images": [
       "https://media.ipcstore.net/img/21241697.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "NETU0172": {
-    "ean": "0810084698341",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 242.09,
-    "vk": 463.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Ubiquiti UniFi U7 Pro XGS - Accesspoint - Wi-Fi 7",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/141163.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/141163.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -6579,21 +6547,6 @@
       "https://media.ipcstore.net/img/l/21177200.jpg"
     ],
     "image_too_small": true
-  },
-  "REFT0014": {
-    "ean": "4260771516339",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 257.81,
-    "vk": 492.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://www.alternate.de/p/600x600/8/9/HP_EliteDesk_800_G4_DM_General_berholt__Mini_PC@@100156498.jpg",
-    "images": [
-      "https://www.alternate.de/p/600x600/8/9/HP_EliteDesk_800_G4_DM_General_berholt__Mini_PC@@100156498.jpg"
-    ],
-    "title": "tecXL HP EliteDesk 800 G4 MP",
-    "image_verified": true
   },
   "REFT0019": {
     "ean": "4262431599614",
@@ -7664,22 +7617,6 @@
       "https://images.icecat.biz/img/gallery/911c94ce79d64761995c42e1ac5f5d39219619c1.jpg",
       "https://images.icecat.biz/img/gallery/d6408607e2355c7fb932caaca62d1e9ebb1cc70c.jpg",
       "https://images.icecat.biz/img/gallery/a8d784bf691a67e1c13094db4d6afa77bf1fdf68.jpg"
-    ]
-  },
-  "NETT0002": {
-    "ean": "6935364020064",
-    "supplier": "BAB",
-    "ek": 5.58,
-    "vk": 18.99,
-    "title": "TP-LINK TL-SF1005D 5-Port 10/100Mbps Desktop Switc",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/79344077_5569882974.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/79344077_5569882974.jpg",
-      "https://images.icecat.biz/img/gallery/79344077_1007688669.jpg",
-      "https://images.icecat.biz/img/gallery/79344077_2061056457.jpg"
     ]
   },
   "NETT0003": {
