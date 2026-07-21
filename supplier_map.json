@@ -288,7 +288,7 @@
     "ean": "5706991024425",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 173.67,
+    "ek": 171.1,
     "vk": 336.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -564,7 +564,7 @@
     "ean": "5099206090828",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 20.4,
+    "ek": 20.1,
     "vk": 48.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1357,17 +1357,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "PPE0148": {
-    "ean": "4895251622905",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.56,
-    "vk": 91.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "ECOFLOW Charger 65W",
-    "image_verified": false
-  },
   "PPE0232": {
     "ean": "4895251641449",
     "supplier": "BAB",
@@ -1835,7 +1824,7 @@
     "ean": "5099206053304",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 31.16,
+    "ek": 30.75,
     "vk": 67.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3822,7 +3811,7 @@
     "ean": "5099206103016",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 97.03,
+    "ek": 95.61,
     "vk": 193.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4780,7 +4769,7 @@
     "ean": "5706991022902",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 139.36,
+    "ek": 138.04,
     "vk": 274.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4815,7 +4804,7 @@
     "ean": "0097855131171",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 122.41,
+    "ek": 121.8,
     "vk": 242.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5287,23 +5276,6 @@
       "https://images.icecat.biz/img/gallery/417918243418c2ce1ec1b2c7509259c885577abe.jpg",
       "https://images.icecat.biz/img/gallery/c787602625ae84506b0c587c683ac42b1ccadecc.jpg",
       "https://images.icecat.biz/img/gallery/b3e2ff88226a3ba4eac49e9ba773b2a3a51e250a.jpg"
-    ]
-  },
-  "HDIS0286": {
-    "ean": "8719706438667",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 781.86,
-    "vk": 1607.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/003f89184a663b310088671ab59d9f4ff192f945.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/003f89184a663b310088671ab59d9f4ff192f945.jpg",
-      "https://images.icecat.biz/img/gallery/e5c20ab8334f22a45953fe266fdf61b5263ede98.jpg",
-      "https://images.icecat.biz/img/gallery/e35b8e4d53f498d20add57732bf3492e0e2f26d1.jpg",
-      "https://images.icecat.biz/img/gallery/fb3d8afd921c45853a37ac5f51e2586989ea5f3c.jpg"
     ]
   },
   "HDIS0294": {
@@ -8716,7 +8688,7 @@
   "SUPS0256": {
     "ean": "8806094911985",
     "supplier": "BAB",
-    "ek": 9.64,
+    "ek": 9.14,
     "vk": 25.99,
     "title": "Samsung Schnellladegerät - mit Datenkabel - USB-C 25W - weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -8731,7 +8703,8 @@
       "https://images.icecat.biz/img/gallery/3758b3274727c8c9cab21e8d87202fb9.jpg",
       "https://images.icecat.biz/img/gallery/af2edcc377d280cbcb70bd1330db4763.jpg",
       "https://images.icecat.biz/img/gallery/1b6f878ae332b2cc61d9939e39d8360a.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0259": {
     "ean": "8801643979379",
@@ -9049,20 +9022,6 @@
     ],
     "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPV0056": {
-    "ean": "0023942435082",
-    "supplier": "BAB",
-    "ek": 5.38,
-    "vk": 17.99,
-    "title": "Verbatim 1x10 Verbatim DVD+R 4,7GB Jewel 16x Speed, printable",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/462963_3782907376.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/462963_3782907376.jpg"
-    ],
-    "image_verified": true
   },
   "SUPY0019": {
     "ean": "6938818318410",
