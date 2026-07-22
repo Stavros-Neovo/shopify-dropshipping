@@ -644,21 +644,6 @@
       "https://images.icecat.biz/img/gallery/a30c368553974bbf7f115a12e181a10558d88395.jpg"
     ]
   },
-  "SUPX0011": {
-    "ean": "6971408155620",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 37.56,
-    "vk": 78.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/126557.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/126557.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "USBV0006": {
     "ean": "0023942302308",
     "supplier": "BAB",
@@ -1792,7 +1777,7 @@
     "ean": "5099206081901",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 44.25,
+    "ek": 43.44,
     "vk": 94.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2495,21 +2480,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "NOCO0010": {
-    "ean": "1210000619266",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 51.23,
-    "vk": 87.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "NOCO GENIUS5EU | 5A Battery Charger | Genius Battery Chargers",
-    "image_verified": true,
-    "image_url": "https://no.co/media/wysiwyg/0-GENIUS5_XXL.jpg",
-    "images": [
-      "https://no.co/media/wysiwyg/0-GENIUS5_XXL.jpg"
-    ]
-  },
   "NOCO0011": {
     "ean": "1210000619273",
     "supplier": "BAB",
@@ -2972,22 +2942,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/15974606_1530969513.jpg"
     ]
-  },
-  "SUPL0060": {
-    "ean": "5099206070011",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.8,
-    "vk": 122.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Presenter Spotlight Wireless Grey",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/887888.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/887888.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "SUPL0266": {
     "ean": "5099206085855",
@@ -6098,21 +6052,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5G0006": {
-    "ean": "4713294231833",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 389.76,
-    "vk": 754.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287255.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287255.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "RAM5G0008": {
     "ean": "4713294231369",
     "supplier": "BAB",
@@ -6157,21 +6096,6 @@
     "images": [
       "https://cdn.mwave.com.au/images/400/gskill_ripjaws_s5_32gb_2x_16gb_ddr5_6000mhz_cl30_memory_black_ac61192_96956.jpg"
     ]
-  },
-  "RAM5G0020": {
-    "ean": "4713294237637",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 683.1,
-    "vk": 1297.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287317.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287317.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "RAM5G0021": {
     "ean": "4713294237934",
@@ -7631,21 +7555,6 @@
     "image_url": "https://media.ipcstore.net/img/130598.jpg",
     "images": [
       "https://media.ipcstore.net/img/130598.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "NETU0100": {
-    "ean": "0810084690246",
-    "supplier": "BAB",
-    "ek": 213.15,
-    "vk": 408.99,
-    "title": "UbiQuiti UniFi Protect UVC-G5-PRO - Netzwerk-Überwachungskamera",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/131747.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/131747.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
