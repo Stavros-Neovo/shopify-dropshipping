@@ -4582,27 +4582,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SSDS0095": {
-    "ean": "8806090545931",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 102.9,
-    "vk": 210.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/01a16edceae6fe26440b1257856676ac.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/01a16edceae6fe26440b1257856676ac.jpg",
-      "https://images.icecat.biz/img/gallery/f30dcd6a22b708168e0fc9a264ed8a90.jpg",
-      "https://images.icecat.biz/img/gallery/c54a7527a264cb151ad6b924ae7a30aa.jpg",
-      "https://images.icecat.biz/img/gallery/3e78793c056cb29adf4aa881d436017a.jpg",
-      "https://images.icecat.biz/img/gallery/29914147a990db2beb645c5d8bb0bac9.jpg",
-      "https://images.icecat.biz/img/gallery/c44c40e8989d98f4b7444d12da61c9b5.jpg",
-      "https://images.icecat.biz/img/gallery/c6a1c8d0d68245921a7b8d1fc5dec76f.jpg",
-      "https://images.icecat.biz/img/gallery/c725e3e2f566aefc0010dad541c1c230.jpg"
-    ]
-  },
   "SSDS0096": {
     "ean": "8806090545924",
     "supplier": "BAB",
@@ -6119,22 +6098,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5G0004": {
-    "ean": "4713294233547",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 668.89,
-    "vk": 1268.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill Trident Z5 - DDR5 - 64 GB 2x 32GB Kit",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21292364.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21292364.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5G0006": {
     "ean": "4713294231833",
     "supplier": "BAB",
@@ -6257,21 +6220,6 @@
       "https://media.ipcstore.net/img/21287294.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "RAM5G0025": {
-    "ean": "4713294237644",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 649.6,
-    "vk": 1278.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287426.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287426.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "RAM5G0028": {
     "ean": "4713294237590",
