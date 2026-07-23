@@ -5115,7 +5115,7 @@
     "ean": "0763649174883",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 950.01,
+    "ek": 925.01,
     "vk": 1881.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5203,7 +5203,7 @@
     "ean": "8719706022415",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 325.0,
+    "ek": 299.01,
     "vk": 619.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5213,7 +5213,7 @@
     "ean": "0763649175095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 990.0,
+    "ek": 975.01,
     "vk": 1871.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5573,22 +5573,6 @@
     ],
     "title": "Ubiquiti UniFi U7 Pro XG Wall - Accesspoint",
     "image_verified": true
-  },
-  "NETU0188": {
-    "ean": "8101771637876",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 374.13,
-    "vk": 711.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Ubiquiti  UniFi G6 Pro Turret - Netzwerk-Überwachungskamera",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21130772.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21130772.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "NOCO0006": {
     "ean": "1210000615060",
