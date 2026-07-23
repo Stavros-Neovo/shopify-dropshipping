@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-23T07:35:05.412060+00:00",
+  "generated_at": "2026-07-23T10:26:53.270612+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 642,
-    "images_verified": 360,
-    "images_missing": 282
+    "total_skus": 638,
+    "images_verified": 358,
+    "images_missing": 280
   },
   "repricing": {
     "last_run": {
