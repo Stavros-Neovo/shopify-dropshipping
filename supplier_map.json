@@ -4212,17 +4212,6 @@
     "title": "EcoFlow Trolley (DELTA Pro Ultra)",
     "image_verified": false
   },
-  "PPE0285": {
-    "ean": "4895251648424",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 142.1,
-    "vk": 275.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "EcoFlow TRAIL Plus 300 DC - Portable Powerstation",
-    "image_verified": false
-  },
   "PPSE0098": {
     "ean": "4895251642781",
     "supplier": "BAB",
@@ -4819,20 +4808,6 @@
     "title": "SteelSeries Arctis Nova 7X - Headset - ohrumschließend - Black",
     "image_verified": false
   },
-  "SUPV0011": {
-    "ean": "0023942438892",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 105.86,
-    "vk": 212.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/66918483_6190528977.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/66918483_6190528977.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPV0034": {
     "ean": "0023942495918",
     "supplier": "BAB",
@@ -5154,20 +5129,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/43b5a7c8ae2428c95bade330cfb3b647.jpg"
     ]
-  },
-  "HDIS0295": {
-    "ean": "8719706439411",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 596.82,
-    "vk": 1131.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/bbb35da6e28c6cb7e7c22a0488e5e7a3fd411467.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/bbb35da6e28c6cb7e7c22a0488e5e7a3fd411467.jpg"
-    ],
-    "image_verified": true
   },
   "HDIS0315": {
     "ean": "8719706022125",
@@ -8390,23 +8351,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "SUPS0253": {
-    "ean": "8806094912128",
-    "supplier": "BAB",
-    "ek": 6.8,
-    "vk": 20.99,
-    "title": "Samsung Schnellladegerät - ohne Datenkabel - USB-C 25W - schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/d0742c38e45d6505493503a73df9c9fa.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/d0742c38e45d6505493503a73df9c9fa.jpg",
-      "https://images.icecat.biz/img/gallery/3d61fa8bdcecf5ae2bc20e8c2b197952.jpg",
-      "https://images.icecat.biz/img/gallery/581827e13de61d7415c68a781603e008.jpg",
-      "https://images.icecat.biz/img/gallery/a6653b95dc93f2489c21a9845a352191.jpg"
-    ]
   },
   "SUPS0254": {
     "ean": "8806094912081",
