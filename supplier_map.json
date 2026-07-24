@@ -2408,22 +2408,6 @@
       "https://images.icecat.biz/img/gallery/107336414_4549034474.jpg"
     ]
   },
-  "NETU0147": {
-    "ean": "0810084690154",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 52.82,
-    "vk": 106.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Ubiquiti SFP+-Transceiver-Modul - UACC-CM-RJ45-MG",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/129955.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/129955.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "NOCO0002": {
     "ean": "1210000615015",
     "supplier": "BAB",
