@@ -1468,7 +1468,7 @@
     "ean": "4719692006844",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 43.65,
+    "ek": 40.8,
     "vk": 92.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1954,7 +1954,7 @@
     "ean": "0023942321514",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.44,
+    "ek": 27.61,
     "vk": 62.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2423,17 +2423,6 @@
       "https://media.ipcstore.net/img/21324045.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "NOCO0011": {
-    "ean": "1210000619273",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 75.8,
-    "vk": 150.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "NOCO GENIUS10EU | 10A Battery Charger | Genius Battery Chargers",
-    "image_verified": false
   },
   "PETK0046": {
     "ean": "6975069307305",
@@ -3734,21 +3723,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SUPM3007": {
-    "ean": "7109806202564",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 97.44,
-    "vk": 191.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/7/1/712dt_1.jpg",
-    "images": [
-      "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/7/1/712dt_1.jpg"
-    ],
-    "title": "Mitel 712dt Set",
-    "image_verified": true
-  },
   "SUPR1038": {
     "ean": "8886419333937",
     "supplier": "BAB",
@@ -4027,32 +4001,6 @@
       "https://images.icecat.biz/img/gallery/2a05df834dba9006476cc7d9c4d6c19340652fe6.jpg",
       "https://images.icecat.biz/img/gallery/85ed3cbb1d6dedcf3eaf0748069b40cf8d88817c.jpg",
       "https://images.icecat.biz/img/gallery/b3432de011226ca5576fc059696cbcd7e427ecb1.jpg"
-    ]
-  },
-  "MOL0000": {
-    "ean": "0198156725684",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 133.01,
-    "vk": 278.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/48e19b57992b10d85f7ef79b59911ebca9759b9c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/48e19b57992b10d85f7ef79b59911ebca9759b9c.jpg",
-      "https://images.icecat.biz/img/gallery/61a5dde3281d50f1a33541d613be411a4e4f9460.jpg",
-      "https://images.icecat.biz/img/gallery/c81a5116bdbbf745aea57961fa9175d7e9cebdbc.jpg",
-      "https://images.icecat.biz/img/gallery/dc9643e3e85ac6d52291468df3f3e2c0e2a96311.jpg",
-      "https://images.icecat.biz/img/gallery/a46bf8a313379ffd033b17108d3508cf2f2c32f1.jpg",
-      "https://images.icecat.biz/img/gallery/86f02ab3efd6fdae66d96cc3cbfad9ec7bc01d1d.jpg",
-      "https://images.icecat.biz/img/gallery/d6cf3818d3713cdc52277c2be4458090ec98a3b9.jpg",
-      "https://images.icecat.biz/img/gallery/ea41c80e82219fb98fde0a64d79af5db2c3c95fb.jpg",
-      "https://images.icecat.biz/img/gallery/71b54f71e98de9f46415c8c55fff6d6d20f203ee.jpg",
-      "https://images.icecat.biz/img/gallery/964dc067a5014a8c8e0b2dc375d6c42a3246899b.jpg",
-      "https://images.icecat.biz/img/gallery/c173d6b3e44167d09b751513d6cfa6fe35161c28.jpg",
-      "https://images.icecat.biz/img/gallery/0b378dc53aff3681259b39bd1ec8b7dfa65b0695.jpg",
-      "https://images.icecat.biz/img/gallery/3a87529509b7244d2fcd05c5f8f734087ba0ca65.jpg"
     ]
   },
   "NETT0151": {
@@ -4892,22 +4840,6 @@
       "https://images.icecat.biz/img/gallery/36557098861de63506865423fec0b3b731763798.jpg"
     ]
   },
-  "CPUA0135": {
-    "ean": "0730143315579",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 406.0,
-    "vk": 778.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "AMD Ryzen 9 9900X3D BOX | 100-100001368WOF",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/140612.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/140612.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "CPUA0136": {
     "ean": "0730143315555",
     "supplier": "BAB",
@@ -5351,17 +5283,6 @@
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Melitta Latticia OT - Schwarz",
-    "image_verified": false
-  },
-  "HHWM4013": {
-    "ean": "4006508230136",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 162.4,
-    "vk": 313.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Melitta AromaFresh Glas Pro X - Grau",
     "image_verified": false
   },
   "HHWM5000": {
@@ -6282,20 +6203,6 @@
     ],
     "image_verified": true
   },
-  "REFT1012": {
-    "ean": "5711603086197",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 578.55,
-    "vk": 1096.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/a2b984a20e6ab0a887d6f2cad2b8ab6b574a15e7.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/a2b984a20e6ab0a887d6f2cad2b8ab6b574a15e7.jpg"
-    ],
-    "image_verified": true
-  },
   "REFT1013": {
     "ean": "5711603088276",
     "supplier": "BAB",
@@ -6796,7 +6703,7 @@
     "ean": "4548736134294",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.48,
+    "ek": 164.43,
     "vk": 338.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6812,7 +6719,7 @@
     "ean": "4548736132597",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.48,
+    "ek": 164.43,
     "vk": 326.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6827,7 +6734,7 @@
     "ean": "4548736163591",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 167.48,
+    "ek": 164.43,
     "vk": 351.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
