@@ -3515,7 +3515,7 @@
     "ean": "4713294224385",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 94.4,
+    "ek": 89.12,
     "vk": 198.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3531,7 +3531,7 @@
     "ean": "4713294224408",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 87.29,
+    "ek": 84.25,
     "vk": 185.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4173,7 +4173,7 @@
     "ean": "4719692015198",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 113.98,
+    "ek": 105.05,
     "vk": 225.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6993,21 +6993,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "LEGO0041": {
-    "ean": "5702017584478",
-    "supplier": "BAB",
-    "ek": 6.29,
-    "vk": 19.99,
-    "title": "LEGO Star Wars Captain Rex Y-Wing Microfighter",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21234976.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21234976.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "LEGO0045": {
     "ean": "5702017816135",
