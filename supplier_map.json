@@ -4100,7 +4100,7 @@
     "ean": "6975069307596",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 152.25,
+    "ek": 116.73,
     "vk": 294.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4352,22 +4352,6 @@
     "image_url": "https://media.ipcstore.net/img/l/241209.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/241209.jpg"
-    ],
-    "image_too_small": true
-  },
-  "SSDL0024": {
-    "ean": "0843367129706",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 118.22,
-    "vk": 230.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 Lexar 1TB NM710 PCIe Gen4x4 NVMe",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/241212.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/241212.jpg"
     ],
     "image_too_small": true
   },
@@ -6444,21 +6428,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDL0046": {
-    "ean": "0843367136803",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 488.3,
-    "vk": 926.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21132466.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21132466.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SSDL0048": {
     "ean": "0843367136858",
     "supplier": "BAB",
@@ -7072,20 +7041,6 @@
       "https://images.icecat.biz/img/gallery/40812210_6562122699.jpg",
       "https://images.icecat.biz/img/gallery/40812210_6291219003.jpg",
       "https://images.icecat.biz/img/gallery/40812210_4040161008.jpg"
-    ]
-  },
-  "NETT0019": {
-    "ean": "6935364070199",
-    "supplier": "BAB",
-    "ek": 11.17,
-    "vk": 28.99,
-    "title": "TP-LINK TL-WA850RE 300Mbps Universal",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/15759189_9489094216.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/15759189_9489094216.jpg"
     ]
   },
   "NETT0054": {
