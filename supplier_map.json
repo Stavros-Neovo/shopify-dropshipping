@@ -5518,22 +5518,6 @@
     "title": "ECOFLOW Single Axis Solar Tracker",
     "image_verified": true
   },
-  "RAM4C0109": {
-    "ean": "649528937780",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 182.5,
-    "vk": 357.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Crucial Pro DDR4 - 32GB 3200 DIMM KIT 2x16GB (CP2K16G4DFRA32A)",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/136485.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/136485.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM4G0000": {
     "ean": "4713294236753",
     "supplier": "BAB",
