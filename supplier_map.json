@@ -4066,21 +4066,6 @@
     "title": "Teltonika TRB246 - Gateway",
     "image_verified": true
   },
-  "NETU0151": {
-    "ean": "0810177161929",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 130.29,
-    "vk": 252.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.ecomm.ui.com/products/350070a0-ae43-431b-b052-8e849c3b0a75/bad94693-bc54-4ab4-b060-9b972401941c.png",
-    "images": [
-      "https://cdn.ecomm.ui.com/products/350070a0-ae43-431b-b052-8e849c3b0a75/bad94693-bc54-4ab4-b060-9b972401941c.png"
-    ],
-    "title": "UbiQuiti WiFi 7 Long-Range Access Point",
-    "image_verified": true
-  },
   "PETK0067": {
     "ean": "6975069307244",
     "supplier": "BAB",
@@ -5013,20 +4998,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/43b5a7c8ae2428c95bade330cfb3b647.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/43b5a7c8ae2428c95bade330cfb3b647.jpg"
-    ]
-  },
-  "HDIS0315": {
-    "ean": "8719706022125",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 279.0,
-    "vk": 532.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
     ]
   },
   "HDIS0316": {
