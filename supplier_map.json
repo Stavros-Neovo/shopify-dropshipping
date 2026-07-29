@@ -434,21 +434,6 @@
     ],
     "image_verified": true
   },
-  "PETK0034": {
-    "ean": "6975069304892",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 20.0,
-    "vk": 45.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21297890.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21297890.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "PETK0040": {
     "ean": "6975069304830",
     "supplier": "BAB",
@@ -1107,22 +1092,6 @@
     "title": "NOCO GENIUS2DEU | NOCO 2A Direct-Mount Battery Charger | Genius Battery Chargers",
     "image_verified": true
   },
-  "PETK0003": {
-    "ean": "6973293808896",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 36.03,
-    "vk": 75.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Petkit Trinkbrunnen Eversweet Solo 2",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21133115.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21133115.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "PETK0014": {
     "ean": "6975069300863",
     "supplier": "BAB",
@@ -1185,16 +1154,6 @@
       "https://media.ipcstore.net/img/21329298.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "PETK0072": {
-    "ean": "6973293806052",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.0,
-    "vk": 62.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "PETK0081": {
     "ean": "6975069305691",
@@ -7181,20 +7140,6 @@
     ],
     "image_verified": true
   },
-  "PETK0008": {
-    "ean": "6975069302959",
-    "supplier": "BAB",
-    "ek": 14.49,
-    "vk": 34.99,
-    "title": "Petkit Trinkbrunnen Wasserfilter 5.0 | 5 Stk",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://petkitgermany.com/cdn/shop/files/petkit-filter-unit-rect-768643.jpg?v=1724230814&width=1400",
-    "images": [
-      "https://petkitgermany.com/cdn/shop/files/petkit-filter-unit-rect-768643.jpg?v=1724230814&width=1400"
-    ],
-    "image_verified": true
-  },
   "PETK0009": {
     "ean": "6975069302393",
     "supplier": "BAB",
@@ -7234,36 +7179,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "PETK0035": {
-    "ean": "6973293800258",
-    "supplier": "BAB",
-    "ek": 12.4,
-    "vk": 30.99,
-    "title": "Petkit Katzenklo Pura X Lufterfrischer Nachfüller 4x50 ml",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21297883.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21297883.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "PETK0038": {
-    "ean": "6975069305240",
-    "supplier": "BAB",
-    "ek": 17.9,
-    "vk": 41.99,
-    "title": "Petkit Katzenklo Purobot Ultra Lufterfrischer N60 3 Stk (P9224)",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21297889.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21297889.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "PETK0041": {
     "ean": "6975069303413",
