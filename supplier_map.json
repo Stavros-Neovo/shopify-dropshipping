@@ -109,22 +109,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SUPL0299": {
-    "ean": "5099206059429",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.18,
-    "vk": 49.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "Logitech Keyboard K400 Plus Touch Wireless Black - US Layout",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/653871.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/653871.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPR1054": {
     "ean": "8886419334576",
     "supplier": "BAB",
@@ -4733,20 +4717,6 @@
       "https://images.icecat.biz/img/gallery/c673ed5521c989b2669baf8335ca119a60aec370.jpg"
     ]
   },
-  "SUPY0010": {
-    "ean": "6938818303171",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 103.12,
-    "vk": 212.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/352d78ce07fecead5d0bf9811229585a34fa3180.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/352d78ce07fecead5d0bf9811229585a34fa3180.jpg"
-    ]
-  },
   "SUPY0044": {
     "ean": "6938818319578",
     "supplier": "BAB",
@@ -5069,22 +5039,6 @@
     "image_url": "https://media.ipcstore.net/img/137477.jpg",
     "images": [
       "https://media.ipcstore.net/img/137477.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "HDIW0220": {
-    "ean": "0718037902814",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 247.18,
-    "vk": 472.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Western Digital WD4005FFBX / 4 TB / Red Pro",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/137742.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/137742.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -6028,20 +5982,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/741bf22a9ec8880722c12870ef69d081.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/741bf22a9ec8880722c12870ef69d081.jpg"
-    ],
-    "image_verified": true
-  },
-  "REFT1003": {
-    "ean": "5711603087880",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 543.03,
-    "vk": 1030.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/68e404c591fe401f770630a69756889badee5fb8.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/68e404c591fe401f770630a69756889badee5fb8.jpg"
     ],
     "image_verified": true
   },
