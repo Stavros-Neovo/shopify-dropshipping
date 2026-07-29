@@ -1097,7 +1097,7 @@
     "ean": "1210000619259",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 33.98,
+    "ek": 33.6,
     "vk": 71.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2206,20 +2206,6 @@
       "https://images.icecat.biz/img/gallery/28350878_4868650248.jpg"
     ]
   },
-  "HDXV0006": {
-    "ean": "0023942531975",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 57.35,
-    "vk": 115.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/28350880_3579424424.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/28350880_3579424424.jpg"
-    ],
-    "image_verified": true
-  },
   "HHWB4016": {
     "ean": "3030050190915",
     "supplier": "BAB",
@@ -2936,7 +2922,7 @@
     "ean": "8886419334347",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 66.95,
+    "ek": 66.78,
     "vk": 145.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5404,7 +5390,7 @@
     "ean": "1210000620095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 252.74,
+    "ek": 242.59,
     "vk": 434.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8708,25 +8694,6 @@
       "https://images.icecat.biz/img/gallery/3a419e4e39d624d84c4eabbfa9755c23f44ba52c.jpg",
       "https://images.icecat.biz/img/gallery/f7b9d70e52c0972976791b653590917850d1d453.jpg",
       "https://images.icecat.biz/img/gallery/f0d1c80357df8f748083b30b2a6e911885e1f2ef.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "USBV0008": {
-    "ean": "0023942491729",
-    "supplier": "BAB",
-    "ek": 5.24,
-    "vk": 17.99,
-    "title": "Verbatim Store n Go V3 16GB USB 3.0 grey 49172",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/13837231_1754886896.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/13837231_1754886896.jpg",
-      "https://images.icecat.biz/img/gallery/24603157_9470398979.jpg",
-      "https://images.icecat.biz/img/gallery/13837231_0752274202.jpg",
-      "https://images.icecat.biz/img/gallery/13837231_0227030580.jpg",
-      "https://images.icecat.biz/img/gallery/13837232_0005927167.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de"
   },
