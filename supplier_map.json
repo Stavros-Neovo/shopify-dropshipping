@@ -824,7 +824,7 @@
     "ean": "3800235262214",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.71,
+    "ek": 47.2,
     "vk": 99.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -4971,16 +4971,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HDIS0321": {
-    "ean": "0763649175095",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 975.01,
-    "vk": 1871.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HDIS0322": {
     "ean": "8719706436830",
     "supplier": "BAB",
@@ -5406,7 +5396,7 @@
     "ean": "6975069305523",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 532.88,
+    "ek": 514.61,
     "vk": 922.95,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6646,21 +6636,6 @@
     "image_source": "kosatec_ipcstore",
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "HDIS0299": {
-    "ean": "8719706022088",
-    "supplier": "BAB",
-    "ek": 249.01,
-    "vk": 563.99,
-    "title": "Seagate Exos 7E10 / ST4000NM025B / 4TB / 3,5\"",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/93623411_8307504151.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
   "HHWB1125": {
     "ean": "8700216996297",
     "supplier": "BAB",
@@ -7700,24 +7675,6 @@
       "https://images.icecat.biz/img/gallery/100879027_7246544251.jpg"
     ]
   },
-  "SUPJ1082": {
-    "ean": "5706991019957",
-    "supplier": "BAB",
-    "ek": 33.8,
-    "vk": 74.99,
-    "title": "JABRA Evolve 30 II UC Mono - Headset - On-Ear",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_url": "https://images.icecat.biz/img/gallery/32851347_7054373508.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/32851347_7054373508.jpg",
-      "https://images.icecat.biz/img/gallery/32851347_2472558358.jpg",
-      "https://images.icecat.biz/img/gallery/32851347_8342788817.jpg",
-      "https://images.icecat.biz/img/gallery/32851348_9301309902.jpg"
-    ]
-  },
   "SUPL0127": {
     "ean": "5099206065062",
     "supplier": "BAB",
@@ -8725,19 +8682,6 @@
     "image_verified": true,
     "ek": 119.26,
     "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "RAM5K0015": {
-    "ean": "0740617326130",
-    "title": "Kingston FURY IMPACT SODIMM - DDR5-KIT-64GB-2x32 (KF548S38IBK2-64)",
-    "supplier": "BAB",
-    "image_url": "https://images.icecat.biz/img/gallery/a7269fc172da5fe5669c5e41b1bee6f1.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/a7269fc172da5fe5669c5e41b1bee6f1.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "icecat_mpn",
-    "ek": 645.0,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "RAM5K0044": {
