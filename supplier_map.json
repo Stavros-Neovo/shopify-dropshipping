@@ -3845,23 +3845,6 @@
     ],
     "image_too_small": true
   },
-  "HDXV0011": {
-    "ean": "0023942532231",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 112.46,
-    "vk": 223.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/28350876_1618403442.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/28350876_1618403442.jpg",
-      "https://images.icecat.biz/img/gallery/28350879_0908230425.jpg",
-      "https://images.icecat.biz/img/gallery/34566818_6850909389.jpg",
-      "https://images.icecat.biz/img/gallery/34566818_3683691652.jpg"
-    ]
-  },
   "HHWB5022": {
     "ean": "4211125100674",
     "supplier": "BAB",
@@ -8022,7 +8005,7 @@
   "SUPS0269": {
     "ean": "8806090270062",
     "supplier": "BAB",
-    "ek": 8.42,
+    "ek": 7.82,
     "vk": 23.99,
     "title": "Samsung EO-IC100 - Ohrhörer mit Mikrofon kabelgebunden - USB-C - weiß ",
     "listed_at": "2026-06-14T20:49:22",
@@ -8047,7 +8030,8 @@
       "https://images.icecat.biz/img/gallery/76980257_4853310477.jpg",
       "https://images.icecat.biz/img/gallery/76980257_7905418622.jpg",
       "https://images.icecat.biz/img/gallery/76980257_9809162834.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0272": {
     "ean": "8806095426785",
@@ -8581,7 +8565,7 @@
     ],
     "image_verified": true,
     "image_source": "icecat_mpn",
-    "ek": 8.42,
+    "ek": 7.82,
     "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
