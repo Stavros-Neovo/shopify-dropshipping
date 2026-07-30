@@ -3845,22 +3845,6 @@
     ],
     "image_too_small": true
   },
-  "HHWB5022": {
-    "ean": "4211125100674",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
-    "vk": 231.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Beurer LB 300 Plus - Luftbefeuchter - Black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21296274.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21296274.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "HHWK2094": {
     "ean": "4066529027894",
     "supplier": "BAB",
@@ -4892,16 +4876,6 @@
       "https://images.icecat.biz/img/gallery/0510ff913921243cfc018dc33bd63a6f72863692.jpg",
       "https://images.icecat.biz/img/gallery/b61cd04cab8698685c60f357041ce682265397e4.jpg"
     ]
-  },
-  "HDIS0318": {
-    "ean": "8719706022415",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 299.01,
-    "vk": 619.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "HDIS0322": {
     "ean": "8719706436830",
@@ -7128,16 +7102,6 @@
     "ek": 11.67,
     "vk": 29.99,
     "title": "Petkit Katzenstreu Entferner Magnetisch 2 Stk",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
-  "PETK0043": {
-    "ean": "6975069303536",
-    "supplier": "BAB",
-    "ek": 11.0,
-    "vk": 28.99,
-    "title": "Petkit Katzenstreu Entferner Set Tofu",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
