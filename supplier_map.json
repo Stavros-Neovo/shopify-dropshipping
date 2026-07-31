@@ -3419,22 +3419,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "RAM4G0034": {
-    "ean": "4713294224385",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 89.12,
-    "vk": 198.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "G.Skill AEGIS - DDR4 - 16 GB - PC3200",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/115480.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/115480.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM4G0035": {
     "ean": "4713294224408",
     "supplier": "BAB",
@@ -5399,22 +5383,6 @@
     "image_url": "https://media.ipcstore.net/img/21286936.jpg",
     "images": [
       "https://media.ipcstore.net/img/21286936.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "RAM4G0031": {
-    "ean": "4719692007018",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 173.57,
-    "vk": 342.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill Ripjaws V - DDR4 - 32 GB 2x16 GB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/112769.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/112769.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
