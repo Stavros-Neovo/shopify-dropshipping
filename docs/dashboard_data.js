@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-07-31T23:05:28.046796+00:00",
+  "generated_at": "2026-08-01T03:22:33.542991+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -120,11 +120,11 @@ window.DASHBOARD_DATA = {
       "prev_week_sales": 0,
       "prev_week_revenue": 0.0,
       "prev_week_profit": 0.0,
-      "month_sales": 1,
-      "month_revenue": 29.99,
-      "month_profit": 15.85,
+      "month_sales": 0,
+      "month_revenue": 0.0,
+      "month_profit": 0.0,
       "month_ek": 0.0,
-      "month_ebay_fee": 5.18,
+      "month_ebay_fee": 0.0,
       "month_return_reserve": 0.0,
       "total_sales_30d": 1,
       "total_revenue_30d": 29.99,
@@ -132,12 +132,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 15.85
     },
     "chart_7d": [
-      {
-        "date": "25.07",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "26.07",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "02.07",
+        "date": "01.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "03.07",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "03.05",
+        "date": "01.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "04.05",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "01.08",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1247,24 +1247,13 @@ window.DASHBOARD_DATA = {
         "cash_profit": 4.23
       }
     ],
-    "bab_deadlines": [
-      {
-        "order_id": "26-14881-15484",
-        "date": "2026-07-17",
-        "deadline": "2026-07-31",
-        "days_left": 0,
-        "items": [
-          "Petkit Katzenklo Pura Max & Pura Max 2 L"
-        ],
-        "urgent": true
-      }
-    ],
+    "bab_deadlines": [],
     "tracking_missing": [],
     "tax_reserves": {
-      "ust_month": 4.79,
-      "est_month": 4.75,
-      "gewst_month": 2.38,
-      "total_month": 11.92
+      "ust_month": 0.0,
+      "est_month": 0.0,
+      "gewst_month": 0.0,
+      "total_month": 0.0
     },
     "expected_payout": 24.81
   },
