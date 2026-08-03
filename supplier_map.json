@@ -228,7 +228,7 @@
     "ean": "5706991034318",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 41.72,
+    "ek": 40.7,
     "vk": 86.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -5481,21 +5481,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5C1013": {
-    "ean": "0840006667216",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 439.01,
-    "vk": 883.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21318376.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21318376.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "RAM5G0008": {
     "ean": "4713294231369",
     "supplier": "BAB",
@@ -7969,7 +7954,7 @@
   "SUPS0372": {
     "ean": "8806092978683",
     "supplier": "BAB",
-    "ek": 15.12,
+    "ek": 14.82,
     "vk": 36.99,
     "title": "Samsung Powerbank - 15 Watt - Wireless Charger",
     "listed_at": "2026-06-14T20:49:22",
@@ -7978,7 +7963,8 @@
     "images": [
       "https://images.icecat.biz/img/gallery/95619079_7366132728.jpg"
     ],
-    "image_verified": true
+    "image_verified": true,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS7023": {
     "ean": "3800235261798",
