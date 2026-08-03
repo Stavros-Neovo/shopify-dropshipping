@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-03T12:29:20.313861+00:00",
+  "generated_at": "2026-08-03T15:45:54.814336+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 583,
+    "total_skus": 582,
     "images_verified": 323,
-    "images_missing": 260
+    "images_missing": 259
   },
   "repricing": {
     "last_run": {
@@ -589,7 +589,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "13.06",
         "revenue": 219.98,
-        "profit": 52.06,
+        "profit": 147.98,
         "sales": 1
       },
       {
@@ -927,6 +927,32 @@ window.DASHBOARD_DATA = {
         }
       },
       {
+        "sku": "ANTB0005",
+        "title": "ANTHBOT Battery 5000mAh",
+        "sold": 1,
+        "revenue": 215.99,
+        "profit": 147.98,
+        "cash_profit": 147.98,
+        "vk": 215.99,
+        "ek": 0.0,
+        "calc": {
+          "vk_brutto": 215.99,
+          "ebay_fee": 33.95,
+          "ebay_percent_fee": 33.41,
+          "ebay_fixed_fee": 0.54,
+          "vat": 29.07,
+          "netto_vk": 152.97,
+          "ship": 5.0,
+          "ek": 0.0,
+          "return_reserve": 0.0,
+          "cash_profit_u": 147.98,
+          "cash_profit_t": 147.98,
+          "profit_u": 147.98,
+          "qty": 1,
+          "profit_t": 147.98
+        }
+      },
+      {
         "sku": "HHWM0023",
         "title": "Makita Bohrhammer - schnurlos - 3 Modi",
         "sold": 1,
@@ -950,32 +976,6 @@ window.DASHBOARD_DATA = {
           "profit_u": 103.22,
           "qty": 1,
           "profit_t": 103.22
-        }
-      },
-      {
-        "sku": "ANTB0005",
-        "title": "ANTHBOT Battery 5000mAh",
-        "sold": 1,
-        "revenue": 215.99,
-        "profit": 52.06,
-        "cash_profit": 56.63,
-        "vk": 215.99,
-        "ek": 91.35,
-        "calc": {
-          "vk_brutto": 215.99,
-          "ebay_fee": 33.95,
-          "ebay_percent_fee": 33.41,
-          "ebay_fixed_fee": 0.54,
-          "vat": 29.07,
-          "netto_vk": 152.97,
-          "ship": 5.0,
-          "ek": 91.35,
-          "return_reserve": 4.57,
-          "cash_profit_u": 56.63,
-          "cash_profit_t": 56.63,
-          "profit_u": 52.06,
-          "qty": 1,
-          "profit_t": 52.06
         }
       },
       {
@@ -1201,8 +1201,8 @@ window.DASHBOARD_DATA = {
         "date": "13.06 22:19",
         "title": "ANTHBOT Battery 5000mAh",
         "revenue": 219.98,
-        "profit": 52.06,
-        "cash_profit": 56.63
+        "profit": 147.98,
+        "cash_profit": 147.98
       },
       {
         "date": "12.06 06:07",
