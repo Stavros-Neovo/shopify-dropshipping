@@ -587,7 +587,7 @@
     "ean": "0023942302308",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 25.78,
+    "ek": 25.68,
     "vk": 56.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -2109,7 +2109,7 @@
     "ean": "0023942531944",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 62.02,
+    "ek": 61.92,
     "vk": 125.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2555,7 +2555,7 @@
     "ean": "4713294226624",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 48.42,
+    "ek": 42.17,
     "vk": 106.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2921,7 +2921,7 @@
     "ean": "0023942302278",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.34,
+    "ek": 50.14,
     "vk": 104.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3012,7 +3012,7 @@
     "ean": "0023942531777",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 76.94,
+    "ek": 76.73,
     "vk": 154.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3381,7 +3381,7 @@
     "ean": "4719692013446",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 94.4,
+    "ek": 91.96,
     "vk": 190.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3397,18 +3397,8 @@
     "ean": "4719692013453",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.23,
+    "ek": 82.82,
     "vk": 187.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "RAM4G0035": {
-    "ean": "4713294224408",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 84.25,
-    "vk": 185.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
@@ -3417,7 +3407,7 @@
     "ean": "4713294226648",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 84.75,
+    "ek": 83.94,
     "vk": 169.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3685,16 +3675,6 @@
       "https://images.icecat.biz/img/gallery/8c347a137e97a611640310400929ccfab7633ef5.jpg",
       "https://images.icecat.biz/img/gallery/8296d44b436d5012edfb64c99158d11481464dee.jpg"
     ]
-  },
-  "ANTB0005": {
-    "ean": "8885022190166",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 91.35,
-    "vk": 236.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "CPUI0233": {
     "ean": "5032037282109",
@@ -3997,21 +3977,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM4G0014": {
-    "ean": "4719692015198",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 105.05,
-    "vk": 225.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/103454.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/103454.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "RAM4G0016": {
     "ean": "4719692015457",
     "supplier": "BAB",
@@ -4032,7 +3997,7 @@
     "ean": "4719692007506",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 93.89,
+    "ek": 93.38,
     "vk": 204.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5053,7 +5018,7 @@
     "ean": "4711174725991",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 445.59,
+    "ek": 436.45,
     "vk": 846.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -5358,7 +5323,7 @@
     "ean": "4719692015396",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 207.06,
+    "ek": 200.16,
     "vk": 405.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -5374,7 +5339,7 @@
     "ean": "4713294224415",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 173.46,
+    "ek": 168.49,
     "vk": 349.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6186,16 +6151,6 @@
       "https://images.icecat.biz/img/gallery/bec6075e944739f19a7f1dc7cfcfa99bcda7ef49.jpg"
     ],
     "image_verified": true
-  },
-  "SSDW0034": {
-    "ean": "0718037872353",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 179.53,
-    "vk": 345.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
   },
   "SSDW0036": {
     "ean": "0718037872339",
@@ -8304,7 +8259,7 @@
   "USBS1092": {
     "ean": "0619659178581",
     "supplier": "BAB",
-    "ek": 13.5,
+    "ek": 13.4,
     "vk": 32.99,
     "title": "SanDisk Ultra Dual Drive Luxe USB 3.1 Gen 1 / USB-C 32GB",
     "listed_at": "2026-06-14T20:49:22",
@@ -8314,7 +8269,8 @@
     "images": [
       "https://media.ipcstore.net/img/291785.jpg"
     ],
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "USBS1093": {
     "ean": "0619659125905",
@@ -8349,7 +8305,7 @@
   "USBV0005": {
     "ean": "0023942302292",
     "supplier": "BAB",
-    "ek": 14.87,
+    "ek": 12.08,
     "vk": 36.99,
     "title": "Verbatim Plectra White 128GB USB-C Flash Drive 30229",
     "listed_at": "2026-06-14T20:49:22",
