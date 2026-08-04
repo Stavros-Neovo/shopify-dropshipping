@@ -444,20 +444,6 @@
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "image_verified": false
   },
-  "PETK0059": {
-    "ean": "6973293808971",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.1,
-    "vk": 49.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://dobre.promo/userdata/public/gfx/12849/Zwirek-dla-kota-PetKit-5-in-1-Clump--3L.jpg",
-    "images": [
-      "https://dobre.promo/userdata/public/gfx/12849/Zwirek-dla-kota-PetKit-5-in-1-Clump--3L.jpg"
-    ],
-    "image_verified": true
-  },
   "PPSE0012": {
     "ean": "4895251607698",
     "supplier": "BAB",
@@ -2544,7 +2530,7 @@
     "ean": "4061496516495",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 71.05,
+    "ek": 65.98,
     "vk": 150.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3679,7 +3665,7 @@
     "ean": "6972822120935",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
+    "ek": 101.5,
     "vk": 265.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3693,7 +3679,7 @@
     "ean": "6972822121079",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
+    "ek": 101.5,
     "vk": 255.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3709,7 +3695,7 @@
     "ean": "6972822121000",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 106.58,
+    "ek": 101.5,
     "vk": 255.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4665,7 +4651,7 @@
     "ean": "6972822121178",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 233.45,
+    "ek": 213.15,
     "vk": 485.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4694,7 +4680,7 @@
     "ean": "6972822121314",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 223.3,
+    "ek": 213.15,
     "vk": 386.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6358,7 +6344,7 @@
   "ENAB0004": {
     "ean": "6972822120867",
     "supplier": "BAB",
-    "ek": 8.12,
+    "ek": 7.11,
     "vk": 25.99,
     "title": "Enabot ROLA Mini Cat Teaser",
     "listed_at": "2026-06-14T20:49:22",
@@ -6404,17 +6390,6 @@
     "ek": 17.26,
     "vk": 42.99,
     "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 4 St.",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "HHWB1137": {
-    "ean": "8700216777063",
-    "supplier": "BAB",
-    "ek": 36.54,
-    "vk": 83.99,
-    "title": "Braun Oral-B iO Ultimative Reinigung - Zahnbürstenaufsätze 10 St.",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
@@ -7107,32 +7082,35 @@
   "PVMS0318": {
     "ean": "4043377226815",
     "supplier": "BAB",
-    "ek": 1.62,
+    "ek": 1.22,
     "vk": 10.99,
     "title": "Mounting Systems Stockschraube M10x200 komplett-auf Holz",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "PVMS0340": {
     "ean": "4056835238978",
     "supplier": "BAB",
-    "ek": 0.46,
+    "ek": 0.3,
     "vk": 8.99,
     "title": "Mounting Systems Befestigung Schiene (Hammerkopfschr. & Mutter)",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "PVSEN010": {
     "ean": "4061245025452",
     "supplier": "BAB",
-    "ek": 0.36,
+    "ek": 0.3,
     "vk": 8.99,
     "title": "SOL-50 5,5x22mm Bohrschraube Alu / Alu Edelstahl",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "PVST9004": {
     "ean": "4013614376870",
@@ -7937,7 +7915,7 @@
   "SUPS7023": {
     "ean": "3800235261798",
     "supplier": "BAB",
-    "ek": 10.15,
+    "ek": 9.14,
     "vk": 28.99,
     "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
     "listed_at": "2026-06-14T20:49:22",
