@@ -3461,22 +3461,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SHP0050": {
-    "ean": "8719514404595",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 97.44,
-    "vk": 191.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/f87dbf58e8ce8457bbbd3a511c8000cb0e3f011d.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/f87dbf58e8ce8457bbbd3a511c8000cb0e3f011d.jpg",
-      "https://images.icecat.biz/img/gallery/05a83cc14c1435361700010823a53afe94ad0b6f.jpg",
-      "https://images.icecat.biz/img/gallery/37a6489427d963e49672194ad28bf7aee697d83f.jpg"
-    ]
-  },
   "SSDL0011": {
     "ean": "0843367123155",
     "supplier": "BAB",
@@ -4343,22 +4327,6 @@
       "https://images.icecat.biz/img/gallery/78360442_0383618523.jpg",
       "https://images.icecat.biz/img/gallery/78360442_5838600927.jpg"
     ]
-  },
-  "SUPL0285": {
-    "ean": "0097855119551",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 138.04,
-    "vk": 277.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech ConferenceCam GROUP Expansion Microphones",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/322818.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/322818.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "SUPL0329": {
     "ean": "0097855131171",
