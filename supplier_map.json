@@ -6234,7 +6234,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 250.89,
+    "ek": 246.92,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -7169,7 +7169,7 @@
   "PVST9004": {
     "ean": "4013614376870",
     "supplier": "BAB",
-    "ek": 12.18,
+    "ek": 11.17,
     "vk": 32.99,
     "title": "ABB CT Klemme 200A/5A",
     "listed_at": "2026-06-14T20:49:22",
