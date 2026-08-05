@@ -2077,20 +2077,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HDXV0002": {
-    "ean": "0023942530718",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 57.25,
-    "vk": 115.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/12429213_2018590833.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/12429213_2018590833.jpg"
-    ],
-    "image_verified": true
-  },
   "HDXV0005": {
     "ean": "0023942531944",
     "supplier": "BAB",
@@ -2786,16 +2772,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPR1011": {
-    "ean": "8886419379874",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 61.62,
-    "vk": 123.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPR1013": {
     "ean": "8886419334163",
     "supplier": "BAB",
@@ -2975,22 +2951,6 @@
     "image_url": "https://media.ipcstore.net/img/l/21288613.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/21288613.jpg"
-    ],
-    "image_too_small": true
-  },
-  "HDXT0235": {
-    "ean": "4260557511244",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 88.03,
-    "vk": 173.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Toshiba Canvio Advance 2TB green",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21296890.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21296890.jpg"
     ],
     "image_too_small": true
   },
@@ -3558,16 +3518,6 @@
     ],
     "image_verified": false,
     "image_too_small": true
-  },
-  "SUPR1038": {
-    "ean": "8886419333937",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 75.11,
-    "vk": 160.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "SUPR1051": {
     "ean": "8886419334521",
