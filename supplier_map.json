@@ -4118,22 +4118,6 @@
     ],
     "image_too_small": true
   },
-  "SSDW0070": {
-    "ean": "0718037884639",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 110.61,
-    "vk": 215.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "HDSSD 2.5\" 500 GB WD Blue™ SA510 3D PC SSD 7mm",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/126390.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/126390.jpg"
-    ],
-    "image_too_small": true
-  },
   "SSDW0083": {
     "ean": "0718037894850",
     "supplier": "BAB",
