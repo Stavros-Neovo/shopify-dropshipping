@@ -4330,22 +4330,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0575": {
-    "ean": "5099206121942",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 119.36,
-    "vk": 238.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Combo Touch Keyboard for iPad Air 11",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/137883.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/137883.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL2002": {
     "ean": "0195348192095",
     "supplier": "BAB",
@@ -4956,7 +4940,7 @@
     "ean": "6977728947303",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 537.95,
+    "ek": 527.8,
     "vk": 1192.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6035,27 +6019,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDS0111": {
-    "ean": "8806094215038",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 277.9,
-    "vk": 536.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/101333591_6636461382.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/101333591_6636461382.jpg",
-      "https://images.icecat.biz/img/gallery/59b323cf75817c10a7ac121619644596e344c73d.jpg",
-      "https://images.icecat.biz/img/gallery/101333591_6355005510.jpg",
-      "https://images.icecat.biz/img/gallery/101333591_8223031129.jpg",
-      "https://images.icecat.biz/img/gallery/101333591_2931443333.jpg",
-      "https://images.icecat.biz/img/gallery/101333591_6807635809.jpg",
-      "https://images.icecat.biz/img/gallery/101333591_2468837415.jpg",
-      "https://images.icecat.biz/img/gallery/101333591_2802182781.jpg"
-    ]
-  },
   "SSDS0121": {
     "ean": "8806095575674",
     "supplier": "BAB",
@@ -6188,7 +6151,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 246.92,
+    "ek": 246.48,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -8021,21 +7984,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "USBK1010": {
-    "ean": "4582563850804",
-    "supplier": "BAB",
-    "ek": 7.8,
-    "vk": 22.99,
-    "title": "Kioxia microSD Exceria 32GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21280689.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21280689.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "USBK1022": {
     "ean": "4582563850200",
