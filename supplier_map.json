@@ -94,21 +94,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPR1039": {
-    "ean": "8886419379522",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 33.39,
-    "vk": 70.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21236412.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21236412.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPR1054": {
     "ean": "8886419334576",
     "supplier": "BAB",
@@ -4149,16 +4134,6 @@
       "https://media.ipcstore.net/img/139190.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "SSDW0097": {
-    "ean": "0718037906256",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 122.5,
-    "vk": 250.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "SUPB1047": {
     "ean": "0017817847643",
