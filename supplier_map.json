@@ -480,22 +480,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0458": {
-    "ean": "5099206090828",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 20.1,
-    "vk": 48.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "title": "Logitech Presenter Wireless R500s Black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/125358.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/125358.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPN4011": {
     "ean": "5711157090107",
     "supplier": "BAB",
@@ -5134,22 +5118,6 @@
     "title": "ECOFLOW Single Axis Solar Tracker",
     "image_verified": true
   },
-  "RAM4G0000": {
-    "ean": "4713294236753",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 503.95,
-    "vk": 959.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR5 32GB PC 6000 CL28 G.Skill KIT (2x16GB) TR5NS NEO RGB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21287256.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21287256.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM4G0004": {
     "ean": "4719692013460",
     "supplier": "BAB",
@@ -7242,22 +7210,6 @@
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0233": {
-    "ean": "5099206066199",
-    "supplier": "BAB",
-    "ek": 8.26,
-    "vk": 24.99,
-    "title": "Logitech Mouse M220 Silent Wireless Black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/691497.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/691497.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
@@ -7793,7 +7745,7 @@
   "SUPS7023": {
     "ean": "3800235261798",
     "supplier": "BAB",
-    "ek": 9.14,
+    "ek": 8.12,
     "vk": 28.99,
     "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
     "listed_at": "2026-06-14T20:49:22",
