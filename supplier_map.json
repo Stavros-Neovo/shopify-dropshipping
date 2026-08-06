@@ -2952,20 +2952,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HHWB1049": {
-    "ean": "4210201445258",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 80.19,
-    "vk": 161.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/101334372_6457977944.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/101334372_6457977944.jpg"
-    ],
-    "image_verified": true
-  },
   "HHWB1050": {
     "ean": "4210201445197",
     "supplier": "BAB",
@@ -5469,22 +5455,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Lexar Ares DDR5 2x16GB 6800 Heatsink",
     "image_verified": false
-  },
-  "RAM5L0009": {
-    "ean": "843367136094",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 347.81,
-    "vk": 663.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Lexar DDR5-6000 DIMM 2x16GB THOR Gaming",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21133370.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21133370.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "REFL0003": {
     "ean": "7435110112153",
