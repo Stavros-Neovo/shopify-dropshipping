@@ -2678,21 +2678,6 @@
     ],
     "image_too_small": true
   },
-  "SUPJ1004": {
-    "ean": "5706991014839",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 64.45,
-    "vk": 131.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "JABRA SPEAK 510 MS",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/15974606_1530969513.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/15974606_1530969513.jpg"
-    ]
-  },
   "SUPL0266": {
     "ean": "5099206085855",
     "supplier": "BAB",
@@ -4197,7 +4182,7 @@
     "ean": "0195348192095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 111.65,
+    "ek": 105.56,
     "vk": 217.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4216,7 +4201,7 @@
     "ean": "0191999788403",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 128.91,
+    "ek": 118.76,
     "vk": 250.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
