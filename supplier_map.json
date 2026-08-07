@@ -7917,22 +7917,6 @@
     ],
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "USBV0018": {
-    "ean": "0023942302117",
-    "supplier": "BAB",
-    "ek": 7.97,
-    "vk": 22.99,
-    "title": "Verbatim V200 Metal USB 3.2 64GB Aluminium",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21306974.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21306974.jpg"
-    ],
-    "image_source": "kosatec_ipcstore",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
   "USBV0020": {
     "ean": "0023942991045",
     "supplier": "BAB",
