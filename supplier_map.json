@@ -3626,22 +3626,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "HDIW0233": {
-    "ean": "0718037905730",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.19,
-    "vk": 288.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Western Digital WD34PURZ / 3 TB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/143289.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/143289.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "HDXT0228": {
     "ean": "4260557511220",
     "supplier": "BAB",
