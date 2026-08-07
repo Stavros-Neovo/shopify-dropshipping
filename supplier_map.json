@@ -5235,22 +5235,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5G0008": {
-    "ean": "4713294231369",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 388.75,
-    "vk": 743.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR5 32GB PC 6400 CL32 KIT (2x16GB) 32-TZ5RK",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/129935.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/129935.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5G0018": {
     "ean": "4713294234575",
     "supplier": "BAB",
@@ -6920,21 +6904,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "SUPB1045": {
-    "ean": "0017817846141",
-    "supplier": "BAB",
-    "ek": 225.33,
-    "vk": 431.99,
-    "title": "Bose QuietComfort Ultra weiß",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/288919.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/288919.jpg"
-    ],
-    "image_too_small": true
   },
   "SUPB1062": {
     "ean": "0017817859516",
