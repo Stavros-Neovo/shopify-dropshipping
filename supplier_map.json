@@ -600,21 +600,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPR1059": {
-    "ean": "8887910061091",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 43.94,
-    "vk": 95.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21309307.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21309307.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPG4006": {
     "ean": "6947273705093",
     "supplier": "BAB",
@@ -1664,21 +1649,6 @@
     "image_url": "https://media.ipcstore.net/img/l/103252.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/103252.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "SUPL0301": {
-    "ean": "5099206077461",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 29.13,
-    "vk": 64.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/115090.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/115090.jpg"
     ],
     "image_verified": false,
     "image_too_small": true
@@ -5209,17 +5179,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "RAM4L0041": {
-    "ean": "843367140671",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 354.11,
-    "vk": 675.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Lexar THOR 2.0 DDR5 6000 CL38 1.3V Memory with heatsink and RGB lighting, Black Color, Dual pack",
-    "image_verified": false
-  },
   "RAM5C0025": {
     "ean": "0840440492573",
     "supplier": "BAB",
@@ -6894,16 +6853,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/4af96bbe934ea58d79b479053fb168207e8268c5.jpg"
     ]
-  },
-  "SSDK1017": {
-    "ean": "4582563857889",
-    "supplier": "BAB",
-    "ek": 190.37,
-    "vk": 365.99,
-    "title": "SSD M.2 (2280) Kioxia Exceria Plus G3 NVMe 2TB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
   },
   "SUPB1062": {
     "ean": "0017817859516",
