@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-09T10:38:48.364316+00:00",
+  "generated_at": "2026-08-09T11:33:18.627923+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -111,25 +111,25 @@ window.DASHBOARD_DATA = {
   },
   "orders": {
     "stats": {
-      "today_sales": 0,
-      "today_revenue": 0.0,
-      "today_profit": 0.0,
-      "week_sales": 0,
-      "week_revenue": 0.0,
-      "week_profit": 0.0,
+      "today_sales": 1,
+      "today_revenue": 434.99,
+      "today_profit": 48.82,
+      "week_sales": 1,
+      "week_revenue": 434.99,
+      "week_profit": 48.82,
       "prev_week_sales": 0,
       "prev_week_revenue": 0.0,
       "prev_week_profit": 0.0,
-      "month_sales": 0,
-      "month_revenue": 0.0,
-      "month_profit": 0.0,
-      "month_ek": 0.0,
-      "month_ebay_fee": 0.0,
-      "month_return_reserve": 0.0,
-      "total_sales_30d": 1,
-      "total_revenue_30d": 29.99,
-      "total_profit_30d": 15.85,
-      "total_cash_profit_30d": 15.85
+      "month_sales": 1,
+      "month_revenue": 434.99,
+      "month_profit": 48.82,
+      "month_ek": 242.59,
+      "month_ebay_fee": 67.83,
+      "month_return_reserve": 12.13,
+      "total_sales_30d": 2,
+      "total_revenue_30d": 464.98,
+      "total_profit_30d": 64.67,
+      "total_cash_profit_30d": 76.8
     },
     "chart_7d": [
       {
@@ -170,9 +170,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
+        "revenue": 434.99,
+        "profit": 48.82,
+        "sales": 1
       }
     ],
     "chart_30d": [
@@ -352,9 +352,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
+        "revenue": 434.99,
+        "profit": 48.82,
+        "sales": 1
       }
     ],
     "chart_90d": [
@@ -894,9 +894,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
+        "revenue": 434.99,
+        "profit": 48.82,
+        "sales": 1
       }
     ],
     "top_products": [
@@ -976,6 +976,32 @@ window.DASHBOARD_DATA = {
           "profit_u": 103.22,
           "qty": 1,
           "profit_t": 103.22
+        }
+      },
+      {
+        "sku": "NOCO0017",
+        "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boost Jump Starters",
+        "sold": 1,
+        "revenue": 434.99,
+        "profit": 48.82,
+        "cash_profit": 60.95,
+        "vk": 434.99,
+        "ek": 242.59,
+        "calc": {
+          "vk_brutto": 434.99,
+          "ebay_fee": 67.83,
+          "ebay_percent_fee": 67.29,
+          "ebay_fixed_fee": 0.54,
+          "vat": 58.62,
+          "netto_vk": 308.54,
+          "ship": 5.0,
+          "ek": 242.59,
+          "return_reserve": 12.13,
+          "cash_profit_u": 60.95,
+          "cash_profit_t": 60.95,
+          "profit_u": 48.82,
+          "qty": 1,
+          "profit_t": 48.82
         }
       },
       {
@@ -1133,35 +1159,16 @@ window.DASHBOARD_DATA = {
           "qty": 1,
           "profit_t": 13.01
         }
-      },
-      {
-        "sku": "SUPD1027",
-        "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
-        "sold": 1,
-        "revenue": 19.99,
-        "profit": 4.0,
-        "cash_profit": 4.23,
-        "vk": 19.99,
-        "ek": 4.52,
-        "calc": {
-          "vk_brutto": 19.99,
-          "ebay_fee": 3.63,
-          "ebay_percent_fee": 3.09,
-          "ebay_fixed_fee": 0.54,
-          "vat": 2.61,
-          "netto_vk": 13.75,
-          "ship": 5.0,
-          "ek": 4.52,
-          "return_reserve": 0.23,
-          "cash_profit_u": 4.23,
-          "cash_profit_t": 4.23,
-          "profit_u": 4.0,
-          "qty": 1,
-          "profit_t": 4.0
-        }
       }
     ],
     "recent_sales": [
+      {
+        "date": "09.08 10:46",
+        "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boos",
+        "revenue": 434.99,
+        "profit": 48.82,
+        "cash_profit": 60.95
+      },
       {
         "date": "17.07 15:00",
         "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrisc",
@@ -1247,15 +1254,35 @@ window.DASHBOARD_DATA = {
         "cash_profit": 4.23
       }
     ],
-    "bab_deadlines": [],
-    "tracking_missing": [],
+    "bab_deadlines": [
+      {
+        "order_id": "16-14996-91962",
+        "date": "2026-08-09",
+        "deadline": "2026-08-23",
+        "days_left": 14,
+        "items": [
+          "NOCO GBX155 | Boost X 4250 A | Jump Star"
+        ],
+        "urgent": false
+      }
+    ],
+    "tracking_missing": [
+      {
+        "order_id": "16-14996-91962",
+        "date": "2026-08-09",
+        "items": [
+          "NOCO GBX155 | Boost X 4250 A | Jump Star"
+        ],
+        "buyer": "gotrans_0"
+      }
+    ],
     "tax_reserves": {
-      "ust_month": 0.0,
-      "est_month": 0.0,
-      "gewst_month": 0.0,
-      "total_month": 0.0
+      "ust_month": 69.45,
+      "est_month": 14.65,
+      "gewst_month": 7.32,
+      "total_month": 91.42
     },
-    "expected_payout": 24.81
+    "expected_payout": 391.97
   },
   "pending_orders": {},
   "flagged_orders": {}
