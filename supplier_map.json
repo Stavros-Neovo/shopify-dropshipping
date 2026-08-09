@@ -1622,22 +1622,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0187": {
-    "ean": "5099206066823",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.4,
-    "vk": 99.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Desktop MK850 Performance Wireless Black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/223009.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/223009.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0283": {
     "ean": "5099206053304",
     "supplier": "BAB",
