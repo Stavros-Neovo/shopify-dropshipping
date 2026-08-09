@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-09T16:40:03.680025+00:00",
+  "generated_at": "2026-08-09T17:34:51.673264+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -111,25 +111,25 @@ window.DASHBOARD_DATA = {
   },
   "orders": {
     "stats": {
-      "today_sales": 1,
-      "today_revenue": 434.99,
-      "today_profit": 48.82,
-      "week_sales": 1,
-      "week_revenue": 434.99,
-      "week_profit": 48.82,
+      "today_sales": 2,
+      "today_revenue": 446.98,
+      "today_profit": 47.14,
+      "week_sales": 2,
+      "week_revenue": 446.98,
+      "week_profit": 47.14,
       "prev_week_sales": 0,
       "prev_week_revenue": 0.0,
       "prev_week_profit": 0.0,
-      "month_sales": 1,
-      "month_revenue": 434.99,
-      "month_profit": 48.82,
-      "month_ek": 242.59,
-      "month_ebay_fee": 67.83,
-      "month_return_reserve": 12.13,
-      "total_sales_30d": 2,
-      "total_revenue_30d": 464.98,
-      "total_profit_30d": 64.67,
-      "total_cash_profit_30d": 76.8
+      "month_sales": 2,
+      "month_revenue": 446.98,
+      "month_profit": 47.14,
+      "month_ek": 247.11,
+      "month_ebay_fee": 70.22,
+      "month_return_reserve": 12.36,
+      "total_sales_30d": 3,
+      "total_revenue_30d": 476.97,
+      "total_profit_30d": 62.99,
+      "total_cash_profit_30d": 75.35
     },
     "chart_7d": [
       {
@@ -170,9 +170,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.08",
-        "revenue": 434.99,
-        "profit": 48.82,
-        "sales": 1
+        "revenue": 446.98,
+        "profit": 47.14,
+        "sales": 2
       }
     ],
     "chart_30d": [
@@ -352,9 +352,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.08",
-        "revenue": 434.99,
-        "profit": 48.82,
-        "sales": 1
+        "revenue": 446.98,
+        "profit": 47.14,
+        "sales": 2
       }
     ],
     "chart_90d": [
@@ -894,9 +894,9 @@ window.DASHBOARD_DATA = {
       },
       {
         "date": "09.08",
-        "revenue": 434.99,
-        "profit": 48.82,
-        "sales": 1
+        "revenue": 446.98,
+        "profit": 47.14,
+        "sales": 2
       }
     ],
     "top_products": [
@@ -1163,6 +1163,13 @@ window.DASHBOARD_DATA = {
     ],
     "recent_sales": [
       {
+        "date": "09.08 16:48",
+        "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebu",
+        "revenue": 11.99,
+        "profit": -1.68,
+        "cash_profit": -1.45
+      },
+      {
         "date": "09.08 10:46",
         "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boos",
         "revenue": 434.99,
@@ -1256,6 +1263,16 @@ window.DASHBOARD_DATA = {
     ],
     "bab_deadlines": [
       {
+        "order_id": "01-15026-16562",
+        "date": "2026-08-09",
+        "deadline": "2026-08-23",
+        "days_left": 14,
+        "items": [
+          "Dell MS116 - Maus - optisch - 2 Tasten -"
+        ],
+        "urgent": false
+      },
+      {
         "order_id": "16-14996-91962",
         "date": "2026-08-09",
         "deadline": "2026-08-23",
@@ -1268,6 +1285,14 @@ window.DASHBOARD_DATA = {
     ],
     "tracking_missing": [
       {
+        "order_id": "01-15026-16562",
+        "date": "2026-08-09",
+        "items": [
+          "Dell MS116 - Maus - optisch - 2 Tasten -"
+        ],
+        "buyer": "julian_alexandre_gomez"
+      },
+      {
         "order_id": "16-14996-91962",
         "date": "2026-08-09",
         "items": [
@@ -1277,12 +1302,12 @@ window.DASHBOARD_DATA = {
       }
     ],
     "tax_reserves": {
-      "ust_month": 69.45,
-      "est_month": 14.65,
-      "gewst_month": 7.32,
-      "total_month": 91.42
+      "ust_month": 71.37,
+      "est_month": 14.14,
+      "gewst_month": 7.07,
+      "total_month": 92.58
     },
-    "expected_payout": 391.97
+    "expected_payout": 401.57
   },
   "pending_orders": {},
   "flagged_orders": {}
