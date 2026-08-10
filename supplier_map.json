@@ -3317,22 +3317,6 @@
     ],
     "image_too_small": true
   },
-  "SSDW0101": {
-    "ean": "0718037906287",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 87.88,
-    "vk": 173.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "HDSSD M.2 500GB WD Blue™ SN5100 NVMe",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/142314.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/142314.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPC2015": {
     "ean": "850070419307",
     "supplier": "BAB",
@@ -4711,17 +4695,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "HHWM4008": {
-    "ean": "4006508223923",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 329.88,
-    "vk": 676.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Melitta Latticia OT - Schwarz",
-    "image_verified": false
-  },
   "HHWM5000": {
     "ean": "6977728947303",
     "supplier": "BAB",
@@ -4938,22 +4911,6 @@
       "https://media.cdn.kaufland.de/product-images/2048x2048/ec97f3a63db9bfb03c2a9222f0a7aded.webp",
       "https://media.cdn.kaufland.de/product-images/2048x2048/aba2011f33d8575ca59186b66b77131f.webp"
     ]
-  },
-  "PETK0028": {
-    "ean": "6975069305028",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 314.93,
-    "vk": 600.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Petkit Katzenklo Pura Max 2 Premium",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21297880.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21297880.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "PETK0030": {
     "ean": "6975069305523",
@@ -5655,7 +5612,7 @@
     "ean": "4582761161115",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 183.87,
+    "ek": 183.55,
     "vk": 390.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
