@@ -7580,22 +7580,6 @@
     "image_too_small": true,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "USBS0011": {
-    "ean": "0619659136703",
-    "supplier": "BAB",
-    "ek": 11.49,
-    "vk": 29.99,
-    "title": "SanDisk Ultra Flair USB 3.0 64GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/271631.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/271631.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "USBS0013": {
     "ean": "0619659154189",
     "supplier": "BAB",
