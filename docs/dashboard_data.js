@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-09T23:34:46.063778+00:00",
+  "generated_at": "2026-08-10T02:06:04.143579+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -111,15 +111,15 @@ window.DASHBOARD_DATA = {
   },
   "orders": {
     "stats": {
-      "today_sales": 2,
-      "today_revenue": 446.98,
-      "today_profit": 47.14,
-      "week_sales": 2,
-      "week_revenue": 446.98,
-      "week_profit": 47.14,
-      "prev_week_sales": 0,
-      "prev_week_revenue": 0.0,
-      "prev_week_profit": 0.0,
+      "today_sales": 0,
+      "today_revenue": 0.0,
+      "today_profit": 0.0,
+      "week_sales": 0,
+      "week_revenue": 0.0,
+      "week_profit": 0.0,
+      "prev_week_sales": 2,
+      "prev_week_revenue": 446.98,
+      "prev_week_profit": 47.14,
       "month_sales": 2,
       "month_revenue": 446.98,
       "month_profit": 47.14,
@@ -132,12 +132,6 @@ window.DASHBOARD_DATA = {
       "total_cash_profit_30d": 75.35
     },
     "chart_7d": [
-      {
-        "date": "03.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "04.08",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 446.98,
         "profit": 47.14,
         "sales": 2
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "11.07",
+        "date": "10.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "12.07",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 446.98,
         "profit": 47.14,
         "sales": 2
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "12.05",
+        "date": "10.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "13.05",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 446.98,
         "profit": 47.14,
         "sales": 2
+      },
+      {
+        "date": "10.08",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1266,7 +1266,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-15026-16562",
         "date": "2026-08-09",
         "deadline": "2026-08-23",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1276,7 +1276,7 @@ window.DASHBOARD_DATA = {
         "order_id": "16-14996-91962",
         "date": "2026-08-09",
         "deadline": "2026-08-23",
-        "days_left": 14,
+        "days_left": 13,
         "items": [
           "NOCO GBX155 | Boost X 4250 A | Jump Star"
         ],
