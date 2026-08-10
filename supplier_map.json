@@ -4578,16 +4578,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HDIW0246": {
-    "ean": "0718037905464",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 857.15,
-    "vk": 1624.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "HHWB1054": {
     "ean": "4210201435457",
     "supplier": "BAB",
