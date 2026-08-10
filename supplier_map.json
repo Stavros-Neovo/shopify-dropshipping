@@ -510,7 +510,7 @@
     "ean": "8806097735618",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 20.2,
+    "ek": 19.79,
     "vk": 46.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -1751,7 +1751,7 @@
     "ean": "8806097918448",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 25.38,
+    "ek": 24.87,
     "vk": 55.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3895,22 +3895,6 @@
     "image_url": "https://media.ipcstore.net/img/21133036.jpg",
     "images": [
       "https://media.ipcstore.net/img/21133036.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "SSDK1033": {
-    "ean": "4582761161504",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 137.66,
-    "vk": 267.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD Kioxia Exceria G3 1TB (PCIe5.0/NVMe)",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21133030.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21133030.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -7401,7 +7385,7 @@
   "SUPS0269": {
     "ean": "8806090270062",
     "supplier": "BAB",
-    "ek": 7.82,
+    "ek": 7.61,
     "vk": 23.99,
     "title": "Samsung EO-IC100 - Ohrhörer mit Mikrofon kabelgebunden - USB-C - weiß ",
     "listed_at": "2026-06-14T20:49:22",
@@ -7935,7 +7919,7 @@
     ],
     "image_verified": true,
     "image_source": "icecat_mpn",
-    "ek": 7.82,
+    "ek": 7.61,
     "supplier_email": "SSchulze@bab-distribution.de"
   }
 }
