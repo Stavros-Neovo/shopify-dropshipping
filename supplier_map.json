@@ -1688,7 +1688,7 @@
     "ean": "8886419378396",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 26.9,
+    "ek": 26.69,
     "vk": 60.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2689,21 +2689,6 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
-  },
-  "SUPR1052": {
-    "ean": "8886419351450",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 66.79,
-    "vk": 133.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21319876.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21319876.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "SUPR1053": {
     "ean": "8886419334347",
@@ -5736,7 +5721,7 @@
     "ean": "0017817859585",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 274.05,
+    "ek": 268.98,
     "vk": 552.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -5986,17 +5971,6 @@
     ],
     "image_verified": true,
     "image_source": "kosatec_ipcstore",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "HHWB1125": {
-    "ean": "8700216996297",
-    "supplier": "BAB",
-    "ek": 206.05,
-    "vk": 410.99,
-    "title": "Braun Oral-B iO Series 10 Lunar",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWB1127": {
