@@ -94,21 +94,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPR1054": {
-    "ean": "8886419334576",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 52.29,
-    "vk": 105.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/140175.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/140175.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPJ0183": {
     "ean": "5706991034530",
     "supplier": "BAB",
@@ -1923,24 +1908,6 @@
       "https://images.icecat.biz/img/gallery/d3598d1fe8b6a4ccb10cee514334eab0029bb6dd.jpg"
     ]
   },
-  "SUPJ0168": {
-    "ean": "5706991023213",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 278.11,
-    "vk": 531.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "JABRA Evolve2 85 UC Stereo - Headset - Bluetooth - kabellos, kabelgebunden - 3,5 mm Stecker",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/78360438_4385378489.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/78360438_4385378489.jpg",
-      "https://images.icecat.biz/img/gallery/78360438_0949971212.jpg",
-      "https://images.icecat.biz/img/gallery/78360438_8083128349.jpg",
-      "https://images.icecat.biz/img/gallery/78360509_6082176017.jpg"
-    ]
-  },
   "SUPJ1069": {
     "ean": "5706991023190",
     "supplier": "BAB",
@@ -1963,7 +1930,7 @@
     "ean": "6975849061229",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.9,
+    "ek": 50.75,
     "vk": 150.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4670,21 +4637,6 @@
     ],
     "image_too_small": true
   },
-  "NASS0085": {
-    "ean": "4711174725991",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 436.45,
-    "vk": 846.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/141796.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/141796.jpg"
-    ],
-    "image_too_small": true
-  },
   "NETT0162": {
     "ean": "8885020621488",
     "supplier": "BAB",
@@ -6235,20 +6187,6 @@
       "https://images.icecat.biz/img/gallery/797fff9163db81b3973ab309e69fdd23.jpg",
       "https://images.icecat.biz/img/gallery/3b2306bd03407ecb1618c0cdf0fda03f.jpg"
     ]
-  },
-  "NETT1004": {
-    "ean": "4779051840175",
-    "supplier": "BAB",
-    "ek": 187.78,
-    "vk": 361.99,
-    "title": "Teltonika RUT956 - Wireless Router",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://static.wixstatic.com/media/814ec4_301620fa362641499b60078954ade8fd~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-19.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_301620fa362641499b60078954ade8fd~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-19.jpg"
-    ],
-    "image_verified": true
   },
   "NETT1024": {
     "ean": "4779027312415",
