@@ -7122,7 +7122,7 @@
   "SUPS0254": {
     "ean": "8806094912081",
     "supplier": "BAB",
-    "ek": 6.8,
+    "ek": 6.6,
     "vk": 20.99,
     "title": "Samsung Schnellladegerät -  ohne Datenkabel - USB-C 25W - weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -7134,7 +7134,8 @@
       "https://images.icecat.biz/img/gallery/bb02897ba1c2736b89e39e6d3cd04513.jpg",
       "https://images.icecat.biz/img/gallery/e76fccfb9802609f6126f535e34cdd54.jpg",
       "https://images.icecat.biz/img/gallery/06b65b93489907861fe2beb535329ba0.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0256": {
     "ean": "8806094911985",
@@ -7160,7 +7161,7 @@
   "SUPS0259": {
     "ean": "8801643979379",
     "supplier": "BAB",
-    "ek": 9.24,
+    "ek": 9.14,
     "vk": 24.99,
     "title": "Samsung Fast Charging Wall Charger EP-TA800 - Netzteil - Ultra Fast Charge  - USB-C 25W - weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -7174,7 +7175,8 @@
       "https://images.icecat.biz/img/gallery/71845229_3188402898.jpg",
       "https://images.icecat.biz/img/gallery/71845229_1134645587.jpg",
       "https://images.icecat.biz/img/gallery/71845229_4445516595.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0261": {
     "ean": "8806092709874",
@@ -7219,7 +7221,7 @@
   "SUPS0263": {
     "ean": "8806092709904",
     "supplier": "BAB",
-    "ek": 6.8,
+    "ek": 6.6,
     "vk": 20.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -7233,12 +7235,13 @@
       "https://images.icecat.biz/img/gallery/f8a129a8df5c2d361d30bbc5c4bc5ba593fa1358.jpg",
       "https://images.icecat.biz/img/gallery/9a077eddbc35318e5399e9f0c75a4e904f34a3bc.jpg",
       "https://images.icecat.biz/img/gallery/1501f06e23ab3b8cea6cbecf66cca2b99e40e28a.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0264": {
     "ean": "8806092709843",
     "supplier": "BAB",
-    "ek": 7.0,
+    "ek": 6.6,
     "vk": 20.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - schwarz",
     "listed_at": "2026-06-14T20:49:22",
@@ -7250,7 +7253,8 @@
       "https://images.icecat.biz/img/gallery/95546582_7794563741.jpg",
       "https://images.icecat.biz/img/gallery/95546582_4149181325.jpg",
       "https://images.icecat.biz/img/gallery/95546567_9020050013.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPS0267": {
     "ean": "8806094768831",
