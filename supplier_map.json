@@ -769,21 +769,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "NETT1071": {
-    "ean": "4779051840700",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 45.68,
-    "vk": 93.99,
-    "listed_at": "2026-06-14T23:57:46.549786+00:00",
-    "updated_at": "2026-06-14T23:57:46.549786+00:00",
-    "image_url": "https://static.wixstatic.com/media/814ec4_cbe4cb80caf54abf95176021f3fc959d~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-429-en.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_cbe4cb80caf54abf95176021f3fc959d~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-429-en.jpg"
-    ],
-    "title": "Teltonika RUT140 - Wireless Router",
-    "image_verified": true
-  },
   "NETT1072": {
     "ean": "4779051840724",
     "supplier": "BAB",
@@ -3588,26 +3573,6 @@
     ],
     "image_verified": true
   },
-  "NETT0167": {
-    "ean": "8885020622416",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 116.73,
-    "vk": 227.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/d937a125675398a504bbab3db258174706792942.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/d937a125675398a504bbab3db258174706792942.jpg",
-      "https://images.icecat.biz/img/gallery/6c62f87e3104db57e6982d7f7347f749e961957e.jpg",
-      "https://images.icecat.biz/img/gallery/0d2d482d23053b7d38fd61a55988265583f472e0.jpg",
-      "https://images.icecat.biz/img/gallery/5185d636c0a68bec387e4b18900438c108dbb1d9.jpg",
-      "https://images.icecat.biz/img/gallery/37eda46a5209d0249453425da454e6a463c015f6.jpg",
-      "https://images.icecat.biz/img/gallery/a50d37dbda6bd94a100450309c350d5cca9e87a6.jpg",
-      "https://images.icecat.biz/img/gallery/3f2b576c994e6cf6150e52ec9624ffe8e0e40327.jpg"
-    ]
-  },
   "NETT1083": {
     "ean": "4779051841844",
     "supplier": "BAB",
@@ -6347,17 +6312,6 @@
       "https://media.ipcstore.net/img/l/633617.jpg"
     ],
     "image_too_small": true
-  },
-  "NETU0184": {
-    "ean": "0810177162667",
-    "supplier": "BAB",
-    "ek": 161.7,
-    "vk": 312.99,
-    "title": "Ubiquiti UniFi UNAS 2 - NAS-Server - RAM 4 GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NOCO0018": {
     "ean": "1210000620057",
