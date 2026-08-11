@@ -2485,21 +2485,6 @@
     ],
     "image_too_small": true
   },
-  "SSDK1002": {
-    "ean": "4582563851856",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 63.2,
-    "vk": 142.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/234274.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/234274.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPA1046": {
     "ean": "0840414681804",
     "supplier": "BAB",
@@ -6327,16 +6312,6 @@
       "https://no.co/media/catalog/product/g/b/gbc101.png"
     ],
     "image_verified": true
-  },
-  "PETK0009": {
-    "ean": "6975069302393",
-    "supplier": "BAB",
-    "ek": 5.08,
-    "vk": 17.99,
-    "title": "Petkit Trinkbrunnen Reinigungsset",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
   },
   "PETK0023": {
     "ean": "6975069303017",
