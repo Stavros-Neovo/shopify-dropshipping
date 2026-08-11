@@ -3850,22 +3850,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDL0012": {
-    "ean": "0843367123162",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 114.92,
-    "vk": 223.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SSD M.2 Lexar NM620 1TB NVME PCIe Gen. 3",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/241209.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/241209.jpg"
-    ],
-    "image_too_small": true
-  },
   "SSDL0047": {
     "ean": "0843367136841",
     "supplier": "BAB",
