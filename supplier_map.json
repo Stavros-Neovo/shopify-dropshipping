@@ -1669,16 +1669,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SUPR1037": {
-    "ean": "8886419379362",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 34.0,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPR1040": {
     "ean": "8887910060421",
     "supplier": "BAB",
@@ -4034,29 +4024,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "title": "SteelSeries Arctis Nova 7X - Headset - ohrumschließend - Black",
     "image_verified": false
-  },
-  "SUPV0034": {
-    "ean": "0023942495918",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 125.86,
-    "vk": 246.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/3dbb717e40a28fde279605a1579ce9493312445c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/3dbb717e40a28fde279605a1579ce9493312445c.jpg",
-      "https://images.icecat.biz/img/gallery/c9616be4c2d98c6e1d1ad3662c8aee81bee6a43c.jpg",
-      "https://images.icecat.biz/img/gallery/c697a648966b580202b9e8b62a4c81f6.jpg",
-      "https://images.icecat.biz/img/gallery/2fea5f2e1e98a7bad4cab02e42916c777d61e246.jpg",
-      "https://images.icecat.biz/img/gallery/fcf3fb705ff4258cb6b701bb3b67bb32.jpg",
-      "https://images.icecat.biz/img/gallery/4d67708b36b8f3a4eda12bd4266079d7.jpg",
-      "https://images.icecat.biz/img/gallery/6dcb49b5d51e74cf0ba658da7b649727.jpg",
-      "https://images.icecat.biz/img/gallery/1b323a2e33d3c0a112eb435f9d1d4ee4.jpg",
-      "https://images.icecat.biz/img/gallery/a5585dfb98c104fc5b7c76f1cc07b2e9.jpg",
-      "https://images.icecat.biz/img/gallery/e55ecc821626a2de9eb29fe0667f3c88.jpg"
-    ]
   },
   "SUPV0036": {
     "ean": "0023942495925",
@@ -6640,7 +6607,7 @@
   "SUPL0127": {
     "ean": "5099206065062",
     "supplier": "BAB",
-    "ek": 5.43,
+    "ek": 5.38,
     "vk": 18.99,
     "title": "Logitech Mouse B170 Optical Wireless Black",
     "listed_at": "2026-06-14T20:49:22",
@@ -6873,22 +6840,6 @@
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false
-  },
-  "SUPR1009": {
-    "ean": "8886419333265",
-    "supplier": "BAB",
-    "ek": 13.62,
-    "vk": 35.99,
-    "title": "Razer DeathAdder Essential - Gaming Maus - black",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/125612.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/125612.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
   },
   "SUPR1027": {
     "ean": "8886419333326",
