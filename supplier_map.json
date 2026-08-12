@@ -1762,20 +1762,6 @@
     ],
     "image_verified": true
   },
-  "SUPV0022": {
-    "ean": "0023942321514",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 27.61,
-    "vk": 62.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/bc857fb86678aae596f1909f6ae7a7e963c1865f.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/bc857fb86678aae596f1909f6ae7a7e963c1865f.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPV0053": {
     "ean": "0023942322177",
     "supplier": "BAB",
@@ -2489,7 +2475,7 @@
     "ean": "0840414681804",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 68.51,
+    "ek": 66.99,
     "vk": 139.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6202,22 +6188,6 @@
     "image_url": "https://media.ipcstore.net/img/130598.jpg",
     "images": [
       "https://media.ipcstore.net/img/130598.jpg"
-    ],
-    "image_source": "kosatec_ipcstore",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "NETU0110": {
-    "ean": "0810084691656",
-    "supplier": "BAB",
-    "ek": 219.7,
-    "vk": 421.99,
-    "title": "UbiQuiti UniFi Access Reader G2 Professional - UA-G2-PRO",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/672413.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/672413.jpg"
     ],
     "image_source": "kosatec_ipcstore",
     "supplier_email": "SSchulze@bab-distribution.de"
