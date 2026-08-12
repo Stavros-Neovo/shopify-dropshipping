@@ -4931,22 +4931,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "RAM5G0023": {
-    "ean": "4713294232069",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 439.5,
-    "vk": 835.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill Trident Z5 6800 CL34 - DDR5 - 64 GB 2x32 GB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21287971.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21287971.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5G0024": {
     "ean": "4713294233868",
     "supplier": "BAB",
