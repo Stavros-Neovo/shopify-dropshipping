@@ -149,7 +149,7 @@
     "ean": "5099206106895",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 96.93,
+    "ek": 95.41,
     "vk": 191.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -1613,7 +1613,7 @@
     "ean": "0097855153197",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.24,
+    "ek": 49.74,
     "vk": 103.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -2825,7 +2825,7 @@
     "ean": "4066529180155",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 75.11,
+    "ek": 71.05,
     "vk": 156.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3344,21 +3344,6 @@
       "https://images.icecat.biz/img/gallery/8296d44b436d5012edfb64c99158d11481464dee.jpg"
     ]
   },
-  "CPUI0233": {
-    "ean": "5032037282109",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 129.01,
-    "vk": 266.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/405210.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/405210.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "ENAB0009": {
     "ean": "6972822120935",
     "supplier": "BAB",
@@ -3850,7 +3835,7 @@
     "ean": "5397184961735",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 126.37,
+    "ek": 121.29,
     "vk": 252.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3864,7 +3849,7 @@
     "ean": "5397184961766",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 137.03,
+    "ek": 133.98,
     "vk": 275.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3952,7 +3937,7 @@
     "ean": "0195892120551",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 139.06,
+    "ek": 131.95,
     "vk": 280.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5543,7 +5528,7 @@
     "ean": "0195348677295",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 198.94,
+    "ek": 195.9,
     "vk": 418.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -5818,12 +5803,13 @@
   "HHWK2087": {
     "ean": "4054278825779",
     "supplier": "BAB",
-    "ek": 13.2,
+    "ek": 12.69,
     "vk": 32.99,
     "title": "Kärcher Adapter Anti-Twist",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
-    "image_verified": false
+    "image_verified": false,
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "HHWR8000": {
     "ean": "4892210113375",
@@ -6477,7 +6463,7 @@
   "SUPD1027": {
     "ean": "5397063763610",
     "supplier": "BAB",
-    "ek": 4.52,
+    "ek": 4.24,
     "vk": 16.99,
     "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
     "listed_at": "2026-06-14T20:49:22",
@@ -6488,7 +6474,8 @@
       "https://images.icecat.biz/img/gallery/28547725_9897479881.jpg",
       "https://images.icecat.biz/img/gallery/28547725_6941967061.jpg",
       "https://images.icecat.biz/img/gallery/28547725_1128237166.jpg"
-    ]
+    ],
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPJ0180": {
     "ean": "5706991023299",
