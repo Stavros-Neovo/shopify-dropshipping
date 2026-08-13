@@ -6490,36 +6490,6 @@
       "https://images.icecat.biz/img/gallery/28547725_1128237166.jpg"
     ]
   },
-  "SUPE2098": {
-    "ean": "4015867204214",
-    "supplier": "BAB",
-    "ek": 11.88,
-    "vk": 29.99,
-    "title": "Equip Patch Cable - CAT6A S/FTP - 20 m - White",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/61153658_5486359855.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/61153658_5486359855.jpg",
-      "https://images.icecat.biz/img/gallery/103141290_7442125825.jpg",
-      "https://images.icecat.biz/img/gallery/61153658_2656717080.jpg"
-    ]
-  },
-  "SUPE2139": {
-    "ean": "4015867229668",
-    "supplier": "BAB",
-    "ek": 9.2,
-    "vk": 24.99,
-    "title": "Equip Patch Cable - CAT6A S/FTP - 15 m - Grey",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/9016307_0446959831.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/9016307_0446959831.jpg"
-    ],
-    "image_verified": true
-  },
   "SUPJ0180": {
     "ean": "5706991023299",
     "supplier": "BAB",
@@ -6925,7 +6895,7 @@
   "SUPS0261": {
     "ean": "8806092709874",
     "supplier": "BAB",
-    "ek": 4.62,
+    "ek": 4.52,
     "vk": 16.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - schwarz",
     "listed_at": "2026-06-14T20:49:22",
@@ -6965,7 +6935,7 @@
   "SUPS0263": {
     "ean": "8806092709904",
     "supplier": "BAB",
-    "ek": 6.6,
+    "ek": 6.39,
     "vk": 20.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - weiß",
     "listed_at": "2026-06-14T20:49:22",
@@ -6985,7 +6955,7 @@
   "SUPS0264": {
     "ean": "8806092709843",
     "supplier": "BAB",
-    "ek": 6.6,
+    "ek": 6.39,
     "vk": 20.99,
     "title": "Samsung EP-T1510 - Netzteil - USB-C 15W - schwarz",
     "listed_at": "2026-06-14T20:49:22",
