@@ -3459,7 +3459,7 @@
     "ean": "4711387797143",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 99.0,
+    "ek": 95.0,
     "vk": 208.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -5890,7 +5890,7 @@
   "MBAI0046": {
     "ean": "4711387797273",
     "supplier": "BAB",
-    "ek": 109.51,
+    "ek": 98.01,
     "vk": 219.99,
     "title": "ASUS PRIME B840-PLUS WIFI | 90MB1IZ0-M0EAY0",
     "listed_at": "2026-06-14T20:49:22",
