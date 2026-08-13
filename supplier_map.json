@@ -4555,22 +4555,6 @@
     "title": "UbiQuiti UISP Professional - UISP-S-PRO - Switch - managed",
     "image_verified": true
   },
-  "NETU0171": {
-    "ean": "0810084691915",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 162.57,
-    "vk": 314.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Ubiquiti UniFi Touch - VoIP-Telefon",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21241697.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21241697.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "NETU0181": {
     "ean": "810177165118",
     "supplier": "BAB",
