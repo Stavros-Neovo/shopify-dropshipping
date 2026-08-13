@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-13T15:01:15.823512+00:00",
+  "generated_at": "2026-08-13T16:59:22.392883+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 520,
+    "total_skus": 519,
     "images_verified": 284,
-    "images_missing": 236
+    "images_missing": 235
   },
   "repricing": {
     "last_run": {
@@ -119,17 +119,17 @@ window.DASHBOARD_DATA = {
       "week_profit": 0.0,
       "prev_week_sales": 2,
       "prev_week_revenue": 446.98,
-      "prev_week_profit": 47.14,
+      "prev_week_profit": 47.43,
       "month_sales": 2,
       "month_revenue": 446.98,
-      "month_profit": 47.14,
-      "month_ek": 247.11,
+      "month_profit": 47.43,
+      "month_ek": 246.83,
       "month_ebay_fee": 70.22,
-      "month_return_reserve": 12.36,
+      "month_return_reserve": 12.34,
       "total_sales_30d": 3,
       "total_revenue_30d": 476.97,
-      "total_profit_30d": 62.99,
-      "total_cash_profit_30d": 75.35
+      "total_profit_30d": 63.28,
+      "total_cash_profit_30d": 75.62
     },
     "chart_7d": [
       {
@@ -147,7 +147,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "09.08",
         "revenue": 446.98,
-        "profit": 47.14,
+        "profit": 47.43,
         "sales": 2
       },
       {
@@ -329,7 +329,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "09.08",
         "revenue": 446.98,
-        "profit": 47.14,
+        "profit": 47.43,
         "sales": 2
       },
       {
@@ -493,7 +493,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "07.06",
         "revenue": 53.96,
-        "profit": 17.01,
+        "profit": 17.31,
         "sales": 2
       },
       {
@@ -871,7 +871,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "09.08",
         "revenue": 446.98,
-        "profit": 47.14,
+        "profit": 47.43,
         "sales": 2
       },
       {
@@ -1166,8 +1166,8 @@ window.DASHBOARD_DATA = {
         "date": "09.08 16:48",
         "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebu",
         "revenue": 11.99,
-        "profit": -1.68,
-        "cash_profit": -1.45
+        "profit": -1.39,
+        "cash_profit": -1.17
       },
       {
         "date": "09.08 10:46",
@@ -1257,8 +1257,8 @@ window.DASHBOARD_DATA = {
         "date": "07.06 12:17",
         "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebu",
         "revenue": 23.98,
-        "profit": 4.0,
-        "cash_profit": 4.23
+        "profit": 4.3,
+        "cash_profit": 4.51
       }
     ],
     "bab_deadlines": [
@@ -1303,9 +1303,9 @@ window.DASHBOARD_DATA = {
     ],
     "tax_reserves": {
       "ust_month": 71.37,
-      "est_month": 14.14,
-      "gewst_month": 7.07,
-      "total_month": 92.58
+      "est_month": 14.23,
+      "gewst_month": 7.11,
+      "total_month": 92.71
     },
     "expected_payout": 401.57
   },
