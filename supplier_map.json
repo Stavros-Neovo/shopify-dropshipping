@@ -6043,7 +6043,7 @@
   "NETU0035": {
     "ean": "0810354023538",
     "supplier": "BAB",
-    "ek": 9.95,
+    "ek": 9.44,
     "vk": 26.99,
     "title": "UbiQuiti Networks POE-24-24W-G - Power Injector",
     "listed_at": "2026-06-14T20:49:22",
@@ -6053,7 +6053,8 @@
     "images": [
       "https://media.ipcstore.net/img/633601.jpg"
     ],
-    "image_source": "kosatec_ipcstore"
+    "image_source": "kosatec_ipcstore",
+    "supplier_email": "SSchulze@bab-distribution.de"
   },
   "NETU0090": {
     "ean": "0810010075574",
