@@ -3089,16 +3089,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "RAM4G0003": {
-    "ean": "4719692013453",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 82.82,
-    "vk": 187.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "RAM4G0053": {
     "ean": "4713294226648",
     "supplier": "BAB",
@@ -4137,7 +4127,7 @@
     "ean": "5032037279130",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 158.01,
+    "ek": 155.0,
     "vk": 362.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4673,22 +4663,6 @@
     ],
     "title": "ECOFLOW Single Axis Solar Tracker",
     "image_verified": true
-  },
-  "RAM4G0004": {
-    "ean": "4719692013460",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 163.42,
-    "vk": 342.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill AEGIS - DDR4 - 32 GB 2x16 GB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/109043.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/109043.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0015": {
     "ean": "4719692015396",
