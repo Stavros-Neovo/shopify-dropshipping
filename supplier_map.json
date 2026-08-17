@@ -1961,20 +1961,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HHWE1012": {
-    "ean": "4895251643023",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 65.98,
-    "vk": 131.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-shower-kit-1161397139.png?v=1746702568",
-    "images": [
-      "https://cdn.shopify.com/s/files/1/0622/6758/8855/files/ecoflow-shower-kit-1161397139.png?v=1746702568"
-    ],
-    "image_verified": true
-  },
   "HHWK2067": {
     "ean": "4054278990279",
     "supplier": "BAB",
@@ -3368,7 +3354,7 @@
     "ean": "0718037877501",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 131.06,
+    "ek": 129.67,
     "vk": 259.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4274,7 +4260,7 @@
     "ean": "0718037899794",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 170.67,
+    "ek": 167.82,
     "vk": 350.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4320,7 +4306,7 @@
     "ean": "0718037906201",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 372.4,
+    "ek": 368.51,
     "vk": 717.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -4677,22 +4663,6 @@
     "image_url": "https://media.ipcstore.net/img/21286936.jpg",
     "images": [
       "https://media.ipcstore.net/img/21286936.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "RAM4G0036": {
-    "ean": "4713294224415",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 168.49,
-    "vk": 349.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill AEGIS - DDR4 - 32 GB - PC3200",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/115483.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/115483.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
