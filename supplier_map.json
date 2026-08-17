@@ -5930,20 +5930,6 @@
     ],
     "image_too_small": true
   },
-  "NETT1026": {
-    "ean": "4779051840236",
-    "supplier": "BAB",
-    "ek": 289.28,
-    "vk": 552.99,
-    "title": "Teltonika TRB500 - Gateway",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://static.wixstatic.com/media/814ec4_e2b7d59c7e714a98919eb61c03e06bff~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-80-en.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_e2b7d59c7e714a98919eb61c03e06bff~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-80-en.jpg"
-    ],
-    "image_verified": true
-  },
   "NETT1048": {
     "ean": "4779051840915",
     "supplier": "BAB",
