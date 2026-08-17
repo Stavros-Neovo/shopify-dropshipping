@@ -4814,22 +4814,6 @@
       "https://cdn.mwave.com.au/images/400/gskill_ripjaws_s5_32gb_2x_16gb_ddr5_6000mhz_cl30_memory_black_ac61192_96956.jpg"
     ]
   },
-  "RAM5G0021": {
-    "ean": "4713294237934",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 861.74,
-    "vk": 1630.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR5 64GB PC 6000 CL28 (2x32GB) 64-GX2-FX5 FLARE AMD",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21287341.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21287341.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5G0024": {
     "ean": "4713294233868",
     "supplier": "BAB",
