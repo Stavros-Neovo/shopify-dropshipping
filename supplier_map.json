@@ -297,22 +297,6 @@
       "https://images.icecat.biz/img/gallery/e39d7f7b3f6b7ef6330d1ab9fed75bca.jpg"
     ]
   },
-  "RAM4G0039": {
-    "ean": "4713294223449",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 114.19,
-    "vk": 248.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "G.Skill TridentZ Neo Series - DDR4 - 16 GB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/115484.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/115484.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM4K0058": {
     "ean": "0740617337532",
     "supplier": "BAB",
