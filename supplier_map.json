@@ -3636,7 +3636,7 @@
     "ean": "4582563851863",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 115.91,
+    "ek": 111.59,
     "vk": 227.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4301,21 +4301,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "HDIW0244": {
-    "ean": "0718037901442",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 480.32,
-    "vk": 920.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/349780.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/349780.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HHWB1054": {
     "ean": "4210201435457",
     "supplier": "BAB",
@@ -4710,22 +4695,6 @@
     "images": [
       "https://m.media-amazon.com/images/I/61zjzScHqiL._AC_UY218_.jpg"
     ]
-  },
-  "RAM4G0057": {
-    "ean": "4713294226655",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 171.54,
-    "vk": 330.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR4 32GB PC 6000 CL22 KIT (2x16GB) 32GRS Ripjaws",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21287401.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21287401.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "RAM4L0038": {
     "ean": "843367132454",
