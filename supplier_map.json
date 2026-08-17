@@ -4878,22 +4878,6 @@
     ],
     "image_too_small": true
   },
-  "REFT0012": {
-    "ean": "4262431593452",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 356.27,
-    "vk": 678.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "tecXL Lenovo ThinkCentre M80q MP",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21177200.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21177200.jpg"
-    ],
-    "image_too_small": true
-  },
   "REFT0019": {
     "ean": "4262431599614",
     "supplier": "BAB",
