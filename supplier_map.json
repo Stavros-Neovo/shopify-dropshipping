@@ -3865,20 +3865,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL2003": {
-    "ean": "0191999788403",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 118.76,
-    "vk": 250.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/44498531_4465735727.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/44498531_4465735727.jpg"
-    ]
-  },
   "SUPL2027": {
     "ean": "0195892120551",
     "supplier": "BAB",
