@@ -4700,7 +4700,7 @@
     "ean": "843367132454",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 179.07,
+    "ek": 172.14,
     "vk": 345.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -4830,7 +4830,7 @@
     "ean": "843367133543",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 480.11,
+    "ek": 467.12,
     "vk": 913.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6196,7 +6196,7 @@
   "RAM4L0017": {
     "ean": "0843367123766",
     "supplier": "BAB",
-    "ek": 60.47,
+    "ek": 59.26,
     "vk": 121.99,
     "title": "Lexar DDR4-3200 SO-DIMM 8GB",
     "listed_at": "2026-06-14T20:49:22",
@@ -6960,21 +6960,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/31c201d459add3f24621a598ddd3aa42.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/31c201d459add3f24621a598ddd3aa42.jpg"
-    ],
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPY0019": {
-    "ean": "6938818318410",
-    "supplier": "BAB",
-    "ek": 203.3,
-    "vk": 391.99,
-    "title": "Yealink IP Telefon MP56-Teams E2",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/0bc760f46cb840114f0e8816c2d449d700bb5dd7.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/0bc760f46cb840114f0e8816c2d449d700bb5dd7.jpg"
     ],
     "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de"
