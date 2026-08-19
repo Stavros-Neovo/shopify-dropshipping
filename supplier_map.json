@@ -3,7 +3,7 @@
     "ean": "5099206073173",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 21.32,
+    "ek": 21.16,
     "vk": 49.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -66,7 +66,7 @@
     "ean": "5099206105324",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 37.25,
+    "ek": 36.74,
     "vk": 80.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -532,7 +532,7 @@
     "ean": "5099206122017",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.83,
+    "ek": 35.53,
     "vk": 79.99,
     "listed_at": "2026-06-14T18:52:46.593172+00:00",
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
@@ -2286,16 +2286,6 @@
     "title": "Tecget 2 String DC-Übespannungsschutz Typ 2",
     "image_verified": false
   },
-  "RAM4G0058": {
-    "ean": "4713294226624",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 42.17,
-    "vk": 106.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "RAM4G0059": {
     "ean": "4719692017727",
     "supplier": "BAB",
@@ -2461,7 +2451,7 @@
     "ean": "5099206085855",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 65.37,
+    "ek": 64.96,
     "vk": 134.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4062,22 +4052,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "CPUI0241": {
-    "ean": "5032037282390",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 495.01,
-    "vk": 947.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Intel Cpu Ultra 9 285, box | BX80768285",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/139950.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/139950.jpg"
-    ],
-    "image_too_small": true
-  },
   "ENAB0012": {
     "ean": "6972822121178",
     "supplier": "BAB",
@@ -4602,22 +4576,6 @@
     "image_url": "https://media.ipcstore.net/img/118362.jpg",
     "images": [
       "https://media.ipcstore.net/img/118362.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "RAM4G0051": {
-    "ean": "4713294224149",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 250.71,
-    "vk": 494.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR4 32GB PC 4000 CL18 KIT (2x16GB) 32GVK Ripjaws",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21287305.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21287305.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -5301,7 +5259,7 @@
     "ean": "5099206059030",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 236.86,
+    "ek": 233.35,
     "vk": 524.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6329,7 +6287,7 @@
   "SUPL0504": {
     "ean": "5099206105508",
     "supplier": "BAB",
-    "ek": 27.1,
+    "ek": 26.9,
     "vk": 60.99,
     "title": "Logitech Signature K650 Keyboard Black ",
     "listed_at": "2026-06-14T20:49:22",
@@ -6844,22 +6802,6 @@
       "https://images.icecat.biz/img/gallery/95619079_7366132728.jpg"
     ],
     "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPS7023": {
-    "ean": "3800235261798",
-    "supplier": "BAB",
-    "ek": 8.12,
-    "vk": 28.99,
-    "title": "Shelly · Unterputz·\"1PM Gen3\"· Relais",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/263798.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/263798.jpg"
-    ],
-    "image_verified": true,
-    "image_source": "kosatec_ipcstore",
     "supplier_email": "SSchulze@bab-distribution.de"
   },
   "SUPV0026": {
