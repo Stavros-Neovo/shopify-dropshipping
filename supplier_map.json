@@ -4125,7 +4125,7 @@
     "ean": "8719706022095",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 305.01,
+    "ek": 299.01,
     "vk": 751.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -6313,7 +6313,7 @@
   "SUPL0183": {
     "ean": "5099206033139",
     "supplier": "BAB",
-    "ek": 18.4,
+    "ek": 17.6,
     "vk": 46.99,
     "title": "Logitech Keyboard K270 Wireless Black/White",
     "listed_at": "2026-06-14T20:49:22",
