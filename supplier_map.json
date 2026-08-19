@@ -459,22 +459,6 @@
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "image_verified": false
   },
-  "SUPR1018": {
-    "ean": "8886419378082",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 19.74,
-    "vk": 44.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "title": "Razer Kraken X Lite - Headset - black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/136420.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/136420.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPS0368": {
     "ean": "8806097735618",
     "supplier": "BAB",
@@ -1582,21 +1566,6 @@
       "https://media.ipcstore.net/img/125975.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "SUPR0004": {
-    "ean": "8886419332565",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.69,
-    "vk": 99.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/129513.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/129513.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
   },
   "SUPR1019": {
     "ean": "8886419378396",
