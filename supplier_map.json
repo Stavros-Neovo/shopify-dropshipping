@@ -2635,21 +2635,6 @@
     ],
     "image_verified": true
   },
-  "HHWB1048": {
-    "ean": "4210201445234",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 80.19,
-    "vk": 164.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/ef718d594dc5138cbf627ac455ab3b7a53a12594.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/ef718d594dc5138cbf627ac455ab3b7a53a12594.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HHWB1050": {
     "ean": "4210201445197",
     "supplier": "BAB",
