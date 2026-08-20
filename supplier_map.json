@@ -4011,20 +4011,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "ENAB0013": {
-    "ean": "6972822121246",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 223.3,
-    "vk": 386.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_170898797?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900",
-    "images": [
-      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_170898797?x=1200&y=1200&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1200&ey=900&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1200&cdy=900"
-    ],
-    "image_verified": true
-  },
   "ENAB0014": {
     "ean": "6972822121314",
     "supplier": "BAB",
@@ -4439,7 +4425,7 @@
     "ean": "6975069305523",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 514.61,
+    "ek": 507.5,
     "vk": 922.95,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -6471,17 +6457,6 @@
     "ek": 66.22,
     "vk": 145.99,
     "title": "Razer Huntsman Mini - Tastatur - Quecksilber",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPR1063": {
-    "ean": "8887910082058",
-    "supplier": "BAB",
-    "ek": 65.35,
-    "vk": 155.99,
-    "title": "Razer Kishi V3 - Gamepad - Black",
     "listed_at": "2026-06-14T20:49:22",
     "source": "ghost_fix",
     "image_verified": false,
