@@ -3791,21 +3791,6 @@
       "https://images.icecat.biz/img/gallery/8870656b883b7b36f11988c3e6bc92eb2485396d.jpg"
     ]
   },
-  "SUPM3004": {
-    "ean": "7109806197006",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 154.28,
-    "vk": 298.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/m/i/mitel_622dt_2.jpg",
-    "images": [
-      "https://www.onedirect.de/media/catalog/product/cache/2f7023eb5bae250f2b8e08d957542350/m/i/mitel_622dt_2.jpg"
-    ],
-    "title": "Mitel 622dt Set",
-    "image_verified": true
-  },
   "SUPS0291": {
     "ean": "4548736158283",
     "supplier": "BAB",
