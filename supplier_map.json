@@ -132,7 +132,7 @@
     "ean": "0197498152394",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 95.11,
+    "ek": 93.38,
     "vk": 189.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -4094,21 +4094,6 @@
     "image_url": "https://media.ipcstore.net/img/l/128484.jpg",
     "images": [
       "https://media.ipcstore.net/img/l/128484.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
-  "HDIW0212": {
-    "ean": "0718037898339",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 218.56,
-    "vk": 419.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/131382.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/131382.jpg"
     ],
     "image_verified": false,
     "image_too_small": true
