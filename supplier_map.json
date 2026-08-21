@@ -349,21 +349,6 @@
       "https://images.icecat.biz/img/gallery/96641971_1808209740.jpg"
     ]
   },
-  "HHWB5014": {
-    "ean": "4211125572112",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 22.33,
-    "vk": 52.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21132149.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21132149.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "ENAB0002": {
     "ean": "6972822120706",
     "supplier": "BAB",
@@ -563,20 +548,6 @@
     "updated_at": "2026-06-14T18:52:46.593172+00:00",
     "title": "Razer Kraken Kitty V3 X - Headset - Schwarz",
     "image_verified": false
-  },
-  "REFD0002": {
-    "ean": "5397184513972",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.75,
-    "vk": 103.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/0268653e012c2a8dbe92591a236d309cd1f6d7a6.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/0268653e012c2a8dbe92591a236d309cd1f6d7a6.jpg"
-    ],
-    "image_verified": true
   },
   "USBK1048": {
     "ean": "4582563857087",
@@ -1358,46 +1329,6 @@
     ],
     "image_verified": true
   },
-  "SUPC2000": {
-    "ean": "850047123503",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2001": {
-    "ean": "850047123510",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2002": {
-    "ean": "850047123527",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2003": {
-    "ean": "850047123534",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPC2004": {
     "ean": "850047123541",
     "supplier": "BAB",
@@ -1532,22 +1463,6 @@
     "image_url": "https://media.ipcstore.net/img/122152.jpg",
     "images": [
       "https://media.ipcstore.net/img/122152.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "SUPL0439": {
-    "ean": "0097855153197",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 49.74,
-    "vk": 103.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Rally Mic Pod Mount",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/125975.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/125975.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -1973,22 +1888,6 @@
     "images": [
       "https://images.icecat.biz/img/gallery/107336414_4549034474.jpg"
     ]
-  },
-  "NOCO0002": {
-    "ean": "1210000615015",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 62.73,
-    "vk": 125.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "NOCO GB20 | Boost 12V 500A Jump Starter | Boost Jump Starters",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21324045.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21324045.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "PETK0046": {
     "ean": "6975069307305",
@@ -4364,7 +4263,7 @@
     "ean": "6975069305523",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 507.5,
+    "ek": 471.98,
     "vk": 922.95,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -4389,17 +4288,6 @@
     "images": [
       "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/1245184/62072201267149/803387/6a2ac8adE9bf62106/42b10752b5083d5e.png.webp"
     ]
-  },
-  "PPE0220": {
-    "ean": "4895251646673",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 171.54,
-    "vk": 330.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "ECOFLOW RAPID Pro X - Powerbank",
-    "image_verified": false
   },
   "PPSE0015": {
     "ean": "4895251605205",
