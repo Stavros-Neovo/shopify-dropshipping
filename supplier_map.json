@@ -1329,96 +1329,6 @@
     ],
     "image_verified": true
   },
-  "SUPC2004": {
-    "ean": "850047123541",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2005": {
-    "ean": "850047123558",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 28.42,
-    "vk": 61.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2009": {
-    "ean": "850070419246",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2010": {
-    "ean": "850070419253",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2011": {
-    "ean": "850070419260",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2012": {
-    "ean": "850070419277",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2013": {
-    "ean": "850070419284",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2014": {
-    "ean": "850070419291",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
-  "SUPC2017": {
-    "ean": "850070419321",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 35.53,
-    "vk": 74.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPL0125": {
     "ean": "5099206081901",
     "supplier": "BAB",
@@ -2248,16 +2158,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "SUPC2018": {
-    "ean": "850070419338",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.9,
-    "vk": 122.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "SUPG4007": {
     "ean": "6947273705147",
     "supplier": "BAB",
@@ -2902,16 +2802,6 @@
       "https://media.ipcstore.net/img/l/241208.jpg"
     ],
     "image_too_small": true
-  },
-  "SUPC2015": {
-    "ean": "850070419307",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 91.35,
-    "vk": 179.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
   },
   "SUPH0051": {
     "ean": "0198415314048",
