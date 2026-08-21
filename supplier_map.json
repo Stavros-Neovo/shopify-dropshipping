@@ -6613,21 +6613,6 @@
     "image_verified": true,
     "image_source": "kosatec_ipcstore"
   },
-  "USBS0076": {
-    "ean": "0619659172855",
-    "supplier": "BAB",
-    "ek": 17.9,
-    "vk": 41.99,
-    "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 128 GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/291802.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/291802.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "USBS1019": {
     "ean": "0619659069193",
     "supplier": "BAB",
