@@ -1873,21 +1873,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "HHWB5030": {
-    "ean": "4211125375003",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 73.08,
-    "vk": 145.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21132170.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21132170.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HHWK2067": {
     "ean": "4054278990279",
     "supplier": "BAB",
