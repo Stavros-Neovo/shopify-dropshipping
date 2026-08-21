@@ -1,11 +1,11 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-21T13:49:13.759541+00:00",
+  "generated_at": "2026-08-21T14:38:54.424247+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 487,
-    "images_verified": 265,
-    "images_missing": 222
+    "total_skus": 478,
+    "images_verified": 262,
+    "images_missing": 216
   },
   "repricing": {
     "last_run": {
@@ -685,7 +685,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "17.07",
         "revenue": 29.99,
-        "profit": 15.85,
+        "profit": 2.83,
         "sales": 1
       },
       {
@@ -1083,32 +1083,6 @@ window.DASHBOARD_DATA = {
         }
       },
       {
-        "sku": "PETK0037",
-        "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrischer N50 3 Stk.",
-        "sold": 1,
-        "revenue": 29.99,
-        "profit": 15.85,
-        "cash_profit": 15.85,
-        "vk": 29.99,
-        "ek": 0.0,
-        "calc": {
-          "vk_brutto": 29.99,
-          "ebay_fee": 5.18,
-          "ebay_percent_fee": 4.64,
-          "ebay_fixed_fee": 0.54,
-          "vat": 3.96,
-          "netto_vk": 20.85,
-          "ship": 5.0,
-          "ek": 0.0,
-          "return_reserve": 0.0,
-          "cash_profit_u": 15.85,
-          "cash_profit_t": 15.85,
-          "profit_u": 15.85,
-          "qty": 1,
-          "profit_t": 15.85
-        }
-      },
-      {
         "sku": "PETK0049",
         "title": "Petkit Schaumstofffilter für Wireless Pumpe | 15pcs",
         "sold": 1,
@@ -1159,6 +1133,32 @@ window.DASHBOARD_DATA = {
           "qty": 1,
           "profit_t": 13.01
         }
+      },
+      {
+        "sku": "USBK1023",
+        "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
+        "sold": 1,
+        "revenue": 21.99,
+        "profit": 3.98,
+        "cash_profit": 4.27,
+        "vk": 21.99,
+        "ek": 5.9,
+        "calc": {
+          "vk_brutto": 21.99,
+          "ebay_fee": 3.94,
+          "ebay_percent_fee": 3.4,
+          "ebay_fixed_fee": 0.54,
+          "vat": 2.88,
+          "netto_vk": 15.17,
+          "ship": 5.0,
+          "ek": 5.9,
+          "return_reserve": 0.29,
+          "cash_profit_u": 4.27,
+          "cash_profit_t": 4.27,
+          "profit_u": 3.98,
+          "qty": 1,
+          "profit_t": 3.98
+        }
       }
     ],
     "recent_sales": [
@@ -1180,8 +1180,8 @@ window.DASHBOARD_DATA = {
         "date": "17.07 15:00",
         "title": "Petkit Katzenklo Pura Max & Pura Max 2 Lufterfrisc",
         "revenue": 29.99,
-        "profit": 15.85,
-        "cash_profit": 15.85
+        "profit": 2.83,
+        "cash_profit": 3.45
       },
       {
         "date": "18.06 10:33",
