@@ -433,22 +433,6 @@
       "https://images.icecat.biz/img/gallery/68778456_1314329956.jpg"
     ]
   },
-  "SUPL0344": {
-    "ean": "5099206092372",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 21.97,
-    "vk": 49.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "title": "Logitech Desktop MK295 Silent Wireless Combo Black",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/116925.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/116925.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPN4011": {
     "ean": "5711157090107",
     "supplier": "BAB",
@@ -6646,20 +6630,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/101581573_1677953202.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/101581573_1677953202.jpg"
-    ],
-    "image_verified": true
-  },
-  "SUPS0343": {
-    "ean": "8806088938141",
-    "supplier": "BAB",
-    "ek": 3.55,
-    "vk": 14.99,
-    "title": "Samsung EP-DG930 Datenkabel USB-C zu USB Typ-A 1,5 m schwarz",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/37606187_3416081525.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/37606187_3416081525.jpg"
     ],
     "image_verified": true
   },
