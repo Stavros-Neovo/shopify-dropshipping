@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-22T23:24:21.760233+00:00",
+  "generated_at": "2026-08-23T01:39:18.052999+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -133,12 +133,6 @@ window.DASHBOARD_DATA = {
     },
     "chart_7d": [
       {
-        "date": "16.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
         "date": "17.08",
         "revenue": 0,
         "profit": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "24.07",
+        "date": "23.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "25.07",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "25.05",
+        "date": "23.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "26.05",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "23.08",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1266,7 +1266,7 @@ window.DASHBOARD_DATA = {
         "order_id": "01-15026-16562",
         "date": "2026-08-09",
         "deadline": "2026-08-23",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "Dell MS116 - Maus - optisch - 2 Tasten -"
         ],
@@ -1276,7 +1276,7 @@ window.DASHBOARD_DATA = {
         "order_id": "16-14996-91962",
         "date": "2026-08-09",
         "deadline": "2026-08-23",
-        "days_left": 1,
+        "days_left": 0,
         "items": [
           "NOCO GBX155 | Boost X 4250 A | Jump Star"
         ],
