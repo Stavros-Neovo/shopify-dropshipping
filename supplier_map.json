@@ -208,22 +208,6 @@
     ],
     "image_verified": true
   },
-  "SUPL0604": {
-    "ean": "5099206066878",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 75.31,
-    "vk": 155.99,
-    "listed_at": "2026-06-14T15:24:51.913980+00:00",
-    "updated_at": "2026-06-14T15:24:51.913980+00:00",
-    "title": "Logitech Desktop MK850 Performance - Tastatur-und-Maus-Set - US-Layout",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/101882.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/101882.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPY0003": {
     "ean": "6938818306202",
     "supplier": "BAB",
@@ -4214,7 +4198,7 @@
     "ean": "4713294223081",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 205.03,
+    "ek": 190.31,
     "vk": 427.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
