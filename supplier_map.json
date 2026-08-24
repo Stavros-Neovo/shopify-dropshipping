@@ -3226,22 +3226,6 @@
     ],
     "image_too_small": true
   },
-  "SDXS0015": {
-    "ean": "0619659182557",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 139.5,
-    "vk": 277.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "SanDisk SDSSDE61-1T00-G25 Extreme Portable 1TB SSD",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/116706.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/116706.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SSDK1003": {
     "ean": "4582563851863",
     "supplier": "BAB",
