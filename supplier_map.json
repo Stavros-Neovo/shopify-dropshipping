@@ -3963,22 +3963,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "image_verified": false
   },
-  "HHWM5000": {
-    "ean": "6977728947303",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 527.8,
-    "vk": 1192.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "MOVA Z60 Ultra Roller Complete",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/143688.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/143688.jpg"
-    ],
-    "image_too_small": true
-  },
   "NETT0162": {
     "ean": "8885020621488",
     "supplier": "BAB",
