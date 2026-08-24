@@ -4265,21 +4265,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "RAM5G0018": {
-    "ean": "4713294234575",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 424.27,
-    "vk": 819.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21287352.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21287352.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "RAM5G0019": {
     "ean": "4713294232120",
     "supplier": "BAB",
@@ -4723,22 +4708,6 @@
     "image_url": "https://media.ipcstore.net/img/21133037.jpg",
     "images": [
       "https://media.ipcstore.net/img/21133037.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "SSDL0048": {
-    "ean": "0843367136858",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 223.6,
-    "vk": 476.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "SSD M.2 Lexar 2TB PCIe Gen 5 NM990 NVMe",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21132405.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21132405.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
