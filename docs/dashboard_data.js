@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-23T23:24:52.448038+00:00",
+  "generated_at": "2026-08-24T01:37:38.693070+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -133,12 +133,6 @@ window.DASHBOARD_DATA = {
     },
     "chart_7d": [
       {
-        "date": "17.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
-      {
         "date": "18.08",
         "revenue": 0,
         "profit": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "25.07",
+        "date": "24.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "26.07",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "26.05",
+        "date": "24.08",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "27.05",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "24.08",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1261,28 +1261,7 @@ window.DASHBOARD_DATA = {
         "cash_profit": 4.51
       }
     ],
-    "bab_deadlines": [
-      {
-        "order_id": "01-15026-16562",
-        "date": "2026-08-09",
-        "deadline": "2026-08-23",
-        "days_left": 0,
-        "items": [
-          "Dell MS116 - Maus - optisch - 2 Tasten -"
-        ],
-        "urgent": true
-      },
-      {
-        "order_id": "16-14996-91962",
-        "date": "2026-08-09",
-        "deadline": "2026-08-23",
-        "days_left": 0,
-        "items": [
-          "NOCO GBX155 | Boost X 4250 A | Jump Star"
-        ],
-        "urgent": true
-      }
-    ],
+    "bab_deadlines": [],
     "tracking_missing": [
       {
         "order_id": "01-15026-16562",
