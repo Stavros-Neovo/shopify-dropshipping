@@ -5717,22 +5717,6 @@
     "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "SUPC0088": {
-    "ean": "7340086912839",
-    "supplier": "BAB",
-    "ek": 20.4,
-    "vk": 116.99,
-    "title": "CHERRY Xtrfy M42 - Maus - optisch - kabellos - Schwarz ",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/267294.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/267294.jpg"
-    ],
-    "image_source": "kosatec_ipcstore",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
   "SUPD1027": {
     "ean": "5397063763610",
     "supplier": "BAB",
