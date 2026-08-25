@@ -3599,21 +3599,6 @@
       "https://images.icecat.biz/img/gallery/36557098861de63506865423fec0b3b731763798.jpg"
     ]
   },
-  "CPUA0136": {
-    "ean": "0730143315555",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 482.0,
-    "vk": 924.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/140611.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/140611.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "CPUI0201": {
     "ean": "5032037278447",
     "supplier": "BAB",
