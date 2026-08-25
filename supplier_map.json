@@ -3715,20 +3715,6 @@
     ],
     "image_verified": true
   },
-  "HDIS0294": {
-    "ean": "0763649174920",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 899.01,
-    "vk": 2265.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/43b5a7c8ae2428c95bade330cfb3b647.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/43b5a7c8ae2428c95bade330cfb3b647.jpg"
-    ]
-  },
   "HDIS0316": {
     "ean": "8719706439480",
     "supplier": "BAB",
