@@ -5324,21 +5324,6 @@
     "image_source": "kosatec_ipcstore",
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "NETU0136": {
-    "ean": "0810084691670",
-    "supplier": "BAB",
-    "ek": 203.0,
-    "vk": 389.99,
-    "title": "UbiQuiti UniFi G2 Starter Kit - Zugangskontrollgerät",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/672411.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/672411.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "NETU0164": {
     "ean": "0810354023545",
     "supplier": "BAB",
