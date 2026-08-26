@@ -5292,22 +5292,6 @@
     "image_source": "kosatec_ipcstore",
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "NETU0090": {
-    "ean": "0810010075574",
-    "supplier": "BAB",
-    "ek": 398.35,
-    "vk": 766.99,
-    "title": "UbiQuiti UniFi Protect Pro - UNVR-PRO - netzwerkfähig",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/130598.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/130598.jpg"
-    ],
-    "image_source": "kosatec_ipcstore",
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
   "NETU0164": {
     "ean": "0810354023545",
     "supplier": "BAB",
