@@ -4825,22 +4825,6 @@
     "title": "Mitel 722dt Set",
     "image_verified": true
   },
-  "SUPS0328": {
-    "ean": "4548736134294",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 164.43,
-    "vk": 338.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Sony WH-1000XM5L True Wireless Headset | Night Blue",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21298785.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21298785.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPS0329": {
     "ean": "4548736132597",
     "supplier": "BAB",
