@@ -1329,21 +1329,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0283": {
-    "ean": "5099206053304",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 30.75,
-    "vk": 67.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/103252.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/103252.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPL0402": {
     "ean": "0097855162045",
     "supplier": "BAB",
@@ -3886,21 +3871,6 @@
       "https://images.icecat.biz/img/gallery/417034bfdf98da9d2979fb5c22a1c5471fe38df8.jpg"
     ]
   },
-  "NETT1014": {
-    "ean": "4779051840540",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 411.08,
-    "vk": 781.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://static.wixstatic.com/media/814ec4_8e6dbbf2c62a4dd5bca2395f0fa06e30~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-395.jpg",
-    "images": [
-      "https://static.wixstatic.com/media/814ec4_8e6dbbf2c62a4dd5bca2395f0fa06e30~mv2.jpg/v1/fill/w_1920,h_1008,al_c,q_85/social-social-product-395.jpg"
-    ],
-    "title": "Teltonika RUTM50 - Wireless Router",
-    "image_verified": true
-  },
   "NETT1066": {
     "ean": "4779051840472",
     "supplier": "BAB",
@@ -4216,22 +4186,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "RAM5G0028": {
-    "ean": "4713294237590",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 449.65,
-    "vk": 854.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "G.Skill DDR5 32GB PC 6000 CL32 (2x16GB) 32-GX2-FX5 FLARE AMD",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21292370.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21292370.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "RAM5K0043": {
     "ean": "0740617350180",
     "supplier": "BAB",
@@ -4435,20 +4389,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/2ed11a9e8e07f922065205d43f7ac529f22cd0f9.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/2ed11a9e8e07f922065205d43f7ac529f22cd0f9.jpg"
-    ],
-    "image_verified": true
-  },
-  "REFT1013": {
-    "ean": "5711603088276",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 284.2,
-    "vk": 542.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/e929c504a6591935aadaa3d6507cb8d69395f121.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/e929c504a6591935aadaa3d6507cb8d69395f121.jpg"
     ],
     "image_verified": true
   },
@@ -4854,7 +4794,7 @@
     "ean": "0023942322382",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 228.38,
+    "ek": 221.27,
     "vk": 475.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -5931,22 +5871,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "SUPR1027": {
-    "ean": "8886419333326",
-    "supplier": "BAB",
-    "ek": 13.48,
-    "vk": 38.99,
-    "title": "Razer DeathAdder Essential - Gaming Maus - white",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/131683.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/131683.jpg"
-    ],
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPR1044": {
     "ean": "8886419334552",
     "supplier": "BAB",
@@ -6344,21 +6268,6 @@
     "image_url": "https://media.ipcstore.net/img/21280800.jpg",
     "images": [
       "https://media.ipcstore.net/img/21280800.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "USBK1035": {
-    "ean": "4582563850033",
-    "supplier": "BAB",
-    "ek": 7.72,
-    "vk": 22.99,
-    "title": "Kioxia TransMemory U301 64GB USB 3.0",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21280805.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21280805.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
