@@ -786,21 +786,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HHWB5031": {
-    "ean": "4211125370008",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 46.69,
-    "vk": 101.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21296217.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21296217.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "HHWK2082": {
     "ean": "4054278656342",
     "supplier": "BAB",
@@ -1326,22 +1311,6 @@
     "image_url": "https://media.ipcstore.net/img/104723.jpg",
     "images": [
       "https://media.ipcstore.net/img/104723.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "SUPL0402": {
-    "ean": "0097855162045",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 40.97,
-    "vk": 90.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech HD Pro Webcam C920e",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/122152.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/122152.jpg"
     ],
     "image_source": "kosatec_ipcstore"
   },
@@ -2432,16 +2401,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "HHWK2080": {
-    "ean": "4066529180155",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 71.05,
-    "vk": 156.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": false
-  },
   "HHWK2090": {
     "ean": "4054278817514",
     "supplier": "BAB",
@@ -3258,21 +3217,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDL0047": {
-    "ean": "0843367136841",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 147.88,
-    "vk": 293.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21295659.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21295659.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SSDS0096": {
     "ean": "8806090545924",
     "supplier": "BAB",
@@ -3407,25 +3351,6 @@
       "https://images.icecat.biz/img/gallery/551ea6311628153920f4130a94c48d30089e8aeb.jpg",
       "https://images.icecat.biz/img/gallery/a6338a5cfbc001f70f530dae9f78fceac7689b0d.jpg",
       "https://images.icecat.biz/img/gallery/17e02e983b7b170f843695c8f1ec1835b5c34d80.jpg"
-    ]
-  },
-  "SUPJ0153": {
-    "ean": "5706991022902",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 138.04,
-    "vk": 274.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/78360271_2490491136.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/78360271_2490491136.jpg",
-      "https://images.icecat.biz/img/gallery/78360442_1688644602.jpg",
-      "https://images.icecat.biz/img/gallery/78360271_4500952133.jpg",
-      "https://images.icecat.biz/img/gallery/78360442_5794617842.jpg",
-      "https://images.icecat.biz/img/gallery/78360442_0383618523.jpg",
-      "https://images.icecat.biz/img/gallery/78360442_5838600927.jpg"
     ]
   },
   "SUPL0329": {
@@ -4185,33 +4110,6 @@
       "https://media.ipcstore.net/img/21287294.jpg"
     ],
     "image_source": "kosatec_ipcstore"
-  },
-  "RAM5K0043": {
-    "ean": "0740617350180",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 355.01,
-    "vk": 713.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/c1bce31ca2079e40e115bf88d2755f09.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/c1bce31ca2079e40e115bf88d2755f09.jpg",
-      "https://images.icecat.biz/img/gallery/618d7e4c8efd8ee87f3af3b0366cb2e7.jpg",
-      "https://images.icecat.biz/img/gallery/2c69df5cfcb180c39a07b2d1f808ea4a.jpg",
-      "https://images.icecat.biz/img/gallery/3394743fbe8cc66356affda9a735ee8e.jpg",
-      "https://images.icecat.biz/img/gallery/d8c92301f829cd529c989119c22810a2.jpg",
-      "https://images.icecat.biz/img/gallery/640fcbaf70cf2b6d8fa33c031c1117ff.jpg",
-      "https://images.icecat.biz/img/gallery/307a019ecdde6a20cd75f6b8cef3ad84.jpg",
-      "https://images.icecat.biz/img/gallery/ab469d69478cd3d204bc36520ff77be6.jpg",
-      "https://images.icecat.biz/img/gallery/eeb9e972bae70a953e69f9858aebe6fd.jpg",
-      "https://images.icecat.biz/img/gallery/e3faec27345281d48ecef5aa4ea482bf.jpg",
-      "https://images.icecat.biz/img/gallery/25a51696c3874a717543767772ad1f04.jpg",
-      "https://images.icecat.biz/img/gallery/84de6ba9a601eef47e553e07a316c9f0.jpg",
-      "https://images.icecat.biz/img/gallery/3b5ec3223f602da37caba6064a960ba3.jpg",
-      "https://images.icecat.biz/img/gallery/931bb1ddb5a00555df162e7995a715cb.jpg"
-    ]
   },
   "RAM5L0006": {
     "ean": "843367133543",
