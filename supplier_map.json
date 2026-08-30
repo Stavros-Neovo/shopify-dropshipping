@@ -1298,22 +1298,6 @@
     ],
     "image_verified": true
   },
-  "SUPL0125": {
-    "ean": "5099206081901",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 43.44,
-    "vk": 94.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Mouse MX Vertical Wireless Grey",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/104723.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/104723.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPR1019": {
     "ean": "8886419378396",
     "supplier": "BAB",
