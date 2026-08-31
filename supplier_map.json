@@ -198,7 +198,7 @@
     "ean": "5706991034318",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 40.7,
+    "ek": 40.19,
     "vk": 86.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -226,7 +226,7 @@
     "ean": "5706991024425",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 171.1,
+    "ek": 167.48,
     "vk": 336.99,
     "listed_at": "2026-06-14T15:24:51.913980+00:00",
     "updated_at": "2026-06-14T15:24:51.913980+00:00",
@@ -1706,21 +1706,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "NETT0192": {
-    "ean": "4897098685105",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 69.02,
-    "vk": 137.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "TP-LINK Tapo C420S1 - Überwachungskamera",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/107336414_4549034474.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/107336414_4549034474.jpg"
-    ]
-  },
   "PETK0046": {
     "ean": "6975069307305",
     "supplier": "BAB",
@@ -2650,22 +2635,6 @@
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
-  },
-  "RAM4G0055": {
-    "ean": "4713294226631",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 87.59,
-    "vk": 186.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "G.Skill Ripjaws - DDR4 - 16 GB 2x8 GB",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/129004.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/129004.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "RAM4G0063": {
     "ean": "4719692007667",
@@ -4162,16 +4131,6 @@
     "image_verified": false,
     "image_too_small": true
   },
-  "REFT0020": {
-    "ean": "4262575242148",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 680.05,
-    "vk": 1288.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_verified": false
-  },
   "REFT1001": {
     "ean": "5711603083851",
     "supplier": "BAB",
@@ -4558,7 +4517,7 @@
     "ean": "5706991024302",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 163.21,
+    "ek": 160.67,
     "vk": 322.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
@@ -5301,16 +5260,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "PPSE0089": {
-    "ean": "4895251644662",
-    "supplier": "BAB",
-    "ek": 20.3,
-    "vk": 45.99,
-    "title": "ECOFLOW STREAM AC Cable 5m",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PPSE0097": {
     "ean": "4895251642835",
     "supplier": "BAB",
@@ -5528,22 +5477,6 @@
     "image_url": "https://media.ipcstore.net/img/170171.jpg",
     "images": [
       "https://media.ipcstore.net/img/170171.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "image_source": "kosatec_ipcstore"
-  },
-  "SUPL0183": {
-    "ean": "5099206033139",
-    "supplier": "BAB",
-    "ek": 17.6,
-    "vk": 46.99,
-    "title": "Logitech Keyboard K270 Wireless Black/White",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/640390.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/640390.jpg"
     ],
     "supplier_email": "SSchulze@bab-distribution.de",
     "image_source": "kosatec_ipcstore"
@@ -5780,24 +5713,6 @@
     "image_verified": false,
     "supplier_email": "SSchulze@bab-distribution.de"
   },
-  "SUPS0254": {
-    "ean": "8806094912081",
-    "supplier": "BAB",
-    "ek": 6.6,
-    "vk": 20.99,
-    "title": "Samsung Schnellladegerät -  ohne Datenkabel - USB-C 25W - weiß",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/1ef1408c689c5b87fb6f46838e721cb7.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/1ef1408c689c5b87fb6f46838e721cb7.jpg",
-      "https://images.icecat.biz/img/gallery/bb02897ba1c2736b89e39e6d3cd04513.jpg",
-      "https://images.icecat.biz/img/gallery/e76fccfb9802609f6126f535e34cdd54.jpg",
-      "https://images.icecat.biz/img/gallery/06b65b93489907861fe2beb535329ba0.jpg"
-    ],
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
   "SUPS0256": {
     "ean": "8806094911985",
     "supplier": "BAB",
@@ -6023,21 +5938,6 @@
     "image_url": "https://images.icecat.biz/img/gallery/95619079_7366132728.jpg",
     "images": [
       "https://images.icecat.biz/img/gallery/95619079_7366132728.jpg"
-    ],
-    "image_verified": true,
-    "supplier_email": "SSchulze@bab-distribution.de"
-  },
-  "SUPV0026": {
-    "ean": "0023942318644",
-    "supplier": "BAB",
-    "ek": 5.94,
-    "vk": 19.99,
-    "title": "Verbatim Sync&Charge 60W 120cm USB-C/USB-C Magnetic grün 31864",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://images.icecat.biz/img/gallery/28ea0042bc1333f92149c7e3b564d61caa5e738c.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/28ea0042bc1333f92149c7e3b564d61caa5e738c.jpg"
     ],
     "image_verified": true,
     "supplier_email": "SSchulze@bab-distribution.de"
