@@ -1,10 +1,10 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-09-01T13:17:47.406218+00:00",
+  "generated_at": "2026-09-01T17:43:24.911093+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 432,
-    "images_verified": 237,
+    "total_skus": 430,
+    "images_verified": 235,
     "images_missing": 195
   },
   "repricing": {
@@ -415,7 +415,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "13.06",
         "revenue": 219.98,
-        "profit": 52.06,
+        "profit": 62.72,
         "sales": 1
       },
       {
@@ -957,10 +957,10 @@ window.DASHBOARD_DATA = {
         "title": "ANTHBOT Battery 5000mAh",
         "sold": 1,
         "revenue": 215.99,
-        "profit": 52.06,
-        "cash_profit": 56.63,
+        "profit": 62.72,
+        "cash_profit": 66.78,
         "vk": 215.99,
-        "ek": 91.35,
+        "ek": 81.2,
         "calc": {
           "vk_brutto": 215.99,
           "ebay_fee": 33.95,
@@ -969,13 +969,13 @@ window.DASHBOARD_DATA = {
           "vat": 29.07,
           "netto_vk": 152.97,
           "ship": 5.0,
-          "ek": 91.35,
-          "return_reserve": 4.57,
-          "cash_profit_u": 56.63,
-          "cash_profit_t": 56.63,
-          "profit_u": 52.06,
+          "ek": 81.2,
+          "return_reserve": 4.06,
+          "cash_profit_u": 66.78,
+          "cash_profit_t": 66.78,
+          "profit_u": 62.72,
           "qty": 1,
-          "profit_t": 52.06
+          "profit_t": 62.72
         }
       },
       {
@@ -1215,8 +1215,8 @@ window.DASHBOARD_DATA = {
         "date": "13.06 22:19",
         "title": "ANTHBOT Battery 5000mAh",
         "revenue": 219.98,
-        "profit": 52.06,
-        "cash_profit": 56.63
+        "profit": 62.72,
+        "cash_profit": 66.78
       },
       {
         "date": "12.06 06:07",
