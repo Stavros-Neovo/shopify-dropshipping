@@ -1,10 +1,10 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-08-31T21:49:17.644597+00:00",
+  "generated_at": "2026-09-01T01:06:39.546204+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 433,
-    "images_verified": 238,
+    "total_skus": 432,
+    "images_verified": 237,
     "images_missing": 195
   },
   "repricing": {
@@ -120,24 +120,18 @@ window.DASHBOARD_DATA = {
       "prev_week_sales": 0,
       "prev_week_revenue": 0.0,
       "prev_week_profit": 0.0,
-      "month_sales": 2,
-      "month_revenue": 446.98,
-      "month_profit": 47.43,
-      "month_ek": 246.83,
-      "month_ebay_fee": 70.22,
-      "month_return_reserve": 12.34,
+      "month_sales": 0,
+      "month_revenue": 0.0,
+      "month_profit": 0.0,
+      "month_ek": 0.0,
+      "month_ebay_fee": 0.0,
+      "month_return_reserve": 0.0,
       "total_sales_30d": 2,
       "total_revenue_30d": 446.98,
       "total_profit_30d": 47.43,
       "total_cash_profit_30d": 59.77
     },
     "chart_7d": [
-      {
-        "date": "25.08",
-        "revenue": 0,
-        "profit": 0,
-        "sales": 0
-      },
       {
         "date": "26.08",
         "revenue": 0,
@@ -173,15 +167,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_30d": [
+      },
       {
-        "date": "02.08",
+        "date": "01.09",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_30d": [
       {
         "date": "03.08",
         "revenue": 0,
@@ -355,15 +349,15 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      }
-    ],
-    "chart_90d": [
+      },
       {
-        "date": "03.06",
+        "date": "01.09",
         "revenue": 0,
         "profit": 0,
         "sales": 0
-      },
+      }
+    ],
+    "chart_90d": [
       {
         "date": "04.06",
         "revenue": 0,
@@ -897,6 +891,12 @@ window.DASHBOARD_DATA = {
         "revenue": 0,
         "profit": 0,
         "sales": 0
+      },
+      {
+        "date": "01.09",
+        "revenue": 0,
+        "profit": 0,
+        "sales": 0
       }
     ],
     "top_products": [
@@ -1281,10 +1281,10 @@ window.DASHBOARD_DATA = {
       }
     ],
     "tax_reserves": {
-      "ust_month": 71.37,
-      "est_month": 14.23,
-      "gewst_month": 7.11,
-      "total_month": 92.71
+      "ust_month": 0.0,
+      "est_month": 0.0,
+      "gewst_month": 0.0,
+      "total_month": 0.0
     },
     "expected_payout": 376.76
   },
