@@ -1242,20 +1242,6 @@
     ],
     "image_verified": true
   },
-  "SHP0126": {
-    "ean": "8719514356733",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 40.6,
-    "vk": 83.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/32ff661b8f4f6e35c5f96ddd5d56193abb5b43cf.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/32ff661b8f4f6e35c5f96ddd5d56193abb5b43cf.jpg"
-    ],
-    "image_verified": true
-  },
   "SHP0127": {
     "ean": "8719514356610",
     "supplier": "BAB",
@@ -1507,7 +1493,7 @@
     "ean": "6975849061229",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 50.75,
+    "ek": 40.6,
     "vk": 150.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -1909,7 +1895,7 @@
     "ean": "4061496516495",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 60.9,
+    "ek": 55.83,
     "vk": 150.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -3415,7 +3401,7 @@
     "ean": "6938818319578",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 107.59,
+    "ek": 107.39,
     "vk": 220.99,
     "listed_at": "2026-06-15T16:23:39.778799+00:00",
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
@@ -4269,20 +4255,6 @@
       "https://images.icecat.biz/img/gallery/9df2212ba4a2c72928733f8a33e41820.jpg",
       "https://images.icecat.biz/img/gallery/3178f7e4786ddbdbb0e434964f38e8e8.jpg"
     ]
-  },
-  "SDXS1020": {
-    "ean": "8806090312403",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 239.51,
-    "vk": 458.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "image_url": "https://images.icecat.biz/img/gallery/79127685_3226112622.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/79127685_3226112622.jpg"
-    ],
-    "image_verified": true
   },
   "SDXV0009": {
     "ean": "0023942320319",
@@ -5297,7 +5269,7 @@
   "PVST9004": {
     "ean": "4013614376870",
     "supplier": "BAB",
-    "ek": 10.15,
+    "ek": 9.14,
     "vk": 32.99,
     "title": "ABB CT Klemme 200A/5A",
     "listed_at": "2026-06-14T20:49:22",
