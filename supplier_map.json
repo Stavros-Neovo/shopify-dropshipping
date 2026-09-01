@@ -4309,22 +4309,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SSDK1034": {
-    "ean": "4582761161511",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 197.77,
-    "vk": 384.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "SSD Kioxia Exceria G3 2TB (PCIe5.0/NVMe)",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21133033.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21133033.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SSDK1035": {
     "ean": "4582761160286",
     "supplier": "BAB",
