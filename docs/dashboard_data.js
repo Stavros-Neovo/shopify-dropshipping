@@ -1,10 +1,10 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-09-02T13:26:06.009491+00:00",
+  "generated_at": "2026-09-02T17:45:22.555350+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 425,
-    "images_verified": 232,
+    "total_skus": 423,
+    "images_verified": 230,
     "images_missing": 193
   },
   "repricing": {
@@ -373,7 +373,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "07.06",
         "revenue": 53.96,
-        "profit": 17.31,
+        "profit": -1.12,
         "sales": 2
       },
       {
@@ -1109,32 +1109,6 @@ window.DASHBOARD_DATA = {
         }
       },
       {
-        "sku": "USBK1036",
-        "title": "Kioxia TransMemory U301 128GB USB 3.0",
-        "sold": 1,
-        "revenue": 25.99,
-        "profit": 13.01,
-        "cash_profit": 13.01,
-        "vk": 25.99,
-        "ek": 0.0,
-        "calc": {
-          "vk_brutto": 25.99,
-          "ebay_fee": 4.56,
-          "ebay_percent_fee": 4.02,
-          "ebay_fixed_fee": 0.54,
-          "vat": 3.42,
-          "netto_vk": 18.01,
-          "ship": 5.0,
-          "ek": 0.0,
-          "return_reserve": 0.0,
-          "cash_profit_u": 13.01,
-          "cash_profit_t": 13.01,
-          "profit_u": 13.01,
-          "qty": 1,
-          "profit_t": 13.01
-        }
-      },
-      {
         "sku": "USBK1023",
         "title": "Kioxia TransMemory U202 white 64GB USB 2.0",
         "sold": 1,
@@ -1158,6 +1132,32 @@ window.DASHBOARD_DATA = {
           "profit_u": 3.98,
           "qty": 1,
           "profit_t": 3.98
+        }
+      },
+      {
+        "sku": "HHWB5012",
+        "title": "Beurer IL 11 Infrarotlampe",
+        "sold": 1,
+        "revenue": 34.99,
+        "profit": 3.95,
+        "cash_profit": 4.68,
+        "vk": 34.99,
+        "ek": 14.72,
+        "calc": {
+          "vk_brutto": 34.99,
+          "ebay_fee": 5.95,
+          "ebay_percent_fee": 5.41,
+          "ebay_fixed_fee": 0.54,
+          "vat": 4.64,
+          "netto_vk": 24.4,
+          "ship": 5.0,
+          "ek": 14.72,
+          "return_reserve": 0.74,
+          "cash_profit_u": 4.68,
+          "cash_profit_t": 4.68,
+          "profit_u": 3.95,
+          "qty": 1,
+          "profit_t": 3.95
         }
       }
     ],
@@ -1250,8 +1250,8 @@ window.DASHBOARD_DATA = {
         "date": "07.06 17:46",
         "title": "Kioxia TransMemory U301 128GB USB 3.0",
         "revenue": 29.98,
-        "profit": 13.01,
-        "cash_profit": 13.01
+        "profit": -5.42,
+        "cash_profit": -4.54
       },
       {
         "date": "07.06 12:17",
