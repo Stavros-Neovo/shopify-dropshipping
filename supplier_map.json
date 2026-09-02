@@ -2059,22 +2059,6 @@
     ],
     "image_source": "kosatec_ipcstore"
   },
-  "SUPL0501": {
-    "ean": "5099206090347",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 67.84,
-    "vk": 145.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Logitech Zone Wired MS-Teams Headseat",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/117477.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/117477.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
-  },
   "SUPL0603": {
     "ean": "5099206106710",
     "supplier": "BAB",
@@ -4330,7 +4314,7 @@
     "ean": "0017817859585",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 263.9,
+    "ek": 259.84,
     "vk": 552.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
