@@ -2715,21 +2715,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "SUPS0297": {
-    "ean": "4548736158337",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 83.23,
-    "vk": 171.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/267986.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/267986.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "SUPY0022": {
     "ean": "6938818303188",
     "supplier": "BAB",
