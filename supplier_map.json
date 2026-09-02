@@ -3353,24 +3353,6 @@
       "https://images.icecat.biz/img/gallery/d7a9ddd24d3c2d9b715c633c73ec43e2.jpg"
     ]
   },
-  "SUPV0075": {
-    "ean": "0023942320883",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 138.55,
-    "vk": 280.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_verified": true,
-    "image_url": "https://images.icecat.biz/img/gallery/4d0b97b75420e8540c537c6c6b95764d20a7bdbe.jpg",
-    "images": [
-      "https://images.icecat.biz/img/gallery/4d0b97b75420e8540c537c6c6b95764d20a7bdbe.jpg",
-      "https://images.icecat.biz/img/gallery/7c81c7de0fd935727b4587257f6c9343c65ee6a0.jpg",
-      "https://images.icecat.biz/img/gallery/a929805be6a3ce102130a0e34a996dee4e3b3d60.jpg",
-      "https://images.icecat.biz/img/gallery/49cee471f37fb85333bd4b3a1436090aa70256d2.jpg",
-      "https://images.icecat.biz/img/gallery/c673ed5521c989b2669baf8335ca119a60aec370.jpg"
-    ]
-  },
   "SUPY0044": {
     "ean": "6938818319578",
     "supplier": "BAB",
@@ -3786,21 +3768,6 @@
     "title": "NOCO GBX155 | Boost X 4250 A | Jump Starter | Boost Jump Starters",
     "image_verified": true
   },
-  "PETK0018": {
-    "ean": "6975069301389",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 258.83,
-    "vk": 427.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Petkit AirSalon Max",
-    "image_verified": true,
-    "image_url": "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_137970679?x=1800&y=1800&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1800&ey=1800&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1800&cdy=1800",
-    "images": [
-      "https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MP_137970679?x=1800&y=1800&format=jpg&quality=80&sp=yes&strip=yes&trim&ex=1800&ey=1800&align=center&resizesource&unsharp=1.5x1+0.7+0.02&cox=0&coy=0&cdx=1800&cdy=1800"
-    ]
-  },
   "PETK0019": {
     "ean": "6975069301778",
     "supplier": "BAB",
@@ -3882,7 +3849,7 @@
     "ean": "4713294223623",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 204.62,
+    "ek": 200.46,
     "vk": 395.99,
     "listed_at": "2026-06-15T16:26:21.400092+00:00",
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
