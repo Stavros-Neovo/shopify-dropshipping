@@ -402,16 +402,6 @@
       "https://images.icecat.biz/img/gallery/68778456_1314329956.jpg"
     ]
   },
-  "SUPN4011": {
-    "ean": "5711157090107",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 18.93,
-    "vk": 43.99,
-    "listed_at": "2026-06-14T18:52:46.593172+00:00",
-    "updated_at": "2026-06-14T18:52:46.593172+00:00",
-    "image_verified": false
-  },
   "SUPS0368": {
     "ean": "8806097735618",
     "supplier": "BAB",
@@ -2413,22 +2403,6 @@
       "https://media.ipcstore.net/img/l/129611.jpg"
     ],
     "image_too_small": true
-  },
-  "NETT1047": {
-    "ean": "4779051841394",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 90.84,
-    "vk": 178.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "title": "Teltonika PR1KC640 - Antenne",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/131949.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/131949.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "NETT1082": {
     "ean": "4779051841851",
@@ -5207,16 +5181,6 @@
     "source": "ghost_fix",
     "image_verified": false
   },
-  "PPSE0122": {
-    "ean": "4895251667388",
-    "supplier": "BAB",
-    "ek": 126.88,
-    "vk": 246.99,
-    "title": "ECOFLOW 110W - Lightweight Portable Solar Panel",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_verified": false
-  },
   "PVMS0318": {
     "ean": "4043377226815",
     "supplier": "BAB",
@@ -6009,21 +5973,6 @@
     "images": [
       "https://media.ipcstore.net/img/291797.jpg"
     ],
-    "image_source": "kosatec_ipcstore"
-  },
-  "USBS0074": {
-    "ean": "0619659172510",
-    "supplier": "BAB",
-    "ek": 10.9,
-    "vk": 28.99,
-    "title": "SanDisk Ultra Luxe USB-Flash-Laufwerk 32 GB",
-    "listed_at": "2026-06-14T20:49:22",
-    "source": "ghost_fix",
-    "image_url": "https://media.ipcstore.net/img/291800.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/291800.jpg"
-    ],
-    "image_verified": true,
     "image_source": "kosatec_ipcstore"
   },
   "USBS1019": {
