@@ -3616,22 +3616,6 @@
       "https://images.icecat.biz/img/gallery/417034bfdf98da9d2979fb5c22a1c5471fe38df8.jpg"
     ]
   },
-  "NETT1066": {
-    "ean": "4779051840472",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 188.28,
-    "vk": 362.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Teltonika RUTM09 - Router",
-    "image_verified": false,
-    "image_url": "https://media.ipcstore.net/img/l/21169259.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21169259.jpg"
-    ],
-    "image_too_small": true
-  },
   "NETT1074": {
     "ean": "4779051845231",
     "supplier": "BAB",
