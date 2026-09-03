@@ -834,21 +834,6 @@
     "updated_at": "2026-06-15T16:23:39.778799+00:00",
     "image_verified": false
   },
-  "NOCO0009": {
-    "ean": "1210000619259",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 33.6,
-    "vk": 71.99,
-    "listed_at": "2026-06-15T16:23:39.778799+00:00",
-    "updated_at": "2026-06-15T16:23:39.778799+00:00",
-    "image_url": "https://media.ipcstore.net/img/l/21324034.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/l/21324034.jpg"
-    ],
-    "image_verified": false,
-    "image_too_small": true
-  },
   "NOCO0028": {
     "ean": "1210000618146",
     "supplier": "BAB",
