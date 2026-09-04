@@ -1,10 +1,10 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-09-04T08:40:56.917182+00:00",
+  "generated_at": "2026-09-04T13:19:01.938437+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
-    "total_skus": 419,
-    "images_verified": 229,
+    "total_skus": 418,
+    "images_verified": 228,
     "images_missing": 190
   },
   "repricing": {
@@ -361,7 +361,7 @@ window.DASHBOARD_DATA = {
       {
         "date": "07.06",
         "revenue": 53.96,
-        "profit": -1.09,
+        "profit": -1.06,
         "sales": 2
       },
       {
@@ -1250,8 +1250,8 @@ window.DASHBOARD_DATA = {
         "date": "07.06 17:46",
         "title": "Kioxia TransMemory U301 128GB USB 3.0",
         "revenue": 29.98,
-        "profit": -5.39,
-        "cash_profit": -4.52
+        "profit": -5.36,
+        "cash_profit": -4.49
       },
       {
         "date": "07.06 12:17",
