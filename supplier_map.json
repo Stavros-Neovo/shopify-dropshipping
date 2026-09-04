@@ -621,7 +621,7 @@
     "ean": "3800235262214",
     "supplier": "BAB",
     "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 47.2,
+    "ek": 46.69,
     "vk": 99.99,
     "listed_at": "2026-06-14T23:57:46.549786+00:00",
     "updated_at": "2026-06-14T23:57:46.549786+00:00",
@@ -3838,22 +3838,6 @@
     "updated_at": "2026-06-15T16:26:21.400092+00:00",
     "title": "Lexar DDR5 16GB 262 PIN So-DIMM 5600Mhz, CL46, 1.1V- BLISTER Package",
     "image_verified": false
-  },
-  "RAM4L0040": {
-    "ean": "843367132782",
-    "supplier": "BAB",
-    "supplier_email": "SSchulze@bab-distribution.de",
-    "ek": 177.38,
-    "vk": 345.99,
-    "listed_at": "2026-06-15T16:26:21.400092+00:00",
-    "updated_at": "2026-06-15T16:26:21.400092+00:00",
-    "title": "Lexar DDR5 16GB 288 PIN U-DIMM 5600Mhz, CL46, 1.1V- BLISTER Package",
-    "image_verified": true,
-    "image_url": "https://media.ipcstore.net/img/21132306.jpg",
-    "images": [
-      "https://media.ipcstore.net/img/21132306.jpg"
-    ],
-    "image_source": "kosatec_ipcstore"
   },
   "RAM5C0025": {
     "ean": "0840440492573",
