@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T16:01:56.670792+00:00",
+  "updated": "2026-09-05T18:14:25.726225+00:00",
   "orders": [
     {
       "id": "01-15026-16562",
@@ -163,20 +163,6 @@
       "sku": "HHWB5012",
       "name": "Beurer IL 11 Infrarotlampe",
       "vk": 38.98,
-      "ek": 0,
-      "note": "",
-      "status": "done",
-      "tracking": "",
-      "items_count": 1
-    },
-    {
-      "id": "18-14726-98065",
-      "nr": "18-14726-98065",
-      "date": "2026-06-07",
-      "buyer": "cheoxyne",
-      "sku": "USBK1036",
-      "name": "Kioxia TransMemory U301 128GB USB 3.0",
-      "vk": 29.98,
       "ek": 0,
       "note": "",
       "status": "done",
