@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
-  "generated_at": "2026-09-05T10:16:07.772929+00:00",
+  "generated_at": "2026-09-05T13:46:10.456799+00:00",
   "shop_name": "Best_Neodeals eBay Shop",
   "active_listings": 7,
   "catalog": {
@@ -1252,13 +1252,6 @@ window.DASHBOARD_DATA = {
         "revenue": 29.98,
         "profit": -5.36,
         "cash_profit": -4.49
-      },
-      {
-        "date": "07.06 12:17",
-        "title": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebu",
-        "revenue": 23.98,
-        "profit": 4.3,
-        "cash_profit": 4.51
       }
     ],
     "bab_deadlines": [],
