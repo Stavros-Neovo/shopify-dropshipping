@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T09:00:39.281286+00:00",
+  "updated": "2026-09-05T12:38:51.481002+00:00",
   "orders": [
     {
       "id": "01-15026-16562",
@@ -177,20 +177,6 @@
       "sku": "USBK1036",
       "name": "Kioxia TransMemory U301 128GB USB 3.0",
       "vk": 29.98,
-      "ek": 0,
-      "note": "",
-      "status": "done",
-      "tracking": "",
-      "items_count": 1
-    },
-    {
-      "id": "22-14719-39725",
-      "nr": "22-14719-39725",
-      "date": "2026-06-07",
-      "buyer": "colddog71kay",
-      "sku": "SUPD1027",
-      "name": "Dell MS116 - Maus - optisch - 2 Tasten - kabelgebunden",
-      "vk": 23.98,
       "ek": 0,
       "note": "",
       "status": "done",
